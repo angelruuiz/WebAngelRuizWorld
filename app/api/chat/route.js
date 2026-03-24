@@ -1,41 +1,42 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
-
-export const runtime = 'nodejs';
-
 export async function POST(req) {
   try {
     const { message } = await req.json();
     const apiKey = process.env.GEMINI_API_KEY;
 
     if (!apiKey) {
-      console.error("Falta GEMINI_API_KEY");
-      return new Response(JSON.stringify({ error: "Configuración incompleta." }), { status: 500 });
+      return new Response(JSON.stringify({ error: "Falta la clave API." }), { status: 500 });
     }
 
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ 
-        model: "gemini-1.5-flash",
-        systemInstruction: `Eres el Asistente Ejecutivo Virtual de la web de Ángel (un ilusionista profesional). 
-Responde de forma breve, elegante y profesional. 
-Habla siempre de usted.
-Solo haces eventos corporativos y de alta gama. 
-No haces magia infantil.
-Invita sutilmente a reservar una cita mediante el botón de la web.`
-    });
-
-    const result = await model.generateContent(message);
-    const response = await result.response;
-    const text = response.text();
-
-    return new Response(JSON.stringify({ reply: text }), { 
-      status: 200, 
-      headers: { 'Content-Type': 'application/json' } 
-    });
+    
+    // Intentamos el modelo estándar
+    try {
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+        const result = await model.generateContent(message);
+        const text = result.response.text();
+        return new Response(JSON.stringify({ reply: text }), { 
+            status: 200, 
+            headers: { 'Content-Type': 'application/json' } 
+        });
+    } catch (apiError) {
+        // Si falla, intentamos listar qué modelos SÍ están disponibles para informarte
+        let available = "No pude listar los modelos.";
+        try {
+            const list = await genAI.listModels();
+            available = list.models.map(m => m.name.replace("models/", "")).join(", ");
+        } catch (listErr) {
+            available = `Error al listar: ${listErr.message}`;
+        }
+        
+        return new Response(JSON.stringify({ 
+            error: "Fallo de modelo.",
+            detail: `Google dice que '${apiError.message}'. Tus modelos disponibles son: [${available}]`
+        }), { status: 500 });
+    }
 
   } catch (error) {
-    console.error("Error en el Chatbot:", error);
     return new Response(JSON.stringify({ 
-        error: "Fallo en la comunicación mágica.",
+        error: "Error de sistema.",
         detail: error.message 
     }), { status: 500 });
   }
