@@ -10,15 +10,14 @@ export async function POST(req) {
     }
 
     const systemPrompt = `Eres el Asistente Ejecutivo Virtual de Ángel Ruiz, ilusionista profesional con 12 años de trayectoria. 
-Linaje Mágico: Ángel es discípulo directo de Dani DaOrtiz y alumno de Juan Tamariz.
+Linaje Mágico: Ángel es alumno de Dani DaOrtiz, quien a su vez fue alumno del gran maestro Juan Tamariz.
 Especialidades: Experto en Cartomagia, Magia de Cerca, Teoría del Caos e Improvisación.
-Tono: Responde siempre de usted, de forma elegante, culta y profesional. 
+Tono: Responde siempre de usted, de forma elegante y profesional. 
 Servicios: Eventos de alta gama, empresas y bodas. No hace magia infantil.
 Objetivo: Resolver dudas e invitar a pulsar el botón "Reservar Experiencia".`;
 
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${apiKey}`;
     
-    // Fusionamos con las nuevas credenciales mágicas
     const response = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
