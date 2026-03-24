@@ -344,15 +344,14 @@ const ServiceCard = ({ title, shortDesc, icon: Icon, delay, bgClass, onClick }) 
     );
 };
 
-const Services = () => {
-    const [selectedService, setSelectedService] = useState(null);
+const Services = ({ selectedService, setSelectedService, disabled }) => {
     const servicesData = [
         { id: 1, title: "Bodas Mágicas", shortDesc: "Rompe el hielo y conecta a tus invitados.", fullDesc: "Vuestro gran día merece un toque de distinción que lo haga verdaderamente inolvidable. La magia durante el cóctel actúa como el nexo perfecto entre vuestros invitados, creando una atmósfera de asombro que rompe el hielo al instante. Familias y amigos compartirán una experiencia imposible desde el primer minuto.", details: ["Magia itinerante grupo a grupo", "Duración ideal: Cóctel (1.5 - 2h)", "Efecto especial personalizado para los novios", "Recuerdo imposible para los invitados"], icon: Heart, bgClass: "from-pink-500/20 to-purple-500/20" },
         { id: 2, title: "Particulares & VIP", shortDesc: "Desde cenas íntimas hasta grandes fiestas privadas.", fullDesc: "Vive la magia en su estado más puro y exclusivo. Olvida los escenarios lejanos; aquí el milagro sucede justo delante de tus ojos e incluso en tus propias manos. Un espectáculo diseñado para la distancia corta, sin grandes cajas ni cortinas, solo habilidad pura e interacción constante para sorprender a los invitados más exigentes.", details: ["Show de Salón o Close-up (Magia de cerca)", "Duración flexible: 1 - 1.5 horas", "Participación activa de todos los asistentes", "Mentalismo y magia de alto impacto", "Adaptable a salón, jardín o reservado"], icon: Users, bgClass: "from-amber-500/20 to-orange-500/20" },
         { id: 3, title: "Hoteles & Empresas", shortDesc: "Eleva la experiencia de tu marca o local corporativo.", fullDesc: "La magia es una herramienta de comunicación potente capaz de reforzar el mensaje de tu marca y hacer que tu evento destaque. Ya sea para dinamizar una cena de empresa, atraer atención en un stand o crear un ambiente relajado para el networking, diseñamos ilusiones que conectan con tu audiencia y dejan huella.", details: ["Dinamización de Cenas de Empresa", "Magia promocional para marcas", "Duración adaptable al formato del evento", "Refuerzo de valores corporativos"], icon: GlassWater, bgClass: "from-blue-500/20 to-indigo-500/20" }
     ];
     return (
-        <section id="services" className={`py-20 relative px-4 max-w-7xl mx-auto ${selectedService ? 'z-40' : 'z-10'}`}>
+        <section id="services" className={`py-20 relative px-4 max-w-7xl mx-auto ${selectedService ? 'z-40' : 'z-10'} ${disabled ? 'pointer-events-none opacity-50' : ''}`}>
             <div className="text-center mb-12"><h3 className="text-3xl md:text-5xl font-[Cinzel] text-white">El Arte de lo Imposible</h3></div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {servicesData.map((s, i) => <ServiceCard key={s.id} {...s} delay={i * 0.2} onClick={() => setSelectedService(s)} />)}
@@ -456,6 +455,8 @@ const EmotionalSection = () => {
 export default function App() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isContactOpen, setIsContactOpen] = useState(false);
+    const [selectedService, setSelectedService] = useState(null);
+    const [isChatOpen, setIsChatOpen] = useState(false);
     
     useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -497,7 +498,7 @@ export default function App() {
                 <Hero onOpenModal={() => setIsContactOpen(true)} />
                 <TrustedBrands />
                 <Biography />
-                <Services />
+                <Services selectedService={selectedService} setSelectedService={setSelectedService} disabled={isChatOpen} />
                 <Reviews />
                 <EmotionalSection />
             </main>
@@ -529,7 +530,7 @@ export default function App() {
 
             <ContactFormModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
             
-            <Chatbot />
+            <Chatbot hidden={!!selectedService || isContactOpen} isOpenExternal={isChatOpen} setIsOpenExternal={setIsChatOpen} />
         </div>
     );
 }
