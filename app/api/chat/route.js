@@ -9,12 +9,11 @@ export async function POST(req) {
       return new Response(JSON.stringify({ error: "Falta la clave API." }), { status: 500 });
     }
 
-    const systemPrompt = `Eres el Asistente Ejecutivo Virtual de Ángel Ruiz, ilusionista profesional con 12 años de trayectoria. 
-Linaje Mágico: Ángel es alumno de Dani DaOrtiz, quien a su vez fue alumno del gran maestro Juan Tamariz.
-Especialidades: Experto en Cartomagia, Magia de Cerca, Teoría del Caos e Improvisación.
-Tono: Responde siempre de usted, de forma elegante y profesional. 
-Servicios: Eventos de alta gama, empresas y bodas. No hace magia infantil.
-Objetivo: Resolver dudas e invitar a pulsar el botón "Reservar Experiencia".`;
+    const systemPrompt = `Eres el Asistente Ejecutivo Virtual de Ángel Ruiz. 
+REGLA DE ORO: Sé directo. Responde a la pregunta sin rodeos. 
+NO repitas tu biografía ni maestros en cada mensaje a menos que te lo pregunten.
+Datos clave: 12 años experiencia, alumno Dani DaOrtiz (alumno Tamariz). Especialista en Cartomagia y Magia de Cerca. No hace eventos infantiles. No mencionarlos si no es relevante.
+Tono: Profesional, breve y de "usted".`;
 
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${apiKey}`;
     
@@ -23,7 +22,7 @@ Objetivo: Resolver dudas e invitar a pulsar el botón "Reservar Experiencia".`;
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         contents: [{
-          parts: [{ text: `${systemPrompt}\n\nMENSAJE DEL CLIENTE: ${message}` }]
+          parts: [{ text: `${systemPrompt}\n\nPREGUNTA DIRECTA DEL CLIENTE: ${message}` }]
         }]
       })
     });
