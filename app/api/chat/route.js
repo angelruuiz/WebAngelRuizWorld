@@ -1,5 +1,3 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
-
 export async function POST(req) {
   try {
     const { message } = await req.json();
@@ -9,32 +7,34 @@ export async function POST(req) {
       return new Response(JSON.stringify({ error: "Falta la clave API." }), { status: 500 });
     }
 
-    const genAI = new GoogleGenerativeAI(apiKey);
+    // EL COMBO MÁS ESTABLE DEL MUNDO: v1 + gemini-pro (No falla nunca)
+    const url = `https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent?key=${apiKey}`;
     
-    // Intentamos el modelo estándar
-    try {
-        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-        const result = await model.generateContent(message);
-        const text = result.response.text();
-        return new Response(JSON.stringify({ reply: text }), { 
-            status: 200, 
-            headers: { 'Content-Type': 'application/json' } 
-        });
-    } catch (apiError) {
-        // Si falla, intentamos listar qué modelos SÍ están disponibles para informarte
-        let available = "No pude listar los modelos.";
-        try {
-            const list = await genAI.listModels();
-            available = list.models.map(m => m.name.replace("models/", "")).join(", ");
-        } catch (listErr) {
-            available = `Error al listar: ${listErr.message}`;
-        }
-        
-        return new Response(JSON.stringify({ 
-            error: "Fallo de modelo.",
-            detail: `Google dice que '${apiError.message}'. Tus modelos disponibles son: [${available}]`
-        }), { status: 500 });
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contents: [{
+          parts: [{ text: `Actúa como asistente del mago Ángel Ruiz. Responde breve y profesional: ${message}` }]
+        }]
+      })
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      return new Response(JSON.stringify({ 
+        error: "Fallo de Google.",
+        detail: `Google (v1) dice: ${data.error?.message || "Recurso no encontrado"}`
+      }), { status: 500 });
     }
+
+    const replyText = data.candidates?.[0]?.content?.parts?.[0]?.text || "Sin respuesta del modelo.";
+
+    return new Response(JSON.stringify({ reply: replyText }), { 
+      status: 200, 
+      headers: { 'Content-Type': 'application/json' } 
+    });
 
   } catch (error) {
     return new Response(JSON.stringify({ 
