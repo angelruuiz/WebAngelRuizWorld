@@ -34,22 +34,29 @@ export default function Chatbot() {
     setIsLoading(true);
 
     try {
-      // Llamar a nuestra propia API (oculta la clave de Gemini)
+      // Llamar a nuestra propia API
       const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: input })
       });
 
+      if (!res.ok) {
+        const errorText = await res.text();
+        setMessages([...newMessages, { role: 'bot', text: `Error de Servidor (${res.status}): ${errorText.substring(0, 50)}...` }]);
+        setIsLoading(false);
+        return;
+      }
+
       const data = await res.json();
 
       if (data.reply) {
         setMessages([...newMessages, { role: 'bot', text: data.reply }]);
       } else {
-        setMessages([...newMessages, { role: 'bot', text: 'Ups, mi magia falló por un momento. Inténtalo de nuevo.' }]);
+        setMessages([...newMessages, { role: 'bot', text: 'La IA respondió vacía. Intente de nuevo.' }]);
       }
     } catch (error) {
-      setMessages([...newMessages, { role: 'bot', text: 'Error de conexión mágica.' }]);
+      setMessages([...newMessages, { role: 'bot', text: `Error de Conexión: ${error.message}` }]);
     }
 
     setIsLoading(false);
