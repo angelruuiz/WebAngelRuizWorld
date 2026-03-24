@@ -1,3 +1,5 @@
+import { GoogleGenerativeAI } from "@google/generative-ai";
+
 export async function POST(req) {
   try {
     const { message } = await req.json();
