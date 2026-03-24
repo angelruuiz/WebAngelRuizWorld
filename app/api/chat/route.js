@@ -4,36 +4,38 @@ export async function POST(req) {
     const apiKey = process.env.GEMINI_API_KEY;
 
     if (!apiKey) {
-      return new Response(JSON.stringify({ reply: "DEBUG: No encuentro la variable 'GEMINI_API_KEY' en Vercel. Revisa que el NOMBRE sea exacto." }), { status: 200 });
+      return new Response(JSON.stringify({ error: "Falta la clave API." }), { status: 500 });
     }
 
-    console.log("DEBUG: Probando conexión directa a Google...");
+    const systemPrompt = `Eres el Asistente Ejecutivo de Ángel Ruiz, ilusionista profesional. 
+Responde siempre de usted, de forma elegante y breve.
+Servicios: Magia de Cerca y Magia de Cóctel para empresas y bodas.
+Restricción: No hace magia infantil.
+Objetivo: Ayudar al cliente e invitar a pulsar el botón de reserva.`;
+
+    // Usamos gemini-2.0-flash porque es el que tu cuenta reconoce como disponible
+    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
     
-    // Paso 1: Intentar hablar con el modelo básico directamente
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
     const response = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        contents: [{ parts: [{ text: `Responde "OK": ${message}` }] }]
+        contents: [{
+          parts: [{ text: `${systemPrompt}\n\nMENSAJE DEL USUARIO: ${message}` }]
+        }]
       })
     });
 
     const data = await response.json();
 
     if (!response.ok) {
-      // Si falla, vamos a pedirle a Google la lista de qué modelos SÍ admite esta clave
-      const listUrl = `https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`;
-      const listRes = await fetch(listUrl);
-      const listData = await listRes.json();
-      const available = listData.models ? listData.models.map(m => m.name.replace("models/", "")).join(", ") : "Ninguno";
-
-      return new Response(JSON.stringify({ 
-        reply: `ERROR DE GOOGLE (${response.status}): ${data.error?.message || "Sin mensaje"}. \nModelos que ve tu clave: [${available}]` 
-      }), { status: 200 });
+        return new Response(JSON.stringify({ 
+            error: "Fallo de servidor",
+            detail: data.error?.message || "Error desconocido"
+        }), { status: 500 });
     }
 
-    const replyText = data.candidates?.[0]?.content?.parts?.[0]?.text || "Google respondió vacío.";
+    const replyText = data.candidates?.[0]?.content?.parts?.[0]?.text || "Lo siento, mi magia se ha distraído un momento.";
 
     return new Response(JSON.stringify({ reply: replyText }), { 
       status: 200, 
@@ -41,8 +43,6 @@ export async function POST(req) {
     });
 
   } catch (error) {
-    return new Response(JSON.stringify({ 
-      reply: `ERROR DE SISTEMA: ${error.message}` 
-    }), { status: 200 });
+    return new Response(JSON.stringify({ error: "Error de sistema", detail: error.message }), { status: 500 });
   }
 }
