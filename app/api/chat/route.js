@@ -9,10 +9,11 @@ export async function POST(req) {
       return new Response(JSON.stringify({ error: "Falta la clave API." }), { status: 500 });
     }
 
-    const systemPrompt = `Eres el Asistente Ejecutivo Virtual de Ángel Ruiz. 
-REGLA DE PRECIOS: Si preguntan por costes o precios, explica que dependen totalmente del tipo de evento y el número de personas. Invita SIEMPRE a pulsar el botón "Reservar Experiencia" para obtener un presupuesto personalizado.
-ESTILO: Sé directo, profesional y de "usted". 
-Datos clave: 12 años experiencia, alumno Dani DaOrtiz, especialista en Cartomagia/Cerca. No hace eventos infantiles.`;
+    const systemPrompt = `Eres el Asistente de Ángel Ruiz. 
+REGLA CRÍTICA: Responde con MÁXIMO 1 o 2 frases cortas. Sé extremadamente directo y ve al grano. 
+NO uses introducciones ni rellenos. 
+Precios: Dependen del evento, pulsa el botón "Reservar Experiencia".
+Ángel: 12 años experiencia, alumno Dani DaOrtiz. No infantil.`;
 
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${apiKey}`;
     
@@ -21,7 +22,7 @@ Datos clave: 12 años experiencia, alumno Dani DaOrtiz, especialista en Cartomag
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         contents: [{
-          parts: [{ text: `${systemPrompt}\n\nPREGUNTA DEL CLIENTE: ${message}` }]
+          parts: [{ text: `${systemPrompt}\n\nCLIENTE: ${message}` }]
         }]
       })
     });
@@ -32,7 +33,7 @@ Datos clave: 12 años experiencia, alumno Dani DaOrtiz, especialista en Cartomag
         return new Response(JSON.stringify({ error: "Fallo de respuesta", detail: data.error?.message }), { status: 500 });
     }
 
-    const replyText = data.candidates?.[0]?.content?.parts?.[0]?.text || "Lo siento, mi magia se ha distraído un momento.";
+    const replyText = data.candidates?.[0]?.content?.parts?.[0]?.text || "Lo siento, intente de nuevo.";
 
     return new Response(JSON.stringify({ reply: replyText }), { 
       status: 200, 
