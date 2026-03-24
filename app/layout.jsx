@@ -1,0 +1,60 @@
+import './globals.css';
+import { Analytics } from '@vercel/analytics/react';
+
+export const metadata = {
+  metadataBase: new URL('https://angelruiz.world'),
+  title: {
+    default: 'Angel Ruiz | Ilusionista & Magia Profesional para Eventos',
+    template: '%s | Angel Ruiz Magia'
+  },
+  description: 'Angel Ruiz es un ilusionista profesional especializado en Magia de Cerca y Magia de Cóctel para eventos corporativos, bodas y particulares VIP. Crea experiencias imposibles e inolvidables.',
+  keywords: ['Mago Madrid', 'Ilusionista', 'Magia para eventos', 'Eventos corporativos', 'Magia de cerca', 'Angel Ruiz', 'Mago para bodas', 'Espectáculo de magia', 'Contratar mago'],
+  authors: [{ name: 'Angel Ruiz' }],
+  creator: 'Angel Ruiz',
+  publisher: 'Angel Ruiz',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'es_ES',
+    url: 'https://angelruiz.world',
+    title: 'Angel Ruiz | Ilusionista Profesional',
+    description: 'Mago e ilusionista profesional especializado en magia de cerca exclusiva para eventos corporativos, bodas y celebraciones.',
+    siteName: 'Angel Ruiz Magia',
+    images: [{
+      url: '/images/foto-bio.png',
+      width: 1200,
+      height: 630,
+      alt: 'Angel Ruiz Ilusionista Profesional en plena actuación'
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Angel Ruiz | Magia & Ilusionismo',
+    description: 'Ilusionista especializado en eventos exclusivos y magia de cerca.',
+    images: ['/images/foto-bio.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+};
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="es" className="scroll-smooth">
+      <body className="antialiased min-h-screen selection:bg-amber-500/30 selection:text-amber-200">
+        {children}
+        <Analytics />
+      </body>
+    </html>
+  );
+}
