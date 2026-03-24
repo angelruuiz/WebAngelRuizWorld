@@ -42,13 +42,7 @@ export default function Chatbot() {
       });
 
       if (!res.ok) {
-        try {
-          const errorJson = await res.json();
-          setMessages([...newMessages, { role: 'bot', text: `Fallo Mágico (${res.status}): ${errorJson.detail || "Error desconocido"}` }]);
-        } catch (e) {
-          const errorText = await res.text();
-          setMessages([...newMessages, { role: 'bot', text: `Error de Servidor (${res.status}): ${errorText.substring(0, 50)}...` }]);
-        }
+        setMessages([...newMessages, { role: 'bot', text: 'Lo siento, mi conexión mágica se ha interrumpido. Por favor, inténtelo de nuevo en unos instantes.' }]);
         setIsLoading(false);
         return;
       }
@@ -58,10 +52,10 @@ export default function Chatbot() {
       if (data.reply) {
         setMessages([...newMessages, { role: 'bot', text: data.reply }]);
       } else {
-        setMessages([...newMessages, { role: 'bot', text: 'La IA respondió vacía. Intente de nuevo.' }]);
+        setMessages([...newMessages, { role: 'bot', text: 'Mi magia se ha distraído un momento. ¿Podría repetir la pregunta?' }]);
       }
     } catch (error) {
-      setMessages([...newMessages, { role: 'bot', text: `Error de Conexión: ${error.message}` }]);
+      setMessages([...newMessages, { role: 'bot', text: 'Error de conexión mágica. Revise su internet.' }]);
     }
 
     setIsLoading(false);

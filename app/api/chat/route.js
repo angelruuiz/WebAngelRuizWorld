@@ -7,37 +7,39 @@ export async function POST(req) {
       return new Response(JSON.stringify({ error: "Falta la clave API." }), { status: 500 });
     }
 
-    // DIAGNÓSTICO: Listar modelos disponibles vía REST directo
-    const listRes = await fetch(`https://generativelanguage.googleapis.com/v1/models?key=${apiKey}`);
-    const listData = await listRes.json();
+    // Configuración del Asistente Ejecutivo de Ángel Ruiz
+    const systemInstruction = `Eres el Asistente Ejecutivo Virtual de la web de Ángel (un ilusionista profesional). 
+Responde de forma breve (máximo 2 párrafos), elegante y profesional. 
+Usa siempre el "usted" para dirigirte al cliente.
+Servicios principales: 'Magia de Cerca' (60-90 min) y 'Magia de Cóctel' para eventos corporativos y bodas.
+Restricción importante: Ángel NO hace magia infantil ni fiestas de cumpleaños de niños. Se enfoca en eventos de alta gama y empresas.
+Objetivo: Ayudar con dudas básicas e invitar sutilmente a pulsar el botón "Reservar Experiencia" para ver disponibilidad.`;
 
-    if (!listRes.ok) {
-        return new Response(JSON.stringify({ 
-            error: "Fallo al identificar tu cuenta.",
-            detail: `Google dice: ${listData.error?.message || "Acceso denegado"}`
-        }), { status: 500 });
-    }
-
-    const available = listData.models ? listData.models.map(m => m.name.replace("models/", "")) : [];
+    const chatUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
     
-    if (available.length === 0) {
-        return new Response(JSON.stringify({ reply: "Tu clave API no tiene modelos habilitados. Crea una clave nueva en un proyecto nuevo de AI Studio." }), { status: 200 });
-    }
-
-    // Elegir el mejor disponible
-    const target = available.includes("gemini-1.5-flash") ? "gemini-1.5-flash" : available[0];
-
-    const chatUrl = `https://generativelanguage.googleapis.com/v1/models/${target}:generateContent?key=${apiKey}`;
     const response = await fetch(chatUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        contents: [{ parts: [{ text: `Actúa como asistente de Ángel Ruiz: ${message}` }] }]
+        system_instruction: {
+          parts: [{ text: systemInstruction }]
+        },
+        contents: [{
+          parts: [{ text: message }]
+        }]
       })
     });
 
     const data = await response.json();
-    const replyText = data.candidates?.[0]?.content?.parts?.[0]?.text || `Error en ${target}: ${JSON.stringify(data.error)}`;
+
+    if (!response.ok) {
+      return new Response(JSON.stringify({ 
+        error: "Error de IA",
+        detail: data.error?.message || "Fallo en la generación"
+      }), { status: 500 });
+    }
+
+    const replyText = data.candidates?.[0]?.content?.parts?.[0]?.text || "Lo siento, mi magia se ha distraído un momento. ¿Podría repetir su pregunta?";
 
     return new Response(JSON.stringify({ reply: replyText }), { 
       status: 200, 
@@ -46,7 +48,7 @@ export async function POST(req) {
 
   } catch (error) {
     return new Response(JSON.stringify({ 
-        error: "Error de sistema.",
+        error: "Error de sistema",
         detail: error.message 
     }), { status: 500 });
   }
