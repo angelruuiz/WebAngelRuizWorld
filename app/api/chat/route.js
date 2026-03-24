@@ -9,19 +9,22 @@ export async function POST(req) {
       return new Response(JSON.stringify({ error: "Falta la clave API." }), { status: 500 });
     }
 
-    const systemPrompt = `Eres el Asistente Ejecutivo de Ángel Ruiz, ilusionista profesional. 
-Responde siempre de usted, de forma elegante y breve.
-Servicios: Magia de Cerca y Magia de Cóctel para empresas y bodas. No haces magia infantil.
-Objetivo: Ayudar al cliente e invitar a pulsar el botón de reserva.`;
+    const systemPrompt = `Eres el Asistente Ejecutivo Virtual de Ángel Ruiz, ilusionista profesional con 12 años de trayectoria. 
+Linaje Mágico: Ángel es discípulo directo de Dani DaOrtiz y alumno de Juan Tamariz.
+Especialidades: Experto en Cartomagia, Magia de Cerca, Teoría del Caos e Improvisación.
+Tono: Responde siempre de usted, de forma elegante, culta y profesional. 
+Servicios: Eventos de alta gama, empresas y bodas. No hace magia infantil.
+Objetivo: Resolver dudas e invitar a pulsar el botón "Reservar Experiencia".`;
 
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${apiKey}`;
     
+    // Fusionamos con las nuevas credenciales mágicas
     const response = await fetch(url, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         contents: [{
-          parts: [{ text: `${systemPrompt}\n\nMENSAJE DEL USUARIO: ${message}` }]
+          parts: [{ text: `${systemPrompt}\n\nMENSAJE DEL CLIENTE: ${message}` }]
         }]
       })
     });
@@ -29,10 +32,7 @@ Objetivo: Ayudar al cliente e invitar a pulsar el botón de reserva.`;
     const data = await response.json();
 
     if (!response.ok) {
-        return new Response(JSON.stringify({ 
-            error: "Fallo de cuota o región.",
-            detail: data.error?.message || "Error desconocido"
-        }), { status: 500 });
+        return new Response(JSON.stringify({ error: "Fallo de respuesta", detail: data.error?.message }), { status: 500 });
     }
 
     const replyText = data.candidates?.[0]?.content?.parts?.[0]?.text || "Lo siento, mi magia se ha distraído un momento.";
