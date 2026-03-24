@@ -10,7 +10,17 @@ export async function POST(req) {
     }
 
     const genAI = new GoogleGenerativeAI(apiKey);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
+    
+    // DEBUG: Vamos a listar los modelos disponibles para ver qué nombres acepta tu cuenta
+    try {
+      const modelList = await genAI.listModels();
+      const names = modelList.models.map(m => m.name).join(", ");
+      console.log("Modelos disponibles:", names);
+    } catch (e) {
+      console.error("No se pudo listar modelos:", e.message);
+    }
+
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
     const result = await model.generateContent(`Actúa como el asistente de Ángel Ruiz, el mago. Responde: ${message}`);
     const response = await result.response;
