@@ -42,8 +42,13 @@ export default function Chatbot() {
       });
 
       if (!res.ok) {
-        const errorText = await res.text();
-        setMessages([...newMessages, { role: 'bot', text: `Error de Servidor (${res.status}): ${errorText.substring(0, 50)}...` }]);
+        try {
+          const errorJson = await res.json();
+          setMessages([...newMessages, { role: 'bot', text: `Fallo Mágico (${res.status}): ${errorJson.detail || "Error desconocido"}` }]);
+        } catch (e) {
+          const errorText = await res.text();
+          setMessages([...newMessages, { role: 'bot', text: `Error de Servidor (${res.status}): ${errorText.substring(0, 50)}...` }]);
+        }
         setIsLoading(false);
         return;
       }
