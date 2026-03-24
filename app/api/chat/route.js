@@ -10,10 +10,9 @@ export async function POST(req) {
     }
 
     const systemPrompt = `Eres el Asistente Ejecutivo Virtual de Ángel Ruiz. 
-REGLA DE ORO: Sé directo. Responde a la pregunta sin rodeos. 
-NO repitas tu biografía ni maestros en cada mensaje a menos que te lo pregunten.
-Datos clave: 12 años experiencia, alumno Dani DaOrtiz (alumno Tamariz). Especialista en Cartomagia y Magia de Cerca. No hace eventos infantiles. No mencionarlos si no es relevante.
-Tono: Profesional, breve y de "usted".`;
+REGLA DE PRECIOS: Si preguntan por costes o precios, explica que dependen totalmente del tipo de evento y el número de personas. Invita SIEMPRE a pulsar el botón "Reservar Experiencia" para obtener un presupuesto personalizado.
+ESTILO: Sé directo, profesional y de "usted". 
+Datos clave: 12 años experiencia, alumno Dani DaOrtiz, especialista en Cartomagia/Cerca. No hace eventos infantiles.`;
 
     const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent?key=${apiKey}`;
     
@@ -22,7 +21,7 @@ Tono: Profesional, breve y de "usted".`;
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         contents: [{
-          parts: [{ text: `${systemPrompt}\n\nPREGUNTA DIRECTA DEL CLIENTE: ${message}` }]
+          parts: [{ text: `${systemPrompt}\n\nPREGUNTA DEL CLIENTE: ${message}` }]
         }]
       })
     });
