@@ -11,20 +11,32 @@ export async function POST(req) {
 
     const genAI = new GoogleGenerativeAI(apiKey);
     
-    // DEBUG: Vamos a listar los modelos disponibles para ver qué nombres acepta tu cuenta
-    try {
-      const modelList = await genAI.listModels();
-      const names = modelList.models.map(m => m.name).join(", ");
-      console.log("Modelos disponibles:", names);
-    } catch (e) {
-      console.error("No se pudo listar modelos:", e.message);
+    // Probamos varios modelos hasta que uno funcione (Bruteforce)
+    const possibleModels = ["gemini-1.5-flash", "gemini-1.5-flash-latest", "gemini-1.5-pro", "gemini-pro"];
+    let text = "";
+    let lastError = "";
+
+    for (const modelName of possibleModels) {
+      try {
+        console.log(`Intentando con modelo: ${modelName}...`);
+        const model = genAI.getGenerativeModel({ model: modelName });
+        const result = await model.generateContent(`Actúa como el asistente de Ángel Ruiz, el mago. Responde brevemente: ${message}`);
+        const response = await result.response;
+        text = response.text();
+        if (text) {
+          console.log(`¡ÉXITO con el modelo: ${modelName}!`);
+          break;
+        }
+      } catch (e) {
+        console.error(`Fallo con ${modelName}: ${e.message}`);
+        lastError = e.message;
+        continue;
+      }
     }
 
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-
-    const result = await model.generateContent(`Actúa como el asistente de Ángel Ruiz, el mago. Responde: ${message}`);
-    const response = await result.response;
-    const text = response.text();
+    if (!text) {
+      throw new Error(`Ningún modelo respondió. Último error: ${lastError}`);
+    }
 
     return new Response(JSON.stringify({ reply: text }), { 
       status: 200, 
