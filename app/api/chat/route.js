@@ -10,8 +10,7 @@ export async function POST(req) {
     }
 
     const genAI = new GoogleGenerativeAI(apiKey);
-    // Forzamos la versión v1 de la API en lugar de la beta para evitar el 404
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" }, { apiVersion: 'v1' });
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash-latest" });
 
     const result = await model.generateContent(`Actúa como el asistente de Ángel Ruiz, el mago. Responde: ${message}`);
     const response = await result.response;
