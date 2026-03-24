@@ -1,37 +1,20 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-export const runtime = 'nodejs';
-
 export async function POST(req) {
-  console.log("--- Inicio de petición de chat ---");
   try {
-    const body = await req.json();
-    const { message } = body;
-    console.log("Mensaje recibido:", message);
-
+    const { message } = await req.json();
     const apiKey = process.env.GEMINI_API_KEY;
-    if (!apiKey) {
-      console.error("DEBUG: La variable GEMINI_API_KEY está vacía o no existe.");
-      return new Response(JSON.stringify({ error: "Falta la clave API en el servidor." }), { status: 500 });
-    }
 
-    console.log("DEBUG: Clave API detectada (primeros 5 caracteres):", apiKey.substring(0, 5));
+    if (!apiKey) {
+      return new Response(JSON.stringify({ reply: "Error: No encuentro la clave GEMINI_API_KEY en Vercel. Revisa 'Settings -> Environment Variables'." }), { status: 200 });
+    }
 
     const genAI = new GoogleGenerativeAI(apiKey);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-    // Instrucción de sistema inyectada directamente en el mensaje para máxima compatibilidad
-    const prompt = `INSTRUCCIÓN DE SISTEMA: Eres el Asistente de Ángel Ruiz, ilusionista. Responde de forma profesional y breve.
-    MENSAJE DEL USUARIO: ${message}`;
-
-    console.log("DEBUG: Llamando a Google AI...");
-    const result = await model.generateContent(prompt);
-    
-    console.log("DEBUG: Respuesta recibida de Google AI.");
+    const result = await model.generateContent(`Actúa como el asistente de Ángel Ruiz, el mago. Responde: ${message}`);
     const response = await result.response;
     const text = response.text();
-    
-    console.log("DEBUG: Texto extraído correctamente.");
 
     return new Response(JSON.stringify({ reply: text }), { 
       status: 200, 
@@ -39,13 +22,10 @@ export async function POST(req) {
     });
 
   } catch (error) {
-    console.error("ERROR DETECTADO EN EL SERVIDOR:");
-    console.error("Mensaje:", error.message);
-    if (error.stack) console.error("Stack:", error.stack);
-
+    // ESTE CAMBIO ES CLAVE: Devolvemos el error real al chat para leerlo
+    console.error("Fallo técnico:", error);
     return new Response(JSON.stringify({ 
-        error: "Error interno en el servidor.",
-        message: error.message 
-    }), { status: 500 });
+      reply: `Error Técnico: ${error.message}. Por favor, dile esto a tu asistente IA.` 
+    }), { status: 200 });
   }
 }
