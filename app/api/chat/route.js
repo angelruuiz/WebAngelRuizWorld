@@ -7,12 +7,30 @@ export async function POST(req) {
       return new Response(JSON.stringify({ reply: "Falta la clave GEMINI_API_KEY." }), { status: 200 });
     }
 
-    console.log("DEBUG: Iniciando fetch directo a Google API...");
+    console.log("DEBUG: Escaneando modelos disponibles...");
     
-    // Llamada DIRECTA por HTTP para evitar fallos del SDK
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`;
+    // PASO 1: Listar modelos para saber cuáles tienes habilitados
+    const listUrl = `https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`;
+    const listRes = await fetch(listUrl);
+    const listData = await listRes.json();
     
-    const response = await fetch(url, {
+    const availableModels = listData.models ? listData.models.map(m => m.name.replace("models/", "")) : [];
+    console.log("Modelos encontrados:", availableModels);
+
+    if (availableModels.length === 0) {
+        return new Response(JSON.stringify({ 
+            reply: `Error Crítico: Tu clave API no tiene acceso a ningún modelo. Error de Google: ${listData.error?.message || "Sin permisos"}` 
+        }), { status: 200 });
+    }
+
+    // PASO 2: Elegir el mejor modelo disponible de tu lista
+    const targetModel = availableModels.includes("gemini-1.5-flash") ? "gemini-1.5-flash" : availableModels[0];
+    
+    console.log(`DEBUG: Usando el modelo detectado: ${targetModel}`);
+
+    const chatUrl = `https://generativelanguage.googleapis.com/v1beta/models/${targetModel}:generateContent?key=${apiKey}`;
+    
+    const response = await fetch(chatUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -25,13 +43,12 @@ export async function POST(req) {
     const data = await response.json();
 
     if (!response.ok) {
-      console.error("DEBUG: Error de Google API:", data);
       return new Response(JSON.stringify({ 
-        reply: `Error Directo de Google (${response.status}): ${data.error?.message || "Sin mensaje"}` 
+        reply: `Error (Mode: ${targetModel}): ${data.error?.message || "Fallo al generar contenido"}` 
       }), { status: 200 });
     }
 
-    const replyText = data.candidates?.[0]?.content?.parts?.[0]?.text || "No obtuve respuesta clara.";
+    const replyText = data.candidates?.[0]?.content?.parts?.[0]?.text || "No obtuve respuesta del modelo.";
 
     return new Response(JSON.stringify({ reply: replyText }), { 
       status: 200, 
@@ -41,7 +58,7 @@ export async function POST(req) {
   } catch (error) {
     console.error("Fallo técnico:", error);
     return new Response(JSON.stringify({ 
-      reply: `Error de Red: ${error.message}` 
+      reply: `Error de Sistema: ${error.message}` 
     }), { status: 200 });
   }
 }
