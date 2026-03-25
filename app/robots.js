@@ -5,5 +5,5 @@ export default function robots() {
       allow: '/',
     },
     sitemap: 'https://angelruiz.world/sitemap.xml',
-  }
+  };
 }
