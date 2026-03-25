@@ -48,10 +48,33 @@ export const metadata = {
   },
 };
 
+const schemaOrg = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Angel Ruiz',
+  jobTitle: 'Ilusionista y Mago Profesional',
+  description: 'Ilusionista profesional especializado en Magia de Cerca y Magia de Cóctel para eventos corporativos, bodas y particulares VIP.',
+  url: 'https://angelruiz.world',
+  image: 'https://angelruiz.world/images/foto-bio.png',
+  knowsAbout: ['Magia de Cerca', 'Ilusionismo', 'Magia para Eventos', 'Magia de Cóctel'],
+  areaServed: {
+    '@type': 'Country',
+    name: 'España',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'ES',
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="es" className="scroll-smooth">
       <body className="antialiased min-h-screen selection:bg-amber-500/30 selection:text-amber-200">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
+        />
         {children}
         <Analytics />
       </body>
