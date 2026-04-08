@@ -1,7 +1,7 @@
 export const metadata = {
-  title: 'Magia para Particulares - Bodas y Eventos Privados | Angel Ruiz',
-  description: 'Descubre los servicios de magia para particulares de Angel Ruiz. Especialista en bodas, cumpleaños, comuniones y fiestas exclusivas en Madrid.',
-  keywords: ['magia particulares madrid', 'mago fiestas privadas', 'mago para casas madrid', 'entretenimiento bodas y eventos'],
+  title: 'Magia para Particulares en Madrid | Angel Ruiz',
+  description: 'Descubre los servicios de magia para bodas, fiestas y eventos privados en Madrid. La mejor magia de cerca profesional.',
+  keywords: ['mago para particulares madrid', 'magia para eventos privados', 'fiestas privadas con magia madrid'],
 };
 
 export default function ParticularesLayout({ children }) {

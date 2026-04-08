@@ -1,7 +1,7 @@
 export const metadata = {
-  title: 'Mago para Bodas en Madrid | Angel Ruiz Ilusionista',
-  description: 'Contrata al mejor mago para bodas en Madrid. Especialista en magia de cóctel y banquete para parejas que buscan una celebración exclusiva e inolvidable.',
-  keywords: ['mago bodas madrid', 'ilusionista bodas', 'magia para bodas', 'contratar mago boda', 'animacion bodas madrid'],
+  title: 'Mago para Bodas en Madrid | Magia de Cóctel y Banquete',
+  description: 'Contrata un mago experto en bodas en Madrid. Angel Ruiz hará de tu enlace un día inolvidable con magia de cerca exclusiva para invitados y novios.',
+  keywords: ['mago para bodas madrid', 'magia para coctel de bodas', 'ilusionismo nupcial madrid', 'entretenimiento bodas madrid'],
 };
 
 export default function BodasLayout({ children }) {

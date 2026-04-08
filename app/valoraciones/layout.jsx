@@ -1,7 +1,7 @@
 export const metadata = {
-  title: 'Opiniones y Testimonios de Clientes | Angel Ruiz Ilusionista',
-  description: 'Descubre qué dicen los clientes sobre la magia de Angel Ruiz en eventos y bodas. Reseñas reales y marcas que confían en su ilusionismo profesional.',
-  keywords: ['mago opiniones', 'reseñas angel ruiz mago', 'clientes angel ruiz', 'mejor mago madrid opiniones'],
+  title: 'Opiniones y Testimonios de Angel Ruiz | Mago en Madrid',
+  description: 'Mira lo que dicen de la experiencia de Angel Ruiz Ilusionista. Clientes satisfechos en bodas, fiestas privadas y eventos de empresa.',
+  keywords: ['opiniones mago madrid', 'testimonios mago madrid', 'experiencias angel ruiz ilusionista'],
 };
 
 export default function ValoracionesLayout({ children }) {

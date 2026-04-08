@@ -1,7 +1,7 @@
 export const metadata = {
-  title: 'Mago para Empresas y Eventos Corporativos en Madrid | Angel Ruiz',
-  description: 'Dinamización de eventos de empresa, cenas corporativas y congresos en Madrid. Magia y mentalismo para marcas de gran prestigio internacional.',
-  keywords: ['mago empresas madrid', 'eventos corporativos madrid', 'magia corporativa', 'mago para cenas empresa', 'mentalismo madrid'],
+  title: 'Mago para Empresas en Madrid | Ilusionismo Corporativo',
+  description: 'Contrata a un mago profesional para tu evento de empresa en Madrid. Angel Ruiz ofrece espectáculos exclusivos de magia de cerca y mentalismo corporativo.',
+  keywords: ['mago para empresas madrid', 'ilusionismo corporativo madrid', 'magia para cenas de empresa', 'mentalismo para eventos madrid'],
 };
 
 export default function EmpresasLayout({ children }) {
