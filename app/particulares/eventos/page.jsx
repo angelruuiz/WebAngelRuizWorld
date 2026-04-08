@@ -20,7 +20,7 @@ export default function EventosDetailPage() {
 
             <main className="relative z-10 pt-32 pb-24 px-6 max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-                    <div className="relative md:sticky md:top-32 h-[600px] rounded-3xl overflow-hidden border border-slate-800 shadow-[0_0_50px_rgba(0,0,0,0.5)] order-2 md:order-1">
+                    <div className="relative md:sticky md:top-32 h-[450px] md:h-[500px] rounded-3xl overflow-hidden border border-slate-800 shadow-[0_0_50px_rgba(0,0,0,0.5)] order-2 md:order-1">
                          <Image src="/images/foto-bio.png" alt="Fiestas Privadas y Eventos Angel Ruiz" fill className="object-cover" priority />
                          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 to-transparent" />
                     </div>

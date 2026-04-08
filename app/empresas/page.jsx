@@ -22,7 +22,7 @@ export default function EmpresasPage() {
                 {/* Valor Corporativo */}
                 <section className="py-24 px-6 max-w-7xl mx-auto relative z-10">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-                        <div className="relative md:sticky md:top-32 h-[500px] rounded-3xl overflow-hidden border border-slate-800 shadow-2xl order-2 md:order-1">
+                        <div className="relative md:sticky md:top-32 h-[450px] md:h-[500px] rounded-3xl overflow-hidden border border-slate-800 shadow-2xl order-2 md:order-1">
                             <Image src="/images/foto-bio.png" alt="Mago Corporativo Angel Ruiz" fill className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 shadow-2xl" />
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent" />
                         </div>
