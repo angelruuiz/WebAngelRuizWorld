@@ -54,7 +54,7 @@ export default function EmpresasPage() {
                                 src="/images/curriculum.png"
                                 alt="Mago corporativo en Madrid Ángel Ruiz ilusionista para empresas eventos y congresos"
                                 fill
-                                className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+                                className="object-cover object-top transition-all duration-1000"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent" />
                         </div>
