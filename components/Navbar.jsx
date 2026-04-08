@@ -17,7 +17,7 @@ const Navbar = ({ onOpenContact }) => {
 
     const navLinks = [
         { name: 'Inicio', href: '/' },
-        { name: 'Bodas', href: '/bodas' },
+        { name: 'Particulares', href: '/particulares' },
         { name: 'Empresas', href: '/empresas' },
         { name: 'Sobre Mí', href: '/sobre-mi' },
     ];

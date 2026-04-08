@@ -86,15 +86,15 @@ export default function SobreMiPage() {
                             <p>Una de las más fuertes que existen en mi opinión, y en la que el público participa y se vive todo en primera persona. Magia a escasos centímetros del espectador, en la que se llega a límites insospechados.</p>
                         </div>
 
-                        <div className="flex gap-6 pt-8">
+                        <div className="flex gap-4 pt-10">
                             {[
-                                { url: "https://instagram.com/angellruuiz", icon: "Instagram" },
-                                { url: "https://tiktok.com/@angellruuiz", icon: "TikTok" },
-                                { url: "https://x.com/angellruuizz", icon: "X" },
-                                { url: "https://facebook.com/angellruuiz", icon: "Facebook" }
+                                { url: "https://instagram.com/angellruuiz", icon: (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg> },
+                                { url: "https://tiktok.com/@angellruuiz", icon: (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg> },
+                                { url: "https://x.com/angellruuizz", icon: (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768" /><path d="M13.277 10.723l6.723 -6.723" /></svg> },
+                                { url: "https://facebook.com/angellruuiz", icon: (props) => <svg {...props} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg> }
                             ].map((social, i) => (
-                                <a key={i} href={social.url} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-amber-500 transition-colors uppercase tracking-[0.2em] text-xs font-bold border-b border-transparent hover:border-amber-500/50 pb-1">
-                                    {social.icon}
+                                <a key={i} href={social.url} target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-amber-500/50 flex items-center justify-center text-amber-500 hover:bg-amber-500 hover:text-slate-950 transition-all hover:scale-110 shadow-[0_0_15px_rgba(245,158,11,0.2)] group">
+                                    <social.icon className="w-5 h-5 group-hover:scale-110 transition-transform" />
                                 </a>
                             ))}
                         </div>
