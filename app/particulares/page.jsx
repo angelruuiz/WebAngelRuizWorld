@@ -31,7 +31,7 @@ export default function ParticularesSelectorPage() {
                         className={`relative flex-1 flex items-center justify-center transition-all duration-1000 ease-in-out overflow-hidden group border-r border-slate-800/50 ${hoverSide === 'right' ? 'md:flex-[0.5] grayscale' : 'md:flex-[1.5]'}`}
                     >
                         <Image 
-                            src="/images/foto-bio-2.png" 
+                            src="/images/boda-magia-madrid.jpg" 
                             alt="Magia para Bodas" 
                             fill 
                             className="object-cover transition-transform duration-1000 group-hover:scale-105 opacity-60"
@@ -65,7 +65,7 @@ export default function ParticularesSelectorPage() {
                         className={`relative flex-1 flex items-center justify-center transition-all duration-1000 ease-in-out overflow-hidden group ${hoverSide === 'left' ? 'md:flex-[0.5] grayscale' : 'md:flex-[1.5]'}`}
                     >
                         <Image 
-                            src="/images/foto-bio.png" 
+                            src="/images/fiesta-eventos-madrid.webp" 
                             alt="Celebraciones Familiares" 
                             fill 
                             className="object-cover transition-transform duration-1000 group-hover:scale-105 opacity-60"
