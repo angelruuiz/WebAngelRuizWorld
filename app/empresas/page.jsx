@@ -33,17 +33,17 @@ export default function EmpresasPage() {
                         <motion.h1 
                             initial={{ opacity: 0, y: 20 }} 
                             animate={{ opacity: 1, y: 0 }}
-                            className="text-4xl md:text-7xl font-[Cinzel] font-bold text-white mb-6 uppercase tracking-tighter"
+                            className="text-5xl md:text-8xl font-[Cinzel] font-bold text-white mb-6 uppercase tracking-tighter drop-shadow-2xl"
                         >
-                            Magia para <span className="text-amber-400">Empresas</span> y Marcas
+                            Magia para <span className="text-amber-400">Empresas</span>
                         </motion.h1>
                         <motion.p 
                             initial={{ opacity: 0, y: 20 }} 
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="text-lg md:text-2xl text-slate-300 font-light max-w-2xl mx-auto leading-relaxed"
+                            className="text-xl md:text-3xl text-slate-100 font-medium max-w-3xl mx-auto leading-relaxed drop-shadow-lg"
                         >
-                            Dinamiza tus eventos corporativos, presentaciones de producto o cenas de gala con un impacto garantizado.
+                            Impacto garantizado para tus eventos de marca y cenas de gala corporativas.
                         </motion.p>
                     </div>
                 </section>
@@ -55,19 +55,21 @@ export default function EmpresasPage() {
                             <Image src="/images/foto-bio.png" alt="Mago Corporativo" fill className="object-cover grayscale hover:grayscale-0 transition-all duration-700" />
                         </div>
                         <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} className="order-1 md:order-2">
-                            <h2 className="text-3xl md:text-5xl font-[Cinzel] text-white mb-8">Más que un Espectáculo: Una Inversión</h2>
-                            <div className="space-y-6 text-slate-300 text-lg font-light leading-relaxed">
-                                <p>En un entorno empresarial, la magia no es solo entretenimiento; es una potente herramienta de networking y comunicación.</p>
-                                <p>Ayudo a las marcas a transmitir mensajes, fidelizar clientes y generar un ambiente de equipo relajado y positivo a través de ilusiones inteligentes y sofisticadas.</p>
+                            <h2 className="text-4xl md:text-6xl font-[Cinzel] text-white mb-8 border-b border-amber-500/30 pb-4">Una Inversión Real</h2>
+                            <div className="space-y-6 text-slate-200 text-xl font-light leading-loose text-justify">
+                                <p>En un entorno empresarial, la magia no es solo entretenimiento; es una <span className="text-white font-medium">potente herramienta de networking</span> y comunicación estratégica.</p>
+                                <p>Ayudo a las marcas a transmitir mensajes, fidelizar clientes y generar un ambiente de equipo positivo a través de ilusiones inteligentes y sofisticadas.</p>
                                 <ul className="space-y-4 pt-6">
                                     {[
                                         "Networking facilitado en cócteles de empresa",
-                                        "Personalización de trucos con el logo o mensaje de marca",
+                                        "Personalización de trucos con el logo de marca",
                                         "Shows de salón para cenas de gala",
                                         "Magia en stands para atraer leads en ferias"
                                     ].map((item, i) => (
-                                        <li key={i} className="flex items-center gap-3">
-                                            <CheckCircle2 className="text-amber-500 w-5 h-5 flex-shrink-0" />
+                                        <li key={i} className="flex items-center gap-4 text-white font-medium">
+                                            <div className="w-6 h-6 rounded-full bg-amber-500/20 flex items-center justify-center flex-shrink-0">
+                                                <CheckCircle2 className="text-amber-500 w-4 h-4" />
+                                            </div>
                                             <span>{item}</span>
                                         </li>
                                     ))}

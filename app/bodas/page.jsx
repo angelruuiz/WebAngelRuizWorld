@@ -36,17 +36,17 @@ export default function BodasPage() {
                         <motion.h1 
                             initial={{ opacity: 0, y: 20 }} 
                             animate={{ opacity: 1, y: 0 }}
-                            className="text-4xl md:text-7xl font-[Cinzel] font-bold text-white mb-6"
+                            className="text-5xl md:text-8xl font-[Cinzel] font-bold text-white mb-6 drop-shadow-2xl"
                         >
-                            Magia para <span className="text-amber-400">Bodas</span> Inolvidables
+                            Magia para <span className="text-amber-400">Bodas</span>
                         </motion.h1>
                         <motion.p 
                             initial={{ opacity: 0, y: 20 }} 
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="text-lg md:text-2xl text-slate-300 font-light max-w-2xl mx-auto leading-relaxed"
+                            className="text-xl md:text-3xl text-slate-100 font-medium max-w-2xl mx-auto leading-relaxed drop-shadow-lg"
                         >
-                            Haz que vuestro día especial sea aún más mágico con ilusiones que rompen el hielo y unen a vuestros invitados.
+                            Haz que vuestro día especial sea aún más mágico con ilusiones que rompen el hielo.
                         </motion.p>
                     </div>
                 </section>
@@ -55,10 +55,10 @@ export default function BodasPage() {
                 <section className="py-24 px-6 max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                         <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }}>
-                            <h2 className="text-3xl md:text-5xl font-[Cinzel] text-white mb-8">El Nexo Perfecto entre Invitados</h2>
-                            <div className="space-y-6 text-slate-300 text-lg font-light leading-relaxed">
+                            <h2 className="text-4xl md:text-6xl font-[Cinzel] text-white mb-8 border-b border-amber-500/30 pb-4">El Nexo Perfecto</h2>
+                            <div className="space-y-6 text-slate-200 text-xl font-light leading-loose text-justify">
                                 <p>El cóctel es el momento clave para que las familias se conozcan. La magia actúa como el catalizador ideal: genera conversación, risas y asombro compartido.</p>
-                                <p>Mi estilo de magia de cerca está diseñado para ser elegante, no intrusivo y altamente participativo. No solo verán magia; vivirán milagros en sus propias manos.</p>
+                                <p>Mi estilo de magia de cerca está diseñado para ser <span className="text-white font-medium italic">elegante, no intrusivo y altamente participativo</span>. No solo verán magia; vivirán milagros en sus propias manos.</p>
                                 <ul className="space-y-4 pt-6">
                                     {[
                                         "Magia itinerante grupo a grupo",
@@ -66,8 +66,10 @@ export default function BodasPage() {
                                         "Fotografías místicas para el recuerdo",
                                         "Adaptado a cualquier estilo de boda"
                                     ].map((item, i) => (
-                                        <li key={i} className="flex items-center gap-3">
-                                            <CheckCircle2 className="text-amber-500 w-5 h-5" />
+                                        <li key={i} className="flex items-center gap-4 text-white font-medium">
+                                            <div className="w-6 h-6 rounded-full bg-amber-500/20 flex items-center justify-center flex-shrink-0">
+                                                <CheckCircle2 className="text-amber-500 w-4 h-4" />
+                                            </div>
                                             <span>{item}</span>
                                         </li>
                                     ))}
