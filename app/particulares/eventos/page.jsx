@@ -124,7 +124,7 @@ export default function EventosDetailPage() {
                             src="/images/fiesta-eventos-madrid.webp"
                             alt="Mago para eventos privados en Madrid Ángel Ruiz ilusionista especializado en cumpleaños y fiestas"
                             fill
-                            className="object-cover"
+                            className="object-cover object-top"
                             priority
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 to-transparent" />

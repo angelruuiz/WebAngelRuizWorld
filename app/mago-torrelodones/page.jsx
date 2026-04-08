@@ -32,7 +32,7 @@ const MagicalCarousel = () => {
                         src={images[index]}
                         alt="Angel Ruiz Mago profesional en Torrelodones"
                         fill
-                        className="object-cover rounded-3xl"
+                        className="object-cover object-[center_10%] rounded-3xl"
                         sizes="(max-width: 768px) 100vw, 50vw"
                         priority={index === 0}
                     />

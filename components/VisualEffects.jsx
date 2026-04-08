@@ -16,7 +16,7 @@ export const MagicCursor = () => {
         };
     }, []);
     return (
-        <motion.div className="fixed top-0 left-0 pointer-events-none z-[100001] mix-blend-screen hidden md:block"
+        <motion.div className="fixed top-0 left-0 pointer-events-none z-[100005] mix-blend-screen hidden md:block"
             animate={{ x: mousePosition.x - (isHovering ? 32 : 16), y: mousePosition.y - (isHovering ? 32 : 16), scale: isHovering ? 1.5 : 1 }}
             transition={{ x: { duration: 0 }, y: { duration: 0 }, scale: { type: 'spring', stiffness: 500, damping: 28 } }}>
             <div className={`rounded-full bg-amber-400 blur-xl opacity-40 transition-all duration-300 ${isHovering ? 'w-16 h-16' : 'w-8 h-8'}`} />

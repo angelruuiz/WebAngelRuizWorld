@@ -130,7 +130,7 @@ export default function BodasDetailPage() {
                             src="/images/boda-magia-madrid.jpg"
                             alt="Mago de bodas en Madrid Ángel Ruiz ilusionista profesional para cócteles y banquetes"
                             fill
-                            className="object-cover"
+                            className="object-cover object-top"
                             priority
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 to-transparent" />
