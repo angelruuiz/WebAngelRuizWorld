@@ -317,6 +317,12 @@ const Biography = () => (
                     <a href="https://tiktok.com/@angellruuiz" target="_blank" rel="noopener noreferrer" aria-label="Visita el perfil oficial de TikTok de Angel Ruiz" className="w-12 h-12 rounded-full border border-amber-500/50 flex items-center justify-center text-amber-500 hover:bg-amber-500 hover:text-slate-950 transition-all hover:scale-110 shadow-[0_0_15px_rgba(245,158,11,0.1)] group">
                         <svg className="w-5 h-5 group-hover:scale-110 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
                     </a>
+                    <a href="https://x.com/angellruuizz" target="_blank" rel="noopener noreferrer" aria-label="Visita el perfil oficial de X de Angel Ruiz" className="w-12 h-12 rounded-full border border-amber-500/50 flex items-center justify-center text-amber-500 hover:bg-amber-500 hover:text-slate-950 transition-all hover:scale-110 shadow-[0_0_15px_rgba(245,158,11,0.1)] group">
+                        <svg className="w-5 h-5 group-hover:scale-110 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z" /><path d="M4 20l6.768 -6.768" /><path d="M13.277 10.723l6.723 -6.723" /></svg>
+                    </a>
+                    <a href="https://facebook.com/angellruuiz" target="_blank" rel="noopener noreferrer" aria-label="Visita el perfil oficial de Facebook de Angel Ruiz" className="w-12 h-12 rounded-full border border-amber-500/50 flex items-center justify-center text-amber-500 hover:bg-amber-500 hover:text-slate-950 transition-all hover:scale-110 shadow-[0_0_15px_rgba(245,158,11,0.1)] group">
+                        <svg className="w-5 h-5 group-hover:scale-110 transition-transform" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
                 </motion.div>
             </motion.div>
         </div>
@@ -478,7 +484,9 @@ export default function App() {
         },
         "sameAs": [
             "https://instagram.com/angellruuiz",
-            "https://tiktok.com/@angellruuiz"
+            "https://tiktok.com/@angellruuiz",
+            "https://x.com/angellruuizz",
+            "https://facebook.com/angellruuiz"
         ]
     };
 
@@ -521,6 +529,8 @@ export default function App() {
                                 <a href="mailto:angellruuiz@gmail.com" className="hover:text-amber-400 transition-colors">angellruuiz@gmail.com</a>
                                 <a href="https://instagram.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Instagram</a>
                                 <a href="https://tiktok.com/@angellruuiz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">TikTok</a>
+                                <a href="https://x.com/angellruuizz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">X</a>
+                                <a href="https://facebook.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Facebook</a>
                             </div>
                             <div className="pt-8 text-sm text-slate-500"><p>© 2026 Angel Ruiz. Todos los derechos reservados.</p></div>
                         </div>

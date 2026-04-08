@@ -34,6 +34,8 @@ export const metadata = {
     title: 'Angel Ruiz | Magia & Ilusionismo',
     description: 'Ilusionista especializado en eventos exclusivos y magia de cerca.',
     images: ['/images/foto-bio.png'],
+    site: '@angellruuizz',
+    creator: '@angellruuizz',
   },
   robots: {
     index: true,
