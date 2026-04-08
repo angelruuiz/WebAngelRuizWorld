@@ -10,7 +10,7 @@ const MagicSpiral = ({ isVisible, onComplete }) => {
       setShouldRender(true);
       const timer = setTimeout(() => {
         onComplete?.();
-      }, 2500); // Increased duration for better "feel"
+      }, 2500); 
       return () => clearTimeout(timer);
     } else {
       const timer = setTimeout(() => setShouldRender(false), 500);
@@ -20,8 +20,9 @@ const MagicSpiral = ({ isVisible, onComplete }) => {
 
   if (!shouldRender) return null;
 
-  const lines = Array.from({ length: 32 });
-  const particles = Array.from({ length: 40 });
+  // Reduced counts for optimization
+  const lines = Array.from({ length: 18 }); 
+  const particles = Array.from({ length: 25 });
 
   return (
     <div className="fixed inset-0 z-[99999] pointer-events-none flex items-center justify-center overflow-hidden">
@@ -31,76 +32,67 @@ const MagicSpiral = ({ isVisible, onComplete }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 z-0 bg-slate-950/40 backdrop-blur-[4px]"
-            style={{ background: 'radial-gradient(circle, rgba(15, 23, 42, 0.4) 0%, rgba(2, 6, 23, 0.9) 100%)' }}
+            className="absolute inset-0 z-0 bg-slate-950/80" // Removed expensive backdrop-blur
           >
-            <motion.div 
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
+            <div 
                 className="absolute inset-0"
-                style={{ background: 'radial-gradient(circle, rgba(245, 158, 11, 0.2) 0%, transparent 70%)' }}
+                style={{ background: 'radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%)' }}
             />
           </motion.div>
         )}
       </AnimatePresence>
 
-      <div className="relative w-0 h-0 scale-[2.5] md:scale-[3.5]">
-        {/* Magic Dust / Stars */}
+      <div className="relative w-0 h-0 scale-[2] md:scale-[3] will-change-transform">
+        {/* Magic Dust / Stars - Optimized */}
         {particles.map((_, i) => (
           <motion.div
             key={`p-${i}`}
-            initial={{ x: 0, y: 0, scale: 0, opacity: 0 }}
+            initial={{ translate: '-50% -50%', scale: 0, opacity: 0 }}
             animate={{ 
-              x: [0, (Math.random() - 0.5) * 500],
-              y: [0, (Math.random() - 0.5) * 500],
-              scale: [0, Math.random() * 1.5 + 0.5, 0],
-              opacity: [0, 1, 0],
-              rotate: [0, Math.random() * 360]
+              x: (Math.random() - 0.5) * 600,
+              y: (Math.random() - 0.5) * 600,
+              scale: [0, 1.2, 0],
+              opacity: [0, 1, 0]
             }}
             transition={{ 
-              duration: 2.5, 
+              duration: 2.2, 
               ease: "easeOut",
-              delay: Math.random() * 0.5
+              delay: Math.random() * 0.4
             }}
-            className="absolute w-1 h-1 bg-amber-200 rounded-full"
-            style={{ 
-              boxShadow: '0 0 8px #fbbf24',
-              filter: 'blur(0.5px)'
-            }}
+            className="absolute w-1 h-1 bg-amber-300 rounded-full shadow-[0_0_5px_#fbbf24] will-change-transform" // Simpler shadow
           />
         ))}
 
-        {/* Spiral Lines */}
+        {/* Spiral Lines - Optimized */}
         {lines.map((_, i) => (
           <motion.div
             key={`l-${i}`}
             initial={{ scale: 0, rotate: i * (360 / lines.length), opacity: 0 }}
             animate={{ 
-              scale: [0, 1.5, 6], 
-              rotate: [i * (360 / lines.length), i * (360 / lines.length) + 540], // More spins
-              opacity: [0, 1, 0.8, 0]
+              scale: [0, 1.2, 6], 
+              rotate: [i * (360 / lines.length), i * (360 / lines.length) + 480],
+              opacity: [0, 1, 0]
             }}
             transition={{ 
-              duration: 2.8, 
-              ease: [0.22, 1, 0.36, 1],
-              delay: i * 0.04
+              duration: 2.5, 
+              ease: [0.16, 1, 0.3, 1],
+              delay: i * 0.05
             }}
-            className="absolute top-1/2 left-0 w-[80vw] h-[1px] origin-left bg-gradient-to-r from-transparent via-amber-400 to-transparent"
+            className="absolute top-1/2 left-0 w-[80vw] h-[1px] origin-left bg-amber-400 will-change-transform"
             style={{ 
-              boxShadow: '0 0 25px rgba(245, 158, 11, 0.7), 0 0 50px rgba(245, 158, 11, 0.4)',
+              boxShadow: '0 0 15px rgba(245, 158, 11, 0.5)', // Single simple shadow
               borderRadius: '100px',
-              opacity: 0.8
+              opacity: 0.7
             }}
           />
         ))}
         
-        {/* Glow center */}
+        {/* Glow center - Optimized */}
         <motion.div
           initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: [0, 4, 0], opacity: [0, 1, 0] }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-amber-400 blur-[80px] rounded-full"
+          animate={{ scale: [0, 3, 0], opacity: [0, 0.6, 0] }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-amber-500/30 blur-[60px] rounded-full"
         />
       </div>
     </div>
