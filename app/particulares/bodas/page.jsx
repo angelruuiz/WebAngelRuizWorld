@@ -29,9 +29,13 @@ export default function BodasDetailPage() {
                             
                             <p>Si me quieres durante el cóctel, <span className="text-white font-bold italic underline decoration-amber-500/50">me infiltraré entre tus invitados como uno más</span> e iré realizando mini-shows de magia por grupos. Si me quieres durante el banquete, amenizaré las esperas entre plato y plato y romperé el hielo con tus invitados para que participen activamente.</p>
                             
-                            <p>Este tipo de magia, llamada <span className="text-amber-400 font-bold">"magia de cóctel"</span> es dinámica, fresca y participativa. No tiene nada que ver con el mago "cliché" de cuerdas, pañuelos, palomas... Olvídate de todo eso. Mi estilo es moderno, muy definido y elegante. Magia con teléfonos, monedas, carteras, robo de relojes, cartas, mentalismo, hipnosis...</p>
+                            <p>Tu gran día merece un toque de distinción que tus invitados no olviden jamás. Como <strong className="text-amber-400">mago de bodas en Madrid</strong>, me especializo en crear esos instantes de asombro que sirven para romper el hielo y conectar a familiares y amigos que acaban de conocerse.</p>
                             
-                            <p className="italic text-amber-500/90 font-bold border-l-2 border-amber-500 pl-4 py-2">Magia adulta y participación intensa. Los presupuestos varían según la ubicación de la ceremonia. ¡Contáctame y hablamos!</p>
+                            <p>La magia durante el cóctel es la opción más demandada. Mientras los novios realizan su sesión fotográfica, yo me encargo de que el ritmo no decaiga, moviéndome entre los grupos con efectos de <strong className="text-amber-400 italic underline decoration-amber-500/30">ilusionismo de impacto</strong> que ocurren directamente en las manos de los asistentes. No es solo un espectáculo, es una herramienta social que genera risas, conversaciones y un ambiente eléctrico.</p>
+                            
+                            <p>Además de la recepción, ofrezco intervenciones personalizadas durante el banquete o incluso un show central antes del baile. Cada boda es única, por lo que adapto mi repertorio para que encaje con el estilo de vuestro enlace, ya sea una celebración íntima o un gran evento de gala. Mi objetivo es que, cuando la gente recuerde vuestro enlace, mencione lo increíble que fue ese momento en el que lo imposible ocurrió frente a sus ojos.</p>
+
+                            <p className="italic text-amber-500/90 font-bold border-l-2 border-amber-500 pl-4 py-2 mt-4">Magia adulta y participación intensa. Como uno de los ilusionistas con más trayectoria en celebraciones exclusivas, te garantizo un éxito total. Los presupuestos varían según la ubicación de la ceremonia. ¡Contáctame y hablamos!</p>
                         </div>
 
                         <div className="mt-12 flex justify-start">

@@ -31,7 +31,11 @@ export default function EventosDetailPage() {
                             
                             <p>Si sois un grupo reducido, puedo llevar a tu domicilio mi espectáculo del teatro Houdini, <span className="text-amber-400 font-bold font-['Playfair_Display'] italic">"Reina de corazones"</span>. El teatro en tu casa.</p>
                             
-                            <p>Disfrutarás de un show familiar-adulto en el que prácticamente todos participaréis de una forma u otra. Un humor elegante y una buena dosis de emoción os harán flipar a lo grande, ¡te lo aseguro!</p>
+                            <p>Convierte cualquier celebración en un acontecimiento épico. Me especializo en <strong className="text-amber-400">magia para eventos privados en Madrid</strong>, ofreciendo un show versátil que se adapta a cumpleaños, aniversarios, comuniones o simplemente una reunión de amigos que buscan algo fuera de lo común.</p>
+
+                            <p>Disfrutarás de un show familiar-adulto en el que prácticamente todos participaréis de una forma u otra. Mi enfoque combina un <strong className="text-amber-400 italic underline decoration-amber-500/30">humor inteligente y refinado</strong> con efectos de ilusionismo que desafían la lógica. No es solo ver trucos; es participar en una experiencia emocional donde la sorpresa es el plato fuerte.</p>
+
+                            <p>Ya sea en el salón de un restaurante, en el jardín de tu casa o en un local privado, mi magia de cerca profesional está diseñada para funcionar en cualquier espacio. Me encargo de leer la energía del grupo y subir el nivel de asombro de forma progresiva, desde juegos visuales impactantes hasta sesiones de mentalismo que dejarán a todos sin palabras.</p>
                             
                             <p className="italic text-amber-500/90 font-bold border-l-2 border-amber-500 pl-4 py-2 mt-4">Verás cosas nunca vistas; magia moderna. anillos, monedas, cartas y algunos objetos no tan comunes, serán los culpables de trasladarte a un mundo increíble lleno de misterio, humor y mucha cara dura...</p>
                         </div>
