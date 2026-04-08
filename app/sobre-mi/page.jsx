@@ -6,7 +6,6 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import { ContactFormModal } from '@/components/Modals';
-import Chatbot from '@/components/Chatbot';
 
 const MagicalCarousel = () => {
     const images = ["/images/foto-bio.png", "/images/foto-bio-2.png"];
@@ -104,7 +103,6 @@ export default function SobreMiPage() {
 
             <Footer onOpenContact={() => setIsContactOpen(true)} />
             <ContactFormModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
-            <Chatbot />
         </div>
     );
 }

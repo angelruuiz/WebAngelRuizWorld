@@ -7,7 +7,6 @@ import Footer from '@/components/Footer';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import { ContactFormModal } from '@/components/Modals';
 import { Sparkles, Users, CheckCircle2, Star, GlassWater } from '@/components/Icons';
-import Chatbot from '@/components/Chatbot';
 
 export default function EmpresasPage() {
     const [isContactOpen, setIsContactOpen] = useState(false);
@@ -47,7 +46,6 @@ export default function EmpresasPage() {
 
             <Footer onOpenContact={() => setIsContactOpen(true)} />
             <ContactFormModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
-            <Chatbot />
         </div>
     );
 }

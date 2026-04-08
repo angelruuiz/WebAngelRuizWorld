@@ -8,7 +8,6 @@ import Footer from '@/components/Footer';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import { ContactFormModal } from '@/components/Modals';
 import { Sparkles, Heart } from '@/components/Icons';
-import Chatbot from '@/components/Chatbot';
 
 export default function ParticularesSelectorPage() {
     const [isContactOpen, setIsContactOpen] = useState(false);
@@ -94,7 +93,6 @@ export default function ParticularesSelectorPage() {
                 </section>
             </main>
 
-            <Chatbot />
         </div>
     );
 }

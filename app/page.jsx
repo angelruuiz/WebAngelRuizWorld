@@ -144,12 +144,12 @@ const SEOContent = () => {
                     <div className="space-y-8">
                         <div>
                             <h3 className="text-amber-500 font-[Cinzel] text-xl mb-4 uppercase">Trayectoria e Innovación</h3>
-                            <p>Con más de una década de experiencia y habiendo pasado por los escenarios más prestigiosos de la capital española, Angel Ruiz combina técnicas de <strong className="text-amber-500/80">mentalismo psicológico</strong>, cartomagia de alto nivel e hipnosis ligera. Este abanico de habilidades le permite adaptarse a cualquier perfil de público, desde audiencias infantiles-familiares en una comunión hasta directivos de alto rango en un congreso internacional. Si quieres conocer más sobre su evolución artística, visita la sección <Link href="/sobre-mi" className="text-amber-400 hover:underline font-bold">Sobre Mí</Link>.</p>
+                            <p>Con más de una década de experiencia y habiendo pasado por los escenarios más prestigiosos de la capital española, Angel Ruiz combina técnicas de <strong className="text-amber-500/80">mentalismo psicológico</strong>, cartomagia de alto nivel e hipnosis ligera. Este abanico de habilidades le permite adaptarse a cualquier perfil de público. Si quieres conocer más sobre su evolución artística, puedes <Link href="/sobre-mi" className="text-amber-400 hover:underline font-bold">consultar su biografía completa</Link>.</p>
                         </div>
 
                         <div>
                             <h3 className="text-amber-500 font-[Cinzel] text-xl mb-4 uppercase">¿Por qué elegir a Angel Ruiz?</h3>
-                            <p>La diferencia reside en los detalles. No se trata solo de trucos, sino de la experiencia completa: desde la primera llamada de asesoramiento hasta el último aplauso. Las <Link href="/valoraciones" className="text-amber-400 hover:underline font-bold">valoraciones de clientes satisfechos</Link> avalan un servicio de cinco estrellas que prioriza la puntualidad, la educación y, por supuesto, la máxima calidad artística. En un mercado saturado, Angel destaca por un estilo fresco, lejos de los clichés caducos, ofreciendo una imagen premium acorde con los eventos más exigentes de Madrid.</p>
+                            <p>La diferencia reside en los detalles. No se trata solo de trucos, sino de la experiencia completa. Las <Link href="/valoraciones" className="text-amber-400 hover:underline font-bold">opiniones de otros clientes</Link> avalan un servicio de cinco estrellas que prioriza la calidad. En un mercado saturado, Angel destaca por un estilo fresco, lejos de los clichés caducos, ofreciendo una imagen premium acorde con los eventos más exigentes.</p>
                         </div>
 
                         <div>
@@ -160,17 +160,7 @@ const SEOContent = () => {
                 </div>
 
                 <div className="mt-20 pt-12 border-t border-white/5 space-y-6 text-sm">
-                    <p className="text-center font-bold text-amber-500/60 uppercase tracking-[0.3em]">Servicios de Ilusionismo en Madrid</p>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-xs opacity-40 uppercase tracking-widest font-light">
-                        <div className="p-2 border border-white/5 rounded">Mago de Cerca</div>
-                        <div className="p-2 border border-white/5 rounded">Mentalismo Madrid</div>
-                        <div className="p-2 border border-white/5 rounded">Magia para Cóctel</div>
-                        <div className="p-2 border border-white/5 rounded">Show de Salon</div>
-                        <div className="p-2 border border-white/5 rounded">Mago de Boda</div>
-                        <div className="p-2 border border-white/5 rounded">Eventos de Lujo</div>
-                        <div className="p-2 border border-white/5 rounded">Magia Corporativa</div>
-                        <div className="p-2 border border-white/5 rounded">Ilusionismo VIP</div>
-                    </div>
+                    <p className="text-center font-bold text-amber-500/60 uppercase tracking-[0.3em]">Experiencias de Ilusionismo Profesional</p>
                 </div>
             </div>
         </section>
@@ -179,8 +169,6 @@ const SEOContent = () => {
 
 export default function App() {
     const [isContactOpen, setIsContactOpen] = useState(false);
-    const [selectedService, setSelectedService] = useState(null);
-    const [isChatOpen, setIsChatOpen] = useState(false);
     
     const structuredData = {
         "@context": "https://schema.org",
@@ -246,8 +234,6 @@ export default function App() {
             <Footer onOpenContact={() => setIsContactOpen(true)} />
 
             <ContactFormModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
-            
-            <Chatbot hidden={!!selectedService || isContactOpen} isOpenExternal={isChatOpen} setIsOpenExternal={setIsChatOpen} />
         </div>
     );
 }

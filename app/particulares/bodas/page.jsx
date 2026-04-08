@@ -7,7 +7,6 @@ import Footer from '@/components/Footer';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import { ContactFormModal } from '@/components/Modals';
 import { CheckCircle2 } from '@/components/Icons';
-import Chatbot from '@/components/Chatbot';
 
 export default function BodasDetailPage() {
     const [isContactOpen, setIsContactOpen] = useState(false);
@@ -52,7 +51,6 @@ export default function BodasDetailPage() {
 
             <Footer onOpenContact={() => setIsContactOpen(true)} />
             <ContactFormModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
-            <Chatbot />
         </div>
     );
 }

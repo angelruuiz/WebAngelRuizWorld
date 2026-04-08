@@ -7,7 +7,6 @@ import Footer from '@/components/Footer';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import { MagicModal, ContactFormModal } from '@/components/Modals';
 import { Star, Quote, CheckCircle2, Sparkles } from '@/components/Icons';
-import Chatbot from '@/components/Chatbot';
 
 const wrap = (min, max, v) => {
     const rangeSize = max - min;
@@ -151,7 +150,6 @@ export default function ValoracionesPage() {
 
             <Footer onOpenContact={() => setIsContactOpen(true)} />
             <ContactFormModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
-            <Chatbot />
         </div>
     );
 }
