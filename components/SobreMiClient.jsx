@@ -59,7 +59,7 @@ export default function SobreMiClient({ children }) {
                     <motion.div 
                         initial={{ opacity: 0, x: -50 }} 
                         animate={{ opacity: 1, x: 0 }}
-                        className="relative max-w-md mx-auto w-full h-[400px] md:h-[600px] z-10"
+                        className="relative max-w-md mx-auto w-full h-[400px] md:h-[600px] z-10 md:sticky md:top-36"
                     >
                         <div className="absolute -inset-4 bg-gradient-to-tr from-amber-600/20 to-purple-600/20 rounded-2xl blur-xl rotate-3" />
                         <div className="relative w-full h-full rounded-xl overflow-hidden shadow-2xl border border-slate-800">
