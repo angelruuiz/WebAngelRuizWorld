@@ -31,11 +31,11 @@ const Navbar = ({ onOpenContact }) => {
 
     return (
         <>
-            <nav className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center transition-all duration-500 ${isScrolled || isMenuOpen ? 'bg-slate-950/90 backdrop-blur-xl py-4 px-6 md:px-12 shadow-2xl' : 'p-6 md:px-12 mix-blend-difference'}`}>
+            <nav className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center transition-all duration-500 ${isScrolled || isMenuOpen ? 'bg-slate-950/90 backdrop-blur-xl py-4 px-6 md:px-12 shadow-2xl' : 'bg-slate-950/30 backdrop-blur-md py-6 px-6 md:px-12'}`}>
                 <Link href="/" className="flex items-center text-xl font-[Cinzel] font-bold text-amber-500 tracking-[0.3em] z-50 transition-transform hover:scale-105">AR</Link>
                 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-8 text-[11px] font-bold uppercase tracking-[0.3em] text-slate-300">
+                <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-8 text-[11px] font-bold uppercase tracking-[0.3em] text-slate-100">
                     {navLinks.map((link) => (
                         <Link 
                             key={link.name} 
