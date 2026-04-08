@@ -51,10 +51,10 @@ export default function EmpresasPage() {
 
                         <div className="relative md:sticky md:top-32 h-[350px] md:h-[500px] rounded-2xl overflow-hidden border border-slate-800 shadow-xl order-2 md:order-1">
                             <Image
-                                src="/images/curriculum.png"
-                                alt="Angel Ruiz - Especialista en Magia para Empresas en Madrid y Eventos Corporativos"
+                                src="/images/mago-empresas-madrid-angel-ruiz.svg"
+                                alt="Angel Ruiz - Logo Minimalista Vectorizado"
                                 fill
-                                className="object-cover transition-all duration-1000"
+                                className="object-contain p-12 transition-all duration-1000"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent" />
                         </div>
