@@ -16,9 +16,6 @@ export const metadata = {
     icon: '/icon.jpg',
     apple: '/icon.jpg',
   },
-  alternates: {
-    canonical: '/',
-  },
   openGraph: {
     type: 'website',
     locale: 'es_ES',

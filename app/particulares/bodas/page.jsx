@@ -3,13 +3,38 @@ import NavFooterClient from '@/components/NavFooterClient';
 import ContactButtonClient from '@/components/ContactButtonClient';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 
-export default function BodasDetailPage() {
-    return (
-        <NavFooterClient>
-            <MagicCursor />
-            <ParticleBackground />
+export const metadata = {
+    title: 'Mago para Bodas en Madrid | Angel Ruiz Ilusionista',
+    description: 'Haz que tu cóctel y banquete de boda sean inolvidables con magia de cerca exclusiva. Angel Ruiz, mago experto en bodas en Madrid y alrededores.',
+    alternates: {
+        canonical: '/particulares/bodas',
+    },
+};
 
-            <main className="relative z-10 pt-32 pb-24 px-6 max-w-7xl mx-auto">
+export default function BodasDetailPage() {
+    const serviceSchema = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Magia para Bodas en Madrid",
+        "provider": {
+            "@type": "Person",
+            "name": "Angel Ruiz"
+        },
+        "description": "Servicio de ilusionismo y magia de cerca para cócteles y banquetes de boda en la Comunidad de Madrid.",
+        "areaServed": "Madrid"
+    };
+
+    return (
+        <>
+            <script 
+                type="application/ld+json" 
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} 
+            />
+            <NavFooterClient>
+                <MagicCursor />
+                <ParticleBackground />
+
+                <main className="relative z-10 pt-32 pb-24 px-6 max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
 
                     <div>

@@ -3,13 +3,38 @@ import NavFooterClient from '@/components/NavFooterClient';
 import ContactButtonClient from '@/components/ContactButtonClient';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 
-export default function EventosDetailPage() {
-    return (
-        <NavFooterClient>
-            <MagicCursor />
-            <ParticleBackground />
+export const metadata = {
+    title: 'Mago para Eventos Privados y Fiestas en Madrid | Angel Ruiz',
+    description: 'Sorprende a tus invitados con magia de cerca y mentalismo en tus fiestas privadas, cumpleaños o aniversarios en Madrid. Espectáculo adaptado a tu domicilio.',
+    alternates: {
+        canonical: '/particulares/eventos',
+    },
+};
 
-            <main className="relative z-10 pt-32 pb-24 px-6 max-w-7xl mx-auto">
+export default function EventosDetailPage() {
+    const serviceSchema = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Magia para Eventos Privados en Madrid",
+        "provider": {
+            "@type": "Person",
+            "name": "Angel Ruiz"
+        },
+        "description": "Show de magia para fiestas, cumpleaños y reuniones privadas en la Comunidad de Madrid.",
+        "areaServed": "Madrid"
+    };
+
+    return (
+        <>
+            <script 
+                type="application/ld+json" 
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} 
+            />
+            <NavFooterClient>
+                <MagicCursor />
+                <ParticleBackground />
+
+                <main className="relative z-10 pt-32 pb-24 px-6 max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
 
                     <div>

@@ -3,13 +3,38 @@ import NavFooterClient from '@/components/NavFooterClient';
 import ContactButtonClient from '@/components/ContactButtonClient';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 
-export default function EmpresasPage() {
-    return (
-        <NavFooterClient>
-            <MagicCursor />
-            <ParticleBackground />
+export const metadata = {
+    title: 'Magia para Empresas en Madrid | Eventos Corporativos y Team Building',
+    description: 'Eleva el nivel de tu evento de empresa con magia corporativa de alto impacto. Angel Ruiz, ilusionista para congresos, cenas y presentaciones en Madrid.',
+    alternates: {
+        canonical: '/empresas',
+    },
+};
 
-            <main>
+export default function EmpresasPage() {
+    const serviceSchema = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Magia para Empresas en Madrid",
+        "provider": {
+            "@type": "Person",
+            "name": "Angel Ruiz"
+        },
+        "description": "Servicios de ilusionismo corporativo para cenas de empresa, ferias y lanzamientos de marca en Madrid.",
+        "areaServed": "Madrid"
+    };
+
+    return (
+        <>
+            <script 
+                type="application/ld+json" 
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} 
+            />
+            <NavFooterClient>
+                <MagicCursor />
+                <ParticleBackground />
+
+                <main>
                 <section className="pt-32 pb-24 px-6 max-w-7xl mx-auto relative z-10">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
 
