@@ -37,6 +37,12 @@ export default function EmpresasPage() {
                                 
                                 <p className="text-amber-500/90 italic font-bold border-l-2 border-amber-500 pl-4 py-2 mt-4">Un cóctel, una cena de empresa, un congreso, un desayuno... Cualquier ocasión con un algo de magia cambiará por completo la perspectiva del evento, asegurando un clima de innovación y exclusividad.</p>
                             </div>
+
+                            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="mt-12">
+                                <button onClick={() => setIsContactOpen(true)} className="px-10 py-5 bg-amber-500 text-slate-950 font-bold rounded-full uppercase tracking-widest hover:bg-amber-400 transition-all shadow-xl shadow-amber-500/20 w-full md:w-auto">
+                                    Solicitar Presupuesto Corporativo
+                                </button>
+                            </motion.div>
                         </motion.div>
                     </div>
                 </section>
