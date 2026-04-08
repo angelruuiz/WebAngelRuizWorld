@@ -27,8 +27,8 @@ const TrustedBrands = () => {
         <section className="py-24 bg-slate-950/80 border-y border-white/5 overflow-hidden relative z-10">
             <div className="max-w-7xl mx-auto px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-xs md:text-sm font-bold tracking-[0.3em] text-amber-500 uppercase mb-4 flex items-center justify-center gap-3"><span className="w-8 h-[1px] bg-amber-500"></span> CLIENTES CORPORATIVOS <span className="w-8 h-[1px] bg-amber-500"></span></h2>
-                    <h3 className="text-3xl md:text-5xl font-[Cinzel] text-white">Empresas que confían en la magia</h3>
+                    <p className="text-xs md:text-sm font-bold tracking-[0.3em] text-amber-500 uppercase mb-4 flex items-center justify-center gap-3"><span className="w-8 h-[1px] bg-amber-500"></span> CLIENTES CORPORATIVOS <span className="w-8 h-[1px] bg-amber-500"></span></p>
+                    <h2 className="text-3xl md:text-5xl font-[Cinzel] text-white">Empresas que confían en la magia</h2>
                 </div>
                 <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24">
                     {brands.map((brand, index) => (
@@ -62,8 +62,8 @@ const ReviewsGrid = () => {
     return (
         <section id="reviews" className="py-12 relative z-10">
             <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
-                <h2 className="text-xs md:text-sm font-bold tracking-[0.3em] text-amber-500 uppercase mb-4 flex items-center justify-center gap-3"><span className="w-8 h-[1px] bg-amber-500"></span> TESTIMONIOS REALES <span className="w-8 h-[1px] bg-amber-500"></span></h2>
-                <h3 className="text-4xl md:text-7xl font-[Cinzel] text-white font-bold mb-6">Lo que dicen de la experiencia</h3>
+                <p className="text-xs md:text-sm font-bold tracking-[0.3em] text-amber-500 uppercase mb-4 flex items-center justify-center gap-3"><span className="w-8 h-[1px] bg-amber-500"></span> TESTIMONIOS REALES <span className="w-8 h-[1px] bg-amber-500"></span></p>
+                <h2 className="text-4xl md:text-7xl font-[Cinzel] text-white font-bold mb-6">Lo que dicen de la experiencia</h2>
                 <p className="text-slate-400 text-lg max-w-2xl mx-auto font-light">Cientos de clientes han vivido momentos imposibles. Aquí algunas de sus historias.</p>
             </div>
 
@@ -128,6 +128,7 @@ export default function ValoracionesPage() {
                         <div className="absolute inset-0 bg-slate-950/60" />
                     </div>
                     <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+                        <h1 className="sr-only">Opiniones y Clientes - Angel Ruiz Ilusionista</h1>
                         <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1.5 }}>
                             <p className="text-xl md:text-5xl font-[Cinzel] text-slate-100 leading-tight mb-8 drop-shadow-2xl">"La gente olvidará lo que dijiste, olvidará lo que hiciste, pero <span className="text-amber-400 font-bold">nunca olvidará cómo les hiciste sentir</span>."</p>
                             <p className="text-slate-400 uppercase tracking-widest text-xs md:text-sm font-bold">— Angel Ruiz</p>

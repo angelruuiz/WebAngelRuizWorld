@@ -22,6 +22,7 @@ export default function ParticularesSelectorPage() {
 
             <main>
                 {/* Hero Split Selection - FULL PAGE */}
+                <h1 className="sr-only">Magia para Particulares - Selección de Servicios</h1>
                 <section className="relative h-screen flex flex-col md:flex-row overflow-hidden">
                     {/* Left: Bodas */}
                     <Link 

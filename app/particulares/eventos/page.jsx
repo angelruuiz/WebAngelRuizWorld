@@ -21,7 +21,7 @@ export default function EventosDetailPage() {
             <main className="relative z-10 pt-32 pb-24 px-6 max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
                     <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }}>
-                        <h3 className="text-amber-500 uppercase tracking-widest text-sm font-bold mb-4 drop-shadow-md">Celebraciones Únicas</h3>
+                        <p className="text-amber-500 uppercase tracking-widest text-sm font-bold mb-4 drop-shadow-md">Celebraciones Únicas</p>
                         <h1 className="text-5xl md:text-8xl font-[Cinzel] text-white mb-8 border-b-2 border-amber-500 pb-4 font-bold">Eventos</h1>
                         
                         <div className="space-y-6 text-white text-base md:text-lg font-medium leading-relaxed text-justify">

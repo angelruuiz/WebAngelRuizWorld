@@ -27,7 +27,7 @@ export default function EmpresasPage() {
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent" />
                         </div>
                         <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} className="order-1 md:order-2">
-                            <h2 className="text-4xl md:text-7xl font-[Cinzel] text-white mb-8 border-b-2 border-amber-500 pb-4 font-bold">Empresas</h2>
+                            <h1 className="text-4xl md:text-7xl font-[Cinzel] text-white mb-8 border-b-2 border-amber-500 pb-4 font-bold">Empresas</h1>
                             
                             <div className="space-y-6 text-white text-base md:text-lg font-medium leading-relaxed text-justify">
                                 <p><span className="text-amber-400 font-bold">Magia personalizada para empresas y marcas de gran prestigio internacional.</span> Sorprende a tus equipos con una actividad innovadora y haz que se involucren al 100%.</p>
