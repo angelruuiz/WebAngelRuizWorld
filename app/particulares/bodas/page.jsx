@@ -125,5 +125,6 @@ export default function BodasDetailPage() {
                 </div>
             </main>
         </NavFooterClient>
+        </>
     );
 }

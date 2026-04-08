@@ -133,5 +133,6 @@ export default function EventosDetailPage() {
                 </div>
             </main>
         </NavFooterClient>
+        </>
     );
 }
