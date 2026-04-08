@@ -10,7 +10,7 @@ export default function EmpresasPage() {
             <ParticleBackground />
 
             <main>
-                <section className="py-24 px-6 max-w-7xl mx-auto relative z-10">
+                <section className="pt-32 pb-24 px-6 max-w-7xl mx-auto relative z-10">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
 
                         <div className="relative md:sticky md:top-32 h-[450px] md:h-[500px] rounded-3xl overflow-hidden border border-slate-800 shadow-2xl order-2 md:order-1">

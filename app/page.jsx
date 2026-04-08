@@ -25,7 +25,7 @@ const Hero = ({ onOpenModal }) => {
     const y1 = useTransform(scrollY, [0, 500], [0, 200]);
     const opacity = useTransform(scrollY, [0, 300], [1, 0]);
     return (
-        <section className="relative h-screen flex items-center justify-center overflow-hidden z-10">
+        <section className="relative h-[100dvh] flex items-center justify-center overflow-hidden z-10">
             <div className="absolute inset-0 z-0 overflow-hidden">
                 <video autoPlay loop muted playsInline className="w-full h-full object-cover">
                     <source src="/spring.webm" type="video/webm" /><source src="/spring.mp4" type="video/mp4" />
@@ -67,7 +67,7 @@ const Hero = ({ onOpenModal }) => {
 const ServiceCard = ({ title, shortDesc, icon: Icon, delay, bgClass, onClick }) => {
     const [isHovered, setIsHovered] = useState(false);
     return (
-        <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay }} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} onClick={onClick} className="relative group h-[400px] w-full cursor-pointer flex flex-col">
+        <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.8, delay }} onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} onClick={onClick} className="relative group min-h-[350px] md:h-[400px] w-full cursor-pointer flex flex-col">
             <div className={`absolute inset-0 bg-gradient-to-br ${bgClass} rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 blur-xl`} />
             <div className="relative h-full w-full bg-slate-900/40 border border-slate-800/50 p-8 rounded-xl overflow-hidden group-hover:border-amber-500/30 flex flex-col justify-between">
                 <div>
@@ -93,7 +93,7 @@ const Services = ({ selectedService, setSelectedService, disabled }) => {
     ];
     return (
         <section id="services" className={`py-20 relative px-4 max-w-7xl mx-auto ${selectedService ? 'z-40' : 'z-10'} ${disabled ? 'pointer-events-none opacity-50' : ''}`}>
-            <div className="text-center mb-12"><h2 className="text-3xl md:text-5xl font-[Cinzel] text-white">El Arte de lo Imposible</h2></div>
+            <div className="text-center mb-12"><h2 className="text-3xl md:text-5xl font-[Cinzel] text-white">Servicios de Magia</h2></div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {servicesData.map((s, i) => <ServiceCard key={s.id} {...s} delay={i * 0.2} onClick={() => setSelectedService(s)} />)}
             </div>
@@ -231,6 +231,7 @@ const SEOContent = () => {
 
 export default function App() {
     const [isContactOpen, setIsContactOpen] = useState(false);
+    const [selectedService, setSelectedService] = useState(null);
     
     const structuredData = {
         "@context": "https://schema.org",
@@ -290,6 +291,7 @@ export default function App() {
 
             <main>
                 <Hero onOpenModal={() => setIsContactOpen(true)} />
+                <Services selectedService={selectedService} setSelectedService={setSelectedService} />
                 <SEOContent />
             </main>
 

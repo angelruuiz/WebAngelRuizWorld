@@ -126,7 +126,7 @@ export default function ValoracionesPage() {
                         </video>
                         <div className="absolute inset-0 bg-slate-950/60" />
                     </div>
-                    <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+                    <div className="max-w-4xl mx-auto px-6 text-center relative z-10 pt-16 md:pt-0">
                         <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1.5 }}>
                             <h2 className="text-xl md:text-5xl font-[Cinzel] text-slate-100 leading-tight mb-8 drop-shadow-2xl">"La gente olvidará lo que dijiste, olvidará lo que hiciste, pero <span className="text-amber-400 font-bold">nunca olvidará cómo les hiciste sentir</span>."</h2>
                             <p className="text-slate-400 uppercase tracking-widest text-xs md:text-sm font-bold">— Angel Ruiz</p>
