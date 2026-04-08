@@ -4,11 +4,26 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Sparkles } from '@/components/Icons';
+import { useRouter } from 'next/navigation';
+import MagicSpiral from '@/components/Transitions/MagicSpiral';
 
 const Navbar = ({ onOpenContact, isLight = false }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isTransitioning, setIsTransitioning] = useState(false);
     const pathname = usePathname();
+    const router = useRouter();
+
+    const handleMagicTransition = (e, href) => {
+        if (href === '/blog' && pathname !== '/blog') {
+            e.preventDefault();
+            setIsTransitioning(true);
+            setTimeout(() => {
+                router.push(href);
+                // The transition ends after route change via state or simply finishes
+            }, 800); 
+        }
+    };
 
     useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 20);
@@ -19,6 +34,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
     // Close menu when route changes
     useEffect(() => {
         setIsMenuOpen(false);
+        setIsTransitioning(false); // Reset on route change
     }, [pathname]);
 
     const navLinks = [
@@ -32,6 +48,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
 
     return (
         <>
+            <MagicSpiral isVisible={isTransitioning} />
             <nav className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center transition-all duration-500 ${isScrolled || isMenuOpen ? (isLight ? 'bg-white/70 backdrop-blur-xl border-b border-slate-200' : 'bg-slate-950/90 backdrop-blur-xl shadow-2xl') : (isLight ? 'bg-white/30 backdrop-blur-md' : 'bg-slate-950/30 backdrop-blur-md')} py-4 px-6 md:px-12`}>
                 <Link href="/" className="flex items-center text-xl font-[Cinzel] font-bold text-amber-500 tracking-[0.3em] z-50 transition-transform hover:scale-105">AR</Link>
                 
@@ -40,7 +57,8 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                     {navLinks.map((link) => (
                         <Link 
                             key={link.name} 
-                            href={link.href} 
+                            href={link.href}
+                            onClick={(e) => handleMagicTransition(e, link.href)}
                             className={`hover:text-amber-400 transition-colors relative group ${pathname === link.href ? 'text-amber-500' : ''}`}
                         >
                             {link.name}
@@ -87,6 +105,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                                 >
                                     <Link 
                                         href={link.href}
+                                        onClick={(e) => handleMagicTransition(e, link.href)}
                                         className={`text-4xl font-[Cinzel] font-bold ${pathname === link.href ? 'text-amber-500' : 'text-slate-100 hover:text-amber-400'}`}
                                     >
                                         {link.name}
