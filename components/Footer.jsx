@@ -53,6 +53,7 @@ const Footer = ({ onOpenContact }) => {
                             <a href="mailto:angellruuiz@gmail.com" className="hover:text-amber-400 transition-colors">angellruuiz@gmail.com</a>
                             <a href="https://instagram.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Instagram</a>
                             <a href="https://tiktok.com/@angellruuiz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">TikTok</a>
+                            <a href="https://youtube.com/@angellruuiz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">YouTube</a>
                             <a href="https://x.com/angellruuizz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">X</a>
                             <a href="https://facebook.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Facebook</a>
                         </div>
