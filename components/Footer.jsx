@@ -1,0 +1,34 @@
+import { ArrowRight } from './Icons';
+
+const Footer = ({ onOpenContact }) => {
+    return (
+        <footer className="mt-20 border-t border-slate-800 bg-slate-900/50 backdrop-blur-sm text-left relative z-10">
+            <div className="w-full px-6 py-12 max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                    <div className="space-y-6 text-left">
+                        <h3 className="text-3xl font-[Cinzel] text-white font-bold">Angel Ruiz</h3>
+                        <p className="text-slate-300 text-lg leading-relaxed max-w-lg">Ilusionista profesional para eventos corporativos,<br />celebraciones y bodas.</p>
+                        <button onClick={onOpenContact} className="group relative px-8 py-3 bg-transparent overflow-hidden rounded-full border border-amber-500 text-amber-500 font-bold uppercase tracking-widest text-xs hover:text-slate-950 transition-colors mt-6">
+                            <span className="relative z-10 flex items-center justify-center gap-2">Reservar Experiencia <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></span>
+                            <div className="absolute inset-0 bg-amber-500 w-0 group-hover:w-full transition-all duration-300 ease-out z-0" />
+                        </button>
+                    </div>
+                    <div className="space-y-6 md:text-right text-left">
+                        <h4 className="text-xl font-bold tracking-widest text-amber-500 uppercase">CONTACTO:</h4>
+                        <div className="flex flex-col md:items-end items-start gap-3 text-slate-300 text-base md:text-lg">
+                            <a href="tel:+34648055636" className="hover:text-amber-400 transition-colors">+34 648 05 56 36</a>
+                            <a href="mailto:angellruuiz@gmail.com" className="hover:text-amber-400 transition-colors">angellruuiz@gmail.com</a>
+                            <a href="https://instagram.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Instagram</a>
+                            <a href="https://tiktok.com/@angellruuiz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">TikTok</a>
+                            <a href="https://x.com/angellruuizz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">X</a>
+                            <a href="https://facebook.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Facebook</a>
+                        </div>
+                        <div className="pt-8 text-sm text-slate-500"><p>© 2026 Angel Ruiz. Todos los derechos reservados.</p></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    );
+};
+
+export default Footer;

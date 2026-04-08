@@ -4,201 +4,15 @@ import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { motion, useScroll, useTransform, useSpring, useMotionValue, useVelocity, useAnimationFrame, AnimatePresence } from 'framer-motion';
 import Chatbot from '@/components/Chatbot';
-
-// --- ICONOS ---
-const Sparkles = (props) => (<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M9 5H5"/><path d="M19 17v4"/><path d="M21 19h-4"/></svg>);
-const GlassWater = (props) => (<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M15.2 22a3 3 0 0 0 3-3V5H5.8v14a3 3 0 0 0 3 3h6.4Z"/><path d="M6 8h12"/></svg>);
-const Heart = (props) => (<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>);
-const Users = (props) => (<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>);
-const ArrowRight = (props) => (<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>);
-const Star = (props) => (<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>);
-const Quote = (props) => (<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/></svg>);
-const X = (props) => (<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M18 6 6 18"/><path d="M6 6 18 18"/></svg>);
-const CheckCircle2 = (props) => (<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>);
-const Calendar = (props) => (<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>);
-const Mail = (props) => (<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>);
-const Phone = (props) => (<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>);
-const MessageSquare = (props) => (<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>);
-const User = (props) => (<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>);
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
+import { MagicModal, ContactFormModal } from '@/components/Modals';
+import { Sparkles, GlassWater, Heart, Users, ArrowRight, Star, Quote, X, CheckCircle2, Calendar, Mail, Phone, MessageSquare, UserIcon } from '@/components/Icons';
 
 const wrap = (min, max, v) => {
     const rangeSize = max - min;
     return ((((v - min) % rangeSize) + rangeSize) % rangeSize) + min;
-};
-
-const MagicCursor = () => {
-    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-    const [isHovering, setIsHovering] = useState(false);
-    useEffect(() => {
-        const updateMousePosition = (e) => setMousePosition({ x: e.clientX, y: e.clientY });
-        const handleMouseOver = (e) => setIsHovering(e.target.closest('button, a, input, textarea, select, .cursor-pointer') !== null);
-        window.addEventListener('mousemove', updateMousePosition);
-        window.addEventListener('mouseover', handleMouseOver);
-        return () => {
-            window.removeEventListener('mousemove', updateMousePosition);
-            window.removeEventListener('mouseover', handleMouseOver);
-        };
-    }, []);
-    return (
-        <motion.div className="fixed top-0 left-0 pointer-events-none z-[100001] mix-blend-screen hidden md:block"
-            animate={{ x: mousePosition.x - (isHovering ? 32 : 16), y: mousePosition.y - (isHovering ? 32 : 16), scale: isHovering ? 1.5 : 1 }}
-            transition={{ x: { duration: 0 }, y: { duration: 0 }, scale: { type: 'spring', stiffness: 500, damping: 28 } }}>
-            <div className={`rounded-full bg-amber-400 blur-xl opacity-40 transition-all duration-300 ${isHovering ? 'w-16 h-16' : 'w-8 h-8'}`} />
-            <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-amber-200/50 transition-all duration-300 ${isHovering ? 'w-12 h-12' : 'w-4 h-4'}`} />
-        </motion.div>
-    );
-};
-
-const ParticleBackground = () => {
-    const [particles] = useState(() => Array.from({ length: 20 }).map((_, i) => ({ id: i, x: Math.random() * 100, y: Math.random() * 100, size: Math.random() * 3 + 1, duration: Math.random() * 10 + 10 })));
-    return (
-        <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-            {particles.map((p) => (
-                <motion.div key={p.id} className="absolute rounded-full bg-amber-500/20 blur-sm" style={{ left: `${p.x}%`, top: `${p.y}%`, width: p.size, height: p.size }} animate={{ y: [0, -100, 0], opacity: [0, 0.5, 0] }} transition={{ duration: p.duration, repeat: Infinity, ease: "linear" }} />
-            ))}
-            <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900/90 to-slate-950 z-0" />
-        </div>
-    );
-};
-
-const MagicModal = ({ isOpen, onClose, children }) => {
-    const [mounted, setMounted] = useState(false);
-    useEffect(() => { 
-        setMounted(true);
-        if (isOpen) document.body.style.overflow = 'hidden';
-        else document.body.style.overflow = 'unset';
-        return () => { document.body.style.overflow = 'unset'; }; 
-    }, [isOpen]);
-
-    if (!mounted) return null;
-
-    return (
-        <AnimatePresence>
-            {isOpen && (
-                <>
-                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={onClose} className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[9998] flex items-center justify-center cursor-pointer" />
-                    <div className="fixed inset-0 z-[9999] flex items-center justify-center pointer-events-none p-4">
-                        <motion.div initial={{ opacity: 0, scale: 0.9, y: 30, rotateX: 10 }} animate={{ opacity: 1, scale: 1, y: 0, rotateX: 0 }} exit={{ opacity: 0, scale: 0.9, y: 30, rotateX: -10 }} transition={{ type: "spring", duration: 0.6, bounce: 0.3 }} className="bg-slate-900/95 border border-amber-500/30 w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden pointer-events-auto relative flex flex-col max-h-[85vh]">
-                            <button onClick={onClose} aria-label="Cerrar ventana emergente" className="absolute top-3 right-3 text-slate-400 hover:text-amber-400 transition-colors z-10 bg-slate-900/80 rounded-full w-10 h-10 flex items-center justify-center hover:bg-slate-800 border border-transparent hover:border-amber-500/30 cursor-pointer"><X className="w-5 h-5" /></button>
-                            <div className="overflow-y-auto custom-scrollbar h-full">{children}</div>
-                            <div className="absolute inset-0 border border-amber-500/20 rounded-2xl pointer-events-none" />
-                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent opacity-50" />
-                        </motion.div>
-                    </div>
-                </>
-            )}
-        </AnimatePresence>
-    );
-};
-
-const ContactFormModal = ({ isOpen, onClose }) => {
-    const [status, setStatus] = useState("idle");
-    const [dateMin, setDateMin] = useState("");
-    
-    useEffect(() => { setDateMin(new Date().toISOString().split('T')[0]); }, []);
-
-    const FORMSPREE_ENDPOINT = "https://formspree.io/f/xeoydngl"; 
-
-    const handlePhoneInput = (e) => {
-        e.target.value = e.target.value.replace(/[^0-9]/g, '');
-        if (e.target.value.length > 9) e.target.value = e.target.value.slice(0, 9);
-    };
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        setStatus("submitting");
-        const form = e.target;
-        const data = new FormData(form);
-        data.append("_subject", `Reserva: ${data.get('eventType')} - ${data.get('name')} (${data.get('date')})`);
-        try {
-            const response = await fetch(FORMSPREE_ENDPOINT, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
-            if (response.ok) {
-                setStatus("success");
-                form.reset(); 
-                setTimeout(() => { onClose(); setStatus("idle"); }, 3000);
-            } else { setStatus("error"); }
-        } catch (error) { setStatus("error"); }
-    };
-
-    if (status === "success") {
-        return (
-            <MagicModal isOpen={isOpen} onClose={onClose}>
-                <div className="p-8 md:p-16 flex flex-col items-center justify-center text-center h-full min-h-[400px]">
-                    <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-green-500/20 flex items-center justify-center mb-6 border border-green-500/50">
-                        <CheckCircle2 className="w-10 h-10 md:w-12 md:h-12 text-green-400" />
-                    </motion.div>
-                    <h3 className="text-2xl md:text-3xl font-[Cinzel] text-white mb-2">¡Mensaje Enviado!</h3>
-                    <p className="text-slate-300">Gracias por contactar. La magia está en camino.</p>
-                </div>
-            </MagicModal>
-        );
-    }
-
-    return (
-        <MagicModal isOpen={isOpen} onClose={onClose}>
-            <div className="p-6 md:p-10 text-left">
-                <div className="text-center mb-6 md:mb-8">
-                    <h3 className="text-2xl md:text-3xl font-[Cinzel] text-white mb-2">Reserva tu Fecha</h3>
-                    <p className="text-slate-400 text-xs md:text-sm font-light">Cuéntame sobre tu evento y creemos algo inolvidable.</p>
-                </div>
-                <form onSubmit={handleSubmit} className="space-y-4">
-                    <input type="text" name="_gotcha" style={{ display: 'none' }} tabIndex="-1" autoComplete="off" aria-hidden="true" />
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="space-y-1">
-                            <label className="text-xs uppercase tracking-widest text-amber-500 ml-1">Nombre</label>
-                            <div className="relative">
-                                <User className="absolute left-3 top-3.5 w-4 h-4 text-slate-500" />
-                                <input required name="name" type="text" placeholder="Tu nombre" aria-label="Nombre completo para la reserva" className="w-full bg-slate-950/50 border border-slate-700 rounded-lg py-3 pl-10 pr-4 text-slate-200 focus:outline-none focus:border-amber-500/50" />
-                            </div>
-                        </div>
-                        <div className="space-y-1">
-                            <label className="text-xs uppercase tracking-widest text-amber-500 ml-1">Teléfono</label>
-                            <div className="relative">
-                                <Phone className="absolute left-3 top-3.5 w-4 h-4 text-slate-500" />
-                                <input required name="phone" type="tel" placeholder="600123456" aria-label="Número de teléfono de contacto" onInput={handlePhoneInput} minLength="9" maxLength="9" className="w-full bg-slate-950/50 border border-slate-700 rounded-lg py-3 pl-10 pr-4 text-slate-200 focus:outline-none focus:border-amber-500/50" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="space-y-1">
-                        <label className="text-xs uppercase tracking-widest text-amber-500 ml-1">Email</label>
-                        <div className="relative">
-                            <Mail className="absolute left-3 top-3.5 w-4 h-4 text-slate-500" />
-                            <input required name="email" type="email" placeholder="tu@email.com" aria-label="Correo electrónico de contacto" className="w-full bg-slate-950/50 border border-slate-700 rounded-lg py-3 pl-10 pr-4 text-slate-200 focus:outline-none focus:border-amber-500/50" />
-                        </div>
-                    </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="space-y-1">
-                            <label className="text-xs uppercase tracking-widest text-amber-500 ml-1">Tipo de Evento</label>
-                            <div className="relative">
-                                <select name="eventType" aria-label="Selector del tipo de evento" className="w-full bg-slate-950/50 border border-slate-700 rounded-lg py-3 px-4 text-slate-200 focus:outline-none focus:border-amber-500/50 appearance-none cursor-pointer text-sm">
-                                    <option>Boda</option><option>Evento de Empresa</option><option>Fiesta Privada</option><option>Comunión</option><option>Otro</option>
-                                </select>
-                                <div className="absolute right-4 top-4 pointer-events-none border-l-[4px] border-l-transparent border-t-[5px] border-t-slate-500 border-r-[4px] border-r-transparent"></div>
-                            </div>
-                        </div>
-                        <div className="space-y-1">
-                            <label className="text-xs uppercase tracking-widest text-amber-500 ml-1">Fecha Estimada</label>
-                            <div className="relative">
-                                <Calendar className="absolute left-3 top-3.5 w-4 h-4 text-slate-500" />
-                                <input name="date" type="date" aria-label="Fecha estimada del evento" min={dateMin} className="w-full bg-slate-950/50 border border-slate-700 rounded-lg py-3 pl-10 pr-4 text-slate-200 focus:outline-none focus:border-amber-500/50 [color-scheme:dark] text-sm" />
-                            </div>
-                        </div>
-                    </div>
-                    <div className="space-y-1">
-                        <label className="text-xs uppercase tracking-widest text-amber-500 ml-1">Mensaje</label>
-                        <div className="relative">
-                            <MessageSquare className="absolute left-3 top-3.5 w-4 h-4 text-slate-500" />
-                            <textarea required name="message" rows="4" aria-label="Detalles adicionales del evento que solicitas" placeholder="Cuéntame más detalles sobre lo que buscas..." className="w-full bg-slate-950/50 border border-slate-700 rounded-lg py-3 pl-10 pr-4 text-slate-200 focus:outline-none focus:border-amber-500/50 resize-none text-sm"></textarea>
-                        </div>
-                    </div>
-                    <button type="submit" disabled={status === "submitting"} className="w-full bg-gradient-to-r from-amber-600 to-amber-500 text-slate-950 font-bold py-3 md:py-4 rounded-lg hover:from-amber-500 transition-all uppercase tracking-widest text-xs md:text-sm shadow-lg flex items-center justify-center gap-2 mt-4">
-                        {status === "submitting" ? (<>Enviando...</>) : (<>Enviar Solicitud <Sparkles className="w-4 h-4" /></>)}
-                    </button>
-                    {status === "error" && (<p className="text-red-400 text-xs text-center mt-2">Hubo un error al enviar. Revisa tu conexión o vuelve a intentar.</p>)}
-                </form>
-            </div>
-        </MagicModal>
-    );
 };
 
 const SplitText = ({ text }) => {
@@ -468,16 +282,10 @@ const EmotionalSection = () => {
 };
 
 export default function App() {
-    const [isScrolled, setIsScrolled] = useState(false);
     const [isContactOpen, setIsContactOpen] = useState(false);
     const [selectedService, setSelectedService] = useState(null);
     const [isChatOpen, setIsChatOpen] = useState(false);
     
-    useEffect(() => {
-        const handleScroll = () => setIsScrolled(window.scrollY > 20);
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
     const structuredData = {
         "@context": "https://schema.org",
         "@type": "EntertainmentBusiness",
@@ -532,11 +340,7 @@ export default function App() {
             <MagicCursor />
             <ParticleBackground />
             
-            <nav className={`fixed top-0 left-0 w-full z-40 flex justify-between items-center transition-all ${isScrolled ? 'bg-slate-950/80 backdrop-blur-md py-4 px-6 md:px-12 shadow-lg' : 'p-6 md:px-12 mix-blend-difference'}`}>
-                <div className="flex items-center text-xl font-[Cinzel] font-bold text-amber-500 tracking-widest z-10">AR</div>
-                <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-8 text-sm uppercase tracking-widest text-slate-300"><a href="#bio" className="hover:text-amber-400 transition-colors">Sobre Mí</a><a href="#services" className="hover:text-amber-400 transition-colors">Servicios</a><a href="#reviews" className="hover:text-amber-400 transition-colors">Clientes</a></div>
-                <button onClick={() => setIsContactOpen(true)} className="hidden md:block border border-amber-500/50 px-6 py-2 rounded-full text-xs uppercase hover:bg-amber-500 hover:text-slate-950 cursor-pointer z-10 transition-colors">Contacto</button>
-            </nav>
+            <Navbar onOpenContact={() => setIsContactOpen(true)} />
 
             <main>
                 <Hero onOpenModal={() => setIsContactOpen(true)} />
@@ -547,32 +351,7 @@ export default function App() {
                 <EmotionalSection />
             </main>
 
-            <footer className="mt-20 border-t border-slate-800 bg-slate-900/50 backdrop-blur-sm text-left relative z-10">
-                <div className="w-full px-6 py-12 max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-                        <div className="space-y-6 text-left">
-                            <h3 className="text-3xl font-[Cinzel] text-white font-bold">Angel Ruiz</h3>
-                            <p className="text-slate-300 text-lg leading-relaxed max-w-lg">Ilusionista profesional para eventos corporativos,<br />celebraciones y bodas.</p>
-                            <button onClick={() => setIsContactOpen(true)} className="group relative px-8 py-3 bg-transparent overflow-hidden rounded-full border border-amber-500 text-amber-500 font-bold uppercase tracking-widest text-xs hover:text-slate-950 transition-colors mt-6">
-                                <span className="relative z-10 flex items-center justify-center gap-2">Reservar Experiencia <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></span>
-                                <div className="absolute inset-0 bg-amber-500 w-0 group-hover:w-full transition-all duration-300 ease-out z-0" />
-                            </button>
-                        </div>
-                        <div className="space-y-6 md:text-right text-left">
-                            <h4 className="text-xl font-bold tracking-widest text-amber-500 uppercase">CONTACTO:</h4>
-                            <div className="flex flex-col md:items-end items-start gap-3 text-slate-300 text-base md:text-lg">
-                                <a href="tel:+34648055636" className="hover:text-amber-400 transition-colors">+34 648 05 56 36</a>
-                                <a href="mailto:angellruuiz@gmail.com" className="hover:text-amber-400 transition-colors">angellruuiz@gmail.com</a>
-                                <a href="https://instagram.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Instagram</a>
-                                <a href="https://tiktok.com/@angellruuiz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">TikTok</a>
-                                <a href="https://x.com/angellruuizz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">X</a>
-                                <a href="https://facebook.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Facebook</a>
-                            </div>
-                            <div className="pt-8 text-sm text-slate-500"><p>© 2026 Angel Ruiz. Todos los derechos reservados.</p></div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+            <Footer onOpenContact={() => setIsContactOpen(true)} />
 
             <ContactFormModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
             
