@@ -50,21 +50,28 @@ export default function EmpresasPage() {
 
                 {/* Valor Corporativo */}
                 <section className="py-24 px-6 max-w-7xl mx-auto relative z-10">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                        <div className="relative h-[450px] rounded-2xl overflow-hidden border border-slate-800 order-2 md:order-1">
-                            <Image src="/images/foto-bio.png" alt="Mago Corporativo" fill className="object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                        <div className="relative md:sticky md:top-32 h-[500px] rounded-3xl overflow-hidden border border-slate-800 shadow-2xl order-2 md:order-1">
+                            <Image src="/images/foto-bio.png" alt="Mago Corporativo Angel Ruiz" fill className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 shadow-2xl" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent" />
                         </div>
                         <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} className="order-1 md:order-2">
-                            <h2 className="text-5xl md:text-7xl font-[Cinzel] text-white mb-8 border-b-2 border-amber-500 pb-4">Inversión Real</h2>
-                            <div className="space-y-6 text-white text-xl font-medium leading-loose">
-                                <p>En un entorno empresarial, la magia no es solo entretenimiento; es una <span className="text-amber-400 font-bold">potente herramienta de networking</span> y comunicación estratégica.</p>
-                                <p>Ayudo a las marcas a transmitir mensajes, fidelizar clientes y generar un ambiente de equipo positivo a través de ilusiones inteligentes y sofisticadas.</p>
+                            <h3 className="text-amber-500 uppercase tracking-widest text-sm font-bold mb-4 drop-shadow-md">Soluciones Premium</h3>
+                            <h2 className="text-4xl md:text-7xl font-[Cinzel] text-white mb-8 border-b-2 border-amber-500 pb-4 font-bold">Empresas</h2>
+                            
+                            <div className="space-y-6 text-white text-base md:text-lg font-medium leading-relaxed text-justify">
+                                <p><span className="text-amber-400 font-bold">Magia personalizada para empresas y marcas de gran prestigio internacional.</span> Sorprende a tus equipos con una actividad innovadora y haz que se involucren al 100%.</p>
+                                
+                                <p><span className="text-white font-bold italic underline decoration-amber-500/50">Me infiltraré como un empleado más</span>, evitando así modificar el transcurso del evento. Hipnosis, mentalismo, robos... Entretenimiento fresco y moderno, esa es la clave para que tus equipos participen.</p>
+                                
+                                <p className="bg-slate-900/40 p-6 rounded-xl border border-slate-800 italic">Un cóctel, una cena de empresa, un congreso, un desayuno... Cualquier ocasión con un algo de magia cambiará por completo la perspectiva del evento.</p>
+
                                 <ul className="space-y-4 pt-6">
                                     {[
-                                        "Networking facilitado en cócteles de empresa",
-                                        "Personalización de trucos con el logo de marca",
+                                        "Networking facilitado en cócteles",
+                                        "Personalización con logo de marca",
                                         "Shows de salón para cenas de gala",
-                                        "Magia en stands para atraer leads en ferias"
+                                        "Atracción de leads en ferias y stands"
                                     ].map((item, i) => (
                                         <li key={i} className="flex items-center gap-4 text-white font-bold">
                                             <div className="w-6 h-6 rounded-full bg-amber-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-500/20">
