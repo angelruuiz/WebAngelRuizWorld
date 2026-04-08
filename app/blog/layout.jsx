@@ -9,7 +9,7 @@ export default function BlogLayout({ children }) {
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   return (
-    <div className="bg-[#FAF8F5] min-h-screen text-slate-900 overflow-x-hidden selection:bg-amber-500/20 selection:text-amber-900">
+    <div className="bg-[#F8F5F1] min-h-screen text-slate-950 overflow-x-hidden selection:bg-amber-500/20 selection:text-amber-950">
       <MagicCursor isLight={true} />
       <Navbar onOpenContact={() => setIsContactOpen(true)} isLight={true} />
       
