@@ -118,32 +118,32 @@ const Services = ({ selectedService, setSelectedService, disabled }) => {
 
 const SEOContent = () => {
     return (
-        <section className="py-24 px-6 bg-slate-950 text-slate-400 border-t border-white/5 relative overflow-hidden">
+        <section className="pt-0 pb-24 px-6 bg-slate-950 text-slate-400 border-t border-white/5 relative overflow-hidden">
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/5 blur-[120px] rounded-full pointer-events-none" />
-            <div className="max-w-5xl mx-auto relative pt-12">
-                <div className="mt-8 pt-12 border-t border-white/5 overflow-hidden">
-                    <p className="text-center font-bold text-amber-500/60 uppercase tracking-[0.4em] text-[10px] mb-8">Especialidades de Ilusionismo Premium</p>
-                    <div className="relative flex overflow-hidden">
+            <div className="max-w-5xl mx-auto relative">
+                <div className="pt-12 overflow-hidden">
+                    <p className="text-center font-bold text-amber-500 uppercase tracking-[0.5em] text-xs md:text-sm mb-12 animate-pulse">Especialidades de Ilusionismo Premium</p>
+                    <div className="relative flex overflow-hidden py-4 border-y border-amber-500/10">
                         <motion.div 
-                            className="flex gap-x-12 whitespace-nowrap"
+                            className="flex gap-x-16 whitespace-nowrap"
                             animate={{ x: [0, -1500] }}
-                            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+                            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
                         >
                             {[...Array(2)].map((_, i) => (
-                                <div key={i} className="flex gap-x-12 text-[10px] uppercase tracking-[0.2em] font-light opacity-30">
-                                    <span className="hover:opacity-100 transition-opacity">Mago de Cerca Madrid</span>
-                                    <span className="hover:opacity-100 transition-opacity">Mentalismo Profesional</span>
-                                    <span className="hover:opacity-100 transition-opacity">Magia para Bodas</span>
-                                    <span className="hover:opacity-100 transition-opacity">Eventos de Empresa</span>
-                                    <span className="hover:opacity-100 transition-opacity">Ilusionismo de Gala</span>
-                                    <span className="hover:opacity-100 transition-opacity">Magia para Cóctel</span>
-                                    <span className="hover:opacity-100 transition-opacity">Mago para Congresos</span>
-                                    <span className="hover:opacity-100 transition-opacity">Espectáculos VIP Madrid</span>
+                                <div key={i} className="flex gap-x-16 text-sm md:text-lg uppercase tracking-[0.3em] font-bold text-amber-400">
+                                    <span className="hover:text-white transition-colors cursor-default drop-shadow-[0_0_8px_rgba(245,158,11,0.3)]">Mago de Cerca Madrid</span>
+                                    <span className="hover:text-white transition-colors cursor-default drop-shadow-[0_0_8px_rgba(245,158,11,0.3)]">Mentalismo Profesional</span>
+                                    <span className="hover:text-white transition-colors cursor-default drop-shadow-[0_0_8px_rgba(245,158,11,0.3)]">Magia para Bodas</span>
+                                    <span className="hover:text-white transition-colors cursor-default drop-shadow-[0_0_8px_rgba(245,158,11,0.3)]">Eventos de Empresa</span>
+                                    <span className="hover:text-white transition-colors cursor-default drop-shadow-[0_0_8_px_rgba(245,158,11,0.3)]">Ilusionismo de Gala</span>
+                                    <span className="hover:text-white transition-colors cursor-default drop-shadow-[0_0_8px_rgba(245,158,11,0.3)]">Magia para Cóctel</span>
+                                    <span className="hover:text-white transition-colors cursor-default drop-shadow-[0_0_8px_rgba(245,158,11,0.3)]">Mago para Congresos</span>
+                                    <span className="hover:text-white transition-colors cursor-default drop-shadow-[0_0_8px_rgba(245,158,11,0.3)]">Espectáculos VIP Madrid</span>
                                 </div>
                             ))}
                         </motion.div>
-                        <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-slate-950 to-transparent z-10" />
-                        <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-slate-950 to-transparent z-10" />
+                        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-slate-950 to-transparent z-10" />
+                        <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-slate-950 to-transparent z-10" />
                     </div>
                 </div>
 
