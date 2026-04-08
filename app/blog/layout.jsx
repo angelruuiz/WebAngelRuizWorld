@@ -10,14 +10,14 @@ export default function BlogLayout({ children }) {
 
   return (
     <div className="bg-[#FAF8F5] min-h-screen text-slate-900 overflow-x-hidden selection:bg-amber-500/20 selection:text-amber-900">
-      <MagicCursor />
-      <Navbar onOpenContact={() => setIsContactOpen(true)} />
+      <MagicCursor isLight={true} />
+      <Navbar onOpenContact={() => setIsContactOpen(true)} isLight={true} />
       
       <main className="pt-32 pb-20">
         {children}
       </main>
 
-      <Footer onOpenContact={() => setIsContactOpen(true)} />
+      <Footer onOpenContact={() => setIsContactOpen(true)} isLight={true} />
       <ContactFormModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </div>
   );

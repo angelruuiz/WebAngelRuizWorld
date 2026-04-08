@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Sparkles } from '@/components/Icons';
 
-const Navbar = ({ onOpenContact }) => {
+const Navbar = ({ onOpenContact, isLight = false }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const pathname = usePathname();
@@ -32,11 +32,11 @@ const Navbar = ({ onOpenContact }) => {
 
     return (
         <>
-            <nav className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center transition-all duration-500 ${isScrolled || isMenuOpen ? 'bg-slate-950/90 backdrop-blur-xl py-4 px-6 md:px-12 shadow-2xl' : 'bg-slate-950/30 backdrop-blur-md py-6 px-6 md:px-12'}`}>
+            <nav className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center transition-all duration-500 ${isScrolled || isMenuOpen ? (isLight ? 'bg-white/70 backdrop-blur-xl border-b border-slate-200' : 'bg-slate-950/90 backdrop-blur-xl shadow-2xl') : (isLight ? 'bg-white/30 backdrop-blur-md' : 'bg-slate-950/30 backdrop-blur-md')} py-4 px-6 md:px-12`}>
                 <Link href="/" className="flex items-center text-xl font-[Cinzel] font-bold text-amber-500 tracking-[0.3em] z-50 transition-transform hover:scale-105">AR</Link>
                 
                 {/* Desktop Menu */}
-                <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-8 text-[11px] font-bold uppercase tracking-[0.3em] text-slate-100">
+                <div className={`hidden md:flex absolute left-1/2 -translate-x-1/2 gap-8 text-[11px] font-bold uppercase tracking-[0.3em] ${isLight ? 'text-slate-800' : 'text-slate-100'}`}>
                     {navLinks.map((link) => (
                         <Link 
                             key={link.name} 
