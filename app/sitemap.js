@@ -13,6 +13,18 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
+      url: 'https://angelruiz.world/particulares/bodas',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
+      url: 'https://angelruiz.world/particulares/eventos',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: 'https://angelruiz.world/empresas',
       lastModified: new Date(),
       changeFrequency: 'monthly',
