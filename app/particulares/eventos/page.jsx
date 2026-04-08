@@ -33,7 +33,7 @@ export default function EventosDetailPage() {
                             
                             <p>Disfrutarás de un show familiar-adulto en el que prácticamente todos participaréis de una forma u otra. Un humor elegante y una buena dosis de emoción os harán flipar a lo grande, ¡te lo aseguro!</p>
                             
-                            <p className="text-white italic pt-4">Verás cosas nunca vistas; magia moderna. anillos, monedas, cartas y algunos objetos no tan comunes, serán los culpables de trasladarte a un mundo increíble lleno de misterio, humor y mucha cara dura...</p>
+                            <p className="italic text-amber-500/90 font-bold border-l-2 border-amber-500 pl-4 py-2 mt-4">Verás cosas nunca vistas; magia moderna. anillos, monedas, cartas y algunos objetos no tan comunes, serán los culpables de trasladarte a un mundo increíble lleno de misterio, humor y mucha cara dura...</p>
                         </div>
 
                         <div className="mt-12 flex justify-start">
