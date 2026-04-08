@@ -178,7 +178,6 @@ export default function App() {
 
             <main>
                 <Hero onOpenModal={() => setIsContactOpen(true)} />
-                <Services selectedService={selectedService} setSelectedService={setSelectedService} disabled={isChatOpen} />
             </main>
 
             <Footer onOpenContact={() => setIsContactOpen(true)} />
