@@ -1,16 +1,18 @@
 "use client";
 import { motion, AnimatePresence } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const MagicSpiral = ({ isVisible, onComplete }) => {
+  const canvasRef = useRef(null);
   const [shouldRender, setShouldRender] = useState(isVisible);
+  const animationRef = useRef(null);
 
   useEffect(() => {
     if (isVisible) {
       setShouldRender(true);
       const timer = setTimeout(() => {
         onComplete?.();
-      }, 2500); 
+      }, 2500);
       return () => clearTimeout(timer);
     } else {
       const timer = setTimeout(() => setShouldRender(false), 500);
@@ -18,11 +20,93 @@ const MagicSpiral = ({ isVisible, onComplete }) => {
     }
   }, [isVisible, onComplete]);
 
-  if (!shouldRender) return null;
+  useEffect(() => {
+    if (!shouldRender || !isVisible) return;
 
-  // Reduced counts for optimization
-  const lines = Array.from({ length: 18 }); 
-  const particles = Array.from({ length: 25 });
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    const resize = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+    resize();
+    window.addEventListener('resize', resize);
+
+    let progress = 0;
+    const particles = Array.from({ length: 40 }, () => ({
+      x: 0,
+      y: 0,
+      angle: Math.random() * Math.PI * 2,
+      velocity: 2 + Math.random() * 4,
+      size: Math.random() * 2 + 1,
+      delay: Math.random() * 50
+    }));
+
+    const render = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      const centerX = canvas.width / 2;
+      const centerY = canvas.height / 2;
+      progress += 0.012;
+
+      // Draw Spiral Lines
+      const numLines = 16;
+      ctx.lineWidth = 1.5;
+      for (let i = 0; i < numLines; i++) {
+        const startAngle = (i * (Math.PI * 2)) / numLines + (progress * 2);
+        const radius = progress * (canvas.width * 0.8);
+        
+        ctx.beginPath();
+        ctx.strokeStyle = `rgba(245, 158, 11, ${Math.max(0, 1 - progress * 1.5)})`;
+        ctx.shadowBlur = 15;
+        ctx.shadowColor = '#f59e0b';
+        
+        ctx.moveTo(centerX, centerY);
+        const cp1x = centerX + Math.cos(startAngle) * (radius * 0.5);
+        const cp1y = centerY + Math.sin(startAngle) * (radius * 0.5);
+        ctx.quadraticCurveTo(cp1x, cp1y, centerX + Math.cos(startAngle + 0.5) * radius, centerY + Math.sin(startAngle + 0.5) * radius);
+        ctx.stroke();
+      }
+
+      // Draw Particles
+      particles.forEach(p => {
+        if (progress * 100 > p.delay) {
+          const pProgress = (progress * 100 - p.delay) / 100;
+          const dist = pProgress * p.velocity * 300;
+          const x = centerX + Math.cos(p.angle + pProgress * 2) * dist;
+          const y = centerY + Math.sin(p.angle + pProgress * 2) * dist;
+          
+          ctx.beginPath();
+          ctx.fillStyle = `rgba(251, 191, 36, ${Math.max(0, 1 - pProgress * 2)})`;
+          ctx.arc(x, y, p.size, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      });
+
+      // Central Glow
+      const gradient = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, progress * 200);
+      gradient.addColorStop(0, `rgba(245, 158, 11, ${Math.max(0, 0.4 - progress)})`);
+      gradient.addColorStop(1, 'transparent');
+      ctx.fillStyle = gradient;
+      ctx.beginPath();
+      ctx.arc(centerX, centerY, progress * 200, 0, Math.PI * 2);
+      ctx.fill();
+
+      if (progress < 2) {
+        animationRef.current = requestAnimationFrame(render);
+      }
+    };
+
+    render();
+    return () => {
+      window.removeEventListener('resize', resize);
+      cancelAnimationFrame(animationRef.current);
+    };
+  }, [shouldRender, isVisible]);
+
+  if (!shouldRender) return null;
 
   return (
     <div className="fixed inset-0 z-[99999] pointer-events-none flex items-center justify-center overflow-hidden">
@@ -32,69 +116,15 @@ const MagicSpiral = ({ isVisible, onComplete }) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 z-0 bg-slate-950/80" // Removed expensive backdrop-blur
-          >
-            <div 
-                className="absolute inset-0"
-                style={{ background: 'radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%)' }}
-            />
-          </motion.div>
+            className="absolute inset-0 z-0 bg-slate-950/80"
+          />
         )}
       </AnimatePresence>
 
-      <div className="relative w-0 h-0 scale-[2] md:scale-[3] will-change-transform">
-        {/* Magic Dust / Stars - Optimized */}
-        {particles.map((_, i) => (
-          <motion.div
-            key={`p-${i}`}
-            initial={{ translate: '-50% -50%', scale: 0, opacity: 0 }}
-            animate={{ 
-              x: (Math.random() - 0.5) * 600,
-              y: (Math.random() - 0.5) * 600,
-              scale: [0, 1.2, 0],
-              opacity: [0, 1, 0]
-            }}
-            transition={{ 
-              duration: 2.2, 
-              ease: "easeOut",
-              delay: Math.random() * 0.4
-            }}
-            className="absolute w-1 h-1 bg-amber-300 rounded-full shadow-[0_0_5px_#fbbf24] will-change-transform" // Simpler shadow
-          />
-        ))}
-
-        {/* Spiral Lines - Optimized */}
-        {lines.map((_, i) => (
-          <motion.div
-            key={`l-${i}`}
-            initial={{ scale: 0, rotate: i * (360 / lines.length), opacity: 0 }}
-            animate={{ 
-              scale: [0, 1.2, 6], 
-              rotate: [i * (360 / lines.length), i * (360 / lines.length) + 480],
-              opacity: [0, 1, 0]
-            }}
-            transition={{ 
-              duration: 2.5, 
-              ease: [0.16, 1, 0.3, 1],
-              delay: i * 0.05
-            }}
-            className="absolute top-1/2 left-0 w-[80vw] h-[1px] origin-left bg-amber-400 will-change-transform"
-            style={{ 
-              boxShadow: '0 0 15px rgba(245, 158, 11, 0.5)', // Single simple shadow
-              borderRadius: '100px',
-              opacity: 0.7
-            }}
-          />
-        ))}
-        
-        {/* Glow center - Optimized */}
-        <motion.div
-          initial={{ scale: 0, opacity: 0 }}
-          animate={{ scale: [0, 3, 0], opacity: [0, 0.6, 0] }}
-          transition={{ duration: 1.2, ease: "easeOut" }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-amber-500/30 blur-[60px] rounded-full"
-        />
-      </div>
+      <canvas 
+        ref={canvasRef} 
+        className="absolute inset-0 z-10 w-full h-full"
+      />
     </div>
   );
 };
