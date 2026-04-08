@@ -159,8 +159,48 @@ const SEOContent = () => {
                     </div>
                 </div>
 
-                <div className="mt-20 pt-12 border-t border-white/5 space-y-6 text-sm">
-                    <p className="text-center font-bold text-amber-500/60 uppercase tracking-[0.3em]">Experiencias de Ilusionismo Profesional</p>
+                <div className="mt-20 pt-12 border-t border-white/5">
+                    <p className="text-center font-bold text-amber-500/60 uppercase tracking-[0.4em] text-[10px] mb-8">Especialidades de Ilusionismo Premium</p>
+                    <div className="flex flex-wrap justify-center gap-x-12 gap-y-6 text-[10px] uppercase tracking-[0.2em] font-light opacity-40">
+                        <span className="hover:opacity-100 transition-opacity">Mago de Cerca Madrid</span>
+                        <span className="hover:opacity-100 transition-opacity">Mentalismo Profesional</span>
+                        <span className="hover:opacity-100 transition-opacity">Magia para Bodas</span>
+                        <span className="hover:opacity-100 transition-opacity">Eventos de Empresa</span>
+                        <span className="hover:opacity-100 transition-opacity">Ilusionismo de Gala</span>
+                        <span className="hover:opacity-100 transition-opacity">Magia para Cóctel</span>
+                        <span className="hover:opacity-100 transition-opacity">Mago para Congresos</span>
+                        <span className="hover:opacity-100 transition-opacity">Espectáculos VIP Madrid</span>
+                    </div>
+                </div>
+
+                <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-white/5 pt-16">
+                    <div className="space-y-6">
+                        <h3 className="text-white font-[Cinzel] text-xl uppercase tracking-widest">Preguntas Frecuentes</h3>
+                        <p className="text-sm opacity-60 italic">Resolviendo tus dudas para un evento perfecto en Madrid.</p>
+                    </div>
+                    <div className="space-y-8 text-sm">
+                        <details className="group border-b border-white/5 pb-4 cursor-pointer">
+                            <summary className="list-none text-slate-200 font-bold flex justify-between items-center group-open:text-amber-500 transition-colors">
+                                ¿Con cuánta antelación debo reservar?
+                                <span className="text-amber-500 group-open:rotate-180 transition-transform">↓</span>
+                            </summary>
+                            <p className="mt-4 text-slate-400 leading-relaxed">Para asegurar disponibilidad, especialmente en temporadas de bodas (mayo-octubre) y eventos de empresa (diciembre), se recomienda contactar con al menos 3 a 6 meses de antelación. No obstante, consulta tu fecha aunque sea de última hora por si hubiera un hueco en la agenda.</p>
+                        </details>
+                        <details className="group border-b border-white/5 pb-4 cursor-pointer">
+                            <summary className="list-none text-slate-200 font-bold flex justify-between items-center group-open:text-amber-500 transition-colors">
+                                ¿Qué duración tienen las actuaciones?
+                                <span className="text-amber-500 group-open:rotate-180 transition-transform">↓</span>
+                            </summary>
+                            <p className="mt-4 text-slate-400 leading-relaxed">La magia de cóctel suele durar entre 1 y 2 horas, dependiendo del número de invitados. Los shows de salón o escenario tienen una duración aproximada de 45 a 60 minutos. Cada servicio es adaptable según las necesidades del guion de tu evento.</p>
+                        </details>
+                        <details className="group border-b border-white/5 pb-4 cursor-pointer">
+                            <summary className="list-none text-slate-200 font-bold flex justify-between items-center group-open:text-amber-500 transition-colors">
+                                ¿Te desplazas fuera de Madrid capital?
+                                <span className="text-amber-500 group-open:rotate-180 transition-transform">↓</span>
+                            </summary>
+                            <p className="mt-4 text-slate-400 leading-relaxed">Sí, realizo espectáculos de magia en todas las localidades de la Comunidad de Madrid y provincias limítrofes como Segovia, Toledo o Guadalajara. Para eventos nacionales a gran escala, consultad condiciones de desplazamiento.</p>
+                        </details>
+                    </div>
                 </div>
             </div>
         </section>
