@@ -56,6 +56,7 @@ const Footer = ({ onOpenContact }) => {
                             <a href="https://youtube.com/@angellruuiz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">YouTube</a>
                             <a href="https://x.com/angellruuizz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">X</a>
                             <a href="https://facebook.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Facebook</a>
+                            <a href="/mago-torrelodones" className="text-amber-500/80 hover:text-amber-400 transition-colors font-bold mt-2">Mago en Torrelodones</a>
                         </div>
                         <div className="pt-8 text-sm text-slate-500"><p>© 2026 Angel Ruiz. Todos los derechos reservados.</p></div>
                     </div>

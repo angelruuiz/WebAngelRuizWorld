@@ -37,6 +37,12 @@ export default function sitemap() {
       priority: 0.7,
     },
     {
+      url: 'https://angelruiz.world/mago-torrelodones',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: 'https://angelruiz.world/sobre-mi',
       lastModified: new Date(),
       changeFrequency: 'monthly',

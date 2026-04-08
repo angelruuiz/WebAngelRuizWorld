@@ -59,14 +59,17 @@ export default function EventosDetailPage() {
                         <div className="space-y-6 text-white text-base md:text-lg font-medium leading-relaxed text-justify">
                             <p>
                                 <span className="text-amber-400 font-bold">
-                                    Añade algo diferente en tu celebración.
+                                    Añade algo diferente en tu próxima celebración familiar o social.
                                 </span>{' '}
-                                Aniversarios, bautizos, cenas entre amigos, cumpleaños... Como{' '}
+                                Aniversarios, bautizos, cenas entre amigos, cumpleaños especiales... Como{' '}
                                 <strong className="text-amber-400">
                                     mago para eventos privados en Madrid
                                 </strong>
-                                , convierto cualquier espacio en un teatro de prestigio donde lo imposible
-                                ocurre a escasos centímetros de tus ojos.
+                                e ilusionista versátil, mi objetivo es convertir cualquier espacio en un teatro itinerante de prestigio donde lo imposible ocurre a escasos centímetros de tus ojos. Mis servicios de <strong>eventos Madrid</strong> están diseñados para quienes buscan un toque de distinción y sorpresa que rompa con lo convencional.
+                            </p>
+
+                            <p>
+                                Si buscas un <strong>mago profesional en Torrelodones</strong>, Las Rozas o Pozuelo, ofrezco un show diseñado específicamente para entornos íntimos. A diferencia de los grandes escenarios, la magia de cerca (close-up) se vive de tú a tú. Es participativa, directa y extremadamente potente, ya que el milagro sucede en las manos de tus invitados. Es el complemento ideal para fiestas de 40 o 50 cumpleaños, aniversarios de boda o celebraciones privadas en urbanizaciones de la zona noroeste.
                             </p>
 
                             <p>
@@ -74,16 +77,15 @@ export default function EventosDetailPage() {
                                 <span className="text-white font-bold italic underline decoration-amber-500/50">
                                     magia de cóctel entre los invitados
                                 </span>
-                                ; de esta forma el evento seguirá su curso mientras la magia sucede de
-                                forma natural en cada grupo.
+                                . Esta modalidad es perfecta para eventos dinámicos donde la gente se mueve libremente por el jardín o el salón. El <strong>mago de cerca Madrid</strong> recorre los diferentes grupos, realizando efectos visuales de alto impacto que sirven como catalizador para la diversión y el asombro. Es una forma excelente de asegurar que el ritmo de la fiesta nunca decaiga.
                             </p>
 
                             <p>
-                                Si sois un grupo reducido, puedo llevar a tu domicilio mi espectáculo{' '}
+                                Si sois un grupo reducido y preferís una experiencia más focalizada, puedo llevar a tu domicilio mi espectáculo{' '}
                                 <span className="text-amber-400 font-bold italic">
                                     "La Reina de Corazones"
                                 </span>
-                                . El teatro en tu casa, sin necesidad de escenario ni equipamiento especial.
+                                . Imagina tener el teatro en tu propia casa, sin necesidad de escenario ni equipamiento especial. Es una sesión de ilusionismo de salón donde todos los asistentes se sientan alrededor para disfrutar de una historia llena de misterio, humor inteligente y proezas físicas imposibles.
                             </p>
 
                             <p>
@@ -91,37 +93,24 @@ export default function EventosDetailPage() {
                                 <strong className="text-amber-400">
                                     magia de cerca para fiestas y eventos privados en Madrid
                                 </strong>
-                                , ofreciendo un show versátil que se adapta a cumpleaños, aniversarios,
-                                comuniones o simplemente una reunión de amigos que buscan algo fuera de
-                                lo común. Disfrutarás de un show familiar-adulto en el que prácticamente
-                                todos participaréis activamente.
+                                , ofreciendo un espectáculo familiar-adulto que cautiva por igual a diferentes generaciones. Mis rutinas no solo incluyen cartomagia de alto nivel, sino también mentalismo que desafía la lógica y efectos con objetos prestados. El éxito de contratar un <strong>ilusionista en Torrelodones o Majadahonda</strong> reside en la capacidad de adaptar el tono del show a la personalidad de vuestro grupo de amigos.
                             </p>
 
                             <p>
-                                Mi enfoque combina un{' '}
+                                Mi enfoque combina una técnica depurada con un{' '}
                                 <strong className="text-amber-400 italic">
-                                    humor inteligente y refinado
-                                </strong>{' '}
-                                con efectos de ilusionismo que desafían la lógica. No es solo ver trucos;
-                                es participar en una experiencia emocional donde la sorpresa es el plato
-                                fuerte. Ya sea en el salón de un restaurante, en el jardín de tu casa o
-                                en un local privado, mi{' '}
-                                <strong className="text-amber-400">magia de cerca profesional</strong> está
-                                diseñada para funcionar en cualquier espacio de Madrid y alrededores.
+                                    entusiasmo contagioso
+                                </strong>
+                                . No se trata solo de ver trucos; es participar en una experiencia emocional colectiva. Ya sea en el salón de un restaurante exclusivo de El Escorial, en un cortijo en Galapagar o en un loft en el centro de Madrid, mi magia profesional está diseñada para funcionar en cualquier entorno, garantizando risas y caras de asombro que se comentarán durante semanas.
                             </p>
 
                             <p>
-                                Me encargo de leer la energía del grupo y subir el nivel de asombro de
-                                forma progresiva, desde juegos visuales impactantes hasta sesiones de
-                                mentalismo que dejarán a todos sin palabras. Anillos, monedas, cartas y
-                                algunos objetos no tan comunes serán los culpables de trasladarte a un
-                                mundo increíble lleno de misterio, humor y mucha sorpresa.
+                                Como <strong>ilusionista especializado en la zona noroeste</strong>, entiendo perfectamente el tipo de exigencia de mis clientes. Buscan calidad, discreción y, sobre todo, un entretenimiento que esté a la altura de su celebración. Por eso, además de los efectos mágicos, cuido aspectos fundamentales como la puntualidad, la imagen impecable y la capacidad de conectar con públicos de cualquier edad y perfil.
                             </p>
 
-                            <p className="italic text-amber-500/90 font-bold border-l-2 border-amber-500 pl-4 py-2 mt-4">
-                                Verás cosas nunca vistas: magia moderna, cercana y participativa.
-                                Disponible para eventos en Madrid capital, Torrelodones, Las Rozas,
-                                Majadahonda, Pozuelo de Alarcón y toda la Comunidad de Madrid.
+                            <p className="italic text-amber-500/90 font-bold border-l-2 border-amber-500 pl-4 py-2 mt-4 text-sm md:text-base">
+                                Verás cosas nunca vistas: magia moderna, cercana y muy participativa. 
+                                Disponible con total flexibilidad para <strong>eventos en Torrelodones, Las Rozas, Majadahonda, Pozuelo de Alarcón, El Escorial, Boadilla del Monte</strong> y el resto de la Comunidad de Madrid. ¡Haz que tu próxima fiesta sea legendaria con el toque mágico de Angel Ruiz!
                             </p>
                         </div>
 

@@ -2,8 +2,8 @@ import HomeClient from '@/components/HomeClient';
 import { motion } from 'framer-motion';
 
 export const metadata = {
-    title: 'Angel Ruiz | Mago e Ilusionista Profesional en Madrid para Eventos',
-    description: 'Ilusionista experto en Magia de Cerca en Madrid. Especialista en Bodas, Eventos Corporativos y Fiestas VIP. Más de 10 años de experiencia creando asombro.',
+    title: 'Angel Ruiz | Mago en Torrelodones e Ilusionista en Madrid',
+    description: 'Ilusionista experto en Magia de Cerca en Madrid y Torrelodones. Especialista en Bodas, Eventos Corporativos y Fiestas VIP en Las Rozas y Majadahonda. Más de 10 años de experiencia.',
     alternates: {
         canonical: '/',
     },
@@ -52,7 +52,7 @@ const SEOContent = () => {
                         <div className="pt-8 border-t border-white/5">
                             <p className="text-xs uppercase tracking-[0.3em] font-bold text-amber-500 mb-4 text-left">Experiencia Certificada</p>
                             <p className="text-sm leading-relaxed text-slate-500">
-                                Angel Ruiz se ha consolidado como uno de los ilusionistas más solicitados de la capital, fusionando elegancia y modernidad en cada evento. Como <strong>mago para bodas en Madrid</strong> e ilusionista corporativo, su enfoque se centra en la <strong>magia de cerca</strong> (close-up), donde el milagro ocurre a escasos centímetros del espectador.
+                                Angel Ruiz se ha consolidado como uno de los ilusionistas más modernos de la capital, fusionando elegancia y caos en cada evento. Como <strong>mago para bodas en Madrid</strong> e ilusionista corporativo, su enfoque se centra en la <strong>magia de cerca</strong> (close-up), donde el milagro ocurre a escasos centímetros del espectador.
                             </p>
                         </div>
                     </div>
@@ -81,12 +81,12 @@ const SEOContent = () => {
 
                         <details className="group border-b border-white/5 pb-4 cursor-pointer text-slate-400">
                             <summary className="list-none text-slate-200 font-bold flex justify-between items-center group-open:text-amber-500 transition-colors py-2 uppercase tracking-widest text-[11px]">
-                                Ilusionismo para Empresas y Marcas
+                                Cobertura en Torrelodones y Zona Noroeste
                                 <span className="text-amber-500 group-open:rotate-180 transition-transform">↓</span>
                             </summary>
                             <div className="mt-4 leading-relaxed space-y-4">
-                                <p>Como <strong>mago para empresas en Madrid</strong>, Angel Ruiz diseña experiencias que refuerzan la cultura corporativa y el mensaje de marca durante cenas de gala, ferias o eventos de networking.</p>
-                                <p>Es una potente herramienta de marketing experiencial que deja una impresión sofisticada y creativa en clientes y equipos de trabajo.</p>
+                                <p>Si buscas un <strong>mago profesional en Torrelodones y el norte de Madrid</strong>, Angel Ruiz ofrece total disponibilidad en la zona noroeste. Especializado en <strong>eventos Madrid</strong> de alto standing, su servicio de ilusionismo se desplaza habitualmente a localidades cercanas.</p>
+                                <p>Disponible para actuaciones y eventos privados en <strong>Las Rozas, Majadahonda, El Escorial, Galapagar, Pozuelo de Alarcón y Boadilla del Monte</strong>. La cercanía permite ofrecer soluciones de <strong>mago de cerca Madrid</strong> con mayor flexibilidad horaria para cenas privadas, comuniones y fiestas exclusivas en estas zonas residenciales.</p>
                             </div>
                         </details>
                     </div>
