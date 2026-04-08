@@ -50,7 +50,11 @@ const ReviewsGrid = () => {
         { text: "Ángel transformó la comunión de nuestro sobrino en algo verdaderamente excepcional.", author: "Comunión de Marcos" },
         { text: "Ángel fue el que inauguró nuestra peña, ¡y lo hizo a lo grande! Nos dejó a todos clavados en el asiento.", author: "Peña 'La Escombrera' (Torrelodones)" },
         { text: "Un espectáculo de magia de salón impecable para la fiesta de cumpleaños.", author: "Ana P. (Fiesta Privada)" },
-        { text: "Una experiencia absolutamente mágica. Hizo que nuestra cena de empresa se convirtiera en un evento único.", author: "Carlos M. (Cena de Empresa)" }
+        { text: "Una experiencia absolutamente mágica. Hizo que nuestra cena de empresa se convirtiera en un evento único.", author: "Carlos M. (Cena de Empresa)" },
+        { text: "Buscábamos el mejor mago para bodas en Madrid y Ángel fue todo un acierto. Su magia de cóctel dejó a todos los invitados fascinados.", author: "Laura G. (Boda Real)" },
+        { text: "Como ilusionista para eventos corporativos es brillante. Capacidad única para integrar nuestra marca en sus efectos de mentalismo.", author: "TechCorp Solutions" },
+        { text: "La mejor magia de cerca profesional que he visto. Ideal para cenas privadas donde quieres sorprender a clientes VIP.", author: "Restaurante Gourmet" },
+        { text: "Un show de magia para comuniones y cumpleaños que divierte tanto a niños como a adultos. Muy recomendado.", author: "Familia Rodríguez" }
     ];
 
     return (
@@ -112,20 +116,21 @@ export default function ValoracionesPage() {
             <ParticleBackground />
             <Navbar onOpenContact={() => setIsContactOpen(true)} />
 
-            <main className="pt-32 pb-24">
-                <section className="px-6 max-w-7xl mx-auto text-center mb-24 relative z-10">
-                     <motion.h1 
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="text-5xl md:text-9xl font-[Cinzel] font-bold text-white mb-6 uppercase tracking-tighter"
-                    >
-                        Valoraciones
-                    </motion.h1>
-                    <motion.div 
-                        initial={{ width: 0 }} 
-                        animate={{ width: "100px" }} 
-                        className="h-1 bg-amber-500 mx-auto mb-8" 
-                    />
+            <main className="pb-24">
+                <section className="relative h-[60vh] flex items-center justify-center overflow-hidden mb-24">
+                    <div className="absolute inset-0 z-0 overflow-hidden">
+                        <video autoPlay loop muted playsInline className="w-full h-full object-cover grayscale opacity-80">
+                            <source src="/cambio-carta.mp4" type="video/mp4" />
+                            <div className="w-full h-full bg-slate-950"></div>
+                        </video>
+                        <div className="absolute inset-0 bg-slate-950/60" />
+                    </div>
+                    <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
+                        <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1.5 }}>
+                            <p className="text-xl md:text-5xl font-[Cinzel] text-slate-100 leading-tight mb-8 drop-shadow-2xl">"La gente olvidará lo que dijiste, olvidará lo que hiciste, pero <span className="text-amber-400 font-bold">nunca olvidará cómo les hiciste sentir</span>."</p>
+                            <p className="text-slate-400 uppercase tracking-widest text-xs md:text-sm font-bold">— Angel Ruiz</p>
+                        </motion.div>
+                    </div>
                 </section>
 
                 <ReviewsGrid />

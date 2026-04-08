@@ -113,25 +113,7 @@ const Services = ({ selectedService, setSelectedService, disabled }) => {
 
 
 
-const EmotionalSection = () => {
-    return (
-        <section className="py-24 relative z-10 overflow-hidden flex items-center justify-center min-h-[50vh]">
-            <div className="absolute inset-0 z-0 overflow-hidden">
-                <video autoPlay loop muted playsInline className="w-full h-full object-cover grayscale opacity-80">
-                    <source src="/cambio-carta.mp4" type="video/mp4" />
-                    <div className="w-full h-full bg-slate-950"></div>
-                </video>
-                <div className="absolute inset-0 bg-slate-950/50" />
-            </div>
-            <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-                <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ margin: "-20%" }} transition={{ duration: 1 }}>
-                    <p className="text-xl md:text-4xl font-[Cinzel] text-slate-200 leading-tight mb-8 drop-shadow-lg">"La gente olvidará lo que dijiste, olvidará lo que hiciste, pero <span className="text-amber-400">nunca olvidará cómo les hiciste sentir</span>."</p>
-                    <p className="text-slate-500 uppercase tracking-widest text-xs md:text-sm">— Angel Ruiz</p>
-                </motion.div>
-            </div>
-        </section>
-    );
-};
+
 
 export default function App() {
     const [isContactOpen, setIsContactOpen] = useState(false);
@@ -197,7 +179,6 @@ export default function App() {
             <main>
                 <Hero onOpenModal={() => setIsContactOpen(true)} />
                 <Services selectedService={selectedService} setSelectedService={setSelectedService} disabled={isChatOpen} />
-                <EmotionalSection />
             </main>
 
             <Footer onOpenContact={() => setIsContactOpen(true)} />
