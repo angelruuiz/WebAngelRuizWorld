@@ -219,7 +219,7 @@ const Hero = ({ onOpenModal }) => {
                 <div className="absolute inset-0 bg-slate-950/70" />
             </div>
             <motion.div style={{ y: y1, opacity }} className="text-center px-4 relative z-10 flex flex-col items-center w-full">
-                <h1 className="sr-only">Angel Ruiz - Ilusionista Profesional y Magia exclusiva para Eventos y Bodas</h1>
+                <h1 className="sr-only">Angel Ruiz - Ilusionista Profesional para Eventos y Bodas</h1>
                 <p className="font-[Cinzel] text-5xl md:text-8xl font-bold mb-8 tracking-wider drop-shadow-lg leading-tight" aria-hidden="true">
                     <span className="text-amber-400 block mb-2"><SplitText text="ANGEL" /></span>
                     <span className="text-white block"><SplitText text="RUIZ" /></span>
@@ -313,6 +313,7 @@ const Biography = () => (
             <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="order-1 md:order-2">
                 <h2 className="text-xs md:text-sm font-bold tracking-[0.3em] text-amber-500 uppercase mb-4 flex items-center gap-3"><span className="w-8 h-[1px] bg-amber-500"></span> Sobre Mí <span className="w-8 h-[1px] bg-amber-500"></span></h2>
                 <div className="space-y-6 text-slate-300 font-light leading-relaxed text-base md:text-lg text-justify mt-8">
+                    <p>Como <span className="text-amber-300 font-medium">ilusionista profesional</span>, me especializo en ofrecer <span className="text-amber-300 font-medium">magia exclusiva para eventos y bodas</span>, transformando celebraciones ordinarias en experiencias extraordinarias que quedan grabadas en la memoria.</p>
                     <p>A mis 8 años, inquieto e interesado por todo aquello que no pudiera explicar, fue cuando se cruzó en mi camino la magia, de la mano del primer mago que presencié, <span className="text-amber-300 font-medium font-['Playfair_Display'] italic">Paco G</span>. El cual me acabó introduciendo en todo este mundo de ilusión y asombro.</p>
                     <p>Tras muchos años de lecciones autodidactas y experimentar métodos propios, decidí dar el salto a escena y realizar lo que más me gusta: Magia de Cerca (Close-up).</p>
                     <p>Una de las más fuertes que existen en mi opinión, y en la que el público participa y se vive todo en primera persona. Magia a escasos centímetros del espectador, en la que se llega a límites insospechados.</p>
