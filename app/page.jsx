@@ -231,7 +231,6 @@ const SEOContent = () => {
 
 export default function App() {
     const [isContactOpen, setIsContactOpen] = useState(false);
-    const [selectedService, setSelectedService] = useState(null);
     
     const structuredData = {
         "@context": "https://schema.org",
@@ -291,7 +290,6 @@ export default function App() {
 
             <main>
                 <Hero onOpenModal={() => setIsContactOpen(true)} />
-                <Services selectedService={selectedService} setSelectedService={setSelectedService} />
                 <SEOContent />
             </main>
 
