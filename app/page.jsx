@@ -122,7 +122,7 @@ const SEOContent = () => {
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/5 blur-[120px] rounded-full pointer-events-none" />
             <div className="max-w-5xl mx-auto relative">
                 <div className="pt-12 overflow-hidden">
-                    <p className="text-center font-bold text-amber-500 uppercase tracking-[0.5em] text-xs md:text-sm mb-12 animate-pulse">Especialidades de Ilusionismo Premium</p>
+                    <h2 className="text-center font-bold text-amber-500 uppercase tracking-[0.5em] text-xs md:text-sm mb-12 animate-pulse">Especialidades de Ilusionismo Premium</h2>
                     <div className="relative flex overflow-hidden py-4 border-y border-amber-500/10">
                         <motion.div 
                             className="flex gap-x-16 whitespace-nowrap"
@@ -149,7 +149,7 @@ const SEOContent = () => {
 
                 <div className="mt-24 grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-white/5 pt-16">
                     <div className="space-y-6">
-                        <h3 className="text-white font-[Cinzel] text-xl md:text-2xl uppercase tracking-widest">Información y Preguntas</h3>
+                        <h2 className="text-white font-[Cinzel] text-xl md:text-2xl uppercase tracking-widest">Información y Preguntas</h2>
                         <p className="text-sm opacity-60 italic">Todo lo que necesitas saber sobre el ilusionismo en Madrid.</p>
                         <div className="pt-8 border-t border-white/5">
                             <p className="text-xs uppercase tracking-[0.3em] font-bold text-amber-500 mb-4">Referente de la Magia</p>

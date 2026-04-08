@@ -59,11 +59,11 @@ const ReviewsGrid = () => {
     ];
 
     return (
-        <section id="reviews" className="py-12 relative z-10">
+        <section id="reviews" className="py-24 relative z-10">
             <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
                 <p className="text-xs md:text-sm font-bold tracking-[0.3em] text-amber-500 uppercase mb-4 flex items-center justify-center gap-3"><span className="w-8 h-[1px] bg-amber-500"></span> TESTIMONIOS REALES <span className="w-8 h-[1px] bg-amber-500"></span></p>
-                <h2 className="text-4xl md:text-7xl font-[Cinzel] text-white font-bold mb-6">Lo que dicen de la experiencia</h2>
-                <p className="text-slate-400 text-lg max-w-2xl mx-auto font-light">Cientos de clientes han vivido momentos imposibles. Aquí algunas de sus historias.</p>
+                <h1 className="text-4xl md:text-7xl font-[Cinzel] text-white font-bold mb-6">Opiniones de Angel Ruiz Ilusionista</h1>
+                <p className="text-slate-400 text-lg max-w-2xl mx-auto font-light">Cientos de clientes han vivido momentos imposibles. Aquí algunas de sus historias de éxito en eventos y bodas.</p>
             </div>
 
             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -127,9 +127,8 @@ export default function ValoracionesPage() {
                         <div className="absolute inset-0 bg-slate-950/60" />
                     </div>
                     <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-                        <h1 className="sr-only">Opiniones y Clientes - Angel Ruiz Ilusionista</h1>
                         <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1.5 }}>
-                            <p className="text-xl md:text-5xl font-[Cinzel] text-slate-100 leading-tight mb-8 drop-shadow-2xl">"La gente olvidará lo que dijiste, olvidará lo que hiciste, pero <span className="text-amber-400 font-bold">nunca olvidará cómo les hiciste sentir</span>."</p>
+                            <h2 className="text-xl md:text-5xl font-[Cinzel] text-slate-100 leading-tight mb-8 drop-shadow-2xl">"La gente olvidará lo que dijiste, olvidará lo que hiciste, pero <span className="text-amber-400 font-bold">nunca olvidará cómo les hiciste sentir</span>."</h2>
                             <p className="text-slate-400 uppercase tracking-widest text-xs md:text-sm font-bold">— Angel Ruiz</p>
                         </motion.div>
                     </div>
