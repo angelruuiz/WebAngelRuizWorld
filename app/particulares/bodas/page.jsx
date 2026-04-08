@@ -44,7 +44,7 @@ export default function BodasDetailPage() {
                     </motion.div>
 
                     <div className="relative md:sticky md:top-32 h-[450px] md:h-[500px] rounded-3xl overflow-hidden border border-slate-800 shadow-[0_0_50px_rgba(0,0,0,0.5)]">
-                         <Image src="/images/foto-bio-2.png" alt="Magia en Bodas de Angel Ruiz" fill className="object-cover" priority />
+                         <Image src="/images/foto-bio-2.png" alt="Mago de bodas en Madrid Angel Ruiz ilusionista profesional para cócteles y banquetes" fill className="object-cover" priority />
                          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 to-transparent" />
                     </div>
                 </div>
