@@ -58,7 +58,7 @@ const ReviewsGrid = () => {
     ];
 
     return (
-        <section id="reviews" className="py-24 relative z-10">
+        <section id="reviews" className="py-12 relative z-10">
             <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
                 <h2 className="text-xs md:text-sm font-bold tracking-[0.3em] text-amber-500 uppercase mb-4 flex items-center justify-center gap-3"><span className="w-8 h-[1px] bg-amber-500"></span> TESTIMONIOS REALES <span className="w-8 h-[1px] bg-amber-500"></span></h2>
                 <h3 className="text-4xl md:text-7xl font-[Cinzel] text-white font-bold mb-6">Lo que dicen de la experiencia</h3>
@@ -117,7 +117,7 @@ export default function ValoracionesPage() {
             <Navbar onOpenContact={() => setIsContactOpen(true)} />
 
             <main className="pb-24">
-                <section className="relative h-[60vh] flex items-center justify-center overflow-hidden mb-24">
+                <section className="relative h-[60vh] flex items-center justify-center overflow-hidden mb-12">
                     <div className="absolute inset-0 z-0 overflow-hidden">
                         <video autoPlay loop muted playsInline className="w-full h-full object-cover grayscale opacity-80">
                             <source src="/cambio-carta.mp4" type="video/mp4" />
