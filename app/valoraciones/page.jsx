@@ -41,53 +41,66 @@ const TrustedBrands = () => {
     );
 };
 
-const ReviewsGrid = () => {
+const ReviewsCarousel = () => {
     const [selectedReview, setSelectedReview] = useState(null);
     const reviewsData = [
         { text: "Contratamos a Ángel para dirigir un taller de magia para nuestro campus y la experiencia superó todas las expectativas.", author: "Movistar Estudiantes" },
         { text: "Contratamos a Ángel para nuestra boda y fue la clave para que el cóctel fuera espectacular. La magia de cerca que hace es de otro nivel.", author: "Sofía y David" },
         { text: "Ángel transformó la comunión de nuestro sobrino en algo verdaderamente excepcional.", author: "Comunión de Marcos" },
-        { text: "Ángel fue el que inauguró nuestra peña, ¡y lo hizo a lo grande! Nos dejó a todos clavados en el asiento.", author: "Peña 'La Escombrera' (Torrelodones)" },
+        { text: "Ángel fue el que inauguró nuestra peña, ¡y lo hace a lo grande! Nos dejó a todos clavados en el asiento.", author: "Peña 'La Escombrera'" },
         { text: "Un espectáculo de magia de salón impecable para la fiesta de cumpleaños.", author: "Ana P." },
         { text: "Una experiencia absolutamente mágica. Hizo que nuestra cena de empresa se convirtiera en un evento único.", author: "Carlos M." },
         { text: "Buscábamos el mejor mago para bodas en Madrid y Ángel fue todo un acierto. Su magia de cóctel dejó a todos los invitados fascinados.", author: "Laura García" },
-        { text: "Como ilusionista para eventos corporativos es brillante. Capacidad única para integrar nuestra marca en sus efectos de mentalismo.", author: "Miguel Jiménez" },
+        { text: "Como ilusionista para eventos corporativos es brillante. Capacidad única para integrar nuestra marca en sus efectos.", author: "Miguel Jiménez" },
         { text: "La mejor magia de cerca profesional que he visto. Ideal para cenas privadas donde quieres sorprender a clientes VIP.", author: "Patricia Ruiz" },
-        { text: "Un show de magia para comuniones y cumpleaños que divierte tanto a niños como a adultos. Muy recomendado.", author: "Javier Soler" },
-        { text: "Es el mejor mago ilusionista de Madrid que hemos contratado. Elegancia, humor y una técnica impecable en cada juego.", author: "Carmen Martínez" },
-        { text: "Si buscas magia elegante para eventos de alto standing, Ángel es el profesional adecuado. Impresionante su control de la atención.", author: "Sergio Blanco" }
+        { text: "Un show de magia para comuniones y cumpleaños que divierte tanto a niños como a adultos. Muy recomendado.", author: "Javier Soler" }
     ];
 
+    // Duplicamos el array para el efecto de scroll infinito
+    const doubledReviews = [...reviewsData, ...reviewsData];
+
     return (
-        <section id="reviews" className="py-12 relative z-10">
-            <div className="max-w-7xl mx-auto px-6 mb-16 text-center">
+        <section id="reviews" className="py-24 relative z-10 overflow-hidden">
+            <div className="max-w-7xl mx-auto px-6 mb-20 text-center">
                 <p className="text-xs md:text-sm font-bold tracking-[0.3em] text-amber-500 uppercase mb-4 flex items-center justify-center gap-3"><span className="w-8 h-[1px] bg-amber-500"></span> TESTIMONIOS REALES <span className="w-8 h-[1px] bg-amber-500"></span></p>
-                <h2 className="text-4xl md:text-7xl font-[Cinzel] text-white font-bold mb-6">Lo que dicen de la experiencia</h2>
-                <p className="text-slate-400 text-lg max-w-2xl mx-auto font-light">Cientos de clientes han vivido momentos imposibles. Aquí algunas de sus historias.</p>
+                <h2 className="text-4xl md:text-7xl font-[Cinzel] text-white font-bold mb-6 italic">La Magia del Feedback</h2>
+                <p className="text-slate-400 text-lg max-w-2xl mx-auto font-light">Desliza para descubrir cómo viven la experiencia mis clientes.</p>
             </div>
 
-            <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {reviewsData.map((review, index) => (
-                    <motion.div 
-                        key={index} 
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.1 }}
-                        className="bg-slate-900/40 border border-slate-800 backdrop-blur-md p-8 rounded-2xl relative group hover:border-amber-500/30 transition-all cursor-pointer h-full flex flex-col"
-                        onClick={() => setSelectedReview(review)}
-                    >
-                        <Quote className="w-10 h-10 text-amber-500/10 absolute top-6 right-6" />
-                        <div className="flex gap-1 mb-6">
-                            {[...Array(5)].map((_, i) => (<Star key={i} className="w-4 h-4 text-amber-400 fill-amber-400" />))}
-                        </div>
-                        <p className="text-slate-200 font-medium italic mb-8 leading-relaxed text-lg flex-grow">"{review.text}"</p>
-                        <div className="flex items-center gap-3 mt-auto pt-6 border-t border-slate-800">
-                             <div className="w-10 h-10 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-500 font-bold">{review.author[0]}</div>
-                             <p className="text-white font-[Cinzel] text-sm font-bold uppercase tracking-widest">{review.author}</p>
-                        </div>
-                    </motion.div>
-                ))}
+            {/* Carrusel Infinito */}
+            <div className="relative flex overflow-hidden group">
+                <motion.div 
+                    className="flex gap-8 py-4 px-4 pr-12"
+                    animate={{ x: [0, -2500] }}
+                    transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+                    style={{ width: "fit-content" }}
+                >
+                    {doubledReviews.map((review, index) => (
+                        <motion.div 
+                            key={index} 
+                            whileHover={{ scale: 1.02, y: -5 }}
+                            onClick={() => setSelectedReview(review)}
+                            className="w-[350px] md:w-[450px] flex-shrink-0 bg-slate-900/40 border border-slate-800 backdrop-blur-md p-10 rounded-3xl relative group/card cursor-pointer hover:border-amber-500/30 transition-all shadow-2xl flex flex-col"
+                        >
+                            <Quote className="w-12 h-12 text-amber-500/10 absolute top-8 right-10" />
+                            <div className="flex gap-1 mb-8">
+                                {[...Array(5)].map((_, i) => (<Star key={i} className="w-4 h-4 text-amber-400 fill-amber-400" />))}
+                            </div>
+                            <p className="text-slate-200 font-medium italic mb-10 leading-relaxed text-lg md:text-xl flex-grow">"{review.text}"</p>
+                            <div className="flex items-center gap-4 mt-auto pt-6 border-t border-white/5">
+                                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-amber-500/20 to-amber-600/20 flex items-center justify-center text-amber-500 font-bold border border-amber-500/20 shadow-inner">{review.author[0]}</div>
+                                 <div>
+                                    <p className="text-white font-[Cinzel] text-sm font-bold uppercase tracking-[0.2em]">{review.author}</p>
+                                    <p className="text-amber-500/50 text-[10px] uppercase tracking-widest font-light">Cliente Satisfecho</p>
+                                 </div>
+                            </div>
+                        </motion.div>
+                    ))}
+                </motion.div>
+                
+                {/* Degradados laterales para difuminar el corte */}
+                <div className="absolute inset-y-0 left-0 w-40 bg-gradient-to-r from-slate-950 to-transparent z-10 pointer-events-none" />
+                <div className="absolute inset-y-0 right-0 w-40 bg-gradient-to-l from-slate-950 to-transparent z-10 pointer-events-none" />
             </div>
 
             <MagicModal isOpen={!!selectedReview} onClose={() => setSelectedReview(null)}>
@@ -135,7 +148,7 @@ export default function ValoracionesPage() {
                     </div>
                 </section>
 
-                <ReviewsGrid />
+                <ReviewsCarousel />
                 <TrustedBrands />
 
                 {/* Call to action */}
