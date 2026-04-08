@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 import { motion, useScroll, useTransform, useSpring, useMotionValue, useVelocity, useAnimationFrame, AnimatePresence } from 'framer-motion';
 import Chatbot from '@/components/Chatbot';
 
@@ -224,9 +225,9 @@ const Hero = ({ onOpenModal }) => {
                     <span className="text-white block"><SplitText text="RUIZ" /></span>
                 </p>
                 <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1.0, duration: 1 }} className="my-6">
-                    <h2 className="text-lg md:text-2xl text-slate-200 tracking-[0.1em] uppercase border-y border-amber-500/30 py-4 px-4 md:px-8 inline-block backdrop-blur-sm bg-slate-900/20 text-center leading-relaxed font-[Playfair_Display]">
+                    <p className="text-lg md:text-2xl text-slate-200 tracking-[0.1em] uppercase border-y border-amber-500/30 py-4 px-4 md:px-8 inline-block backdrop-blur-sm bg-slate-900/20 text-center leading-relaxed font-[Playfair_Display]">
                         Ilusionista profesional con más de <span className="font-[Cinzel] font-bold text-lg md:text-xl lg:text-3xl">10</span> años de experiencia
-                    </h2>
+                    </p>
                 </motion.div>
                 <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.5, duration: 1 }} className="text-slate-400 text-xl font-light italic mt-6">
                     "LA MAGIA ES EL ENGAÑO MÁS HONESTO."
@@ -260,7 +261,7 @@ const TrustedBrands = () => {
                 <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
                     {brands.map((brand, index) => (
                         <motion.div key={index} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: index * 0.1 }} className="grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-500 flex flex-col items-center">
-                            <img src={brand.logo} alt={brand.name} loading="lazy" className="h-12 md:h-16 w-auto object-contain drop-shadow-lg" />
+                            <Image src={brand.logo} alt={brand.name} width={120} height={48} className="h-12 md:h-16 w-auto object-contain drop-shadow-lg" />
                         </motion.div>
                     ))}
                 </div>
@@ -279,16 +280,23 @@ const MagicalCarousel = () => {
     return (
         <div className="relative w-full h-full">
             <AnimatePresence mode="popLayout">
-                <motion.img
+                <motion.div
                     key={index}
-                    src={images[index]}
-                    alt="Angel Ruiz Mago"
                     initial={{ opacity: 0, scale: 1.05 }}
                     animate={{ opacity: 1, scale: 1, filter: "brightness(1)" }}
                     exit={{ opacity: 0, transition: { duration: 1 } }}
                     transition={{ duration: 1.5, ease: "easeInOut" }}
-                    className="absolute inset-0 w-full h-full object-cover rounded-xl shadow-2xl"
-                />
+                    className="absolute inset-0 w-full h-full"
+                >
+                    <Image
+                        src={images[index]}
+                        alt="Angel Ruiz Mago"
+                        fill
+                        className="object-cover rounded-xl shadow-2xl"
+                        sizes="(max-w-768px) 100vw, 50vw"
+                        priority={index === 0}
+                    />
+                </motion.div>
             </AnimatePresence>
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent pointer-events-none rounded-xl" />
         </div>
@@ -358,7 +366,7 @@ const Services = ({ selectedService, setSelectedService, disabled }) => {
     ];
     return (
         <section id="services" className={`py-20 relative px-4 max-w-7xl mx-auto ${selectedService ? 'z-40' : 'z-10'} ${disabled ? 'pointer-events-none opacity-50' : ''}`}>
-            <div className="text-center mb-12"><h3 className="text-3xl md:text-5xl font-[Cinzel] text-white">El Arte de lo Imposible</h3></div>
+            <div className="text-center mb-12"><h2 className="text-3xl md:text-5xl font-[Cinzel] text-white">El Arte de lo Imposible</h2></div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {servicesData.map((s, i) => <ServiceCard key={s.id} {...s} delay={i * 0.2} onClick={() => setSelectedService(s)} />)}
             </div>
@@ -487,7 +495,34 @@ export default function App() {
             "https://tiktok.com/@angellruuiz",
             "https://x.com/angellruuizz",
             "https://facebook.com/angellruuiz"
-        ]
+        ],
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "40.4168",
+            "longitude": "-3.7038"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicios de Magia",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Magia para Bodas",
+                        "description": "Magia itinerante para el cóctel y banquete de bodas."
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Eventos Corporativos",
+                        "description": "Dinamización de cenas de empresa y eventos de marca."
+                    }
+                }
+            ]
+        }
     };
 
     return (

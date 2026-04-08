@@ -7,7 +7,7 @@ export const metadata = {
     default: 'Angel Ruiz | Ilusionista & Magia Profesional para Eventos',
     template: '%s | Angel Ruiz Magia'
   },
-  description: 'Angel Ruiz es un ilusionista profesional especializado en Magia de Cerca y Magia de Cóctel para eventos corporativos, bodas y particulares VIP. Crea experiencias imposibles e inolvidables.',
+  description: 'Angel Ruiz, ilusionista profesional experto en Magia de Cerca y Cóctel para eventos corporativos, bodas y fiestas VIP. Crea experiencias mágicas e inolvidables.',
   keywords: ['Mago Madrid', 'Ilusionista', 'Magia para eventos', 'Eventos corporativos', 'Magia de cerca', 'Angel Ruiz', 'Mago para bodas', 'Espectáculo de magia', 'Contratar mago'],
   authors: [{ name: 'Angel Ruiz' }],
   creator: 'Angel Ruiz',
