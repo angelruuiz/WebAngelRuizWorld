@@ -20,12 +20,7 @@ export default function EventosDetailPage() {
 
             <main className="relative z-10 pt-32 pb-24 px-6 max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-                    <div className="relative md:sticky md:top-32 h-[450px] md:h-[500px] rounded-3xl overflow-hidden border border-slate-800 shadow-[0_0_50px_rgba(0,0,0,0.5)] order-2 md:order-1">
-                         <Image src="/images/foto-bio.png" alt="Fiestas Privadas y Eventos Angel Ruiz" fill className="object-cover" priority />
-                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 to-transparent" />
-                    </div>
-
-                    <motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} className="order-1 md:order-2">
+                    <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }}>
                         <h3 className="text-amber-500 uppercase tracking-widest text-sm font-bold mb-4 drop-shadow-md">Celebraciones Únicas</h3>
                         <h1 className="text-5xl md:text-8xl font-[Cinzel] text-white mb-8 border-b-2 border-amber-500 pb-4 font-bold">Eventos</h1>
                         
@@ -38,13 +33,18 @@ export default function EventosDetailPage() {
                             
                             <p>Disfrutarás de un show familiar-adulto en el que prácticamente todos participaréis de una forma u otra. Un humor elegante y una buena dosis de emoción os harán flipar a lo grande, ¡te lo aseguro!</p>
                             
-                            <p className="text-white italic pt-4">Verás cosas nunca vistas; magia moderna. anillos, monedas , cartas y algunos objetos no tan comunes, serán los culpables de trasladarte a un mundo increíble lleno de misterio, humor y mucha cara dura...</p>
+                            <p className="text-white italic pt-4">Verás cosas nunca vistas; magia moderna. anillos, monedas, cartas y algunos objetos no tan comunes, serán los culpables de trasladarte a un mundo increíble lleno de misterio, humor y mucha cara dura...</p>
                         </div>
 
                         <div className="mt-12 flex justify-start">
-                            <button onClick={() => setIsContactOpen(true)} className="px-10 py-4 border-2 border-amber-500 text-amber-500 font-bold rounded-full uppercase tracking-widest hover:bg-amber-500 hover:text-slate-950 transition-all shadow-lg shadow-amber-500/10 transform hover:-translate-y-1">Consúltame</button>
+                            <button onClick={() => setIsContactOpen(true)} className="px-10 py-4 bg-amber-500 text-slate-950 font-bold rounded-full uppercase tracking-widest hover:bg-amber-400 transition-all shadow-lg shadow-amber-500/20 transform hover:-translate-y-1">Consúltame</button>
                         </div>
                     </motion.div>
+
+                    <div className="relative md:sticky md:top-32 h-[450px] md:h-[500px] rounded-3xl overflow-hidden border border-slate-800 shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+                         <Image src="/images/foto-bio.png" alt="Fiestas Privadas y Eventos Angel Ruiz" fill className="object-cover" priority />
+                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 to-transparent" />
+                    </div>
                 </div>
             </main>
 
