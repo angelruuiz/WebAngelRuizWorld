@@ -51,7 +51,7 @@ Efectivamente. La magia de calidad cautiva desde los niños hasta los abuelos. S
 Lo más demandado es el **cóctel de bienvenida**. Es el momento donde la gente está de pie, con una copa en la mano y lista para interactuar. No obstante, realizar magia corta en las mesas durante el banquete también funciona a la perfección.
 
 ### ¿Con cuánta antelación debo reservar?
-Madrid es una ciudad con mucha demanda, especialmente en temporada de bodas (mayo a octubre). Lo ideal es reservar con **6 a 12 meses** de antelación para asegurar la fecha de tu evento.
+Madrid es una ciudad con mucha demanda, especialmente en temporada de bodas (mayo a octubre). Lo ideal es reservar con **mínimo mes y medio de antelación** para asegurar la fecha de tu evento.
 
 ### El Sello de Calidad de Angel Ruiz
 

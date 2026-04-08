@@ -60,7 +60,7 @@ Si tu empresa participa en una feria en Madrid, la magia atraerá a los visitant
 
 ### Por qué integrar a Angel Ruiz en tu próximo Evento Madrid
 
-Con más de una década de experiencia colaborando con PYMES y multinacionales, entiendo el valor del tiempo y la reputación. Mi magia no busca el ridículo del espectador, sino su empoderamiento y diversión. Si buscas un **mago en Las Rozas, Majadahonda o Madrid centro**, ofrezco profesionalidad garantizada, facturación clara y un show que elevará el nivel de vuestra próxima convocatoria.
+Con la experiencia adquirida colaborando con Pymes y multinacionales, entiendo el valor del tiempo y la reputación. Mi magia no busca el ridículo del espectador, sino su empoderamiento y diversión. Si buscas un **mago en Las Rozas, Majadahonda o Madrid centro**, ofrezco profesionalidad garantizada, facturación clara y un show que elevará el nivel de vuestra próxima convocatoria.
 
 ### Conclusión: El Futuro del Entretenimiento Corporativo
 
