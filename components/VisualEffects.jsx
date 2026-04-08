@@ -16,11 +16,11 @@ export const MagicCursor = ({ isLight = false }) => {
         };
     }, []);
     return (
-        <motion.div className={`fixed top-0 left-0 pointer-events-none z-[100005] hidden md:block ${isLight ? 'mix-blend-multiply' : 'mix-blend-screen'}`}
+        <motion.div className={`fixed top-0 left-0 pointer-events-none z-[100005] hidden md:block ${isLight ? '' : 'mix-blend-screen'}`}
             animate={{ x: mousePosition.x - (isHovering ? 32 : 16), y: mousePosition.y - (isHovering ? 32 : 16), scale: isHovering ? 1.5 : 1 }}
             transition={{ x: { duration: 0 }, y: { duration: 0 }, scale: { type: 'spring', stiffness: 500, damping: 28 } }}>
-            <div className={`rounded-full blur-xl transition-all duration-300 ${isLight ? 'bg-amber-900/30' : 'bg-amber-400 opacity-40'} ${isHovering ? 'w-16 h-16' : 'w-8 h-8'}`} />
-            <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border transition-all duration-300 ${isLight ? 'border-amber-900/40' : 'border-amber-200/50'} ${isHovering ? 'w-12 h-12' : 'w-4 h-4'}`} />
+            <div className={`rounded-full blur-xl transition-all duration-300 ${isLight ? 'bg-amber-500/40' : 'bg-amber-400 opacity-40'} ${isHovering ? 'w-16 h-16' : 'w-8 h-8'}`} />
+            <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border transition-all duration-300 ${isLight ? 'border-amber-600/60 shadow-[0_0_10px_rgba(217,119,6,0.2)]' : 'border-amber-200/50'} ${isHovering ? 'w-12 h-12' : 'w-4 h-4'}`} />
         </motion.div>
     );
 };
