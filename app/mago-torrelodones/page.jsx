@@ -107,7 +107,7 @@ export default function MagoTorrelodonesPage() {
                         <div className="relative h-[400px] md:h-[600px] rounded-3xl overflow-hidden border border-slate-800 shadow-2xl">
                             <MagicalCarousel />
                         </div>
-                    </section>               </section>
+                    </section>
 
                     <section className="mb-24 space-y-12">
                         <h2 className="text-4xl font-[Cinzel] text-white text-center mb-16 border-b border-white/10 pb-6">Servicios de Magia en Torrelodones</h2>
