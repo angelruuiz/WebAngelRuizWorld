@@ -4,11 +4,11 @@ import { Analytics } from '@vercel/analytics/react';
 export const metadata = {
   metadataBase: new URL('https://angelruiz.world'),
   title: {
-    default: 'Angel Ruiz | Ilusionista & Magia Profesional para Eventos',
+    default: 'Angel Ruiz | Mago e Ilusionista en Madrid para Bodas y Eventos',
     template: '%s | Angel Ruiz Magia'
   },
-  description: 'Angel Ruiz, ilusionista profesional experto en Magia de Cerca y Cóctel para eventos corporativos, bodas y fiestas VIP. Crea experiencias mágicas e inolvidables.',
-  keywords: ['Mago Madrid', 'Ilusionista', 'Magia para eventos', 'Eventos corporativos', 'Magia de cerca', 'Angel Ruiz', 'Mago para bodas', 'Espectáculo de magia', 'Contratar mago'],
+  description: 'Angel Ruiz, ilusionista profesional experto en Magia de Cerca y Cóctel para eventos corporativos, bodas y fiestas VIP en Madrid. Crea experiencias mágicas e inolvidables.',
+  keywords: ['Mago Madrid', 'Ilusionista en Madrid', 'Mago para bodas Madrid', 'Magia para empresas Madrid', 'Mago para eventos corporativos', 'Magia de cerca Madrid', 'Angel Ruiz', 'Espectáculo de magia Madrid', 'Contratar mago Madrid', 'Mago ilusionista Madrid', 'Mago para comuniones Madrid'],
   authors: [{ name: 'Angel Ruiz' }],
   creator: 'Angel Ruiz',
   publisher: 'Angel Ruiz',
@@ -60,8 +60,8 @@ const schemaOrg = {
   image: 'https://angelruiz.world/images/foto-bio.png',
   knowsAbout: ['Magia de Cerca', 'Ilusionismo', 'Magia para Eventos', 'Magia de Cóctel'],
   areaServed: {
-    '@type': 'Country',
-    name: 'España',
+    '@type': 'City',
+    name: 'Madrid',
   },
   address: {
     '@type': 'PostalAddress',
