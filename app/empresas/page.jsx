@@ -12,13 +12,13 @@ export const metadata = {
     openGraph: {
         title: 'Magia para Empresas en Madrid | Angel Ruiz',
         description: 'Eleva el nivel de tu evento corporativo con magia de alto impacto. Especialista en cenas de empresa, congresos y team building.',
-        images: [{ url: '/images/foto-bio.png' }],
+        images: [{ url: '/images/curriculum.png' }],
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Magia para Empresas en Madrid | Angel Ruiz',
         description: 'Eleva tu evento con el mejor ilusionista corporativo de Madrid.',
-        images: ['/images/foto-bio.png'],
+        images: ['/images/curriculum.png'],
     },
 };
 
@@ -51,7 +51,7 @@ export default function EmpresasPage() {
 
                         <div className="relative md:sticky md:top-32 h-[450px] md:h-[500px] rounded-3xl overflow-hidden border border-slate-800 shadow-2xl order-2 md:order-1">
                             <Image
-                                src="/images/foto-bio.png"
+                                src="/images/curriculum.png"
                                 alt="Mago corporativo en Madrid Ángel Ruiz ilusionista para empresas eventos y congresos"
                                 fill
                                 className="object-cover grayscale hover:grayscale-0 transition-all duration-1000"
