@@ -64,44 +64,22 @@ export default function EmpresasPage() {
                                 Mago para Empresas
                             </h1>
 
-                             <div className="space-y-4 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
+                             <div className="space-y-6 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
                                 <p>
-                                    <span className="text-amber-400 font-bold">
-                                        Magia corporativa diseñada para fortalecer la imagen de tu marca y la cohesión de tu equipo en Madrid.
-                                    </span>{' '}
-                                    Angel Ruiz se especializa en transformar convenciones ordinarias en experiencias extraordinarias. Sorprende a tus empleados, clientes y socios con una actividad de ilusionismo innovadora que fomenta el asombro compartido y hace que se involucren al 100% en la cultura de tu compañía.
+                                    <span className="text-amber-400 font-bold">Magia corporativa diseñada para fortalecer la imagen de tu marca y la cohesión de tu equipo en Madrid.</span>{' '}
+                                    Angel Ruiz transforma convenciones ordinarias en experiencias extraordinarias. Sorprende a tus empleados y clientes con una actividad de ilusionismo innovadora que fomenta el asombro compartido y el engagement real con tu compañía.
                                 </p>
 
                                 <p>
-                                    En un entorno empresarial tan competitivo como el actual, destacar es fundamental. Como experto en <strong>eventos Madrid</strong> corporativos, ofrezco soluciones personalizadas que van desde la magia de cóctel itinerante hasta presentaciones de producto donde el ilusionismo sirve como vehículo para el mensaje de marketing. Si buscas un impactante <strong>mago para empresas en Torrelodones</strong> o Las Rozas, mi propuesta combina elegancia, humor inteligente y un profesionalismo impecable.
+                                    Como experto en <strong>eventos Madrid</strong> corporativos, ofrezco soluciones personalizadas: desde magia de cóctel itinerante hasta presentaciones de producto donde el ilusionismo refuerza tu mensaje de marketing. Si buscas un <strong>mago para empresas en Torrelodones</strong>, Las Rozas o Pozuelo, mi propuesta combina elegancia, humor inteligente y un profesionalismo que respeta escrupulosamente el protocolo business.
                                 </p>
 
                                 <p>
-                                    Como{' '}
-                                    <strong className="text-amber-400">
-                                        mago para eventos de empresa
-                                    </strong>
-                                    , me integro de forma orgánica en la dinámica de tu jornada —ya sea en cenas de gala, ferias comerciales o sesiones de team building— elevando la energía general del público. He colaborado con entidades de prestigio y grandes corporaciones en la capital, garantizando un servicio de <strong>mago de cerca Madrid</strong> que respeta escrupulosamente el protocolo y los objetivos de comunicación de cada cliente. 
-                                </p>
-
-                                <p>
-                                    La magia de cerca (o close-up) es especialmente efectiva en recepciones y cócteles de networking. Permite romper las barreras sociales de forma instantánea, facilitando que los asistentes interactúen entre sí mientras viven lo imposible a escasos centímetros de sus ojos. Es una herramienta potente de Relaciones Públicas que deja una huella imborrable en la memoria de los invitados, asociando tu marca con sensaciones de éxito, innovación y creatividad.
-                                </p>
-
-                                <p>
-                                    Además, mi disponibilidad se extiende a toda la zona noroeste de la comunidad. Si tu oficina se encuentra en <strong>Majadahonda, Pozuelo o el parque empresarial de Las Rozas</strong>, puedo ofrecerte una propuesta de entretenimiento flexible y sin complicaciones logísticas. Entiendo las necesidades de las empresas modernas y por ello ofrezco facturación inmediata, puntualidad británica y un show adaptable a diferentes espacios, desde salas de juntas hasta grandes auditorios.
-                                </p>
-
-                                <p>
-                                    No se trata solo de trucos, sino de crear una atmósfera donde lo imposible parezca real. Como <strong>ilusionista corporativo en Madrid</strong>, diseño cada intervención para que sea coherente con el tono de vuestra reunión, ya sea buscando un enfoque más lúdico para una fiesta navideña o un tono más sofisticado para una exclusiva cena con inversores en <strong>Boadilla del Monte o Aravaca</strong>.
+                                    La <strong>magia de cerca Madrid</strong> es la herramienta de RRPP definitiva para cenas de gala, ferias y sesiones de team building. Rompe las barreras sociales al instante, facilitando el networking mientras los asistentes viven lo imposible a escasos centímetros. Disponible en toda la zona noroeste con facturación inmediata y total flexibilidad logística.
                                 </p>
 
                                 <p className="text-amber-500/90 italic font-bold border-l-2 border-amber-500 pl-4 py-2 mt-4 text-sm md:text-base">
-                                    Diferencia tu próximo evento corporativo en Torrelodones o Madrid capital con una propuesta de magia exclusiva que genere "engagement" real. Con más de una década de experiencia en el sector business, te garantizo un éxito total y un retorno en forma de sonrisas y admiración de tu equipo. ¡Contáctame hoy mismo para recibir un presupuesto a medida y elevar el nivel de vuestra próxima convención!
-                                </p>
-
-                                <p className="text-white/60 text-xs mt-8">
-                                    Servicios disponibles en: Madrid Centro, Torrelodones, Pozuelo de Alarcón, Majadahonda, Las Rozas de Madrid, Boadilla del Monte, Alcobendas, San Sebastián de los Reyes y toda la zona del Corredor del Henares. Especialista en Magia Corporativa y Eventos de Marca.
+                                    Diferencia tu próximo evento corporativo con una propuesta de magia exclusiva. Con más de una década de experiencia en el sector business, te garantizo un éxito total y un retorno en forma de admiración de tu equipo.
                                 </p>
                             </div>
 
