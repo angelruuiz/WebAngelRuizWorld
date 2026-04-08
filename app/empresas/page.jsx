@@ -64,7 +64,7 @@ export default function EmpresasPage() {
                                 
                                 <p><span className="text-white font-bold italic underline decoration-amber-500/50">Me infiltraré como un empleado más</span>, evitando así modificar el transcurso del evento. Hipnosis, mentalismo, robos... Entretenimiento fresco y moderno, esa es la clave para que tus equipos participen.</p>
                                 
-                                <p className="bg-slate-900/40 p-6 rounded-xl border border-slate-800 italic">Un cóctel, una cena de empresa, un congreso, un desayuno... Cualquier ocasión con un algo de magia cambiará por completo la perspectiva del evento.</p>
+                                <p className="text-amber-500/90 italic font-bold border-l-2 border-amber-500 pl-4 py-2 mt-4">Un cóctel, una cena de empresa, un congreso, un desayuno... Cualquier ocasión con un algo de magia cambiará por completo la perspectiva del evento.</p>
 
                                 <ul className="space-y-4 pt-6">
                                     {[
