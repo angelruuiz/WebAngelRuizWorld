@@ -11,8 +11,8 @@ export const metadata = {
 export default function SobreMiPage() {
     return (
         <SobreMiClient>
-            <div className="space-y-6 text-white font-medium leading-loose text-lg md:text-xl">
-                <p className="text-2xl text-amber-400 font-bold italic mb-8 drop-shadow-sm text-left">
+            <div className="space-y-4 text-white font-medium leading-relaxed text-base">
+                <p className="text-xl text-amber-400 font-bold italic mb-4 drop-shadow-sm text-left">
                     "La magia no es solo lo que viste, sino el recuerdo imborrable que te llevas contigo."
                 </p>
                 

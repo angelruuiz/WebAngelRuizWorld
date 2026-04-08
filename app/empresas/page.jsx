@@ -46,10 +46,10 @@ export default function EmpresasPage() {
                 <ParticleBackground />
 
                 <main>
-                <section className="pt-32 pb-24 px-6 max-w-7xl mx-auto relative z-10">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                <section className="pt-24 pb-16 px-6 max-w-6xl mx-auto relative z-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
 
-                        <div className="relative md:sticky md:top-32 h-[450px] md:h-[600px] rounded-3xl overflow-hidden border border-slate-800 shadow-2xl order-2 md:order-1">
+                        <div className="relative md:sticky md:top-32 h-[350px] md:h-[500px] rounded-2xl overflow-hidden border border-slate-800 shadow-xl order-2 md:order-1">
                             <Image
                                 src="/images/curriculum.png"
                                 alt="Angel Ruiz - Especialista en Magia para Empresas en Madrid y Eventos Corporativos"
@@ -60,11 +60,11 @@ export default function EmpresasPage() {
                         </div>
 
                         <div className="order-1 md:order-2">
-                            <h1 className="text-4xl md:text-7xl font-[Cinzel] text-white mb-8 border-b-2 border-amber-500 pb-4 font-bold">
-                                Mago para Empresas en Madrid
+                            <h1 className="text-4xl md:text-5xl font-[Cinzel] text-white mb-6 border-b border-amber-500/50 pb-2 font-bold leading-tight">
+                                Mago para Empresas
                             </h1>
 
-                             <div className="space-y-6 text-white text-base md:text-lg font-medium leading-relaxed text-justify">
+                             <div className="space-y-4 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
                                 <p>
                                     <span className="text-amber-400 font-bold">
                                         Magia corporativa diseñada para fortalecer la imagen de tu marca y la cohesión de tu equipo en Madrid.

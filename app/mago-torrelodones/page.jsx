@@ -79,95 +79,89 @@ export default function MagoTorrelodonesPage() {
                 <MagicCursor />
                 <ParticleBackground />
 
-                <main className="relative z-10 pt-32 pb-24 px-6 max-w-7xl mx-auto">
-                    <section className="mb-24">
-                        <div className="max-w-4xl">
-                            <p className="text-amber-500 uppercase tracking-widest text-sm font-bold mb-4 drop-shadow-md">
+                <main className="relative z-10 pt-24 pb-16 px-6 max-w-6xl mx-auto">
+                    <section className="mb-16">
+                        <div className="max-w-3xl">
+                            <p className="text-amber-500 uppercase tracking-widest text-[10px] font-bold mb-2 drop-shadow-md">
                                 Ilusionismo de Proximidad en la Sierra
                             </p>
-                            <h1 className="text-5xl md:text-8xl font-[Cinzel] text-white mb-8 border-b-2 border-amber-500 pb-4 font-bold leading-tight">
-                                Mago en Torrelodones: Angel Ruiz
+                            <h1 className="text-4xl md:text-6xl font-[Cinzel] text-white mb-6 border-b border-amber-500/50 pb-2 font-bold leading-tight">
+                                Mago en Torrelodones
                             </h1>
-                            <p className="text-xl md:text-2xl text-slate-300 font-medium italic underline decoration-amber-500/30">
-                                La magia de cerca más exclusiva para tus bodas, eventos privados y convenciones de empresa en la zona noroeste de Madrid.
+                            <p className="text-lg md:text-xl text-slate-300 font-medium italic">
+                                Magia de cerca exclusiva para bodas, eventos y empresas.
                             </p>
                         </div>
                     </section>
 
-                    <section className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start mb-24">
-                        <div className="space-y-8 text-white text-lg leading-relaxed text-justify">
-                            <h2 className="text-3xl font-[Cinzel] text-amber-500 font-bold mb-6">Tu Ilusionista de Confianza en el Noroeste</h2>
+                    <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-16">
+                        <div className="space-y-6 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
+                            <h2 className="text-2xl font-[Cinzel] text-amber-500 font-bold mb-4">Experiencia Local en el Noroeste</h2>
                             <p>
-                                Angel Ruiz se ha convertido en el ilusionista de referencia para quienes buscan un <strong>mago en Torrelodones</strong> que aporte ese toque de distinción y asombro real. Al ser vecino del municipio, Angel no solo conoce a la perfección el entorno, sino que vive y respira el ambiente de la zona noroeste, lo que le permite ofrecer una disponibilidad y cercanía que otros artistas no pueden igualar. Su especialización en la magia de cerca y de cóctel lo sitúa como la opción ideal para eventos donde la elegancia y la interacción directa son primordiales. No se trata simplemente de realizar trucos, sino de crear una atmósfera eléctrica donde el asombro ocurre literalmente a escasos centímetros de los ojos de los asistentes.
+                                Angel Ruiz es el <strong>mago en Torrelodones</strong> de referencia para eventos que buscan distinción. Como vecino del municipio, ofrece una disponibilidad y cercanía únicas, conociendo a la perfección los espacios locales. Su especialidad es la magia de cerca, donde lo imposible ocurre a centímetros de los ojos de tus invitados, creando una atmósfera eléctrica en cada mesa o rincón de tu celebración.
                             </p>
                             <p>
-                                Al trabajar localmente, Angel puede coordinar cada detalle de forma directa, eliminando las barreras logísticas de los grandes desplazamientos y asegurando que la magia llegue a tiempo y con la máxima energía a cada rincón de nuestro pueblo. Es el mago que tus amigos y vecinos ya recomiendan por su profesionalismo y ese estilo moderno que fusiona la técnica clásica con un enfoque joven y dinámico. La cercanía geográfica se traduce en una flexibilidad única, permitiendo reuniones previas presenciales para que cada detalle del show encaje perfectamente con la visión del organizador.
+                                Trabajar localmente permite una coordinación directa, eliminando barreras logísticas de grandes desplazamientos. Angel fusiona técnica clásica con un estilo moderno y dinámico, asegurando que tu evento cuente con un profesional de confianza recomendado por los propios vecinos de la zona noroeste. Es la seguridad de contar con un ilusionista de primer nivel que vive y trabaja en tu propia comunidad.
                             </p>
                         </div>
-                        <div className="relative h-[400px] md:h-[600px] rounded-3xl overflow-hidden border border-slate-800 shadow-2xl">
+                        <div className="relative h-[300px] md:h-[450px] rounded-2xl overflow-hidden border border-slate-800 shadow-xl">
                             <MagicalCarousel />
                         </div>
                     </section>
 
-                    <section className="mb-24 space-y-12">
-                        <h2 className="text-4xl font-[Cinzel] text-white text-center mb-16 border-b border-white/10 pb-6">Servicios de Magia en Torrelodones</h2>
+                    <section className="mb-16 space-y-8">
+                        <h2 className="text-3xl font-[Cinzel] text-white text-center mb-10 border-b border-white/10 pb-4">Servicios en Torrelodones</h2>
                         
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            <div className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-amber-500/50 transition-colors">
-                                <h3 className="text-2xl font-bold text-amber-400 mb-6 font-[Cinzel]">Mago para bodas en Torrelodones</h3>
-                                <p className="text-slate-300 text-justify text-base">
-                                    El cóctel de bienvenida es el momento crítico donde se define la energía de una boda. Como experto en ilusionismo nupcial local, Angel se encarga de romper el hielo entre tus invitados mientras recorre los grupos con efectos imposibles. Al conocer de primera mano las fincas y espacios de celebración más emblemáticos de Torrelodones y sus alrededores, la integración del show es total, aportando un valor añadido que tus familiares y amigos recordarán durante años como el momento más impactante del enlace.
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div className="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-amber-500/30 transition-colors">
+                                <h3 className="text-xl font-bold text-amber-400 mb-4 font-[Cinzel]">Magia para Bodas</h3>
+                                <p className="text-slate-400 text-justify text-xs leading-relaxed">
+                                    Angel dinamiza el cóctel de bienvenida rompiendo el hielo entre invitados con efectos imposibles. Como experto local, se integra perfectamente en las fincas de Torrelodones, garantizando que tu boda sea recordada por su originalidad.
                                 </p>
                             </div>
 
-                            <div className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-amber-500/50 transition-colors">
-                                <h3 className="text-2xl font-bold text-amber-400 mb-6 font-[Cinzel]">Mago para eventos de empresa noroeste</h3>
-                                <p className="text-slate-300 text-justify text-base">
-                                    Las empresas situadas en el eje de la A-6 buscan experiencias que refuercen su imagen de marca sin complicaciones logísticas. Angel Ruiz ofrece un servicio de magia corporativa sofisticado, ideal para cenas de gala, ferias y sesiones de team building en la zona noroeste de Madrid. Su capacidad para conectar con clientes de alto perfil y equipos directivos lo convierte en un aliado estratégico para cualquier convención, garantizando que el mensaje de vuestra compañía se asocie con sensaciones de éxito e innovación.
+                            <div className="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-amber-500/30 transition-colors">
+                                <h3 className="text-xl font-bold text-amber-400 mb-4 font-[Cinzel]">Mago para Empresas</h3>
+                                <p className="text-slate-400 text-justify text-xs leading-relaxed">
+                                    Servicio de magia corporativa sofisticado para el eje de la A-6. Ideal para cenas de gala y team building en Torrelodones y Las Rozas, asociando tu marca con éxito e innovación mediante un ilusionismo moderno y profesional.
                                 </p>
                             </div>
 
-                            <div className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-amber-500/50 transition-colors">
-                                <h3 className="text-2xl font-bold text-amber-400 mb-6 font-[Cinzel]">Magia para celebraciones y fiestas</h3>
-                                <p className="text-slate-300 text-justify text-base">
-                                    Contar con un <strong>mago en Torrelodones</strong> de confianza marca la diferencia entre una reunión común y una tarde legendaria. Angel adapta su repertorio de mentalismo y cartomagia de salón para que todos los presentes, independientemente de su edad, participen activamente del misterio. Al ser un servicio directo y de proximidad, el trato es mucho más personalizado, permitiendo diseñar momentos mágicos específicos para el protagonista del evento en la comodidad de su propia casa o local privado.
+                            <div className="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-amber-500/30 transition-colors">
+                                <h3 className="text-xl font-bold text-amber-400 mb-4 font-[Cinzel]">Fiestas Privadas</h3>
+                                <p className="text-slate-400 text-justify text-xs leading-relaxed">
+                                    Transforma un cumpleaños o reunión de amigos en una tarde legendaria. Angel adapta su repertorio de mentalismo y cartomagia para grupos reducidos en Torrelodones, ofreciendo un trato directo, cercano y muy personal.
                                 </p>
                             </div>
                         </div>
                     </section>
 
-                    <section className="bg-amber-500/5 p-12 rounded-3xl border border-amber-500/20 mb-24">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                            <div className="space-y-6">
-                                <h2 className="text-3xl font-[Cinzel] text-white font-bold">Cobertura en la Sierra Madrileña</h2>
-                                <p className="text-slate-300 text-justify leading-relaxed">
-                                    Aunque el epicentro de su actividad se encuentra en <strong>Torrelodones</strong>, el servicio de Angel Ruiz se extiende con naturalidad por toda la <strong>zona noroeste de Madrid</strong>, ofreciendo una cobertura integral sin las demoras habituales de Madrid centro. Es habitual verle actuar en localidades vecinas como <strong>Las Rozas y Majadahonda</strong>, donde el perfil de los eventos demanda una magia de alta calidad y elegancia. Asimismo, mantiene una presencia constante en <strong>Galapagar y Colmenarejo</strong>, así como en los entornos históricos de <strong>El Escorial</strong>, donde el ilusionismo encaja perfectamente con el ambiente señorial que desprenden sus fincas.
-                                </p>
-                                <p className="text-slate-300 text-justify leading-relaxed">
-                                    La disponibilidad se amplía también a <strong>Collado Villalba, Hoyo de Manzanares y Alpedrete</strong>, cubriendo todo el corredor de la sierra. Gracias a esta proximidad geográfica, Angel puede atender solicitudes en <strong>Villanueva de la Cañada, Cercedilla y Los Molinos</strong> con gran flexibilidad horaria, asegurando que cualquier rincón de nuestra comarca pueda disfrutar de un ilusionismo moderno, cercano y sin sorpresas logísticas de larga distancia. Contar con un artista de esta zona garantiza un compromiso mayor con el éxito del evento local.
+                    <section className="bg-slate-900/40 p-8 rounded-2xl border border-white/5 mb-16">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                            <div className="space-y-4">
+                                <h2 className="text-2xl font-[Cinzel] text-white font-bold">Cobertura Sierra</h2>
+                                <p className="text-slate-400 text-justify text-sm leading-relaxed">
+                                    Angel Ruiz ofrece cobertura integral en <strong>Torrelodones, Las Rozas, Majadahonda y Galapagar</strong>, sin los retrasos de Madrid centro. Su presencia es constante en El Escorial y zonas cercanas como Collado Villalba y Hoyo de Manzanares.
                                 </p>
                             </div>
-                            <div className="space-y-8">
-                                <h2 className="text-3xl font-[Cinzel] text-white font-bold">Por qué elegir a un Mago Local</h2>
-                                <p className="text-slate-300 text-justify leading-relaxed">
-                                    La principal ventaja de contar con **Angel Ruiz como tu mago en Torrelodones** es la confianza que otorga trabajar con alguien que realmente conoce el terreno. Al residir en la zona, Angel tiene una relación directa con los gerentes de los mejores restaurantes y fincas locales, facilitando una coordinación técnica impecable que ahorra tiempo y preocupaciones a los organizadores. La ausencia de costes de desplazamiento elevados permite invertir el presupuesto 100% en la calidad artística de la actuación, lo que redunda en un show mucho más potente y cuidado.
-                                </p>
-                                <p className="text-slate-300 text-justify leading-relaxed">
-                                    Además, el trato de tú a tú, sin agencias intermediarias de por medio, asegura que cada detalle sea discutido directamente con el artista. Esta cercanía no solo se traduce en una respuesta más rápida ante cualquier duda o cambio de última hora, sino en una implicación personal mucho más profunda con el éxito de cada celebración que se lleva a cabo en nuestra comunidad. Es el valor de la seguridad local combinado con la excelencia de un ilusionismo de primer nivel internacional que no necesita viajar desde lejos.
+                            <div className="space-y-4">
+                                <h2 className="text-2xl font-[Cinzel] text-white font-bold">Ventaja Local</h2>
+                                <p className="text-slate-400 text-justify text-sm leading-relaxed">
+                                    Contratar un mago local asegura coordinación técnica impecable con restaurantes de la zona y ausencia de altos costes de desplazamiento. Es trato directo artista-cliente para una respuesta rápida y personalizada.
                                 </p>
                             </div>
                         </div>
                     </section>
 
-                    <section className="text-center py-24 bg-slate-900/50 rounded-[4rem] border border-white/5 relative overflow-hidden">
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent" />
-                        <div className="relative z-10 max-w-3xl mx-auto px-6">
-                            <h2 className="text-4xl md:text-6xl font-[Cinzel] text-white mb-8 font-bold">¿Hacemos que lo imposible ocurra en Torrelodones?</h2>
-                            <p className="text-xl text-slate-300 mb-12 leading-relaxed">
-                                Si quieres que tu próximo evento sea verdaderamente inolvidable, no busques más. Estoy a un paso de ti y listo para diseñar una experiencia mágica a medida de tus necesidades. Contacta conmigo hoy mismo para consultar disponibilidad y hablemos de cómo podemos dejar a tus invitados con la boca abierta. La magia de calidad empieza con una conversación cercana. ¡Escríbeme y hagamos que lo imposible ocurra en tu celebración!
+                    <section className="text-center py-16 bg-slate-900/30 rounded-[3rem] border border-white/5 relative overflow-hidden">
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-amber-500/50 to-transparent" />
+                        <div className="relative z-10 max-w-2xl mx-auto px-6">
+                            <h2 className="text-3xl md:text-5xl font-[Cinzel] text-white mb-6 font-bold">¿Hablamos?</h2>
+                            <p className="text-base text-slate-300 mb-8 leading-relaxed">
+                                Estoy a un paso de ti. Contacta conmigo para diseñar una experiencia mágica a medida de tu evento en Torrelodones. ¡Sorprendamos juntos a tus invitados!
                             </p>
-                            <div className="flex justify-center scale-125">
-                                <ContactButtonClient label="Contratar Mago en Torrelodones" />
+                            <div className="flex justify-center">
+                                <ContactButtonClient label="Contratar Mago" />
                             </div>
                         </div>
                     </section>

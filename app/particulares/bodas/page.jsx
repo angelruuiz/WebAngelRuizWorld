@@ -45,18 +45,18 @@ export default function BodasDetailPage() {
                 <MagicCursor />
                 <ParticleBackground />
 
-                <main className="relative z-10 pt-32 pb-24 px-6 max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                <main className="relative z-10 pt-24 pb-16 px-6 max-w-6xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
 
                     <div>
-                        <p className="text-amber-500 uppercase tracking-widest text-sm font-bold mb-4 drop-shadow-md">
+                        <p className="text-amber-500 uppercase tracking-widest text-[10px] font-bold mb-2 drop-shadow-md">
                             Especialista en Bodas
                         </p>
-                        <h1 className="text-5xl md:text-8xl font-[Cinzel] text-white mb-8 border-b-2 border-amber-500 pb-4 font-bold">
-                            Mago para Bodas en Madrid
+                        <h1 className="text-4xl md:text-5xl font-[Cinzel] text-white mb-4 border-b border-amber-500/50 pb-2 font-bold leading-tight">
+                            Mago para Bodas
                         </h1>
 
-                        <div className="space-y-6 text-white text-base md:text-lg font-medium leading-relaxed text-justify">
+                        <div className="space-y-4 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
                             <p>
                                 <span className="text-amber-400 font-bold">
                                     Personaliza tu boda de la forma más mágica.
@@ -125,7 +125,7 @@ export default function BodasDetailPage() {
                         </div>
                     </div>
 
-                    <div className="relative md:sticky md:top-32 h-[450px] md:h-[500px] rounded-3xl overflow-hidden border border-slate-800 shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+                    <div className="relative md:sticky md:top-32 h-[350px] md:h-[450px] rounded-2xl overflow-hidden border border-slate-800 shadow-xl">
                         <Image
                             src="/images/boda-magia-madrid.jpg"
                             alt="Mago de bodas en Madrid Ángel Ruiz ilusionista profesional para cócteles y banquetes"
