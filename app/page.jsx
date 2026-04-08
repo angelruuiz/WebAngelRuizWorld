@@ -118,21 +118,59 @@ const Services = ({ selectedService, setSelectedService, disabled }) => {
 
 const SEOContent = () => {
     return (
-        <section className="py-24 px-6 bg-slate-950 text-slate-400 border-t border-white/5">
-            <div className="max-w-4xl mx-auto">
-                <h2 className="text-white font-[Cinzel] text-2xl mb-8 uppercase tracking-widest text-center">Magia en Madrid de Alto Nivel</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-sm leading-relaxed">
-                    <div className="space-y-4">
-                        <p>Si buscas contratar un <strong className="text-amber-500/80">mago en Madrid</strong> con una propuesta moderna y elegante, Angel Ruiz es el ilusionista que necesitas para tu próximo gran evento. Especializado en la <Link href="/particulares" className="text-amber-400 hover:underline">magia de cerca</Link> y el mentalismo psicológico, su estilo se aleja de los clichés tradicionales para ofrecer una experiencia fresca, participativa y sofisticada.</p>
-                        <p>Como experto <strong className="text-amber-500/80">ilusionista para eventos en Madrid</strong>, Angel se integra perfectamente en el ambiente de tu celebración, ya sea un cóctel corporativo, una gala de gala o una reunión privada exclusiva. Su capacidad para romper el hielo y crear asombro a escasos centímetros de los espectadores garantiza que tus invitados recuerden el evento durante años. Puedes leer más sobre su trayectoria en la sección <Link href="/sobre-mi" className="text-amber-400 hover:underline">sobre mí</Link>.</p>
+        <section className="py-24 px-6 bg-slate-950 text-slate-400 border-t border-white/5 relative overflow-hidden">
+            <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/5 blur-[120px] rounded-full pointer-events-none" />
+            <div className="max-w-5xl mx-auto relative">
+                <h2 className="text-white font-[Cinzel] text-3xl md:text-4xl mb-12 uppercase tracking-widest text-center">Referente de la Magia en Madrid</h2>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 text-base leading-relaxed text-slate-400/80">
+                    <div className="space-y-8">
+                        <div>
+                            <h3 className="text-amber-500 font-[Cinzel] text-xl mb-4 uppercase">El impacto de un Mago Profesional</h3>
+                            <p>Contratar un <strong className="text-amber-500/80">mago en Madrid</strong> no es solo añadir un número de entretenimiento; es transformar la atmósfera de un evento. Angel Ruiz se ha consolidado como uno de los ilusionistas más solicitados para celebraciones exclusivas, gracias a una propuesta que fusiona la elegancia clásica con el dinamismo de la magia moderna. Su enfoque se centra en la <Link href="/particulares" className="text-amber-400 hover:underline font-bold">magia de cerca (close-up)</Link>, donde los imposibles ocurren a centímetros de los ojos de los asistentes, creando un vínculo emocional único.</p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-amber-500 font-[Cinzel] text-xl mb-4 uppercase">Especialista en Bodas Inolvidables</h3>
+                            <p>En el sector nupcial, la figura del <Link href="/particulares/bodas" className="text-amber-400 hover:underline font-bold">mago para bodas en Madrid</Link> se ha vuelto esencial para esos momentos de transición, como el cóctel de bienvenida. Angel actúa con una psicología refinada, detectando los grupos de invitados que aún no se conocen para romper el hielo a través del asombro compartido. Su magia no interrumpe; fluye con el evento, asegurando que el ritmo nunca decaiga mientras los novios realizan su reportaje fotográfico o circulan entre las mesas durante el banquete.</p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-amber-500 font-[Cinzel] text-xl mb-4 uppercase">Magia para Empresas y Branding</h3>
+                            <p>Como <Link href="/empresas" className="text-amber-400 hover:underline font-bold">mago para empresas en Madrid</Link>, Angel Ruiz entiende que cada marca tiene un mensaje. Sus presentaciones corporativas están diseñadas para integrar valores, logotipos o productos en las ilusiones, convirtiendo un simple aperitivo de networking o una cena de gala en una potente herramienta de marketing experiencial. Multinacionales y pymes confían en su profesionalidad para dejar una huella imborrable en sus clientes y empleados.</p>
+                        </div>
                     </div>
-                    <div className="space-y-4">
-                        <p>Para aquellos que planean el día más importante de sus vidas, el <Link href="/particulares/bodas" className="text-amber-400 hover:underline">mago para bodas Madrid</Link> aporta ese toque de misterio y diversión que marca la diferencia. Durante el cóctel de bienvenida o en los tiempos muertos del banquete, la magia itinerante de Angel Ruiz crea conexiones reales entre los invitados, asegurando un ritmo dinámico y emocionante en todo momento.</p>
-                        <p>En el sector empresarial, la <Link href="/empresas" className="text-amber-400 hover:underline">magia para empresas en Madrid</Link> se ha convertido en una herramienta de marketing y fidelización inigualable. Angel Ruiz colabora con marcas internacionales para lanzar productos, amenizar cenas de empresa o dinamizar congresos. No dudes en consultar las <Link href="/valoraciones" className="text-amber-400 hover:underline">valoraciones de clientes</Link> para ver el impacto real de su trabajo.</p>
+
+                    <div className="space-y-8">
+                        <div>
+                            <h3 className="text-amber-500 font-[Cinzel] text-xl mb-4 uppercase">Trayectoria e Innovación</h3>
+                            <p>Con más de una década de experiencia y habiendo pasado por los escenarios más prestigiosos de la capital española, Angel Ruiz combina técnicas de <strong className="text-amber-500/80">mentalismo psicológico</strong>, cartomagia de alto nivel e hipnosis ligera. Este abanico de habilidades le permite adaptarse a cualquier perfil de público, desde audiencias infantiles-familiares en una comunión hasta directivos de alto rango en un congreso internacional. Si quieres conocer más sobre su evolución artística, visita la sección <Link href="/sobre-mi" className="text-amber-400 hover:underline font-bold">Sobre Mí</Link>.</p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-amber-500 font-[Cinzel] text-xl mb-4 uppercase">¿Por qué elegir a Angel Ruiz?</h3>
+                            <p>La diferencia reside en los detalles. No se trata solo de trucos, sino de la experiencia completa: desde la primera llamada de asesoramiento hasta el último aplauso. Las <Link href="/valoraciones" className="text-amber-400 hover:underline font-bold">valoraciones de clientes satisfechos</Link> avalan un servicio de cinco estrellas que prioriza la puntualidad, la educación y, por supuesto, la máxima calidad artística. En un mercado saturado, Angel destaca por un estilo fresco, lejos de los clichés caducos, ofreciendo una imagen premium acorde con los eventos más exigentes de Madrid.</p>
+                        </div>
+
+                        <div>
+                            <h3 className="text-amber-500 font-[Cinzel] text-xl mb-4 uppercase">Consejos para tu Evento Mágico</h3>
+                            <p>Organizar un espectáculo requiere planificación. Angel asesora personalmente a cada cliente sobre el mejor momento para la magia (cóctel, entre platos o show central) y las condiciones ideales de luz y sonido para que el impacto sea máximo. Madrid ofrece sedes increíbles, desde fincas rústicas hasta hoteles de lujo en la Gran Vía, y Angel tiene la versatilidad de brillar en cada una de ellas, llevando su maleta de misterios a donde sea que se celebre lo imposible.</p>
+                        </div>
                     </div>
                 </div>
-                <div className="mt-12 text-center text-xs opacity-50 uppercase tracking-[0.2em] font-light">
-                    Mago Madrid • Ilusionista para Bodas • Magia Corporativa • Eventos VIP • Angel Ruiz Magia
+
+                <div className="mt-20 pt-12 border-t border-white/5 space-y-6 text-sm">
+                    <p className="text-center font-bold text-amber-500/60 uppercase tracking-[0.3em]">Servicios de Ilusionismo en Madrid</p>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-xs opacity-40 uppercase tracking-widest font-light">
+                        <div className="p-2 border border-white/5 rounded">Mago de Cerca</div>
+                        <div className="p-2 border border-white/5 rounded">Mentalismo Madrid</div>
+                        <div className="p-2 border border-white/5 rounded">Magia para Cóctel</div>
+                        <div className="p-2 border border-white/5 rounded">Show de Salon</div>
+                        <div className="p-2 border border-white/5 rounded">Mago de Boda</div>
+                        <div className="p-2 border border-white/5 rounded">Eventos de Lujo</div>
+                        <div className="p-2 border border-white/5 rounded">Magia Corporativa</div>
+                        <div className="p-2 border border-white/5 rounded">Ilusionismo VIP</div>
+                    </div>
                 </div>
             </div>
         </section>

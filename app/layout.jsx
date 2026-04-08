@@ -12,6 +12,10 @@ export const metadata = {
   authors: [{ name: 'Angel Ruiz' }],
   creator: 'Angel Ruiz',
   publisher: 'Angel Ruiz',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/images/foto-bio.png',
+  },
   alternates: {
     canonical: '/',
   },

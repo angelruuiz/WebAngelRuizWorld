@@ -1,4 +1,4 @@
-import { ArrowRight } from './Icons';
+import { ArrowRight, Share2, WhatsApp } from './Icons';
 
 const Footer = ({ onOpenContact }) => {
     return (
@@ -12,6 +12,39 @@ const Footer = ({ onOpenContact }) => {
                             <span className="relative z-10 flex items-center justify-center gap-2">Reservar Experiencia <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></span>
                             <div className="absolute inset-0 bg-amber-500 w-0 group-hover:w-full transition-all duration-300 ease-out z-0" />
                         </button>
+
+                        <div className="mt-8 pt-8 border-t border-white/5">
+                            <p className="text-amber-500/60 uppercase tracking-[0.2em] text-[10px] font-bold mb-4">Compartir Experiencia:</p>
+                            <div className="flex gap-4">
+                                <a 
+                                    href={`https://wa.me/?text=${encodeURIComponent('Mira la magia de Angel Ruiz: https://angelruiz.world')}`}
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="p-2 rounded-full bg-slate-800/50 border border-white/5 hover:border-amber-500/50 hover:text-amber-400 transition-all group"
+                                    title="Compartir por WhatsApp"
+                                >
+                                    <WhatsApp className="w-4 h-4" />
+                                </a>
+                                <button 
+                                    onClick={() => {
+                                        if (navigator.share) {
+                                            navigator.share({
+                                                title: 'Angel Ruiz - Ilusionista Profesional',
+                                                text: 'Descubre la magia de Angel Ruiz en Madrid.',
+                                                url: 'https://angelruiz.world',
+                                            });
+                                        } else {
+                                            navigator.clipboard.writeText('https://angelruiz.world');
+                                            alert('Enlace copiado al portapapeles');
+                                        }
+                                    }}
+                                    className="p-2 rounded-full bg-slate-800/50 border border-white/5 hover:border-amber-500/50 hover:text-amber-400 transition-all group"
+                                    title="Compartir enlace"
+                                >
+                                    <Share2 className="w-4 h-4" />
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div className="space-y-6 md:text-right text-left">
                         <h4 className="text-xl font-bold tracking-widest text-amber-500 uppercase">CONTACTO:</h4>
