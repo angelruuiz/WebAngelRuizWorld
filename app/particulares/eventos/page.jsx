@@ -29,16 +29,16 @@ export default function EventosDetailPage() {
                         <h3 className="text-amber-500 uppercase tracking-widest text-sm font-bold mb-4 drop-shadow-md">Celebraciones Únicas</h3>
                         <h1 className="text-5xl md:text-8xl font-[Cinzel] text-white mb-8 border-b-2 border-amber-500 pb-4 font-bold">Eventos</h1>
                         
-                        <div className="space-y-8 text-white text-xl md:text-2xl font-medium leading-loose text-justify">
+                        <div className="space-y-6 text-white text-base md:text-lg font-medium leading-relaxed text-justify">
                             <p><span className="text-amber-400 font-bold">Añade algo diferente en tu celebración.</span> Aniversarios, bautizos, cenas entre amigos, cumpleaños... Convierto tu casa en un teatro de prestigio.</p>
                             
                             <p>Si tu celebración es multitudinaria podemos realizar <span className="text-white font-bold italic underline decoration-amber-500/50">magia de cóctel entre los invitados</span>; de esta forma el evento seguirá su curso mientras la magia sucede.</p>
                             
-                            <p>Si sois un grupo reducido, puedo llevar a tu domicilio mi espectáculo del teatro Houdini, <span className="text-amber-400 font-bold font-['Playfair_Display'] italic">"El Rey de Trébol"</span>. El teatro en tu casa.</p>
+                            <p>Si sois un grupo reducido, puedo llevar a tu domicilio mi espectáculo del teatro Houdini, <span className="text-amber-400 font-bold font-['Playfair_Display'] italic">"Reina de corazones"</span>. El teatro en tu casa.</p>
                             
                             <p>Disfrutarás de un show familiar-adulto en el que prácticamente todos participaréis de una forma u otra. Un humor elegante y una buena dosis de emoción os harán flipar a lo grande, ¡te lo aseguro!</p>
                             
-                            <p className="text-slate-200 indent-8 bg-slate-900/40 p-6 rounded-xl border border-slate-800">Verás cosas nunca vistas; magia moderna. anillos, monedas , cartas y algunos objetos no tan comunes, serán los culpables de trasladarte a un mundo increíble lleno de misterio, humor y mucha cara dura...</p>
+                            <p className="text-slate-300 italic pt-4">Verás cosas nunca vistas; magia moderna. anillos, monedas , cartas y algunos objetos no tan comunes, serán los culpables de trasladarte a un mundo increíble lleno de misterio, humor y mucha cara dura...</p>
                         </div>
 
                         <div className="mt-12 flex justify-start">

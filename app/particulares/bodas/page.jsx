@@ -24,17 +24,14 @@ export default function BodasDetailPage() {
                         <h3 className="text-amber-500 uppercase tracking-widest text-sm font-bold mb-4 drop-shadow-md">Especialista en Bodas</h3>
                         <h1 className="text-5xl md:text-8xl font-[Cinzel] text-white mb-8 border-b-2 border-amber-500 pb-4 font-bold">Bodas</h1>
                         
-                        <div className="space-y-8 text-white text-xl md:text-2xl font-medium leading-loose text-justify">
+                        <div className="space-y-6 text-white text-base md:text-lg font-medium leading-relaxed text-justify">
                             <p><span className="text-amber-400 font-bold">Personaliza tu boda de la forma más mágica.</span> Me encargaré de acompañarte en vuestro día para hacer del cóctel o del banquete un momento único.</p>
                             
                             <p>Si me quieres durante el cóctel, <span className="text-white font-bold italic underline decoration-amber-500/50">me infiltraré entre tus invitados como uno más</span> e iré realizando mini-shows de magia por grupos. Si me quieres durante el banquete, amenizaré las esperas entre plato y plato y romperé el hielo con tus invitados para que participen activamente.</p>
                             
                             <p>Este tipo de magia, llamada <span className="text-amber-400 font-bold">"magia de cóctel"</span> es dinámica, fresca y participativa. No tiene nada que ver con el mago "cliché" de cuerdas, pañuelos, palomas... Olvídate de todo eso. Mi estilo es moderno, muy definido y elegante. Magia con teléfonos, monedas, carteras, robo de relojes, cartas, mentalismo, hipnosis...</p>
                             
-                            <div className="bg-slate-900/80 p-8 rounded-2xl border border-amber-500/30 italic shadow-2xl relative overflow-hidden group hover:border-amber-500 transition-colors">
-                                <div className="absolute top-0 left-0 w-1 h-full bg-amber-500" />
-                                <p className="relative z-10">Magia adulta y participación intensa. Los presupuestos varían según la ubicación de la ceremonia. ¡Contáctame y hablamos!</p>
-                            </div>
+                            <p className="italic text-amber-500/90 font-bold border-l-2 border-amber-500 pl-4 py-2">Magia adulta y participación intensa. Los presupuestos varían según la ubicación de la ceremonia. ¡Contáctame y hablamos!</p>
                         </div>
 
                         <div className="mt-12 flex justify-start">
