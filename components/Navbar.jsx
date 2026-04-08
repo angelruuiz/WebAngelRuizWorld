@@ -21,7 +21,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
             setTimeout(() => {
                 router.push(href);
                 // The transition ends after route change via state or simply finishes
-            }, 800); 
+            }, 1800); 
         }
     };
 
