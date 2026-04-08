@@ -9,6 +9,17 @@ export const metadata = {
     alternates: {
         canonical: '/particulares/eventos',
     },
+    openGraph: {
+        title: 'Mago para Eventos Privados en Madrid | Angel Ruiz',
+        description: 'Magia de cerca y mentalismo para tus celebraciones privadas. Un espectáculo inolvidable en la comodidad de tu casa.',
+        images: [{ url: '/images/foto-bio.png' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Mago para Eventos Privados en Madrid | Angel Ruiz',
+        description: 'Lleva el asombro a tu propia fiesta con Angel Ruiz.',
+        images: ['/images/foto-bio.png'],
+    },
 };
 
 export default function EventosDetailPage() {
@@ -68,10 +79,9 @@ export default function EventosDetailPage() {
                             </p>
 
                             <p>
-                                Si sois un grupo reducido, puedo llevar a tu domicilio mi espectáculo del
-                                teatro Houdini,{' '}
+                                Si sois un grupo reducido, puedo llevar a tu domicilio mi espectáculo{' '}
                                 <span className="text-amber-400 font-bold italic">
-                                    "Reina de corazones"
+                                    "La Reina de Corazones"
                                 </span>
                                 . El teatro en tu casa, sin necesidad de escenario ni equipamiento especial.
                             </p>

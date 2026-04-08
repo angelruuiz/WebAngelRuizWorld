@@ -51,6 +51,10 @@ export const metadata = {
   },
 };
 
+export const viewport = {
+    themeColor: '#020617',
+};
+
 const schemaOrg = {
   '@context': 'https://schema.org',
   '@type': 'Person',

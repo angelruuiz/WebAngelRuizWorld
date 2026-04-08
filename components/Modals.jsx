@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, CheckCircle2, UserIcon, Phone, Mail, Calendar, MessageSquare, Sparkles } from './Icons';
 
@@ -14,23 +15,37 @@ export const MagicModal = ({ isOpen, onClose, children }) => {
 
     if (!mounted) return null;
 
-    return (
-        <AnimatePresence>
+    const modalContent = (
+        <AnimatePresence mode="wait">
             {isOpen && (
-                <>
-                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onClick={onClose} className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[9998] flex items-center justify-center cursor-pointer" />
-                    <div className="fixed inset-0 z-[9999] flex items-center justify-center pointer-events-none p-4">
-                        <motion.div initial={{ opacity: 0, scale: 0.9, y: 30, rotateX: 10 }} animate={{ opacity: 1, scale: 1, y: 0, rotateX: 0 }} exit={{ opacity: 0, scale: 0.9, y: 30, rotateX: -10 }} transition={{ type: "spring", duration: 0.6, bounce: 0.3 }} className="bg-slate-900/95 border border-amber-500/30 w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden pointer-events-auto relative flex flex-col max-h-[85vh]">
-                            <button onClick={onClose} aria-label="Cerrar ventana emergente" className="absolute top-3 right-3 text-slate-400 hover:text-amber-400 transition-colors z-10 bg-slate-900/80 rounded-full w-10 h-10 flex items-center justify-center hover:bg-slate-800 border border-transparent hover:border-amber-500/30 cursor-pointer"><X className="w-5 h-5" /></button>
-                            <div className="overflow-y-auto custom-scrollbar h-full">{children}</div>
-                            <div className="absolute inset-0 border border-amber-500/20 rounded-2xl pointer-events-none" />
-                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent opacity-50" />
-                        </motion.div>
-                    </div>
-                </>
+                <div className="fixed inset-0 z-[100002] flex items-center justify-center pointer-events-none p-4">
+                    <motion.div 
+                        initial={{ opacity: 0 }} 
+                        animate={{ opacity: 1 }} 
+                        exit={{ opacity: 0 }} 
+                        onClick={onClose} 
+                        className="fixed inset-0 bg-slate-950/80 backdrop-blur-md z-[-1] cursor-pointer pointer-events-auto" 
+                    />
+                    <motion.div 
+                        initial={{ opacity: 0, scale: 0.9, y: 30, rotateX: 10 }} 
+                        animate={{ opacity: 1, scale: 1, y: 0, rotateX: 0 }} 
+                        exit={{ opacity: 0, scale: 0.9, y: 30, rotateX: -10 }} 
+                        transition={{ type: "spring", duration: 0.6, bounce: 0.3 }} 
+                        className="bg-slate-900/95 border border-amber-500/30 w-full max-w-2xl rounded-2xl shadow-[0_0_50px_rgba(0,0,0,0.8)] overflow-hidden pointer-events-auto relative flex flex-col max-h-[85vh] z-10"
+                    >
+                        <button onClick={onClose} aria-label="Cerrar ventana emergente" className="absolute top-3 right-3 text-slate-400 hover:text-amber-400 transition-colors z-20 bg-slate-900/80 rounded-full w-10 h-10 flex items-center justify-center hover:bg-slate-800 border border-transparent hover:border-amber-500/30 cursor-pointer">
+                            <X className="w-5 h-5" />
+                        </button>
+                        <div className="overflow-y-auto custom-scrollbar h-full">{children}</div>
+                        <div className="absolute inset-0 border border-amber-500/20 rounded-2xl pointer-events-none" />
+                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent opacity-50" />
+                    </motion.div>
+                </div>
             )}
         </AnimatePresence>
     );
+
+    return createPortal(modalContent, document.body);
 };
 
 export const ContactFormModal = ({ isOpen, onClose }) => {

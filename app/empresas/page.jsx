@@ -9,6 +9,17 @@ export const metadata = {
     alternates: {
         canonical: '/empresas',
     },
+    openGraph: {
+        title: 'Magia para Empresas en Madrid | Angel Ruiz',
+        description: 'Eleva el nivel de tu evento corporativo con magia de alto impacto. Especialista en cenas de empresa, congresos y team building.',
+        images: [{ url: '/images/foto-bio.png' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Magia para Empresas en Madrid | Angel Ruiz',
+        description: 'Eleva tu evento con el mejor ilusionista corporativo de Madrid.',
+        images: ['/images/foto-bio.png'],
+    },
 };
 
 export default function EmpresasPage() {
@@ -56,61 +67,22 @@ export default function EmpresasPage() {
                             <div className="space-y-6 text-white text-base md:text-lg font-medium leading-relaxed text-justify">
                                 <p>
                                     <span className="text-amber-400 font-bold">
-                                        Magia corporativa personalizada para empresas y marcas en Madrid.
+                                        Magia corporativa diseñada para fortalecer la cohesión de tu equipo en Madrid.
                                     </span>{' '}
-                                    Sorprende a tus equipos con una actividad de ilusionismo innovadora y
-                                    haz que se involucren al 100% en la cultura de tu compañía a través
-                                    del asombro compartido.
+                                    Sorprende a tus empleados con una actividad de ilusionismo innovadora que fomenta el asombro compartido y haz que se involucren al 100% en la cultura de tu compañía.
                                 </p>
 
                                 <p>
                                     Como{' '}
                                     <strong className="text-amber-400">
-                                        mago para eventos de empresa en Madrid
+                                        mago para eventos de empresa
                                     </strong>
-                                    ,{' '}
-                                    <span className="text-white font-bold italic underline decoration-amber-500/50">
-                                        me infiltro como un empleado más
-                                    </span>{' '}
-                                    o como un invitado sorpresa, evitando modificar el transcurso natural
-                                    del evento pero elevando el ánimo general. Mi especialidad es el
-                                    dinamismo: mentalismo, robos imposibles e{' '}
-                                    <strong className="text-amber-500">ilusionismo corporativo</strong> de
-                                    vanguardia. Esta es la clave para que tus equipos participen y conecten
-                                    de forma orgánica.
-                                </p>
-
-                                <p>
-                                    Ya sea en la inauguración de una sede, un congreso internacional o un
-                                    desayuno de networking en Madrid, el impacto de la magia refuerza el
-                                    mensaje de tu marca. La versatilidad de mis efectos me permite integrar
-                                    logos, conceptos de empresa o productos específicos, convirtiendo el
-                                    entretenimiento en un canal de comunicación de alto impacto y máxima
-                                    recordación.
-                                </p>
-
-                                <p>
-                                    He colaborado con empresas de referencia como{' '}
-                                    <strong className="text-amber-400">Movistar Estudiantes</strong> y
-                                    participado en eventos corporativos para marcas de primer nivel en la
-                                    Comunidad de Madrid. Cada actuación se diseña desde cero adaptada a
-                                    los valores, el sector y el público de cada empresa.
-                                </p>
-
-                                <p>
-                                    Servicios de{' '}
-                                    <strong className="text-amber-400">magia para empresas en Madrid</strong>:
-                                    cenas de empresa, cócteles corporativos, congresos, convenciones de
-                                    ventas, team building, lanzamientos de producto, ferias y stands,
-                                    desayunos de networking y eventos de fin de año. Disponible en toda
-                                    la Comunidad de Madrid y con desplazamiento a nivel nacional.
+                                    , me integro de forma orgánica en la dinámica de tu evento —ya sea en cócteles, cenas o convenciones— elevando la energía general. He colaborado con entidades de prestigio como{' '}
+                                    <strong className="text-amber-400">Movistar Estudiantes</strong>, garantizando un servicio profesional adaptado a los valores de cada sector.
                                 </p>
 
                                 <p className="text-amber-500/90 italic font-bold border-l-2 border-amber-500 pl-4 py-2 mt-4">
-                                    Un cóctel, una cena de empresa, un congreso, un desayuno... Cualquier
-                                    ocasión con un toque de magia cambiará por completo la perspectiva del
-                                    evento, asegurando un clima de innovación y exclusividad que recordarán
-                                    durante meses.
+                                    Diferencia tu próximo evento con una propuesta de magia exclusiva. Éxito y asombro asegurados.
                                 </p>
                             </div>
 

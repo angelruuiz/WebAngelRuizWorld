@@ -9,6 +9,17 @@ export const metadata = {
     alternates: {
         canonical: '/particulares/bodas',
     },
+    openGraph: {
+        title: 'Mago para Bodas en Madrid | Angel Ruiz',
+        description: 'La magia perfecta para tu cóctel de boda. Conecta a tus invitados y crea recuerdos inolvidables.',
+        images: [{ url: '/images/foto-bio.png' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Mago para Bodas en Madrid | Angel Ruiz',
+        description: 'Momentos imposibles para el día más importante de tu vida.',
+        images: ['/images/foto-bio.png'],
+    },
 };
 
 export default function BodasDetailPage() {
