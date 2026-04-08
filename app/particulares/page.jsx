@@ -86,64 +86,46 @@ export default function ParticularesPage() {
 
                 {/* Bodas Section Detail */}
                 <section id="bodas-detail" className="py-24 px-6 max-w-7xl mx-auto relative z-10">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
                         <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }}>
-                            <h3 className="text-amber-500 uppercase tracking-widest text-sm font-bold mb-4">Especialista en Nupcias</h3>
-                            <h2 className="text-4xl md:text-6xl font-[Cinzel] text-white mb-8 border-b-2 border-amber-500 pb-4">El Pack de Bodas</h2>
-                            <div className="space-y-6 text-white text-xl font-medium leading-loose">
-                                <p>La magia en una boda no es solo un show, es el <span className="text-amber-400 font-bold italic">hilo conductor</span> que une a ambas familias durante el cóctel.</p>
-                                <p>Me encargo de romper el hielo, generar risas y crear recuerdos fotográficos únicos en las manos de tus invitados.</p>
-                                <ul className="space-y-4 pt-6">
-                                    {[
-                                        "Magia de cerca durante el cóctel",
-                                        "Intervenciones en el banquete",
-                                        "Show especial para los novios",
-                                        "Regalo mágico personalizado"
-                                    ].map((item, i) => (
-                                        <li key={i} className="flex items-center gap-4 text-white font-bold">
-                                            <div className="w-6 h-6 rounded-full bg-amber-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-500/20">
-                                                <CheckCircle2 className="text-slate-950 w-4 h-4" />
-                                            </div>
-                                            <span>{item}</span>
-                                        </li>
-                                    ))}
-                                </ul>
+                            <h3 className="text-amber-500 uppercase tracking-widest text-sm font-bold mb-4">Especialista en Bodas</h3>
+                            <h2 className="text-4xl md:text-6xl font-[Cinzel] text-white mb-8 border-b-2 border-amber-500 pb-4">Pack de Bodas</h2>
+                            <div className="space-y-6 text-white text-xl font-medium leading-loose text-justify">
+                                <p><span className="text-amber-400 font-bold">Personaliza tu boda de la forma más mágica.</span> Me encargaré de acompañarte en vuestro día para hacer del cóctel o del banquete un momento único.</p>
+                                
+                                <p>Si me quieres durante el cóctel, <span className="text-white font-bold italic">me infiltraré entre tus invitados como uno más</span> e iré realizando mini-shows de magia por grupos. Si me quieres durante el banquete, amenizaré las esperas entre plato y plato y romperé el hielo con tus invitados para que participen activamente.</p>
+                                
+                                <p>Este tipo de magia, llamada <span className="text-amber-400 font-bold">"magia de cóctel"</span> es dinámica, fresca y participativa. No tiene nada que ver con el mago "cliché" de cuerdas, pañuelos, palomas... Olvídate de todo eso. Mi estilo es moderno, muy definido y elegante. Magia con teléfonos, monedas, carteras, robo de relojes, cartas, mentalismo, hipnosis...</p>
+                                
+                                <p className="bg-slate-900/50 p-6 rounded-xl border border-amber-500/20 italic">Magia adulta y participación intensa. Los presupuestos varían según la ubicación de la ceremonia. ¡Contáctame y hablamos!</p>
                             </div>
                         </motion.div>
-                        <div className="relative h-[400px] rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
-                             <Image src="/images/foto-bio-2.png" alt="Bodas" fill className="object-cover" />
+                        <div className="relative md:sticky md:top-32 h-[500px] rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
+                             <Image src="/images/foto-bio-2.png" alt="Magia en Bodas" fill className="object-cover" />
                         </div>
                     </div>
                 </section>
 
                 {/* Eventos Familiares Detail */}
-                <section id="eventos-detail" className="py-24 bg-slate-900/50 relative z-10 border-y border-slate-800">
+                <section id="eventos-detail" className="py-24 bg-slate-900/40 relative z-10 border-y border-slate-800">
                     <div className="max-w-7xl mx-auto px-6">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                            <div className="relative h-[400px] rounded-2xl overflow-hidden border border-slate-800 shadow-2xl order-2 md:order-1">
-                                <Image src="/images/foto-bio.png" alt="Fiestas Privadas" fill className="object-cover" />
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                            <div className="relative md:sticky md:top-32 h-[500px] rounded-2xl overflow-hidden border border-slate-800 shadow-2xl order-2 md:order-1">
+                                <Image src="/images/foto-bio.png" alt="Magia en Fiestas Privadas" fill className="object-cover" />
                             </div>
                             <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} className="order-1 md:order-2">
-                                <h3 className="text-amber-500 uppercase tracking-widest text-sm font-bold mb-4">Celebraciones Únicas</h3>
-                                <h2 className="text-4xl md:text-6xl font-[Cinzel] text-white mb-8 border-b-2 border-amber-500 pb-4">Fiestas Familiares</h2>
-                                <div className="space-y-6 text-white text-xl font-medium leading-loose">
-                                    <p>Desde cumpleaños hasta comuniones o aniversarios. La magia adapta su tono según la audiencia, desde la locura para niños hasta la sofisticación para adultos.</p>
-                                    <p>Hago que el anfitrión brille y que todos los asistentes se lleven una experiencia que comentarán durante meses.</p>
-                                    <ul className="space-y-4 pt-6">
-                                        {[
-                                            "Magia de proximidad para grupos pequeños",
-                                            "Espectáculo central de salón",
-                                            "Humor y asombro equilibrado",
-                                            "Participación activa de los festejados"
-                                        ].map((item, i) => (
-                                            <li key={i} className="flex items-center gap-4 text-white font-bold">
-                                                <div className="w-6 h-6 rounded-full bg-amber-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-500/20">
-                                                    <CheckCircle2 className="text-slate-950 w-4 h-4" />
-                                                </div>
-                                                <span>{item}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
+                                <h3 className="text-amber-500 uppercase tracking-widest text-sm font-bold mb-4">Eventos Familiares</h3>
+                                <h2 className="text-4xl md:text-6xl font-[Cinzel] text-white mb-8 border-b-2 border-amber-500 pb-4">Celebraciones</h2>
+                                <div className="space-y-6 text-white text-xl font-medium leading-loose text-justify">
+                                    <p><span className="text-amber-400 font-bold">Añade algo diferente en tu celebración.</span> Aniversarios, bautizos, cenas entre amigos, cumpleaños... Convierto tu casa en un teatro de prestigio.</p>
+                                    
+                                    <p>Si tu celebración es multitudinaria podemos realizar <span className="text-white font-bold italic">magia de cóctel entre los invitados</span>; de esta forma el evento seguirá su curso mientras la magia sucede.</p>
+                                    
+                                    <p>Si sois un grupo reducido, puedo llevar a tu domicilio mi espectáculo del teatro Houdini, <span className="text-amber-400 font-bold font-['Playfair_Display'] italic">"El Rey de Trébol"</span>. El teatro en tu casa.</p>
+                                    
+                                    <p>Disfrutarás de un show familiar-adulto en el que prácticamente todos participaréis de una forma u otra. Un humor elegante y una buena dosis de emoción os harán flipar a lo grande, ¡te lo aseguro!</p>
+                                    
+                                    <p className="text-slate-200 indent-8">Verás cosas nunca vistas; magia moderna. anillos, monedas , cartas y algunos objetos no tan comunes, serán los culpables de trasladarte a un mundo increíble lleno de misterio, humor y mucha cara dura...</p>
                                 </div>
                             </motion.div>
                         </div>
