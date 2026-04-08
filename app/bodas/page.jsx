@@ -52,13 +52,13 @@ export default function BodasPage() {
                 </section>
 
                 {/* Por qué contratar magia en tu boda */}
-                <section className="py-24 px-6 max-w-7xl mx-auto">
+                <section className="py-24 px-6 max-w-7xl mx-auto relative z-10">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
                         <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }}>
-                            <h2 className="text-4xl md:text-6xl font-[Cinzel] text-white mb-8 border-b border-amber-500/30 pb-4">El Nexo Perfecto</h2>
-                            <div className="space-y-6 text-slate-200 text-xl font-light leading-loose text-justify">
+                            <h2 className="text-5xl md:text-7xl font-[Cinzel] text-white mb-8 border-b-2 border-amber-500 pb-4">El Nexo Perfecto</h2>
+                            <div className="space-y-6 text-white text-xl font-medium leading-loose">
                                 <p>El cóctel es el momento clave para que las familias se conozcan. La magia actúa como el catalizador ideal: genera conversación, risas y asombro compartido.</p>
-                                <p>Mi estilo de magia de cerca está diseñado para ser <span className="text-white font-medium italic">elegante, no intrusivo y altamente participativo</span>. No solo verán magia; vivirán milagros en sus propias manos.</p>
+                                <p>Mi estilo de magia de cerca está diseñado para ser <span className="text-amber-400 font-bold italic">elegante, no intrusivo y altamente participativo</span>. No solo verán magia; vivirán milagros en sus propias manos.</p>
                                 <ul className="space-y-4 pt-6">
                                     {[
                                         "Magia itinerante grupo a grupo",
@@ -66,9 +66,9 @@ export default function BodasPage() {
                                         "Fotografías místicas para el recuerdo",
                                         "Adaptado a cualquier estilo de boda"
                                     ].map((item, i) => (
-                                        <li key={i} className="flex items-center gap-4 text-white font-medium">
-                                            <div className="w-6 h-6 rounded-full bg-amber-500/20 flex items-center justify-center flex-shrink-0">
-                                                <CheckCircle2 className="text-amber-500 w-4 h-4" />
+                                        <li key={i} className="flex items-center gap-4 text-white font-bold">
+                                            <div className="w-6 h-6 rounded-full bg-amber-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-amber-500/20">
+                                                <CheckCircle2 className="text-slate-950 w-4 h-4" />
                                             </div>
                                             <span>{item}</span>
                                         </li>
@@ -83,11 +83,11 @@ export default function BodasPage() {
                 </section>
 
                 {/* Servicios Específicos de Bodas */}
-                <section className="py-24 bg-slate-900/30">
+                <section className="py-24 bg-slate-900/50 relative z-10">
                     <div className="max-w-7xl mx-auto px-6">
                         <div className="text-center mb-16">
-                            <h2 className="text-amber-500 uppercase tracking-widest text-sm font-bold mb-4">Momentos Mágicos</h2>
-                            <h3 className="text-3xl md:text-5xl font-[Cinzel] text-white">¿Cuándo sucede la magia?</h3>
+                            <h2 className="text-amber-500 uppercase tracking-widest text-sm font-bold mb-4 drop-shadow-md">Momentos Mágicos</h2>
+                            <h3 className="text-4xl md:text-6xl font-[Cinzel] text-white font-bold">¿Cuándo sucede la magia?</h3>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[
@@ -95,12 +95,12 @@ export default function BodasPage() {
                                 { title: "Banquete", desc: "Pequeñas intervenciones entre platos para mantener la energía alta sin interrumpir el servicio de mesa.", icon: Sparkles },
                                 { title: "La Fiesta", desc: "Magia visual y directa para calentar motores antes del baile. Un show de alto impacto para cerrar el banquete.", icon: Star }
                             ].map((s, i) => (
-                                <div key={i} className="bg-slate-950/50 p-8 rounded-2xl border border-slate-800 hover:border-amber-500/30 transition-all group">
-                                    <div className="w-12 h-12 bg-slate-900 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                                        <s.icon className="text-amber-400 w-6 h-6" />
+                                <div key={i} className="bg-slate-950/80 p-8 rounded-2xl border border-slate-700 hover:border-amber-500 transition-all group backdrop-blur-md">
+                                    <div className="w-14 h-14 bg-amber-500 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg shadow-amber-500/20">
+                                        <s.icon className="text-slate-950 w-7 h-7" />
                                     </div>
-                                    <h4 className="text-xl font-[Cinzel] text-white mb-4">{s.title}</h4>
-                                    <p className="text-slate-400 font-light leading-relaxed">{s.desc}</p>
+                                    <h4 className="text-2xl font-[Cinzel] text-white mb-4 font-bold">{s.title}</h4>
+                                    <p className="text-slate-100 font-medium leading-relaxed">{s.desc}</p>
                                 </div>
                             ))}
                         </div>
