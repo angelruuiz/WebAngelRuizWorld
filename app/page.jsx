@@ -92,7 +92,7 @@ export default function Home() {
         "@type": "EntertainmentBusiness",
         "name": "Angel Ruiz Ilusionista",
         "url": "https://angelruiz.world",
-        "image": "https://angelruiz.world/images/foto-bio.png",
+        "image": "https://angelruiz.world/images/foto-bio-2.png",
         "description": "Ilusionista profesional especializado en Magia de Cerca y Magia de Cóctel en Madrid.",
         "telephone": "+34648055636",
         "geo": {
