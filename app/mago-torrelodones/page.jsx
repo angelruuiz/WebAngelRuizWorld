@@ -49,7 +49,7 @@ export default function MagoTorrelodonesPage() {
     const pageSchema = {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "Angel Ruiz Ilusionista - Mago en Torrelodones",
+        "name": "Ángel Ruiz | Mago e Ilusionista",
         "image": "https://angelruiz.world/images/foto-bio.png",
         "url": "https://angelruiz.world/mago-torrelodones",
         "telephone": "+34648055636",

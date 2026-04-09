@@ -89,17 +89,29 @@ const SEOContent = () => {
 export default function Home() {
     const structuredData = {
         "@context": "https://schema.org",
-        "@type": "EntertainmentBusiness",
-        "name": "Angel Ruiz Ilusionista",
+        "@type": "ProfessionalService",
+        "name": "Ángel Ruiz | Mago e Ilusionista",
         "url": "https://angelruiz.world",
+        "logo": "https://angelruiz.world/images/foto-bio.png",
         "image": "https://angelruiz.world/images/foto-bio.png",
-        "description": "Ilusionista profesional especializado en Magia de Cerca y Magia de Cóctel en Madrid.",
+        "description": "Ilusionista profesional especializado en Magia de Cerca y Magia de Cóctel en Madrid y Torrelodones.",
         "telephone": "+34648055636",
+        "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Madrid",
+            "addressRegion": "Madrid",
+            "addressCountry": "ES"
+        },
         "geo": {
             "@type": "GeoCoordinates",
             "latitude": "40.4168",
             "longitude": "-3.7038"
-        }
+        },
+        "sameAs": [
+            "https://www.instagram.com/angelruizmagia/",
+            "https://www.facebook.com/angelruizmagia/"
+        ]
     };
 
     return (

@@ -30,7 +30,7 @@ export default function ValoracionesPage() {
     const schemaData = {
         "@context": "https://schema.org",
         "@type": "Product",
-        "name": "Angel Ruiz | Mago e Ilusionista Profesional",
+        "name": "Ángel Ruiz | Mago e Ilusionista",
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": ratingValue,

@@ -1,5 +1,16 @@
+import { getSortedPostsData } from '@/lib/blog';
+
 export default function sitemap() {
-  return [
+  const posts = getSortedPostsData();
+  
+  const blogUrls = posts.map((post) => ({
+    url: `https://angelruiz.world/blog/${post.slug}`,
+    lastModified: post.date ? new Date(post.date) : new Date(),
+    changeFrequency: 'monthly',
+    priority: 0.7,
+  }));
+
+  const staticUrls = [
     {
       url: 'https://angelruiz.world',
       lastModified: new Date(),
@@ -31,6 +42,12 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
+      url: 'https://angelruiz.world/blog',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: 'https://angelruiz.world/valoraciones',
       lastModified: new Date(),
       changeFrequency: 'monthly',
@@ -49,4 +66,6 @@ export default function sitemap() {
       priority: 0.5,
     },
   ];
+
+  return [...staticUrls, ...blogUrls];
 }
