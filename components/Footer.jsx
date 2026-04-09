@@ -56,7 +56,15 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                             <a href="https://youtube.com/@angellruuiz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">YouTube</a>
                             <a href="https://x.com/angellruuizz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">X</a>
                             <a href="https://facebook.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Facebook</a>
-                            <a href="/mago-torrelodones" className="text-amber-500/80 hover:text-amber-400 transition-colors font-bold mt-2">Mago en Torrelodones</a>
+                            <div className="flex flex-wrap md:justify-end gap-x-4 gap-y-2 mt-2 text-xs opacity-70">
+                                <a href="/mago-torrelodones" className="hover:text-amber-400 transition-colors font-bold">Mago en Torrelodones</a>
+                                <a href="/mago-galapagar" className="hover:text-amber-400 transition-colors">Galapagar</a>
+                                <a href="/mago-las-rozas" className="hover:text-amber-400 transition-colors">Las Rozas</a>
+                                <a href="/mago-las-matas" className="hover:text-amber-400 transition-colors">Las Matas</a>
+                                <a href="/mago-majadahonda" className="hover:text-amber-400 transition-colors">Majadahonda</a>
+                                <a href="/mago-pozuelo" className="hover:text-amber-400 transition-colors">Pozuelo</a>
+                                <a href="/mago-boadilla" className="hover:text-amber-400 transition-colors">Boadilla</a>
+                            </div>
                         </div>
                         <div className="pt-8 text-sm text-slate-500"><p>© 2026 Angel Ruiz. Todos los derechos reservados.</p></div>
                     </div>
