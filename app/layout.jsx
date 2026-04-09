@@ -57,21 +57,42 @@ export const viewport = {
 
 const schemaOrg = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: 'Angel Ruiz',
-  jobTitle: 'Ilusionista y Mago Profesional',
-  description: 'Ilusionista profesional especializado en Magia de Cerca y Magia de Cóctel para eventos corporativos, bodas y particulares VIP.',
+  '@type': 'ProfessionalService',
+  name: 'Angel Ruiz | Mago e Ilusionista Profesional',
+  alternateName: 'Angel Ruiz Magia',
+  description: 'Mago e ilusionista profesional en Madrid. Especialista en magia de cerca exclusiva para eventos corporativos, bodas de lujo y fiestas privadas.',
   url: 'https://angelruiz.world',
+  logo: 'https://angelruiz.world/icon.jpg',
   image: 'https://angelruiz.world/images/foto-bio.png',
-  knowsAbout: ['Magia de Cerca', 'Ilusionismo', 'Magia para Eventos', 'Magia de Cóctel'],
-  areaServed: {
-    '@type': 'City',
-    name: 'Madrid',
-  },
+  priceRange: '€€€',
+  telephone: '+34600000000', // Reemplazar con real si es necesario o dejar genérico
   address: {
     '@type': 'PostalAddress',
+    addressLocality: 'Madrid',
+    addressRegion: 'Comunidad de Madrid',
     addressCountry: 'ES',
   },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 40.416775,
+    longitude: -3.703790,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Madrid' },
+    { '@type': 'City', name: 'Torrelodones' },
+    { '@type': 'City', name: 'Las Rozas' },
+    { '@type': 'City', name: 'Majadahonda' },
+    { '@type': 'City', name: 'Pozuelo de Alarcón' },
+    { '@type': 'City', name: 'Aravaca' },
+    { '@type': 'City', name: 'Boadilla del Monte' },
+    { '@type': 'City', name: 'Villalba' },
+    { '@type': 'City', name: 'Galapagar' }
+  ],
+  sameAs: [
+    'https://www.instagram.com/angellruuizz',
+    'https://twitter.com/angellruuizz'
+  ],
+  knowsAbout: ['Magia de Cerca', 'Ilusionismo Profesional', 'Magia Corporativa', 'Mentalismo', 'Entretenimiento para Bodas'],
 };
 
 export default function RootLayout({ children }) {
