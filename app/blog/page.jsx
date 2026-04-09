@@ -9,8 +9,21 @@ export const metadata = {
 export default function BlogIndex() {
   const allPostsData = getSortedPostsData();
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://angelruiz.world/blog" }
+    ]
+  };
+
   return (
     <div className="max-w-5xl mx-auto px-6">
+      <script 
+        type="application/ld+json" 
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} 
+      />
       <header className="text-center mb-20">
         <h1 className="text-6xl md:text-8xl font-[Playfair_Display] text-slate-950 mb-6 drop-shadow-sm italic">
           Todo lo que necesitas saber

@@ -45,6 +45,16 @@ export default function EventosDetailPage() {
         ]
     };
 
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
+            { "@type": "ListItem", "position": 2, "name": "Particulares", "item": "https://angelruiz.world/particulares" },
+            { "@type": "ListItem", "position": 3, "name": "Eventos", "item": "https://angelruiz.world/particulares/eventos" }
+        ]
+    };
+
     return (
         <>
             <script 
@@ -54,6 +64,10 @@ export default function EventosDetailPage() {
             <script 
                 type="application/ld+json" 
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} 
+            />
+            <script 
+                type="application/ld+json" 
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} 
             />
             <NavFooterClient>
                 <MagicCursor />
