@@ -24,5 +24,38 @@ export default function ValoracionesPage() {
         { text: "Si buscas magia elegante para eventos de alto standing, Ángel es el profesional adecuado. Impresionante su control de la atención.", author: "Sergio Blanco" }
     ];
 
-    return <ValoracionesClient reviewsData={reviewsData} />;
+    const reviewsCount = reviewsData.length;
+    const ratingValue = 4.9;
+
+    const schemaData = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Angel Ruiz | Mago e Ilusionista Profesional",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": ratingValue,
+            "reviewCount": reviewsCount,
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "review": reviewsData.map(r => ({
+            "@type": "Review",
+            "author": { "@type": "Person", "name": r.author },
+            "reviewBody": r.text,
+            "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5"
+            }
+        }))
+    };
+
+    return (
+        <>
+            <script 
+                type="application/ld+json" 
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} 
+            />
+            <ValoracionesClient reviewsData={reviewsData} />
+        </>
+    );
 }

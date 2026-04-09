@@ -35,18 +35,32 @@ export default function EventosDetailPage() {
         "areaServed": "Madrid"
     };
 
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            { "@type": "Question", "name": "¿La magia es adecuada para todas las edades?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, Angel adapta su repertorio según el público. Para eventos familiares, el show combina efectos visuales impactantes que fascinan tanto a niños como a adultos." } },
+            { "@type": "Question", "name": "¿Qué espacio se necesita para la actuación?", "acceptedAnswer": { "@type": "Answer", "text": "La magia de cerca no requiere escenario. Se puede realizar de pie durante un cóctel o pasando por las mesas, adaptándose totalmente a la comodidad de su salón o jardín." } },
+            { "@type": "Question", "name": "¿Cuánto dura el espectáculo?", "acceptedAnswer": { "@type": "Answer", "text": "Normalmente la intervención dura entre 60 y 90 minutos, dependiendo del número de invitados y el tipo de evento, para asegurar que todos vivan la experiencia de cerca." } }
+        ]
+    };
+
     return (
         <>
             <script 
                 type="application/ld+json" 
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} 
             />
+            <script 
+                type="application/ld+json" 
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} 
+            />
             <NavFooterClient>
                 <MagicCursor />
                 <ParticleBackground />
 
                 <main className="relative z-10 pt-24 pb-16 px-6 max-w-6xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-20">
 
                     <div>
                         <p className="text-amber-500 uppercase tracking-widest text-[10px] font-bold mb-2 drop-shadow-md">
@@ -63,7 +77,7 @@ export default function EventosDetailPage() {
                             </p>
 
                             <p>
-                                Si buscas un <strong>mago profesional en Torrelodones</strong>, Las Rozas o Pozuelo, ofrezco un show diseñado específicamente para entornos íntimos. La magia de cerca (close-up) es participativa, directa y extremadamente potente, el complemento ideal para 50 cumpleaños o celebraciones privadas. Puedes elegir entre magia de cóctel itinerante o mi sesión exclusiva <strong>"La Reina de Corazones"</strong> para grupos reducidos a domicilio.
+                                Si prefieres contar conmigo durante el <strong>banquete</strong>, amenizaré las esperas entre plato y plato con magia en las mesas, adaptándome al ritmo de la cocina. Como <strong className="text-amber-400">ilusionista para eventos en Madrid</strong>, complemento la gastronomía con un entretenimiento de primer nivel que respeta la elegancia del evento en las fincas más exclusivas, desde el centro de la capital hasta <strong>El Escorial o Majadahonda</strong>.
                             </p>
 
                             <p>
@@ -91,6 +105,18 @@ export default function EventosDetailPage() {
                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 to-transparent" />
                     </div>
                 </div>
+
+                <section className="border-t border-white/5 pt-16 mt-16">
+                    <h2 className="text-2xl font-[Cinzel] text-white mb-12 text-center uppercase tracking-widest">Preguntas Frecuentes</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        {faqSchema.mainEntity.map((faq, index) => (
+                            <div key={index} className="bg-white/5 p-6 rounded-xl border border-white/10">
+                                <h3 className="text-amber-400 font-bold mb-3 text-sm">{faq.name}</h3>
+                                <p className="text-slate-400 text-xs leading-relaxed text-justify">{faq.acceptedAnswer.text}</p>
+                            </div>
+                        ))}
+                    </div>
+                </section>
             </main>
         </NavFooterClient>
         </>
