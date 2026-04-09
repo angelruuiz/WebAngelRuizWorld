@@ -69,11 +69,25 @@ export default function MagoTorrelodonesPage() {
         "description": "Mago profesional en Torrelodones especializado en magia de cerca para bodas, eventos corporativos y fiestas privadas en la zona noroeste de Madrid."
     };
 
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            { "@type": "Question", "name": "¿Ofreces servicios de mago en Torrelodones domicilio?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, como mago local en Torrelodones, me desplazo a domicilios particulares para cumpleaños, cenas privadas y celebraciones familiares en toda la zona de la Colonia y el Pueblo." } },
+            { "@type": "Question", "name": "¿En qué urbanizaciones de la zona noroeste actúas?", "acceptedAnswer": { "@type": "Answer", "text": "Tengo disponibilidad total en urbanizaciones como Los Peñascales, Las Marías, Parquelagos, así como en los municipios vecinos de Las Rozas (Monte Rozas, Las Matas) y Galapagar." } },
+            { "@type": "Question", "name": "¿Con cuánta antelación debo reservar?", "acceptedAnswer": { "@type": "Answer", "text": "Al ser un servicio local muy demandado, recomiendo reservar con al menos 2-4 semanas de antelación, especialmente para eventos en fincas de la zona noroeste de Madrid." } }
+        ]
+    };
+
     return (
         <>
             <script 
                 type="application/ld+json" 
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} 
+            />
+            <script 
+                type="application/ld+json" 
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} 
             />
             <NavFooterClient>
                 <MagicCursor />
@@ -150,6 +164,19 @@ export default function MagoTorrelodonesPage() {
                                     Contratar un mago local asegura coordinación técnica impecable con restaurantes de la zona y ausencia de altos costes de desplazamiento. Es trato directo artista-cliente para una respuesta rápida y personalizada.
                                 </p>
                             </div>
+                        </div>
+                    </section>
+
+                    {/* FAQ Section */}
+                    <section className="border-t border-white/5 pt-16 mb-16">
+                        <h2 className="text-2xl font-[Cinzel] text-white mb-12 text-center uppercase tracking-widest">Preguntas Frecuentes (Torrelodones)</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                            {faqSchema.mainEntity.map((faq, index) => (
+                                <div key={index} className="bg-white/5 p-6 rounded-xl border border-white/10">
+                                    <h3 className="text-amber-400 font-bold mb-3 text-sm">{faq.name}</h3>
+                                    <p className="text-slate-400 text-xs leading-relaxed text-justify">{faq.acceptedAnswer.text}</p>
+                                </div>
+                            ))}
                         </div>
                     </section>
 
