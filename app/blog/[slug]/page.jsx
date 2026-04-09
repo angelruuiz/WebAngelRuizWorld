@@ -21,13 +21,36 @@ export default async function BlogPost({ params }) {
   const allPosts = getSortedPostsData();
   const relatedPosts = allPosts.filter(p => p.slug !== params.slug).slice(0, 3);
 
-  // Simple FAQ detection for JSON-LD (looking for FAQ sections in content)
-  const isFaq = postData.contentHtml.includes('FAQ') || postData.contentHtml.includes('H3');
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": postData.title,
+    "description": postData.excerpt,
+    "image": postData.image ? `https://angelruiz.world${postData.image}` : `https://angelruiz.world/images/logo-grande.jpg`,
+    "datePublished": postData.date,
+    "author": {
+      "@type": "Person",
+      "name": "Angel Ruiz",
+      "url": "https://angelruiz.world"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Angel Ruiz Magia",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://angelruiz.world/images/logo-grande.jpg"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://angelruiz.world/blog/${params.slug}`
+    }
+  };
 
-  const faqSchema = {
+  const faqSchema = postData.faq && postData.faq.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": (postData.faq || []).map(item => ({
+    "mainEntity": postData.faq.map(item => ({
       "@type": "Question",
       "name": item.question,
       "acceptedAnswer": {
@@ -35,14 +58,20 @@ export default async function BlogPost({ params }) {
         "text": item.answer
       }
     }))
-  };
+  } : null;
 
   return (
     <article className="max-w-7xl mx-auto px-6">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
 
       {/* Breadcrumb */}
       <nav className="mb-12 text-[10px] font-bold tracking-[0.2em] text-amber-800/60 uppercase">

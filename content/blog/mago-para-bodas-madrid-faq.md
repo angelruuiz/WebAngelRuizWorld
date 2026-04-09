@@ -5,6 +5,13 @@ excerpt: "Descubre cómo un ilusionista profesional puede transformar tu boda en
 author: "Angel Ruiz"
 image: "/images/boda-magia-madrid.jpg"
 tags: ["Bodas", "Madrid", "Consejos", "Magia de Cerca"]
+faq:
+  - question: "¿Es la magia adecuada para todas las edades?"
+    answer: "Efectivamente. La magia de calidad cautiva desde los niños hasta los abuelos. Sin embargo, mi estilo está enfocado a una magia adulta y sofisticada, perfecta para el tono de una boda elegante."
+  - question: "¿En qué momento es mejor realizar la magia?"
+    answer: "Lo más demandado es el cóctel de bienvenida. Es el momento donde la gente está de pie, con una copa en la mano y lista para interactuar. No obstante, realizar magia corta en las mesas durante el banquete también funciona a la perfección."
+  - question: "¿Con cuánta antelación debo reservar?"
+    answer: "Madrid es una ciudad con mucha demanda, especialmente en temporada de bodas (mayo a octubre). Lo ideal es reservar con mínimo mes y medio de antelación para asegurar la fecha de tu evento."
 ---
 
 Organizar una boda es un desafío lleno de detalles, emociones y decisiones críticas. Si estás buscando ese factor diferencial que convierta tu gran día en algo legendario, contratar un **mago para bodas en Madrid** es, sin duda, una de las mejores inversiones que puedes hacer. En este artículo, exploraremos en profundidad cómo el ilusionismo profesional no solo entretiene, sino que une a los invitados y crea recuerdos que durarán décadas.

@@ -1,5 +1,5 @@
 ---
-title: "Magia para Empresas en Madrid: Innovación y Impacto en Eventos Corporativos"
+title: "Magia para Empresas en Madrid: Innovación e Impacto en Eventos Corporativos"
 date: "2024-04-07"
 excerpt: "Cómo el ilusionismo estratégico puede potenciar tu marca, mejorar el networking y garantizar el éxito de tu próxima convención o cena de empresa en Madrid."
 author: "Angel Ruiz"
