@@ -35,18 +35,32 @@ export default function BodasDetailPage() {
         "areaServed": "Madrid"
     };
 
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            { "@type": "Question", "name": "¿Cuál es el mejor momento para la magia en una boda?", "acceptedAnswer": { "@type": "Answer", "text": "El cóctel de bienvenida es el momento estrella para la magia de cerca, ya que ayuda a romper el hielo entre los invitados. También es muy efectiva durante el banquete para amenizar las esperas entre platos." } },
+            { "@type": "Question", "name": "¿Qué tipo de magia se realiza?", "acceptedAnswer": { "@type": "Answer", "text": "Me especializo en magia de cerca (Close-up) y magia itinerante. Son efectos impactantes realizados con cartas, monedas y objetos de los invitados, a escasos centímetros de sus ojos." } },
+            { "@type": "Question", "name": "¿Te desplazas fuera de Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, cubro eventos en toda España, aunque mi actividad principal se centra en la Comunidad de Madrid y la zona noroeste (Torrelodones, Las Rozas, Majadahonda)." } }
+        ]
+    };
+
     return (
         <>
             <script 
                 type="application/ld+json" 
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} 
             />
+            <script 
+                type="application/ld+json" 
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} 
+            />
             <NavFooterClient>
                 <MagicCursor />
                 <ParticleBackground />
 
                 <main className="relative z-10 pt-24 pb-16 px-6 max-w-6xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-20">
 
                     <div>
                         <p className="text-amber-500 uppercase tracking-widest text-[10px] font-bold mb-2 drop-shadow-md">
@@ -91,6 +105,19 @@ export default function BodasDetailPage() {
                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 to-transparent" />
                     </div>
                 </div>
+
+                {/* FAQ Section */}
+                <section className="border-t border-white/5 pt-16 mt-16">
+                    <h2 className="text-2xl font-[Cinzel] text-white mb-12 text-center uppercase tracking-widest">Preguntas Frecuentes</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                        {faqSchema.mainEntity.map((faq, index) => (
+                            <div key={index} className="bg-white/5 p-6 rounded-xl border border-white/10">
+                                <h3 className="text-amber-400 font-bold mb-3 text-sm">{faq.name}</h3>
+                                <p className="text-slate-400 text-xs leading-relaxed text-justify">{faq.acceptedAnswer.text}</p>
+                            </div>
+                        ))}
+                    </div>
+                </section>
             </main>
         </NavFooterClient>
         </>

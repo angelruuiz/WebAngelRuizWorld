@@ -35,11 +35,25 @@ export default function EmpresasPage() {
         "areaServed": "Madrid"
     };
 
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            { "@type": "Question", "name": "¿Qué beneficios aporta la magia a un evento de empresa?", "acceptedAnswer": { "@type": "Answer", "text": "La magia corporativa rompe barreras de comunicación, fomenta el networking y facilita que el mensaje de su marca sea recordado de forma positiva y asombrosa." } },
+            { "@type": "Question", "name": "¿Se puede personalizar el show con mi marca?", "acceptedAnswer": { "@type": "Answer", "text": "Totalmente. Puedo integrar su logo, eslóganes o mensajes de marketing en los efectos de ilusionismo para reforzar la identidad corporativa durante el evento." } },
+            { "@type": "Question", "name": "¿Para qué eventos empresariales es recomendable?", "acceptedAnswer": { "@type": "Answer", "text": "Es ideal para cenas de gala, ferias comerciales (para atraer público al stand), presentaciones de producto y jornadas de team building." } }
+        ]
+    };
+
     return (
         <>
             <script 
                 type="application/ld+json" 
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} 
+            />
+            <script 
+                type="application/ld+json" 
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} 
             />
             <NavFooterClient>
                 <MagicCursor />
@@ -47,7 +61,7 @@ export default function EmpresasPage() {
 
                 <main>
                 <section className="pt-24 pb-16 px-6 max-w-6xl mx-auto relative z-10">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-20">
 
                         <div className="relative md:sticky md:top-32 h-[350px] md:h-[500px] rounded-2xl overflow-hidden border border-slate-800 shadow-xl order-2 md:order-1">
                             <Image
@@ -86,6 +100,19 @@ export default function EmpresasPage() {
                             <div className="mt-12">
                                 <ContactButtonClient label="Solicitar Presupuesto Corporativo" />
                             </div>
+                        </div>
+                    </div>
+
+                    {/* FAQ Section */}
+                    <div className="border-t border-white/5 pt-16 mt-16 max-w-4xl mx-auto">
+                        <h2 className="text-2xl font-[Cinzel] text-white mb-12 text-center uppercase tracking-widest">Preguntas Frecuentes</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            {faqSchema.mainEntity.map((faq, index) => (
+                                <div key={index} className="bg-white/5 p-6 rounded-xl border border-white/10">
+                                    <h3 className="text-amber-400 font-bold mb-3 text-sm">{faq.name}</h3>
+                                    <p className="text-slate-400 text-xs leading-relaxed text-justify">{faq.acceptedAnswer.text}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </section>

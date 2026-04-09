@@ -114,16 +114,24 @@ export default async function BlogPost({ params }) {
           <div className="mt-24 p-12 bg-white border border-amber-800/10 rounded-sm relative overflow-hidden text-center">
             <div className="absolute top-0 left-0 w-1 h-full bg-amber-500/30" />
             <MessageSquare className="w-10 h-10 text-amber-500/20 mx-auto mb-6" />
-            <h3 className="text-3xl font-[Playfair_Display] text-slate-950 mb-4 italic">¿Tienes más preguntas?</h3>
+            <h3 className="text-3xl font-[Playfair_Display] text-slate-950 mb-4 italic">¿Buscas magia para tu evento?</h3>
             <p className="text-slate-600 font-light mb-8 max-w-md mx-auto">
-              Cada evento es único. Estaré encantado de resolver cualquier duda y ayudarte a diseñar la experiencia perfecta.
+              Descubre cómo puedo elevar el nivel de tu celebración con las especialidades de ilusionismo más exclusivas.
             </p>
-            <Link 
-              href="/#contacto" 
-              className="inline-block px-10 py-4 bg-amber-700 text-white font-bold uppercase tracking-widest text-xs hover:bg-amber-800 transition-all rounded-full"
-            >
-              Contactar Ahora
-            </Link>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link 
+                href="/particulares/bodas" 
+                className="px-8 py-3 bg-amber-700 text-white font-bold uppercase tracking-widest text-[10px] hover:bg-amber-800 transition-all rounded-full"
+              >
+                Mago para Bodas
+              </Link>
+              <Link 
+                href="/empresas" 
+                className="px-8 py-3 border border-amber-700 text-amber-800 font-bold uppercase tracking-widest text-[10px] hover:bg-amber-50 transition-all rounded-full"
+              >
+                Magia para Empresas
+              </Link>
+            </div>
           </div>
         </div>
 

@@ -34,7 +34,15 @@ const HeroClient = ({ onOpenModal }) => {
     return (
         <section className="relative h-[100dvh] flex items-center justify-center overflow-hidden z-10">
             <div className="absolute inset-0 z-0 overflow-hidden">
-                <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+                <video 
+                    autoPlay 
+                    loop 
+                    muted 
+                    playsInline 
+                    poster="/images/foto-spring-cartas.png"
+                    className="w-full h-full object-cover"
+                    preload="auto"
+                >
                     <source src="/spring.webm" type="video/webm" />
                     <source src="/spring.mp4" type="video/mp4" />
                     <div className="w-full h-full bg-slate-950"></div>
@@ -43,10 +51,13 @@ const HeroClient = ({ onOpenModal }) => {
             </div>
             
             <motion.div style={{ y: y1, opacity }} className="text-center px-4 relative z-10 flex flex-col items-center w-full">
-                <p className="font-[Cinzel] text-5xl md:text-8xl font-bold mb-8 tracking-wider drop-shadow-lg leading-tight" aria-hidden="true">
-                    <span className="text-amber-400 block mb-2"><SplitText text="ANGEL" /></span>
-                    <span className="text-white block"><SplitText text="RUIZ" /></span>
-                </p>
+                <h1 className="font-[Cinzel] text-5xl md:text-8xl font-bold mb-8 tracking-wider drop-shadow-lg leading-tight">
+                    <span className="sr-only">Angel Ruiz | Mago e Ilusionista en Madrid para Bodas y Empresas</span>
+                    <span aria-hidden="true">
+                        <span className="text-amber-400 block mb-2"><SplitText text="ANGEL" /></span>
+                        <span className="text-white block"><SplitText text="RUIZ" /></span>
+                    </span>
+                </h1>
                 
                 <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1.0, duration: 1 }} className="my-6">
                     <p className="text-lg md:text-2xl text-slate-200 tracking-[0.1em] uppercase border-y border-amber-500/30 py-4 px-4 md:px-8 inline-block backdrop-blur-sm bg-slate-900/20 text-center leading-relaxed font-[Playfair_Display]">
