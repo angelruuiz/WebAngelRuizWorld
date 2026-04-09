@@ -39,9 +39,7 @@ const HeroClient = ({ onOpenModal }) => {
                     loop 
                     muted 
                     playsInline 
-                    poster="/images/foto-spring-cartas.png"
                     className="w-full h-full object-cover"
-                    preload="auto"
                 >
                     <source src="/spring.webm" type="video/webm" />
                     <source src="/spring.mp4" type="video/mp4" />
