@@ -13,7 +13,7 @@ const MagicalCarousel = () => {
     useEffect(() => {
         const timer = setInterval(() => { 
             setIndex((prev) => (prev + 1) % images.length); 
-        }, 5000);
+        }, 4000);
         return () => clearInterval(timer);
     }, [images.length]);
 
