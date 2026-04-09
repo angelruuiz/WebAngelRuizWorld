@@ -24,7 +24,7 @@ export const metadata = {
     description: 'Mago e ilusionista profesional especializado en magia de cerca exclusiva para eventos corporativos, bodas y celebraciones.',
     siteName: 'Angel Ruiz Magia',
     images: [{
-      url: '/images/foto-bio-2.png',
+      url: '/images/foto-bio.png',
       width: 1200,
       height: 630,
       alt: 'Angel Ruiz Ilusionista Profesional en plena actuación'
@@ -34,7 +34,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Angel Ruiz | Magia & Ilusionismo',
     description: 'Ilusionista especializado en eventos exclusivos y magia de cerca.',
-    images: ['/images/foto-bio-2.png'],
+    images: ['/images/foto-bio.png'],
     site: '@angellruuizz',
     creator: '@angellruuizz',
   },
@@ -63,7 +63,7 @@ const schemaOrg = {
   description: 'Mago e ilusionista profesional en Madrid. Especialista en magia de cerca exclusiva para eventos corporativos, bodas de lujo y fiestas privadas.',
   url: 'https://angelruiz.world',
   logo: 'https://angelruiz.world/icon.jpg',
-  image: 'https://angelruiz.world/images/foto-bio-2.png',
+  image: 'https://angelruiz.world/images/foto-bio.png',
   priceRange: '€€€',
   telephone: '+34600000000', // Reemplazar con real si es necesario o dejar genérico
   address: {

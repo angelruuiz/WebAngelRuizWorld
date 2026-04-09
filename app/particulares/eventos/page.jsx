@@ -12,13 +12,13 @@ export const metadata = {
     openGraph: {
         title: 'Mago para Eventos Privados en Madrid | Angel Ruiz',
         description: 'Magia de cerca y mentalismo para tus celebraciones privadas. Un espectáculo inolvidable en la comodidad de tu casa.',
-        images: [{ url: '/images/foto-bio-2.png' }],
+        images: [{ url: '/images/foto-bio.png' }],
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Mago para Eventos Privados en Madrid | Angel Ruiz',
         description: 'Lleva el asombro a tu propia fiesta con Angel Ruiz.',
-        images: ['/images/foto-bio-2.png'],
+        images: ['/images/foto-bio.png'],
     },
 };
 

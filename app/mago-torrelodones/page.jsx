@@ -7,7 +7,7 @@ import ContactButtonClient from '@/components/ContactButtonClient';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 
 const MagicalCarousel = () => {
-    const images = ["/images/foto-bio-2.png", "/images/foto-spring-cartas.png"];
+    const images = ["/images/foto-bio.png", "/images/foto-spring-cartas.png"];
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
@@ -50,7 +50,7 @@ export default function MagoTorrelodonesPage() {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Angel Ruiz Ilusionista - Mago en Torrelodones",
-        "image": "https://angelruiz.world/images/foto-bio-2.png",
+        "image": "https://angelruiz.world/images/foto-bio.png",
         "url": "https://angelruiz.world/mago-torrelodones",
         "telephone": "+34648055636",
         "address": {
