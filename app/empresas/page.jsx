@@ -92,21 +92,40 @@ export default function EmpresasPage() {
                              <p className="text-amber-500 uppercase tracking-widest text-[10px] font-bold mb-2 drop-shadow-md">
                                 Soluciones Corporativas | Madrid Noroeste
                             </p>
-                            <h1 className="text-4xl md:text-5xl font-[Cinzel] text-white mb-6 border-b border-amber-500/50 pb-2 font-bold leading-tight uppercase">
+                             <h1 className="text-4xl md:text-5xl font-[Cinzel] text-white mb-6 border-b border-amber-500/50 pb-2 font-bold leading-tight uppercase">
                                 Mago para Empresas
                             </h1>
 
                              <div className="space-y-6 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
                                  <p>
-                                    Angel Ruiz transforma convenciones ordinarias en experiencias extraordinarias. Sorprende a tus empleados y clientes con una actividad de ilusionismo innovadora que fomenta el engagement real con tu compañía. Ya sea en una cena de gala o en una presentación de producto, el ilusionismo actúa como el catalizador perfecto para que su mensaje sea recordado.
+                                    <span className="text-amber-400 font-bold underline decoration-amber-500/30">Transforma tus eventos corporativos con marketing experiencial de alto impacto.</span>{' '}
+                                    Angel Ruiz, ilusionista profesional experto en <strong>eventos Madrid</strong> de lujo y <strong className="text-amber-400">comunicación estratégica</strong>, se encarga de que tu mensaje de marca perdure a través del asombro. Ideal para convenciones, cenas de gala y lanzamientos de producto.
+                                </p>
+
+                                {/* Mini Features Grid para cohesión visual */}
+                                <div className="grid grid-cols-2 gap-4 py-6 border-y border-white/5">
+                                    <div className="flex items-start gap-3">
+                                        <div className="text-amber-500 font-bold">01</div>
+                                        <div>
+                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Cóctel & Networking</h4>
+                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Magia de cerca para romper barreras.</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-start gap-3">
+                                        <div className="text-amber-500 font-bold">02</div>
+                                        <div>
+                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Magia de Escenario</h4>
+                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Show central para unir a toda la audiencia.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p>
+                                    Si buscas potenciar el <strong className="text-amber-400">engagement</strong> de tus clientes, mi propuesta combina elegancia y humor inteligente, adaptándose al protocolo de las empresas más exigentes en el eje de la <strong>A-6</strong> y las áreas de negocios de <strong>Madrid Centro</strong>.
                                 </p>
 
                                 <p>
-                                    Si buscas un <strong>mago para empresas en Torrelodones</strong>, Las Rozas o Pozuelo, mi propuesta combina elegancia, humor inteligente y un profesionalismo que respeta escrupulosamente el protocolo business en el eje de la <strong>A-6</strong>.
-                                </p>
-
-                                <p>
-                                    La <strong>magia de cerca Madrid</strong> es la herramienta de RRPP definitiva para ferias y sesiones de team building. Facilita el networking mientras los asistentes viven lo imposible. Disponible con facturación inmediata y total flexibilidad en la <strong>Sierra de Madrid</strong>.
+                                    Como <strong>mago para empresas en Torrelodones</strong>, cubro con total agilidad logística zonas clave como <strong>Las Rozas, Pozuelo, Majadahonda y Villalba</strong>. Calidad profesional garantizada para tu próxima cita corporativa.
                                 </p>
                             </div>
 
