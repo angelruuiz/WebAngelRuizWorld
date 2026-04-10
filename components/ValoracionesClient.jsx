@@ -134,8 +134,7 @@ export default function ValoracionesClient({ reviewsData }) {
                 </section>
 
                 {/* Trustindex Verified Reviews Section */}
-                <section className="py-16 px-6 max-w-7xl mx-auto text-center relative z-10 border-t border-white/5">
-                    <h2 className="text-2xl md:text-4xl font-[Cinzel] text-white mb-10 uppercase tracking-widest">Reseñas Verificadas de Google</h2>
+                <section className="px-6 max-w-7xl mx-auto text-center relative z-10 border-t border-white/5 py-12">
                     <div className="bg-white/5 rounded-3xl p-8 border border-white/10">
                         {/* El script de Trustindex inyectará el widget en este contenedor */}
                         <div id="trustindex-widget"></div>

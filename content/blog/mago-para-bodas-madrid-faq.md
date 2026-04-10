@@ -1,6 +1,6 @@
 ---
 title: "Mago para Bodas en Madrid: La Guía Definitiva para una Celebración Mágica"
-date: "2024-04-06"
+date: "2026-04-10"
 excerpt: "Descubre cómo un ilusionista profesional puede transformar tu boda en Madrid en un evento inolvidable. Consejos, momentos clave y por qué la magia de cerca es tendencia."
 author: "Angel Ruiz"
 image: "/images/boda-magia-madrid.jpg"

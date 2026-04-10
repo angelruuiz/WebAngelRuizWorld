@@ -8,7 +8,7 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Link from 'next/link';
 
 const MagicalCarousel = () => {
-    const images = ["/images/foto-bio.png", "/images/foto-spring-cartas.png"];
+    const images = ["/images/foto-profesional-mirando-carta.png", "/images/foto-spring-cartas.png"];
     const [index, setIndex] = useState(0);
 
     useEffect(() => {

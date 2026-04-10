@@ -97,28 +97,9 @@ export default function EmpresasPage() {
                             </h1>
 
                              <div className="space-y-6 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
-                                <p>
-                                    <span className="text-amber-400 font-bold underline decoration-amber-500/30">Fortalece la imagen de tu marca a través del asombro.</span>{' '}
-                                    Angel Ruiz transforma convenciones ordinarias en experiencias extraordinarias. Sorprende a tus empleados y clientes con una actividad de ilusionismo innovadora que fomenta el engagement real con tu compañía.
+                                 <p>
+                                    Angel Ruiz transforma convenciones ordinarias en experiencias extraordinarias. Sorprende a tus empleados y clientes con una actividad de ilusionismo innovadora que fomenta el engagement real con tu compañía. Ya sea en una cena de gala o en una presentación de producto, el ilusionismo actúa como el catalizador perfecto para que su mensaje sea recordado.
                                 </p>
-
-                                {/* Corporate Features Grid */}
-                                <div className="grid grid-cols-1 gap-4 py-8 border-y border-white/5 my-8">
-                                    <div className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all">
-                                        <div className="w-10 h-10 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-500 font-bold">A</div>
-                                        <div>
-                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase tracking-wider">Cenas de Gala</h4>
-                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Magia de cerca entre mesas para amenizar la velada.</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all">
-                                        <div className="w-10 h-10 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-500 font-bold">B</div>
-                                        <div>
-                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase tracking-wider">Presentaciones de Producto</h4>
-                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Ilusionismo guionizado para destacar su mensaje.</p>
-                                        </div>
-                                    </div>
-                                </div>
 
                                 <p>
                                     Si buscas un <strong>mago para empresas en Torrelodones</strong>, Las Rozas o Pozuelo, mi propuesta combina elegancia, humor inteligente y un profesionalismo que respeta escrupulosamente el protocolo business en el eje de la <strong>A-6</strong>.
