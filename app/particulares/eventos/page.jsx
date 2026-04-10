@@ -80,31 +80,45 @@ export default function EventosDetailPage() {
                         <p className="text-amber-500 uppercase tracking-widest text-[10px] font-bold mb-2 drop-shadow-md">
                             Celebraciones Únicas
                         </p>
-                        <h1 className="text-4xl md:text-5xl font-[Cinzel] text-white mb-4 border-b border-amber-500/50 pb-2 font-bold leading-tight">
+                        <h1 className="text-4xl md:text-5xl font-[Cinzel] text-white mb-4 border-b border-amber-500/50 pb-2 font-bold leading-tight uppercase">
                             Mago para Eventos
                         </h1>
 
                         <div className="space-y-6 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
                             <p>
-                                <span className="text-amber-400 font-bold">Añade algo diferente en tu próxima celebración familiar o social.</span>{' '}
-                                Aniversarios, bautizos o cenas entre amigos... Como <strong className="text-amber-400">mago para eventos privados en Madrid</strong>, convierto cualquier salón en un teatro itinerante donde lo imposible ocurre a escasos centímetros. Mis servicios de <strong>eventos Madrid</strong> están diseñados para quienes buscan distinción y un asombro que rompa con lo convencional.
+                                <span className="text-amber-400 font-bold underline decoration-amber-500/30">Lleva tu celebración al siguiente nivel con un toque de asombro.</span>{' '}
+                                Ángel Ruiz, ilusionista profesional experto en <strong>eventos Madrid</strong> y <strong className="text-amber-400">magia para fiestas privadas</strong>, se encargará de que tu reunión social sea recordada durante años. El asombro ocurre a escasos centímetros, creando una atmósfera de misterio y diversión inmejorable.
+                            </p>
+
+                            {/* Mini Features Grid para cohesión visual */}
+                            <div className="grid grid-cols-2 gap-4 py-6 border-y border-white/5">
+                                <div className="flex items-start gap-3">
+                                    <div className="text-amber-500 font-bold">01</div>
+                                    <div>
+                                        <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Cóctel Mágico</h4>
+                                        <p className="text-slate-400 text-[10px] leading-tight mt-1">Dinamización itinerante entre grupos.</p>
+                                    </div>
+                                </div>
+                                <div className="flex items-start gap-3">
+                                    <div className="text-amber-500 font-bold">02</div>
+                                    <div>
+                                        <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Show de Salón</h4>
+                                        <p className="text-slate-400 text-[10px] leading-tight mt-1">Espectáculo central muy participativo.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p>
+                                Como <strong className="text-amber-400">mago para cumpleaños y aniversarios</strong>, complemento cualquier evento con un entretenimiento que respeta la exclusividad de tu espacio, actuando en domicilios y fincas desde el centro de la capital hasta <strong>El Escorial o Majadahonda</strong>.
                             </p>
 
                             <p>
-                                Si prefieres contar conmigo durante el <strong>banquete</strong>, amenizaré las esperas entre plato y plato con magia en las mesas, adaptándome al ritmo de la cocina. Como <strong className="text-amber-400">ilusionista para eventos en Madrid</strong>, complemento la gastronomía con un entretenimiento de primer nivel que respeta la elegancia del evento en las fincas más exclusivas, desde el centro de la capital hasta <strong>El Escorial o Majadahonda</strong>.
-                            </p>
-
-                            <p>
-                                Mi enfoque como <strong>ilusionista en Torrelodones o Majadahonda</strong> combina técnica depurada con un entusiasmo contagioso. No se trata solo de trucos, sino de crear una sensación de éxito y asombro que tus invitados comentarán durante semanas. Calidad, discreción y elegancia garantizadas en cada intervención mágica.
-                            </p>
-
-                            <p className="italic text-amber-500/90 font-bold border-l-2 border-amber-500 pl-4 py-2 mt-4 text-sm md:text-base">
-                                Magia moderna, cercana y muy participativa. Disponible con total flexibilidad en la zona noroeste y toda la Comunidad de Madrid. ¡Haz que tu próxima fiesta sea legendaria!
+                                Al ser <strong>mago para eventos en Torrelodones</strong>, cubro toda la zona noroeste con cercanía y profesionalidad total: <strong>Las Rozas, Pozuelo, Boadilla y Villalba</strong>. Sin complicaciones y con la garantía de un experto local.
                             </p>
                         </div>
 
                         <div className="mt-12 flex justify-start">
-                            <ContactButtonClient label="Consúltame sin compromiso" />
+                            <ContactButtonClient label="Solicitar Presupuesto Eventos" />
                         </div>
                     </div>
 
