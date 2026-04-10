@@ -134,11 +134,9 @@ export default function ValoracionesClient({ reviewsData }) {
                 </section>
 
                 {/* Trustindex Verified Reviews Section */}
-                <section className="px-6 max-w-7xl mx-auto text-center relative z-10 border-t border-white/5 py-12">
-                    <div className="bg-white/5 rounded-3xl p-8 border border-white/10">
-                        {/* El script de Trustindex inyectará el widget en este contenedor */}
-                        <div id="trustindex-widget"></div>
-                    </div>
+                <section className="px-6 max-w-7xl mx-auto text-center relative z-10 border-t border-white/5 py-4">
+                    {/* El script de Trustindex inyectará el widget en este contenedor */}
+                    <div id="trustindex-widget"></div>
                 </section>
 
                 <ReviewsGrid reviewsData={reviewsData} />
