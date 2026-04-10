@@ -85,34 +85,34 @@ export default function MagoSierraMadridHub() {
                                 initial={{ opacity: 0, scale: 0.95 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 1 }}
-                                className="relative w-full h-[450px] rounded-3xl overflow-hidden border border-slate-800 shadow-2xl group"
+                                className="relative w-full h-[500px] rounded-3xl overflow-hidden border border-slate-800 shadow-2xl group"
                             >
                                 <iframe 
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d150000.344476685!2d-3.95!3d40.52!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDMxJzEyLjAiTiAzwrA1NycwMC4wIlc!5e0!3m2!1ses!2ses!4v1712754890000!5m2!1ses!2ses" 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d200000.344476685!2d-3.84!3d40.47!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI4JzEyLjAiTiAzwrA1MCcwMC4wIlc!5e0!3m2!1ses!2ses!4v1712754890000!5m2!1ses!2ses" 
                                     className="w-full h-full grayscale invert opacity-70 contrast-125 border-0 group-hover:grayscale-0 group-hover:invert-0 group-hover:opacity-100 transition-all duration-700 select-none" 
                                     allowFullScreen="" 
                                     loading="lazy" 
                                     referrerPolicy="no-referrer-when-downgrade"
                                 ></iframe>
                                 
-                                {/* Overlay de Círculo Sierra (Radar) - Tamaño ampliado */}
+                                {/* Overlay de Círculo Sierra (Radar) - Tamaño XL para incluir Pozuelo */}
                                 <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
-                                    <div className="relative w-80 h-80 md:w-96 md:h-96">
+                                    <div className="relative w-80 h-80 md:w-[450px] md:h-[450px]">
                                         {/* Círculo de pulso animado */}
                                         <motion.div 
-                                            animate={{ scale: [1, 1.15, 1], opacity: [0.1, 0.25, 0.1] }}
-                                            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                                            className="absolute inset-0 bg-amber-500/15 rounded-full blur-3xl"
+                                            animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
+                                            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                                            className="absolute inset-0 bg-amber-500/10 rounded-full blur-[60px]"
                                         />
                                         {/* Borde punteado de la zona */}
-                                        <div className="absolute inset-0 border-2 border-dashed border-amber-500/30 rounded-full animate-[spin_80s_linear_infinite]" />
-                                        <div className="absolute inset-8 border border-amber-500/10 rounded-full" />
+                                        <div className="absolute inset-0 border-2 border-dashed border-amber-500/25 rounded-full animate-[spin_100s_linear_infinite]" />
+                                        <div className="absolute inset-12 border border-amber-500/5 rounded-full" />
                                     </div>
                                 </div>
 
                                 <div className="absolute inset-0 pointer-events-none ring-1 ring-inset ring-white/10 rounded-3xl" />
                                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-slate-950/80 backdrop-blur-md px-4 py-2 rounded-full border border-amber-500/30 text-[10px] text-amber-500 font-bold uppercase tracking-[0.2em] whitespace-nowrap shadow-xl">
-                                    Zona de Cobertura Sierra y Noroeste
+                                    Zona de Cobertura Sierra, Noroeste y Pozuelo
                                 </div>
                             </motion.div>
                         </div>
