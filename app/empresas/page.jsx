@@ -5,19 +5,19 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: 'Magia para Empresas en Madrid | Eventos Corporativos y Team Building',
-    description: 'Eleva el nivel de tu evento de empresa con magia corporativa de alto impacto. Angel Ruiz, ilusionista para congresos, cenas y presentaciones en Madrid.',
+    title: 'Magia para Empresas en Madrid | Ángel Ruiz | Mago e Ilusionista',
+    description: 'Eleva el nivel de tu evento de empresa con magia corporativa de alto impacto. Ángel Ruiz, ilusionista para congresos, cenas y presentaciones en Madrid.',
     alternates: {
         canonical: '/empresas',
     },
     openGraph: {
-        title: 'Magia para Empresas en Madrid | Angel Ruiz',
+        title: 'Magia para Empresas en Madrid | Ángel Ruiz | Mago e Ilusionista',
         description: 'Eleva el nivel de tu evento corporativo con magia de alto impacto. Especialista en cenas de empresa, congresos y team building.',
         images: [{ url: '/images/mago-empresas-madrid-angel-ruiz.svg' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Magia para Empresas en Madrid | Angel Ruiz',
+        title: 'Magia para Empresas en Madrid | Ángel Ruiz | Mago e Ilusionista',
         description: 'Eleva tu evento con el mejor ilusionista corporativo de Madrid.',
         images: ['/images/mago-empresas-madrid-angel-ruiz.svg'],
     },
@@ -30,7 +30,7 @@ export default function EmpresasPage() {
         "name": "Magia para Empresas en Madrid",
         "provider": {
             "@type": "Person",
-            "name": "Angel Ruiz"
+            "name": "Ángel Ruiz | Mago e Ilusionista"
         },
         "description": "Servicios de ilusionismo corporativo para cenas de empresa, ferias y lanzamientos de marca en Madrid.",
         "areaServed": "Madrid"

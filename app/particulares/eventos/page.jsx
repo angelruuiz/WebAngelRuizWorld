@@ -5,20 +5,20 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: 'Mago para Eventos Privados y Fiestas en Madrid | Angel Ruiz',
-    description: 'Sorprende a tus invitados con magia de cerca y mentalismo en tus fiestas privadas, cumpleaños o aniversarios en Madrid. Espectáculo adaptado a tu domicilio.',
+    title: 'Mago para Eventos Privados y Fiestas en Madrid | Ángel Ruiz | Mago e Ilusionista',
+    description: 'Sorprende a tus invitados con magia de cerca y mentalismo en tus fiestas privadas con Ángel Ruiz, experto ilusionista en Madrid.',
     alternates: {
         canonical: '/particulares/eventos',
     },
     openGraph: {
-        title: 'Mago para Eventos Privados en Madrid | Angel Ruiz',
+        title: 'Mago para Eventos Privados en Madrid | Ángel Ruiz | Mago e Ilusionista',
         description: 'Magia de cerca y mentalismo para tus celebraciones privadas. Un espectáculo inolvidable en la comodidad de tu casa.',
         images: [{ url: '/images/foto-bio.png' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago para Eventos Privados en Madrid | Angel Ruiz',
-        description: 'Lleva el asombro a tu propia fiesta con Angel Ruiz.',
+        title: 'Mago para Eventos Privados en Madrid | Ángel Ruiz | Mago e Ilusionista',
+        description: 'Lleva el asombro a tu propia fiesta con Ángel Ruiz.',
         images: ['/images/foto-bio.png'],
     },
 };
@@ -30,7 +30,7 @@ export default function EventosDetailPage() {
         "name": "Magia para Eventos Privados en Madrid",
         "provider": {
             "@type": "Person",
-            "name": "Angel Ruiz"
+            "name": "Ángel Ruiz | Mago e Ilusionista"
         },
         "description": "Show de magia para fiestas, cumpleaños y reuniones privadas en la Comunidad de Madrid.",
         "areaServed": "Madrid"

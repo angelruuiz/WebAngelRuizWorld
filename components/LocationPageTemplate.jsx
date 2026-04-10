@@ -49,7 +49,7 @@ export default function LocationPageTemplate({ location, allLocations }) {
     const pageSchema = {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": `Ángel Ruiz | Mago en ${location.name}`,
+        "name": `Ángel Ruiz | Mago e Ilusionista en ${location.name}`,
         "image": "https://angelruiz.world/images/foto-bio.png",
         "url": `https://angelruiz.world/mago-${location.slug}`,
         "telephone": "+34648055636",

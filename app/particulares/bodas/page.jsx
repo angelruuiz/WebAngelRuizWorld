@@ -5,13 +5,13 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: 'Mago para Bodas en Madrid | Angel Ruiz Ilusionista',
-    description: 'Haz que tu cóctel y banquete de boda sean inolvidables con magia de cerca exclusiva. Angel Ruiz, mago experto en bodas en Madrid y alrededores.',
+    title: 'Mago para Bodas en Madrid | Ángel Ruiz | Mago e Ilusionista',
+    description: 'Haz que tu cóctel y banquete de boda sean inolvidables con magia de cerca exclusiva. Ángel Ruiz, mago experto en bodas en Madrid y alrededores.',
     alternates: {
         canonical: '/particulares/bodas',
     },
     openGraph: {
-        title: 'Mago para Bodas en Madrid | Angel Ruiz',
+        title: 'Mago para Bodas en Madrid | Ángel Ruiz | Mago e Ilusionista',
         description: 'La magia perfecta para tu cóctel de boda. Conecta a tus invitados y crea recuerdos inolvidables.',
         images: [{ url: '/images/foto-bio.png' }],
     },
@@ -30,7 +30,7 @@ export default function BodasDetailPage() {
         "name": "Magia para Bodas en Madrid",
         "provider": {
             "@type": "Person",
-            "name": "Angel Ruiz"
+            "name": "Ángel Ruiz | Mago e Ilusionista"
         },
         "description": "Servicio de ilusionismo y magia de cerca para cócteles y banquetes de boda en la Comunidad de Madrid.",
         "areaServed": "Madrid"

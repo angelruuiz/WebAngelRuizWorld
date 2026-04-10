@@ -6,7 +6,7 @@ const Footer = ({ onOpenContact, isLight = false }) => {
             <div className="w-full px-6 py-12 max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                     <div className="space-y-6 text-left">
-                        <h3 className={`text-3xl font-[Cinzel] ${isLight ? 'text-slate-950' : 'text-white'} font-bold`}>Angel Ruiz</h3>
+                        <h3 className={`text-3xl font-[Cinzel] ${isLight ? 'text-slate-950' : 'text-white'} font-bold`}>Ángel Ruiz | Mago e Ilusionista</h3>
                         <p className={`${isLight ? 'text-slate-700' : 'text-slate-300'} text-lg leading-relaxed max-w-lg`}>Ilusionista profesional para eventos corporativos,<br />celebraciones y bodas.</p>
                         <button onClick={onOpenContact} className="group relative px-8 py-3 bg-transparent overflow-hidden rounded-full border border-amber-500 text-amber-500 font-bold uppercase tracking-widest text-xs hover:text-slate-950 transition-colors mt-6">
                             <span className="relative z-10 flex items-center justify-center gap-2">Reservar Experiencia <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></span>
@@ -15,7 +15,7 @@ const Footer = ({ onOpenContact, isLight = false }) => {
 
                         <div className={`mt-10 p-6 rounded-2xl ${isLight ? 'bg-slate-100 border-slate-200' : 'bg-slate-950/40 border-white/5'} border text-sm leading-relaxed`}>
                             <p className={`${isLight ? 'text-slate-700' : 'text-slate-400'} italic text-justify`}>
-                                <strong className="text-amber-500">Nota de Servicio:</strong> Con residencia y estudio principal en <strong className={isLight ? 'text-slate-950' : 'text-white'}>Torrelodones</strong>, Angel Ruiz ofrece sus servicios de ilusionismo profesional y magia de cerca en toda la <strong className={isLight ? 'text-slate-950' : 'text-white'}>Sierra de Madrid y Zona Noroeste</strong>. Disponibilidad total para eventos exclusivos, bodas y empresas con la cercanía y confianza de un mago local.
+                                <strong className="text-amber-500">Nota de Servicio:</strong> Con residencia y estudio principal en <strong className={isLight ? 'text-slate-950' : 'text-white'}>Torrelodones</strong>, Ángel Ruiz ofrece sus servicios de ilusionismo profesional y magia de cerca en toda la <strong className={isLight ? 'text-slate-950' : 'text-white'}>Sierra de Madrid y Zona Noroeste</strong>. Disponibilidad total para eventos exclusivos, bodas y empresas con la cercanía y confianza de un mago local.
                             </p>
                         </div>
 
@@ -23,7 +23,7 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                             <p className="text-amber-500/60 uppercase tracking-[0.2em] text-[10px] font-bold mb-4">Compartir Experiencia:</p>
                             <div className="flex gap-4">
                                 <a 
-                                    href={`https://wa.me/?text=${encodeURIComponent('Mira la magia de Angel Ruiz: https://angelruiz.world')}`}
+                                    href={`https://wa.me/?text=${encodeURIComponent('Mira la magia de Ángel Ruiz | Mago e Ilusionista: https://angelruiz.world')}`}
                                     target="_blank" 
                                     rel="noopener noreferrer"
                                     className={`p-2 rounded-full ${isLight ? 'bg-slate-200/50' : 'bg-slate-800/50'} border border-white/5 hover:border-amber-500/50 hover:text-amber-400 transition-all group`}
@@ -35,8 +35,8 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                                     onClick={() => {
                                         if (navigator.share) {
                                             navigator.share({
-                                                title: 'Angel Ruiz - Ilusionista Profesional',
-                                                text: 'Descubre la magia de Angel Ruiz en Madrid.',
+                                                title: 'Ángel Ruiz | Mago e Ilusionista',
+                                                text: 'Descubre la magia de Ángel Ruiz en Madrid.',
                                                 url: 'https://angelruiz.world',
                                             });
                                         } else {
@@ -75,7 +75,7 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                                 <a href="/mago-el-escorial" className="hover:text-amber-400 transition-colors font-bold">Mago en El Escorial</a>
                             </div>
                         </div>
-                        <div className="pt-8 text-sm text-slate-500"><p>© 2026 Angel Ruiz. Todos los derechos reservados.</p></div>
+                        <div className="pt-8 text-sm text-slate-500"><p>© 2026 Ángel Ruiz | Mago e Ilusionista. Todos los derechos reservados.</p></div>
                     </div>
                 </div>
             </div>

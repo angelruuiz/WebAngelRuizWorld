@@ -5,14 +5,14 @@ import Script from 'next/script';
 export const metadata = {
   metadataBase: new URL('https://angelruiz.world'),
   title: {
-    default: 'Angel Ruiz | Magia y Mago Profesional en Madrid para Eventos',
-    template: '%s | Angel Ruiz Magia'
+    default: 'Ángel Ruiz | Mago e Ilusionista en Madrid para Eventos',
+    template: '%s | Ángel Ruiz | Mago e Ilusionista'
   },
-  description: 'Angel Ruiz, mago profesional experto en magia en Madrid para bodas y eventos VIP. Ilusionismo de cerca exclusivo para una experiencia única. Reserva ahora.',
-  keywords: ['Mago Madrid', 'Ilusionista en Madrid', 'Mago para bodas Madrid', 'Magia para empresas Madrid', 'Mago para eventos corporativos', 'Magia de cerca Madrid', 'Angel Ruiz', 'Espectáculo de magia Madrid', 'Contratar mago Madrid', 'Mago ilusionista Madrid', 'Mago para comuniones Madrid'],
-  authors: [{ name: 'Angel Ruiz' }],
-  creator: 'Angel Ruiz',
-  publisher: 'Angel Ruiz',
+  description: 'Ángel Ruiz, mago profesional experto en magia en Madrid para bodas y eventos VIP. Ilusionismo de cerca exclusivo para una experiencia única. Reserva ahora.',
+  keywords: ['Mago Madrid', 'Ilusionista en Madrid', 'Mago para bodas Madrid', 'Magia para empresas Madrid', 'Mago para eventos corporativos', 'Magia de cerca Madrid', 'Ángel Ruiz', 'Espectáculo de magia Madrid', 'Contratar mago Madrid', 'Mago ilusionista Madrid', 'Mago para comuniones Madrid'],
+  authors: [{ name: 'Ángel Ruiz | Mago e Ilusionista' }],
+  creator: 'Ángel Ruiz | Mago e Ilusionista',
+  publisher: 'Ángel Ruiz | Mago e Ilusionista',
   icons: {
     icon: '/icon.jpg',
     apple: '/icon.jpg',
@@ -21,19 +21,19 @@ export const metadata = {
     type: 'website',
     locale: 'es_ES',
     url: 'https://angelruiz.world',
-    title: 'Angel Ruiz | Ilusionista Profesional',
-    description: 'Mago e ilusionista profesional especializado en magia de cerca exclusiva para eventos corporativos, bodas y celebraciones.',
-    siteName: 'Angel Ruiz Magia',
+    title: 'Ángel Ruiz | Mago e Ilusionista Profesional',
+    description: 'Ángel Ruiz, mago e ilusionista profesional especializado en magia de cerca exclusiva para eventos corporativos, bodas y celebraciones.',
+    siteName: 'Ángel Ruiz | Mago e Ilusionista',
     images: [{
       url: '/images/foto-bio.png',
       width: 1200,
       height: 630,
-      alt: 'Angel Ruiz Ilusionista Profesional en plena actuación'
+      alt: 'Ángel Ruiz Ilusionista Profesional en plena actuación'
     }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Angel Ruiz | Magia & Ilusionismo',
+    title: 'Ángel Ruiz | Mago e Ilusionista',
     description: 'Ilusionista especializado en eventos exclusivos y magia de cerca.',
     images: ['/images/foto-bio.png'],
     site: '@angellruuizz',
@@ -59,8 +59,8 @@ export const viewport = {
 const schemaOrg = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'Angel Ruiz | Mago e Ilusionista Profesional',
-  alternateName: 'Angel Ruiz Magia',
+  name: 'Ángel Ruiz | Mago e Ilusionista',
+  alternateName: 'Ángel Ruiz Magia',
   description: 'Mago e ilusionista profesional en Madrid. Especialista en magia de cerca exclusiva para eventos corporativos, bodas de lujo y fiestas privadas.',
   url: 'https://angelruiz.world',
   logo: 'https://angelruiz.world/icon.jpg',

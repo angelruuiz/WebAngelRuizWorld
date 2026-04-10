@@ -2,7 +2,7 @@ import HomeClient from '@/components/HomeClient';
 import { motion } from 'framer-motion';
 
 export const metadata = {
-    title: 'Angel Ruiz | Mago en Torrelodones e Ilusionista en Madrid',
+    title: 'Ángel Ruiz | Mago e Ilusionista en Madrid y Torrelodones',
     description: 'Ilusionista experto en Magia de Cerca en Madrid y Torrelodones. Especialista en Bodas, Eventos Corporativos y Fiestas VIP en Las Rozas y Majadahonda. Más de 10 años de experiencia.',
     alternates: {
         canonical: '/',
@@ -42,7 +42,7 @@ const SEOContent = () => {
                         <div className="pt-6 border-t border-white/5">
                             <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-amber-500 mb-2 text-left">Experiencia Certificada</p>
                             <p className="text-xs leading-relaxed text-slate-500">
-                                Angel Ruiz se ha consolidado como uno de los ilusionistas más modernos de la capital, fusionando elegancia y caos en cada evento. Como <strong>mago para bodas en Madrid</strong> e ilusionista corporativo, su enfoque se centra en la <strong>magia de cerca</strong> (close-up), donde el milagro ocurre a escasos centímetros del espectador.
+                                Ángel Ruiz se ha consolidado como uno de los ilusionistas más modernos de la capital, fusionando elegancia y caos en cada evento. Como <strong>mago para bodas en Madrid</strong> e ilusionista corporativo, su enfoque se centra en la <strong>magia de cerca</strong> (close-up), donde el milagro ocurre a escasos centímetros del espectador.
                             </p>
                         </div>
                     </div>
