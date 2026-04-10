@@ -80,7 +80,7 @@ export default function MagoSierraMadridHub() {
                                 </div>
                             </div>
                             
-                            {/* Mapa de Google Maps */}
+                            {/* Mapa de Google Maps con zona rodeada */}
                             <motion.div 
                                 initial={{ opacity: 0, scale: 0.95 }}
                                 animate={{ opacity: 1, scale: 1 }}
@@ -89,11 +89,27 @@ export default function MagoSierraMadridHub() {
                             >
                                 <iframe 
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194095.344476685!2d-4.0850!3d40.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDM2JzAwLjAiTiA0wrAwNScwMC4wIlc!5e0!3m2!1ses!2ses!4v1712754890000!5m2!1ses!2ses" 
-                                    className="w-full h-full grayscale invert opacity-70 contrast-125 border-0 hover:grayscale-0 hover:invert-0 hover:opacity-100 transition-all duration-700 select-none pb-4" 
+                                    className="w-full h-full grayscale invert opacity-70 contrast-125 border-0 group-hover:grayscale-0 group-hover:invert-0 group-hover:opacity-100 transition-all duration-700 select-none pb-4" 
                                     allowFullScreen="" 
                                     loading="lazy" 
                                     referrerPolicy="no-referrer-when-downgrade"
                                 ></iframe>
+                                
+                                {/* Overlay de Círculo Sierra (Radar) */}
+                                <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
+                                    <div className="relative w-64 h-64">
+                                        {/* Círculo de pulso animado */}
+                                        <motion.div 
+                                            animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.3, 0.1] }}
+                                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                                            className="absolute inset-0 bg-amber-500/20 rounded-full blur-2xl"
+                                        />
+                                        {/* Borde punteado de la zona */}
+                                        <div className="absolute inset-0 border-2 border-dashed border-amber-500/40 rounded-full animate-[spin_60s_linear_infinite]" />
+                                        <div className="absolute inset-4 border border-amber-500/20 rounded-full" />
+                                    </div>
+                                </div>
+
                                 <div className="absolute inset-0 pointer-events-none ring-1 ring-inset ring-white/10 rounded-3xl" />
                                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-slate-950/80 backdrop-blur-md px-4 py-2 rounded-full border border-amber-500/30 text-[10px] text-amber-500 font-bold uppercase tracking-[0.2em] whitespace-nowrap shadow-xl">
                                     Zona de Cobertura Sierra
