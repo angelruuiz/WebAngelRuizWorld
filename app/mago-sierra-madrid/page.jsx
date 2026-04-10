@@ -95,24 +95,9 @@ export default function MagoSierraMadridHub() {
                                     referrerPolicy="no-referrer-when-downgrade"
                                 ></iframe>
                                 
-                                {/* Overlay de Círculo Sierra (Radar) - Tamaño Máximo para El Escorial -> Pozuelo */}
-                                <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
-                                    <div className="relative w-80 h-80 md:w-[550px] md:h-[550px]">
-                                        {/* Círculo de pulso animado */}
-                                        <motion.div 
-                                            animate={{ scale: [1, 1.1, 1], opacity: [0.05, 0.15, 0.05] }}
-                                            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                                            className="absolute inset-0 bg-amber-500/10 rounded-full blur-[100px]"
-                                        />
-                                        {/* Borde punteado de la zona */}
-                                        <div className="absolute inset-0 border-2 border-dashed border-amber-500/20 rounded-full animate-[spin_150s_linear_infinite]" />
-                                        <div className="absolute inset-20 border border-amber-500/5 rounded-full shadow-[0_0_60px_rgba(245,158,11,0.03)]" />
-                                    </div>
-                                </div>
-
                                 <div className="absolute inset-0 pointer-events-none ring-1 ring-inset ring-white/10 rounded-3xl" />
                                 <div className="absolute bottom-6 left-1/2 -translate-x-1/2 bg-slate-950/90 backdrop-blur-xl px-6 py-3 rounded-full border border-amber-500/40 text-[11px] text-amber-400 font-bold uppercase tracking-[0.3em] whitespace-nowrap shadow-2xl">
-                                    Cobertura Total: Sierra y Noroeste
+                                    Zona de Actuación
                                 </div>
                             </motion.div>
                         </div>
