@@ -116,13 +116,9 @@ export default function LocationPageTemplate({ location, allLocations }) {
 
                     <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-16">
                         <div className="space-y-6 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
-                            <h2 className="text-2xl font-[Cinzel] text-amber-500 font-bold mb-4">{location.h2_main || "Magia Profesional en tu Ciudad"}</h2>
-                            <p>
-                                {location.text_main_1 || `Angel Ruiz es el ilusionista en ${location.name} que transformará tu próximo evento en algo inolvidable. Especializado en la magia de cerca más sofisticada, ofrece un espectáculo donde lo imposible sucede a escasos centímetros de los espectadores, ideal para romper el hielo y crear conexiones reales entre tus invitados.`}
-                            </p>
-                            <p>
-                                {location.text_main_2 || `Con una amplia trayectoria en la zona noroeste de Madrid, Angel conoce los mejores espacios de ${location.name} y ofrece una logística impecable. Su estilo combina la elegancia del ilusionismo clásico con un ritmo moderno y participativo, asegurando el éxito en cenas de empresa, cócteles de boda o fiestas privadas de alta gama.`}
-                            </p>
+                            <h2 className="text-2xl font-[Cinzel] text-amber-500 font-bold mb-4 uppercase tracking-wider">{location.h2_main || "Magia Profesional en tu Ciudad"}</h2>
+                            <p dangerouslySetInnerHTML={{ __html: location.text_main_1 || "" }} />
+                            <p dangerouslySetInnerHTML={{ __html: location.text_main_2 || "" }} />
                         </div>
                         <div className="relative h-[300px] md:h-[450px] rounded-2xl overflow-hidden border border-slate-800 shadow-xl">
                             <MagicalCarousel />
