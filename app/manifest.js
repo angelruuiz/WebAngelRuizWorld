@@ -1,7 +1,7 @@
 export default function manifest() {
   return {
-    name: 'Angel Ruiz | Mago Profesional Madrid',
-    short_name: 'Angel Ruiz Magia',
+    name: 'Ángel Ruiz | Mago e Ilusionista',
+    short_name: 'Ángel Ruiz Magia',
     description: 'Ilusionista experto en Magia de Cerca para bodas, empresas y eventos VIP en Madrid.',
     start_url: '/',
     display: 'standalone',

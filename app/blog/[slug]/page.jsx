@@ -5,7 +5,7 @@ import { Sparkles, MessageSquare } from '@/components/Icons';
 export async function generateMetadata({ params }) {
   const postData = await getPostData(params.slug);
   return {
-    title: `${postData.title} | Angel Ruiz Magia`,
+    title: postData.title,
     description: postData.excerpt,
     openGraph: {
       title: postData.title,

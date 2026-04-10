@@ -1,8 +1,8 @@
 import ValoracionesClient from '@/components/ValoracionesClient';
 
 export const metadata = {
-    title: 'Opiniones y Testimonios | Angel Ruiz Ilusionista Madrid',
-    description: 'Descubre lo que dicen los clientes sobre Angel Ruiz. Opiniones reales sobre el mejor mago para bodas, empresas y eventos privados en Madrid. Éxito garantizado.',
+    title: 'Opiniones y Testimonios | Ángel Ruiz | Mago e Ilusionista',
+    description: 'Descubre lo que dicen los clientes sobre Ángel Ruiz | Mago e Ilusionista. Opiniones reales sobre el mejor mago para bodas, empresas y eventos privados en Madrid. Éxito garantizado.',
     alternates: {
         canonical: '/valoraciones',
     },

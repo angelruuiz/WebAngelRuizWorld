@@ -5,7 +5,7 @@ const location = locations.find(l => l.slug === 'el-escorial');
 
 export const metadata = {
   title: {
-    absolute: location.meta_title || `${location.title} | Angel Ruiz Ilusionista`
+    absolute: location.meta_title || `${location.title} | Ángel Ruiz | Mago e Ilusionista`
   },
   description: location.description,
   alternates: {
