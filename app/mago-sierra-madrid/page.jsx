@@ -59,24 +59,46 @@ export default function MagoSierraMadridHub() {
                 <main className="relative z-10 pt-24 pb-16 px-6 max-w-6xl mx-auto">
                     {/* SECCIÓN 1 — Hero */}
                     <section className="mb-20">
-                        <div className="max-w-3xl">
-                            <p className="text-amber-500 uppercase tracking-widest text-[10px] font-bold mb-2 drop-shadow-md">
-                                Expertos en Asombro Local
-                            </p>
-                            <h1 className="text-4xl md:text-6xl font-[Cinzel] text-white mb-6 border-b border-amber-500/50 pb-2 font-bold leading-tight">
-                                Mago en la Sierra de Madrid
-                            </h1>
-                            <p className="text-xl text-slate-300 font-medium italic mb-6">
-                                Ilusionismo exclusivo en el noroeste de Madrid
-                            </p>
-                            <div className="space-y-4 text-slate-400 leading-relaxed text-justify">
-                                <p>
-                                    Si buscas un <strong>mago en la sierra de Madrid</strong> o un ilusionista en la zona noroeste que convierta tu celebración en un recuerdo imborrable, has llegado al lugar adecuado. El entorno de la <strong>sierra de Guadarrama</strong> y los municipios del eje de la <strong>zona A-6</strong> exigen un entretenimiento de alta gama que combine elegancia, cercanía y un asombro difícil de olvidar.
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                            <div className="max-w-3xl">
+                                <p className="text-amber-500 uppercase tracking-widest text-[10px] font-bold mb-2 drop-shadow-md">
+                                    Expertos en Asombro Local
                                 </p>
-                                <div className="bg-amber-500/5 border-l-2 border-amber-500 p-6 rounded-r-xl italic">
-                                    "Aunque mi residencia y estudio principal están en Torrelodones, me desplazo habitualmente para eventos en Galapagar, Collado Villalba, Las Rozas y toda la zona noroeste, garantizando un servicio local y de confianza."
+                                <h1 className="text-4xl md:text-6xl font-[Cinzel] text-white mb-6 border-b border-amber-500/50 pb-2 font-bold leading-tight">
+                                    Mago en la Sierra de Madrid
+                                </h1>
+                                <p className="text-xl text-slate-300 font-medium italic mb-6">
+                                    Ilusionismo exclusivo en el noroeste de Madrid
+                                </p>
+                                <div className="space-y-4 text-slate-400 leading-relaxed text-justify">
+                                    <p>
+                                        Si buscas un <strong>mago en la sierra de Madrid</strong> o un ilusionista en la zona noroeste que convierta tu celebración en un recuerdo imborrable, has llegado al lugar adecuado. El entorno de la <strong>sierra de Guadarrama</strong> y los municipios del eje de la <strong>zona A-6</strong> exigen un entretenimiento de alta gama que combine elegancia, cercanía y un asombro difícil de olvidar.
+                                    </p>
+                                    <div className="bg-amber-500/5 border-l-2 border-amber-500 p-6 rounded-r-xl italic">
+                                        "Aunque mi residencia y estudio principal están en Torrelodones, me desplazo habitualmente para eventos en Galapagar, Collado Villalba, Las Rozas y toda la zona noroeste, garantizando un servicio local y de confianza."
+                                    </div>
                                 </div>
                             </div>
+                            
+                            {/* Mapa de Google Maps */}
+                            <motion.div 
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 1 }}
+                                className="relative w-full h-[400px] rounded-3xl overflow-hidden border border-slate-800 shadow-2xl group"
+                            >
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d194095.344476685!2d-4.0850!3d40.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDM2JzAwLjAiTiA0wrAwNScwMC4wIlc!5e0!3m2!1ses!2ses!4v1712754890000!5m2!1ses!2ses" 
+                                    className="w-full h-full grayscale invert opacity-70 contrast-125 border-0 hover:grayscale-0 hover:invert-0 hover:opacity-100 transition-all duration-700 select-none pb-4" 
+                                    allowFullScreen="" 
+                                    loading="lazy" 
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                ></iframe>
+                                <div className="absolute inset-0 pointer-events-none ring-1 ring-inset ring-white/10 rounded-3xl" />
+                                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-slate-950/80 backdrop-blur-md px-4 py-2 rounded-full border border-amber-500/30 text-[10px] text-amber-500 font-bold uppercase tracking-[0.2em] whitespace-nowrap shadow-xl">
+                                    Zona de Cobertura Sierra
+                                </div>
+                            </motion.div>
                         </div>
                     </section>
 
