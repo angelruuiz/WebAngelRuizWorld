@@ -2,6 +2,7 @@ import Image from 'next/image';
 import NavFooterClient from '@/components/NavFooterClient';
 import ContactButtonClient from '@/components/ContactButtonClient';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
     title: 'Magia para Empresas en Madrid | Eventos Corporativos y Team Building',
@@ -75,6 +76,7 @@ export default function EmpresasPage() {
 
                 <main>
                 <section className="pt-24 pb-16 px-6 max-w-6xl mx-auto relative z-10">
+                    <Breadcrumbs />
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-20">
 
                         <div className="relative md:sticky md:top-32 h-[350px] md:h-[500px] rounded-2xl overflow-hidden border border-slate-800 shadow-xl order-2 md:order-1 group bg-slate-900/50">

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import NavFooterClient from '@/components/NavFooterClient';
 import ContactButtonClient from '@/components/ContactButtonClient';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
     title: 'Mago para Bodas en Madrid | Angel Ruiz Ilusionista',
@@ -74,6 +75,7 @@ export default function BodasDetailPage() {
                 <ParticleBackground />
 
                 <main className="relative z-10 pt-24 pb-16 px-6 max-w-6xl mx-auto">
+                    <Breadcrumbs />
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-20">
                         <div>
                             <p className="text-amber-500 uppercase tracking-widest text-[10px] font-bold mb-2 drop-shadow-md">

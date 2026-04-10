@@ -6,6 +6,7 @@ import NavFooterClient from '@/components/NavFooterClient';
 import ContactButtonClient from '@/components/ContactButtonClient';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Link from 'next/link';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 const MagicalCarousel = () => {
     const images = ["/images/foto-profesional-mirando-carta.png", "/images/foto-spring-cartas.png"];
@@ -100,6 +101,7 @@ export default function LocationPageTemplate({ location, allLocations }) {
                 <ParticleBackground />
 
                 <main className="relative z-10 pt-24 pb-16 px-6 max-w-6xl mx-auto">
+                    <Breadcrumbs />
                     <section className="mb-16">
                         <div className="max-w-3xl">
                             <p className="text-amber-500 uppercase tracking-widest text-[10px] font-bold mb-2 drop-shadow-md">
@@ -129,26 +131,35 @@ export default function LocationPageTemplate({ location, allLocations }) {
                         <h2 className="text-3xl font-[Cinzel] text-white text-center mb-10 border-b border-white/10 pb-4">Servicios en {location.name}</h2>
                         
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <div className="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-amber-500/30 transition-colors">
-                                <h3 className="text-xl font-bold text-amber-400 mb-4 font-[Cinzel]">Magia para Bodas</h3>
-                                <p className="text-slate-400 text-justify text-xs leading-relaxed">
+                            <Link href="/particulares/bodas" className="group bg-white/5 p-6 rounded-xl border border-white/10 hover:border-amber-500/30 transition-all hover:bg-white/[0.07]">
+                                <h3 className="text-xl font-bold text-amber-400 mb-4 font-[Cinzel] group-hover:text-amber-300 transition-colors">Magia para Bodas</h3>
+                                <p className="text-slate-400 text-justify text-xs leading-relaxed mb-4">
                                     Dinamizo el cóctel o el banquete en las fincas más exclusivas de la zona. Como experto en bodas, garantizo un entretenimiento elegante que integra a todos los invitados a través del asombro compartido.
                                 </p>
-                            </div>
+                                <span className="text-[10px] text-amber-500 font-bold uppercase tracking-widest flex items-center gap-2">
+                                    Ver propuesta bodas <span className="group-hover:translate-x-1 transition-transform">→</span>
+                                </span>
+                            </Link>
 
-                            <div className="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-amber-500/30 transition-colors">
-                                <h3 className="text-xl font-bold text-amber-400 mb-4 font-[Cinzel]">Eventos Corporativos</h3>
-                                <p className="text-slate-400 text-justify text-xs leading-relaxed">
+                            <Link href="/empresas" className="group bg-white/5 p-6 rounded-xl border border-white/10 hover:border-amber-500/30 transition-all hover:bg-white/[0.07]">
+                                <h3 className="text-xl font-bold text-amber-400 mb-4 font-[Cinzel] group-hover:text-amber-300 transition-colors">Eventos Corporativos</h3>
+                                <p className="text-slate-400 text-justify text-xs leading-relaxed mb-4">
                                     Ilusionismo estratégico para empresas en {location.name}. Ideal para cenas de gala, team building y lanzamientos de producto, asociando tu marca con la innovación y el impacto positivo.
                                 </p>
-                            </div>
+                                <span className="text-[10px] text-amber-500 font-bold uppercase tracking-widest flex items-center gap-2">
+                                    Ver servicios empresa <span className="group-hover:translate-x-1 transition-transform">→</span>
+                                </span>
+                            </Link>
 
-                            <div className="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-amber-500/30 transition-colors">
-                                <h3 className="text-xl font-bold text-amber-400 mb-4 font-[Cinzel]">Celebraciones VIP</h3>
-                                <p className="text-slate-400 text-justify text-xs leading-relaxed">
+                            <Link href="/particulares/eventos" className="group bg-white/5 p-6 rounded-xl border border-white/10 hover:border-amber-500/30 transition-all hover:bg-white/[0.07]">
+                                <h3 className="text-xl font-bold text-amber-400 mb-4 font-[Cinzel] group-hover:text-amber-300 transition-colors">Celebraciones VIP</h3>
+                                <p className="text-slate-400 text-justify text-xs leading-relaxed mb-4">
                                     Lleva la magia de primer nivel directamente a tu casa o local privado en {location.name}. Un show participativo y personalizado que dejará a tus amigos y familiares sin palabras.
                                 </p>
-                            </div>
+                                <span className="text-[10px] text-amber-500 font-bold uppercase tracking-widest flex items-center gap-2">
+                                    Ver eventos privados <span className="group-hover:translate-x-1 transition-transform">→</span>
+                                </span>
+                            </Link>
                         </div>
                     </section>
 
