@@ -5,7 +5,7 @@ const location = locations.find(l => l.slug === 'pozuelo');
 
 export const metadata = {
   title: {
-    absolute: location.meta_title || `${location.title} | ¡ngel Ruiz | Mago e Ilusionista`
+    absolute: location.meta_title || `${location.title} | √Ångel Ruiz | Mago e Ilusionista`
   },
   description: location.description,
   alternates: {
