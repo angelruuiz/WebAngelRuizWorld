@@ -50,7 +50,8 @@ export default function EmpresasPage() {
         "@type": "BreadcrumbList",
         "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
-            { "@type": "ListItem", "position": 2, "name": "Empresas", "item": "https://angelruiz.world/empresas" }
+            { "@type": "ListItem", "position": 2, "name": "Mago Sierra Madrid", "item": "https://angelruiz.world/mago-sierra-madrid" },
+            { "@type": "ListItem", "position": 3, "name": "Empresas", "item": "https://angelruiz.world/empresas" }
         ]
     };
 
@@ -76,42 +77,60 @@ export default function EmpresasPage() {
                 <section className="pt-24 pb-16 px-6 max-w-6xl mx-auto relative z-10">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-20">
 
-                        <div className="relative md:sticky md:top-32 h-[350px] md:h-[500px] rounded-2xl overflow-hidden border border-slate-800 shadow-xl order-2 md:order-1">
+                        <div className="relative md:sticky md:top-32 h-[350px] md:h-[500px] rounded-2xl overflow-hidden border border-slate-800 shadow-xl order-2 md:order-1 group bg-slate-900/50">
                             <Image
                                 src="/images/mago-empresas-madrid-angel-ruiz.svg"
-                                alt="Angel Ruiz - Logo Minimalista Vectorizado"
+                                alt="Mago corporativo Angel Ruiz - Ilusionismo profesional para empresas en Madrid y zona noroeste"
                                 fill
-                                className="object-contain p-12 transition-all duration-1000"
+                                className="object-contain p-12 transition-all duration-700 group-hover:scale-105"
+                                priority
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent" />
                         </div>
 
                         <div className="order-1 md:order-2">
-                            <h1 className="text-4xl md:text-5xl font-[Cinzel] text-white mb-6 border-b border-amber-500/50 pb-2 font-bold leading-tight">
+                             <p className="text-amber-500 uppercase tracking-widest text-[10px] font-bold mb-2 drop-shadow-md">
+                                Soluciones Corporativas | Madrid Noroeste
+                            </p>
+                            <h1 className="text-4xl md:text-5xl font-[Cinzel] text-white mb-6 border-b border-amber-500/50 pb-2 font-bold leading-tight uppercase">
                                 Mago para Empresas
                             </h1>
 
                              <div className="space-y-6 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
                                 <p>
-                                    <span className="text-amber-400 font-bold">Magia corporativa diseñada para fortalecer la imagen de tu marca y la cohesión de tu equipo en Madrid.</span>{' '}
-                                    Angel Ruiz transforma convenciones ordinarias en experiencias extraordinarias. Sorprende a tus empleados y clientes con una actividad de ilusionismo innovadora que fomenta el asombro compartido y el engagement real con tu compañía.
+                                    <span className="text-amber-400 font-bold underline decoration-amber-500/30">Fortalece la imagen de tu marca a través del asombro.</span>{' '}
+                                    Angel Ruiz transforma convenciones ordinarias en experiencias extraordinarias. Sorprende a tus empleados y clientes con una actividad de ilusionismo innovadora que fomenta el engagement real con tu compañía.
+                                </p>
+
+                                {/* Corporate Features Grid */}
+                                <div className="grid grid-cols-1 gap-4 py-8 border-y border-white/5 my-8">
+                                    <div className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all">
+                                        <div className="w-10 h-10 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-500 font-bold">A</div>
+                                        <div>
+                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase tracking-wider">Cenas de Gala</h4>
+                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Magia de cerca entre mesas para amenizar la velada.</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all">
+                                        <div className="w-10 h-10 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-500 font-bold">B</div>
+                                        <div>
+                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase tracking-wider">Presentaciones de Producto</h4>
+                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Ilusionismo guionizado para destacar su mensaje.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <p>
+                                    Si buscas un <strong>mago para empresas en Torrelodones</strong>, Las Rozas o Pozuelo, mi propuesta combina elegancia, humor inteligente y un profesionalismo que respeta escrupulosamente el protocolo business en el eje de la <strong>A-6</strong>.
                                 </p>
 
                                 <p>
-                                    Como experto en <strong>eventos Madrid</strong> corporativos, ofrezco soluciones personalizadas: desde magia de cóctel itinerante hasta presentaciones de producto donde el ilusionismo refuerza tu mensaje de marketing. Si buscas un <strong>mago para empresas en Torrelodones</strong>, Las Rozas o Pozuelo, mi propuesta combina elegancia, humor inteligente y un profesionalismo que respeta escrupulosamente el protocolo business.
-                                </p>
-
-                                <p>
-                                    La <strong>magia de cerca Madrid</strong> es la herramienta de RRPP definitiva para cenas de gala, ferias y sesiones de team building. Rompe las barreras sociales al instante, facilitando el networking mientras los asistentes viven lo imposible a escasos centímetros. Disponible en toda la zona noroeste con facturación inmediata y total flexibilidad logística.
-                                </p>
-
-                                <p className="text-amber-500/90 italic font-bold border-l-2 border-amber-500 pl-4 py-2 mt-4 text-sm md:text-base">
-                                    Diferencia tu próximo evento corporativo con una propuesta de magia exclusiva. Con más de una década de experiencia en el sector business, te garantizo un éxito total y un retorno en forma de admiración de tu equipo.
+                                    La <strong>magia de cerca Madrid</strong> es la herramienta de RRPP definitiva para ferias y sesiones de team building. Facilita el networking mientras los asistentes viven lo imposible. Disponible con facturación inmediata y total flexibilidad en la <strong>Sierra de Madrid</strong>.
                                 </p>
                             </div>
 
                             <div className="mt-12">
-                                <ContactButtonClient label="Solicitar Presupuesto Corporativo" />
+                                <ContactButtonClient label="Solicitar Dossier para Empresas" />
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,6 @@
 import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
+import Script from 'next/script';
 
 export const metadata = {
   metadataBase: new URL('https://angelruiz.world'),
@@ -65,7 +66,7 @@ const schemaOrg = {
   logo: 'https://angelruiz.world/icon.jpg',
   image: 'https://angelruiz.world/images/foto-bio.png',
   priceRange: '€€€',
-  telephone: '+34600000000', // Reemplazar con real si es necesario o dejar genérico
+  telephone: '+34648055636',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Madrid',
@@ -86,7 +87,12 @@ const schemaOrg = {
     { '@type': 'City', name: 'Aravaca' },
     { '@type': 'City', name: 'Boadilla del Monte' },
     { '@type': 'City', name: 'Villalba' },
-    { '@type': 'City', name: 'Galapagar' }
+    { '@type': 'City', name: 'Galapagar' },
+    { '@type': 'City', name: 'Collado Villalba' },
+    { '@type': 'City', name: 'El Escorial' },
+    { '@type': 'City', name: 'San Lorenzo de El Escorial' },
+    { '@type': 'City', name: 'Hoyo de Manzanares' },
+    { '@type': 'City', name: 'Las Matas' }
   ],
   sameAs: [
     'https://www.instagram.com/angellruuizz',
@@ -99,6 +105,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es" className="scroll-smooth">
       <body className="antialiased min-h-screen selection:bg-amber-500/30 selection:text-amber-200">
+        <Script 
+          src="https://cdn.trustindex.io/loader.js?5feeac5690002876db7628d0fd2" 
+          strategy="lazyOnload" 
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}

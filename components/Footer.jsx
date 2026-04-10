@@ -13,6 +13,12 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                             <div className="absolute inset-0 bg-amber-500 w-0 group-hover:w-full transition-all duration-300 ease-out z-0" />
                         </button>
 
+                        <div className={`mt-10 p-6 rounded-2xl ${isLight ? 'bg-slate-100 border-slate-200' : 'bg-slate-950/40 border-white/5'} border text-sm leading-relaxed`}>
+                            <p className={`${isLight ? 'text-slate-700' : 'text-slate-400'} italic text-justify`}>
+                                <strong className="text-amber-500">Nota de Servicio:</strong> Con residencia y estudio principal en <strong className={isLight ? 'text-slate-950' : 'text-white'}>Torrelodones</strong>, Angel Ruiz ofrece sus servicios de ilusionismo profesional y magia de cerca en toda la <strong className={isLight ? 'text-slate-950' : 'text-white'}>Sierra de Madrid y Zona Noroeste</strong>. Disponibilidad total para eventos exclusivos, bodas y empresas con la cercanía y confianza de un mago local.
+                            </p>
+                        </div>
+
                         <div className="mt-8 pt-8 border-t border-white/5">
                             <p className="text-amber-500/60 uppercase tracking-[0.2em] text-[10px] font-bold mb-4">Compartir Experiencia:</p>
                             <div className="flex gap-4">
@@ -57,6 +63,7 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                             <a href="https://x.com/angellruuizz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">X</a>
                             <a href="https://facebook.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Facebook</a>
                             <div className="flex flex-wrap md:justify-end gap-x-4 gap-y-2 mt-2 text-xs opacity-70">
+                                <a href="/mago-sierra-madrid" className="hover:text-amber-400 transition-colors font-bold text-amber-500">Mago Sierra de Madrid</a>
                                 <a href="/mago-torrelodones" className="hover:text-amber-400 transition-colors font-bold">Mago en Torrelodones</a>
                                 <a href="/mago-galapagar" className="hover:text-amber-400 transition-colors">Galapagar</a>
                                 <a href="/mago-las-rozas" className="hover:text-amber-400 transition-colors">Las Rozas</a>
@@ -64,6 +71,8 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                                 <a href="/mago-majadahonda" className="hover:text-amber-400 transition-colors">Majadahonda</a>
                                 <a href="/mago-pozuelo" className="hover:text-amber-400 transition-colors">Pozuelo</a>
                                 <a href="/mago-boadilla" className="hover:text-amber-400 transition-colors">Boadilla</a>
+                                <a href="/mago-villalba" className="hover:text-amber-400 transition-colors">Villalba</a>
+                                <a href="/mago-el-escorial" className="hover:text-amber-400 transition-colors">El Escorial</a>
                             </div>
                         </div>
                         <div className="pt-8 text-sm text-slate-500"><p>© 2026 Angel Ruiz. Todos los derechos reservados.</p></div>

@@ -71,7 +71,14 @@ export default function LocationPageTemplate({ location, allLocations }) {
     const faqSchema = {
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        "mainEntity": [
+        "mainEntity": location.faqs ? location.faqs.map(f => ({
+            "@type": "Question",
+            "name": f.question,
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": f.answer
+            }
+        })) : [
             { "@type": "Question", "name": `¿Ofreces servicios de mago en ${location.name} a domicilio?`, "acceptedAnswer": { "@type": "Answer", "text": `Sí, como mago profesional en ${location.name}, me desplazo a domicilios particulares para cumpleaños, cenas privadas y celebraciones familiares en zonas como ${location.neighborhoods}.` } },
             { "@type": "Question", "name": "¿En qué tipo de eventos trabajas?", "acceptedAnswer": { "@type": "Answer", "text": "Estoy especializado en magia de cerca para bodas, eventos corporativos y celebraciones exclusivas, adaptando mi repertorio a cada tipo de público y espacio." } },
             { "@type": "Question", "name": "¿Con cuánta antelación debo reservar?", "acceptedAnswer": { "@type": "Answer", "text": `Para eventos en ${location.name} y la zona noroeste, recomiendo reservar con al menos 2-4 semanas de antelación para garantizar disponibilidad en la fecha deseada.` } }
@@ -96,10 +103,10 @@ export default function LocationPageTemplate({ location, allLocations }) {
                     <section className="mb-16">
                         <div className="max-w-3xl">
                             <p className="text-amber-500 uppercase tracking-widest text-[10px] font-bold mb-2 drop-shadow-md">
-                                Ilusionismo de Proximidad en {location.name}
+                                {location.headline || `Ilusionismo de Proximidad en ${location.name}`}
                             </p>
                             <h1 className="text-4xl md:text-6xl font-[Cinzel] text-white mb-6 border-b border-amber-500/50 pb-2 font-bold leading-tight">
-                                {location.title}
+                                {location.h1_custom || location.title}
                             </h1>
                             <p className="text-lg md:text-xl text-slate-300 font-medium italic">
                                 Magia de cerca exclusiva para bodas, eventos y empresas.
@@ -109,12 +116,12 @@ export default function LocationPageTemplate({ location, allLocations }) {
 
                     <section className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-16">
                         <div className="space-y-6 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
-                            <h2 className="text-2xl font-[Cinzel] text-amber-500 font-bold mb-4">Magia Profesional en tu Ciudad</h2>
+                            <h2 className="text-2xl font-[Cinzel] text-amber-500 font-bold mb-4">{location.h2_main || "Magia Profesional en tu Ciudad"}</h2>
                             <p>
-                                Angel Ruiz es el <strong>ilusionista en {location.name}</strong> que transformará tu próximo evento en algo inolvidable. Especializado en la magia de cerca más sofisticada, ofrece un espectáculo donde lo imposible sucede a escasos centímetros de los espectadores, ideal para romper el hielo y crear conexiones reales entre tus invitados.
+                                {location.text_main_1 || `Angel Ruiz es el ilusionista en ${location.name} que transformará tu próximo evento en algo inolvidable. Especializado en la magia de cerca más sofisticada, ofrece un espectáculo donde lo imposible sucede a escasos centímetros de los espectadores, ideal para romper el hielo y crear conexiones reales entre tus invitados.`}
                             </p>
                             <p>
-                                Con una amplia trayectoria en la zona noroeste de Madrid, Angel conoce los mejores espacios de <strong>{location.name}</strong> y ofrece una logística impecable. Su estilo combina la elegancia del ilusionismo clásico con un ritmo moderno y participativo, asegurando el éxito en cenas de empresa, cócteles de boda o fiestas privadas de alta gama.
+                                {location.text_main_2 || `Con una amplia trayectoria en la zona noroeste de Madrid, Angel conoce los mejores espacios de ${location.name} y ofrece una logística impecable. Su estilo combina la elegancia del ilusionismo clásico con un ritmo moderno y participativo, asegurando el éxito en cenas de empresa, cócteles de boda o fiestas privadas de alta gama.`}
                             </p>
                         </div>
                         <div className="relative h-[300px] md:h-[450px] rounded-2xl overflow-hidden border border-slate-800 shadow-xl">

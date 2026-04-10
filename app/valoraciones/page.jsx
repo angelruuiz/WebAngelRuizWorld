@@ -25,7 +25,7 @@ export default function ValoracionesPage() {
     ];
 
     const reviewsCount = reviewsData.length;
-    const ratingValue = 4.9;
+    const ratingValue = 5.0;
 
     const schemaData = {
         "@context": "https://schema.org",

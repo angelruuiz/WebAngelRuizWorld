@@ -1,7 +1,7 @@
 import { locations } from '@/lib/locations';
 import LocationPageTemplate from '@/components/LocationPageTemplate';
 
-const location = locations.find(l => l.slug === 'las-matas');
+const location = locations.find(l => l.slug === 'el-escorial');
 
 export const metadata = {
   title: {
@@ -9,7 +9,7 @@ export const metadata = {
   },
   description: location.description,
   alternates: {
-    canonical: `/mago-las-matas`,
+    canonical: `/mago-el-escorial`,
   },
   keywords: location.keywords,
 };

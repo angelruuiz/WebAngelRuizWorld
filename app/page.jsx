@@ -58,25 +58,24 @@ const SEOContent = () => {
                             </div>
                         </details>
 
-                        <details className="group border-b border-white/5 pb-2 cursor-pointer text-slate-400">
+                        <details open className="group border-b border-white/5 pb-2 cursor-pointer text-slate-400">
                             <summary className="list-none text-slate-200 font-bold flex justify-between items-center group-open:text-amber-500 transition-colors py-2 uppercase tracking-widest text-[10px]">
-                                Magia especializada para Bodas
+                                Cobertura Sierra de Madrid y Zona Noroeste
                                 <span className="text-amber-500 group-open:rotate-180 transition-transform">↓</span>
                             </summary>
-                            <div className="mt-2 leading-relaxed space-y-2">
-                                <p>En el sector nupcial, la figura del <strong>mago para bodas en Madrid</strong> es esencial para cubrir los tiempos de espera, como el cóctel de bienvenida o el banquete.</p>
-                                <p>La magia itinerante permite que familiares y amigos que no se conocen conecten instantáneamente a través del asombro, haciendo que tu boda sea recordada durante años.</p>
-                            </div>
-                        </details>
-
-                        <details className="group border-b border-white/5 pb-2 cursor-pointer text-slate-400">
-                            <summary className="list-none text-slate-200 font-bold flex justify-between items-center group-open:text-amber-500 transition-colors py-2 uppercase tracking-widest text-[10px]">
-                                Cobertura en Torrelodones y Zona Noroeste
-                                <span className="text-amber-500 group-open:rotate-180 transition-transform">↓</span>
-                            </summary>
-                            <div className="mt-2 leading-relaxed space-y-2">
-                                <p>Si buscas un <strong>mago profesional en Torrelodones y el norte de Madrid</strong>, Angel Ruiz ofrece total disponibilidad en la zona noroeste. Especializado en <strong>eventos Madrid</strong> de alto standing, su servicio de ilusionismo se desplaza habitualmente a localidades cercanas.</p>
-                                <p>Disponible para actuaciones y eventos privados en <strong>Las Rozas, Majadahonda, El Escorial, Galapagar, Pozuelo de Alarcón y Boadilla del Monte</strong>. La cercanía permite ofrecer soluciones de <strong>mago de cerca Madrid</strong> con mayor flexibilidad horaria para cenas privadas, comuniones y fiestas exclusivas en estas zonas residenciales.</p>
+                            <div className="mt-2 leading-relaxed space-y-4">
+                                <p>Si buscas un <strong>mago profesional en la sierra de Madrid</strong>, Angel Ruiz ofrece total disponibilidad en la zona del noroeste y el eje A-6 desde su base en <strong>Torrelodones</strong>.</p>
+                                <div className="bg-white/5 p-4 rounded-xl border border-white/5">
+                                    <p className="mb-3 text-[10px] text-amber-500 uppercase font-bold tracking-widest">Servicio Local Garantizado:</p>
+                                    <div className="flex flex-wrap gap-x-3 gap-y-2 text-[9px] uppercase font-bold">
+                                        <a href="/mago-sierra-madrid" className="text-white hover:text-amber-500 transition-all border-b border-amber-500/20">Ver Hub Sierra Madrid</a>
+                                        <a href="/mago-las-rozas" className="hover:text-amber-400">Las Rozas</a>
+                                        <a href="/mago-villalba" className="hover:text-amber-400">Villalba</a>
+                                        <a href="/mago-galapagar" className="hover:text-amber-400">Galapagar</a>
+                                        <a href="/mago-pozuelo" className="hover:text-amber-400">Pozuelo</a>
+                                    </div>
+                                    <p className="mt-3 text-[10px] opacity-60 leading-tight">Ideal para cenas privadas, comuniones y eventos corporativos en la <strong>Sierra de Guadarrama</strong> sin complicaciones logísticas.</p>
+                                </div>
                             </div>
                         </details>
                     </div>
@@ -87,40 +86,7 @@ const SEOContent = () => {
 };
 
 export default function Home() {
-    const structuredData = {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Ángel Ruiz | Mago e Ilusionista",
-        "url": "https://angelruiz.world",
-        "logo": "https://angelruiz.world/images/foto-bio.png",
-        "image": "https://angelruiz.world/images/foto-bio.png",
-        "description": "Ilusionista profesional especializado en Magia de Cerca y Magia de Cóctel en Madrid y Torrelodones.",
-        "telephone": "+34648055636",
-        "priceRange": "$$",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Madrid",
-            "addressRegion": "Madrid",
-            "addressCountry": "ES"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "40.4168",
-            "longitude": "-3.7038"
-        },
-        "sameAs": [
-            "https://www.instagram.com/angelruizmagia/",
-            "https://www.facebook.com/angelruizmagia/"
-        ]
-    };
-
     return (
-        <>
-            <script 
-                type="application/ld+json" 
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} 
-            />
-            <HomeClient seoContent={<SEOContent />} />
-        </>
+        <HomeClient seoContent={<SEOContent />} />
     );
 }
