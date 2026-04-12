@@ -72,7 +72,7 @@ export default async function BlogPost({ params }) {
   };
 
   return (
-    <article className="max-w-5xl mx-auto px-6 liquid-glass-card p-8 md:p-12 mt-8">
+    <article className="max-w-5xl mx-auto px-6 liquid-glass-card p-8 md:p-12 mt-2">
       <ReadingProgress />
       <script
         type="application/ld+json"
