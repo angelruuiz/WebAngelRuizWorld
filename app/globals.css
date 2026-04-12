@@ -31,38 +31,38 @@ video { object-fit: cover; }
 
 /* Blog Specific Styles */
 .blog-content {
-    @apply text-[17px] md:text-[19px] leading-[1.8] text-slate-900 font-light max-w-none;
+    @apply text-[17px] md:text-[19px] leading-[1.8] text-slate-300 font-light max-w-none;
 }
 
 .blog-content p {
-    @apply mb-8 text-justify;
+    @apply mb-8 text-justify opacity-90;
 }
 
 .blog-content h2, .blog-content h1 {
-    @apply font-[Cinzel] font-bold text-slate-950 mt-16 mb-8;
+    @apply font-[Cinzel] font-bold text-white mt-16 mb-8;
 }
 
 .blog-content h2 { @apply text-3xl border-b border-amber-500/20 pb-4; }
 
 .blog-content strong {
-    @apply font-bold text-slate-950;
+    @apply font-bold text-amber-400/90 italic;
 }
 
 .blog-content h3 {
-    @apply mt-14 mb-8 p-8 bg-amber-500/5 border-l-4 border-amber-600 font-[Playfair_Display] not-italic text-2xl text-slate-950;
+    @apply mt-14 mb-8 p-8 bg-white/5 border-l-4 border-amber-500 font-[Playfair_Display] not-italic text-2xl text-slate-100;
 }
 
 .blog-content h3 + p {
-    @apply bg-amber-500/5 p-8 pt-0 mb-14 border-l-4 border-amber-600 text-slate-800 font-normal;
+    @apply bg-white/5 p-8 pt-0 mb-14 border-l-4 border-amber-500 text-slate-300 font-normal;
 }
 
 .blog-content h3::before {
     content: "?";
-    @apply inline-block mr-4 text-amber-600 font-bold opacity-70;
+    @apply inline-block mr-4 text-amber-500 font-bold opacity-70;
 }
 
 .blog-content blockquote {
-    @apply border-l-4 border-amber-500 pl-8 italic text-slate-600 my-12 text-xl leading-relaxed;
+    @apply border-l-4 border-amber-500 pl-8 italic text-slate-400 my-12 text-xl leading-relaxed bg-white/[0.02] py-6 rounded-r-xl;
 }
 
 .blog-content ul, .blog-content ol {
@@ -70,6 +70,6 @@ video { object-fit: cover; }
 }
 
 .blog-content li {
-    @apply list-disc marker:text-amber-500 pl-2;
+    @apply list-disc marker:text-amber-500 pl-2 text-slate-300;
 }
 

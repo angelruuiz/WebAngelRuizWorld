@@ -9,15 +9,15 @@ export default function BlogLayout({ children }) {
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   return (
-    <div className="bg-[#F8F5F1] min-h-screen text-slate-950 overflow-x-hidden selection:bg-amber-500/20 selection:text-amber-950">
-      <MagicCursor isLight={true} />
-      <Navbar onOpenContact={() => setIsContactOpen(true)} isLight={true} />
+    <div className="bg-slate-950 min-h-screen text-slate-200 overflow-x-hidden selection:bg-amber-500/30 selection:text-amber-200">
+      <MagicCursor isLight={false} />
+      <Navbar onOpenContact={() => setIsContactOpen(true)} isLight={false} />
       
-      <main className="pt-32 pb-20">
+      <main className="pt-32 pb-20 relative z-10">
         {children}
       </main>
 
-      <Footer onOpenContact={() => setIsContactOpen(true)} isLight={true} />
+      <Footer onOpenContact={() => setIsContactOpen(true)} isLight={false} />
       <ContactFormModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </div>
   );
