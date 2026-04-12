@@ -2,8 +2,8 @@ import { getSortedPostsData } from '@/lib/blog';
 import BlogListingClient from '@/components/BlogListingClient';
 
 export const metadata = {
-  title: 'Blog | Angel Ruiz Magia',
-  description: 'Preguntas frecuentes y artículos sobre magia para bodas y eventos en Madrid.',
+  title: 'Blog de Magia en Madrid | Consejos y Contratación para Eventos',
+  description: 'Descubre todo lo que necesitas saber antes de contratar un mago en Madrid: consejos para bodas, eventos de empresa y los secretos mejor guardados del ilusionismo.',
 };
 
 export default function BlogIndex() {

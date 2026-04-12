@@ -41,10 +41,10 @@ export default function BlogListingClient({ posts }) {
                         transition={{ duration: 1, ease: "easeOut" }}
                     >
                         <p className="text-[9px] font-bold tracking-[0.5em] text-amber-500 uppercase mb-4 opacity-70">
-                            Urban Magic & High-End Content
+                            Consejos para contratar un mago en Madrid
                         </p>
                         <h1 className="text-4xl md:text-6xl font-black urban-title mb-6 leading-none text-white">
-                            INSIGHTS<br/><span className="text-amber-500">MÁGICOS</span>
+                            BLOG DE MAGIA<br/><span className="text-amber-500">PARA EVENTOS</span>
                         </h1>
                         <div className="h-[2px] w-12 bg-white/20 mx-auto rounded-full" />
                     </motion.div>

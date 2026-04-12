@@ -146,7 +146,7 @@ export default async function BlogPost({ params }) {
         <aside className="lg:col-span-4 self-start sticky top-32">
           <div className="liquid-glass-card p-10 !rounded-[2.5rem]">
             <h4 className="text-[11px] font-black tracking-[0.4em] text-white uppercase mb-10 pb-4 border-b border-white/10">
-              RELATED
+              ARTÍCULOS RELACIONADOS
             </h4>
             <div className="space-y-12">
               {relatedPosts.map((post) => (
