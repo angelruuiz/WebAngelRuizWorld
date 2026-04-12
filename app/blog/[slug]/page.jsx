@@ -72,7 +72,7 @@ export default async function BlogPost({ params }) {
   };
 
   return (
-    <article className="max-w-7xl mx-auto px-6">
+    <article className="max-w-7xl mx-auto px-6 liquid-glass-card p-12 md:p-20 mt-10">
       <ReadingProgress />
       <script
         type="application/ld+json"
@@ -89,30 +89,22 @@ export default async function BlogPost({ params }) {
         />
       )}
 
-      {/* Breadcrumb */}
-      <nav className="mb-12 text-[10px] font-bold tracking-[0.2em] text-amber-800/60 uppercase">
-        <Link href="/" className="hover:text-amber-800 transition-colors">Inicio</Link>
-        <span className="mx-2">/</span>
-        <Link href="/blog" className="hover:text-amber-800 transition-colors">Blog</Link>
-        <span className="mx-2">/</span>
-        <span className="text-slate-400">{postData.title}</span>
-      </nav>
+      {/* Floating Meta */}
+      <div className="flex flex-wrap items-center gap-4 text-[10px] font-black tracking-widest text-amber-500 uppercase mb-12">
+        <Link href="/blog" className="px-4 py-2 bg-white/5 rounded-full border border-white/10 hover:bg-white/10 transition-all">← Volver al Blog</Link>
+        <span className="w-2 h-2 rounded-full bg-white/20" />
+        <span>{postData.category}</span>
+        <span className="w-2 h-2 rounded-full bg-white/20" />
+        <span>{postData.date}</span>
+      </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
         <div className="lg:col-span-8">
-          <header className="mb-16">
-            <span className="text-[11px] font-bold tracking-[0.3em] text-amber-700 uppercase mb-6 block">
-              {postData.category}
-            </span>
-            <h1 className="text-5xl md:text-7xl font-[Playfair_Display] text-white mb-8 leading-tight italic">
+          <header className="mb-20">
+            <h1 className="text-6xl md:text-[5.5rem] urban-title mb-10 leading-[0.9] text-white">
               {postData.title}
             </h1>
-            <div className="flex items-center gap-6 text-[10px] font-bold tracking-widest text-slate-400 uppercase">
-              <span>{postData.date}</span>
-              <span className="w-1 h-1 bg-amber-500 rounded-full" />
-              <span>{postData.readTime}</span>
-            </div>
-            <div className="mt-10 h-[1px] w-full bg-gradient-to-r from-amber-800/20 via-amber-800/10 to-transparent" />
+            <div className="h-[4px] w-24 bg-amber-500 rounded-full" />
           </header>
 
           <div 
@@ -127,25 +119,24 @@ export default async function BlogPost({ params }) {
 
           {/* Custom FAQ block styling explained in CSS module or global style */}
           
-          <div className="mt-24 p-12 bg-slate-900/40 border border-white/5 rounded-2xl relative overflow-hidden text-center backdrop-blur-xl">
-            <div className="absolute top-0 left-0 w-1 h-full bg-amber-500/30" />
-            <MessageSquare className="w-10 h-10 text-amber-500/20 mx-auto mb-6" />
-            <h3 className="text-3xl font-[Playfair_Display] text-white mb-4 italic">¿Buscas magia para tu evento?</h3>
-            <p className="text-slate-400 font-light mb-8 max-w-md mx-auto text-lg">
-              Descubre cómo puedo elevar el nivel de tu celebración con las especialidades de ilusionismo más exclusivas.
+          <div className="mt-24 p-12 liquid-glass-card relative overflow-hidden text-center !rounded-[3rem] border-amber-500/20">
+            <MessageSquare className="w-12 h-12 text-amber-500 mx-auto mb-8" />
+            <h3 className="text-4xl urban-title mb-6 leading-tight">¿Buscas magia<br/>para tu evento?</h3>
+            <p className="text-slate-400 font-light mb-10 max-w-sm mx-auto text-lg leading-relaxed">
+              Eleva el nivel de tu celebración con ilusionismo diseñado para impactar.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-6">
               <Link 
                 href="/particulares" 
-                className="px-8 py-3 bg-amber-600 text-white font-bold uppercase tracking-widest text-[10px] hover:bg-amber-500 transition-all rounded-full shadow-lg shadow-amber-600/10"
+                className="px-10 py-4 bg-white text-black font-black uppercase tracking-tighter text-sm hover:scale-105 transition-all rounded-full"
               >
-                Eventos para Particulares
+                Particulares
               </Link>
               <Link 
                 href="/empresas" 
-                className="px-8 py-3 border border-amber-700 text-amber-800 font-bold uppercase tracking-widest text-[10px] hover:bg-amber-50 transition-all rounded-full"
+                className="px-10 py-4 border-2 border-white text-white font-black uppercase tracking-tighter text-sm hover:bg-white hover:text-black transition-all rounded-full"
               >
-                Eventos para Empresas
+                Empresas
               </Link>
             </div>
           </div>
@@ -153,15 +144,15 @@ export default async function BlogPost({ params }) {
 
         {/* Sidebar */}
         <aside className="lg:col-span-4 self-start sticky top-32">
-          <div className="bg-slate-900/40 p-10 border border-white/5 rounded-2xl backdrop-blur-xl">
-            <h4 className="text-[10px] font-bold tracking-[0.3em] text-amber-500 uppercase mb-8 pb-4 border-b border-white/10">
-              Otros artículos
+          <div className="liquid-glass-card p-10 !rounded-[2.5rem]">
+            <h4 className="text-[11px] font-black tracking-[0.4em] text-white uppercase mb-10 pb-4 border-b border-white/10">
+              RELATED
             </h4>
-            <div className="space-y-10">
+            <div className="space-y-12">
               {relatedPosts.map((post) => (
                 <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
-                  <span className="text-[9px] font-bold text-slate-500 uppercase tracking-widest block mb-2">{post.category}</span>
-                  <h5 className="text-xl font-[Playfair_Display] text-white leading-tight group-hover:text-amber-500 transition-colors italic">
+                  <span className="text-[10px] font-black text-amber-500 uppercase tracking-widest block mb-4">{post.category}</span>
+                  <h5 className="text-2xl urban-title leading-tight group-hover:text-amber-500 transition-colors">
                     {post.title}
                   </h5>
                 </Link>

@@ -9,7 +9,11 @@ export default function BlogLayout({ children }) {
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   return (
-    <div className="bg-slate-950 min-h-screen text-slate-200 overflow-x-hidden selection:bg-amber-500/30 selection:text-amber-200">
+    <div className="bg-[#020617] min-h-screen text-slate-200 overflow-x-hidden selection:bg-amber-500/30 selection:text-amber-200 relative">
+      {/* Background Animated Blobs for Liquid Feel */}
+      <div className="fixed top-[-10%] left-[-10%] w-[40%] h-[40%] bg-amber-600/20 bg-blob pointer-events-none" />
+      <div className="fixed bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-600/10 bg-blob pointer-events-none animation-delay-4000" />
+      
       <MagicCursor isLight={false} />
       <Navbar onOpenContact={() => setIsContactOpen(true)} isLight={false} />
       
