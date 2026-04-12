@@ -34,20 +34,20 @@ export const ReadingProgress = () => {
     });
 
     return (
-        <div className="fixed top-0 left-0 right-0 h-1 bg-white/5 z-[100006]">
+        <div className="fixed bottom-0 left-0 right-0 h-1 bg-white/10 z-[100006]">
             {/* The Laser Track Background */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
             
             <motion.div
-                className="absolute top-0 left-0 bottom-0 bg-gradient-to-r from-amber-600 via-amber-400 to-white origin-left shadow-[0_0_15px_rgba(245,158,11,0.5)]"
+                className="absolute top-0 bottom-0 left-0 bg-gradient-to-r from-amber-600 via-amber-400 to-white origin-left shadow-[0_0_20px_rgba(245,158,11,0.6)]"
                 style={{ scaleX, width: '100%' }}
             />
             
-            {/* Moving Sparkle across the top edge */}
+            {/* Moving Sparkle across the bottom edge */}
             <motion.div 
-                className="absolute top-0 bottom-0 w-24 bg-gradient-to-r from-transparent via-white/80 to-transparent blur-[4px] pointer-events-none"
+                className="absolute top-0 bottom-0 w-32 bg-gradient-to-r from-transparent via-white/90 to-transparent blur-[6px] pointer-events-none"
                 style={{ 
-                    left: useTransform(scaleX, [0, 1], ["-10%", "100%"]),
+                    left: useTransform(scaleX, [0, 1], ["-15%", "100%"]),
                 }}
             />
         </div>

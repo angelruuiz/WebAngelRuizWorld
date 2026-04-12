@@ -29,20 +29,20 @@ export default function BlogListingClient({ posts }) {
             <div className="absolute top-0 -right-4 w-72 h-72 bg-purple-600 bg-blob animation-delay-2000" />
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-amber-400 bg-blob animation-delay-4000" />
 
-            <main className="max-w-6xl mx-auto px-6 pt-8 pb-16 relative z-10">
-                <header className="text-center mb-10">
+            <main className="max-w-[1440px] mx-auto px-6 pt-8 pb-12 relative z-10">
+                <header className="text-center mb-8">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1, ease: "easeOut" }}
                     >
-                        <p className="text-[9px] font-bold tracking-[0.5em] text-amber-500 uppercase mb-4 opacity-70">
+                        <p className="text-[8px] font-bold tracking-[0.5em] text-amber-500 uppercase mb-3 opacity-70">
                             Consejos para contratar un mago en Madrid
                         </p>
-                        <h1 className="text-3xl md:text-5xl font-black urban-title mb-6 leading-none text-white">
+                        <h1 className="text-2xl md:text-4xl font-black urban-title mb-4 leading-none text-white italic tracking-tighter">
                             BLOG DE MAGIA<br/><span className="text-amber-500">PARA EVENTOS</span>
                         </h1>
-                        <div className="h-[2px] w-12 bg-white/20 mx-auto rounded-full" />
+                        <div className="h-[2px] w-10 bg-white/20 mx-auto rounded-full" />
                     </motion.div>
                 </header>
 
@@ -55,18 +55,18 @@ export default function BlogListingClient({ posts }) {
                     {posts.map((post) => (
                         <motion.div key={post.slug} variants={item}>
                             <Link href={`/blog/${post.slug}`} className="group block h-full">
-                                <article className="liquid-glass-card h-full p-8 md:p-10 flex flex-col justify-between transition-all duration-700 hover:bg-white/10 !rounded-[2.5rem]">
+                                <article className="liquid-glass-card h-full p-6 flex flex-col justify-between transition-all duration-700 hover:bg-white/10 !rounded-[1.5rem]">
                                     <div className="relative z-10">
-                                        <div className="flex items-center gap-3 mb-6">
-                                            <span className="w-6 h-[1px] bg-amber-500/50" />
-                                            <span className="text-[10px] font-bold tracking-[0.2em] text-amber-500/80 uppercase">
+                                        <div className="flex items-center gap-3 mb-4">
+                                            <span className="w-5 h-[1px] bg-amber-500/50" />
+                                            <span className="text-[8px] font-bold tracking-[0.2em] text-amber-500/80 uppercase">
                                                 {post.category || 'Ilusionismo'}
                                             </span>
                                         </div>
-                                        <h2 className="text-xl md:text-2xl font-black urban-title mb-4 group-hover:text-amber-400 transition-colors leading-tight">
+                                        <h2 className="text-lg md:text-xl font-black urban-title mb-3 group-hover:text-amber-400 transition-colors leading-tight">
                                             {post.title}
                                         </h2>
-                                        <p className="text-slate-400 font-light leading-relaxed mb-8 text-sm line-clamp-2 opacity-60 group-hover:opacity-100 transition-opacity">
+                                        <p className="text-slate-400 font-light leading-relaxed mb-6 text-xs line-clamp-2 opacity-60 group-hover:opacity-100 transition-opacity">
                                             {post.excerpt}
                                         </p>
                                     </div>
