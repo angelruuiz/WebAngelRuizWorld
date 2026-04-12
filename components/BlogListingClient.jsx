@@ -29,8 +29,8 @@ export default function BlogListingClient({ posts }) {
             <div className="absolute top-0 -right-4 w-72 h-72 bg-purple-600 bg-blob animation-delay-2000" />
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-amber-400 bg-blob animation-delay-4000" />
 
-            <main className="max-w-[1440px] mx-auto px-6 pt-8 pb-16 relative z-10">
-                <header className="text-center mb-12">
+            <main className="max-w-6xl mx-auto px-6 pt-8 pb-16 relative z-10">
+                <header className="text-center mb-10">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -39,7 +39,7 @@ export default function BlogListingClient({ posts }) {
                         <p className="text-[9px] font-bold tracking-[0.5em] text-amber-500 uppercase mb-4 opacity-70">
                             Consejos para contratar un mago en Madrid
                         </p>
-                        <h1 className="text-4xl md:text-6xl font-black urban-title mb-6 leading-none text-white">
+                        <h1 className="text-3xl md:text-5xl font-black urban-title mb-6 leading-none text-white">
                             BLOG DE MAGIA<br/><span className="text-amber-500">PARA EVENTOS</span>
                         </h1>
                         <div className="h-[2px] w-12 bg-white/20 mx-auto rounded-full" />
@@ -63,7 +63,7 @@ export default function BlogListingClient({ posts }) {
                                                 {post.category || 'Ilusionismo'}
                                             </span>
                                         </div>
-                                        <h2 className="text-2xl md:text-3xl font-black urban-title mb-4 group-hover:text-amber-400 transition-colors leading-tight">
+                                        <h2 className="text-xl md:text-2xl font-black urban-title mb-4 group-hover:text-amber-400 transition-colors leading-tight">
                                             {post.title}
                                         </h2>
                                         <p className="text-slate-400 font-light leading-relaxed mb-8 text-sm line-clamp-2 opacity-60 group-hover:opacity-100 transition-opacity">

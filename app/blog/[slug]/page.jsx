@@ -72,8 +72,9 @@ export default async function BlogPost({ params }) {
   };
 
   return (
-    <article className="max-w-[1440px] mx-auto px-6 md:px-12 liquid-glass-card p-8 md:p-16 mt-2">
-      <ReadingProgress />
+    <>
+    <ReadingProgress />
+    <article className="max-w-6xl mx-auto px-6 liquid-glass-card p-10 md:p-14 mt-2">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
@@ -90,21 +91,21 @@ export default async function BlogPost({ params }) {
       )}
 
       {/* Floating Meta */}
-      <div className="flex flex-wrap items-center gap-4 text-[10px] font-black tracking-widest text-amber-500 uppercase mb-12">
-        <Link href="/blog" className="px-4 py-2 bg-white/5 rounded-full border border-white/10 hover:bg-white/10 transition-all">← Volver al Blog</Link>
-        <span className="w-2 h-2 rounded-full bg-white/20" />
+      <div className="flex flex-wrap items-center gap-4 text-[9px] font-black tracking-widest text-amber-500 uppercase mb-10">
+        <Link href="/blog" className="px-3 py-1.5 bg-white/5 rounded-full border border-white/10 hover:bg-white/10 transition-all">← Volver al Blog</Link>
+        <span className="w-1.5 h-1.5 rounded-full bg-white/20" />
         <span>{postData.category}</span>
-        <span className="w-2 h-2 rounded-full bg-white/20" />
+        <span className="w-1.5 h-1.5 rounded-full bg-white/20" />
         <span>{postData.date}</span>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
         <div className="lg:col-span-8">
-          <header className="mb-12">
-            <h1 className="text-4xl md:text-6xl urban-title mb-8 leading-[1.1] text-white">
+          <header className="mb-10">
+            <h1 className="text-3xl md:text-5xl urban-title mb-6 leading-tight text-white">
               {postData.title}
             </h1>
-            <div className="h-[3px] w-16 bg-amber-500 rounded-full" />
+            <div className="h-[2px] w-12 bg-amber-500 rounded-full" />
           </header>
 
           <div 
@@ -168,5 +169,6 @@ export default async function BlogPost({ params }) {
         </aside>
       </div>
     </article>
+    </>
   );
 }
