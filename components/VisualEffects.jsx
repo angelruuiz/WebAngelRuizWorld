@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useSpring } from 'framer-motion';
 
 export const MagicCursor = ({ isLight = false }) => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -25,14 +25,53 @@ export const MagicCursor = ({ isLight = false }) => {
     );
 };
 
+export const ReadingProgress = () => {
+    const { scrollYProgress } = useScroll();
+    const scaleX = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001
+    });
+
+    return (
+        <motion.div
+            className="fixed top-0 left-0 right-0 h-1 bg-amber-500 origin-left z-[100006]"
+            style={{ scaleX }}
+        />
+    );
+};
+
 export const ParticleBackground = () => {
-    const [particles] = useState(() => Array.from({ length: 20 }).map((_, i) => ({ id: i, x: Math.random() * 100, y: Math.random() * 100, size: Math.random() * 3 + 1, duration: Math.random() * 10 + 10 })));
+    const [particles] = useState(() => Array.from({ length: 35 }).map((_, i) => ({ 
+        id: i, 
+        x: Math.random() * 100, 
+        y: Math.random() * 100, 
+        size: Math.random() * 2 + 1, 
+        duration: Math.random() * 15 + 15,
+        delay: Math.random() * 10
+    })));
     return (
         <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+            <div className="absolute inset-0 bg-[#020617] z-0" />
             {particles.map((p) => (
-                <motion.div key={p.id} className="absolute rounded-full bg-amber-500/20 blur-sm" style={{ left: `${p.x}%`, top: `${p.y}%`, width: p.size, height: p.size }} animate={{ y: [0, -100, 0], opacity: [0, 0.5, 0] }} transition={{ duration: p.duration, repeat: Infinity, ease: "linear" }} />
+                <motion.div 
+                    key={p.id} 
+                    className="absolute rounded-full bg-amber-500/20 blur-[1px]" 
+                    style={{ left: `${p.x}%`, top: `${p.y}%`, width: p.size, height: p.size }} 
+                    animate={{ 
+                        y: [0, -200], 
+                        opacity: [0, 0.4, 0],
+                        scale: [1, 1.5, 1]
+                    }} 
+                    transition={{ 
+                        duration: p.duration, 
+                        repeat: Infinity, 
+                        ease: "linear",
+                        delay: p.delay
+                    }} 
+                />
             ))}
-            <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900/90 to-slate-950 z-0" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-[#020617] z-10" />
         </div>
     );
 };

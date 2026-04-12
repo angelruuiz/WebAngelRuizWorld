@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { getPostData, getSortedPostsData } from '@/lib/blog';
+import { ReadingProgress } from '@/components/VisualEffects';
 import { Sparkles, MessageSquare } from '@/components/Icons';
 
 export async function generateMetadata({ params }) {
@@ -72,6 +73,7 @@ export default async function BlogPost({ params }) {
 
   return (
     <article className="max-w-7xl mx-auto px-6">
+      <ReadingProgress />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
