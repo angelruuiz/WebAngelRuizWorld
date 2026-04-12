@@ -134,16 +134,16 @@ export default async function BlogPost({ params }) {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link 
-                href="/particulares/bodas" 
+                href="/particulares" 
                 className="px-8 py-3 bg-amber-700 text-white font-bold uppercase tracking-widest text-[10px] hover:bg-amber-800 transition-all rounded-full"
               >
-                Mago para Bodas
+                Eventos para Particulares
               </Link>
               <Link 
                 href="/empresas" 
                 className="px-8 py-3 border border-amber-700 text-amber-800 font-bold uppercase tracking-widest text-[10px] hover:bg-amber-50 transition-all rounded-full"
               >
-                Magia para Empresas
+                Eventos para Empresas
               </Link>
             </div>
           </div>
