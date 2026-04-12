@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { motion, useScroll, useSpring } from 'framer-motion';
+import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 
 export const MagicCursor = ({ isLight = false }) => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -27,17 +27,29 @@ export const MagicCursor = ({ isLight = false }) => {
 
 export const ReadingProgress = () => {
     const { scrollYProgress } = useScroll();
-    const scaleX = useSpring(scrollYProgress, {
+    const scaleY = useSpring(scrollYProgress, {
         stiffness: 100,
         damping: 30,
         restDelta: 0.001
     });
 
+    const sparkleTop = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
+    const topPercent = useTransform(sparkleTop, [0, 1], ["0%", "100%"]);
+
     return (
-        <motion.div
-            className="fixed top-0 left-0 right-0 h-1 bg-amber-500 origin-left z-[100006]"
-            style={{ scaleX }}
-        />
+        <div className="fixed right-8 top-1/4 bottom-1/4 w-[2px] bg-slate-200/20 rounded-full z-[100006] hidden lg:block">
+            <motion.div
+                className="absolute top-0 left-0 right-0 bg-amber-500 rounded-full origin-top shadow-[0_0_15px_rgba(245,158,11,0.5)]"
+                style={{ scaleY, height: '100%' }}
+            />
+            {/* Sparkle particle at the tip of the progress */}
+            <motion.div 
+                className="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-white rounded-full blur-[2px] shadow-[0_0_15px_#fff]"
+                style={{ 
+                    top: topPercent,
+                }}
+            />
+        </div>
     );
 };
 
