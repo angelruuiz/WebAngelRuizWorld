@@ -72,7 +72,7 @@ export default async function BlogPost({ params }) {
   };
 
   return (
-    <article className="max-w-7xl mx-auto px-6 liquid-glass-card p-12 md:p-20 mt-10">
+    <article className="max-w-5xl mx-auto px-6 liquid-glass-card p-8 md:p-12 mt-8">
       <ReadingProgress />
       <script
         type="application/ld+json"
@@ -100,11 +100,11 @@ export default async function BlogPost({ params }) {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
         <div className="lg:col-span-8">
-          <header className="mb-20">
-            <h1 className="text-6xl md:text-[5.5rem] urban-title mb-10 leading-[0.9] text-white">
+          <header className="mb-12">
+            <h1 className="text-4xl md:text-6xl urban-title mb-8 leading-[1.1] text-white">
               {postData.title}
             </h1>
-            <div className="h-[4px] w-24 bg-amber-500 rounded-full" />
+            <div className="h-[3px] w-16 bg-amber-500 rounded-full" />
           </header>
 
           <div 
@@ -119,22 +119,22 @@ export default async function BlogPost({ params }) {
 
           {/* Custom FAQ block styling explained in CSS module or global style */}
           
-          <div className="mt-24 p-12 liquid-glass-card relative overflow-hidden text-center !rounded-[3rem] border-amber-500/20">
-            <MessageSquare className="w-12 h-12 text-amber-500 mx-auto mb-8" />
-            <h3 className="text-4xl urban-title mb-6 leading-tight">¿Buscas magia<br/>para tu evento?</h3>
-            <p className="text-slate-400 font-light mb-10 max-w-sm mx-auto text-lg leading-relaxed">
+          <div className="mt-16 p-8 liquid-glass-card relative overflow-hidden text-center !rounded-[2rem] border-amber-500/20">
+            <MessageSquare className="w-10 h-10 text-amber-500 mx-auto mb-6" />
+            <h3 className="text-2xl urban-title mb-4 leading-tight">¿Buscas magia<br/>para tu evento?</h3>
+            <p className="text-slate-400 font-light mb-8 max-w-sm mx-auto text-base leading-relaxed opacity-70">
               Eleva el nivel de tu celebración con ilusionismo diseñado para impactar.
             </p>
-            <div className="flex flex-wrap justify-center gap-6">
+            <div className="flex flex-wrap justify-center gap-4">
               <Link 
                 href="/particulares" 
-                className="px-10 py-4 bg-white text-black font-black uppercase tracking-tighter text-sm hover:scale-105 transition-all rounded-full"
+                className="px-8 py-3 bg-white text-black font-black uppercase tracking-tighter text-xs hover:scale-105 transition-all rounded-full"
               >
                 Particulares
               </Link>
               <Link 
                 href="/empresas" 
-                className="px-10 py-4 border-2 border-white text-white font-black uppercase tracking-tighter text-sm hover:bg-white hover:text-black transition-all rounded-full"
+                className="px-8 py-3 border-2 border-white text-white font-black uppercase tracking-tighter text-xs hover:bg-white hover:text-black transition-all rounded-full"
               >
                 Empresas
               </Link>

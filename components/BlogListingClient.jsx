@@ -33,20 +33,20 @@ export default function BlogListingClient({ posts }) {
             <MagicCursor isLight={false} />
             <Navbar isLight={false} onOpenContact={() => {}} />
 
-            <main className="max-w-6xl mx-auto px-6 py-24 relative z-10">
-                <header className="text-center mb-32">
+            <main className="max-w-6xl mx-auto px-6 py-16 relative z-10">
+                <header className="text-center mb-12">
                     <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
+                        initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 1.2, ease: "easeOut" }}
+                        transition={{ duration: 1, ease: "easeOut" }}
                     >
-                        <p className="text-[10px] md:text-[12px] font-bold tracking-[0.5em] text-amber-500 uppercase mb-6">
+                        <p className="text-[9px] font-bold tracking-[0.5em] text-amber-500 uppercase mb-4 opacity-70">
                             Urban Magic & High-End Content
                         </p>
-                        <h1 className="text-6xl md:text-9xl font-black urban-title mb-8 leading-[0.9] text-white">
+                        <h1 className="text-4xl md:text-6xl font-black urban-title mb-6 leading-none text-white">
                             INSIGHTS<br/><span className="text-amber-500">MÁGICOS</span>
                         </h1>
-                        <div className="h-[4px] w-24 bg-white mx-auto rounded-full" />
+                        <div className="h-[2px] w-12 bg-white/20 mx-auto rounded-full" />
                     </motion.div>
                 </header>
 
@@ -54,35 +54,35 @@ export default function BlogListingClient({ posts }) {
                     variants={container}
                     initial="hidden"
                     animate="show"
-                    className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12"
+                    className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8"
                 >
                     {posts.map((post) => (
                         <motion.div key={post.slug} variants={item}>
                             <Link href={`/blog/${post.slug}`} className="group block h-full">
-                                <article className="liquid-glass-card h-full p-10 md:p-16 flex flex-col justify-between transition-all duration-1000 group-hover:bg-white/10 group-hover:-rotate-1">
+                                <article className="liquid-glass-card h-full p-8 md:p-10 flex flex-col justify-between transition-all duration-700 hover:bg-white/10 !rounded-[2.5rem]">
                                     <div className="relative z-10">
-                                        <div className="flex items-center gap-3 mb-8">
-                                            <span className="w-8 h-[1px] bg-amber-500" />
-                                            <span className="text-[11px] font-bold tracking-[0.3em] text-amber-500 uppercase">
+                                        <div className="flex items-center gap-3 mb-6">
+                                            <span className="w-6 h-[1px] bg-amber-500/50" />
+                                            <span className="text-[10px] font-bold tracking-[0.2em] text-amber-500/80 uppercase">
                                                 {post.category || 'Ilusionismo'}
                                             </span>
                                         </div>
-                                        <h2 className="text-4xl md:text-5xl font-black urban-title mb-8 group-hover:text-amber-400 transition-colors leading-[1.1]">
+                                        <h2 className="text-2xl md:text-3xl font-black urban-title mb-4 group-hover:text-amber-400 transition-colors leading-tight">
                                             {post.title}
                                         </h2>
-                                        <p className="text-slate-400 font-light leading-relaxed mb-10 text-lg line-clamp-2 opacity-60 group-hover:opacity-100 transition-opacity">
+                                        <p className="text-slate-400 font-light leading-relaxed mb-8 text-sm line-clamp-2 opacity-60 group-hover:opacity-100 transition-opacity">
                                             {post.excerpt}
                                         </p>
                                     </div>
                                     
-                                    <div className="relative z-10 flex justify-between items-center text-[10px] font-black tracking-[0.2em] text-slate-500 uppercase pt-10 border-t border-white/5">
-                                        <div className="flex items-center gap-3">
-                                            <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10">
-                                                <span className="text-amber-500">+</span>
+                                    <div className="relative z-10 flex justify-between items-center text-[9px] font-black tracking-[0.1em] text-slate-500 uppercase pt-8 border-t border-white/5">
+                                        <div className="flex items-center gap-2">
+                                            <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center border border-white/10">
+                                                <span className="text-amber-500 text-xs">+</span>
                                             </div>
                                             {post.date}
                                         </div>
-                                        <span className="px-4 py-2 bg-white/5 rounded-full border border-white/10">
+                                        <span className="px-3 py-1 bg-white/5 rounded-full border border-white/10">
                                             {post.readTime || '5 min'}
                                         </span>
                                     </div>
