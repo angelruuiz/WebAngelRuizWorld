@@ -27,26 +27,27 @@ export const MagicCursor = ({ isLight = false }) => {
 
 export const ReadingProgress = () => {
     const { scrollYProgress } = useScroll();
-    const scaleY = useSpring(scrollYProgress, {
+    const scaleX = useSpring(scrollYProgress, {
         stiffness: 100,
         damping: 30,
         restDelta: 0.001
     });
 
-    const sparkleTop = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
-    const topPercent = useTransform(sparkleTop, [0, 1], ["0%", "100%"]);
-
     return (
-        <div className="fixed right-8 top-1/4 bottom-1/4 w-[2px] bg-slate-200/20 rounded-full z-[100006] hidden lg:block">
+        <div className="fixed top-0 left-0 right-0 h-1 bg-white/5 z-[100006]">
+            {/* The Laser Track Background */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent" />
+            
             <motion.div
-                className="absolute top-0 left-0 right-0 bg-amber-500 rounded-full origin-top shadow-[0_0_15px_rgba(245,158,11,0.5)]"
-                style={{ scaleY, height: '100%' }}
+                className="absolute top-0 left-0 bottom-0 bg-gradient-to-r from-amber-600 via-amber-400 to-white origin-left shadow-[0_0_15px_rgba(245,158,11,0.5)]"
+                style={{ scaleX, width: '100%' }}
             />
-            {/* Sparkle particle at the tip of the progress */}
+            
+            {/* Moving Sparkle across the top edge */}
             <motion.div 
-                className="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-white rounded-full blur-[2px] shadow-[0_0_15px_#fff]"
+                className="absolute top-0 bottom-0 w-24 bg-gradient-to-r from-transparent via-white/80 to-transparent blur-[4px] pointer-events-none"
                 style={{ 
-                    top: topPercent,
+                    left: useTransform(scaleX, [0, 1], ["-10%", "100%"]),
                 }}
             />
         </div>
