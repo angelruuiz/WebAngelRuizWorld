@@ -8,7 +8,7 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
-const MagicalCarousel = () => {
+const MagicalCarousel = ({ locationName }) => {
     const images = ["/images/foto-profesional-mirando-carta.png", "/images/foto-spring-cartas.png"];
     const [index, setIndex] = useState(0);
 
@@ -32,7 +32,7 @@ const MagicalCarousel = () => {
                 >
                     <Image
                         src={images[index]}
-                        alt="Angel Ruiz Mago profesional"
+                        alt={`Ángel Ruiz | Mago e Ilusionista profesional en ${locationName}`}
                         fill
                         className="object-cover object-[center_10%] rounded-3xl"
                         sizes="(max-width: 768px) 100vw, 50vw"
@@ -86,6 +86,16 @@ export default function LocationPageTemplate({ location, allLocations }) {
         ]
     };
 
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
+            { "@type": "ListItem", "position": 2, "name": "Mago Sierra Madrid", "item": "https://angelruiz.world/mago-sierra-madrid" },
+            { "@type": "ListItem", "position": 3, "name": location.name, "item": `https://angelruiz.world/mago-${location.slug}` }
+        ]
+    };
+
     return (
         <>
             <script 
@@ -95,6 +105,10 @@ export default function LocationPageTemplate({ location, allLocations }) {
             <script 
                 type="application/ld+json" 
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} 
+            />
+            <script 
+                type="application/ld+json" 
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} 
             />
             <NavFooterClient>
                 <MagicCursor />
@@ -123,7 +137,7 @@ export default function LocationPageTemplate({ location, allLocations }) {
                             <p dangerouslySetInnerHTML={{ __html: location.text_main_2 || "" }} />
                         </div>
                         <div className="relative h-[300px] md:h-[450px] rounded-2xl overflow-hidden border border-slate-800 shadow-xl">
-                            <MagicalCarousel />
+                            <MagicalCarousel locationName={location.name} />
                         </div>
                     </section>
 

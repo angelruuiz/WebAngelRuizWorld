@@ -4,6 +4,15 @@ const nextConfig = {
     images: {
         unoptimized: false,
     },
+    async redirects() {
+        return [
+            {
+                source: '/particulares/boda',
+                destination: '/particulares/bodas',
+                permanent: true,
+            },
+        ];
+    },
     async headers() {
         return [
             {

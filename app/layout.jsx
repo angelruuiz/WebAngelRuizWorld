@@ -96,7 +96,8 @@ const schemaOrg = {
   ],
   sameAs: [
     'https://www.instagram.com/angellruuizz',
-    'https://twitter.com/angellruuizz'
+    'https://twitter.com/angellruuizz',
+    'https://www.tiktok.com/@angellruuizz'
   ],
   knowsAbout: ['Magia de Cerca', 'Ilusionismo Profesional', 'Magia Corporativa', 'Mentalismo', 'Entretenimiento para Bodas'],
 };

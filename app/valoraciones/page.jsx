@@ -24,20 +24,10 @@ export default function ValoracionesPage() {
         { text: "Si buscas magia elegante para eventos de alto standing, Ángel es el profesional adecuado. Impresionante su control de la atención.", author: "Sergio Blanco" }
     ];
 
-    const reviewsCount = reviewsData.length;
-    const ratingValue = 5.0;
-
     const schemaData = {
         "@context": "https://schema.org",
         "@type": "Product",
         "name": "Ángel Ruiz | Mago e Ilusionista",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": ratingValue,
-            "reviewCount": reviewsCount,
-            "bestRating": "5",
-            "worstRating": "1"
-        },
         "review": reviewsData.map(r => ({
             "@type": "Review",
             "author": { "@type": "Person", "name": r.author },
