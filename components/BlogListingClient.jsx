@@ -23,15 +23,11 @@ export default function BlogListingClient({ posts }) {
     };
 
     return (
-        <div className="bg-[#020617] min-h-screen text-slate-200 relative overflow-hidden">
-            {/* Background Animated Blobs */}
+        <div className="min-h-screen text-slate-200 relative overflow-hidden">
+            {/* Background Animated Blobs for Liquid Feel */}
             <div className="absolute top-0 -left-4 w-72 h-72 bg-amber-600 bg-blob" />
             <div className="absolute top-0 -right-4 w-72 h-72 bg-purple-600 bg-blob animation-delay-2000" />
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-amber-400 bg-blob animation-delay-4000" />
-
-            <ParticleBackground />
-            <MagicCursor isLight={false} />
-            <Navbar isLight={false} onOpenContact={() => {}} />
 
             <main className="max-w-6xl mx-auto px-6 py-16 relative z-10">
                 <header className="text-center mb-12">
@@ -92,8 +88,6 @@ export default function BlogListingClient({ posts }) {
                     ))}
                 </motion.div>
             </main>
-
-            <Footer isLight={false} onOpenContact={() => {}} />
         </div>
     );
 }

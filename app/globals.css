@@ -31,7 +31,7 @@ video { object-fit: cover; }
 
 /* Liquid Glass Design System */
 .liquid-glass-card {
-    @apply bg-white/5 border border-white/10 backdrop-blur-[40px] rounded-[3rem] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)];
+    @apply bg-white/5 border border-white/10 backdrop-blur-[16px] rounded-[3rem] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.5)] will-change-transform;
     box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.05);
 }
 
