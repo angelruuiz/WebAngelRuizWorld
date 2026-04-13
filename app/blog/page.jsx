@@ -2,8 +2,8 @@ import { getSortedPostsData } from '@/lib/blog';
 import BlogListingClient from '@/components/BlogListingClient';
 
 export const metadata = {
-  title: 'Blog de Magia en Madrid | Consejos y Contratación para Eventos',
-  description: 'Descubre todo lo que necesitas saber antes de contratar un mago en Madrid: consejos para bodas, eventos de empresa y los secretos mejor guardados del ilusionismo.',
+  title: 'Todo lo que necesitas saber sobre los Magos | Ángel Ruiz',
+  description: 'Descubre los secretos, consejos y guías definitivas para contratar un mago en Madrid. Todo sobre el ilusionismo para eventos, bodas y empresas con Ángel Ruiz.',
 };
 
 export default function BlogIndex() {
