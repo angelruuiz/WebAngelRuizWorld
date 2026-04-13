@@ -3,7 +3,7 @@ import BlogListingClient from '@/components/BlogListingClient';
 
 export const metadata = {
   title: 'Todo lo que necesitas saber sobre los Magos | Ángel Ruiz',
-  description: 'Descubre los secretos, consejos y guías definitivas para contratar un mago en Madrid. Todo sobre el ilusionismo para eventos, bodas y empresas con Ángel Ruiz.',
+  description: '¿Tienes dudas sobre cómo contratar un mago? Descubre precios, consejos clave y todo lo que necesitas saber sobre el ilusionismo para eventos en Madrid. Resuelve tus preguntas sobre magia de cerca, mentalismo y espectáculos de escenario con Ángel Ruiz.',
 };
 
 export default function BlogIndex() {
