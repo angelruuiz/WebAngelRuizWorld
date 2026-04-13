@@ -117,6 +117,20 @@ export default async function BlogPost({ params }) {
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }} 
         />
 
+        {/* Brand Sign-off for SEO & Trust */}
+        <div className="mt-16 py-10 border-y border-white/5 flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="flex items-center gap-5">
+             <div className="w-14 h-14 rounded-full bg-amber-500/10 flex items-center justify-center border border-amber-500/20 text-amber-500 font-bold text-2xl">AR</div>
+             <div>
+                <p className="text-sm font-black tracking-widest text-amber-500 uppercase mb-1">Escrito por Angel Ruiz García</p>
+                <p className="text-xs text-slate-500 font-medium tracking-wide uppercase">Ilusionista Profesional | Experto en Eventos Corporativos</p>
+             </div>
+          </div>
+          <div className="px-5 py-2.5 bg-white/5 rounded-full border border-white/10 text-[10px] font-bold text-slate-400 uppercase tracking-widest italic">
+             <span>Contenido Original de Magia</span>
+          </div>
+        </div>
+
         {/* CTA Block */}
         <div className="mt-20 p-10 liquid-glass-card relative overflow-hidden text-center !rounded-[2.5rem] border-amber-500/20">
           <MessageSquare className="w-10 h-10 text-amber-500 mx-auto mb-6" />

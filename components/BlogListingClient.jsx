@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { ChevronDoubleDown } from '@/components/Icons';
 
 export default function BlogListingClient({ posts }) {
     const container = {
@@ -43,6 +44,16 @@ export default function BlogListingClient({ posts }) {
                             BLOG DE MAGIA<br/><span className="text-amber-500">PARA EVENTOS</span>
                         </h1>
                         <div className="h-[2px] w-20 bg-white/20 mx-auto rounded-full" />
+
+                        {/* Animated Scroll Indicator Icon */}
+                        <motion.div 
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 0.5, y: [0, 10, 0] }}
+                            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+                            className="mt-12 text-amber-500 flex justify-center"
+                        >
+                            <ChevronDoubleDown className="w-8 h-8 md:w-10 md:h-10" />
+                        </motion.div>
                     </motion.div>
                 </header>
 
@@ -76,7 +87,10 @@ export default function BlogListingClient({ posts }) {
                                             <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center border border-white/10">
                                                 <span className="text-amber-500 text-xs">+</span>
                                             </div>
-                                            {post.date}
+                                            <div className="flex flex-col">
+                                                <span>{post.date}</span>
+                                                <span className="text-amber-500/60 lowercase font-medium tracking-tight">Autor: Ángel Ruiz García</span>
+                                            </div>
                                         </div>
                                         <span className="px-3 py-1 bg-white/5 rounded-full border border-white/10">
                                             {post.readTime || '5 min'}
