@@ -29,7 +29,7 @@ export default function BlogListingClient({ posts }) {
             <div className="absolute top-0 -right-4 w-72 h-72 bg-purple-600 bg-blob animation-delay-2000" />
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-amber-400 bg-blob animation-delay-4000" />
 
-            <main className="max-w-[1440px] mx-auto px-6 pt-8 pb-12 relative z-10">
+            <main className="max-w-[1440px] mx-auto px-6 pt-2 pb-12 relative z-10">
                 <header className="text-center mb-8">
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}

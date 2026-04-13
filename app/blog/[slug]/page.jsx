@@ -74,7 +74,7 @@ export default async function BlogPost({ params }) {
   return (
     <>
     <ReadingProgress />
-    <article className="max-w-[1440px] mx-auto px-6 liquid-glass-card p-6 md:p-10 mt-2">
+    <article className="max-w-[1440px] mx-auto px-6 liquid-glass-card p-6 md:p-10 mt-0">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
