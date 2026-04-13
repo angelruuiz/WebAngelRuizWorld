@@ -69,4 +69,4 @@ La magia no es lo que el mago hace, es lo que el invitado recuerda. **Hagamos qu
 
 ---
 
-*¿Tienes dudas sobre qué formato encaja mejor en tu celebración? [Contacta ahora](/contacto) y diseñaremos el plan de asombro perfecto para tu fecha en Madrid, Torrelodones o alrededores.*
+*¿Tienes dudas sobre qué formato encaja mejor en tu celebración? Diseñaremos el plan de asombro perfecto para tu fecha en Madrid, Torrelodones o alrededores.*

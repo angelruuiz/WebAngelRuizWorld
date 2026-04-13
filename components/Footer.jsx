@@ -2,7 +2,7 @@ import { ArrowRight, Share2, WhatsApp } from './Icons';
 
 const Footer = ({ onOpenContact, isLight = false }) => {
     return (
-        <footer className={`mt-20 border-t ${isLight ? 'border-slate-200 bg-white/50 text-slate-800' : 'border-slate-800 bg-slate-900/50 text-slate-200'} backdrop-blur-sm text-left relative z-10`}>
+        <footer className={`mt-0 ${isLight ? 'border-t border-slate-200 bg-white/50 text-slate-800' : 'bg-[#020617] text-slate-200'} backdrop-blur-sm text-left relative z-10 font-[Inter]`}>
             <div className="w-full px-6 py-12 max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                     <div className="space-y-6 text-left">

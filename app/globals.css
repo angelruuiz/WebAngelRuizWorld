@@ -104,3 +104,48 @@ video { object-fit: cover; }
     @apply list-disc marker:text-amber-500 pl-2 text-slate-300;
 }
 
+/* Tablas Premium Blog */
+.blog-content table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 3.5rem 0;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.blog-content th {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+    font-size: 0.7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding: 1.25rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.blog-content td {
+    padding: 1.25rem 1rem;
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+.blog-content tr:last-child td {
+    border-bottom: none;
+}
+
+.blog-content tr {
+    transition: background 0.3s ease;
+}
+
+.blog-content tr:hover td {
+    background: rgba(255, 255, 255, 0.03);
+    color: #e2e8f0;
+}
+
