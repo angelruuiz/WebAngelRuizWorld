@@ -23,6 +23,12 @@ export default function BlogListingClient({ posts }) {
         show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
     };
 
+    const formatDate = (dateStr) => {
+        if (!dateStr) return '';
+        const [year, month, day] = dateStr.split('-');
+        return `${day} / ${month} / ${year}`;
+    };
+
     return (
         <div className="min-h-screen text-slate-200 relative overflow-hidden">
             {/* Background Animated Blobs for Liquid Feel */}
@@ -92,7 +98,7 @@ export default function BlogListingClient({ posts }) {
                                                 />
                                             </div>
                                             <div className="flex flex-col">
-                                                <span className="text-slate-400 mb-0.5 uppercase tracking-wider">{post.date}</span>
+                                                <span className="text-slate-400 mb-0.5 tracking-wider">{formatDate(post.date)}</span>
                                                 <span className="text-amber-500 font-black tracking-tighter text-[11px] uppercase">Ángel Ruiz García</span>
                                             </div>
                                         </div>
