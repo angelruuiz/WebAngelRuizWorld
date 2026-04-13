@@ -42,7 +42,7 @@ const SEOContent = () => {
                         <div className="pt-6 border-t border-white/5">
                             <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-amber-500 mb-2 text-left">Experiencia Certificada</p>
                             <p className="text-xs leading-relaxed text-slate-500">
-                                Ángel Ruiz se ha consolidado como uno de los ilusionistas más modernos de la capital, fusionando elegancia y caos en cada evento. Como <strong>mago para bodas en Madrid</strong> e ilusionista corporativo, su enfoque se centra en la <strong>magia de cerca</strong> (close-up), donde el milagro ocurre a escasos centímetros del espectador.
+                                Ángel Ruiz se ha consolidado como uno de los ilusionistas más modernos de la capital, fusionando elegancia y caos en cada evento. Como <strong>mago para bodas en Madrid</strong> e ilusionista para empresas, su enfoque se centra en la <strong>magia de cerca</strong> (close-up), donde el milagro ocurre a escasos centímetros del espectador.
                             </p>
                         </div>
                     </div>
@@ -64,7 +64,7 @@ const SEOContent = () => {
                                 <span className="text-amber-500 group-open:rotate-180 transition-transform">↓</span>
                             </summary>
                             <div className="mt-2 leading-relaxed space-y-4">
-                                <p>Si buscas un <strong>mago profesional en la sierra de Madrid</strong>, Angel Ruiz ofrece total disponibilidad en la zona del noroeste y el eje A-6 desde su base en <strong>Torrelodones</strong>.</p>
+                                <p>Si buscas un <strong>mago profesional en la sierra de Madrid</strong>, Angel Ruiz ofrece total disponibilidad en la zona del noroeste y el eje A-6 desde su base local.</p>
                                 <div className="bg-white/5 p-4 rounded-xl border border-white/5">
                                     <p className="mb-3 text-[10px] text-amber-500 uppercase font-bold tracking-widest">Servicio Local Garantizado:</p>
                                     <div className="flex flex-wrap gap-x-3 gap-y-2 text-[9px] uppercase font-bold">
