@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Sparkles } from '@/components/Icons';
 import { useRouter } from 'next/navigation';
@@ -51,7 +52,16 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
         <>
             <MagicSpiral isVisible={isTransitioning} />
             <nav className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center transition-all duration-500 ${isScrolled || isMenuOpen ? (isLight ? 'bg-white/70 backdrop-blur-xl border-b border-slate-200' : 'bg-slate-950/90 backdrop-blur-xl shadow-2xl') : (isLight ? 'bg-white/30 backdrop-blur-md' : 'bg-slate-950/30 backdrop-blur-md')} py-4 px-6 md:px-12`}>
-                <Link href="/" className="flex items-center text-xl font-[Cinzel] font-bold text-amber-500 tracking-[0.3em] z-50 transition-transform hover:scale-105">AR</Link>
+                <Link href="/" className="flex items-center z-50 transition-transform hover:scale-105">
+                    <Image 
+                        src="/images/logo-pequeño.jpg" 
+                        alt="Ángel Ruiz Logo" 
+                        width={40} 
+                        height={40} 
+                        priority
+                        className="object-contain rounded-full border border-amber-500/20 shadow-lg shadow-amber-500/10"
+                    />
+                </Link>
                 
                 {/* Desktop Menu */}
                 <div className={`hidden md:flex absolute left-1/2 -translate-x-1/2 gap-8 text-[11px] font-bold uppercase tracking-[0.3em] ${isLight ? 'text-slate-800' : 'text-slate-100'}`}>
