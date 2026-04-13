@@ -84,12 +84,16 @@ export default function BlogListingClient({ posts }) {
                                     
                                     <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] pt-6 border-t border-white/5">
                                         <div className="flex items-center gap-3">
-                                            <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-amber-500/30 transition-all duration-500">
-                                                <UserIcon className="w-4 h-4 text-amber-500/80" />
+                                            <div className="w-10 h-10 rounded-full overflow-hidden bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-amber-500/50 transition-all duration-500">
+                                                <img 
+                                                    src="/images/logo-pequeno.jpg" 
+                                                    alt="Logo Ángel Ruiz" 
+                                                    className="w-full h-full object-cover"
+                                                />
                                             </div>
                                             <div className="flex flex-col">
-                                                <span className="text-slate-400 mb-0.5">{post.date}</span>
-                                                <span className="text-amber-500 font-black lowercase tracking-tighter text-[11px]">Ángel Ruiz García</span>
+                                                <span className="text-slate-400 mb-0.5 uppercase tracking-wider">{post.date}</span>
+                                                <span className="text-amber-500 font-black tracking-tighter text-[11px] uppercase">Ángel Ruiz García</span>
                                             </div>
                                         </div>
                                         <div className="flex items-center gap-2">
