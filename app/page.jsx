@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const metadata = {
     title: 'Ángel Ruiz | Mago e Ilusionista en Madrid y Torrelodones',
-    description: 'Ilusionista experto en Magia de Cerca en Madrid y Torrelodones. Especialista en Bodas, Eventos Corporativos y Fiestas VIP en Las Rozas y Majadahonda. Más de 10 años de experiencia.',
+    description: 'Ángel Ruiz, ilusionista profesional en Madrid y Torrelodones. Especialista en magia de cerca para bodas, eventos corporativos y fiestas VIP exclusivas.',
     alternates: {
         canonical: '/',
     },
