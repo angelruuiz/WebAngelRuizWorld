@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { ChevronDoubleDown } from '@/components/Icons';
+import { ChevronDoubleDown, UserIcon } from '@/components/Icons';
 
 export default function BlogListingClient({ posts }) {
     const container = {
@@ -82,19 +82,21 @@ export default function BlogListingClient({ posts }) {
                                         </p>
                                     </div>
                                     
-                                    <div className="relative z-10 flex justify-between items-center text-[9px] font-black tracking-[0.1em] text-slate-500 uppercase pt-8 border-t border-white/5">
-                                        <div className="flex items-center gap-2">
-                                            <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center border border-white/10">
-                                                <span className="text-amber-500 text-xs">+</span>
+                                    <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] pt-6 border-t border-white/5">
+                                        <div className="flex items-center gap-3">
+                                            <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-amber-500/30 transition-all duration-500">
+                                                <UserIcon className="w-4 h-4 text-amber-500/80" />
                                             </div>
                                             <div className="flex flex-col">
-                                                <span>{post.date}</span>
-                                                <span className="text-amber-500/60 lowercase font-medium tracking-tight">Autor: Ángel Ruiz García</span>
+                                                <span className="text-slate-400 mb-0.5">{post.date}</span>
+                                                <span className="text-amber-500 font-black lowercase tracking-tighter text-[11px]">Ángel Ruiz García</span>
                                             </div>
                                         </div>
-                                        <span className="px-3 py-1 bg-white/5 rounded-full border border-white/10">
-                                            {post.readTime || '5 min'}
-                                        </span>
+                                        <div className="flex items-center gap-2">
+                                            <span className="px-3 py-1.5 bg-white/5 rounded-full border border-white/10 text-[8px] group-hover:bg-amber-500/10 group-hover:text-amber-500 transition-all">
+                                                LECTURA: {post.readTime || '5 MIN'}
+                                            </span>
+                                        </div>
                                     </div>
                                 </article>
                             </Link>
