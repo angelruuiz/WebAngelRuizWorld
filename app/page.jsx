@@ -20,13 +20,12 @@ const SEOContent = () => {
                     <div className="relative flex overflow-hidden py-4 border-y border-amber-500/10">
                         <div className="flex gap-x-12 whitespace-nowrap animate-marquee">
                             <div className="flex gap-x-12 text-xs md:text-sm uppercase tracking-[0.3em] font-bold text-amber-400">
-                                <span>Mago de Cerca Madrid</span>
+                                <span>Angel Ruiz Madrid</span>
+                                <span>Mago para Bodas</span>
+                                <span>Mago para Empresas</span>
                                 <span>Mentalismo Profesional</span>
-                                <span>Magia para Bodas</span>
-                                <span>Eventos de Empresa</span>
                                 <span>Ilusionismo de Gala</span>
                                 <span>Magia para Cóctel</span>
-                                <span>Mago para Congresos</span>
                                 <span>Espectáculos VIP Madrid</span>
                             </div>
                         </div>
@@ -37,8 +36,8 @@ const SEOContent = () => {
 
                 <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-10 border-t border-white/5 pt-8">
                     <div className="space-y-4 text-justify">
-                        <h2 className="text-white font-[Cinzel] text-lg md:text-xl uppercase tracking-widest text-left">Mago e Ilusionista en Madrid</h2>
-                        <p className="text-xs opacity-60 italic text-left">Referente del ilusionismo exclusivo para eventos inolvidables.</p>
+                        <h2 className="text-white font-[Cinzel] text-lg md:text-xl uppercase tracking-widest text-left">Angel Ruiz | Mago e Ilusionista en Madrid</h2>
+                        <p className="text-xs opacity-60 italic text-left">Referente en magia para bodas y empresas con un estilo exclusivo.</p>
                         <div className="pt-6 border-t border-white/5">
                             <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-amber-500 mb-2 text-left">Experiencia Certificada</p>
                             <p className="text-xs leading-relaxed text-slate-500">
