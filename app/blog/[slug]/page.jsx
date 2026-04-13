@@ -99,74 +99,65 @@ export default async function BlogPost({ params }) {
         <span>{postData.date}</span>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        <div className="lg:col-span-8">
-          <header className="mb-8">
-            <h1 className="text-xl md:text-4xl urban-title mb-4 leading-tight text-white uppercase italic tracking-tighter">
-              {postData.title}
-            </h1>
-            <div className="h-[2px] w-10 bg-amber-500 rounded-full" />
-          </header>
+      <div className="max-w-5xl mx-auto">
+        <header className="mb-12 text-center">
+          <h1 className="text-2xl md:text-5xl urban-title mb-6 leading-tight text-white uppercase italic tracking-tighter">
+            {postData.title}
+          </h1>
+          <div className="h-[2px] w-20 bg-amber-500 mx-auto rounded-full" />
+        </header>
 
-          <div 
-            className="blog-content prose prose-invert prose-lg max-w-none 
-              font-light leading-relaxed text-slate-300
-              prose-headings:font-[Playfair_Display] prose-headings:italic
-              prose-h2:text-4xl prose-h2:mt-16 prose-h2:mb-8
-              prose-strong:font-bold
-              prose-p:mb-6"
-            dangerouslySetInnerHTML={{ __html: postData.contentHtml }} 
-          />
+        <div 
+          className="blog-content prose prose-invert prose-lg max-w-none 
+            font-light leading-relaxed text-slate-300
+            prose-headings:font-[Playfair_Display] prose-headings:italic
+            prose-h2:text-4xl prose-h2:mt-16 prose-h2:mb-8
+            prose-strong:font-bold
+            prose-p:mb-8 prose-p:text-justify"
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }} 
+        />
 
-          {/* Custom FAQ block styling explained in CSS module or global style */}
-          
-          <div className="mt-16 p-8 liquid-glass-card relative overflow-hidden text-center !rounded-[2rem] border-amber-500/20">
-            <MessageSquare className="w-10 h-10 text-amber-500 mx-auto mb-6" />
-            <h3 className="text-2xl urban-title mb-4 leading-tight">¿Buscas magia<br/>para tu evento?</h3>
-            <p className="text-slate-400 font-light mb-8 max-w-sm mx-auto text-base leading-relaxed opacity-70">
-              Eleva el nivel de tu celebración con ilusionismo diseñado para impactar.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link 
-                href="/particulares" 
-                className="px-8 py-3 bg-white text-black font-black uppercase tracking-tighter text-xs hover:scale-105 transition-all rounded-full"
-              >
-                Particulares
-              </Link>
-              <Link 
-                href="/empresas" 
-                className="px-8 py-3 border-2 border-white text-white font-black uppercase tracking-tighter text-xs hover:bg-white hover:text-black transition-all rounded-full"
-              >
-                Empresas
-              </Link>
-            </div>
+        {/* CTA Block */}
+        <div className="mt-20 p-10 liquid-glass-card relative overflow-hidden text-center !rounded-[2.5rem] border-amber-500/20">
+          <MessageSquare className="w-10 h-10 text-amber-500 mx-auto mb-6" />
+          <h3 className="text-3xl urban-title mb-4 leading-tight">¿Buscas magia<br/>para tu evento?</h3>
+          <p className="text-slate-400 font-light mb-8 max-w-lg mx-auto text-lg leading-relaxed opacity-70">
+            Eleva el nivel de tu celebración con ilusionismo diseñado para impactar.
+          </p>
+          <div className="flex flex-wrap justify-center gap-6">
+            <Link 
+              href="/particulares" 
+              className="px-10 py-4 bg-white text-black font-black uppercase tracking-tighter text-sm hover:scale-105 transition-all rounded-full"
+            >
+              Particulares
+            </Link>
+            <Link 
+              href="/empresas" 
+              className="px-10 py-4 border-2 border-white text-white font-black uppercase tracking-tighter text-sm hover:bg-white hover:text-black transition-all rounded-full"
+            >
+              Empresas
+            </Link>
           </div>
         </div>
 
-        {/* Sidebar */}
-        <aside className="lg:col-span-4 self-start sticky top-32">
-          <div className="liquid-glass-card p-10 !rounded-[2.5rem]">
-            <h4 className="text-[11px] font-black tracking-[0.4em] text-white uppercase mb-10 pb-4 border-b border-white/10">
-              ARTÍCULOS RELACIONADOS
-            </h4>
-            <div className="space-y-12">
-              {relatedPosts.map((post) => (
-                <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
+        {/* Bottom Related Articles Section */}
+        <div className="mt-24 pt-16 border-t border-white/10">
+          <h4 className="text-[12px] font-black tracking-[0.5em] text-white uppercase mb-12 text-center opacity-50">
+            ARTÍCULOS RELACIONADOS
+          </h4>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {relatedPosts.map((post) => (
+              <Link key={post.slug} href={`/blog/${post.slug}`} className="group block">
+                <article className="h-full p-6 bg-white/5 border border-white/5 rounded-[2rem] hover:bg-white/10 transition-all group-hover:border-amber-500/30">
                   <span className="text-[10px] font-black text-amber-500 uppercase tracking-widest block mb-4">{post.category}</span>
-                  <h5 className="text-2xl urban-title leading-tight group-hover:text-amber-500 transition-colors">
+                  <h5 className="text-xl urban-title leading-tight group-hover:text-amber-500 transition-colors">
                     {post.title}
                   </h5>
-                </Link>
-              ))}
-            </div>
-            
-            <div className="mt-16 pt-10 border-t border-amber-800/10">
-              <p className="text-xs text-slate-400 italic font-light leading-relaxed">
-                "La magia es el arte de la sorpresa, compartida a escasos centímetros del espectador."
-              </p>
-            </div>
+                </article>
+              </Link>
+            ))}
           </div>
-        </aside>
+        </div>
       </div>
     </article>
     </>
