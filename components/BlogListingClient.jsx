@@ -36,13 +36,13 @@ export default function BlogListingClient({ posts }) {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1, ease: "easeOut" }}
                     >
-                        <p className="text-[8px] font-bold tracking-[0.5em] text-amber-500 uppercase mb-3 opacity-70">
+                        <p className="text-[11px] md:text-[14px] font-black tracking-[0.4em] text-amber-500 uppercase mb-5 opacity-80">
                             Consejos para contratar un mago en Madrid
                         </p>
-                        <h1 className="text-2xl md:text-4xl font-black urban-title mb-4 leading-none text-white italic tracking-tighter">
+                        <h1 className="text-5xl md:text-8xl font-black urban-title mb-8 leading-none text-white italic tracking-tighter">
                             BLOG DE MAGIA<br/><span className="text-amber-500">PARA EVENTOS</span>
                         </h1>
-                        <div className="h-[2px] w-10 bg-white/20 mx-auto rounded-full" />
+                        <div className="h-[2px] w-20 bg-white/20 mx-auto rounded-full" />
                     </motion.div>
                 </header>
 
