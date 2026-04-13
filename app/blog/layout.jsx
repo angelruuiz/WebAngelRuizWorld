@@ -17,7 +17,7 @@ export default function BlogLayout({ children }) {
       <MagicCursor isLight={false} />
       <Navbar onOpenContact={() => setIsContactOpen(true)} isLight={false} />
       
-      <main className="pt-16 pb-20 relative z-10">
+      <main className="pt-16 pb-0 relative z-10">
         {children}
       </main>
 
