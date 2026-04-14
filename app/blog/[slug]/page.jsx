@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import NewsletterForm from '@/components/NewsletterForm';
 import { getPostData, getSortedPostsData } from '@/lib/blog';
 import { ReadingProgress } from '@/components/VisualEffects';
 import { Sparkles, MessageSquare } from '@/components/Icons';
@@ -142,6 +143,8 @@ export default async function BlogPost({ params }) {
              <span>Contenido Original de Magia</span>
           </div>
         </div>
+
+        <NewsletterForm />
 
         {/* CTA Block */}
         <div className="mt-20 p-10 liquid-glass-card relative overflow-hidden text-center !rounded-[2.5rem] border-amber-500/20">
