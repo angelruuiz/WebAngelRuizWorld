@@ -130,6 +130,7 @@ const localBusinessSchema = {
 
 import NewsletterForm from '@/components/NewsletterForm';
 import NewsletterModal from '@/components/NewsletterModal';
+import CookieBanner from '@/components/CookieBanner';
 
 export default function RootLayout({ children }) {
   return (
@@ -154,6 +155,7 @@ export default function RootLayout({ children }) {
         />
         {children}
         <NewsletterModal />
+        <CookieBanner />
         <Analytics />
       </body>
     </html>
