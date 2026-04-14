@@ -36,7 +36,7 @@ export default function NewsletterForm() {
     if (status === "success") {
         return (
             <div className="bg-green-500/10 border border-green-500/30 p-8 rounded-[2rem] text-center my-12">
-                <p className="text-green-400 font-bold tracking-widest uppercase text-sm">¡Bienvenido a la Logia!</p>
+                <p className="text-green-400 font-bold tracking-widest uppercase text-sm">¡Bienvenido al Círculo!</p>
                 <p className="text-slate-300 text-xs mt-2">Pronto recibirás mis secretos mejor guardados en tu bandeja de entrada.</p>
             </div>
         );
