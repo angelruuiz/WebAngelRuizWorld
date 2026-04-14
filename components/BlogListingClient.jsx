@@ -66,7 +66,7 @@ export default function BlogListingClient({ posts }) {
                 </header>
 
                 <div className="max-w-4xl mx-auto -mt-6">
-                    <NewsletterForm />
+                    <NewsletterForm isCompact={true} />
                 </div>
 
                 <motion.div 
