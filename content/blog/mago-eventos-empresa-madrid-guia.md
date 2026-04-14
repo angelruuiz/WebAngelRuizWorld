@@ -2,7 +2,7 @@
 title: "Mago para eventos de empresa en Madrid: Guía para organizar un evento corporativo de éxito"
 date: "2026-04-14"
 excerpt: "Potencia tu marca y motiva a tu equipo con ilusionismo profesional. Descubre por qué contratar un mago para eventos corporativos en Madrid es la mejor decisión para tu empresa."
-author: "Angel Ruiz"
+author: "Ángel Ruiz"
 image: "/images/mago-empresas-madrid-angel-ruiz.svg"
 tags: ["Empresas", "Madrid", "Eventos Corporativos", "Networking"]
 ---

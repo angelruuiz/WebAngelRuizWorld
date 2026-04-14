@@ -153,6 +153,24 @@ export default function BodasDetailPage() {
                         ))}
                     </div>
                 </section>
+                {/* Related Blog Posts Section */}
+                <section className="border-t border-white/5 pt-16 mt-16 pb-8">
+                    <h2 className="text-2xl font-[Cinzel] text-white mb-10 text-center uppercase tracking-widest">Consejos para tu Boda</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <a href="/blog/cuanto-cuesta-mago-boda-madrid" className="group bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
+                            <p className="text-amber-500 text-[10px] uppercase font-bold tracking-tighter mb-2">Precios y Tarifas</p>
+                            <h3 className="text-white font-[Cinzel] text-sm group-hover:text-amber-400 transition-colors">¿Cuánto cuesta un mago para boda?</h3>
+                        </a>
+                        <a href="/blog/ideas-originales-entretenimiento-bodas-madrid" className="group bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
+                            <p className="text-amber-500 text-[10px] uppercase font-bold tracking-tighter mb-2">Ideas Creativas</p>
+                            <h3 className="text-white font-[Cinzel] text-sm group-hover:text-amber-400 transition-colors">10 Ideas para entretener invitados</h3>
+                        </a>
+                        <a href="/blog/mago-para-bodas-madrid-faq" className="group bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
+                            <p className="text-amber-500 text-[10px] uppercase font-bold tracking-tighter mb-2">Guía Completa</p>
+                            <h3 className="text-white font-[Cinzel] text-sm group-hover:text-amber-400 transition-colors">Mago para bodas: La Guía Definitiva</h3>
+                        </a>
+                    </div>
+                </section>
             </main>
         </NavFooterClient>
         </>

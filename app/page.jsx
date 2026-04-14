@@ -85,7 +85,24 @@ const SEOContent = () => {
 };
 
 export default function Home() {
+    const videoSchema = {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        "name": "Ángel Ruiz | Magia de Cerca en Madrid",
+        "description": "Video promocional de ilusionismo profesional y magia de cerca por Ángel Ruiz.",
+        "thumbnailUrl": "https://angelruiz.world/images/foto-bio.png",
+        "uploadDate": "2026-04-10",
+        "duration": "PT1M0S",
+        "contentUrl": "https://angelruiz.world/spring.mp4"
+    };
+
     return (
-        <HomeClient seoContent={<SEOContent />} />
+        <>
+            <script 
+                type="application/ld+json" 
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} 
+            />
+            <HomeClient seoContent={<SEOContent />} />
+        </>
     );
 }
