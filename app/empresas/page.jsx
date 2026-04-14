@@ -5,8 +5,8 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: 'Magia para Empresas en Madrid | Ángel Ruiz | Mago e Ilusionista',
-    description: 'Eleva el nivel de tu evento de empresa con magia corporativa de alto impacto. Ángel Ruiz, ilusionista para congresos, cenas y presentaciones en Madrid.',
+    title: 'Mago para Eventos Corporativos Madrid · Ángel Ruiz | Close-up Profesional',
+    description: 'Magia close-up para eventos de empresa en Madrid. Networking, presentaciones de producto, team building y convenciones. Presupuesto personalizado para tu evento corporativo.',
     alternates: {
         canonical: '/empresas',
     },
@@ -27,13 +27,15 @@ export default function EmpresasPage() {
     const serviceSchema = {
         "@context": "https://schema.org",
         "@type": "Service",
-        "name": "Magia para Empresas en Madrid",
+        "name": "Magia close-up para eventos corporativos",
         "provider": {
             "@type": "Person",
-            "name": "Ángel Ruiz | Mago e Ilusionista"
+            "name": "Ángel Ruiz"
         },
-        "description": "Servicios de ilusionismo corporativo para cenas de empresa, ferias y lanzamientos de marca en Madrid.",
-        "areaServed": "Madrid"
+        "areaServed": "Comunidad de Madrid",
+        "description": "Espectáculos de magia close-up para empresas en Madrid.",
+        "serviceType": "Entertainment",
+        "url": "https://angelruiz.world/empresas"
     };
 
     const faqSchema = {

@@ -102,9 +102,40 @@ const schemaOrg = {
   knowsAbout: ['Magia de Cerca', 'Ilusionismo Profesional', 'Magia Corporativa', 'Mentalismo', 'Entretenimiento para Bodas'],
 };
 
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Ángel Ruiz — Mago",
+  "description": "Mago close-up en Madrid especializado en bodas, eventos corporativos y celebraciones privadas.",
+  "url": "https://angelruiz.world",
+  "telephone": "+34648055636",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Torrelodones",
+    "addressRegion": "Comunidad de Madrid",
+    "addressCountry": "ES"
+  },
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.578,
+      "longitude": -3.926
+    },
+    "geoRadius": "50000"
+  },
+  "priceRange": "€€",
+  "hasMap": "https://maps.google.com/?q=Torrelodones+Madrid"
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet" />
+      </head>
       <body className="antialiased min-h-screen selection:bg-amber-500/30 selection:text-amber-200">
         <Script 
           src="https://cdn.trustindex.io/loader.js?5feeac5690002876db7628d0fd2" 
@@ -113,6 +144,10 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
         {children}
         <Analytics />

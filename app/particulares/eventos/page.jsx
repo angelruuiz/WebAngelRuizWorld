@@ -5,8 +5,8 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: 'Mago para Eventos Privados y Fiestas en Madrid | Ángel Ruiz | Mago e Ilusionista',
-    description: 'Sorprende a tus invitados con magia de cerca y mentalismo en tus fiestas privadas con Ángel Ruiz, experto ilusionista en Madrid.',
+    title: 'Mago para Eventos Privados Madrid | Cumpleaños, Comuniones y Celebraciones',
+    description: 'Espectáculos de magia close-up para eventos privados en Madrid. Cumpleaños, comuniones, aniversarios y fiestas particulares. Ángel Ruiz, mago profesional en Torrelodones.',
     alternates: {
         canonical: '/particulares/eventos',
     },
@@ -27,13 +27,15 @@ export default function EventosDetailPage() {
     const serviceSchema = {
         "@context": "https://schema.org",
         "@type": "Service",
-        "name": "Magia para Eventos Privados en Madrid",
+        "name": "Magia para eventos privados",
         "provider": {
             "@type": "Person",
-            "name": "Ángel Ruiz | Mago e Ilusionista"
+            "name": "Ángel Ruiz"
         },
-        "description": "Show de magia para fiestas, cumpleaños y reuniones privadas en la Comunidad de Madrid.",
-        "areaServed": "Madrid"
+        "areaServed": "Comunidad de Madrid",
+        "description": "Espectáculos de magia close-up para eventos privados en Madrid.",
+        "serviceType": "Private Event Entertainment",
+        "url": "https://angelruiz.world/particulares/eventos"
     };
 
     const faqSchema = {

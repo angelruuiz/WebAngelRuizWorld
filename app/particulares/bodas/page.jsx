@@ -5,8 +5,8 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: 'Mago para Bodas en Madrid | Ángel Ruiz | Mago e Ilusionista',
-    description: 'Haz que tu cóctel y banquete de boda sean inolvidables con magia de cerca exclusiva. Ángel Ruiz, mago experto en bodas en Madrid y alrededores.',
+    title: 'Mago para Bodas en Madrid | Magia de Cerca y Cóctel Inolvidable',
+    description: '¿Buscas un mago para tu boda en Madrid? Sorprende a tus invitados con magia de cerca exclusiva durante el cóctel y banquete. ¡Reserva tu fecha y haz tu boda única!',
     alternates: {
         canonical: '/particulares/bodas',
     },
@@ -27,13 +27,15 @@ export default function BodasDetailPage() {
     const serviceSchema = {
         "@context": "https://schema.org",
         "@type": "Service",
-        "name": "Magia para Bodas en Madrid",
+        "name": "Magia de cerca para bodas",
         "provider": {
             "@type": "Person",
-            "name": "Ángel Ruiz | Mago e Ilusionista"
+            "name": "Ángel Ruiz"
         },
-        "description": "Servicio de ilusionismo y magia de cerca para cócteles y banquetes de boda en la Comunidad de Madrid.",
-        "areaServed": "Madrid"
+        "areaServed": "Comunidad de Madrid",
+        "description": "Servicio de ilusionismo y magia de cerca para bodas.",
+        "serviceType": "Wedding Entertainment",
+        "url": "https://angelruiz.world/particulares/bodas"
     };
 
     const faqSchema = {
@@ -82,7 +84,7 @@ export default function BodasDetailPage() {
                                 Especialista en Bodas | Sierra de Madrid
                             </p>
                             <h1 className="text-4xl md:text-5xl font-[Cinzel] text-white mb-4 border-b border-amber-500/50 pb-2 font-bold leading-tight uppercase">
-                                Mago para Bodas
+                                Magia Exclusiva para Bodas en Madrid
                             </h1>
 
                             <div className="space-y-6 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">

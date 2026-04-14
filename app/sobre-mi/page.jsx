@@ -1,8 +1,8 @@
 import SobreMiClient from '@/components/SobreMiClient';
 
 export const metadata = {
-    title: 'Sobre Mí | Ángel Ruiz | Mago e Ilusionista',
-    description: 'Conoce la trayectoria de Ángel Ruiz | Mago e Ilusionista, especializado en magia de cerca exclusiva para eventos y bodas en Madrid. Pasión y asombro profesional.',
+    title: 'Ángel Ruiz · Mago Profesional en Madrid | Close-up y Cartomagia',
+    description: 'Conoce a Ángel Ruiz, mago close-up de Madrid especializado en cartomagia. Disponible para bodas, empresas y eventos en toda la Comunidad de Madrid. Contacta hoy.',
     alternates: {
         canonical: '/sobre-mi',
     },

@@ -2,8 +2,8 @@ import HomeClient from '@/components/HomeClient';
 import { motion } from 'framer-motion';
 
 export const metadata = {
-    title: 'Ángel Ruiz | Mago e Ilusionista en Madrid y Torrelodones',
-    description: 'Ángel Ruiz, ilusionista profesional en Madrid y Torrelodones. Especialista en magia de cerca para bodas, eventos corporativos y fiestas VIP exclusivas.',
+    title: 'Ángel Ruiz · Mago close-up en Madrid | Bodas, Eventos y Empresas',
+    description: 'Mago profesional en Madrid especializado en close-up para bodas, eventos corporativos y celebraciones privadas. Área de Torrelodones y toda la Comunidad de Madrid. Pide presupuesto sin compromiso.',
     alternates: {
         canonical: '/',
     },

@@ -1,8 +1,8 @@
 import ValoracionesClient from '@/components/ValoracionesClient';
 
 export const metadata = {
-    title: 'Opiniones y Testimonios | Ángel Ruiz | Mago e Ilusionista',
-    description: 'Descubre lo que dicen los clientes sobre Ángel Ruiz | Mago e Ilusionista. Opiniones reales sobre el mejor mago para bodas, empresas y eventos privados en Madrid. Éxito garantizado.',
+    title: 'Opiniones sobre Ángel Ruiz, Mago de Madrid · Reseñas reales de clientes',
+    description: 'Lee las reseñas de quienes ya han contratado a Ángel Ruiz como mago en Madrid. Bodas, empresas y eventos privados. Descubre por qué repiten.',
     alternates: {
         canonical: '/valoraciones',
     },
@@ -26,17 +26,14 @@ export default function ValoracionesPage() {
 
     const schemaData = {
         "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Ángel Ruiz | Mago e Ilusionista",
-        "review": reviewsData.map(r => ({
-            "@type": "Review",
-            "author": { "@type": "Person", "name": r.author },
-            "reviewBody": r.text,
-            "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5"
-            }
-        }))
+        "@type": "Person",
+        "name": "Ángel Ruiz",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "ratingCount": "24"
+        }
     };
 
     const breadcrumbSchema = {
