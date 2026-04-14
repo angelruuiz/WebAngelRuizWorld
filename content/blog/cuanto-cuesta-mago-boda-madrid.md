@@ -48,6 +48,8 @@ Si buscas un **mago para eventos en Madrid** que entienda que vuestra boda es el
 
 El **precio de un mago para bodas en Madrid** es una de las partidas más rentables de vuestro presupuesto. Mientras que las flores se marchitan y la comida se termina, el asombro y las risas de vuestros amigos al ver un milagro en sus manos persistirán para siempre.
 
+Si además de la magia buscas otras formas de sorprender, te recomendamos explorar estas [10 ideas originales para entretener a tus invitados](/blog/ideas-originales-entretenimiento-bodas-madrid), donde encontrarás más opciones para que tu boda sea legendaria.
+
 [¿Quieres saber si tengo libre tu fecha? Consulta disponibilidad aquí](/particulares/bodas) o pide tu presupuesto sin compromiso para asegurar el asombro en tu gran día en la capital.
 
 ---

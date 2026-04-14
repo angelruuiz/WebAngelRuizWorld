@@ -64,7 +64,9 @@ Durante el cóctel, preferimos que la música sea ambiental para poder interactu
 **¿Es mejor el photocall o algo más dinámico?**
 El photocall ya es un clásico, pero las **alternativas al photocall** como la magia o el glitter station fomentan mucho más la interacción real entre personas.
 
-Si buscas el mejor **entretenimiento bodas Madrid**, recuerda que el asombro es el idioma universal. Si quieres saber más sobre precios y cómo la magia puede encajar en tu boda, visita mi guía sobre [¿Cuánto cuesta un mago para una boda?](/particulares/bodas) y descubre cómo hacerlo posible.
+Si buscas el mejor **entretenimiento bodas Madrid**, recuerda que el asombro es el idioma universal. Si te preocupa el presupuesto, te invitamos a leer nuestra guía detallada sobre [¿Cuánto cuesta un mago para una boda en Madrid?](/blog/cuanto-cuesta-mago-boda-madrid), donde desglosamos todas las tarifas y opciones.
+
+También puedes visitar mi sección de [Magia para Bodas](/particulares/bodas) y descubrir cómo hacerlo posible.
 
 ---
 *Angel Ruiz - Especialista en crear momentos imposibles en las bodas más exclusivas de Madrid y alrededores.*
