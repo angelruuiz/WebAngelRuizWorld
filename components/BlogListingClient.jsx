@@ -7,6 +7,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { ChevronDoubleDown, UserIcon } from '@/components/Icons';
 
+import NewsletterForm from '@/components/NewsletterForm';
+
 export default function BlogListingClient({ posts }) {
     const container = {
         hidden: { opacity: 0 },
@@ -62,6 +64,10 @@ export default function BlogListingClient({ posts }) {
                         </motion.div>
                     </motion.div>
                 </header>
+
+                <div className="max-w-4xl mx-auto -mt-6">
+                    <NewsletterForm />
+                </div>
 
                 <motion.div 
                     variants={container}
