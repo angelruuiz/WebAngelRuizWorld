@@ -128,6 +128,9 @@ const localBusinessSchema = {
   "hasMap": "https://maps.google.com/?q=Torrelodones+Madrid"
 };
 
+import NewsletterForm from '@/components/NewsletterForm';
+import NewsletterModal from '@/components/NewsletterModal';
+
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
@@ -150,6 +153,7 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
         {children}
+        <NewsletterModal />
         <Analytics />
       </body>
     </html>
