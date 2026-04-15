@@ -40,12 +40,12 @@ const SEOContent = () => {
                         <p className="text-sm opacity-60 italic text-left">Referente en magia para bodas y empresas con un estilo exclusivo.</p>
                         
                         <div className="pt-6 border-t border-white/5 space-y-4">
-                            <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-amber-500 mb-2 text-left">Experiencia Certificada</p>
+                            <p className="text-[10px] uppercase tracking-[0.3em] font-bold text-amber-500 mb-2 text-left">Experiencia Certificada y Formación de Élite</p>
                             <p className="text-sm leading-relaxed text-slate-300">
-                                Ángel Ruiz se ha consolidado como uno de los <strong className="text-amber-400">ilusionistas más modernos de la capital</strong>, fusionando elegancia y un "caos controlado" en cada evento. Como <strong>mago para bodas en Madrid</strong> e ilusionista de alto nivel para marcas, su enfoque se centra en la <u>magia de cerca (close-up)</u>. Esta disciplina permite que el milagro ocurra literalmente a escasos centímetros del espectador, rompiendo toda barrera lógica y creando una conexión emocional inmediata.
+                                Ángel Ruiz se ha consolidado como uno de los <strong className="text-amber-400">ilusionistas más modernos de la capital</strong>, formado en la prestigiosa <u>Escuela de Magia de Dani DaOrtiz</u>. Esta formación de élite se traduce en una especialización en <strong>Cartomagia Purista</strong> y un "caos controlado" que lo distancia de los magos genéricos. Como <strong>mago para bodas en Madrid</strong> e ilusionista de alto nivel para marcas, su enfoque se centra en la <u>magia de cerca (close-up) de alta calidad</u>, donde el milagro ocurre literalmente a escasos centímetros del espectador.
                             </p>
                             <p className="text-sm leading-relaxed text-slate-300">
-                                En la era digital, el asombro analógico de calidad es un regalo de valor incalculable. Mi propuesta no se limita a ejecutar trucos; se trata de <strong>diseñar atmósferas</strong>. Ya sea en un cóctel de bienvenida, en una cena de gala o en una convención corporativa de gran formato, mi magia actúa como el catalizador perfecto para dinamizar a los invitados y asegurar que su celebración sea recordada por su originalidad y distinción.
+                                En un mercado saturado de agencias, mi propuesta ofrece la distinción de un <strong>especialista</strong>. Mi magia no solo ejecuta trucos; se trata de <strong>diseñar atmósferas de asombro inteligente</strong>. Ya sea en un cóctel de bienvenida o en una cena de gala corporativa, mi trabajo bajo el sello de la cartomagia de autor asegura que su celebración sea recordada por su sofisticación y verdadera imposibilidad.
                             </p>
                         </div>
                     </div>
@@ -132,6 +132,107 @@ const SEOContent = () => {
 };
 
 export default function Home() {
+    const businessSchema = {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Ángel Ruiz | Mago e Ilusionista",
+        "image": "https://angelruiz.world/images/logo-grande.jpg",
+        "@id": "https://angelruiz.world",
+        "url": "https://angelruiz.world",
+        "telephone": "+34648055636",
+        "priceRange": "$$$",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Zona Noroeste",
+            "addressLocality": "Torrelodones",
+            "addressRegion": "Madrid",
+            "postalCode": "28250",
+            "addressCountry": "ES"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 40.5765,
+            "longitude": -3.9298
+        },
+        "areaServed": [
+            "Madrid", "Torrelodones", "Las Rozas", "Majadahonda", 
+            "Pozuelo de Alarcón", "Boadilla del Monte", "Villalba", 
+            "Galapagar", "El Escorial", "Guadarrama"
+        ],
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Escuela de Magia de Dani DaOrtiz"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servicios de Ilusionismo",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Magia para Bodas Exclusive"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Ilusionismo Corporativo y Empresas"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Magia de Cerca (Close-up) para Eventos VIP"
+                    }
+                }
+            ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "20"
+        },
+        "sameAs": [
+            "https://instagram.com/angellruuiz",
+            "https://tiktok.com/@angellruuiz",
+            "https://youtube.com/@angellruuiz"
+        ]
+    };
+
+    const faqSchema = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "¿Qué tipos de eventos cubre Ángel Ruiz?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ángel Ruiz está especializado en magia de cerca para bodas, eventos corporativos, cenas de gala y celebraciones privadas exclusivas en toda la Comunidad de Madrid."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Con cuánta antelación debo reservar un mago para mi boda?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Para asegurar disponibilidad, especialmente en temporada alta de bodas (mayo-septiembre), se recomienda contactar con al menos 6 meses de antelación."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Se desplaza el mago a la Sierra de Madrid?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, Ángel Ruiz tiene su base en Torrelodones y ofrece cobertura prioritaria en toda la Sierra de Guadarrama y zona noroeste (Las Rozas, Majadahonda, Pozuelo, etc.)."
+                }
+            }
+        ]
+    };
+
     const videoSchema = {
         "@context": "https://schema.org",
         "@type": "VideoObject",
@@ -145,6 +246,14 @@ export default function Home() {
 
     return (
         <>
+            <script 
+                type="application/ld+json" 
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }} 
+            />
+            <script 
+                type="application/ld+json" 
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} 
+            />
             <script 
                 type="application/ld+json" 
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} 

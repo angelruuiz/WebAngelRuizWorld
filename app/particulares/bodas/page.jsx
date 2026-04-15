@@ -113,7 +113,7 @@ export default function BodasDetailPage() {
                                 </div>
 
                                 <p>
-                                    Como <strong className="text-amber-400">ilusionista para bodas en Madrid</strong>, mi propuesta se aleja del espectáculo de escenario convencional para centrarse en la <u>intimidad de la magia de cerca</u>. Los milagros ocurren en las propias manos de sus invitados, respetando en todo momento el flujo del evento y la elegancia que requiere una cita en las fincas más exclusivas de la capital.
+                                    Como <strong className="text-amber-400">ilusionista para bodas en Madrid</strong>, formado bajo la mentoría directa de <strong>Dani DaOrtiz</strong>, mi propuesta se aleja del espectáculo genérico para centrarse en la <u>exclusividad de la Cartomagia de autor</u>. Los milagros ocurren en las propias manos de sus invitados, respetando en todo momento el flujo del evento y aportando ese toque purista y sofisticado que requieren las fincas más exclusivas de la capital.
                                 </p>
 
                                 <p>

@@ -4,7 +4,7 @@ import { locations } from '@/lib/locations';
 export default function sitemap() {
   const posts = getSortedPostsData();
   
-  const lastMod = new Date('2026-04-13');
+  const lastMod = new Date('2026-04-15');
   
   const blogUrls = posts.map((post) => ({
     url: `https://angelruiz.world/blog/${post.slug}`,
@@ -61,13 +61,13 @@ export default function sitemap() {
       url: 'https://angelruiz.world/valoraciones',
       lastModified: lastMod,
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.9,
     },
     {
       url: 'https://angelruiz.world/sobre-mi',
       lastModified: lastMod,
       changeFrequency: 'monthly',
-      priority: 0.5,
+      priority: 0.7,
     },
     {
       url: 'https://angelruiz.world/mago-sierra-madrid',

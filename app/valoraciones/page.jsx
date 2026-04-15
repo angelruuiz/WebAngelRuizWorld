@@ -32,7 +32,7 @@ export default function ValoracionesPage() {
             "@type": "AggregateRating",
             "ratingValue": "5",
             "bestRating": "5",
-            "ratingCount": "24"
+            "ratingCount": "20"
         }
     };
 

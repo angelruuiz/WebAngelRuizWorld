@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import NewsletterForm from '@/components/NewsletterForm';
 import { getPostData, getSortedPostsData } from '@/lib/blog';
 import { ReadingProgress } from '@/components/VisualEffects';
@@ -128,9 +129,11 @@ export default async function BlogPost({ params }) {
         <div className="mt-16 py-10 border-y border-white/5 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
           <div className="flex items-center gap-5">
              <div className="w-16 h-16 rounded-full overflow-hidden bg-amber-500/10 flex items-center justify-center border border-amber-500/20 shadow-[0_0_20px_rgba(245,158,11,0.1)] transition-transform hover:scale-110 duration-500">
-                <img 
+                <Image 
                     src="/images/logo-pequeno.jpg" 
-                    alt="Logo Ángel Ruiz García" 
+                    alt="Ángel Ruiz mago ilusionista profesional Madrid - logo autor corporativo" 
+                    width={64}
+                    height={64}
                     className="w-full h-full object-cover"
                 />
              </div>

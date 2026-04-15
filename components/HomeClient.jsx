@@ -39,6 +39,8 @@ const HeroClient = ({ onOpenModal }) => {
                     loop 
                     muted 
                     playsInline 
+                    poster="/images/foto-bio.png"
+                    preload="none"
                     className="w-full h-full object-cover"
                 >
                     <source src="/spring.webm" type="video/webm" />
@@ -49,13 +51,11 @@ const HeroClient = ({ onOpenModal }) => {
             </div>
             
             <motion.div style={{ y: y1, opacity }} className="text-center px-4 relative z-10 flex flex-col items-center w-full">
-                <h1 className="font-[Cinzel] text-5xl md:text-8xl font-bold mb-8 tracking-wider drop-shadow-lg leading-tight">
-                    <span className="sr-only">Angel Ruiz | Mago e Ilusionista en Madrid para Bodas y Empresas</span>
-                    <span aria-hidden="true">
-                        <span className="text-amber-400 block mb-2"><SplitText text="ANGEL" /></span>
-                        <span className="text-white block"><SplitText text="RUIZ" /></span>
-                    </span>
-                </h1>
+                <h1 className="sr-only">Ángel Ruiz | Mago e Ilusionista en Madrid</h1>
+                <div aria-hidden="true" className="font-[Cinzel] text-5xl md:text-8xl font-bold mb-8 tracking-wider drop-shadow-lg leading-tight pointer-events-none">
+                    <span className="text-amber-400 block mb-2"><SplitText text="ANGEL" /></span>
+                    <span className="text-white block"><SplitText text="RUIZ" /></span>
+                </div>
                 
                 <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1.0, duration: 1 }} className="my-6">
                     <p className="text-lg md:text-2xl text-slate-200 tracking-[0.1em] uppercase border-y border-amber-500/30 py-4 px-4 md:px-8 inline-block backdrop-blur-sm bg-slate-900/20 text-center leading-relaxed font-[Playfair_Display]">

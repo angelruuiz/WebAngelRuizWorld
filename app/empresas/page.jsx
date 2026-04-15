@@ -84,8 +84,9 @@ export default function EmpresasPage() {
                         <div className="relative md:sticky md:top-32 h-[350px] md:h-[500px] rounded-2xl overflow-hidden border border-slate-800 shadow-xl order-2 md:order-1 group bg-slate-900/50">
                             <Image
                                 src="/images/mago-empresas-madrid-angel-ruiz.svg"
-                                alt="Mago corporativo Angel Ruiz - Ilusionismo profesional para empresas en Madrid y zona noroeste"
-                                fill
+                                alt="Ángel Ruiz mago para empresas Madrid"
+                                width={400}
+                                height={400}
                                 className="object-contain p-12 transition-all duration-700 group-hover:scale-105"
                                 priority
                             />
@@ -104,8 +105,8 @@ export default function EmpresasPage() {
                                  <p className="border-l-2 border-amber-500 pl-4 py-1">
                                     <span className="text-amber-400 font-bold underline decoration-amber-500/30 text-lg">Eleve el impacto de su marca con una experiencia de asombro diseñada a medida por profesionales.</span>
                                 </p>
-                                <p>
-                                    Angel Ruiz, reconocido <strong className="text-amber-400 font-bold">ilusionista corporativo en Madrid</strong>, ofrece un enfoque sofisticado y moderno para el sector empresarial. En un mundo saturado de impactos digitales, la <strong>magia en vivo</strong> se posiciona como una de las herramientas más potentes de marketing offline y fidelización. No se trata solo de trucos, sino de una técnica refinada para captar la atención plena de sus invitados y asociar su marca a un recuerdo positivo y sorprendente.
+                                 <p>
+                                    Angel Ruiz, reconocido <strong className="text-amber-400 font-bold">ilusionista corporativo en Madrid</strong> y formado en la prestigiosa <strong>Escuela DaOrtiz</strong>, ofrece un enfoque sofisticado que lo distancia de las agencias de ocio convencionales. Mi especialización en <u>Cartomagia de alta calidad</u> permite ofrecer una experiencia premium en vivo, posicionándome como una de las herramientas más potentes de marketing offline y fidelización para su empresa. No se trata solo de trucos, sino de una técnica refinada para captar la atención plena de sus invitados y asociar su marca a un recuerdo exclusivo y verdaderamente sorprendente.
                                 </p>
 
                                 <div className="grid grid-cols-2 gap-4 py-6 border-y border-white/5">

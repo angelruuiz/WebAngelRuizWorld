@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -97,9 +98,11 @@ export default function BlogListingClient({ posts }) {
                                     <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4 text-[10px] font-bold text-slate-500 uppercase tracking-[0.2em] pt-6 border-t border-white/5">
                                         <div className="flex items-center gap-3">
                                             <div className="w-10 h-10 rounded-full overflow-hidden bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-amber-500/50 transition-all duration-500">
-                                                <img 
+                                                <Image 
                                                     src="/images/logo-pequeno.jpg" 
-                                                    alt="Logo Ángel Ruiz" 
+                                                    alt="Ángel Ruiz mago ilusionista profesional Madrid - logo autor" 
+                                                    width={40} 
+                                                    height={40} 
                                                     className="w-full h-full object-cover"
                                                 />
                                             </div>
