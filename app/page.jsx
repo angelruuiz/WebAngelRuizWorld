@@ -79,10 +79,13 @@ const SEOContent = () => {
                                         <a href="/mago-torrelodones" className="text-amber-400 hover:text-white transition-all underline decoration-amber-500/30">Torrelodones</a>
                                         <a href="/mago-sierra-madrid" className="hover:text-amber-400">Sierra de Madrid</a>
                                         <a href="/mago-las-rozas" className="hover:text-amber-400">Las Rozas</a>
+                                        <a href="/mago-boadilla" className="hover:text-amber-400">Boadilla del Monte</a>
                                         <a href="/mago-villalba" className="hover:text-amber-400">Collado Villalba</a>
                                         <a href="/mago-galapagar" className="hover:text-amber-400">Galapagar</a>
                                         <a href="/mago-pozuelo" className="hover:text-amber-400">Pozuelo de Alarcón</a>
                                         <a href="/mago-majadahonda" className="hover:text-amber-400">Majadahonda</a>
+                                        <a href="/mago-las-matas" className="hover:text-amber-400">Las Matas</a>
+                                        <a href="/mago-el-escorial" className="hover:text-amber-400">El Escorial</a>
                                     </div>
                                     <p className="mt-4 text-[11px] opacity-70 leading-relaxed italic border-t border-white/5 pt-4">
                                         Especialista en <strong>fincas para bodas</strong> y eventos residenciales VIP en urbanizaciones como La Finca, Somosaguas y Monterrozas.
