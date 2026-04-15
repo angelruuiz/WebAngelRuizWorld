@@ -83,40 +83,41 @@ export default function BodasDetailPage() {
                             <p className="text-amber-500 uppercase tracking-widest text-[10px] font-bold mb-2 drop-shadow-md">
                                 Especialista en Bodas | Sierra de Madrid
                             </p>
-                            <h1 className="text-4xl md:text-5xl font-[Cinzel] text-white mb-4 border-b border-amber-500/50 pb-2 font-bold leading-tight uppercase">
-                                Magia Exclusiva para Bodas en Madrid
+                            <h1 className="text-4xl md:text-5xl font-[Cinzel] text-white mb-6 border-b border-amber-500/50 pb-2 font-bold leading-tight uppercase">
+                                Mago para Bodas en Madrid
                             </h1>
 
                             <div className="space-y-6 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
+                                <p className="border-l-2 border-amber-500 pl-4 py-1">
+                                    <span className="text-amber-400 font-bold underline decoration-amber-500/30 text-lg">Haga que el día más importante de su vida sea también el más sorprendente para sus invitados.</span>
+                                </p>
                                 <p>
-                                    <span className="text-amber-400 font-bold underline decoration-amber-500/30">Personaliza tu boda de la forma más mágica.</span>{' '}
-                                    Ángel Ruiz, mago profesional experto en <strong>eventos Madrid</strong> de lujo y <strong className="text-amber-400">ilusionismo en la Sierra</strong>, se encargará de hacer del cóctel o del banquete un momento único. El asombro sucede a escasos centímetros de los invitados, eliminando tiempos muertos y rompiendo el hielo al instante.
+                                    Ángel Ruiz, ilusionista profesional experto en <strong>eventos de lujo en Madrid</strong> y referente de la <strong>magia en la Sierra</strong>, se especializa en crear momentos de asombro que actúan como el hilo conductor perfecto para su enlace. Una boda es una celebración de emociones, y no hay nada que conecte mejor a familias y amigos que la vivencia compartida de lo imposible.
                                 </p>
 
-                                {/* Mini Features Grid para no aburrir */}
                                 <div className="grid grid-cols-2 gap-4 py-6 border-y border-white/5">
                                     <div className="flex items-start gap-3">
                                         <div className="text-amber-500 font-bold">01</div>
                                         <div>
-                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Cóctel de Bienvenida</h4>
-                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Magia itinerante para romper el hielo.</p>
+                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Cóctel & Bienvenida</h4>
+                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Magia itinerante para romper el hielo entre grupos.</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-3">
                                         <div className="text-amber-500 font-bold">02</div>
                                         <div>
-                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Entre Platos</h4>
-                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Amenización elegante durante el banquete.</p>
+                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Magia de Banquete</h4>
+                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Intervenciones elegantes durante el servicio de mesa.</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <p>
-                                    Como <strong className="text-amber-400">ilusionista para bodas en Madrid</strong>, complemento la gastronomía con un entretenimiento que respeta la elegancia del evento en las fincas más exclusivas, desde la capital hasta <strong>El Escorial o Majadahonda</strong>.
+                                    Como <strong className="text-amber-400">ilusionista para bodas en Madrid</strong>, mi propuesta se aleja del espectáculo de escenario convencional para centrarse en la <u>intimidad de la magia de cerca</u>. Los milagros ocurren en las propias manos de sus invitados, respetando en todo momento el flujo del evento y la elegancia que requiere una cita en las fincas más exclusivas de la capital.
                                 </p>
 
                                 <p>
-                                    Al ser <strong>mago para bodas en Torrelodones</strong> (mi base de operaciones), cubro toda la zona noroeste con cercanía total: <strong>Las Rozas, Pozuelo, Boadilla y Villalba</strong>. Sin complicaciones logísticas para ti.
+                                    Al ser <strong>mago para bodas en Torrelodones</strong>, ofrezco una cobertura excepcional en toda la zona noroeste: <strong>Las Rozas, Pozuelo, El Escorial y Majadahonda</strong>. Mi conocimiento de los espacios y wedding planners locales garantiza una coordinación impecable sin complicaciones logísticas para los novios.
                                 </p>
                             </div>
 
@@ -125,7 +126,7 @@ export default function BodasDetailPage() {
                             </div>
                         </div>
 
-                        <div className="relative md:sticky md:top-32 h-[350px] md:h-[450px] rounded-2xl overflow-hidden border border-slate-800 shadow-xl group">
+                        <div className="relative md:sticky md:top-32 h-[350px] md:h-[500px] rounded-2xl overflow-hidden border border-slate-800 shadow-xl group">
                             <Image
                                 src="/images/boda-magia-madrid.jpg"
                                 alt="Mago de bodas en Madrid Angel Ruiz realizando magia de cerca en una finca de la sierra de Madrid"
@@ -135,9 +136,69 @@ export default function BodasDetailPage() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
                             <div className="absolute bottom-6 left-6 right-6">
-                                <p className="text-[10px] text-amber-500 font-bold uppercase tracking-widest mb-1">Impacto Real</p>
-                                <p className="text-white font-[Cinzel] text-sm italic">"Una experiencia inolvidable para vuestros invitados"</p>
+                                <p className="text-[10px] text-amber-500 font-bold uppercase tracking-widest mb-1">Impacto Emocional</p>
+                                <p className="text-white font-[Cinzel] text-sm italic">"Un recuerdo que sus invitados guardarán para siempre"</p>
                             </div>
+                        </div>
+                    </div>
+
+                    {/* BLOQUE ADICIONAL DE CONTENIDO SEO PARA BODAS */}
+                    <div className="max-w-4xl mx-auto space-y-16 py-16 border-t border-white/5">
+                        <section className="space-y-8">
+                            <h2 className="text-3xl font-[Cinzel] text-white text-center uppercase tracking-widest border-b border-amber-500/30 pb-4">El Valor Añadido de la Magia en su Enlace</h2>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                                <div className="space-y-4">
+                                    <h3 className="text-amber-400 font-bold text-xl font-[Cinzel]">Networking Emocional: Rompiendo el Hielo</h3>
+                                    <p className="text-slate-300 text-sm leading-relaxed text-justify">
+                                        En el <strong className="text-white">cóctel de bienvenida</strong>, es común que los grupos de invitados (familia del novio, amigos de la novia, compañeros de trabajo) permanezcan aislados. Como <strong>mago itinerante en Madrid</strong>, me infiltro entre los grupos de forma orgánica. Al generar un milagro compartido, se crea un tema de conversación inmediato que une a personas que no se conocían, facilitando una atmósfera mucho más vibrante y cohesionada.
+                                    </p>
+                                </div>
+                                <div className="space-y-4">
+                                    <h3 className="text-amber-400 font-bold text-xl font-[Cinzel]">Magia de Mesa: Amenización del Banquete</h3>
+                                    <p className="text-slate-300 text-sm leading-relaxed text-justify">
+                                        El banquete puede tener momentos de espera entre platos que rompen el ritmo de la celebración. Mi intervención de <strong className="text-white">magia de mesa a mesa</strong> está diseñada para ser breve, impactante y extremadamente respetuosa. Actuamos en los intervalos precisos, asegurando que el asombro sea el aderezo perfecto para la propuesta gastronómica de su boda, sin interrumpir el servicio.
+                                    </p>
+                                </div>
+                                <div className="space-y-4">
+                                    <h3 className="text-amber-400 font-bold text-xl font-[Cinzel]">Exclusividad y Estilo Personalizado</h3>
+                                    <p className="text-slate-300 text-sm leading-relaxed text-justify">
+                                        No hay dos bodas iguales. Mi enfoque como <strong>mago para bodas VIP</strong> es la personalización. Podemos crear efectos específicos que involucren la historia de los novios o que utilicen elementos significativos del enlace. El objetivo es que la magia no sea un parche, sino una pieza fundamental del engranaje estético y emocional de su gran día.
+                                    </p>
+                                </div>
+                                <div className="space-y-4">
+                                    <h3 className="text-amber-400 font-bold text-xl font-[Cinzel]">Fotografías de Asombro Real</h3>
+                                    <p className="text-slate-300 text-sm leading-relaxed text-justify">
+                                        La magia regala a sus fotógrafos momentos de <strong className="text-white">expresiones auténticas</strong>. Las caras de sorpresa, las risas espontáneas y los gestos de incredulidad de sus seres queridos capturados en imagen son el testimonio visual de que su boda fue, literalmente, mágica. Es un valor añadido que perdura en su álbum de recuerdos.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section className="bg-slate-900/50 p-8 md:p-12 rounded-[2rem] border border-amber-500/20 shadow-2xl space-y-8">
+                            <h2 className="text-2xl font-[Cinzel] text-white mb-6 uppercase tracking-widest text-center">Un Profesional de Confianza para el "Sí, Quiero"</h2>
+                            <div className="space-y-6 text-slate-300 text-sm md:text-base leading-relaxed text-justify">
+                                <p>
+                                    Entiendo la presión que conlleva organizar una boda y la importancia de contar con proveedores que sean una solución, no un problema adicional. Como <strong className="text-amber-400">ilusionista profesional en Madrid</strong>, garantizo una etiqueta impecable y un trato exquisito con todos sus invitados, desde los más pequeños hasta los mayores.
+                                </p>
+                                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
+                                    <li className="flex items-center gap-3 bg-white/5 p-3 rounded-lg"><span className="text-amber-500">✓</span> <strong>Discreción y Elegancia:</strong> Etiqueta adaptada al código de vestimenta de su boda.</li>
+                                    <li className="flex items-center gap-3 bg-white/5 p-3 rounded-lg"><span className="text-amber-500">✓</span> <strong>Adaptabilidad Total:</strong> Actuamos tanto en interiores como en exteriores (jardines, fincas).</li>
+                                    <li className="flex items-center gap-3 bg-white/5 p-3 rounded-lg"><span className="text-amber-500">✓</span> <strong>Experiencia en Fincas Local:</strong> Conocemos el funcionamiento de las mejores fincas de la Sierra y el Noroeste.</li>
+                                    <li className="flex items-center gap-3 bg-white/5 p-3 rounded-lg"><span className="text-amber-500">✓</span> <strong>Reserva Garantizada:</strong> Contratos claros y comunicación directa hasta el gran día.</li>
+                                </ul>
+                                <p className="pt-4 border-t border-white/5">
+                                    Operamos habitualmente en entornos exclusivos como <strong>Las Rozas de Madrid, Majadahonda, y Pozuelo de Alarcón</strong>, además de desplazamos a cualquier punto de la geografía española para enlaces de destino. Confíe en un mago local con proyección nacional para asegurar el éxito rotundo del entretenimiento en su boda.
+                                </p>
+                            </div>
+                        </section>
+
+                        <div className="text-center space-y-4">
+                            <p className="text-amber-500 font-bold uppercase tracking-widest text-xs">Testimonio Destacado:</p>
+                            <p className="text-lg text-white font-[Cinzel] italic max-w-2xl mx-auto">
+                                "Ángel hizo que el cóctel volara. Nuestros invitados todavía nos preguntan cómo hizo aquello con las cartas. Fue el toque elegante que buscábamos."
+                            </p>
+                            <p className="text-slate-500 text-[10px] uppercase">— Novios en Finca de Torrelodones, 2025</p>
                         </div>
                     </div>
 

@@ -10,18 +10,18 @@ export const metadata = {
 
 export default function ValoracionesPage() {
     const reviewsData = [
-        { text: "Contratamos a Ángel para dirigir un taller de magia para nuestro campus y la experiencia superó todas las expectativas.", author: "Movistar Estudiantes" },
-        { text: "Contratamos a Ángel para nuestra boda y fue la clave para que el cóctel fuera espectacular. La magia de cerca que hace es de otro nivel.", author: "Sofía y David" },
-        { text: "Ángel transformó la comunión de nuestro sobrino en algo verdaderamente excepcional.", author: "Comunión de Marcos" },
-        { text: "Ángel fue el que inauguró nuestra peña, ¡y lo hizo a lo grande! Nos dejó a todos clavados en el asiento.", author: "Peña 'La Escombrera' (Torrelodones)" },
-        { text: "Un espectáculo de magia de salón impecable para la fiesta de cumpleaños.", author: "Ana P." },
-        { text: "Una experiencia absolutamente mágica. Hizo que nuestra cena de empresa se convirtiera en un evento único.", author: "Carlos M." },
-        { text: "Buscábamos el mejor mago para bodas en Madrid y Ángel fue todo un acierto. Su magia de cóctel dejó a todos los invitados fascinados.", author: "Laura García" },
-        { text: "Como ilusionista para eventos corporativos es brillante. Capacidad única para integrar nuestra marca en sus efectos de mentalismo.", author: "Miguel Jiménez" },
-        { text: "La mejor magia de cerca profesional que he visto. Ideal para cenas privadas donde quieres sorprender a clientes VIP.", author: "Patricia Ruiz" },
-        { text: "Un show de magia para comuniones y cumpleaños que divierte tanto a niños como a adultos. Muy recomendado.", author: "Javier Soler" },
-        { text: "Es el mejor mago ilusionista de Madrid que hemos contratado. Elegancia, humor y una técnica impecable en cada juego.", author: "Carmen Martínez" },
-        { text: "Si buscas magia elegante para eventos de alto standing, Ángel es el profesional adecuado. Impresionante su control de la atención.", author: "Sergio Blanco" }
+        { text: "Contratamos a Ángel Ruiz para dinamizar un congreso corporativo de Movistar Estudiantes y la experiencia fue sencillamente transformadora. Su capacidad para integrar mensajes de equipo en sus efectos de magia de cerca es única. Un profesional impecable que entiende el protocolo empresarial a la perfección.", author: "Movistar Estudiantes" },
+        { text: "Buscábamos algo diferente para el cóctel de nuestra boda en Madrid y Ángel fue la mejor decisión que pudimos tomar. La cara de asombro de nuestros invitados al ver la cartomagia a centímetros de sus manos no tenía precio. Elegante, puntual y un artista de los pies a la cabeza.", author: "Sofía y David" },
+        { text: "Ángel transformó la comunión de nuestro hijo en un evento inolvidable tanto para niños como para adultos. Tiene un don especial para manejar al público y crear una atmósfera de misterio y diversión sin igual. El mejor mago de la sierra de Madrid sin duda.", author: "Familia de Marcos" },
+        { text: "Como vecino de Torrelodones, ver a Ángel actuar en la inauguración de nuestra peña fue un orgullo. Su show de magia de salón es potente, dinámico y deja a todo el mundo con la boca abierta. Recomendado al 100% para cualquier evento local.", author: "Peña 'La Escombrera' (Torrelodones)" },
+        { text: "Un espectáculo de ilusionismo moderno y sofisticado. Contraté sus servicios para mi fiesta de 50 aniversario y su magia de cerca fue el tema de conversación principal durante toda la noche. Un nivel técnico que rara vez se ve fuera de televisión.", author: "Ana P. (Madrid Noroeste)" },
+        { text: "Organizar una cena de empresa para 50 directivos es un reto, pero Ángel lo hizo fácil. Su mentalismo y su trato exquisito elevaron la calidad del evento a otro nivel. Es mucho más que un mago; es un generador de experiencias memorables.", author: "Carlos M. (Director Eventos)" },
+        { text: "Increíble cómo maneja la atención de todos. En nuestra cena privada en una finca de Pozuelo, Ángel Ruiz nos demostró por qué es un referente de la cartomagia española. Los juegos de cartas que realiza son sencillamente imposibles de explicar.", author: "Patricia Ruiz" },
+        { text: "Elegancia, humor inteligente e impactos visuales brutales. Buscábamos un mago para empresas en Madrid y Ángel superó nuestras expectativas con un dossier personalizado y una ejecución técnica perfecta en el stand de IFEMA.", author: "Miguel Jiménez (Marketing Manager)" },
+        { text: "Lo que más nos gustó de Ángel Ruiz fue su profesionalidad desde el primer contacto. Nos asesoró sobre el mejor momento para los shows en nuestra boda y el resultado fue un éxito rotundo. Un mago para bodas en Madrid de 10.", author: "Laura García y Jorge" },
+        { text: "He visto a muchos ilusionistas, pero la limpieza de técnica de Ángel con las cartas es asombrosa. Sigue la escuela de los grandes y se nota en la fluidez de su magia. Ideal para eventos VIP donde se busca la máxima calidad.", author: "Sergio Blanco (Productor)" },
+        { text: "Un show dinámico que mantuvo a toda la familia enganchada. Su capacidad para hacer participar a la gente de forma respetuosa y divertida es fantástica. Repetiremos sin duda en el próximo aniversario familiar.", author: "Carmen Martínez" },
+        { text: "Si buscas asombre de calidad para tu empresa en Boadilla o Majadahonda, Ángel es la elección segura. Sus efectos de mentalismo y lectura de pensamiento dejaron a todo el equipo fascinado. Un profesional excepcional.", author: "Javier Soler" }
     ];
 
     const schemaData = {
@@ -55,6 +55,22 @@ export default function ValoracionesPage() {
                 type="application/ld+json" 
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} 
             />
+            
+            <div className="bg-slate-950 pt-32 pb-8 px-6 text-center relative z-10">
+                <div className="max-w-4xl mx-auto space-y-8 bg-white/5 p-10 rounded-[2.5rem] border border-white/5">
+                    <h2 className="text-amber-500 font-bold uppercase tracking-[0.2em] text-xs">Calidad y Confianza Garantizada</h2>
+                    <h3 className="text-white font-[Cinzel] text-3xl md:text-4xl uppercase px-4 leading-relaxed">¿Por qué confiar en la magia de <strong className="text-amber-400">Ángel Ruiz</strong>?</h3>
+                    <div className="text-slate-400 text-sm md:text-base leading-relaxed text-justify space-y-4 font-light italic">
+                        <p>
+                            Las valoraciones de mis clientes no son solo palabras; son la base de mi <strong>reputación profesional como ilusionista</strong>. En cada evento en Madrid y la zona de la sierra, mi prioridad es la búsqueda de la <u>excelencia técnica y la satisfacción total del cliente</u>. Entiendo que un evento es un hito irrepetible, y por ello mi compromiso es con la puntualidad, la elegancia en el trato y, sobre todo, la entrega de un asombro de primer nivel.
+                        </p>
+                        <p>
+                            Contar con más de <strong className="text-white">20 valoraciones de 5 estrellas</strong> en plataformas independientes avala mi trayectoria como <strong>mago para empresas</strong> y bodas. Aquí puedes explorar testimonios detallados que reflejan la autenticidad de mi propuesta y la garantía de éxito para tu próxima celebración privada o corporativa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             <ValoracionesClient reviewsData={reviewsData} />
         </>
     );

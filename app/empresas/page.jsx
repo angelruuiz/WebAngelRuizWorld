@@ -95,48 +95,112 @@ export default function EmpresasPage() {
                         <div className="order-1 md:order-2">
                              <p className="text-amber-500 uppercase tracking-widest text-[10px] font-bold mb-2 drop-shadow-md">
                                 Soluciones Corporativas | Madrid Noroeste
-                            </p>
+                             </p>
                              <h1 className="text-4xl md:text-5xl font-[Cinzel] text-white mb-6 border-b border-amber-500/50 pb-2 font-bold leading-tight uppercase">
-                                Mago para Empresas
-                            </h1>
+                                Mago para Empresas en Madrid
+                             </h1>
 
                              <div className="space-y-6 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
-                                 <p>
-                                    <span className="text-amber-400 font-bold underline decoration-amber-500/30">Transforma tus eventos corporativos con marketing experiencial de alto impacto.</span>{' '}
-                                    Angel Ruiz, ilusionista profesional experto en <strong>eventos Madrid</strong> de lujo y <strong className="text-amber-400">comunicación estratégica</strong>, se encarga de que tu mensaje de marca perdure a través del asombro. Ideal para convenciones, cenas de gala y lanzamientos de producto.
+                                 <p className="border-l-2 border-amber-500 pl-4 py-1">
+                                    <span className="text-amber-400 font-bold underline decoration-amber-500/30 text-lg">Eleve el impacto de su marca con una experiencia de asombro diseñada a medida por profesionales.</span>
+                                </p>
+                                <p>
+                                    Angel Ruiz, reconocido <strong className="text-amber-400 font-bold">ilusionista corporativo en Madrid</strong>, ofrece un enfoque sofisticado y moderno para el sector empresarial. En un mundo saturado de impactos digitales, la <strong>magia en vivo</strong> se posiciona como una de las herramientas más potentes de marketing offline y fidelización. No se trata solo de trucos, sino de una técnica refinada para captar la atención plena de sus invitados y asociar su marca a un recuerdo positivo y sorprendente.
                                 </p>
 
-                                {/* Mini Features Grid para cohesión visual */}
                                 <div className="grid grid-cols-2 gap-4 py-6 border-y border-white/5">
                                     <div className="flex items-start gap-3">
                                         <div className="text-amber-500 font-bold">01</div>
                                         <div>
                                             <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Cóctel & Networking</h4>
-                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Magia de cerca para romper barreras.</p>
+                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Magia de cerca para romper barreras entre invitados.</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-3">
                                         <div className="text-amber-500 font-bold">02</div>
                                         <div>
-                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Magia de Escenario</h4>
-                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Show central para unir a toda la audiencia.</p>
+                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Presentaciones</h4>
+                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Reveal de productos con efectos visuales imposibles.</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <p>
-                                    Si buscas potenciar el <strong className="text-amber-400">engagement</strong> de tus clientes, mi propuesta combina elegancia y humor inteligente, adaptándose al protocolo de las empresas más exigentes en el eje de la <strong>A-6</strong> y las áreas de negocios de <strong>Madrid Centro</strong>.
+                                    Si busca potenciar el <strong className="text-amber-400">engagement</strong> de sus clientes o la cohesión de sus equipos de trabajo, mi propuesta combina elegancia y humor inteligente. Me adapto con precisión al protocolo empresarial de las compañías más exigentes, operando habitualmente en el eje de la <strong>A-6</strong>, los parques empresariales de <strong>Las Rozas y Pozuelo</strong>, y los centros de convenciones de <strong>Madrid Centro</strong> e IFEMA.
+                                </p>
+
+                                <p className="bg-white/5 p-4 rounded-lg italic text-slate-300">
+                                    "La magia corporativa no interrumpe el evento, lo potencia. Mi objetivo es ser el nexo que facilite las conversaciones y el networking de forma orgánica."
                                 </p>
 
                                 <p>
-                                    Como <strong>mago para empresas en Torrelodones</strong>, cubro con total agilidad logística zonas clave como <strong>Las Rozas, Pozuelo, Majadahonda y Villalba</strong>. Calidad profesional garantizada para tu próxima cita corporativa.
+                                    Como <strong>mago para empresas en Torrelodones</strong>, cubro toda la zona noroeste con agilidad logística, garantizando puntualidad y un servicio integral que incluye desde la gestión de la atmósfera mágica hasta la coordinación con otros proveedores de su evento corporativo.
                                 </p>
                             </div>
 
                             <div className="mt-12">
-                                <ContactButtonClient label="Solicitar Dossier para Empresas" />
+                                <ContactButtonClient label="Solicitar Dossier Corporativo" />
                             </div>
                         </div>
+                    </div>
+
+                    {/* BLOQUE ADICIONAL DE CONTENIDO SEO */}
+                    <div className="max-w-4xl mx-auto space-y-16 py-16 border-t border-white/5">
+                        <section className="space-y-8">
+                            <h2 className="text-3xl font-[Cinzel] text-white text-center uppercase tracking-widest border-b border-amber-500/30 pb-4">Soluciones Específicas para su Empresa</h2>
+                            
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                                <div className="space-y-4">
+                                    <h3 className="text-amber-400 font-bold text-xl font-[Cinzel]">1. Ferias, Congresos y Stands</h3>
+                                    <p className="text-slate-300 text-sm leading-relaxed text-justify">
+                                        En un congreso masivo, captar la atención es el desafío número uno. Como <strong className="text-white">mago para stands en Madrid</strong>, utilizo el ilusionismo para generar "parada de tráfico". Mis efectos están diseñados no solo para entretener, sino para <u>integrar las ventajas competitivas de su producto</u> en la rutina mágica. Transformamos a un transeúnte en un lead cualificado en menos de 90 segundos a través del asombro dirigido.
+                                    </p>
+                                </div>
+                                <div className="space-y-4">
+                                    <h3 className="text-amber-400 font-bold text-xl font-[Cinzel]">2. Team Building y Soft Skills</h3>
+                                    <p className="text-slate-300 text-sm leading-relaxed text-justify">
+                                        ¿Busca una dinámica diferente para su equipo? La magia es una herramienta excepcional para trabajar la <strong>comunicación asertiva</strong>, la resolución de problemas y la <u>flexibilidad mental</u>. Realizo talleres integradores donde, mientras aprenden técnicas de ilusionismo, los empleados refuerzan vínculos y descubren nuevas formas de ver una realidad empresarial compleja.
+                                    </p>
+                                </div>
+                                <div className="space-y-4">
+                                    <h3 className="text-amber-400 font-bold text-xl font-[Cinzel]">3. Cenas de Gala y Aniversarios</h3>
+                                    <p className="text-slate-300 text-sm leading-relaxed text-justify">
+                                        El formato de <strong className="text-white">magia entre platos</strong> o de cóctel es la opción preferida para celebraciones anuales. Es un entretenimiento no invasivo que eleva la calidad percibida de la cena. Mis actuaciones en <strong>hoteles exclusivos del centro de Madrid</strong> y <strong>fincas del noroeste</strong> garantizan que la velada fluya con un dinamismo constante y sofisticado.
+                                    </p>
+                                </div>
+                                <div className="space-y-4">
+                                    <h3 className="text-amber-400 font-bold text-xl font-[Cinzel]">4. Presentaciones de Producto</h3>
+                                    <p className="text-slate-300 text-sm leading-relaxed text-justify">
+                                        Haga que su nuevo lanzamiento aparezca literalmente de la nada. Colaboro con departamentos de marketing para crear <u>revelaciones de producto de alto impacto visual</u>, ideales para prensa y redes sociales. El ilusionismo moderno de Angel Ruiz asegura que el primer contacto de su cliente con el producto sea inolvidable.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section className="bg-slate-900/50 p-8 md:p-12 rounded-[2rem] border border-amber-500/20 shadow-2xl space-y-8">
+                            <h2 className="text-2xl font-[Cinzel] text-white mb-6 uppercase tracking-widest text-center">Profesionalidad al Servicio de su Organización</h2>
+                            <div className="space-y-6 text-slate-300 text-sm md:text-base leading-relaxed text-justify">
+                                <p>
+                                    Contratar un <strong className="text-amber-400">mago profesional para empresas en Madrid</strong> implica mucho más que contratar a un artista; es contratar a un partner de confianza. Entiendo la importancia de la imagen de marca y la responsabilidad que conlleva actuar ante sus mejores clientes o directivos.
+                                </p>
+                                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
+                                    <li className="flex items-center gap-3 bg-white/5 p-3 rounded-lg"><span className="text-amber-500">✓</span> <strong>Facturación inmediata</strong> y gestión administrativa transparente.</li>
+                                    <li className="flex items-center gap-3 bg-white/5 p-3 rounded-lg"><span className="text-amber-500">✓</span> <strong>Seguro de Responsabilidad Civil</strong> propio para mayor tranquilidad.</li>
+                                    <li className="flex items-center gap-3 bg-white/5 p-3 rounded-lg"><span className="text-amber-500">✓</span> <strong>Capacidad de adaptación</strong> a protocolos de seguridad y etiqueta corporativa.</li>
+                                    <li className="flex items-center gap-3 bg-white/5 p-3 rounded-lg"><span className="text-amber-500">✓</span> <strong>Puntualidad británica</strong> y coordinación directa con su personal de eventos.</li>
+                                </ul>
+                                <p className="pt-4 border-t border-white/5">
+                                    Operamos de forma recurrente en municipios del cinturón empresarial madrileño como <strong>Boadilla, Alcobendas y San Sebastián de los Reyes</strong>, además de nuestra base habitual como <strong>mago en la zona noroeste</strong>. Nuestra reputación se basa en la excelencia técnica y en un trato exquisitamente profesional en cada interacción.
+                                </p>
+                            </div>
+                        </section>
+
+                        <section className="space-y-6 text-center">
+                            <h2 className="text-2xl font-[Cinzel] text-white uppercase tracking-widest">¿Hacia dónde quiere elevar su próximo evento?</h2>
+                            <p className="text-slate-400 max-w-2xl mx-auto italic">
+                                "Mi misión es que al día siguiente, el comentario en la oficina no sea sobre el catering, sino sobre la magia imposible que ocurrió ayer en la cena de empresa."
+                            </p>
+                        </section>
                     </div>
 
                     {/* FAQ Section */}
