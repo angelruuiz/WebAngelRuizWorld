@@ -26,8 +26,10 @@ export default function ValoracionesPage() {
 
     const schemaData = {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Ángel Ruiz",
+        "@type": "ProfessionalService",
+        "name": "Ángel Ruiz | Mago e Ilusionista",
+        "@id": "https://angelruiz.world",
+        "image": "https://angelruiz.world/images/foto-bio.png",
         "aggregateRating": {
             "@type": "AggregateRating",
             "ratingValue": "5",

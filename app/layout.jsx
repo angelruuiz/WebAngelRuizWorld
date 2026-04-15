@@ -59,6 +59,7 @@ export const viewport = {
 const schemaOrg = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
+  '@id': 'https://angelruiz.world',
   name: 'Ángel Ruiz | Mago e Ilusionista',
   alternateName: 'Ángel Ruiz Magia',
   description: 'Mago e ilusionista profesional en Madrid. Especialista en magia de cerca exclusiva para eventos corporativos, bodas de lujo y fiestas privadas.',
