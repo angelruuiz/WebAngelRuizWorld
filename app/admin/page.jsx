@@ -108,7 +108,7 @@ export default function AdminPage() {
 
     if (!isAuthenticated) {
         return (
-            <div className="min-h-screen bg-[#020617] flex items-center justify-center p-6 font-sans">
+            <div className="min-h-screen bg-[#020617] flex items-center justify-center p-6 font-sans cursor-auto">
                 <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -147,7 +147,7 @@ export default function AdminPage() {
     }
 
     return (
-        <div className="min-h-screen bg-[#020617] text-slate-200 p-4 md:p-8 font-sans">
+        <div className="min-h-screen bg-[#020617] text-slate-200 p-4 md:p-8 font-sans cursor-auto">
             
             {/* Header Area */}
             <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center mb-10 gap-6">
