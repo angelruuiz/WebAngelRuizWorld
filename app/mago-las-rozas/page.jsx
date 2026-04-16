@@ -9,7 +9,7 @@ export const metadata = {
   },
   description: location.description,
   alternates: {
-    canonical: `/mago-las-rozas`,
+    canonical: 'https://angelruiz.world/mago-las-rozas',
   },
   keywords: location.keywords,
 };

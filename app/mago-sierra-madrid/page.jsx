@@ -9,7 +9,7 @@ export const metadata = {
     title: 'Mago en la Sierra de Madrid | Ilusionismo en Zona Noroeste y A-6',
     description: 'Mago profesional en la sierra de Madrid y zona noroeste (Collado Villalba, Galapagar, El Escorial). Especialista en magia de cerca para bodas y eventos exclusivos.',
     alternates: {
-        canonical: '/mago-sierra-madrid',
+        canonical: 'https://angelruiz.world/mago-sierra-madrid',
     },
 };
 

@@ -5,7 +5,7 @@ export const metadata = {
     title: 'Ángel Ruiz · Mago close-up en Madrid | Bodas, Eventos y Empresas',
     description: 'Mago profesional en Madrid especializado en close-up para bodas, eventos corporativos y celebraciones privadas. Área de Torrelodones y toda la Comunidad de Madrid. Pide presupuesto sin compromiso.',
     alternates: {
-        canonical: '/',
+        canonical: 'https://angelruiz.world',
     },
 };
 

@@ -9,7 +9,7 @@ export const metadata = {
   },
   description: location.description,
   alternates: {
-    canonical: '/mago-torrelodones',
+    canonical: 'https://angelruiz.world/mago-torrelodones',
   },
   keywords: location.keywords,
 };

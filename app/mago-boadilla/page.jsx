@@ -9,7 +9,7 @@ export const metadata = {
   },
   description: location.description,
   alternates: {
-    canonical: `/mago-boadilla`,
+    canonical: 'https://angelruiz.world/mago-boadilla',
   },
   keywords: location.keywords,
 };

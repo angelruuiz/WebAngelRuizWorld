@@ -9,7 +9,7 @@ export const metadata = {
   },
   description: location.description,
   alternates: {
-    canonical: `/mago-pozuelo`,
+    canonical: 'https://angelruiz.world/mago-pozuelo',
   },
   keywords: location.keywords,
 };

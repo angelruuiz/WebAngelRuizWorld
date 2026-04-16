@@ -9,7 +9,7 @@ export const metadata = {
   },
   description: location.description,
   alternates: {
-    canonical: `/mago-majadahonda`,
+    canonical: 'https://angelruiz.world/mago-majadahonda',
   },
   keywords: location.keywords,
 };
