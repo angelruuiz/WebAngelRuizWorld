@@ -2,7 +2,7 @@ import HomeClient from '@/components/HomeClient';
 import { motion } from 'framer-motion';
 
 export const metadata = {
-    title: 'Ángel Ruiz · Mago close-up en Madrid | Bodas, Eventos y Empresas',
+    title: 'Angel Ruiz | Mago e Ilusionista',
     description: 'Mago profesional en Madrid especializado en close-up para bodas, eventos corporativos y celebraciones privadas en toda la Comunidad de Madrid. Pide presupuesto sin compromiso.',
     alternates: {
         canonical: 'https://angelruiz.world',
