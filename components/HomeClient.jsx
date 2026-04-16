@@ -33,22 +33,7 @@ const HeroClient = ({ onOpenModal }) => {
     
     return (
         <section className="relative h-[100dvh] flex items-center justify-center overflow-hidden z-10">
-            <div className="absolute inset-0 z-0 overflow-hidden">
-                <video 
-                    autoPlay 
-                    loop 
-                    muted 
-                    playsInline 
-                    poster="/images/foto-bio.png"
-                    preload="none"
-                    className="w-full h-full object-cover"
-                >
-                    <source src="/spring.webm" type="video/webm" />
-                    <source src="/spring.mp4" type="video/mp4" />
-                    <div className="w-full h-full bg-slate-950"></div>
-                </video>
-                <div className="absolute inset-0 bg-slate-950/70" />
-            </div>
+            <div className="absolute inset-0 z-0 bg-slate-950" />
             
             <motion.div style={{ y: y1, opacity }} className="text-center px-4 relative z-10 flex flex-col items-center w-full">
                 <h1 className="sr-only">Ángel Ruiz | Mago e Ilusionista en Madrid</h1>
