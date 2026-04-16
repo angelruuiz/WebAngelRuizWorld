@@ -4,7 +4,7 @@ export const metadata = {
     title: 'Ángel Ruiz · Mago Profesional en Madrid | Close-up y Cartomagia',
     description: 'Conoce a Ángel Ruiz, mago close-up de Madrid especializado en cartomagia. Disponible para bodas, empresas y eventos en toda la Comunidad de Madrid. Contacta hoy.',
     alternates: {
-        canonical: '/sobre-mi',
+        canonical: 'https://angelruiz.world/sobre-mi',
     },
 };
 

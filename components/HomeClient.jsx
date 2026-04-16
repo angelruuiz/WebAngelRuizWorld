@@ -39,7 +39,7 @@ const HeroClient = ({ onOpenModal }) => {
                     loop 
                     muted 
                     playsInline 
-                    preload="auto"
+                    preload="metadata"
                     className="w-full h-full object-cover"
                 >
                     <source src="/spring.webm" type="video/webm" />
@@ -51,14 +51,14 @@ const HeroClient = ({ onOpenModal }) => {
             
             <motion.div style={{ y: y1, opacity }} className="text-center px-4 relative z-10 flex flex-col items-center w-full">
                 <h1 className="sr-only">Ángel Ruiz | Mago e Ilusionista en Madrid</h1>
-                <div aria-hidden="true" className="font-[Cinzel] text-5xl md:text-8xl font-bold mb-8 tracking-wider drop-shadow-lg leading-tight pointer-events-none">
+                <div aria-hidden="true" className="font-[Cinzel] text-4xl sm:text-5xl md:text-8xl font-bold mb-6 md:mb-8 tracking-wider drop-shadow-lg leading-tight pointer-events-none">
                     <span className="text-amber-400 block mb-2"><SplitText text="ANGEL" /></span>
                     <span className="text-white block"><SplitText text="RUIZ" /></span>
                 </div>
                 
-                <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1.0, duration: 1 }} className="my-6">
-                    <p className="text-lg md:text-2xl text-slate-200 tracking-[0.1em] uppercase border-y border-amber-500/30 py-4 px-4 md:px-8 inline-block backdrop-blur-sm bg-slate-900/20 text-center leading-relaxed font-[Playfair_Display]">
-                        Ilusionista profesional con más de <span className="font-[Cinzel] font-bold text-lg md:text-xl lg:text-3xl">10</span> años de experiencia
+                <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1.0, duration: 1 }} className="my-4 md:my-6">
+                    <p className="text-sm sm:text-lg md:text-2xl text-slate-200 tracking-[0.1em] uppercase border-y border-amber-500/30 py-3 md:py-4 px-4 md:px-8 inline-block backdrop-blur-sm bg-slate-900/20 text-center leading-relaxed font-[Playfair_Display]">
+                        Ilusionista profesional con más de <span className="font-[Cinzel] font-bold text-base sm:text-lg md:text-xl lg:text-3xl">10</span> años de experiencia
                     </p>
                 </motion.div>
                 

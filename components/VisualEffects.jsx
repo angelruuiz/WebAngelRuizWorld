@@ -55,14 +55,17 @@ export const ReadingProgress = () => {
 };
 
 export const ParticleBackground = () => {
-    const [particles] = useState(() => Array.from({ length: 35 }).map((_, i) => ({ 
-        id: i, 
-        x: Math.random() * 100, 
-        y: Math.random() * 100, 
-        size: Math.random() * 2 + 1, 
-        duration: Math.random() * 15 + 15,
-        delay: Math.random() * 10
-    })));
+    const [particles] = useState(() => {
+        const count = typeof window !== 'undefined' && window.innerWidth < 768 ? 15 : 35;
+        return Array.from({ length: count }).map((_, i) => ({ 
+            id: i, 
+            x: Math.random() * 100, 
+            y: Math.random() * 100, 
+            size: Math.random() * 2 + 1, 
+            duration: Math.random() * 15 + 15,
+            delay: Math.random() * 10
+        }));
+    });
     return (
         <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
             <div className="absolute inset-0 bg-[#020617] z-0" />

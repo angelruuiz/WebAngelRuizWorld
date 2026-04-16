@@ -8,7 +8,7 @@ export const metadata = {
     title: 'Mago para Eventos Privados Madrid | Cumpleaños, Comuniones y Celebraciones',
     description: 'Espectáculos de magia close-up para eventos privados en Madrid. Cumpleaños, comuniones, aniversarios y fiestas particulares. Ángel Ruiz, mago profesional en Torrelodones.',
     alternates: {
-        canonical: '/particulares/eventos',
+        canonical: 'https://angelruiz.world/particulares/eventos',
     },
     openGraph: {
         title: 'Mago para Eventos Privados en Madrid | Ángel Ruiz | Mago e Ilusionista',

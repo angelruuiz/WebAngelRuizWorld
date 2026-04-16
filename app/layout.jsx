@@ -133,13 +133,30 @@ import NewsletterForm from '@/components/NewsletterForm';
 import NewsletterModal from '@/components/NewsletterModal';
 import CookieBanner from '@/components/CookieBanner';
 
+import { Cinzel, Playfair_Display, Inter } from 'next/font/google';
+
+const cinzel = Cinzel({ 
+  subsets: ['latin'],
+  variable: '--font-cinzel',
+  display: 'swap',
+});
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+  display: 'swap',
+});
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="es">
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet" />
-      <body className="antialiased min-h-screen selection:bg-amber-500/30 selection:text-amber-200">
+    <html lang="es" className={`${cinzel.variable} ${playfair.variable} ${inter.variable}`}>
+      <body className="antialiased min-h-screen selection:bg-amber-500/30 selection:text-amber-200 font-sans">
         <Script 
           src="https://cdn.trustindex.io/loader.js?5feeac5690002876db7628d0fd2" 
           strategy="afterInteractive"

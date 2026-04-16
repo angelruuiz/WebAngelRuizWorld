@@ -8,7 +8,7 @@ export const metadata = {
     title: 'Mago para Eventos Corporativos Madrid · Ángel Ruiz | Close-up Profesional',
     description: 'Magia close-up para eventos de empresa en Madrid. Networking, presentaciones de producto, team building y convenciones. Presupuesto personalizado para tu evento corporativo.',
     alternates: {
-        canonical: '/empresas',
+        canonical: 'https://angelruiz.world/empresas',
     },
     openGraph: {
         title: 'Magia para Empresas en Madrid | Ángel Ruiz | Mago e Ilusionista',

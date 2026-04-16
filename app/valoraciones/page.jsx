@@ -4,7 +4,7 @@ export const metadata = {
     title: 'Opiniones sobre Ángel Ruiz, Mago de Madrid · Reseñas reales de clientes',
     description: 'Lee las reseñas de quienes ya han contratado a Ángel Ruiz como mago en Madrid. Bodas, empresas y eventos privados. Descubre por qué repiten.',
     alternates: {
-        canonical: '/valoraciones',
+        canonical: 'https://angelruiz.world/valoraciones',
     },
 };
 

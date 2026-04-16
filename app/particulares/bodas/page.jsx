@@ -8,7 +8,7 @@ export const metadata = {
     title: 'Mago para Bodas en Madrid | Magia de Cerca y Cóctel Inolvidable',
     description: '¿Buscas un mago para tu boda en Madrid? Sorprende a tus invitados con magia de cerca exclusiva durante el cóctel y banquete. ¡Reserva tu fecha y haz tu boda única!',
     alternates: {
-        canonical: '/particulares/bodas',
+        canonical: 'https://angelruiz.world/particulares/bodas',
     },
     openGraph: {
         title: 'Mago para Bodas en Madrid | Ángel Ruiz | Mago e Ilusionista',

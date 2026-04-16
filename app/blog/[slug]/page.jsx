@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
       url: `https://angelruiz.world/blog/${params.slug}`,
     },
     alternates: {
-      canonical: `/blog/${params.slug}`,
+      canonical: `https://angelruiz.world/blog/${params.slug}`,
     },
   };
 }
