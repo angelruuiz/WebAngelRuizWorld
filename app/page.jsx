@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const metadata = {
     title: 'Ángel Ruiz · Mago close-up en Madrid | Bodas, Eventos y Empresas',
-    description: 'Mago profesional en Madrid especializado en close-up para bodas, eventos corporativos y celebraciones privadas. Área de Torrelodones y toda la Comunidad de Madrid. Pide presupuesto sin compromiso.',
+    description: 'Mago profesional en Madrid especializado en close-up para bodas, eventos corporativos y celebraciones privadas en toda la Comunidad de Madrid. Pide presupuesto sin compromiso.',
     alternates: {
         canonical: 'https://angelruiz.world',
     },
@@ -114,7 +114,7 @@ const SEOContent = () => {
                         <div className="space-y-4">
                             <h3 className="text-white font-[Cinzel] text-lg uppercase tracking-tight">Cruce de Caminos: Madrid y la Sierra</h3>
                             <p className="text-sm leading-relaxed text-slate-400">
-                                Mi residencia en <strong>Torrelodones</strong> me permite ser el <u>mago de confianza</u> para quienes residen en la zona noroeste pero celebran sus hitos importantes en cualquier punto de la Comunidad de Madrid. Calidad, puntualidad y excelencia técnica.
+                                Mi base en la **zona noroeste** me permite ser el <u>mago de confianza</u> para quienes buscan exclusividad en cualquier punto de la Comunidad de Madrid. Calidad, puntualidad y excelencia técnica.
                             </p>
                         </div>
                     </div>
@@ -230,7 +230,7 @@ export default function Home() {
                 "name": "¿Se desplaza el mago a la Sierra de Madrid?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Sí, Ángel Ruiz tiene su base en Torrelodones y ofrece cobertura prioritaria en toda la Sierra de Guadarrama y zona noroeste (Las Rozas, Majadahonda, Pozuelo, etc.)."
+                    "text": "Sí, Ángel Ruiz tiene su sede en Madrid y ofrece cobertura prioritaria en toda la Comunidad, incluyendo la Sierra de Guadarrama y la zona noroeste (Las Rozas, Majadahonda, Pozuelo, etc.)."
                 }
             }
         ]
