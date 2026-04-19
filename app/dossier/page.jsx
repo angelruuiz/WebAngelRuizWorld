@@ -74,8 +74,8 @@ const slides = [
         label: 'Referencias',
         title: 'Lo que Dicen',
         reviews: [
-            { text: '«Los directivos aún hablan de la magia que ocurrió esa noche. La integración de nuestra marca en los efectos fue absolutamente impresionante.»', author: 'Director de RRHH', company: 'Empresa tecnológica · Madrid' },
-            { text: '«Fue la mejor decisión para nuestra boda. Sus actuaciones rompieron el hielo entre las dos familias de una forma que nunca imaginamos posible.»', author: 'Pareja de novios', company: 'Finca exclusiva · Torrelodones' }
+            { text: '«Contratamos a Ángel Ruiz para dinamizar un congreso corporativo de Movistar Estudiantes y la experiencia fue sencillamente transformadora. Su capacidad para integrar mensajes de equipo en sus efectos de magia de cerca es única.»', author: 'Movistar Estudiantes', company: 'Evento Corporativo' },
+            { text: '«Como vecino de Torrelodones, ver a Ángel actuar en la inauguración de nuestra peña fue un orgullo. Su show de magia de salón es potente, dinámico y deja a todo el mundo con la boca abierta. Recomendado al 100%.»', author: 'Peña La Escombrera', company: 'Torrelodones' }
         ]
     },
     {
