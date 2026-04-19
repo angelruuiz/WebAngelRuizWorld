@@ -96,7 +96,6 @@ const slides = [
 
 export default function DossierPage() {
     const [currentSlide, setCurrentSlide] = useState(0);
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const containerRef = useRef(null);
 
     const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -126,7 +125,9 @@ export default function DossierPage() {
     return (
         <div className="relative h-screen w-full bg-slate-950 text-slate-200 overflow-hidden font-inter">
             <MagicCursor />
-            <ParticleBackground />
+            <div className="no-print h-full w-full">
+                <ParticleBackground />
+            </div>
             
             {/* Navbar for Dossier */}
             <nav className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center backdrop-blur-md bg-slate-950/20 border-b border-white/5 no-print">
@@ -173,79 +174,8 @@ export default function DossierPage() {
                 </AnimatePresence>
             </div>
 
-            {/* Global Styles for PDF Generation */}
-            <style dangerouslySetInnerHTML={{ __html: `
-                @media screen {
-                    .print-only { display: none !important; }
-                }
-                @media print {
-                    .no-print { display: none !important; }
-                    .print-only { display: block !important; position: relative !important; width: 100% !important; }
-                    
-                    body, html { 
-                        background: white !important; 
-                        color: #0f172a !important; 
-                        margin: 0 !important; 
-                        padding: 0 !important;
-                        -webkit-print-color-adjust: exact !important;
-                        print-color-adjust: exact !important;
-                    }
-
-                    /* Force motion elements to be visible */
-                    * { 
-                        opacity: 1 !important; 
-                        visibility: visible !important; 
-                        transform: none !important; 
-                        animation: none !important;
-                        transition: none !important;
-                    }
-
-                    .page-break { 
-                        page-break-after: always !important; 
-                        break-after: page !important;
-                        height: 100vh !important;
-                        display: flex !important;
-                        align-items: center !important;
-                        justify-content: center !important;
-                        padding: 40px !important;
-                        box-sizing: border-box !important;
-                    }
-
-                    h1, h2, h3 { color: #b45309 !important; margin-bottom: 1rem !important; } 
-                    p, span, div { color: #334155 !important; }
-                    
-                    .bg-amber-500\\/10 { 
-                        background-color: rgba(245, 158, 11, 0.1) !important; 
-                        border: 1px solid rgba(245, 158, 11, 0.2) !important; 
-                    }
-                    
-                    .bg-slate-950, .bg-slate-900 { background: #f8fafc !important; }
-                    .border-white\\/10 { border-color: #e2e8f0 !important; }
-                    
-                    img { 
-                        filter: none !important; 
-                        max-height: 80vh !important;
-                        object-fit: contain !important;
-                    }
-
-                    .grid { display: grid !important; gap: 2rem !important; }
-                    .flex { display: flex !important; }
-                }
-            ` }} />
-
-            {/* Print Container (Rendered separately for PDF) */}
-            <div className="print-only">
-                {slides.map((slide, i) => (
-                    <div key={i} className="page-break">
-                        <div className="w-full max-w-5xl mx-auto">
-                            {renderSlide(slide)}
-                        </div>
-                    </div>
-                ))}
-            </div>
-
             {/* Navigation Controls */}
-            <div className="fixed bottom-10 left-0 w-full flex justify-between items-center px-10 z-50">
+            <div className="fixed bottom-10 left-0 w-full flex justify-between items-center px-10 z-50 no-print">
                 <div className="flex gap-2">
                     {slides.map((_, idx) => (
                         <div 
@@ -265,10 +195,94 @@ export default function DossierPage() {
             </div>
 
             {/* Background Effects */}
-            <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
+            <div className="absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden no-print">
                 <div className="absolute top-[-10%] right-[-5%] w-[40%] h-[40%] bg-amber-500/5 blur-[120px] rounded-full" />
                 <div className="absolute bottom-[-10%] left-[-5%] w-[30%] h-[30%] bg-blue-500/5 blur-[120px] rounded-full" />
             </div>
+
+            {/* Print Container (Hidden on screen, visible on print) */}
+            <div className="print-only min-h-screen">
+                {slides.map((slide, i) => (
+                    <div key={i} className="page-break">
+                        <div className="w-full max-w-7xl mx-auto">
+                            {renderSlide(slide)}
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            {/* Global Styles for PDF Generation */}
+            <style dangerouslySetInnerHTML={{ __html: `
+                @media screen {
+                    .print-only { display: none !important; }
+                }
+                @media print {
+                    .no-print { display: none !important; }
+                    .print-only { 
+                        display: block !important; 
+                        position: relative !important; 
+                        width: 100% !important; 
+                        background: #020617 !important; 
+                    }
+                    
+                    body, html { 
+                        background: #020617 !important; 
+                        color: #f8fafc !important; 
+                        margin: 0 !important; 
+                        padding: 0 !important;
+                        -webkit-print-color-adjust: exact !important;
+                        print-color-adjust: exact !important;
+                        overflow: visible !important;
+                        height: auto !important;
+                    }
+
+                    /* Force motion elements to be visible and reset layout for print */
+                    * { 
+                        opacity: 1 !important; 
+                        visibility: visible !important; 
+                        transform: none !important; 
+                        animation: none !important;
+                        transition: none !important;
+                        box-shadow: none !important;
+                    }
+
+                    .page-break { 
+                        page-break-after: always !important; 
+                        break-after: page !important;
+                        min-height: 100vh !important;
+                        display: flex !important;
+                        align-items: center !important;
+                        justify-content: center !important;
+                        background: #020617 !important;
+                        padding: 40px !important;
+                    }
+
+                    h1, h2, h3 { color: #f59e0b !important; } 
+                    .text-white { color: #ffffff !important; }
+                    .text-amber-500 { color: #f59e0b !important; }
+                    .text-slate-400, .text-slate-500 { color: #94a3b8 !important; }
+                    
+                    .bg-amber-500\\/10 { 
+                        background-color: rgba(245, 158, 11, 0.15) !important; 
+                        border: 1px solid rgba(245, 158, 11, 0.3) !important; 
+                    }
+                    
+                    .bg-white\\/5 { background-color: rgba(255, 255, 255, 0.05) !important; }
+                    .border-white\\/10 { border-color: rgba(255, 255, 255, 0.1) !important; }
+                    
+                    img { 
+                        filter: none !important; 
+                        max-height: 70vh !important;
+                        width: auto !important;
+                        object-fit: contain !important;
+                        display: block !important;
+                        margin: 0 auto !important;
+                    }
+
+                    .grid { display: grid !important; }
+                    .flex { display: flex !important; }
+                }
+            ` }} />
         </div>
     );
 }
