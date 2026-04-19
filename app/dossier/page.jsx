@@ -9,8 +9,8 @@ import Image from 'next/image';
 
 const slides = [
     {
-        id: 'hero',
-        type: 'hero',
+        id: 'Inicio',
+        type: 'Inicio',
         tag: 'Dossier Corporativo · 2026',
         title: { main: 'ANGEL', sub: 'RUIZ' },
         subtitle: 'Mago · Ilusionista · Cartomagia de Élite',
@@ -23,8 +23,8 @@ const slides = [
         image: '/images/foto-profesional-mirando-carta.png'
     },
     {
-        id: 'about',
-        type: 'about',
+        id: 'Perfil',
+        type: 'Perfil',
         quote: '«La magia es el engaño más honesto que existe»',
         label: 'Sobre Mí',
         title: 'Ilusionista Profesional',
@@ -32,8 +32,8 @@ const slides = [
         badges: ['Cartomagia Purista', 'Close-Up', 'Mentalismo', 'Protocolo Corporativo', 'Escuela DaOrtiz', 'Madrid Noroeste']
     },
     {
-        id: 'services',
-        type: 'services',
+        id: 'Servicios',
+        type: 'Servicios',
         label: 'Qué Ofrezco',
         title: 'Servicios de Élite',
         subtitle: 'Cada actuación, diseñada a medida para su empresa',
@@ -45,8 +45,8 @@ const slides = [
         ]
     },
     {
-        id: 'process',
-        type: 'process',
+        id: 'Proceso',
+        type: 'Proceso',
         label: 'Sin Complicaciones',
         title: 'Proceso de Contratación',
         steps: [
@@ -58,20 +58,20 @@ const slides = [
         ]
     },
     {
-        id: 'pricing',
-        type: 'pricing',
+        id: 'Tarifas',
+        type: 'Tarifas',
         label: 'Inversión',
         title: 'Tarifas & Packs',
         subtitle: 'Transparencia total · Sin letra pequeña',
         packs: [
-            { name: 'Cóctel', sub: 'Magia de Cerca', price: '320 – 450€', duration: '1 – 1,5 horas', items: ['Close-Up itinerante', 'Coordinación previa', 'Factura oficial'], ideal: 'Bodas · Recepciones' },
-            { name: 'Show Central', sub: 'Magia de Escenario', price: '450 – 600€', duration: '35 – 45 minutos', items: ['Show de escenario completo', 'Coordinación técnica', 'Factura + Seguro RC'], ideal: 'Galas · Aniversarios', featured: true },
-            { name: 'Pack Evento', sub: 'Cóctel + Show', price: '650 – 800€', duration: 'Cóctel + Show Completo', items: ['Close-Up 1,5h + Show 40min', 'Descuento pack incluido', 'Factura + Seguro RC'], ideal: 'Bodas Premium · Galas' }
+            { name: 'Cóctel', sub: 'Magia de Cerca', price: '300 – 400€', duration: '1 – 1,5 horas', items: ['Close-Up itinerante', 'Coordinación previa'], ideal: 'Bodas · Comuniones · Recepciones' },
+            { name: 'Show Central', sub: 'Magia de Escenario', price: '400 – 550€', duration: '50 min / 1h 15 min', items: ['Show de escenario completo', 'Coordinación técnica'], ideal: 'Galas · Aniversarios', featured: true },
+            { name: 'Pack Evento', sub: 'Cóctel + Show', price: '600 – 750€', duration: '40 min Close-Up + 40 min Show', items: ['Close-Up itinerante', 'Show central de gala', 'Descuento pack incluido'], ideal: 'Bodas Premium · Galas' }
         ]
     },
     {
-        id: 'testimonials',
-        type: 'testimonials',
+        id: 'Referencias',
+        type: 'Referencias',
         label: 'Referencias',
         title: 'Lo que Dicen',
         reviews: [
@@ -80,8 +80,8 @@ const slides = [
         ]
     },
     {
-        id: 'contact',
-        type: 'contact',
+        id: 'Contacto',
+        type: 'Contacto',
         label: '¿Hablamos?',
         title: 'Hagamos Algo Imposible',
         subtitle: 'Respuesta en menos de 24 horas · Sin compromiso',
@@ -147,8 +147,8 @@ export default function DossierPage() {
                         </button>
                     ))}
                 </div>
-                <a href="tel:+34648055636" className="bg-amber-500 text-slate-950 px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-white transition-colors">
-                    Contactar
+                <a href="/" className="bg-amber-500 text-slate-950 px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-white transition-colors">
+                    Ver Web
                 </a>
             </nav>
 
@@ -199,7 +199,7 @@ export default function DossierPage() {
 
 function renderSlide(slide) {
     switch (slide.type) {
-        case 'hero':
+        case 'Inicio':
             return (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-7xl w-full">
                     <div className="space-y-8 order-2 md:order-1">
@@ -236,14 +236,14 @@ function renderSlide(slide) {
                             src={slide.image} 
                             alt="Angel Ruiz" 
                             fill 
-                            className="object-contain object-bottom filter grayscale contrast-125 drop-shadow-[0_0_50px_rgba(245,158,11,0.2)]"
+                            className="object-contain object-bottom filter contrast-125 drop-shadow-[0_0_50px_rgba(245,158,11,0.2)]"
                             priority
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
                     </motion.div>
                 </div>
             );
-        case 'about':
+        case 'Perfil':
             return (
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center max-w-6xl w-full">
                     <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }} className="relative">
@@ -271,7 +271,7 @@ function renderSlide(slide) {
                     </div>
                 </div>
             );
-        case 'services':
+        case 'Servicios':
             return (
                 <div className="w-full max-w-7xl">
                     <div className="text-center mb-16 space-y-4">
@@ -305,7 +305,7 @@ function renderSlide(slide) {
                     </div>
                 </div>
             );
-        case 'process':
+        case 'Proceso':
             return (
                 <div className="w-full max-w-6xl">
                     <div className="text-center mb-20">
@@ -334,7 +334,7 @@ function renderSlide(slide) {
                     </div>
                 </div>
             );
-        case 'pricing':
+        case 'Tarifas':
             return (
                 <div className="w-full max-w-7xl">
                     <div className="text-center mb-12">
@@ -381,7 +381,7 @@ function renderSlide(slide) {
                     </div>
                 </div>
             );
-        case 'testimonials':
+        case 'Referencias':
             return (
                 <div className="w-full max-w-6xl">
                     <div className="text-center mb-16">
@@ -417,7 +417,7 @@ function renderSlide(slide) {
                     </div>
                 </div>
             );
-        case 'contact':
+        case 'Contacto':
             return (
                 <div className="w-full max-w-4xl text-center">
                     <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1 }}>
