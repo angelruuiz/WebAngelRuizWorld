@@ -173,29 +173,76 @@ export default function DossierPage() {
                 </AnimatePresence>
             </div>
 
-            {/* Print Container (Hidden on screen, visible on print) */}
-            <div className="hidden print:block absolute inset-0 bg-white text-black p-0 m-0">
+            {/* Global Styles for PDF Generation */}
+            <style dangerouslySetInnerHTML={{ __html: `
+                @media screen {
+                    .print-only { display: none !important; }
+                }
+                @media print {
+                    .no-print { display: none !important; }
+                    .print-only { display: block !important; position: relative !important; width: 100% !important; }
+                    
+                    body, html { 
+                        background: white !important; 
+                        color: #0f172a !important; 
+                        margin: 0 !important; 
+                        padding: 0 !important;
+                        -webkit-print-color-adjust: exact !important;
+                        print-color-adjust: exact !important;
+                    }
+
+                    /* Force motion elements to be visible */
+                    * { 
+                        opacity: 1 !important; 
+                        visibility: visible !important; 
+                        transform: none !important; 
+                        animation: none !important;
+                        transition: none !important;
+                    }
+
+                    .page-break { 
+                        page-break-after: always !important; 
+                        break-after: page !important;
+                        height: 100vh !important;
+                        display: flex !important;
+                        align-items: center !important;
+                        justify-content: center !important;
+                        padding: 40px !important;
+                        box-sizing: border-box !important;
+                    }
+
+                    h1, h2, h3 { color: #b45309 !important; margin-bottom: 1rem !important; } 
+                    p, span, div { color: #334155 !important; }
+                    
+                    .bg-amber-500\\/10 { 
+                        background-color: rgba(245, 158, 11, 0.1) !important; 
+                        border: 1px solid rgba(245, 158, 11, 0.2) !important; 
+                    }
+                    
+                    .bg-slate-950, .bg-slate-900 { background: #f8fafc !important; }
+                    .border-white\\/10 { border-color: #e2e8f0 !important; }
+                    
+                    img { 
+                        filter: none !important; 
+                        max-height: 80vh !important;
+                        object-fit: contain !important;
+                    }
+
+                    .grid { display: grid !important; gap: 2rem !important; }
+                    .flex { display: flex !important; }
+                }
+            ` }} />
+
+            {/* Print Container (Rendered separately for PDF) */}
+            <div className="print-only">
                 {slides.map((slide, i) => (
-                    <div key={i} className="min-h-screen w-full p-20 flex items-center justify-center border-b border-gray-100 page-break-after-always">
-                        {renderSlide(slide)}
+                    <div key={i} className="page-break">
+                        <div className="w-full max-w-5xl mx-auto">
+                            {renderSlide(slide)}
+                        </div>
                     </div>
                 ))}
             </div>
-
-            {/* Global Styles for PDF Generation */}
-            <style dangerouslySetInnerHTML={{ __html: `
-                @media print {
-                    .no-print { display: none !important; }
-                    body, html { background: white !important; color: black !important; margin: 0 !important; padding: 0 !important; }
-                    .page-break-after-always { page-break-after: always; }
-                    h1, h2, h3 { color: #b45309 !important; } 
-                    p, span, div { color: #1e293b !important; }
-                    .bg-amber-500\\/10 { background: #fef3c7 !important; border: 1px solid #f59e0b !important; }
-                    .border-white\\/10 { border-color: #e2e8f0 !important; }
-                    img { filter: none !important; position: relative !important; }
-                    .grid { display: grid !important; }
-                }
-            ` }} />
 
             {/* Navigation Controls */}
             <div className="fixed bottom-10 left-0 w-full flex justify-between items-center px-10 z-50">
