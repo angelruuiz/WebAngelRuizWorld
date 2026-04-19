@@ -129,7 +129,7 @@ export default function DossierPage() {
             <ParticleBackground />
             
             {/* Navbar for Dossier */}
-            <nav className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center backdrop-blur-md bg-slate-950/20 border-b border-white/5">
+            <nav className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center backdrop-blur-md bg-slate-950/20 border-b border-white/5 no-print">
                 <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full overflow-hidden border border-amber-500/30">
                         <Image src="/images/logo-pequeno.jpg" width={40} height={40} alt="Logo" className="object-cover" />
@@ -147,13 +147,18 @@ export default function DossierPage() {
                         </button>
                     ))}
                 </div>
-                <a href="/" className="bg-amber-500 text-slate-950 px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-white transition-colors">
-                    Ver Web
-                </a>
+                <div className="flex gap-4">
+                    <button onClick={() => window.print()} className="hidden sm:block text-[10px] font-bold uppercase tracking-widest border border-white/20 px-4 py-2 rounded-full hover:bg-white/10 transition-colors">
+                        PDF
+                    </button>
+                    <a href="/" className="bg-amber-500 text-slate-950 px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-white transition-colors">
+                        Ver Web
+                    </a>
+                </div>
             </nav>
 
             {/* Slides Container */}
-            <div className="relative h-full w-full">
+            <div className="relative h-full w-full no-print">
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={currentSlide}
@@ -161,12 +166,36 @@ export default function DossierPage() {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: -100 }}
                         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-                        className="h-full w-full flex items-center justify-center px-6 md:px-24"
+                        className="h-full w-full flex items-center justify-center px-6 md:px-24 pt-20"
                     >
                         {renderSlide(slides[currentSlide])}
                     </motion.div>
                 </AnimatePresence>
             </div>
+
+            {/* Print Container (Hidden on screen, visible on print) */}
+            <div className="hidden print:block absolute inset-0 bg-white text-black p-0 m-0">
+                {slides.map((slide, i) => (
+                    <div key={i} className="min-h-screen w-full p-20 flex items-center justify-center border-b border-gray-100 page-break-after-always">
+                        {renderSlide(slide)}
+                    </div>
+                ))}
+            </div>
+
+            {/* Global Styles for PDF Generation */}
+            <style dangerouslySetInnerHTML={{ __html: `
+                @media print {
+                    .no-print { display: none !important; }
+                    body, html { background: white !important; color: black !important; margin: 0 !important; padding: 0 !important; }
+                    .page-break-after-always { page-break-after: always; }
+                    h1, h2, h3 { color: #b45309 !important; } 
+                    p, span, div { color: #1e293b !important; }
+                    .bg-amber-500\\/10 { background: #fef3c7 !important; border: 1px solid #f59e0b !important; }
+                    .border-white\\/10 { border-color: #e2e8f0 !important; }
+                    img { filter: none !important; position: relative !important; }
+                    .grid { display: grid !important; }
+                }
+            ` }} />
 
             {/* Navigation Controls */}
             <div className="fixed bottom-10 left-0 w-full flex justify-between items-center px-10 z-50">
