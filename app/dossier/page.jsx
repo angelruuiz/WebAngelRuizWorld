@@ -17,7 +17,7 @@ const slides = [
         desc: 'Ilusionismo premium para empresas y bodas en Madrid. Formado en la Escuela de Dani DaOrtiz. El milagro ocurre a escasos centímetros de tus ojos.',
         stats: [
             { label: 'Años de Experiencia', value: '10+' },
-            { label: 'Eventos Realizados', value: '500+' },
+            { label: 'Eventos Realizados', value: '100+' },
             { label: 'Satisfacción', value: '100%' }
         ],
         image: '/images/foto-profesional-mirando-carta.png'
