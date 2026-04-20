@@ -51,39 +51,6 @@ Esta conexión emocional es lo que buscamos como profesionales del **ilusionismo
 
 ### Preguntas Frecuentes sobre Magia para Bodas
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Es la magia adecuada para todas las edades?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Efectivamente. La magia de calidad cautiva desde los niños hasta los abuelos. Sin embargo, mi estilo está enfocado a una magia adulta y sofisticada, perfecta para el tono de una boda elegante."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿En qué momento es mejor realizar la magia?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Lo más demandado es el cóctel de bienvenida. Es el momento donde la gente está de pie, con una copa en la mano y lista para interactuar. No obstante, realizar magia corta en las mesas durante el banquete también funciona a la perfección."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Con cuánta antelación debo reservar?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Madrid es una ciudad con mucha demanda, especialmente en temporada de bodas (mayo a octubre). Lo ideal es reservar con mínimo mes y medio de antelación para asegurar la fecha de tu evento."
-      }
-    }
-  ]
-}
-</script>
-
 #### ¿Es el ilusionismo una opción rentable?
 
 Muchos novios se preguntan si el gasto merece la pena frente a otras opciones como cabinas de fotos o música en vivo. La realidad es que la magia es una de las pocas animaciones que garantiza una interacción 1:1 con prácticamente todos los invitados. No es un elemento pasivo de fondo, es una experiencia activa. Si buscas [información sobre precios de magos para bodas en Madrid](/blog/cuanto-cuesta-mago-boda-madrid), verás que es una de las inversiones con mayor retorno en satisfacción del invitado.

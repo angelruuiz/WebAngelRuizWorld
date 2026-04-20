@@ -6,7 +6,8 @@ import { Sparkles } from '@/components/Icons';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { ContactFormModal } from '@/components/Modals';
+import dynamic from 'next/dynamic';
+const ContactFormModal = dynamic(() => import('@/components/Modals').then(mod => mod.ContactFormModal), { ssr: false });
 
 const SplitText = ({ text }) => {
     return (

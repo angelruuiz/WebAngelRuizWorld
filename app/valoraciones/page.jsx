@@ -29,13 +29,7 @@ export default function ValoracionesPage() {
         "@type": "ProfessionalService",
         "name": "Ángel Ruiz | Mago e Ilusionista",
         "@id": "https://angelruiz.world",
-        "image": "https://angelruiz.world/images/foto-bio.png",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "bestRating": "5",
-            "ratingCount": "20"
-        }
+        "image": "https://angelruiz.world/images/foto-bio.png"
     };
 
     const breadcrumbSchema = {

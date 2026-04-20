@@ -193,11 +193,6 @@ export default function Home() {
                 }
             ]
         },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "20"
-        },
         "sameAs": [
             "https://instagram.com/angellruuiz",
             "https://tiktok.com/@angellruuiz",
@@ -242,7 +237,7 @@ export default function Home() {
         "name": "Ángel Ruiz | Magia de Cerca en Madrid",
         "description": "Video promocional de ilusionismo profesional y magia de cerca por Ángel Ruiz.",
         "thumbnailUrl": "https://angelruiz.world/images/foto-bio.png",
-        "uploadDate": "2026-04-10",
+        "uploadDate": "2026-04-10T10:00:00+02:00",
         "duration": "PT1M0S",
         "contentUrl": "https://angelruiz.world/spring.mp4"
     };

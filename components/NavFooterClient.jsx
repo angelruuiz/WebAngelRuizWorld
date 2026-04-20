@@ -2,7 +2,8 @@
 import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { ContactFormModal } from '@/components/Modals';
+import dynamic from 'next/dynamic';
+const ContactFormModal = dynamic(() => import('@/components/Modals').then(mod => mod.ContactFormModal), { ssr: false });
 
 export default function NavFooterClient({ children }) {
     const [isContactOpen, setIsContactOpen] = useState(false);

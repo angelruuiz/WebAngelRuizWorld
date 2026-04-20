@@ -130,8 +130,9 @@ const localBusinessSchema = {
 };
 
 import NewsletterForm from '@/components/NewsletterForm';
-import NewsletterModal from '@/components/NewsletterModal';
-import CookieBanner from '@/components/CookieBanner';
+import dynamic from 'next/dynamic';
+const NewsletterModal = dynamic(() => import('@/components/NewsletterModal'), { ssr: false });
+const CookieBanner = dynamic(() => import('@/components/CookieBanner'), { ssr: false });
 
 import { Cinzel, Playfair_Display, Inter } from 'next/font/google';
 
@@ -156,10 +157,18 @@ const inter = Inter({
 export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`${cinzel.variable} ${playfair.variable} ${inter.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://cdn.trustindex.io" />
+        <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
+        <link rel="dns-prefetch" href="https://www.instagram.com" />
+        <link rel="dns-prefetch" href="https://www.tiktok.com" />
+      </head>
       <body className="antialiased min-h-screen selection:bg-amber-500/30 selection:text-amber-200 font-sans">
         <Script 
           src="https://cdn.trustindex.io/loader.js?5feeac5690002876db7628d0fd2" 
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <script
           type="application/ld+json"
