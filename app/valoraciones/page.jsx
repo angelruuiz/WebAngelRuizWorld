@@ -53,7 +53,19 @@ export default function ValoracionesPage() {
                 type="application/ld+json" 
                 dangerouslySetInnerHTML={{ __html: JSON.stringify({
                     "@context": "https://schema.org",
-                    "@graph": [breadcrumbSchema, ratingSchema]
+                    "@type": "BreadcrumbList",
+                    ...breadcrumbSchema
+                }) }} 
+            />
+            <script 
+                type="application/ld+json" 
+                dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "ProfessionalService",
+                    "@id": "https://angelruiz.world/#organization",
+                    "name": "Ángel Ruiz | Mago e Ilusionista",
+                    "url": "https://angelruiz.world",
+                    "aggregateRating": ratingSchema.aggregateRating
                 }) }} 
             />
             

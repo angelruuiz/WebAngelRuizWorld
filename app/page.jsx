@@ -192,11 +192,33 @@ export default function Home() {
 
     return (
         <>
+            {/* FAQ y Video */}
             <script 
                 type="application/ld+json" 
                 dangerouslySetInnerHTML={{ __html: JSON.stringify({
                     "@context": "https://schema.org",
-                    "@graph": [faqSchema, videoSchema, ratingSchema]
+                    "@type": "FAQPage",
+                    "mainEntity": faqSchema.mainEntity
+                }) }} 
+            />
+            <script 
+                type="application/ld+json" 
+                dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "VideoObject",
+                    ...videoSchema
+                }) }} 
+            />
+            {/* Business Info con Rating vinculado por ID */}
+            <script 
+                type="application/ld+json" 
+                dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "ProfessionalService",
+                    "@id": "https://angelruiz.world/#organization",
+                    "name": "Ángel Ruiz | Mago e Ilusionista",
+                    "url": "https://angelruiz.world",
+                    "aggregateRating": ratingSchema.aggregateRating
                 }) }} 
             />
             <HomeClient seoContent={<SEOContent />} />
