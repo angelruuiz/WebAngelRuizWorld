@@ -169,10 +169,6 @@ export default function RootLayout({ children }) {
       </head>
       <body className="antialiased min-h-screen selection:bg-amber-500/30 selection:text-amber-200 font-sans">
 
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
-        />
         {children}
         <NewsletterModal />
         <CookieBanner />

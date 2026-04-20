@@ -7,6 +7,7 @@ import ContactButtonClient from '@/components/ContactButtonClient';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import BusinessSchema from '@/components/BusinessSchema';
 
 const MagicalCarousel = ({ locationName }) => {
     const images = ["/images/foto-profesional-mirando-carta.png", "/images/foto-spring-cartas.png"];
@@ -98,6 +99,7 @@ export default function LocationPageTemplate({ location, allLocations }) {
 
     return (
         <>
+            <BusinessSchema />
             <script 
                 type="application/ld+json" 
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }} 

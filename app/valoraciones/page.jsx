@@ -53,19 +53,27 @@ export default function ValoracionesPage() {
                 type="application/ld+json" 
                 dangerouslySetInnerHTML={{ __html: JSON.stringify({
                     "@context": "https://schema.org",
-                    "@type": "BreadcrumbList",
-                    ...breadcrumbSchema
-                }) }} 
-            />
-            <script 
-                type="application/ld+json" 
-                dangerouslySetInnerHTML={{ __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "ProfessionalService",
-                    "@id": "https://angelruiz.world/#organization",
-                    "name": "Ángel Ruiz | Mago e Ilusionista",
-                    "url": "https://angelruiz.world",
-                    "aggregateRating": ratingSchema.aggregateRating
+                    "@graph": [
+                        {
+                            "@type": "BreadcrumbList",
+                            ...breadcrumbSchema
+                        },
+                        {
+                            "@type": "ProfessionalService",
+                            "@id": "https://angelruiz.world/#organization",
+                            "name": "Ángel Ruiz | Mago e Ilusionista",
+                            "url": "https://angelruiz.world",
+                            "aggregateRating": ratingSchema.aggregateRating,
+                            "address": {
+                                "@type": "PostalAddress",
+                                "streetAddress": "Zona Noroeste",
+                                "addressLocality": "Torrelodones",
+                                "addressRegion": "Comunidad de Madrid",
+                                "postalCode": "28250",
+                                "addressCountry": "ES"
+                            }
+                        }
+                    ]
                 }) }} 
             />
             

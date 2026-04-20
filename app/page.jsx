@@ -134,6 +134,8 @@ const SEOContent = () => {
     );
 };
 
+import BusinessSchema from '@/components/BusinessSchema';
+
 export default function Home() {
 
 
@@ -192,33 +194,36 @@ export default function Home() {
 
     return (
         <>
-            {/* FAQ y Video */}
+            {/* Unificamos TODO en un solo bloque @graph para que Google no pueda ver duplicados */}
             <script 
                 type="application/ld+json" 
                 dangerouslySetInnerHTML={{ __html: JSON.stringify({
                     "@context": "https://schema.org",
-                    "@type": "FAQPage",
-                    "mainEntity": faqSchema.mainEntity
-                }) }} 
-            />
-            <script 
-                type="application/ld+json" 
-                dangerouslySetInnerHTML={{ __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "VideoObject",
-                    ...videoSchema
-                }) }} 
-            />
-            {/* Business Info con Rating vinculado por ID */}
-            <script 
-                type="application/ld+json" 
-                dangerouslySetInnerHTML={{ __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "ProfessionalService",
-                    "@id": "https://angelruiz.world/#organization",
-                    "name": "Ángel Ruiz | Mago e Ilusionista",
-                    "url": "https://angelruiz.world",
-                    "aggregateRating": ratingSchema.aggregateRating
+                    "@graph": [
+                        {
+                            "@type": "FAQPage",
+                            "mainEntity": faqSchema.mainEntity
+                        },
+                        {
+                            "@type": "VideoObject",
+                            ...videoSchema
+                        },
+                        {
+                            "@type": "ProfessionalService",
+                            "@id": "https://angelruiz.world/#organization",
+                            "name": "Ángel Ruiz | Mago e Ilusionista",
+                            "url": "https://angelruiz.world",
+                            "aggregateRating": ratingSchema.aggregateRating,
+                            "address": {
+                                "@type": "PostalAddress",
+                                "streetAddress": "Zona Noroeste",
+                                "addressLocality": "Torrelodones",
+                                "addressRegion": "Comunidad de Madrid",
+                                "postalCode": "28250",
+                                "addressCountry": "ES"
+                            }
+                        }
+                    ]
                 }) }} 
             />
             <HomeClient seoContent={<SEOContent />} />
