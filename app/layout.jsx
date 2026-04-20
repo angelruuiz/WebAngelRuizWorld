@@ -124,6 +124,13 @@ const schemaOrg = {
         }
     ]
   },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    'ratingValue': '5',
+    'bestRating': '5',
+    'worstRating': '1',
+    'ratingCount': '20'
+  },
   sameAs: [
     'https://www.instagram.com/angellruuiz',
     'https://www.tiktok.com/@angellruuiz',
