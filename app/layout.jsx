@@ -70,14 +70,16 @@ const schemaOrg = {
   telephone: '+34648055636',
   address: {
     '@type': 'PostalAddress',
-    addressLocality: 'Madrid',
+    streetAddress: 'Zona Noroeste',
+    addressLocality: 'Torrelodones',
     addressRegion: 'Comunidad de Madrid',
+    postalCode: '28250',
     addressCountry: 'ES',
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 40.416775,
-    longitude: -3.703790,
+    latitude: 40.5765,
+    longitude: -3.9298,
   },
   areaServed: [
     { '@type': 'City', name: 'Madrid' },
@@ -89,44 +91,46 @@ const schemaOrg = {
     { '@type': 'City', name: 'Boadilla del Monte' },
     { '@type': 'City', name: 'Villalba' },
     { '@type': 'City', name: 'Galapagar' },
-    { '@type': 'City', name: 'Collado Villalba' },
-    { '@type': 'City', name: 'El Escorial' },
-    { '@type': 'City', name: 'San Lorenzo de El Escorial' },
-    { '@type': 'City', name: 'Hoyo de Manzanares' },
-    { '@type': 'City', name: 'Las Matas' }
+    { '@type': 'City', name: 'El Escorial' }
   ],
+  alumniOf: {
+    "@type": "EducationalOrganization",
+    "name": "Escuela de Magia de Dani DaOrtiz"
+  },
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    "name": "Servicios de Ilusionismo",
+    "itemListElement": [
+        {
+            "@type": "Offer",
+            "itemOffered": {
+                "@type": "Service",
+                "name": "Magia para Bodas Exclusive"
+            }
+        },
+        {
+            "@type": "Offer",
+            "itemOffered": {
+                "@type": "Service",
+                "name": "Ilusionismo Corporativo y Empresas"
+            }
+        },
+        {
+            "@type": "Offer",
+            "itemOffered": {
+                "@type": "Service",
+                "name": "Magia de Cerca (Close-up) para Eventos VIP"
+            }
+        }
+    ]
+  },
   sameAs: [
-    'https://www.instagram.com/angellruuizz',
-    'https://twitter.com/angellruuizz',
-    'https://www.tiktok.com/@angellruuizz'
+    'https://www.instagram.com/angellruuiz',
+    'https://www.tiktok.com/@angellruuiz',
+    'https://www.youtube.com/@angellruuiz',
+    'https://twitter.com/angellruuiz'
   ],
   knowsAbout: ['Magia de Cerca', 'Ilusionismo Profesional', 'Magia Corporativa', 'Mentalismo', 'Entretenimiento para Bodas'],
-};
-
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Ángel Ruiz — Mago",
-  "description": "Mago close-up en Madrid especializado en bodas, eventos corporativos y celebraciones privadas.",
-  "url": "https://angelruiz.world",
-  "telephone": "+34648055636",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Torrelodones",
-    "addressRegion": "Comunidad de Madrid",
-    "addressCountry": "ES"
-  },
-  "areaServed": {
-    "@type": "GeoCircle",
-    "geoMidpoint": {
-      "@type": "GeoCoordinates",
-      "latitude": 40.578,
-      "longitude": -3.926
-    },
-    "geoRadius": "50000"
-  },
-  "priceRange": "€€",
-  "hasMap": "https://maps.google.com/?q=Torrelodones+Madrid"
 };
 
 import NewsletterForm from '@/components/NewsletterForm';
@@ -173,10 +177,6 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
         {children}
         <NewsletterModal />

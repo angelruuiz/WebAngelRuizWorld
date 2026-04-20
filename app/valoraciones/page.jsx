@@ -24,13 +24,7 @@ export default function ValoracionesPage() {
         { text: "Si buscas asombre de calidad para tu empresa en Boadilla o Majadahonda, Ángel es la elección segura. Sus efectos de mentalismo y lectura de pensamiento dejaron a todo el equipo fascinado. Un profesional excepcional.", author: "Javier Soler" }
     ];
 
-    const schemaData = {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Ángel Ruiz | Mago e Ilusionista",
-        "@id": "https://angelruiz.world",
-        "image": "https://angelruiz.world/images/foto-bio.png"
-    };
+
 
     const breadcrumbSchema = {
         "@context": "https://schema.org",
@@ -43,10 +37,6 @@ export default function ValoracionesPage() {
 
     return (
         <>
-            <script 
-                type="application/ld+json" 
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }} 
-            />
             <script 
                 type="application/ld+json" 
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} 

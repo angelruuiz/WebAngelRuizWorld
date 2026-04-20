@@ -135,70 +135,7 @@ const SEOContent = () => {
 };
 
 export default function Home() {
-    const businessSchema = {
-        "@context": "https://schema.org",
-        "@type": "ProfessionalService",
-        "name": "Ángel Ruiz | Mago e Ilusionista",
-        "image": "https://angelruiz.world/images/logo-grande.jpg",
-        "@id": "https://angelruiz.world",
-        "url": "https://angelruiz.world",
-        "telephone": "+34648055636",
-        "priceRange": "$$$",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Zona Noroeste",
-            "addressLocality": "Torrelodones",
-            "addressRegion": "Madrid",
-            "postalCode": "28250",
-            "addressCountry": "ES"
-        },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 40.5765,
-            "longitude": -3.9298
-        },
-        "areaServed": [
-            "Madrid", "Torrelodones", "Las Rozas", "Majadahonda", 
-            "Pozuelo de Alarcón", "Boadilla del Monte", "Villalba", 
-            "Galapagar", "El Escorial", "Guadarrama"
-        ],
-        "alumniOf": {
-            "@type": "EducationalOrganization",
-            "name": "Escuela de Magia de Dani DaOrtiz"
-        },
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Servicios de Ilusionismo",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Magia para Bodas Exclusive"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Ilusionismo Corporativo y Empresas"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Magia de Cerca (Close-up) para Eventos VIP"
-                    }
-                }
-            ]
-        },
-        "sameAs": [
-            "https://instagram.com/angellruuiz",
-            "https://tiktok.com/@angellruuiz",
-            "https://youtube.com/@angellruuiz"
-        ]
-    };
+
 
     const faqSchema = {
         "@context": "https://schema.org",
@@ -246,15 +183,7 @@ export default function Home() {
         <>
             <script 
                 type="application/ld+json" 
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }} 
-            />
-            <script 
-                type="application/ld+json" 
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} 
-            />
-            <script 
-                type="application/ld+json" 
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} 
+                dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, videoSchema]) }} 
             />
             <HomeClient seoContent={<SEOContent />} />
         </>
