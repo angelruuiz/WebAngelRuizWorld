@@ -27,7 +27,6 @@ export default function ValoracionesPage() {
 
 
     const breadcrumbSchema = {
-        "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
@@ -35,11 +34,27 @@ export default function ValoracionesPage() {
         ]
     };
 
+    const ratingSchema = {
+        "@type": "ProfessionalService",
+        "name": "Ángel Ruiz | Mago e Ilusionista",
+        "url": "https://angelruiz.world",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "20"
+        }
+    };
+
     return (
         <>
             <script 
                 type="application/ld+json" 
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} 
+                dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@graph": [breadcrumbSchema, ratingSchema]
+                }) }} 
             />
             
             <div className="bg-slate-950 pt-32 pb-8 px-6 text-center relative z-10">

@@ -138,7 +138,6 @@ export default function Home() {
 
 
     const faqSchema = {
-        "@context": "https://schema.org",
         "@type": "FAQPage",
         "mainEntity": [
             {
@@ -169,7 +168,6 @@ export default function Home() {
     };
 
     const videoSchema = {
-        "@context": "https://schema.org",
         "@type": "VideoObject",
         "name": "Ángel Ruiz | Magia de Cerca en Madrid",
         "description": "Video promocional de ilusionismo profesional y magia de cerca por Ángel Ruiz.",
@@ -179,11 +177,27 @@ export default function Home() {
         "contentUrl": "https://angelruiz.world/spring.mp4"
     };
 
+    const ratingSchema = {
+        "@type": "ProfessionalService",
+        "name": "Ángel Ruiz | Mago e Ilusionista",
+        "url": "https://angelruiz.world",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "20"
+        }
+    };
+
     return (
         <>
             <script 
                 type="application/ld+json" 
-                dangerouslySetInnerHTML={{ __html: JSON.stringify([faqSchema, videoSchema]) }} 
+                dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@graph": [faqSchema, videoSchema, ratingSchema]
+                }) }} 
             />
             <HomeClient seoContent={<SEOContent />} />
         </>

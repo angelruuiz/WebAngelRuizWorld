@@ -93,10 +93,7 @@ const schemaOrg = {
     { '@type': 'City', name: 'Galapagar' },
     { '@type': 'City', name: 'El Escorial' }
   ],
-  alumniOf: {
-    "@type": "EducationalOrganization",
-    "name": "Escuela de Magia de Dani DaOrtiz"
-  },
+
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     "name": "Servicios de Ilusionismo",
@@ -124,13 +121,7 @@ const schemaOrg = {
         }
     ]
   },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    'ratingValue': '5',
-    'bestRating': '5',
-    'worstRating': '1',
-    'ratingCount': '20'
-  },
+
   sameAs: [
     'https://www.instagram.com/angellruuiz',
     'https://www.tiktok.com/@angellruuiz',
