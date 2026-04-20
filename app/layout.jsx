@@ -168,10 +168,7 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="https://www.tiktok.com" />
       </head>
       <body className="antialiased min-h-screen selection:bg-amber-500/30 selection:text-amber-200 font-sans">
-        <Script 
-          src="https://cdn.trustindex.io/loader.js?5feeac5690002876db7628d0fd2" 
-          strategy="lazyOnload"
-        />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}

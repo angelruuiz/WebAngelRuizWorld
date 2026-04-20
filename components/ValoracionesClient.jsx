@@ -133,11 +133,7 @@ export default function ValoracionesClient({ reviewsData }) {
                     <p className="text-slate-400 text-lg max-w-2xl mx-auto font-light">Cientos de clientes han vivido momentos imposibles. Aquí algunas de sus historias de éxito en eventos y bodas.</p>
                 </section>
 
-                {/* Trustindex Verified Reviews Section */}
-                <section className="px-6 max-w-7xl mx-auto text-center relative z-10 border-t border-white/5 py-4">
-                    {/* El script de Trustindex inyectará el widget en este contenedor */}
-                    <div id="trustindex-widget"></div>
-                </section>
+
 
                 <ReviewsGrid reviewsData={reviewsData} />
                 <TrustedBrands />
