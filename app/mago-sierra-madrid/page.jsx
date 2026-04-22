@@ -51,8 +51,46 @@ export default function MagoSierraMadridHub() {
 
     return (
         <>
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+            <script 
+                type="application/ld+json" 
+                dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@graph": [
+                        {
+                            "@type": "ProfessionalService",
+                            "@id": "https://angelruiz.world/#organization",
+                            "name": "Ángel Ruiz | Mago e Ilusionista",
+                            "url": "https://angelruiz.world",
+                            "image": "https://angelruiz.world/images/foto-bio.png",
+                            "telephone": "+34648055636",
+                            "priceRange": "€€€",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "streetAddress": "Zona Noroeste",
+                                "addressLocality": "Torrelodones",
+                                "addressRegion": "Comunidad de Madrid",
+                                "postalCode": "28250",
+                                "addressCountry": "ES"
+                            },
+                            "aggregateRating": {
+                                "@type": "AggregateRating",
+                                "ratingValue": "5",
+                                "bestRating": "5",
+                                "worstRating": "1",
+                                "ratingCount": "20"
+                            }
+                        },
+                        {
+                            ...serviceSchema,
+                            "@id": "https://angelruiz.world/mago-sierra-madrid/#service"
+                        },
+                        {
+                            "@type": "BreadcrumbList",
+                            "itemListElement": breadcrumbSchema.itemListElement
+                        }
+                    ]
+                }) }} 
+            />
             
             <NavFooterClient>
                 <MagicCursor />

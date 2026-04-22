@@ -25,7 +25,21 @@ export default function BlogIndex() {
     <>
       <script 
         type="application/ld+json" 
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} 
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "ProfessionalService",
+              "@id": "https://angelruiz.world/#organization",
+              "name": "Ángel Ruiz | Mago e Ilusionista",
+              "url": "https://angelruiz.world"
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": breadcrumbSchema.itemListElement
+            }
+          ]
+        }) }} 
       />
       <BlogListingClient posts={allPostsData} />
     </>

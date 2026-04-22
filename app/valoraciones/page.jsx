@@ -56,14 +56,16 @@ export default function ValoracionesPage() {
                     "@graph": [
                         {
                             "@type": "BreadcrumbList",
-                            ...breadcrumbSchema
+                            "itemListElement": breadcrumbSchema.itemListElement
                         },
                         {
                             "@type": "ProfessionalService",
                             "@id": "https://angelruiz.world/#organization",
                             "name": "Ángel Ruiz | Mago e Ilusionista",
                             "url": "https://angelruiz.world",
-                            "aggregateRating": ratingSchema.aggregateRating,
+                            "image": "https://angelruiz.world/images/foto-bio.png",
+                            "telephone": "+34648055636",
+                            "priceRange": "€€€",
                             "address": {
                                 "@type": "PostalAddress",
                                 "streetAddress": "Zona Noroeste",
@@ -71,7 +73,26 @@ export default function ValoracionesPage() {
                                 "addressRegion": "Comunidad de Madrid",
                                 "postalCode": "28250",
                                 "addressCountry": "ES"
-                            }
+                            },
+                            "aggregateRating": {
+                                "@type": "AggregateRating",
+                                "ratingValue": "5",
+                                "bestRating": "5",
+                                "worstRating": "1",
+                                "ratingCount": reviewsData.length.toString()
+                            },
+                            "review": reviewsData.map(r => ({
+                                "@type": "Review",
+                                "reviewBody": r.text,
+                                "author": {
+                                    "@type": "Person",
+                                    "name": r.author
+                                },
+                                "reviewRating": {
+                                    "@type": "Rating",
+                                    "ratingValue": "5"
+                                }
+                            }))
                         }
                     ]
                 }) }} 

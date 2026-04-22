@@ -86,20 +86,32 @@ export default async function BlogPost({ params }) {
     <>
     <ReadingProgress />
     <article className="max-w-[1440px] mx-auto px-6 liquid-glass-card p-6 md:p-10 mt-0">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
+      <script 
+        type="application/ld+json" 
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "ProfessionalService",
+              "@id": "https://angelruiz.world/#organization",
+              "name": "Ángel Ruiz | Mago e Ilusionista",
+              "url": "https://angelruiz.world"
+            },
+            {
+              ...blogSchema,
+              "@id": `https://angelruiz.world/blog/${params.slug}/#article`
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": breadcrumbSchema.itemListElement
+            },
+            ...(faqSchema ? [{
+              "@type": "FAQPage",
+              "mainEntity": faqSchema.mainEntity
+            }] : [])
+          ]
+        }) }} 
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      {faqSchema && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-        />
-      )}
 
       {/* Floating Meta */}
       <div className="flex flex-wrap items-center gap-3 text-[8px] font-black tracking-widest text-amber-500 uppercase mb-8">
