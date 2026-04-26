@@ -122,11 +122,6 @@ export default function GaleriaPage() {
                                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                                     sizes="(max-w-768px) 100vw, (max-w-1200px) 50vw, 33vw"
                                 />
-                                {/* Overlay on hover */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-0 group-hover:opacity-80 transition-opacity duration-500 flex flex-col justify-end p-6">
-                                    <p className="text-amber-500 text-[10px] uppercase font-bold tracking-widest mb-1 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">Evento Real</p>
-                                    <h3 className="text-white font-[Cinzel] text-sm uppercase translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">{img.alt}</h3>
-                                </div>
                             </div>
                         </div>
                     ))}
