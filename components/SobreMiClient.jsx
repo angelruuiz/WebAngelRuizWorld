@@ -9,7 +9,11 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import { ContactFormModal } from '@/components/Modals';
 
 const MagicalCarousel = () => {
-    const images = ["/images/foto-profesional-mirando-carta.webp", "/images/foto-spring-cartas.webp"];
+    const images = [
+        "/images/foto-profesional-mirando-carta.webp", 
+        "/images/foto-spring-cartas.webp",
+        "/images/angel-ruiz-mago-madrid-portrait.webp"
+    ];
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
