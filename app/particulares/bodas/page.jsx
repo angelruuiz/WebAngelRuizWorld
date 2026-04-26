@@ -13,13 +13,13 @@ export const metadata = {
     openGraph: {
         title: 'Mago para Bodas en Madrid | Ángel Ruiz | Mago e Ilusionista',
         description: 'La magia perfecta para tu cóctel de boda. Conecta a tus invitados y crea recuerdos inolvidables.',
-        images: [{ url: '/images/foto-bio.png' }],
+        images: [{ url: '/images/foto-bio.webp' }],
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Mago para Bodas en Madrid | Angel Ruiz',
         description: 'Momentos imposibles para el día más importante de tu vida.',
-        images: ['/images/foto-bio.png'],
+        images: ['/images/foto-bio.webp'],
     },
 };
 
@@ -70,7 +70,7 @@ export default function BodasDetailPage() {
                             "@id": "https://angelruiz.world/#organization",
                             "name": "Ángel Ruiz | Mago e Ilusionista",
                             "url": "https://angelruiz.world",
-                            "image": "https://angelruiz.world/images/foto-bio.png",
+                            "image": "https://angelruiz.world/images/foto-bio.webp",
                             "telephone": "+34648055636",
                             "priceRange": "€€€",
                             "address": {
@@ -161,7 +161,7 @@ export default function BodasDetailPage() {
 
                         <div className="relative md:sticky md:top-32 h-[350px] md:h-[500px] rounded-2xl overflow-hidden border border-slate-800 shadow-xl group">
                             <Image
-                                src="/images/boda-magia-madrid.jpg"
+                                src="/images/boda-magia-madrid.webp"
                                 alt="Mago de bodas en Madrid Angel Ruiz realizando magia de cerca en una finca de la sierra de Madrid"
                                 fill
                                 className="object-cover object-top group-hover:scale-110 transition-transform duration-[3s]"

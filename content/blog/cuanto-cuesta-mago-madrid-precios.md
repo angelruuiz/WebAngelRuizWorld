@@ -3,7 +3,7 @@ title: "¿Cuánto cuesta contratar un mago en Madrid? Guía de precios y consejo
 date: "2026-04-13"
 excerpt: "Descubre de qué depende el presupuesto de un ilusionista profesional en Madrid. Una guía transparente sobre precios, tipos de magia y cómo elegir al mejor mago para tu boda o evento."
 author: "Angel Ruiz"
-image: "/images/foto-bio.png"
+image: "/images/foto-bio.webp"
 tags: ["Presupuestos", "Madrid", "Consejos", "Contratación"]
 faq:
   - question: "¿Por qué los precios varían tanto entre un mago y otro?"

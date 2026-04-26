@@ -3,7 +3,7 @@ title: "10 Ideas originales para entretener a tus invitados en la boda (Madrid 2
 date: "2026-04-14"
 excerpt: "¿Buscas algo diferente al photocall? Descubre 10 ideas creativas de entretenimiento para bodas en Madrid que dejarán a tus invitados con la boca abierta."
 author: "Ángel Ruiz"
-image: "/images/boda-magia-madrid.jpg"
+image: "/images/boda-magia-madrid.webp"
 tags: ["Bodas", "Madrid", "Entretenimiento", "Ideas"]
 ---
 

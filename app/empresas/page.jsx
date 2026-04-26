@@ -70,7 +70,7 @@ export default function EmpresasPage() {
                             "@id": "https://angelruiz.world/#organization",
                             "name": "Ángel Ruiz | Mago e Ilusionista",
                             "url": "https://angelruiz.world",
-                            "image": "https://angelruiz.world/images/foto-bio.png",
+                            "image": "https://angelruiz.world/images/foto-bio.webp",
                             "telephone": "+34648055636",
                             "priceRange": "€€€",
                             "address": {
@@ -116,7 +116,7 @@ export default function EmpresasPage() {
 
                         <div className="relative md:sticky md:top-32 h-auto rounded-2xl overflow-hidden border border-slate-800 shadow-xl order-2 md:order-1 group bg-slate-900/50">
                             <Image
-                                src="/images/evento-angel-ruiz-magia.jpg"
+                                src="/images/evento-angel-ruiz-magia.webp"
                                 alt="Ángel Ruiz mago para empresas Madrid - Evento Real"
                                 width={800}
                                 height={1000}

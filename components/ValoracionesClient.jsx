@@ -11,12 +11,12 @@ import { Star, Quote, CheckCircle2 } from '@/components/Icons';
 
 const TrustedBrands = () => {
     const brands = [
-        { name: "Movistar Estudiantes", logo: "/images/logo-movistar.png" },
-        { name: "Peña La Escombrera Torrelodones", logo: "/images/logo-escombrera.png" },
-        { name: "Colegio Gondomar Galapagar", logo: "/images/logo-gondomar.png" },
-        { name: "Catering Senescal Torrelodones", logo: "/images/logo-senescal.png" },
-        { name: "Alcampo", logo: "/images/logo-alcampo.png" },
-        { name: "Ahorramás", logo: "/images/logo-ahorramas.png" }
+        { name: "Movistar Estudiantes", logo: "/images/logo-movistar.webp" },
+        { name: "Peña La Escombrera Torrelodones", logo: "/images/logo-escombrera.webp" },
+        { name: "Colegio Gondomar Galapagar", logo: "/images/logo-gondomar.webp" },
+        { name: "Catering Senescal Torrelodones", logo: "/images/logo-senescal.webp" },
+        { name: "Alcampo", logo: "/images/logo-alcampo.webp" },
+        { name: "Ahorramás", logo: "/images/logo-ahorramas.webp" }
     ];
     return (
         <section className="py-24 bg-slate-950/80 border-y border-white/5 overflow-hidden relative z-10">

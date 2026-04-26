@@ -3,7 +3,7 @@ title: "Mago para Bodas en Madrid: La Guía Definitiva para una Celebración Má
 date: "2026-04-10"
 excerpt: "Descubre cómo un ilusionista profesional puede transformar tu boda en Madrid en un evento inolvidable. Consejos, momentos clave y por qué la magia de cerca es tendencia."
 author: "Ángel Ruiz"
-image: "/images/boda-magia-madrid.jpg"
+image: "/images/boda-magia-madrid.webp"
 tags: ["Bodas", "Madrid", "Consejos", "Magia de Cerca"]
 faq:
   - question: "¿Es la magia adecuada para todas las edades?"

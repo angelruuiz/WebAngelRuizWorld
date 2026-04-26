@@ -3,7 +3,7 @@ title: "Magia de Cerca vs. Magia de Escenario: ¿Cuál es el formato ideal para 
 date: "2026-04-13"
 excerpt: "Elegir el formato adecuado de ilusionismo es clave para el éxito de tu celebración. Analizamos las diferencias entre la magia de cerca y de escenario para que tu evento en Madrid sea inolvidable."
 author: "Angel Ruiz"
-image: "/images/blog-cerca-vs-escenario.jpg"
+image: "/images/blog-cerca-vs-escenario.webp"
 tags: ["Consejos", "Madrid", "Eventos", "Magia de Cerca", "Escenario"]
 faq:
   - question: "¿Es posible combinar ambos tipos de magia en un mismo evento?"

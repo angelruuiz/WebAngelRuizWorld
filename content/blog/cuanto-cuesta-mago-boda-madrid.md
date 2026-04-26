@@ -3,7 +3,7 @@ title: "¿Cuánto cuesta un mago para una boda en Madrid? Guía de precios y tar
 date: "2026-04-14"
 excerpt: "Descubre el presupuesto real para contratar un mago de bodas en Madrid. Analizamos tarifas, variables que influyen en el precio y cómo elegir el mejor ilusionista para tu gran día."
 author: "Ángel Ruiz"
-image: "/images/boda-magia-madrid.jpg"
+image: "/images/boda-magia-madrid.webp"
 tags: ["Bodas", "Precios", "Madrid", "Presupuesto"]
 ---
 

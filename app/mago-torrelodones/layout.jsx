@@ -7,7 +7,7 @@ export const metadata = {
     openGraph: {
         title: 'Mago en Torrelodones | Ángel Ruiz | Mago e Ilusionista',
         description: 'Ilusionismo exclusivo y magia de cerca en Torrelodones y zona noroeste de Madrid. Especialista en eventos y bodas.',
-        images: [{ url: '/images/foto-bio.png' }],
+        images: [{ url: '/images/foto-bio.webp' }],
     },
 };
 

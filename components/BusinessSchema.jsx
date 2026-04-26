@@ -10,7 +10,7 @@ export default function BusinessSchema({ rating = null }) {
     "description": "Mago e ilusionista profesional en Madrid. Especialista en magia de cerca exclusiva para eventos corporativos, bodas de lujo y fiestas privadas.",
     "url": "https://angelruiz.world",
     "logo": "https://angelruiz.world/icon.jpg",
-    "image": "https://angelruiz.world/images/foto-bio.png",
+    "image": "https://angelruiz.world/images/foto-bio.webp",
     "priceRange": "€€€",
     "telephone": "+34648055636",
     "address": {

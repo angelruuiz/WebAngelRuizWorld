@@ -14,8 +14,8 @@ export const metadata = {
   creator: 'Ángel Ruiz | Mago e Ilusionista',
   publisher: 'Ángel Ruiz | Mago e Ilusionista',
   icons: {
-    icon: '/icon.jpg',
-    apple: '/icon.jpg',
+    icon: '/icon.webp',
+    apple: '/icon.webp',
   },
   openGraph: {
     type: 'website',
@@ -25,7 +25,7 @@ export const metadata = {
     description: 'Ángel Ruiz, mago e ilusionista profesional especializado en magia de cerca exclusiva para eventos corporativos, bodas y celebraciones.',
     siteName: 'Ángel Ruiz | Mago e Ilusionista',
     images: [{
-      url: '/images/foto-bio.png',
+      url: '/images/foto-bio.webp',
       width: 1200,
       height: 630,
       alt: 'Ángel Ruiz Ilusionista Profesional en plena actuación'
@@ -35,7 +35,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Angel Ruiz | Mago e Ilusionista',
     description: 'Ilusionista especializado en eventos exclusivos y magia de cerca.',
-    images: ['/images/foto-bio.png'],
+    images: ['/images/foto-bio.webp'],
     site: '@angellruuizz',
     creator: '@angellruuizz',
   },
@@ -64,8 +64,8 @@ const schemaOrg = {
   alternateName: 'Ángel Ruiz Magia',
   description: 'Mago e ilusionista profesional en Madrid. Especialista en magia de cerca exclusiva para eventos corporativos, bodas de lujo y fiestas privadas.',
   url: 'https://angelruiz.world',
-  logo: 'https://angelruiz.world/icon.jpg',
-  image: 'https://angelruiz.world/images/foto-bio.png',
+  logo: 'https://angelruiz.world/icon.webp',
+  image: 'https://angelruiz.world/images/foto-bio.webp',
   priceRange: '€€€',
   telephone: '+34648055636',
   address: {

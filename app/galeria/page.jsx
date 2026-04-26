@@ -13,62 +13,62 @@ export const metadata = {
 
 const images = [
     {
-        src: '/images/evento-angel-ruiz-magia.jpg',
+        src: '/images/evento-angel-ruiz-magia.webp',
         alt: 'Mago para empresas Angel Ruiz Madrid',
         aspect: 'aspect-[3/4]'
     },
     {
-        src: '/images/angel-ruiz-evento.jpg',
+        src: '/images/angel-ruiz-evento.webp',
         alt: 'Evento de magia en Madrid Angel Ruiz',
         aspect: 'aspect-square'
     },
     {
-        src: '/images/cartomagia-angel-ruiz.jpg',
+        src: '/images/cartomagia-angel-ruiz.webp',
         alt: 'Cartomagia de cerca Angel Ruiz',
         aspect: 'aspect-[4/5]'
     },
     {
-        src: '/images/evento-empresa-mago-angel-ruiz.jpg',
+        src: '/images/evento-empresa-mago-angel-ruiz.webp',
         alt: 'Magia corporativa para empresas Madrid',
         aspect: 'aspect-video'
     },
     {
-        src: '/images/mago-para-eventos-empresa-madrid.jpg',
+        src: '/images/mago-para-eventos-empresa-madrid.webp',
         alt: 'Mago para eventos de empresa Madrid',
         aspect: 'aspect-square'
     },
     {
-        src: '/images/magia-corporativa-angel-ruiz.jpg',
+        src: '/images/magia-corporativa-angel-ruiz.webp',
         alt: 'Magia corporativa premium Angel Ruiz',
         aspect: 'aspect-[4/3]'
     },
     {
-        src: '/images/ilusionista-eventos-madrid-fotos.jpg',
+        src: '/images/ilusionista-eventos-madrid-fotos.webp',
         alt: 'Ilusionista profesional en Madrid fotos',
         aspect: 'aspect-[3/4]'
     },
     {
-        src: '/images/angel-ruiz-mago-madrid.jpg',
+        src: '/images/angel-ruiz-mago-madrid.webp',
         alt: 'Angel Ruiz mago profesional Madrid',
         aspect: 'aspect-square'
     },
     {
-        src: '/images/mago-madrid-evento-privado.jpg',
+        src: '/images/mago-madrid-evento-privado.webp',
         alt: 'Mago para eventos privados en Madrid',
         aspect: 'aspect-[4/5]'
     },
     {
-        src: '/images/ilusionista-madrid-closeup.jpg',
+        src: '/images/ilusionista-madrid-closeup.webp',
         alt: 'Ilusionista Madrid close-up magia',
         aspect: 'aspect-[3/4]'
     },
     {
-        src: '/images/mejor-mago-eventos-corporativos.jpg',
+        src: '/images/mejor-mago-eventos-corporativos.webp',
         alt: 'El mejor mago para eventos corporativos',
         aspect: 'aspect-[4/5]'
     },
     {
-        src: '/images/espectaculo-magia-madrid.jpg',
+        src: '/images/espectaculo-magia-madrid.webp',
         alt: 'Espectáculo de magia en Madrid',
         aspect: 'aspect-video'
     }

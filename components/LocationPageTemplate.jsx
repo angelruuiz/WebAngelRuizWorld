@@ -10,7 +10,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import BusinessSchema from '@/components/BusinessSchema';
 
 const MagicalCarousel = ({ locationName }) => {
-    const images = ["/images/foto-profesional-mirando-carta.png", "/images/foto-spring-cartas.png"];
+    const images = ["/images/foto-profesional-mirando-carta.webp", "/images/foto-spring-cartas.webp"];
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
@@ -51,7 +51,7 @@ export default function LocationPageTemplate({ location, allLocations }) {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": `Ángel Ruiz | Mago e Ilusionista en ${location.name}`,
-        "image": "https://angelruiz.world/images/foto-bio.png",
+        "image": "https://angelruiz.world/images/foto-bio.webp",
         "url": `https://angelruiz.world/mago-${location.slug}`,
         "telephone": "+34648055636",
         "address": {
@@ -109,7 +109,7 @@ export default function LocationPageTemplate({ location, allLocations }) {
                             "@id": "https://angelruiz.world/#organization",
                             "name": "Ángel Ruiz | Mago e Ilusionista",
                             "url": "https://angelruiz.world",
-                            "image": "https://angelruiz.world/images/foto-bio.png",
+                            "image": "https://angelruiz.world/images/foto-bio.webp",
                             "telephone": "+34648055636",
                             "priceRange": "€€€",
                             "address": {

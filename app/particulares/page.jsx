@@ -31,7 +31,7 @@ export default function ParticularesSelectorPage() {
                         className={`relative flex-1 flex items-center justify-center transition-all duration-1000 ease-in-out overflow-hidden group border-r border-slate-800/50 ${hoverSide === 'right' ? 'md:flex-[0.5] grayscale' : 'md:flex-[1.5]'}`}
                     >
                         <Image 
-                            src="/images/boda-magia-madrid.jpg" 
+                            src="/images/boda-magia-madrid.webp" 
                             alt="Magia para Bodas" 
                             fill 
                             sizes="(max-width: 768px) 100vw, 50vw"

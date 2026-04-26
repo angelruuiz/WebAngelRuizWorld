@@ -173,7 +173,7 @@ export default function Home() {
         "@type": "VideoObject",
         "name": "Ángel Ruiz | Magia de Cerca en Madrid",
         "description": "Video promocional de ilusionismo profesional y magia de cerca por Ángel Ruiz.",
-        "thumbnailUrl": "https://angelruiz.world/images/foto-bio.png",
+        "thumbnailUrl": "https://angelruiz.world/images/foto-bio.webp",
         "uploadDate": "2026-04-10T10:00:00+02:00",
         "duration": "PT1M0S",
         "contentUrl": "https://angelruiz.world/spring.mp4"

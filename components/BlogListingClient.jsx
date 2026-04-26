@@ -99,7 +99,7 @@ export default function BlogListingClient({ posts }) {
                                         <div className="flex items-center gap-3">
                                             <div className="w-10 h-10 rounded-full overflow-hidden bg-white/5 flex items-center justify-center border border-white/10 group-hover:border-amber-500/50 transition-all duration-500">
                                                 <Image 
-                                                    src="/images/logo-pequeno.jpg" 
+                                                    src="/images/logo-pequeno.webp" 
                                                     alt="Ángel Ruiz mago ilusionista profesional Madrid - logo autor" 
                                                     width={40} 
                                                     height={40} 

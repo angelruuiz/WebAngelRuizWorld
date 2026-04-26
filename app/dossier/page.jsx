@@ -19,7 +19,7 @@ const slides = [
             { label: 'Eventos Realizados', value: '100+' },
             { label: 'Satisfacción', value: '100%' }
         ],
-        image: '/images/foto-profesional-mirando-carta.png'
+        image: '/images/foto-profesional-mirando-carta.webp'
     },
     {
         id: 'perfil',
@@ -105,7 +105,7 @@ export default function DossierPage() {
             <nav className="fixed top-0 left-0 w-full z-50 px-6 py-4 flex justify-between items-center backdrop-blur-md bg-slate-950/40 border-b border-white/5 no-print">
                 <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full overflow-hidden border border-amber-500/30">
-                        <Image src="/images/logo-pequeno.jpg" width={40} height={40} alt="Logo" className="object-cover" />
+                        <Image src="/images/logo-pequeno.webp" width={40} height={40} alt="Logo" className="object-cover" />
                     </div>
                     <span className="font-[Cinzel] text-lg font-bold tracking-widest text-white uppercase">ANGEL RUIZ</span>
                 </div>

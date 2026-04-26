@@ -54,7 +54,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
             <nav className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center transition-all duration-500 ${isScrolled || isMenuOpen ? (isLight ? 'bg-white/70 backdrop-blur-xl border-b border-slate-200' : 'bg-slate-950/90 backdrop-blur-xl shadow-2xl') : (isLight ? 'bg-white/30 backdrop-blur-md' : 'bg-slate-950/30 backdrop-blur-md')} py-4 px-6 md:px-12`}>
                 <Link href="/" className="flex items-center z-50 transition-transform hover:scale-105">
                     <Image 
-                        src="/images/logo-pequeno.jpg" 
+                        src="/images/logo-pequeno.webp" 
                         alt="Ángel Ruiz mago ilusionista profesional Madrid - logo" 
                         width={40} 
                         height={40} 
