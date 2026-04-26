@@ -123,5 +123,6 @@ export default function GaleriaPage() {
                 </section>
             </main>
         </NavFooterClient>
+        </>
     );
 }
