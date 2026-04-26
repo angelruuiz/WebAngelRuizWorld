@@ -114,16 +114,16 @@ export default function EmpresasPage() {
                     <Breadcrumbs />
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-20">
 
-                        <div className="relative md:sticky md:top-32 h-[350px] md:h-[500px] rounded-2xl overflow-hidden border border-slate-800 shadow-xl order-2 md:order-1 group bg-slate-900/50">
+                        <div className="relative md:sticky md:top-32 h-auto rounded-2xl overflow-hidden border border-slate-800 shadow-xl order-2 md:order-1 group bg-slate-900/50">
                             <Image
                                 src="/images/evento-angel-ruiz-magia.jpg"
                                 alt="Ángel Ruiz mago para empresas Madrid - Evento Real"
                                 width={800}
                                 height={1000}
-                                className="object-cover transition-all duration-700 group-hover:scale-105"
+                                className="w-full h-auto transition-all duration-700 group-hover:scale-105"
                                 priority
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 to-transparent" />
                         </div>
 
                         <div className="order-1 md:order-2">
