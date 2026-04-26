@@ -43,7 +43,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
         { name: 'Sobre Mí', href: '/sobre-mi' },
         { name: 'Particulares', href: '/particulares' },
         { name: 'Empresas', href: '/empresas' },
-        { name: 'Sierra Madrid', href: '/mago-sierra-madrid' },
+        { name: 'Galería', href: '/galeria' },
         { name: 'Valoraciones', href: '/valoraciones' },
         { name: 'Blog', href: '/blog' },
     ];

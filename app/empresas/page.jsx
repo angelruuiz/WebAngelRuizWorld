@@ -53,7 +53,7 @@ export default function EmpresasPage() {
         "@type": "BreadcrumbList",
         "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
-            { "@type": "ListItem", "position": 2, "name": "Mago Sierra Madrid", "item": "https://angelruiz.world/mago-sierra-madrid" },
+            { "@type": "ListItem", "position": 2, "name": "Galería", "item": "https://angelruiz.world/galeria" },
             { "@type": "ListItem", "position": 3, "name": "Empresas", "item": "https://angelruiz.world/empresas" }
         ]
     };
@@ -116,11 +116,11 @@ export default function EmpresasPage() {
 
                         <div className="relative md:sticky md:top-32 h-[350px] md:h-[500px] rounded-2xl overflow-hidden border border-slate-800 shadow-xl order-2 md:order-1 group bg-slate-900/50">
                             <Image
-                                src="/images/mago-empresas-madrid-angel-ruiz.svg"
-                                alt="Ángel Ruiz mago para empresas Madrid"
-                                width={400}
-                                height={400}
-                                className="object-contain p-12 transition-all duration-700 group-hover:scale-105"
+                                src="/images/evento-angel-ruiz-magia.jpg"
+                                alt="Ángel Ruiz mago para empresas Madrid - Evento Real"
+                                width={800}
+                                height={1000}
+                                className="object-cover transition-all duration-700 group-hover:scale-105"
                                 priority
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent" />

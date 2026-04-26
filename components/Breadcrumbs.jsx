@@ -27,7 +27,8 @@ export default function Breadcrumbs() {
     'mago-pozuelo': 'Pozuelo',
     'mago-boadilla': 'Boadilla',
     'mago-villalba': 'Villalba',
-    'mago-el-escorial': 'El Escorial'
+    'mago-el-escorial': 'El Escorial',
+    'galeria': 'Galería'
   };
 
   return (
