@@ -80,7 +80,8 @@ const images = [
     {
         src: '/images/angel-ruiz-espectaculo-magia-madrid-2.webp',
         alt: 'Ilusionista profesional Ángel Ruiz en su último show',
-        aspect: 'aspect-video'
+        aspect: 'aspect-video',
+        position: 'object-[center_25%]'
     },
     {
         src: '/images/angel-ruiz-espectaculo-magia-madrid-3.webp',
@@ -169,7 +170,7 @@ export default function GaleriaPage() {
                                     src={img.src}
                                     alt={img.alt}
                                     fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                    className={`object-cover transition-transform duration-700 group-hover:scale-110 ${img.position || ''}`}
                                     sizes="(max-w-768px) 100vw, (max-w-1200px) 50vw, 33vw"
                                 />
                             </div>
