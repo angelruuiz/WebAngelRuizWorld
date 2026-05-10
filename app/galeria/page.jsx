@@ -85,7 +85,7 @@ const images = [
     {
         src: '/images/angel-ruiz-espectaculo-magia-madrid-3.webp',
         alt: 'Mago para eventos de empresa Ángel Ruiz',
-        aspect: 'aspect-[4/3]'
+        aspect: 'aspect-[2/3]'
     },
     {
         src: '/images/angel-ruiz-espectaculo-magia-madrid-4.webp',
@@ -105,7 +105,7 @@ const images = [
     {
         src: '/images/angel-ruiz-espectaculo-magia-madrid-7.webp',
         alt: 'El mejor mago para fiestas privadas Ángel Ruiz',
-        aspect: 'aspect-[4/3]'
+        aspect: 'aspect-[2/3]'
     },
     {
         src: '/images/angel-ruiz-espectaculo-magia-madrid-8.webp',
