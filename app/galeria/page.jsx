@@ -73,54 +73,54 @@ const images = [
         aspect: 'aspect-video'
     },
     {
-        src: '/images/angel-ruiz-espectaculo-magia-madrid-1.webp',
-        alt: 'Espectáculo de magia para eventos en Madrid Ángel Ruiz',
+        src: '/images/mago-para-bodas-en-madrid.webp',
+        alt: 'Mago para bodas en Madrid Ángel Ruiz',
         aspect: 'aspect-video'
     },
     {
-        src: '/images/angel-ruiz-espectaculo-magia-madrid-2.webp',
-        alt: 'Ilusionista profesional Ángel Ruiz en su último show',
+        src: '/images/mago-para-empresas-en-madrid.webp',
+        alt: 'Mago para empresas en Madrid',
         aspect: 'aspect-video',
         position: 'object-[center_25%]'
     },
     {
-        src: '/images/angel-ruiz-espectaculo-magia-madrid-3.webp',
-        alt: 'Mago para eventos de empresa Ángel Ruiz',
+        src: '/images/mago-profesional-madrid.webp',
+        alt: 'Mago profesional Madrid',
         aspect: 'aspect-[2/3]'
     },
     {
-        src: '/images/angel-ruiz-espectaculo-magia-madrid-4.webp',
-        alt: 'Magia de cerca y cartomagia en Madrid',
+        src: '/images/ilusionista-profesional-madrid.webp',
+        alt: 'Ilusionista profesional Madrid',
         aspect: 'aspect-[4/3]'
     },
     {
-        src: '/images/angel-ruiz-espectaculo-magia-madrid-5.webp',
-        alt: 'Ángel Ruiz sorprendiendo al público en directo',
+        src: '/images/angel-ruiz-mago-profesional-madrid.webp',
+        alt: 'Ángel Ruiz mago profesional Madrid',
         aspect: 'aspect-[3/4]'
     },
     {
-        src: '/images/angel-ruiz-espectaculo-magia-madrid-6.webp',
-        alt: 'Show de magia corporativa en Madrid',
+        src: '/images/mago-bodas-madrid-eventos.webp',
+        alt: 'Mago bodas Madrid eventos',
         aspect: 'aspect-[4/3]'
     },
     {
-        src: '/images/angel-ruiz-espectaculo-magia-madrid-7.webp',
-        alt: 'El mejor mago para fiestas privadas Ángel Ruiz',
+        src: '/images/mago-empresas-madrid-eventos.webp',
+        alt: 'Mago empresas Madrid eventos',
         aspect: 'aspect-[2/3]'
     },
     {
-        src: '/images/angel-ruiz-espectaculo-magia-madrid-8.webp',
-        alt: 'Ilusionismo de alto impacto para eventos corporativos',
+        src: '/images/mago-profesional-eventos-madrid.webp',
+        alt: 'Mago profesional para eventos en Madrid',
         aspect: 'aspect-[4/5]'
     },
     {
-        src: '/images/angel-ruiz-espectaculo-magia-madrid-9.webp',
-        alt: 'Actuación en directo mago Ángel Ruiz',
+        src: '/images/ilusionista-eventos-empresa-madrid.webp',
+        alt: 'Ilusionista eventos empresa Madrid',
         aspect: 'aspect-[4/3]'
     },
     {
-        src: '/images/angel-ruiz-espectaculo-magia-madrid-10.webp',
-        alt: 'Magia para eventos exclusivos en Madrid',
+        src: '/images/angel-ruiz-mago-eventos-madrid.webp',
+        alt: 'Ángel Ruiz mago para eventos exclusivos en Madrid',
         aspect: 'aspect-[4/3]'
     }
 ];
@@ -172,6 +172,7 @@ export default function GaleriaPage() {
                                     fill
                                     className={`object-cover transition-transform duration-700 group-hover:scale-110 ${img.position || ''}`}
                                     sizes="(max-w-768px) 100vw, (max-w-1200px) 50vw, 33vw"
+                                    priority={idx < 6}
                                 />
                             </div>
                         </div>
