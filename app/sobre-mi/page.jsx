@@ -18,28 +18,27 @@ export default function SobreMiPage() {
                 
                 <div className="space-y-6">
                     <p className="text-justify first-letter:text-5xl first-letter:font-bold first-letter:text-amber-500 first-letter:mr-3 first-letter:float-left">
-                        Como <strong className="text-amber-400 font-bold font-['Playfair_Display'] underline decoration-amber-500/30">experto en magia en Madrid</strong> y profesional del ilusionismo, 
-                        entiendo que mi oficio va más allá de la simple técnica; se trata de gestionar emociones. Mi vida se dedica por completo al arte de lo imposible, especializándome en experiencias de <strong className="text-amber-400 font-bold">magia premium para bodas</strong> y eventos corporativos de alto standing donde la distinción es la norma.
+                        Como <strong className="text-amber-400 font-bold font-['Playfair_Display'] underline decoration-amber-500/30">experto en magia en Madrid</strong>, tengo muy claro que mi trabajo es mucho más que hacer trucos: se trata de crear emociones reales. Me dedico por completo a hacer posible lo imposible, ofreciendo <strong className="text-amber-400 font-bold">magia premium para bodas</strong> y eventos de empresa exclusivos que buscan destacar.
                     </p>
                     
                     <p className="text-justify">
-                        Mi historia con el asombro comenzó a los 8 años. Mientras otros niños jugaban, yo descubría los secretos de las manos de <strong className="text-amber-400 font-bold italic">Paco G</strong>, quien me inoculó el virus de la curiosidad y la disciplina. Aquellos primeros años no fueron solo de práctica, sino de aprendizaje sobre la psicología del espectador y el respeto por el secreto.
+                        Mi pasión por la magia empezó cuando tenía solo 8 años. Mientras otros niños jugaban, yo aprendía los grandes secretos de la mano de <strong className="text-amber-400 font-bold italic">Paco G</strong>, quien me contagió la curiosidad y las ganas de mejorar cada día. Esos primeros años me enseñaron no solo a practicar, sino a entender cómo piensa el espectador y a valorar el misterio.
                     </p>
 
                     <p className="text-justify bg-amber-500/5 p-6 rounded-2xl border border-amber-500/10 shadow-inner">
-                        Un punto de inflexión radical en mi trayectoria fue mi formación en la <strong className="text-amber-400 font-bold">Escuela de Dani DaOrtiz</strong>, considerado unánimemente uno de los mejores cartomagos del mundo. Bajo su tutela, no solo perfeccioné mi técnica, sino que aprendí a entender la <u>cartomagia como un lenguaje de libertad y caos controlado</u>. Esta influencia es la que hoy define mi estilo: una magia directa, impactante y profundamente moderna que huye de los clichés del "mago de chistera" para conectar de tú a tú con el público actual.
+                        Un gran paso en mi carrera fue formarme en la <strong className="text-amber-400 font-bold">Escuela de Dani DaOrtiz</strong>, reconocido como uno de los mejores magos con cartas del mundo. Con él no solo mejoré mi técnica, sino que aprendí a ver la magia como algo muy libre y sorprendente. Por eso mi estilo actual es directo y moderno, alejándome del clásico "mago con chistera" para conectar de verdad y de cerca con el público de hoy.
                     </p>
                     
                     <p className="text-justify">
-                        Me he especializado en la <strong className="text-amber-400 font-bold">Cartomagia (Magia con Cartas)</strong> de élite. Para mí, la baraja no es un objeto, sino un universo de infinitas posibilidades que ocurren a escasos centímetros de tus ojos. En el formato de <strong className="text-amber-400 font-bold italic">Magia de Cerca (Close-up)</strong>, los milagros se producen en tus propias manos, desafiando las leyes de la física y la lógica de una forma tan íntima que resulta inquietante y fascinante a partes iguales.
+                        Mi gran especialidad es la <strong className="text-amber-400 font-bold">Magia con Cartas</strong> de alto nivel. Para mí, una baraja ofrece un mundo de posibilidades increíbles a escasos centímetros de tus ojos. En mis sesiones de <strong className="text-amber-400 font-bold italic">Magia de Cerca (Close-up)</strong>, los milagros suceden en tus propias manos. Es algo tan cercano y visual que resulta imposible no sorprenderse.
                     </p>
                     
                     <p className="text-justify">
-                        Como <strong className="text-amber-400">mago en Torrelodones</strong>, mi centro de operaciones se encuentra en la <u>Sierra de Madrid</u>, cubriendo con total fluidez toda la zona noroeste y la capital. Mi propuesta de valor es clara: <strong>entretenimiento VIP</strong> que aporta una atmósfera eléctrica a cualquier celebración. No busco que el público aplauda un truco, busco que vivan una experiencia de desconexión total de la realidad.
+                        Como <strong className="text-amber-400">mago en Torrelodones</strong>, trabajo desde la <u>Sierra de Madrid</u>, lo que me permite desplazarme fácilmente por toda la zona noroeste y la capital. Mi objetivo es sencillo: ofrecer un <strong>entretenimiento VIP</strong> que llene de buena energía cualquier fiesta o evento. No quiero que solo aplaudas un truco, quiero que te olvides de todo por un rato y disfrutes de una experiencia única.
                     </p>
 
                     <p className="text-justify text-slate-400 italic border-t border-white/5 pt-6">
-                        A lo largo de mi trayectoria como <strong>mago para empresas en Madrid</strong> y eventos privados, he aprendido que el éxito de una actuación reside en la elegancia del trato y la meticulosidad en los detalles. <u>La magia es el engaño más honesto</u> que existe, y mi compromiso es entregarte ese regalo con la máxima excelencia profesional.
+                        A lo largo de mi carrera como <strong>mago para empresas en Madrid</strong> y eventos privados, he aprendido que el éxito está en cuidar los detalles y en ofrecer un trato elegante y cercano. <u>La magia es la ilusión más bonita</u> que existe, y mi compromiso es compartir ese momento contigo con el mayor nivel de profesionalidad.
                     </p>
                 </div>
             </div>
