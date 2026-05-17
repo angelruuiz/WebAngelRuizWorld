@@ -140,6 +140,21 @@ export default async function BlogPost({ params }) {
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }} 
         />
 
+        {/* Visual FAQ to avoid Phantom Schema Penalty */}
+        {postData.faq && postData.faq.length > 0 && (
+          <div className="mt-16 pt-16 border-t border-white/5">
+            <h2 className="text-2xl font-[Cinzel] text-white mb-8 text-center uppercase tracking-widest">Preguntas Frecuentes</h2>
+            <div className="space-y-6 max-w-4xl mx-auto">
+              {postData.faq.map((item, index) => (
+                <div key={index} className="bg-white/5 p-6 rounded-xl border border-white/10">
+                  <h3 className="text-amber-400 font-bold mb-3 text-sm">{item.question}</h3>
+                  <p className="text-slate-400 text-sm leading-relaxed text-justify">{item.answer}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Brand Sign-off for SEO & Trust */}
         <div className="mt-16 py-10 border-y border-white/5 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
           <div className="flex items-center gap-5">
