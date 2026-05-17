@@ -57,7 +57,7 @@ const SEOContent = () => {
                                 <span className="text-amber-500 group-open:rotate-180 transition-transform">↓</span>
                             </summary>
                             <div className="mt-2 text-slate-400 leading-relaxed space-y-3 p-4 bg-white/5 rounded-xl">
-                                <p>Contratar un <strong>mago en Madrid</strong> con trayectoria profesional no es solo añadir un número de entretenimiento; es transformar radicalmente la percepción de sus invitados sobre el evento. El ilusionismo moderno sirve para:</p>
+                                <p><strong>Cuanto cuesta contratar un mago</strong> en Madrid puede variar, pero contar con un <strong>mago profesional</strong> con trayectoria no es solo añadir un número de entretenimiento; es transformar radicalmente la percepción de sus invitados sobre el evento. El ilusionismo moderno sirve para:</p>
                                 <ul className="space-y-2 list-none">
                                     <li><span className="text-amber-500 mr-2">✦</span> <strong>Networking Natural:</strong> Facilitamos que personas que no se conocen comiencen a interactuar tras vivir una imposibilidad compartida.</li>
                                     <li><span className="text-amber-500 mr-2">✦</span> <strong>Eliminar tiempos muertos:</strong> La magia es ideal para cubrir transiciones en banquetes o recepciones.</li>
@@ -102,7 +102,7 @@ const SEOContent = () => {
                         <div className="space-y-4">
                             <h3 className="text-white font-[Cinzel] text-lg uppercase tracking-tight">Magia para Bodas Exclusivas</h3>
                             <p className="text-sm leading-relaxed text-slate-400">
-                                El <strong className="text-amber-500">mago de bodas en Madrid</strong> es la figura que asegura que el cóctel de bienvenida no sea "solo una espera". Mi magia de cerca rompe el hielo de forma elegante, uniendo a familias y amigos bajo un mismo sentimiento de asombro y alegría.
+                                El <strong className="text-amber-500">mago para bodas en Madrid</strong> es la figura que asegura que el cóctel de bienvenida no sea "solo una espera". Mi magia de cerca rompe el hielo de forma elegante, uniendo a familias y amigos bajo un mismo sentimiento de asombro y alegría.
                             </p>
                         </div>
                         <div className="space-y-4">
@@ -114,7 +114,7 @@ const SEOContent = () => {
                         <div className="space-y-4">
                             <h3 className="text-white font-[Cinzel] text-lg uppercase tracking-tight">Cruce de Caminos: Madrid y la Sierra</h3>
                             <p className="text-sm leading-relaxed text-slate-400">
-                                Mi base en la **zona noroeste** me permite ser el <u>mago de confianza</u> para quienes buscan exclusividad en cualquier punto de la Comunidad de Madrid. Calidad, puntualidad y excelencia técnica.
+                                Mi base en la **zona noroeste** me permite ser el <u>experto en magia en Madrid</u> de confianza para quienes buscan exclusividad en cualquier punto de la Comunidad de Madrid. Calidad, puntualidad y excelencia técnica.
                             </p>
                         </div>
                     </div>

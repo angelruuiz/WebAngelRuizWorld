@@ -125,7 +125,7 @@ export default function BodasDetailPage() {
                                     <span className="text-amber-400 font-bold underline decoration-amber-500/30 text-lg">Haga que el día más importante de su vida sea también el más sorprendente para sus invitados.</span>
                                 </p>
                                 <p>
-                                    Ángel Ruiz, ilusionista profesional experto en <strong>eventos de lujo en Madrid</strong> y referente de la <strong>magia en la Sierra</strong>, se especializa en crear momentos de asombro que actúan como el hilo conductor perfecto para su enlace. Una boda es una celebración de emociones, y no hay nada que conecte mejor a familias y amigos que la vivencia compartida de lo imposible.
+                                    Ángel Ruiz, <strong className="text-amber-400">experto en magia en Madrid</strong> y referente de la <strong>magia en la Sierra</strong>, se especializa en crear momentos de asombro que actúan como el hilo conductor perfecto para su enlace. Una boda es una celebración de emociones, y no hay nada que conecte mejor a familias y amigos que la vivencia compartida de lo imposible.
                                 </p>
 
                                 <div className="grid grid-cols-2 gap-4 py-6 border-y border-white/5">
@@ -146,11 +146,11 @@ export default function BodasDetailPage() {
                                 </div>
 
                                 <p>
-                                    Como <strong className="text-amber-400">ilusionista para bodas en Madrid</strong>, formado bajo la mentoría directa de <strong>Dani DaOrtiz</strong>, mi propuesta se aleja del espectáculo genérico para centrarse en la <u>exclusividad de la Cartomagia de autor</u>. Los milagros ocurren en las propias manos de sus invitados, respetando en todo momento el flujo del evento y aportando ese toque purista y sofisticado que requieren las fincas más exclusivas de la capital.
+                                    Como <strong className="text-amber-400">mago para bodas en Madrid</strong>, formado bajo la mentoría directa de <strong>Dani DaOrtiz</strong>, mi propuesta se aleja del espectáculo genérico para centrarse en la <u>exclusividad de la Cartomagia de autor</u>. Los milagros ocurren en las propias manos de sus invitados, respetando en todo momento el flujo del evento y aportando ese toque purista y sofisticado que requieren las fincas más exclusivas de la capital.
                                 </p>
 
                                 <p>
-                                    Al ser <strong>mago para bodas en Torrelodones</strong>, ofrezco una cobertura excepcional en toda la zona noroeste: <strong>Las Rozas, Pozuelo, El Escorial y Majadahonda</strong>. Mi conocimiento de los espacios y wedding planners locales garantiza una coordinación impecable sin complicaciones logísticas para los novios.
+                                    Al ser <strong>mago torrelodones</strong> y de toda la zona noroeste, ofrezco una cobertura excepcional en <strong>Las Rozas, Pozuelo, El Escorial y Majadahonda</strong>. Mi conocimiento de los espacios y wedding planners locales garantiza una coordinación impecable sin complicaciones logísticas para los novios.
                                 </p>
                             </div>
 
@@ -196,7 +196,7 @@ export default function BodasDetailPage() {
                                 <div className="space-y-4">
                                     <h3 className="text-amber-400 font-bold text-xl font-[Cinzel]">Exclusividad y Estilo Personalizado</h3>
                                     <p className="text-slate-300 text-sm leading-relaxed text-justify">
-                                        No hay dos bodas iguales. Mi enfoque como <strong>mago para bodas VIP</strong> es la personalización. Podemos crear efectos específicos que involucren la historia de los novios o que utilicen elementos significativos del enlace. El objetivo es que la magia no sea un parche, sino una pieza fundamental del engranaje estético y emocional de su gran día.
+                                        No hay dos bodas iguales. Mi enfoque como <strong>mago profesional</strong> en bodas VIP es la personalización. Podemos crear efectos específicos que involucren la historia de los novios o que utilicen elementos significativos del enlace. El objetivo es que la magia no sea un parche, sino una pieza fundamental del engranaje estético y emocional de su gran día.
                                     </p>
                                 </div>
                                 <div className="space-y-4">

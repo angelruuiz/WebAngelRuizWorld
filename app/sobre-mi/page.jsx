@@ -18,7 +18,7 @@ export default function SobreMiPage() {
                 
                 <div className="space-y-6">
                     <p className="text-justify first-letter:text-5xl first-letter:font-bold first-letter:text-amber-500 first-letter:mr-3 first-letter:float-left">
-                        Como <strong className="text-amber-400 font-bold font-['Playfair_Display'] underline decoration-amber-500/30">ilusionista profesional en Madrid</strong>, 
+                        Como <strong className="text-amber-400 font-bold font-['Playfair_Display'] underline decoration-amber-500/30">experto en magia en Madrid</strong> y profesional del ilusionismo, 
                         entiendo que mi oficio va más allá de la simple técnica; se trata de gestionar emociones. Mi vida se dedica por completo al arte de lo imposible, especializándome en experiencias de <strong className="text-amber-400 font-bold">magia premium para bodas</strong> y eventos corporativos de alto standing donde la distinción es la norma.
                     </p>
                     

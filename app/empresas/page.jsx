@@ -168,7 +168,7 @@ export default function EmpresasPage() {
                                 </p>
 
                                 <p>
-                                    Como <strong>mago para empresas en Torrelodones</strong>, cubro toda la zona noroeste con agilidad logística, garantizando puntualidad y un servicio integral que incluye desde la gestión de la atmósfera mágica hasta la coordinación con otros proveedores de su evento corporativo.
+                                    Al buscar un <strong className="text-amber-400">mago para empresas en Madrid</strong>, la logística y puntualidad son claves. Como experto operando desde la zona noroeste, cubro toda la comunidad con agilidad logística, garantizando un servicio integral que incluye desde la gestión de la atmósfera mágica hasta la coordinación con otros proveedores de su evento corporativo.
                                 </p>
                             </div>
 
@@ -215,7 +215,7 @@ export default function EmpresasPage() {
                             <h2 className="text-2xl font-[Cinzel] text-white mb-6 uppercase tracking-widest text-center">Profesionalidad al Servicio de su Organización</h2>
                             <div className="space-y-6 text-slate-300 text-sm md:text-base leading-relaxed text-justify">
                                 <p>
-                                    Contratar un <strong className="text-amber-400">mago profesional para empresas en Madrid</strong> implica mucho más que contratar a un artista; es contratar a un partner de confianza. Entiendo la importancia de la imagen de marca y la responsabilidad que conlleva actuar ante sus mejores clientes o directivos.
+                                    Contratar un <strong className="text-amber-400">experto en magia en Madrid</strong> implica mucho más que contratar a un artista; es contratar a un partner de confianza. Entiendo la importancia de la imagen de marca y la responsabilidad que conlleva actuar ante sus mejores clientes o directivos.
                                 </p>
                                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
                                     <li className="flex items-center gap-3 bg-white/5 p-3 rounded-lg"><span className="text-amber-500">✓</span> <strong>Facturación inmediata</strong> y gestión administrativa transparente.</li>
