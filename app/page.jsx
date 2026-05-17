@@ -139,35 +139,7 @@ import BusinessSchema from '@/components/BusinessSchema';
 export default function Home() {
 
 
-    const faqSchema = {
-        "@type": "FAQPage",
-        "mainEntity": [
-            {
-                "@type": "Question",
-                "name": "¿Qué tipos de eventos cubre Ángel Ruiz?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Ángel Ruiz está especializado en magia de cerca para bodas, eventos corporativos, cenas de gala y celebraciones privadas exclusivas en toda la Comunidad de Madrid."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "¿Con cuánta antelación debo reservar un mago para mi boda?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Para asegurar disponibilidad, especialmente en temporada alta de bodas (mayo-septiembre), se recomienda contactar con al menos 6 meses de antelación."
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "¿Se desplaza el mago a la Sierra de Madrid?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Sí, Ángel Ruiz tiene su sede en Madrid y ofrece cobertura prioritaria en toda la Comunidad, incluyendo la Sierra de Guadarrama y la zona noroeste (Las Rozas, Majadahonda, Pozuelo, etc.)."
-                }
-            }
-        ]
-    };
+
 
     const videoSchema = {
         "@type": "VideoObject",
@@ -200,10 +172,7 @@ export default function Home() {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify({
                     "@context": "https://schema.org",
                     "@graph": [
-                        {
-                            "@type": "FAQPage",
-                            "mainEntity": faqSchema.mainEntity
-                        },
+
                         {
                             "@type": "VideoObject",
                             ...videoSchema
