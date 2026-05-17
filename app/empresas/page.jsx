@@ -5,8 +5,8 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: 'Mago para Eventos Corporativos Madrid · Ángel Ruiz | Close-up Profesional',
-    description: 'Magia close-up para eventos de empresa en Madrid. Networking, presentaciones de producto, team building y convenciones. Presupuesto personalizado para tu evento corporativo.',
+    title: 'Mago para Empresas en Madrid | Eventos Corporativos | Ángel Ruiz',
+    description: 'El mejor mago para empresas en Madrid. Animación elegante y sorprendente para eventos corporativos, cenas de empresa y congresos. Pide presupuesto sin compromiso.',
     alternates: {
         canonical: 'https://angelruiz.world/empresas',
     },
@@ -17,8 +17,8 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Magia para Empresas en Madrid | Ángel Ruiz | Mago e Ilusionista',
-        description: 'Eleva tu evento con el mejor ilusionista corporativo de Madrid.',
+        title: 'Mago para Empresas en Madrid | Ángel Ruiz',
+        description: 'El mejor mago para eventos corporativos en Madrid. Sorprende a tus clientes y empleados.',
         images: ['/images/mago-empresas-madrid-angel-ruiz.svg'],
     },
 };
@@ -187,19 +187,19 @@ export default function EmpresasPage() {
                                 <div className="space-y-4">
                                     <h3 className="text-amber-400 font-bold text-xl font-[Cinzel]">1. Ferias, Congresos y Stands</h3>
                                     <p className="text-slate-300 text-sm leading-relaxed text-justify">
-                                        En un congreso masivo, captar la atención es el desafío número uno. Como <strong className="text-white">mago para stands en Madrid</strong>, utilizo el ilusionismo para generar "parada de tráfico". Mis efectos están diseñados no solo para entretener, sino para <u>integrar las ventajas competitivas de su producto</u> en la rutina mágica. Transformamos a un transeúnte en un lead cualificado en menos de 90 segundos a través del asombro dirigido.
+                                        En un congreso muy grande, llamar la atención es lo más difícil. Como <strong className="text-white">mago para stands en Madrid</strong>, uso la magia para conseguir que la gente se detenga a mirar. Mis trucos no solo divierten, sino que <u>incorporan los mensajes de tu marca</u> en el propio espectáculo. Así, logramos convertir a un visitante curioso en un cliente potencial en menos de dos minutos.
                                     </p>
                                 </div>
                                 <div className="space-y-4">
                                     <h3 className="text-amber-400 font-bold text-xl font-[Cinzel]">2. Team Building y Soft Skills</h3>
                                     <p className="text-slate-300 text-sm leading-relaxed text-justify">
-                                        ¿Busca una dinámica diferente para su equipo? La magia es una herramienta excepcional para trabajar la <strong>comunicación asertiva</strong>, la resolución de problemas y la <u>flexibilidad mental</u>. Realizo talleres integradores donde, mientras aprenden técnicas de ilusionismo, los empleados refuerzan vínculos y descubren nuevas formas de ver una realidad empresarial compleja.
+                                        ¿Buscas una actividad original para tu equipo? La magia es perfecta para mejorar la <strong>comunicación</strong> y el trabajo en grupo. Como <strong>mago conferenciante para empresas en Madrid</strong>, ofrezco <u>conferencias mágicas</u> y talleres divertidos donde los empleados aprenden secretos del ilusionismo, se ríen juntos y fortalecen sus lazos de una forma inolvidable.
                                     </p>
                                 </div>
                                 <div className="space-y-4">
                                     <h3 className="text-amber-400 font-bold text-xl font-[Cinzel]">3. Cenas de Gala y Aniversarios</h3>
                                     <p className="text-slate-300 text-sm leading-relaxed text-justify">
-                                        El formato de <strong className="text-white">magia entre platos</strong> o de cóctel es la opción preferida para celebraciones anuales. Es un entretenimiento no invasivo que eleva la calidad percibida de la cena. Mis actuaciones en <strong>hoteles exclusivos del centro de Madrid</strong> y <strong>fincas del noroeste</strong> garantizan que la velada fluya con un dinamismo constante y sofisticado.
+                                        La <strong className="text-white">magia de cóctel</strong> o durante el banquete es la opción favorita para las cenas de empresa. Es un formato muy cercano y nada pesado que hace la cena mucho más especial. Mis actuaciones en <strong>hoteles del centro de Madrid</strong> y <strong>fincas del noroeste</strong> aseguran que la noche sea divertida, elegante y llena de buen ambiente.
                                     </p>
                                 </div>
                                 <div className="space-y-4">

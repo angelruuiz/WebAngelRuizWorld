@@ -5,8 +5,8 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: 'Mago para Bodas en Madrid | Magia de Cerca y Cóctel Inolvidable',
-    description: '¿Buscas un mago para tu boda en Madrid? Sorprende a tus invitados con magia de cerca exclusiva durante el cóctel y banquete. ¡Reserva tu fecha y haz tu boda única!',
+    title: 'Mago para Bodas en Madrid | ¡Sorprende a tus Invitados! | Ángel Ruiz',
+    description: '¿Buscas un mago para tu boda en Madrid? Sorprende a tus invitados con la mejor magia de cerca durante el cóctel. ¡Haz que tu boda sea inolvidable! Pide presupuesto.',
     alternates: {
         canonical: 'https://angelruiz.world/particulares/bodas',
     },
