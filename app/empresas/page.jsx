@@ -5,8 +5,8 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: 'Mago para Empresas en Madrid | Eventos Corporativos | Ángel Ruiz',
-    description: 'El mejor mago para empresas en Madrid. Animación elegante y sorprendente para eventos corporativos, cenas de empresa y congresos. Pide presupuesto sin compromiso.',
+    title: 'Mago para Empresas en Madrid | Eventos Corporativos VIP',
+    description: 'Ángel Ruiz, ilusionista profesional para eventos corporativos en Madrid. Magia elegante para cenas de empresa, congresos e IFEMA. Solicita dossier premium.',
     alternates: {
         canonical: 'https://angelruiz.world/empresas',
     },

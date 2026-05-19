@@ -81,6 +81,13 @@ const schemaOrg = {
     latitude: 40.5765,
     longitude: -3.9298,
   },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5',
+    bestRating: '5',
+    worstRating: '1',
+    ratingCount: '20'
+  },
   areaServed: [
     { '@type': 'City', name: 'Madrid' },
     { '@type': 'City', name: 'Torrelodones' },
