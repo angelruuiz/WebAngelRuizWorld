@@ -52,6 +52,18 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
+      url: 'https://angelruiz.world/empresas/mago-cenas-empresa-madrid',
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://angelruiz.world/empresas/mago-ferias-congresos-madrid',
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: 'https://angelruiz.world/blog',
       lastModified: lastMod,
       changeFrequency: 'monthly',
