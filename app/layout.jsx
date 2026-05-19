@@ -5,8 +5,8 @@ import Script from 'next/script';
 export const metadata = {
   metadataBase: new URL('https://angelruiz.world'),
   title: {
-    default: 'Angel Ruiz | Mago e Ilusionista',
-    template: '%s | Angel Ruiz | Mago e Ilusionista'
+    default: 'Mago en Madrid | Ángel Ruiz | Ilusionista Profesional',
+    template: '%s | Ángel Ruiz | Mago Madrid'
   },
   description: 'Ángel Ruiz, mago profesional experto en magia en Madrid para bodas y eventos VIP. Ilusionismo de cerca exclusivo para una experiencia única. Reserva ahora.',
   keywords: ['Mago Madrid', 'Ilusionista en Madrid', 'Mago para bodas Madrid', 'Magia para empresas Madrid', 'Mago para eventos corporativos', 'Magia de cerca Madrid', 'Ángel Ruiz', 'Espectáculo de magia Madrid', 'Contratar mago Madrid', 'Mago ilusionista Madrid', 'Mago para comuniones Madrid'],

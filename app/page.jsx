@@ -34,7 +34,17 @@ const SEOContent = () => {
                     </div>
                 </div>
 
-                <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-10 border-t border-white/5 pt-8">
+                <div className="mt-12 text-center border-t border-white/5 pt-12">
+                    <p className="text-xs uppercase tracking-[0.2em] font-bold text-slate-500 mb-8">Empresas e instituciones que confían en su ilusionismo corporativo</p>
+                    <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                        <span className="font-bold text-lg md:text-xl tracking-widest text-white">MOVISTAR</span>
+                        <span className="font-bold text-lg md:text-xl tracking-widest text-white">LA ESCOMBRERA</span>
+                        <span className="font-bold text-lg md:text-xl tracking-widest text-white">IFEMA MADRID</span>
+                        <span className="font-bold text-lg md:text-xl tracking-widest text-white">CASINO DE MADRID</span>
+                    </div>
+                </div>
+
+                <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 border-t border-white/5 pt-12">
                     <div className="space-y-6 text-justify">
                         <h2 className="text-white font-[Cinzel] text-xl md:text-2xl uppercase tracking-widest text-left">Angel Ruiz | Mago e Ilusionista en Madrid</h2>
                         <p className="text-sm opacity-60 italic text-left">Referente en magia para bodas y empresas con un estilo exclusivo.</p>

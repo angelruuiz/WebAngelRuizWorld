@@ -64,6 +64,12 @@ export default function sitemap() {
       priority: 0.8,
     },
     {
+      url: 'https://angelruiz.world/empresas/mago-team-building-madrid',
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: 'https://angelruiz.world/blog',
       lastModified: lastMod,
       changeFrequency: 'monthly',
