@@ -37,9 +37,12 @@ const SEOContent = () => {
                 <div className="mt-12 text-center border-t border-white/5 pt-12">
                     <p className="text-xs uppercase tracking-[0.2em] font-bold text-slate-500 mb-8">Empresas e instituciones que confían en su ilusionismo corporativo</p>
                     <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                        <img src="/images/logo-movistar.webp" alt="Movistar" className="h-8 md:h-12 object-contain" />
-                        <img src="/images/logo-escombrera.webp" alt="Peña La Escombrera" className="h-10 md:h-14 object-contain" />
-                        <img src="/images/logo-ifema.svg" alt="IFEMA Madrid" className="h-10 md:h-14 object-contain" />
+                        <img src="/images/logo-movistar.webp" alt="Movistar Estudiantes" className="h-8 md:h-12 object-contain filter brightness-110" />
+                        <img src="/images/logo-escombrera.webp" alt="Peña La Escombrera" className="h-10 md:h-14 object-contain filter brightness-110" />
+                        <img src="/images/logo-gondomar.webp" alt="Colegio Gondomar" className="h-10 md:h-14 object-contain filter brightness-110" />
+                        <img src="/images/logo-senescal.webp" alt="Catering Senescal" className="h-10 md:h-14 object-contain filter brightness-110" />
+                        <img src="/images/logo-alcampo.webp" alt="Alcampo" className="h-6 md:h-10 object-contain filter brightness-110" />
+                        <img src="/images/logo-ahorramas.webp" alt="Ahorramás" className="h-6 md:h-10 object-contain filter brightness-110" />
                     </div>
                 </div>
 
