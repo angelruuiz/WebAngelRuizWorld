@@ -54,8 +54,6 @@ export default async function BlogPost({ params }) {
   };
 
   const faqSchema = postData.faq && postData.faq.length > 0 ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
     "mainEntity": postData.faq.map(item => ({
       "@type": "Question",
       "name": item.question,

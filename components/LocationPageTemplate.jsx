@@ -71,8 +71,6 @@ export default function LocationPageTemplate({ location, allLocations }) {
     };
 
     const faqSchema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
         "mainEntity": location.faqs ? location.faqs.map(f => ({
             "@type": "Question",
             "name": f.question,
