@@ -4,8 +4,8 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: 'Galería de Magia | Ángel Ruiz · Mago e Ilusionista en Madrid',
-    description: 'Explora los mejores momentos de los eventos de magia de Ángel Ruiz. Fotos reales de espectáculos corporativos, eventos privados y magia close-up en Madrid.',
+    title: 'Galería de Eventos Reales | Fotos de Magia en Madrid · Ángel Ruiz',
+    description: 'Fotos reales de actuaciones de Ángel Ruiz como mago en Madrid. Eventos corporativos, bodas exclusivas y magia close-up. +10 años de experiencia.',
     alternates: {
         canonical: 'https://angelruiz.world/galeria',
     },

@@ -1,8 +1,8 @@
 import SobreMiClient from '@/components/SobreMiClient';
 
 export const metadata = {
-    title: 'Ángel Ruiz · Mago Profesional en Madrid | Close-up y Cartomagia',
-    description: 'Conoce a Ángel Ruiz, mago close-up de Madrid especializado en cartomagia. Disponible para bodas, empresas y eventos en toda la Comunidad de Madrid. Contacta hoy.',
+    title: 'Sobre Ángel Ruiz | Formado en la Escuela DaOrtiz · +10 Años de Magia',
+    description: 'Conoce a Ángel Ruiz, ilusionista profesional en Madrid formado con Dani DaOrtiz. Especialista en cartomagia y magia de cerca para bodas y empresas. 31 reseñas · 5 estrellas.',
     alternates: {
         canonical: 'https://angelruiz.world/sobre-mi',
     },

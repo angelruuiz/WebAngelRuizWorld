@@ -230,7 +230,7 @@ export default function LocationPageTemplate({ location, allLocations }) {
                             <div className="space-y-4">
                                 <h2 className="text-2xl font-[Cinzel] text-white font-bold">Cobertura en Madrid Capital</h2>
                                 <p className="text-slate-400 text-justify text-sm leading-relaxed">
-                                    Aunque {location.name} es una de mis bases operativas clave en la sierra, mi mercado abarca toda la comunidad. Si estás organizando un congreso en el centro o IFEMA, descubre mis servicios como <Link href="/empresas" className="text-amber-400 font-bold hover:underline">mago para empresas en Madrid</Link>. Si planeas dar el &apos;sí quiero&apos; en una finca exclusiva, explora mi propuesta como <Link href="/particulares/bodas" className="text-amber-400 font-bold hover:underline">mago para bodas en Madrid</Link>.
+                                    Aunque {location.name} es una de mis bases operativas clave en la sierra, mi mercado abarca toda la comunidad. Descubre por qué soy el <Link href="/mago-madrid" className="text-amber-400 font-bold hover:underline">mago de referencia en Madrid</Link>. Si estás organizando un congreso en el centro o IFEMA, descubre mis servicios como <Link href="/empresas" className="text-amber-400 font-bold hover:underline">mago para empresas en Madrid</Link>. Si planeas dar el &apos;sí quiero&apos; en una finca exclusiva, explora mi propuesta como <Link href="/particulares/bodas" className="text-amber-400 font-bold hover:underline">mago para bodas en Madrid</Link>.
                                 </p>
                             </div>
                         </div>
