@@ -208,14 +208,13 @@ export default function BodasDetailPage() {
                         </div>
                     </div>
 
-                        <div className="text-center space-y-4">
+                        <div className="text-center space-y-4 py-8">
                             <p className="text-amber-500 font-bold uppercase tracking-widest text-xs">Testimonio Destacado:</p>
                             <p className="text-lg text-white font-[Cinzel] italic max-w-2xl mx-auto">
                                 "Ángel hizo que el cóctel volara. Nuestros invitados todavía nos preguntan cómo hizo aquello con las cartas. Fue el toque elegante que buscábamos."
                             </p>
                             <p className="text-slate-500 text-[10px] uppercase">— Novios en Finca de Torrelodones, 2025</p>
                         </div>
-                    </div>
 
                 {/* FAQ Section */}
                 <section className="border-t border-white/5 pt-16 mt-16">
