@@ -4,7 +4,7 @@ import { locations } from '@/lib/locations';
 export default function sitemap() {
   const posts = getSortedPostsData();
   
-  const lastMod = new Date('2026-04-15');
+  const lastMod = new Date();
   
   const blogUrls = posts.map((post) => ({
     url: `https://angelruiz.world/blog/${post.slug}`,
@@ -26,6 +26,12 @@ export default function sitemap() {
       lastModified: lastMod,
       changeFrequency: 'monthly',
       priority: 1.0,
+    },
+    {
+      url: 'https://angelruiz.world/mago-madrid',
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.95,
     },
     {
       url: 'https://angelruiz.world/particulares',

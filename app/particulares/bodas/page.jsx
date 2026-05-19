@@ -84,7 +84,7 @@ export default function BodasDetailPage() {
                                 "ratingValue": "5",
                                 "bestRating": "5",
                                 "worstRating": "1",
-                                "ratingCount": "20"
+                                "ratingCount": "31"
                             }
                         },
                         {
