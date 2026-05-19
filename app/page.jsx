@@ -36,10 +36,10 @@ const SEOContent = () => {
 
                 <div className="mt-12 text-center border-t border-white/5 pt-12">
                     <p className="text-xs uppercase tracking-[0.2em] font-bold text-slate-500 mb-8">Empresas e instituciones que confían en su ilusionismo corporativo</p>
-                    <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                        <span className="font-bold text-lg md:text-xl tracking-widest text-white">MOVISTAR</span>
-                        <span className="font-bold text-lg md:text-xl tracking-widest text-white">LA ESCOMBRERA</span>
-                        <span className="font-bold text-lg md:text-xl tracking-widest text-white">IFEMA MADRID</span>
+                    <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                        <img src="/images/logo-movistar.webp" alt="Movistar" className="h-8 md:h-12 object-contain" />
+                        <img src="/images/logo-escombrera.webp" alt="Peña La Escombrera" className="h-10 md:h-14 object-contain" />
+                        <img src="/images/logo-ifema.svg" alt="IFEMA Madrid" className="h-10 md:h-14 object-contain" />
                     </div>
                 </div>
 
