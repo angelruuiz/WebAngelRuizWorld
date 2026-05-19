@@ -175,56 +175,38 @@ export default function BodasDetailPage() {
                         </div>
                     </div>
 
-                    {/* BLOQUE ADICIONAL DE CONTENIDO SEO PARA BODAS */}
-                    <div className="max-w-4xl mx-auto space-y-16 py-16 border-t border-white/5">
-                        <section className="space-y-8">
-                            <h2 className="text-3xl font-[Cinzel] text-white text-center uppercase tracking-widest border-b border-amber-500/30 pb-4">El Valor Añadido de la Magia en su Enlace</h2>
-                            
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-                                <div className="space-y-4">
-                                    <h3 className="text-amber-400 font-bold text-xl font-[Cinzel]">Networking Emocional: Rompiendo el Hielo</h3>
-                                    <p className="text-slate-300 text-sm leading-relaxed text-justify">
-                                        En el <strong className="text-white">cóctel de bienvenida</strong>, es común que los grupos de invitados (familia del novio, amigos de la novia, compañeros de trabajo) permanezcan aislados. Como <strong>mago itinerante en Madrid</strong>, me infiltro entre los grupos de forma orgánica. Al generar un milagro compartido, se crea un tema de conversación inmediato que une a personas que no se conocían, facilitando una atmósfera mucho más vibrante y cohesionada.
-                                    </p>
-                                </div>
-                                <div className="space-y-4">
-                                    <h3 className="text-amber-400 font-bold text-xl font-[Cinzel]">Magia de Mesa: Amenización del Banquete</h3>
-                                    <p className="text-slate-300 text-sm leading-relaxed text-justify">
-                                        El banquete puede tener momentos de espera entre platos que rompen el ritmo de la celebración. Mi intervención de <strong className="text-white">magia de mesa a mesa</strong> está diseñada para ser breve, impactante y extremadamente respetuosa. Actuamos en los intervalos precisos, asegurando que el asombro sea el aderezo perfecto para la propuesta gastronómica de su boda, sin interrumpir el servicio.
-                                    </p>
-                                </div>
-                                <div className="space-y-4">
-                                    <h3 className="text-amber-400 font-bold text-xl font-[Cinzel]">Exclusividad y Estilo Personalizado</h3>
-                                    <p className="text-slate-300 text-sm leading-relaxed text-justify">
-                                        No hay dos bodas iguales. Mi enfoque como <strong>mago profesional</strong> en bodas VIP es la personalización. Podemos crear efectos específicos que involucren la historia de los novios o que utilicen elementos significativos del enlace. El objetivo es que la magia no sea un parche, sino una pieza fundamental del engranaje estético y emocional de su gran día.
-                                    </p>
-                                </div>
-                                <div className="space-y-4">
-                                    <h3 className="text-amber-400 font-bold text-xl font-[Cinzel]">Fotografías de Asombro Real</h3>
-                                    <p className="text-slate-300 text-sm leading-relaxed text-justify">
-                                        La magia regala a sus fotógrafos momentos de <strong className="text-white">expresiones auténticas</strong>. Las caras de sorpresa, las risas espontáneas y los gestos de incredulidad de sus seres queridos capturados en imagen son el testimonio visual de que su boda fue, literalmente, mágica. Es un valor añadido que perdura en su álbum de recuerdos.
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section className="bg-slate-900/50 p-8 md:p-12 rounded-[2rem] border border-amber-500/20 shadow-2xl space-y-8">
-                            <h2 className="text-2xl font-[Cinzel] text-white mb-6 uppercase tracking-widest text-center">Un Profesional de Confianza para el "Sí, Quiero"</h2>
-                            <div className="space-y-6 text-slate-300 text-sm md:text-base leading-relaxed text-justify">
-                                <p>
-                                    Entiendo la presión que conlleva organizar una boda y la importancia de contar con proveedores que sean una solución, no un problema adicional. Como <strong className="text-amber-400">ilusionista profesional en Madrid</strong>, garantizo una etiqueta impecable y un trato exquisito con todos sus invitados, desde los más pequeños hasta los mayores.
-                                </p>
-                                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs md:text-sm">
-                                    <li className="flex items-center gap-3 bg-white/5 p-3 rounded-lg"><span className="text-amber-500">✓</span> <strong>Discreción y Elegancia:</strong> Etiqueta adaptada al código de vestimenta de su boda.</li>
-                                    <li className="flex items-center gap-3 bg-white/5 p-3 rounded-lg"><span className="text-amber-500">✓</span> <strong>Adaptabilidad Total:</strong> Actuamos tanto en interiores como en exteriores (jardines, fincas).</li>
-                                    <li className="flex items-center gap-3 bg-white/5 p-3 rounded-lg"><span className="text-amber-500">✓</span> <strong>Experiencia en Fincas Local:</strong> Conocemos el funcionamiento de las mejores fincas de la Sierra y el Noroeste.</li>
-                                    <li className="flex items-center gap-3 bg-white/5 p-3 rounded-lg"><span className="text-amber-500">✓</span> <strong>Reserva Garantizada:</strong> Contratos claros y comunicación directa hasta el gran día.</li>
-                                </ul>
-                                <p className="pt-4 border-t border-white/5">
-                                    Operamos habitualmente en entornos exclusivos como <strong>Las Rozas de Madrid, Majadahonda, y Pozuelo de Alarcón</strong>, además de desplazamos a cualquier punto de la geografía española para enlaces de destino. Confíe en un mago local con proyección nacional para asegurar el éxito rotundo del entretenimiento en su boda.
+                    {/* BLOQUE ESPECIALIZACIÓN MADRID - CONCISO Y ELEGANTE */}
+                    <div className="max-w-5xl mx-auto py-16 border-t border-white/5">
+                        <div className="text-center mb-12">
+                            <h2 className="text-2xl md:text-3xl font-[Cinzel] text-white uppercase tracking-widest">
+                                Magia Exclusiva para Bodas en Madrid
+                            </h2>
+                            <p className="text-slate-400 mt-4 max-w-2xl mx-auto text-sm">
+                                Asombro elegante diseñado para los espacios más emblemáticos de la capital y la sierra madrileña.
+                            </p>
+                        </div>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all">
+                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3">Fincas de la Sierra</h3>
+                                <p className="text-slate-300 text-sm leading-relaxed">
+                                    Conocimiento exhaustivo de las fincas nupciales en Torrelodones, El Escorial y Galapagar. Coordinación perfecta para magia al aire libre durante el cóctel.
                                 </p>
                             </div>
-                        </section>
+                            <div className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all">
+                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3">Zona Noroeste</h3>
+                                <p className="text-slate-300 text-sm leading-relaxed">
+                                    Cobertura inmediata y agilidad logística en Las Rozas, Majadahonda y Pozuelo. Entretenimiento premium para enlaces exclusivos en entornos residenciales.
+                                </p>
+                            </div>
+                            <div className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all">
+                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3">Hoteles del Centro</h3>
+                                <p className="text-slate-300 text-sm leading-relaxed">
+                                    Etiqueta impecable y discreción absoluta para bodas cosmopolitas en el corazón de Madrid. Magia de cerca de alto impacto visual sin interrumpir el ritmo del banquete.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
                         <div className="text-center space-y-4">
                             <p className="text-amber-500 font-bold uppercase tracking-widest text-xs">Testimonio Destacado:</p>
