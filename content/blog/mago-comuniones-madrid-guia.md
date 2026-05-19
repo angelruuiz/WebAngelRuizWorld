@@ -55,4 +55,4 @@ Con **más de 10 años de experiencia** y formación directa con Dani DaOrtiz, o
 
 ---
 
-*¿Organizas la comunión de tu hijo o hija en Madrid? [Contacta conmigo](/empresas) para un presupuesto cerrado y sin compromiso.*
+*¿Organizas la comunión de tu hijo o hija en Madrid? [Contacta conmigo](/particulares/eventos) para un presupuesto cerrado y sin compromiso.*
