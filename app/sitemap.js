@@ -94,6 +94,12 @@ export default function sitemap() {
       priority: 0.7,
     },
     {
+      url: 'https://angelruiz.world/mago-sierra-madrid',
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
       url: 'https://angelruiz.world/galeria',
       lastModified: lastMod,
       changeFrequency: 'monthly',
