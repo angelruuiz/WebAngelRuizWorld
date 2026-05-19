@@ -40,7 +40,6 @@ const SEOContent = () => {
                         <span className="font-bold text-lg md:text-xl tracking-widest text-white">MOVISTAR</span>
                         <span className="font-bold text-lg md:text-xl tracking-widest text-white">LA ESCOMBRERA</span>
                         <span className="font-bold text-lg md:text-xl tracking-widest text-white">IFEMA MADRID</span>
-                        <span className="font-bold text-lg md:text-xl tracking-widest text-white">CASINO DE MADRID</span>
                     </div>
                 </div>
 
