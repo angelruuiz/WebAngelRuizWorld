@@ -174,12 +174,14 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="https://www.instagram.com" />
         <link rel="dns-prefetch" href="https://www.tiktok.com" />
         <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-NWEPX8BGXB" />
+        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-R1QMG6519N" />
         <Script id="google-analytics" strategy="afterInteractive" dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-NWEPX8BGXB');
+            gtag('config', 'G-R1QMG6519N');
           `
         }} />
       </head>
