@@ -6,32 +6,32 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import Link from 'next/link';
 
 export const metadata = {
-    title: 'Team Building Magia en Madrid | Talleres para Empresas',
-    description: 'Fomenta el trabajo en equipo con un Team Building de magia único en Madrid. Talleres corporativos y dinámicas de grupo con el ilusionista Ángel Ruiz.',
+    title: 'Mago para Restaurantes en Madrid | Atrae y Fideliza Clientes',
+    description: 'Destaca tu local contratando un mago para restaurantes en Madrid. Magia de mesa en mesa para amenizar esperas, atraer cenas de grupo y fidelizar clientes.',
     alternates: {
-        canonical: 'https://angelruiz.world/empresas/mago-team-building-madrid',
+        canonical: 'https://angelruiz.world/empresas/mago-para-restaurantes-madrid',
     },
-    keywords: 'team building magia, taller de magia para empresas, mago team building madrid, actividades team building originales, dinamicas de grupo madrid',
+    keywords: 'mago para restaurantes madrid, magia en restaurantes madrid, ilusionista restaurantes madrid, entretenimiento para restaurantes, cenas con espectaculo madrid, fidelizar clientes restaurante, mago hosteleria',
     openGraph: {
-        title: 'Team Building Magia en Madrid: Ilusionismo para Empresas',
-        description: 'Mejora el clima laboral y la cohesión de tu equipo mediante talleres de magia corporativa. Una experiencia formativa y muy divertida.',
-        images: [{ url: '/images/mago-empresas-madrid-angel-ruiz.svg' }],
+        title: 'Mago para Restaurantes y Hostelería en Madrid | Ángel Ruiz',
+        description: 'Aumenta el ticket medio y la fidelización de tus clientes con magia de mesa en mesa. El entretenimiento perfecto para restaurantes en Madrid.',
+        images: [{ url: '/images/foto-spring-cartas.webp' }],
     }
 };
 
-export default function TeamBuildingPage() {
+export default function RestaurantPage() {
     const serviceSchema = {
         "@context": "https://schema.org",
         "@type": "Service",
-        "name": "Team Building Magia: Taller para Empresas",
+        "name": "Mago para Restaurantes en Madrid",
         "provider": {
             "@type": "Person",
             "name": "Ángel Ruiz"
         },
         "areaServed": "Madrid",
-        "description": "Dinámicas de grupo, coaching e incentivos de empresa basados en el ilusionismo y el team building con magia para mejorar habilidades de comunicación y cohesión de equipos en Madrid.",
-        "serviceType": "Corporate Training & Entertainment",
-        "url": "https://angelruiz.world/empresas/mago-team-building-madrid"
+        "description": "Servicio de mago ilusionista para restaurantes en Madrid. Magia de proximidad de mesa en mesa para amenizar esperas, fidelizar comensales y aportar valor añadido a cenas de empresa y eventos en el local.",
+        "serviceType": "Hospitality Entertainment",
+        "url": "https://angelruiz.world/empresas/mago-para-restaurantes-madrid"
     };
 
     const faqSchema = {
@@ -40,26 +40,26 @@ export default function TeamBuildingPage() {
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "¿En qué consiste un team building de magia?",
+                "name": "¿Cómo funciona la magia en un restaurante?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Un team building de magia es una actividad corporativa donde los empleados no solo disfrutan de un espectáculo de ilusionismo, sino que aprenden a realizar efectos mágicos en equipo. Fomenta la comunicación, la resolución de problemas y el pensamiento lateral de forma muy divertida."
+                    "text": "La magia para restaurantes funciona mediante el formato de 'Magia de Cerca' o 'Table Hopping'. Me acerco de mesa en mesa entre los platos o en la sobremesa, ofreciendo micro-shows exclusivos de 5-10 minutos a cada grupo de comensales. No requiere escenario ni interrumpe el servicio de camareros."
                 }
             },
             {
                 "@type": "Question",
-                "name": "¿Se puede hacer el team building de magia en nuestras oficinas de Madrid?",
+                "name": "¿Interfiere el mago con el trabajo de los camareros?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Sí, el taller de magia para empresas es totalmente adaptable. Me desplazo con todo el material necesario a las oficinas de su empresa en Madrid, o bien a hoteles, salas de reuniones o fincas donde estén realizando su evento corporativo."
+                    "text": "En absoluto. Mi experiencia trabajando en hostelería me permite 'leer la sala'. Sé perfectamente cuándo acercarme a una mesa (normalmente mientras esperan el primer plato o antes del postre) y me aparto inmediatamente cuando los camareros llegan con la comida, facilitando su labor."
                 }
             },
             {
                 "@type": "Question",
-                "name": "¿Cuántas personas pueden participar en la dinámica?",
+                "name": "¿Es rentable contratar un mago para mi restaurante en Madrid?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Las actividades de team building magia son ideales para grupos desde 10 hasta 100 personas. El formato se adapta en función del tamaño del grupo para garantizar que todos participen activamente y experimenten la magia de primera mano."
+                    "text": "Sí, es una inversión con retorno directo. Un mago para restaurantes ayuda a que los tiempos de espera en cocina pasen volando (reduciendo quejas), fomenta que los clientes pidan más consumiciones de sobremesa (aumentando el ticket medio) y genera un boca a boca espectacular que atrae nuevas reservas."
                 }
             }
         ]
@@ -71,7 +71,7 @@ export default function TeamBuildingPage() {
         "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
             { "@type": "ListItem", "position": 2, "name": "Empresas", "item": "https://angelruiz.world/empresas" },
-            { "@type": "ListItem", "position": 3, "name": "Team Building Magia", "item": "https://angelruiz.world/empresas/mago-team-building-madrid" }
+            { "@type": "ListItem", "position": 3, "name": "Mago Restaurantes", "item": "https://angelruiz.world/empresas/mago-para-restaurantes-madrid" }
         ]
     };
 
@@ -92,68 +92,68 @@ export default function TeamBuildingPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-20">
                         <div className="relative md:sticky md:top-32 h-auto rounded-2xl overflow-hidden border border-slate-800 shadow-xl order-2 md:order-1 group bg-slate-900/50">
                             <Image
-                                src="/images/evento-angel-ruiz-magia.webp"
-                                alt="Team Building Magia para Empresas en Madrid"
+                                src="/images/foto-spring-cartas.webp"
+                                alt="Mago actuando en un restaurante en Madrid"
                                 width={800}
                                 height={1000}
                                 className="w-full h-auto transition-all duration-700 group-hover:scale-105"
                                 priority
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent" />
                         </div>
 
                         <div className="order-1 md:order-2">
                              <p className="text-amber-500 uppercase tracking-widest text-[10px] font-bold mb-2 drop-shadow-md">
-                                RRHH e Incentivos | Dinámicas Originales
+                                Fidelización en Hostelería | Magia de Mesa en Mesa
                              </p>
                              <h1 className="text-4xl md:text-5xl font-[Cinzel] text-white mb-6 border-b border-amber-500/50 pb-2 font-bold leading-tight uppercase">
-                                Team Building con Magia en Madrid
+                                Mago para Restaurantes en Madrid
                              </h1>
 
                              <div className="space-y-6 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
                                  <p className="border-l-2 border-amber-500 pl-4 py-1">
-                                    <span className="text-amber-400 font-bold underline decoration-amber-500/30 text-lg">Mucho más que un espectáculo: una experiencia formativa y participativa.</span>
+                                    <span className="text-amber-400 font-bold underline decoration-amber-500/30 text-lg">Diferencia tu local de la competencia y convierte una cena normal en una experiencia gastronómica inolvidable.</span>
                                 </p>
                                  <p>
-                                    Atrás quedaron las aburridas dinámicas de grupo. Las empresas modernas y departamentos de RRHH en <strong>Madrid</strong> buscan actividades de incentivo que saquen a los empleados de su zona de confort fomentando el compañerismo. Un <strong className="text-amber-400">team building de magia</strong> es la herramienta corporativa perfecta para lograr cohesión, risas y aprendizaje lateral de una forma inolvidable.
+                                    La hostelería en la capital es altamente competitiva. Ofrecer buena comida ya no es suficiente; los clientes buscan <strong>experiencias</strong>. Contratar un <strong className="text-amber-400">mago para restaurantes en Madrid</strong> es una de las estrategias de marketing en el local más efectivas para sorprender a los comensales, generar reseñas positivas y garantizar que vuelvan a reservar.
                                 </p>
 
                                 <div className="grid grid-cols-2 gap-4 py-6 border-y border-white/5">
                                     <div className="flex items-start gap-3">
                                         <div className="text-amber-500 font-bold">01</div>
                                         <div>
-                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Comunicación</h4>
-                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">La magia requiere empatía y claridad verbal, habilidades críticas para las ventas y atención al cliente.</p>
+                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Ameniza las Esperas</h4>
+                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Los retrasos en cocina desaparecen cuando los clientes están asombrados y riendo con un juego de magia en sus propias manos.</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-3">
                                         <div className="text-amber-500 font-bold">02</div>
                                         <div>
-                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Pensamiento Lateral</h4>
-                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Estimula la resolución creativa de problemas enseñando a ver los desafíos desde ángulos imposibles.</p>
+                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Aumenta el Ticket</h4>
+                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Un ambiente animado en la sobremesa invita a pedir más postres, cafés y copas, rentabilizando tu negocio rápidamente.</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <p>
-                                    Ya sea en las propias oficinas de su empresa, en hoteles de <strong>Madrid Centro</strong> o en entornos naturales de la <strong>Sierra Noroeste</strong>, diseño sesiones de <Link href="/empresas" className="text-amber-400 hover:underline font-bold">talleres de magia corporativa</Link> donde sus empleados no solo ven magia de alto nivel, sino que <u>aprenden a ejecutar efectos seleccionados</u> trabajando en equipo. El <strong>team building magia</strong> rompe jerarquías y une a los departamentos.
+                                    A través de la modalidad <em>Table Hopping</em> (magia de mesa en mesa), me desplazo discretamente entre los grupos. Si estás organizando jornadas gastronómicas, cenas de empresa, o simplemente quieres darle un valor premium a los fines de semana en tu local, un <strong>ilusionista profesional</strong> es el gancho perfecto. Trabajo en colaboración total con el maître y el equipo de sala.
                                 </p>
 
                                 <p className="bg-white/5 p-4 rounded-lg italic text-slate-300">
-                                    "El taller de magia corporativa fue un soplo de aire fresco. Ver a nuestro equipo financiero colaborando con los comerciales para lograr un truco de cartomagia no tuvo precio."
+                                    "Desde que introdujimos los jueves mágicos en el restaurante, tenemos lleno absoluto. Las reseñas en Google mencionando al mago no paran de crecer."
                                 </p>
 
                             </div>
 
                             <div className="mt-12">
-                                <ContactButtonClient label="Solicitar Dossier de Team Building" />
+                                <ContactButtonClient label="Consultar Tarifas para Hostelería" />
                             </div>
                         </div>
                     </div>
 
                     {/* FAQ Section */}
                     <section className="border-t border-white/5 pt-16 mb-8 mt-12">
-                        <h2 className="text-2xl font-[Cinzel] text-white mb-10 text-center uppercase tracking-widest">Preguntas Frecuentes sobre el Team Building</h2>
+                        <h2 className="text-2xl font-[Cinzel] text-white mb-10 text-center uppercase tracking-widest">Preguntas Frecuentes sobre Magia en Restaurantes</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                             {faqSchema.mainEntity.map((faq, index) => (
                                 <div key={index} className="bg-slate-900/40 p-6 rounded-xl border border-white/10 hover:border-amber-500/30 transition-colors">
