@@ -79,7 +79,7 @@ export default function ValoracionesPage() {
                                 "ratingValue": "5",
                                 "bestRating": "5",
                                 "worstRating": "1",
-                                "ratingCount": reviewsData.length.toString()
+                                "ratingCount": "31"
                             },
                             "review": reviewsData.map(r => ({
                                 "@type": "Review",
