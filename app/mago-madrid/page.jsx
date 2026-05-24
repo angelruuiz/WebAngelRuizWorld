@@ -64,6 +64,7 @@ export default function MagoMadridPage() {
                     { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
                     { "@type": "ListItem", "position": 2, "name": "Mago Madrid", "item": "https://angelruiz.world/mago-madrid" }
                 ]
+            }
         ]
     };
 
