@@ -140,7 +140,7 @@ export default function EmpresasPage() {
                                     Angel Ruiz, reconocido <strong className="text-amber-400 font-bold">ilusionista corporativo en Madrid</strong> y formado en la prestigiosa <strong>Escuela DaOrtiz</strong>, ofrece un enfoque sofisticado que lo distancia de las agencias de ocio convencionales. Mi especialización en <u>Cartomagia de alta calidad</u> permite ofrecer una experiencia premium en vivo, posicionándome como una de las herramientas más potentes de marketing offline y fidelización para su empresa. No se trata solo de trucos, sino de una técnica refinada para captar la atención plena de sus invitados y asociar su marca a un recuerdo exclusivo y verdaderamente sorprendente.
                                 </p>
 
-                                <div className="grid grid-cols-2 gap-4 py-6 border-y border-white/5">
+                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-6 border-y border-white/5">
                                     <div className="flex items-start gap-3">
                                         <div className="text-amber-500 font-bold">01</div>
                                         <div>
@@ -155,6 +155,13 @@ export default function EmpresasPage() {
                                             <p className="text-slate-400 text-[10px] leading-tight mt-1">Reveal de productos con efectos visuales imposibles.</p>
                                         </div>
                                     </div>
+                                    <div className="flex items-start gap-3">
+                                        <div className="text-amber-500 font-bold">03</div>
+                                        <div>
+                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Magia Personalizada</h4>
+                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Integración del logo y mensaje de su empresa en los efectos.</p>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <p>
@@ -166,7 +173,7 @@ export default function EmpresasPage() {
                                 </p>
 
                                 <p>
-                                    Al buscar un <strong className="text-amber-400">mago para empresas en Madrid</strong>, la logística y puntualidad son claves. Como experto operando desde la zona noroeste, cubro toda la comunidad con agilidad logística, garantizando un servicio integral que incluye desde la gestión de la atmósfera mágica hasta la coordinación con otros proveedores de su evento corporativo.
+                                    Al buscar el mejor <strong className="text-amber-400">mago para empresas en Madrid</strong>, la logística y puntualidad son claves. Como <a href="/mago-madrid" className="text-amber-500 hover:underline">experto en magia en Madrid</a> operando desde la zona noroeste, cubro toda la comunidad con agilidad logística, garantizando un servicio integral que incluye desde la gestión de la atmósfera mágica hasta la coordinación con otros proveedores de su evento corporativo.
                                 </p>
                             </div>
 

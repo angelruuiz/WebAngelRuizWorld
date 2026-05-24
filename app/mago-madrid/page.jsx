@@ -151,6 +151,19 @@ export default function MagoMadridPage() {
                         </div>
                     </div>
 
+                    {/* SECCIÓN SEO: EXPERTO EN MAGIA EN MADRID */}
+                    <div className="max-w-4xl mx-auto py-12 mb-16 border-y border-white/5 text-center">
+                        <h2 className="text-2xl md:text-3xl font-[Cinzel] text-white mb-6 uppercase tracking-widest">
+                            El Experto en Magia en Madrid
+                        </h2>
+                        <p className="text-slate-300 text-sm leading-relaxed mb-6">
+                            La diferencia entre un simple animador y un <strong className="text-amber-400">experto en magia en Madrid</strong> reside en la capacidad de adaptar el asombro al contexto exacto de cada evento. Mi formación bajo el sello de la prestigiosa Escuela DaOrtiz y años de trayectoria en el sector premium me permiten ofrecer una experiencia sofisticada, donde la técnica impecable y la psicología del espectador se unen.
+                        </p>
+                        <p className="text-slate-400 text-xs italic">
+                            No ofrezco "shows enlatados", sino diseño de atmósferas mágicas a medida para bodas de lujo y convenciones empresariales.
+                        </p>
+                    </div>
+
                     {/* Servicios en Madrid */}
                     <div className="max-w-5xl mx-auto py-16 border-t border-white/5">
                         <h2 className="text-2xl md:text-3xl font-[Cinzel] text-white uppercase tracking-widest text-center mb-12">
@@ -158,13 +171,13 @@ export default function MagoMadridPage() {
                         </h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             <Link href="/empresas" className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all group">
-                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3 group-hover:text-white transition-colors">Empresas y Corporativo</h3>
-                                <p className="text-slate-300 text-sm leading-relaxed">Cenas de empresa, ferias en IFEMA, team building y eventos de marca en Madrid.</p>
+                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3 group-hover:text-white transition-colors">Magia para Empresas</h3>
+                                <p className="text-slate-300 text-sm leading-relaxed">Como <strong className="font-bold">mago para empresas en Madrid</strong>, ofrezco magia corporativa para cenas, ferias en IFEMA y team building.</p>
                                 <span className="text-amber-500 text-xs font-bold uppercase tracking-widest mt-4 block">Ver servicios →</span>
                             </Link>
                             <Link href="/particulares/bodas" className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all group">
-                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3 group-hover:text-white transition-colors">Bodas Exclusivas</h3>
-                                <p className="text-slate-300 text-sm leading-relaxed">Magia de cóctel y mentalismo para el día más importante. Fincas de Madrid y Sierra.</p>
+                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3 group-hover:text-white transition-colors">Magia para Bodas</h3>
+                                <p className="text-slate-300 text-sm leading-relaxed">El mejor <strong className="font-bold">mago para bodas en Madrid</strong>. Magia de cóctel y mentalismo para el día más importante en fincas exclusivas.</p>
                                 <span className="text-amber-500 text-xs font-bold uppercase tracking-widest mt-4 block">Ver bodas →</span>
                             </Link>
                             <Link href="/particulares/eventos" className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all group">

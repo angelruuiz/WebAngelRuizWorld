@@ -245,6 +245,34 @@ export default function BodasDetailPage() {
                         </div>
                     </div>
 
+                    {/* SECCIÓN: Precios y Transparencia */}
+                    <div className="max-w-5xl mx-auto py-16 border-t border-white/5">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <h2 className="text-2xl md:text-3xl font-[Cinzel] text-white uppercase tracking-widest mb-6">
+                                    Precios de un Mago para Bodas en Madrid
+                                </h2>
+                                <p className="text-slate-300 text-sm leading-relaxed text-justify mb-4">
+                                    La transparencia es fundamental. El precio de contratar a un <strong className="text-amber-400">mago para bodas en Madrid</strong> varía en función del tiempo de actuación, el número de invitados y el momento elegido (cóctel vs banquete). 
+                                </p>
+                                <p className="text-slate-300 text-sm leading-relaxed text-justify mb-6">
+                                    Como <strong>experto en magia en Madrid</strong>, mi caché refleja la calidad de un servicio premium, la formación de élite y la tranquilidad de dejar el entretenimiento en manos de un profesional con años de experiencia en el sector nupcial.
+                                </p>
+                                <a href="/blog/cuanto-cuesta-mago-boda-madrid" className="inline-block bg-white/5 border border-amber-500/30 text-amber-400 font-bold px-6 py-3 rounded-full hover:bg-amber-500 hover:text-slate-950 transition-colors uppercase tracking-[0.1em] text-xs">
+                                    Ver Guía de Precios →
+                                </a>
+                            </div>
+                            <div className="bg-slate-900/40 p-8 rounded-xl border border-white/5">
+                                <h3 className="text-white font-[Cinzel] text-lg uppercase mb-4 text-center">Factores del Presupuesto</h3>
+                                <ul className="space-y-3 text-sm text-slate-400">
+                                    <li className="flex items-center gap-2"><span className="text-amber-500">✦</span> <strong>Duración:</strong> Normalmente entre 1.5h y 2h.</li>
+                                    <li className="flex items-center gap-2"><span className="text-amber-500">✦</span> <strong>Formato:</strong> Magia itinerante vs Magia de salón.</li>
+                                    <li className="flex items-center gap-2"><span className="text-amber-500">✦</span> <strong>Desplazamiento:</strong> Incluido para Madrid Capital y Sierra.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
                     {/* SECCIÓN: Cobertura geográfica */}
                     <div className="max-w-5xl mx-auto py-16 border-t border-white/5">
                         <div className="text-center mb-12">

@@ -124,9 +124,22 @@ const SEOContent = () => {
                             </p>
                         </div>
                         <div className="space-y-4">
-                            <h3 className="text-white font-[Cinzel] text-lg uppercase tracking-tight">Cruce de Caminos: Madrid y la Sierra</h3>
+                            <h3 className="text-white font-[Cinzel] text-lg uppercase tracking-tight">Experto en Magia en Madrid</h3>
                             <p className="text-sm leading-relaxed text-slate-400">
-                                Mi base en la **zona noroeste** me permite ser el <u>experto en magia en Madrid</u> de confianza para quienes buscan exclusividad en cualquier punto de la Comunidad de Madrid. Calidad, puntualidad y excelencia técnica.
+                                Reconocido como un <strong className="text-amber-500">experto en magia en Madrid</strong>, aporto años de experiencia y técnica refinada (Escuela DaOrtiz) para garantizar el éxito de su evento, con puntualidad y excelencia técnica en toda la Comunidad.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    {/* NUEVA SECCIÓN SEO: EXPERTO EN MAGIA */}
+                    <div className="mt-16 bg-slate-900/40 p-8 rounded-2xl border border-white/5">
+                        <h2 className="text-2xl font-[Cinzel] text-white mb-6 uppercase tracking-widest text-center">Por qué confiar en un Experto en Magia</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-slate-300 leading-relaxed text-justify">
+                            <p>
+                                En el sector de los eventos, la diferencia entre un truco aficionado y una experiencia verdaderamente inolvidable radica en la figura del <strong className="text-amber-400">experto en magia en Madrid</strong>. Mi trayectoria me permite no solo ejecutar ilusiones imposibles, sino leer al público, gestionar el ritmo del evento e interactuar con la máxima elegancia.
+                            </p>
+                            <p>
+                                Ya sea un <a href="/particulares/bodas" className="text-amber-500 hover:underline">mago para bodas en Madrid</a> que debe conectar con familias diversas, o un <a href="/empresas" className="text-amber-500 hover:underline">mago para empresas en Madrid</a> que representa la imagen de su marca, la profesionalidad está garantizada. Más de 10 años de experiencia y decenas de valoraciones de 5 estrellas avalan mi compromiso con el asombro de calidad.
                             </p>
                         </div>
                     </div>
