@@ -238,15 +238,19 @@ export default function EmpresasPage() {
                     {/* Related Blog Posts Section */}
                     <section className="border-t border-white/5 pt-16 mt-16 pb-8">
                         <h2 className="text-2xl font-[Cinzel] text-white mb-10 text-center uppercase tracking-widest">Estrategias para Eventos</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                            <a href="/blog/mago-eventos-empresa-madrid-guia" className="group bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                            <Link href="/blog/mago-eventos-empresa-madrid-guia" className="group bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
                                 <p className="text-amber-500 text-[10px] uppercase font-bold tracking-tighter mb-2">Guía Corporativa</p>
                                 <h3 className="text-white font-[Cinzel] text-sm group-hover:text-amber-400 transition-colors">Organizar un evento corporativo de éxito</h3>
-                            </a>
-                            <a href="/blog/magia-corporativa-madrid" className="group bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
+                            </Link>
+                            <Link href="/blog/magia-tecnologia-eventos-empresa-espana" className="group bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
                                 <p className="text-amber-500 text-[10px] uppercase font-bold tracking-tighter mb-2">Innovación</p>
-                                <h3 className="text-white font-[Cinzel] text-sm group-hover:text-amber-400 transition-colors">Magia como herramienta de Marketing</h3>
-                            </a>
+                                <h3 className="text-white font-[Cinzel] text-sm group-hover:text-amber-400 transition-colors">Magia y Tecnología para Eventos</h3>
+                            </Link>
+                            <Link href="/blog/ideas-cenas-empresa-madrid-originales" className="group bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
+                                <p className="text-amber-500 text-[10px] uppercase font-bold tracking-tighter mb-2">Ideas</p>
+                                <h3 className="text-white font-[Cinzel] text-sm group-hover:text-amber-400 transition-colors">Ideas Originales para Cenas de Empresa</h3>
+                            </Link>
                         </div>
                     </section>
                 </section>

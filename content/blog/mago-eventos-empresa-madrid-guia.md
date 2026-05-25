@@ -5,6 +5,7 @@ excerpt: "Potencia tu marca y motiva a tu equipo con ilusionismo profesional. De
 author: "Ángel Ruiz"
 image: "/images/mago-empresas-madrid-angel-ruiz.svg"
 tags: ["Empresas", "Madrid", "Eventos Corporativos", "Networking"]
+category: "Ilusionismo"
 ---
 
 En el competitivo entorno empresarial de **Madrid**, destacar en un evento corporativo requiere algo más que una buena ubicación y un buen catering. Requiere una experiencia que capte la atención, refuerce los valores de la compañía y facilite el networking orgánico. Aquí es donde la figura del **mago para eventos de empresa en Madrid** se convierte en una herramienta de marketing estratégica y motivacional.

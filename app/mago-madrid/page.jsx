@@ -64,6 +64,15 @@ export default function MagoMadridPage() {
                     { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
                     { "@type": "ListItem", "position": 2, "name": "Mago Madrid", "item": "https://angelruiz.world/mago-madrid" }
                 ]
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    { "@type": "Question", "name": "¿Cuánto cuesta contratar un mago en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "El precio varía según el tipo de evento. Para eventos privados y bodas en Madrid, el rango habitual de un mago profesional premium es de 400€ a 900€. Para eventos corporativos y ferias, se presupuesta por jornada desde 600€." } },
+                    { "@type": "Question", "name": "¿Qué tipo de magia es mejor para un evento en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "La magia de cerca (close-up) es la más demandada en Madrid para cócteles, bodas y cenas de empresa. Se realiza a centímetros del espectador sin necesidad de escenario." } },
+                    { "@type": "Question", "name": "¿Te desplazas a cualquier zona de Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Cubro Madrid capital, la zona noroeste (Las Rozas, Pozuelo, Majadahonda), la Sierra de Madrid y los centros de convenciones como IFEMA." } },
+                    { "@type": "Question", "name": "¿Puedo personalizar el espectáculo?", "acceptedAnswer": { "@type": "Answer", "text": "Cada actuación es diseñada a medida. Puedo integrar mensajes corporativos, adaptar el tono al protocolo de su empresa o crear momentos especiales para los novios en una boda." } }
+                ]
             }
         ]
     };

@@ -1,4 +1,5 @@
 import SobreMiClient from '@/components/SobreMiClient';
+import Link from 'next/link';
 
 export const metadata = {
     title: 'Sobre Ángel Ruiz | Formado en la Escuela DaOrtiz · +10 Años de Magia',
@@ -9,7 +10,32 @@ export const metadata = {
 };
 
 export default function SobreMiPage() {
+    const personSchema = {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ángel Ruiz",
+        "jobTitle": "Mago e Ilusionista Profesional",
+        "url": "https://angelruiz.world/sobre-mi",
+        "image": "https://angelruiz.world/images/foto-bio.webp",
+        "sameAs": [
+            "https://instagram.com/angellruuiz",
+            "https://tiktok.com/@angellruuiz",
+            "https://youtube.com/@angellruuiz",
+            "https://x.com/angellruuizz",
+            "https://facebook.com/angellruuiz"
+        ],
+        "worksFor": {
+            "@type": "ProfessionalService",
+            "@id": "https://angelruiz.world/#organization",
+            "name": "Ángel Ruiz | Mago e Ilusionista"
+        },
+        "knowsAbout": ["Magia de Cerca", "Cartomagia", "Mentalismo", "Ilusionismo Corporativo", "Magia para Bodas"],
+        "alumniOf": "Escuela de Dani DaOrtiz",
+        "areaServed": "Comunidad de Madrid"
+    };
     return (
+        <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
         <SobreMiClient>
             <div className="space-y-8 text-white font-medium leading-relaxed text-sm md:text-base">
                 <p className="text-xl md:text-2xl text-amber-400 font-[Cinzel] font-bold italic mb-8 drop-shadow-sm text-left leading-tight border-l-4 border-amber-500 pl-6 py-2 bg-white/5 rounded-r-lg">
@@ -18,7 +44,7 @@ export default function SobreMiPage() {
                 
                 <div className="space-y-6">
                     <p className="text-justify first-letter:text-5xl first-letter:font-bold first-letter:text-amber-500 first-letter:mr-3 first-letter:float-left">
-                        Como <strong className="text-amber-400 font-bold font-['Playfair_Display'] underline decoration-amber-500/30">experto en magia en Madrid</strong>, tengo muy claro que mi trabajo es mucho más que hacer trucos: se trata de crear emociones reales. Me dedico por completo a hacer posible lo imposible, ofreciendo <strong className="text-amber-400 font-bold">magia premium para bodas</strong> y eventos de empresa exclusivos que buscan destacar.
+                        Como <Link href="/mago-madrid" className="text-amber-400 font-bold font-['Playfair_Display'] underline decoration-amber-500/30">experto en magia en Madrid</Link>, tengo muy claro que mi trabajo es mucho más que hacer trucos: se trata de crear emociones reales. Me dedico por completo a hacer posible lo imposible, ofreciendo <Link href="/particulares/bodas" className="text-amber-400 font-bold hover:underline">magia premium para bodas</Link> y eventos de empresa exclusivos que buscan destacar.
                     </p>
                     
                     <p className="text-justify">
@@ -38,10 +64,11 @@ export default function SobreMiPage() {
                     </p>
 
                     <p className="text-justify text-slate-400 italic border-t border-white/5 pt-6">
-                        A lo largo de mi carrera como <strong>mago para empresas en Madrid</strong> y eventos privados, he aprendido que el éxito está en cuidar los detalles y en ofrecer un trato elegante y cercano. <u>La magia es la ilusión más bonita</u> que existe, y mi compromiso es compartir ese momento contigo con el mayor nivel de profesionalidad.
+                        A lo largo de mi carrera como <Link href="/empresas" className="text-amber-400 hover:underline">mago para empresas en Madrid</Link> y eventos privados, he aprendido que el éxito está en cuidar los detalles y en ofrecer un trato elegante y cercano. <u>La magia es la ilusión más bonita</u> que existe, y mi compromiso es compartir ese momento contigo con el mayor nivel de profesionalidad.
                     </p>
                 </div>
             </div>
         </SobreMiClient>
+        </>
     );
 }

@@ -23,7 +23,7 @@ Para que eso no te pase, aquí van los **5 errores más comunes** al contratar u
 
 Es el error más frecuente y el más peligroso. Un presupuesto de 80€ o 100€ por un mago suele esconder a alguien sin experiencia real, sin seguro de responsabilidad civil y, lo más grave, sin la capacidad de gestionar a un público exigente.
 
-**La magia profesional es una inversión**, no un gasto. Si contratas un mago para una **boda en Madrid** o un **evento corporativo**, ese profesional va a representar la imagen de tu celebración ante tus invitados más importantes.
+**La magia profesional es una inversión**, no un gasto. Si contratas un mago para una **[boda en Madrid](/particulares/bodas)** o un **[evento corporativo](/empresas)**, ese profesional va a representar la imagen de tu celebración ante tus invitados más importantes.
 
 ### Cómo evitarlo
 Pide siempre **vídeos de actuaciones reales** (no montajes de estudio). Las reacciones del público real no se pueden fingir. Un buen mago no tiene problema en mostrarte su trabajo.
@@ -39,7 +39,7 @@ Busca su nombre en Google Maps y lee las reseñas. Fíjate en si los clientes me
 
 "Mago" es un término muy amplio. Hay magos infantiles, de escenario, mentalistas, magos de televisión... Cada formato funciona en un contexto diferente.
 
-Si organizas una **cena de empresa en Madrid**, necesitas un **mago de cerca** que se mueva entre las mesas, no un espectáculo de escenario que requiere tarima y focos. Si organizas una convención de 500 personas, necesitas lo contrario.
+Si organizas una **[cena de empresa en Madrid](/empresas/mago-cenas-empresa-madrid)**, necesitas un **mago de cerca** que se mueva entre las mesas, no un espectáculo de escenario que requiere tarima y focos. Si organizas una convención de 500 personas, necesitas lo contrario.
 
 ### Cómo evitarlo
 Describe tu evento al mago antes de cerrar presupuesto: número de invitados, tipo de espacio, horario y qué momentos quieres cubrir. Un buen profesional te asesorará sobre el formato ideal.
