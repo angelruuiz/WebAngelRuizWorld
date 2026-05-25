@@ -39,7 +39,7 @@ export default function ParticularesSelectorPage() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-r from-slate-950/80 via-transparent to-transparent md:bg-gradient-to-b md:from-transparent md:to-slate-950/90" />
                         
-                        <div className="relative z-10 text-center p-6 mt-16 md:mt-0">
+                        <div className="relative z-10 text-center p-6 mt-32 md:mt-0">
                             <motion.div 
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}
@@ -74,7 +74,7 @@ export default function ParticularesSelectorPage() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-l from-slate-950/80 via-transparent to-transparent md:bg-gradient-to-b md:from-transparent md:to-slate-950/90" />
 
-                        <div className="relative z-10 text-center p-6 mt-16 md:mt-0">
+                        <div className="relative z-10 text-center p-6 mt-32 md:mt-0">
                             <motion.div 
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={{ opacity: 1, y: 0 }}

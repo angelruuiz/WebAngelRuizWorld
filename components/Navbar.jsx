@@ -141,14 +141,10 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                                     setIsMenuOpen(false);
                                     onOpenContact();
                                 }}
-                                className="w-full py-5 bg-amber-500 text-slate-950 font-bold rounded-2xl uppercase tracking-widest text-sm shadow-lg shadow-amber-500/30"
+                                className="w-full py-5 bg-amber-500 text-slate-950 font-bold rounded-2xl uppercase tracking-widest text-sm shadow-lg shadow-amber-500/30 text-center flex justify-center items-center"
                             >
                                 Reservar Ahora
                             </button>
-
-                            <a href="tel:+34648055636" className="mt-6 text-xs text-slate-500 hover:text-amber-400 transition-colors">
-                                +34 648 05 56 36
-                            </a>
                         </motion.div>
                     </motion.div>
                 )}
