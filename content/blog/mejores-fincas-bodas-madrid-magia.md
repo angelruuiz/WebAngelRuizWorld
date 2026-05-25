@@ -15,11 +15,11 @@ Cada vez más parejas en la capital buscan ir un paso más allá del clásico ba
 
 El cóctel de bienvenida suele durar entre una hora y media y dos horas. Es el primer contacto de tus invitados con la celebración. Mientras los novios terminan la sesión de fotos, los invitados (muchos de los cuales no se conocen entre sí) se mezclan. 
 
-Contratar a un **mago para bodas en Madrid** para este preciso momento es la mejor estrategia para romper el hielo. Un ilusionista profesional que se mueva de grupo en grupo haciendo magia de cerca (close-up) genera pequeñas explosiones de asombro y risas que conectan a las familias y amigos de manera instantánea.
+Contratar a un **[mago para bodas en Madrid](/particulares/bodas)** para este preciso momento es la mejor estrategia para romper el hielo. Un ilusionista profesional que se mueva de grupo en grupo haciendo magia de cerca (close-up) genera pequeñas explosiones de asombro y risas que conectan a las familias y amigos de manera instantánea.
 
 ### Fincas en Madrid: Adaptabilidad del Espectáculo
 
-La ventaja de un espectáculo de magia de cerca es que no requiere escenario, luces especiales ni sonido. Se adapta perfectamente a cualquier entorno. A lo largo de mi carrera como **mago para bodas en Madrid**, he actuado en decenas de espacios icónicos, desde las elegantes fincas de la Sierra de Guadarrama y El Escorial, hasta hoteles de lujo en pleno centro del Paseo de la Castellana.
+La ventaja de un espectáculo de magia de cerca es que no requiere escenario, luces especiales ni sonido. Se adapta perfectamente a cualquier entorno. A lo largo de mi carrera como **[mago para bodas en Madrid](/particulares/bodas)**, he actuado en decenas de espacios icónicos, desde las elegantes fincas de la Sierra de Guadarrama y El Escorial, hasta hoteles de lujo en pleno centro del Paseo de la Castellana.
 
 Ya sea en un jardín al aire libre en primavera o en un salón acristalado de Torrelodones o Majadahonda en pleno invierno, la magia ocurre a centímetros de los ojos de los invitados.
 

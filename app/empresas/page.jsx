@@ -194,25 +194,31 @@ export default function EmpresasPage() {
                             </p>
                         </div>
                         
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <div className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all">
-                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3">IFEMA y Ferias</h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <Link href="/empresas/mago-ferias-congresos-madrid" className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all group block">
+                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3 group-hover:underline">IFEMA y Ferias</h3>
                                 <p className="text-slate-300 text-sm leading-relaxed">
                                     Convierte tu stand en un imán de clientes. Magia corporativa diseñada para atraer atención, transmitir el mensaje de marca y captar leads en los grandes congresos de Madrid.
                                 </p>
-                            </div>
-                            <div className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all">
-                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3">Hoteles del Centro</h3>
+                            </Link>
+                            <Link href="/empresas/mago-conferenciante-madrid" className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all group block">
+                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3 group-hover:underline">Mago Conferenciante</h3>
                                 <p className="text-slate-300 text-sm leading-relaxed">
-                                    Elegancia y protocolo para presentaciones y cenas de gala en el corazón financiero (Paseo de la Castellana). Magia de cóctel que dinamiza el networking entre directivos.
+                                    Una experiencia transformadora para convenciones. Fusión de keynote profesional e ilusionismo para anclar mensajes sobre trabajo en equipo y liderazgo.
                                 </p>
-                            </div>
-                            <div className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all">
-                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3">Fincas y Periferia</h3>
+                            </Link>
+                            <Link href="/empresas/mago-team-building-madrid" className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all group block">
+                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3 group-hover:underline">Team Building</h3>
                                 <p className="text-slate-300 text-sm leading-relaxed">
-                                    Agilidad logística total en el eje A-6 (Pozuelo, Las Rozas) y fincas de la Sierra. Jornadas de Team Building donde el ilusionismo fomenta la cohesión de equipos.
+                                    Agilidad logística en fincas de la Sierra y Madrid. Jornadas de Team Building donde la magia fomenta la cohesión, comunicación y creatividad empresarial.
                                 </p>
-                            </div>
+                            </Link>
+                            <Link href="/empresas/mago-para-restaurantes-madrid" className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all group block">
+                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3 group-hover:underline">Cenas y Eventos VIP</h3>
+                                <p className="text-slate-300 text-sm leading-relaxed">
+                                    Elegancia y protocolo para presentaciones y cenas de gala corporativas. Magia de cerca que dinamiza el networking entre directivos en las mesas.
+                                </p>
+                            </Link>
                         </div>
                     </div>
 

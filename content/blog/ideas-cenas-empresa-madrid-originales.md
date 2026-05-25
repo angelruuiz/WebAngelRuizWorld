@@ -13,7 +13,7 @@ La oferta gastronómica y de ocio en Madrid es inmensa. Desde restaurantes de mo
 
 ### El Ingrediente Secreto: Magia Corporativa de Alta Gama
 
-Para elevar verdaderamente el nivel de un evento corporativo, necesitas un elemento disruptivo. Contratar a un **mago para empresas en Madrid** es la tendencia al alza entre las compañías que buscan impresionar y fidelizar a su talento. 
+Para elevar verdaderamente el nivel de un evento corporativo, necesitas un elemento disruptivo. Contratar a un **[mago para empresas en Madrid](/empresas)** es la tendencia al alza entre las compañías que buscan impresionar y fidelizar a su talento. 
 
 No hablamos del clásico espectáculo infantil, sino de **ilusionismo estratégico diseñado para adultos, directivos y perfiles profesionales**. Un ilusionista corporativo sabe cómo moverse por la sala, aportando sofisticación y momentos de asombro absoluto sin interrumpir el flujo de la cena.
 
@@ -28,6 +28,6 @@ Existen principalmente dos formatos que encajan a la perfección en la dinámica
 
 En Madrid, la competencia por el talento es feroz. Las empresas tecnológicas, consultoras y agencias buscan constantemente formas de mejorar el *employer branding*. Un evento memorable, donde la dirección demuestra que se preocupa por ofrecer entretenimiento de primer nivel, mejora significativamente el clima laboral.
 
-Como experto **mago para empresas en Madrid**, he ayudado a cientos de compañías —desde ágiles startups hasta firmas del IBEX 35— a convertir sus reuniones rutinarias en experiencias de las que se habla en los pasillos durante meses.
+Como experto **[mago para empresas en Madrid](/empresas)**, he ayudado a cientos de compañías —desde ágiles startups hasta firmas del IBEX 35— a convertir sus reuniones rutinarias en experiencias de las que se habla en los pasillos durante meses.
 
 Si este año tienes la responsabilidad de organizar la cena de tu departamento o convención anual, no te conformes con el menú habitual. Descubre el impacto de un auténtico [mago para empresas en Madrid](/empresas) y asegura el éxito rotundo de tu evento corporativo.

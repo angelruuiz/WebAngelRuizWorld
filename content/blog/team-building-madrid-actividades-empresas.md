@@ -13,7 +13,7 @@ Las jornadas de *Team Building* se han convertido en un estándar indispensable 
 
 ### Más allá del Entretenimiento: Magia como Herramienta Estratégica
 
-Cuando sugerimos incluir a un **mago para empresas en Madrid** en una jornada formativa o de integración, no estamos hablando simplemente de hacer un alto en el trabajo para ver un show. Estamos integrando el asombro como motor de reflexión.
+Cuando sugerimos incluir a un **[mago para empresas en Madrid](/empresas)** en una jornada formativa o de integración, no estamos hablando simplemente de hacer un alto en el trabajo para ver un show. Estamos integrando el asombro como motor de reflexión.
 
 La magia, por su propia naturaleza, desafía las reglas preestablecidas. Cuando un equipo presencia un efecto de mentalismo complejo, ocurren tres cosas a nivel cognitivo y social:
 

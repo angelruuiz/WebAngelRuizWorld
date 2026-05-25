@@ -37,6 +37,21 @@ export default function BlogIndex() {
             {
               "@type": "BreadcrumbList",
               "itemListElement": breadcrumbSchema.itemListElement
+            },
+            {
+              "@type": "Blog",
+              "@id": "https://angelruiz.world/blog/#blog",
+              "name": "Blog de Magia | Ángel Ruiz",
+              "description": "Explora nuestro blog de magia.",
+              "publisher": {
+                "@id": "https://angelruiz.world/#organization"
+              },
+              "blogPost": allPostsData.map(post => ({
+                "@type": "BlogPosting",
+                "headline": post.title,
+                "url": `https://angelruiz.world/blog/${post.slug}`,
+                "datePublished": post.date || "2026-01-01"
+              }))
             }
           ]
         }) }} 

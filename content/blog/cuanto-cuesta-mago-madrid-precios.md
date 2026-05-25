@@ -28,7 +28,7 @@ Un mago con **más de 10 años de experiencia**, como es mi caso, no solo vende 
 *   **Show de Escenario o Mentalismo:** Ideal para grupos grandes donde todos miran a la vez. Suele ser más costoso debido a la necesidad de equipo de audio, iluminación y una estructura de guion más compleja.
 
 #### 3. Tipo de Evento y Responsabilidad
-Contratar un **mago para bodas en Madrid** suele tener un coste superior a una fiesta infantil. ¿Por qué? Por el nivel de sofisticación, el vestuario, el protocolo y la presión de que no hay "segundas tomas" en el día más importante de tu vida. Lo mismo ocurre con los **eventos corporativos**, donde el mago representa la imagen de una marca.
+Contratar un **[mago para bodas en Madrid](/particulares/bodas)** suele tener un coste superior a una fiesta infantil. ¿Por qué? Por el nivel de sofisticación, el vestuario, el protocolo y la presión de que no hay "segundas tomas" en el día más importante de tu vida. Lo mismo ocurre con los **eventos corporativos**, donde el mago representa la imagen de una marca.
 
 ### Rangos de precios aproximados en Madrid (2026)
 
