@@ -392,3 +392,86 @@ body::after {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     mix-blend-mode: overlay;
 }
+
+/* ═══════════════════════════════════════════════════════════
+   MOBILE UX ENHANCEMENTS
+   ═══════════════════════════════════════════════════════════ */
+
+/* Bigger tap targets on mobile */
+@media (max-width: 768px) {
+    /* Remove noise texture on mobile for performance */
+    body::after {
+        display: none;
+    }
+
+    /* Ensure tap targets are minimum 44px */
+    a, button {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    /* Smooth momentum scrolling */
+    main, section {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Cards get tighter radius on mobile */
+    .liquid-glass-card {
+        border-radius: 1.5rem;
+    }
+
+    /* Active state feedback for touch */
+    a:active, button:active {
+        opacity: 0.85;
+        transform: scale(0.98);
+        transition: all 0.1s ease;
+    }
+
+    /* Prevent text selection on interactive elements */
+    button, a, summary {
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Full-width buttons on mobile */
+    .rounded-full {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Safe area insets for notched phones */
+    body {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    nav {
+        padding-top: env(safe-area-inset-top);
+    }
+
+    /* Smoother font rendering on mobile */
+    * {
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+}
+
+/* WhatsApp FAB animation */
+@keyframes fab-pulse {
+    0%, 100% { box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
+    50% { box-shadow: 0 4px 25px rgba(37, 211, 102, 0.5); }
+}
+
+.fab-whatsapp {
+    animation: fab-pulse 2.5s ease-in-out infinite;
+}
+
+/* Marquee animation for the homepage */
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+    animation: marquee 20s linear infinite;
+}

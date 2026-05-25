@@ -2,6 +2,7 @@ import { ArrowRight, Share2, WhatsApp } from './Icons';
 
 const Footer = ({ onOpenContact, isLight = false }) => {
     return (
+        <>
         <footer className={`mt-0 ${isLight ? 'border-t border-slate-200 bg-white/50 text-slate-800' : 'bg-[#020617] text-slate-200'} backdrop-blur-sm text-left relative z-10 font-[Inter]`}>
             <div className="w-full px-6 py-12 max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
@@ -52,28 +53,28 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="space-y-6 md:text-right text-left">
+                    <div className="space-y-6 text-center md:text-right">
                         <h4 className="text-xl font-bold tracking-widest text-amber-500 uppercase">CONTACTO:</h4>
-                        <div className={`flex flex-col md:items-end items-start gap-3 ${isLight ? 'text-slate-800' : 'text-slate-300'} text-base md:text-lg`}>
-                            <a href="tel:+34648055636" className="hover:text-amber-400 transition-colors">+34 648 05 56 36</a>
-                            <a href="mailto:angellruuiz@gmail.com" className="hover:text-amber-400 transition-colors">angellruuiz@gmail.com</a>
-                            <a href="https://instagram.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Instagram</a>
-                            <a href="https://tiktok.com/@angellruuiz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">TikTok</a>
-                            <a href="https://youtube.com/@angellruuiz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">YouTube</a>
-                            <a href="https://x.com/angellruuizz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">X</a>
-                            <a href="https://facebook.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Facebook</a>
-                            <div className="flex flex-wrap md:justify-end gap-x-4 gap-y-2 mt-2 text-[10px] opacity-80">
-                                <a href="/particulares/fiestas-cumpleanos-madrid" className="hover:text-amber-400 transition-colors font-bold text-amber-300">Mago para Cumpleaños Madrid</a>
-                                <a href="/mago-sierra-madrid" className="hover:text-amber-400 transition-colors font-bold text-amber-500">Mago Sierra de Madrid</a>
-                                <a href="/mago-torrelodones" className="hover:text-amber-400 transition-colors font-bold text-amber-200">Mago en Torrelodones</a>
-                                <a href="/mago-galapagar" className="hover:text-amber-400 transition-colors font-bold">Mago en Galapagar</a>
-                                <a href="/mago-las-rozas" className="hover:text-amber-400 transition-colors font-bold">Mago en Las Rozas</a>
-                                <a href="/mago-las-matas" className="hover:text-amber-400 transition-colors font-bold">Mago en Las Matas</a>
-                                <a href="/mago-majadahonda" className="hover:text-amber-400 transition-colors font-bold">Mago en Majadahonda</a>
-                                <a href="/mago-pozuelo" className="hover:text-amber-400 transition-colors font-bold">Mago en Pozuelo</a>
-                                <a href="/mago-boadilla" className="hover:text-amber-400 transition-colors font-bold">Mago en Boadilla</a>
-                                <a href="/mago-villalba" className="hover:text-amber-400 transition-colors font-bold">Mago en Villalba</a>
-                                <a href="/mago-el-escorial" className="hover:text-amber-400 transition-colors font-bold">Mago en El Escorial</a>
+                        <div className={`flex flex-col items-center md:items-end gap-3 ${isLight ? 'text-slate-800' : 'text-slate-300'} text-base md:text-lg`}>
+                            <a href="tel:+34648055636" className="py-2 md:py-0 hover:text-amber-400 transition-colors">+34 648 05 56 36</a>
+                            <a href="mailto:angellruuiz@gmail.com" className="py-2 md:py-0 hover:text-amber-400 transition-colors">angellruuiz@gmail.com</a>
+                            <a href="https://instagram.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="py-2 md:py-0 hover:text-amber-400 transition-colors">Instagram</a>
+                            <a href="https://tiktok.com/@angellruuiz" target="_blank" rel="noopener noreferrer" className="py-2 md:py-0 hover:text-amber-400 transition-colors">TikTok</a>
+                            <a href="https://youtube.com/@angellruuiz" target="_blank" rel="noopener noreferrer" className="py-2 md:py-0 hover:text-amber-400 transition-colors">YouTube</a>
+                            <a href="https://x.com/angellruuizz" target="_blank" rel="noopener noreferrer" className="py-2 md:py-0 hover:text-amber-400 transition-colors">X</a>
+                            <a href="https://facebook.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="py-2 md:py-0 hover:text-amber-400 transition-colors">Facebook</a>
+                            <div className="flex flex-wrap justify-center md:justify-end gap-2 md:gap-x-4 md:gap-y-2 mt-2 text-xs md:text-[10px] opacity-80">
+                                <a href="/particulares/fiestas-cumpleanos-madrid" className="px-3 py-1.5 bg-white/5 rounded-full md:px-0 md:py-0 md:bg-transparent md:rounded-none hover:text-amber-400 transition-colors font-bold text-amber-300">Mago para Cumpleaños Madrid</a>
+                                <a href="/mago-sierra-madrid" className="px-3 py-1.5 bg-white/5 rounded-full md:px-0 md:py-0 md:bg-transparent md:rounded-none hover:text-amber-400 transition-colors font-bold text-amber-500">Mago Sierra de Madrid</a>
+                                <a href="/mago-torrelodones" className="px-3 py-1.5 bg-white/5 rounded-full md:px-0 md:py-0 md:bg-transparent md:rounded-none hover:text-amber-400 transition-colors font-bold text-amber-200">Mago en Torrelodones</a>
+                                <a href="/mago-galapagar" className="px-3 py-1.5 bg-white/5 rounded-full md:px-0 md:py-0 md:bg-transparent md:rounded-none hover:text-amber-400 transition-colors font-bold">Mago en Galapagar</a>
+                                <a href="/mago-las-rozas" className="px-3 py-1.5 bg-white/5 rounded-full md:px-0 md:py-0 md:bg-transparent md:rounded-none hover:text-amber-400 transition-colors font-bold">Mago en Las Rozas</a>
+                                <a href="/mago-las-matas" className="px-3 py-1.5 bg-white/5 rounded-full md:px-0 md:py-0 md:bg-transparent md:rounded-none hover:text-amber-400 transition-colors font-bold">Mago en Las Matas</a>
+                                <a href="/mago-majadahonda" className="px-3 py-1.5 bg-white/5 rounded-full md:px-0 md:py-0 md:bg-transparent md:rounded-none hover:text-amber-400 transition-colors font-bold">Mago en Majadahonda</a>
+                                <a href="/mago-pozuelo" className="px-3 py-1.5 bg-white/5 rounded-full md:px-0 md:py-0 md:bg-transparent md:rounded-none hover:text-amber-400 transition-colors font-bold">Mago en Pozuelo</a>
+                                <a href="/mago-boadilla" className="px-3 py-1.5 bg-white/5 rounded-full md:px-0 md:py-0 md:bg-transparent md:rounded-none hover:text-amber-400 transition-colors font-bold">Mago en Boadilla</a>
+                                <a href="/mago-villalba" className="px-3 py-1.5 bg-white/5 rounded-full md:px-0 md:py-0 md:bg-transparent md:rounded-none hover:text-amber-400 transition-colors font-bold">Mago en Villalba</a>
+                                <a href="/mago-el-escorial" className="px-3 py-1.5 bg-white/5 rounded-full md:px-0 md:py-0 md:bg-transparent md:rounded-none hover:text-amber-400 transition-colors font-bold">Mago en El Escorial</a>
                             </div>
                         </div>
                         <div className="pt-8 text-sm text-slate-500"><p>© 2026 Ángel Ruiz | Mago e Ilusionista. Todos los derechos reservados.</p></div>
@@ -81,6 +82,18 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                 </div>
             </div>
         </footer>
+
+            {/* WhatsApp Floating Action Button - Mobile only */}
+            <a
+                href="https://wa.me/34648055636"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="fixed bottom-6 right-6 z-[100] md:hidden bg-green-500 w-14 h-14 rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 hover:bg-green-600 transition-colors"
+                aria-label="Contactar por WhatsApp"
+            >
+                <WhatsApp className="w-7 h-7 text-white" />
+            </a>
+        </>
     );
 };
 

@@ -104,9 +104,9 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: '100%' }}
                         transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                        className="fixed inset-0 bg-slate-950 z-40 flex flex-col pt-32 pb-12 px-8 md:hidden"
+                        className="fixed inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 z-40 flex flex-col pt-32 pb-12 px-8 md:hidden"
                     >
-                        <div className="flex flex-col gap-8">
+                        <div className="flex flex-col gap-6">
                             {navLinks.map((link, i) => (
                                 <motion.div
                                     key={link.name}
@@ -117,8 +117,9 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                                     <Link 
                                         href={link.href}
                                         onClick={(e) => handleMagicTransition(e, link.href)}
-                                        className={`text-4xl font-[Cinzel] font-bold ${pathname === link.href ? 'text-amber-500' : 'text-slate-100 hover:text-amber-400'}`}
+                                        className={`flex items-center gap-3 text-3xl font-[Cinzel] font-bold py-1 ${pathname === link.href ? 'text-amber-500 border-l-2 border-amber-500 pl-4' : 'text-slate-100 hover:text-amber-400 pl-[calc(1rem+2px)]'}`}
                                     >
+                                        {pathname === link.href && <span className="w-2 h-2 rounded-full bg-amber-500 shrink-0" />}
                                         {link.name}
                                     </Link>
                                 </motion.div>
@@ -129,17 +130,25 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.6 }}
-                            className="mt-auto"
+                            className="mt-auto flex flex-col items-center"
                         >
+                            <div className="w-full h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent mb-8" />
+
+                            <p className="text-[10px] uppercase tracking-widest text-amber-500/60 mb-4">La magia empieza con una llamada</p>
+
                             <button 
                                 onClick={() => {
                                     setIsMenuOpen(false);
                                     onOpenContact();
                                 }}
-                                className="w-full py-5 bg-amber-500 text-slate-950 font-bold rounded-2xl uppercase tracking-widest text-sm shadow-xl shadow-amber-500/20"
+                                className="w-full py-5 bg-amber-500 text-slate-950 font-bold rounded-2xl uppercase tracking-widest text-sm shadow-lg shadow-amber-500/30"
                             >
                                 Reservar Ahora
                             </button>
+
+                            <a href="tel:+34648055636" className="mt-6 text-xs text-slate-500 hover:text-amber-400 transition-colors">
+                                +34 648 05 56 36
+                            </a>
                         </motion.div>
                     </motion.div>
                 )}
