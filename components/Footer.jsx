@@ -63,6 +63,7 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                             <a href="https://x.com/angellruuizz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">X</a>
                             <a href="https://facebook.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors">Facebook</a>
                             <div className="flex flex-wrap md:justify-end gap-x-4 gap-y-2 mt-2 text-[10px] opacity-80">
+                                <a href="/particulares/fiestas-cumpleanos-madrid" className="hover:text-amber-400 transition-colors font-bold text-amber-300">Mago para Cumpleaños Madrid</a>
                                 <a href="/mago-sierra-madrid" className="hover:text-amber-400 transition-colors font-bold text-amber-500">Mago Sierra de Madrid</a>
                                 <a href="/mago-torrelodones" className="hover:text-amber-400 transition-colors font-bold text-amber-200">Mago en Torrelodones</a>
                                 <a href="/mago-galapagar" className="hover:text-amber-400 transition-colors font-bold">Mago en Galapagar</a>

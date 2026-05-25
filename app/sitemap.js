@@ -52,6 +52,12 @@ export default function sitemap() {
       priority: 0.9,
     },
     {
+      url: 'https://angelruiz.world/particulares/fiestas-cumpleanos-madrid',
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
+    {
       url: 'https://angelruiz.world/empresas',
       lastModified: lastMod,
       changeFrequency: 'monthly',
