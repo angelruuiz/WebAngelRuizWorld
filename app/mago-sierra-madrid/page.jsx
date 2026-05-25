@@ -85,6 +85,17 @@ export default function MagoSierraMadridHub() {
                             "@id": "https://angelruiz.world/mago-sierra-madrid/#service"
                         },
                         {
+                            "@type": "FAQPage",
+                            "mainEntity": faqs.map(f => ({
+                                "@type": "Question",
+                                "name": f.q,
+                                "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": f.a
+                                }
+                            }))
+                        },
+                        {
                             "@type": "BreadcrumbList",
                             "itemListElement": breadcrumbSchema.itemListElement
                         }
