@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import NavFooterClient from '@/components/NavFooterClient';
 import ContactButtonClient from '@/components/ContactButtonClient';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
