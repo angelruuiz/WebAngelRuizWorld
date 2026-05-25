@@ -9,8 +9,11 @@ import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import BusinessSchema from '@/components/BusinessSchema';
 
-const MagicalCarousel = ({ locationName }) => {
-    const images = ["/images/foto-profesional-mirando-carta.webp", "/images/foto-spring-cartas.webp"];
+const MagicalCarousel = ({ locationName, locationImages }) => {
+    const images = locationImages && locationImages.length > 0 
+        ? locationImages 
+        : ["/images/foto-profesional-mirando-carta.webp", "/images/foto-spring-cartas.webp"];
+        
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
@@ -169,7 +172,7 @@ export default function LocationPageTemplate({ location, allLocations }) {
                             <p dangerouslySetInnerHTML={{ __html: location.text_main_2 || "" }} />
                         </div>
                         <div className="relative h-[300px] md:h-[450px] rounded-2xl overflow-hidden border border-slate-800 shadow-xl">
-                            <MagicalCarousel locationName={location.name} />
+                            <MagicalCarousel locationName={location.name} locationImages={location.images} />
                         </div>
                     </section>
 
