@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function ValoracionesPage() {
     const reviewsData = [
-        { text: "Llevamos a Ángel a la cena de Movistar Estudiantes y fue un acierto. No hizo los típicos trucos, sino que conectó con todos. Hubo un momento en que adivinó el PIN del móvil de uno de los directivos. Se adaptó genial al ambiente de la empresa. Muy profesional.", author: "Movistar Estudiantes" },
+        { text: "Contamos con Ángel para el campamento de verano de Movistar Estudiantes y fue un acierto absoluto. Se encargó de impartir talleres prácticos para enseñar magia a los alumnos y de realizar varios shows. Conectó de inmediato con los chavales, manteniéndolos súper concentrados y divirtiéndose un montón. Gran profesional.", author: "Movistar Estudiantes" },
         { text: "Buscábamos a alguien para el cóctel de nuestra boda y Ángel fue la mejor elección. Se mezclaba entre los grupos y la gente alucinaba. A mi suegra le hizo desaparecer un anillo que acabó dentro de una nuez cerrada. Aún hoy nuestros amigos nos preguntan por él.", author: "Sofía y David" },
         { text: "Vino a la comunión de Marcos. Yo pensaba que los niños iban a estar entretenidos, pero es que los adultos estábamos igual de flipados. Hizo un juego en nuestra mesa con unas cartas que firmamos y nos dejó sin palabras. Un mago que vale tanto para niños como para mayores.", author: "Familia de Marcos" },
         { text: "Estuvo en la inauguración de nuestra peña en Torrelodones. Nos dejó a todos locos. Cogió una baraja que teníamos nosotros, la mezcló un socio y sacó los cuatro ases de la nada. Es un lujo tener este nivel de magia en el pueblo.", author: "Peña 'La Escombrera' (Torrelodones)" },

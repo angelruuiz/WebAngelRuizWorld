@@ -74,7 +74,7 @@ const slides = [
         label: 'Referencias',
         title: 'Lo que Dicen',
         reviews: [
-            { text: '«Contratamos a Ángel Ruiz para dinamizar un congreso corporativo de Movistar Estudiantes y la experiencia fue sencillamente transformadora. Su capacidad para integrar mensajes de equipo en sus efectos de magia de cerca es única.»', author: 'Movistar Estudiantes', company: 'Evento Corporativo' },
+            { text: '«Contamos con Ángel para el campamento de verano de Movistar Estudiantes. Se encargó de impartir talleres prácticos para enseñar magia y de realizar varios shows para los alumnos. Fue un éxito rotundo: conectó genial con ellos y los mantuvo fascinados de principio a fin.»', author: 'Movistar Estudiantes', company: 'Campamento de Verano' },
             { text: '«Como vecino de Torrelodones, ver a Ángel actuar en la inauguración de nuestra peña fue un orgullo. Su show de magia de salón es potente, dinámico y deja a todo el mundo con la boca abierta. Recomendado al 100%.»', author: 'Peña La Escombrera', company: 'Torrelodones' }
         ]
     },
