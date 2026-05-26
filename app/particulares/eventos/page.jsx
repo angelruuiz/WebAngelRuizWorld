@@ -41,7 +41,7 @@ export default function EventosDetailPage() {
     const faqSchema = {
         "mainEntity": [
             { "@type": "Question", "name": "¿La magia es adecuada para todas las edades?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, Angel adapta su repertorio según el público. Para eventos familiares, el show combina efectos visuales impactantes que fascinan tanto a niños como a adultos." } },
-            { "@type": "Question", "name": "¿Qué espacio se necesita para la actuación?", "acceptedAnswer": { "@type": "Answer", "text": "La magia de cerca no requiere escenario. Se puede realizar de pie durante un cóctel o pasando por las mesas, adaptándose totalmente a la comodidad de su salón o jardín." } },
+            { "@type": "Question", "name": "¿Qué espacio se necesita para la actuación?", "acceptedAnswer": { "@type": "Answer", "text": "La magia de cerca no requiere escenario. Se puede realizar de pie durante un cóctel o pasando por las mesas, adaptándose totalmente a la comodidad de tu salón o jardín." } },
             { "@type": "Question", "name": "¿Cuánto dura el espectáculo?", "acceptedAnswer": { "@type": "Answer", "text": "Normalmente la intervención dura entre 60 y 90 minutos, dependiendo del número de invitados y el tipo de evento, para asegurar que todos vivan la experiencia de cerca." } }
         ]
     };

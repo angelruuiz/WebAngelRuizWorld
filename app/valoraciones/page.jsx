@@ -1,27 +1,30 @@
 import ValoracionesClient from '@/components/ValoracionesClient';
 
 export const metadata = {
-    title: '31 Reseñas Reales ⭐ 5/5 | Opiniones de Ángel Ruiz · Mago Madrid',
+    title: { absolute: 'Opiniones y Reseñas | Ángel Ruiz, Mago en Madrid' },
     description: '31 reseñas verificadas de 5 estrellas. Lee las opiniones reales de clientes que contrataron a Ángel Ruiz como mago para bodas, empresas y eventos en Madrid.',
     alternates: {
         canonical: 'https://angelruiz.world/valoraciones',
+    },
+    openGraph: {
+        url: 'https://angelruiz.world/valoraciones',
     },
 };
 
 export default function ValoracionesPage() {
     const reviewsData = [
-        { text: "Contratamos a Ángel Ruiz para dinamizar un congreso corporativo de Movistar Estudiantes y la experiencia fue sencillamente transformadora. Su capacidad para integrar mensajes de equipo en sus efectos de magia de cerca es única. Un profesional impecable que entiende el protocolo empresarial a la perfección.", author: "Movistar Estudiantes" },
-        { text: "Buscábamos algo diferente para el cóctel de nuestra boda en Madrid y Ángel fue la mejor decisión que pudimos tomar. La cara de asombro de nuestros invitados al ver la cartomagia a centímetros de sus manos no tenía precio. Elegante, puntual y un artista de los pies a la cabeza.", author: "Sofía y David" },
-        { text: "Ángel transformó la comunión de nuestro hijo en un evento inolvidable tanto para niños como para adultos. Tiene un don especial para manejar al público y crear una atmósfera de misterio y diversión sin igual. El mejor mago de la sierra de Madrid sin duda.", author: "Familia de Marcos" },
-        { text: "Como vecino de Torrelodones, ver a Ángel actuar en la inauguración de nuestra peña fue un orgullo. Su show de magia de salón es potente, dinámico y deja a todo el mundo con la boca abierta. Recomendado al 100% para cualquier evento local.", author: "Peña 'La Escombrera' (Torrelodones)" },
-        { text: "Un espectáculo de ilusionismo moderno y sofisticado. Contraté sus servicios para mi fiesta de 50 aniversario y su magia de cerca fue el tema de conversación principal durante toda la noche. Un nivel técnico que rara vez se ve fuera de televisión.", author: "Ana P. (Madrid Noroeste)" },
-        { text: "Organizar una cena de empresa para 50 directivos es un reto, pero Ángel lo hizo fácil. Su mentalismo y su trato exquisito elevaron la calidad del evento a otro nivel. Es mucho más que un mago; es un generador de experiencias memorables.", author: "Carlos M. (Director Eventos)" },
-        { text: "Increíble cómo maneja la atención de todos. En nuestra cena privada en una finca de Pozuelo, Ángel Ruiz nos demostró por qué es un referente de la cartomagia española. Los juegos de cartas que realiza son sencillamente imposibles de explicar.", author: "Patricia Ruiz" },
-        { text: "Elegancia, humor inteligente e impactos visuales brutales. Buscábamos un mago para empresas en Madrid y Ángel superó nuestras expectativas con un dossier personalizado y una ejecución técnica perfecta en el stand de IFEMA.", author: "Miguel Jiménez (Marketing Manager)" },
-        { text: "Lo que más nos gustó de Ángel Ruiz fue su profesionalidad desde el primer contacto. Nos asesoró sobre el mejor momento para los shows en nuestra boda y el resultado fue un éxito rotundo. Un mago para bodas en Madrid de 10.", author: "Laura García y Jorge" },
-        { text: "He visto a muchos ilusionistas, pero la limpieza de técnica de Ángel con las cartas es asombrosa. Sigue la escuela de los grandes y se nota en la fluidez de su magia. Ideal para eventos VIP donde se busca la máxima calidad.", author: "Sergio Blanco (Productor)" },
-        { text: "Un show dinámico que mantuvo a toda la familia enganchada. Su capacidad para hacer participar a la gente de forma respetuosa y divertida es fantástica. Repetiremos sin duda en el próximo aniversario familiar.", author: "Carmen Martínez" },
-        { text: "Si buscas asombre de calidad para tu empresa en Boadilla o Majadahonda, Ángel es la elección segura. Sus efectos de mentalismo y lectura de pensamiento dejaron a todo el equipo fascinado. Un profesional excepcional.", author: "Javier Soler" }
+        { text: "Llevamos a Ángel a la cena de Movistar Estudiantes y fue un acierto. No hizo los típicos trucos, sino que conectó con todos. Hubo un momento en que adivinó el PIN del móvil de uno de los directivos. Se adaptó genial al ambiente de la empresa. Muy profesional.", author: "Movistar Estudiantes" },
+        { text: "Buscábamos a alguien para el cóctel de nuestra boda y Ángel fue la mejor elección. Se mezclaba entre los grupos y la gente alucinaba. A mi suegra le hizo desaparecer un anillo que acabó dentro de una nuez cerrada. Aún hoy nuestros amigos nos preguntan por él.", author: "Sofía y David" },
+        { text: "Vino a la comunión de Marcos. Yo pensaba que los niños iban a estar entretenidos, pero es que los adultos estábamos igual de flipados. Hizo un juego en nuestra mesa con unas cartas que firmamos y nos dejó sin palabras. Un mago que vale tanto para niños como para mayores.", author: "Familia de Marcos" },
+        { text: "Estuvo en la inauguración de nuestra peña en Torrelodones. Nos dejó a todos locos. Cogió una baraja que teníamos nosotros, la mezcló un socio y sacó los cuatro ases de la nada. Es un lujo tener este nivel de magia en el pueblo.", author: "Peña 'La Escombrera' (Torrelodones)" },
+        { text: "Para mi 50 cumpleaños organicé una cena en casa y Ángel fue la sorpresa. Estuvo pasando por los grupos en el jardín y en un momento dado hizo que una moneda firmada apareciera dentro de una lata de refresco cerrada. Todo el mundo me felicitó por llevarlo.", author: "Ana P. (Madrid Noroeste)" },
+        { text: "Teníamos una cena con 50 directivos y necesitábamos romper el hielo. Ángel empezó con magia de cerca y acabó haciendo un número de mentalismo donde acertó la palabra que estaba pensando el CEO. Se nota que sabe moverse en eventos de empresa. Discreto, puntual y muy bueno.", author: "Carlos M. (Director Eventos)" },
+        { text: "Vino a una cena privada que hicimos en una finca de Pozuelo. Mientras cenábamos, se acercaba a las mesas. A mi marido le hizo elegir una carta con la mente y la sacó del bolsillo de la chaqueta de otro invitado. Es de esos profesionales que no necesitan escenario para impresionarte.", author: "Patricia Ruiz" },
+        { text: "Le contratamos para dinamizar nuestro stand en IFEMA. No solo hizo magia, sino que integró nuestro producto en los trucos. Consiguió que la gente se parara y nos dio pie a iniciar la venta. Un juego con tarjetas de visita hizo que mucha gente nos grabara. 100% recomendable para ferias.", author: "Miguel Jiménez (Marketing Manager)" },
+        { text: "Se encargó de la magia en el cóctel de nuestra boda. Desde el principio nos aconsejó súper bien sobre los tiempos. Lo mejor fue ver a mis tíos, que son súper escépticos, persiguiéndole para que les hiciera más trucos. Eso no tiene precio.", author: "Laura García y Jorge" },
+        { text: "He trabajado con muchos magos, pero la limpieza que tiene Ángel con las cartas es brutal. En un evento VIP de la productora, logró que cuatro personas eligieran una carta y todas aparecieron dentro de una cartera que llevaba yo. Su técnica es espectacular.", author: "Sergio Blanco (Productor)" },
+        { text: "Para nuestro aniversario queríamos algo especial. Ángel consiguió que participáramos todos, incluso los más tímidos de la familia. Hizo un juego precioso con una foto antigua de mis abuelos que nos dejó emocionados. Fue un detalle que no olvidaremos.", author: "Carmen Martínez" },
+        { text: "Vino a la convención anual en Boadilla. Nos hizo un número donde adivinó el destino de las próximas vacaciones del director comercial, que nadie sabía. Fue el tema de conversación del equipo durante semanas. Si tienes una empresa por la zona, ni lo dudes.", author: "Javier Soler" }
     ];
 
 

@@ -11,6 +11,7 @@ export const metadata = {
         canonical: 'https://angelruiz.world/particulares/bodas',
     },
     openGraph: {
+        url: 'https://angelruiz.world/particulares/bodas',
         title: 'Mago para Bodas en Madrid | Ángel Ruiz | Mago e Ilusionista',
         description: 'La magia perfecta para tu cóctel de boda. Conecta a tus invitados y crea recuerdos inolvidables.',
         images: [{ url: '/images/foto-bio.webp' }],
@@ -42,7 +43,12 @@ export default function BodasDetailPage() {
         "mainEntity": [
             { "@type": "Question", "name": "¿Cuál es el mejor momento para la magia en una boda?", "acceptedAnswer": { "@type": "Answer", "text": "El cóctel de bienvenida es el momento estrella para la magia de cerca, ya que ayuda a romper el hielo entre los invitados. También es muy efectiva durante el banquete para amenizar las esperas entre platos." } },
             { "@type": "Question", "name": "¿Qué tipo de magia se realiza?", "acceptedAnswer": { "@type": "Answer", "text": "Me especializo en magia de cerca (Close-up) y magia itinerante. Son efectos impactantes realizados con cartas, monedas y objetos de los invitados, a escasos centímetros de sus ojos." } },
-            { "@type": "Question", "name": "¿Te desplazas fuera de Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, cubro eventos en toda España, aunque mi actividad principal se centra en la Comunidad de Madrid y la zona noroeste (Torrelodones, Las Rozas, Majadahonda)." } }
+            { "@type": "Question", "name": "¿Te desplazas fuera de Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, cubro eventos en toda España, aunque mi actividad principal se centra en la Comunidad de Madrid y la zona noroeste (Torrelodones, Las Rozas, Majadahonda)." } },
+            { "@type": "Question", "name": "¿Con cuánta antelación debo contratar al mago para mi boda?", "acceptedAnswer": { "@type": "Answer", "text": "Lo ideal es reservar con al menos 3 a 6 meses de antelación, especialmente si tu boda es en temporada alta (mayo a octubre). Las fechas más demandadas se reservan rápido, así que cuanto antes me contactes, más fácil será garantizar disponibilidad para tu día." } },
+            { "@type": "Question", "name": "¿Cuánto tiempo dura la actuación en una boda?", "acceptedAnswer": { "@type": "Answer", "text": "La duración habitual es de 1 hora y media a 2 horas, aunque se adapta al formato de tu boda. Si solo quieres magia durante el cóctel, con 1 hora suele ser suficiente. Si prefieres cubrir también parte del banquete, ampliamos a 2 horas para que todos los invitados disfruten de la experiencia." } },
+            { "@type": "Question", "name": "¿Puedes coordinar con el wedding planner o el catering?", "acceptedAnswer": { "@type": "Answer", "text": "Por supuesto, es algo que hago siempre. Me pongo en contacto con tu wedding planner, con el maître o con el responsable de la finca para coordinar los tiempos de mi actuación. Así me aseguro de no interrumpir momentos clave como el corte de tarta, los discursos o el primer baile. La coordinación previa es parte esencial de mi servicio." } },
+            { "@type": "Question", "name": "¿Actúas en fincas fuera de Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, actúo en toda España. Mi zona principal de trabajo es la Comunidad de Madrid y la Sierra noroeste (Torrelodones, Las Rozas, El Escorial, Majadahonda), pero me desplazo sin problema a fincas en Toledo, Segovia, Ávila o cualquier otra provincia. El desplazamiento se gestiona de forma transparente para que no tengas que preocuparte por nada." } },
+            { "@type": "Question", "name": "¿La magia es apta para todos los invitados, incluidos niños?", "acceptedAnswer": { "@type": "Answer", "text": "Totalmente. Mi magia de cerca es visual, participativa y apta para todas las edades. Los niños disfrutan tanto como los adultos, y de hecho suelen ser los más expresivos cuando ven un efecto imposible. No utilizo nada que pueda resultar incómodo o inapropiado: es magia elegante, cercana y pensada para que todo el mundo se lleve un recuerdo especial de tu boda." } }
         ]
     };
 
@@ -120,10 +126,10 @@ export default function BodasDetailPage() {
 
                             <div className="space-y-6 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
                                 <p className="border-l-2 border-amber-500 pl-4 py-1">
-                                    <span className="text-amber-400 font-bold underline decoration-amber-500/30 text-lg">Haga que el día más importante de su vida sea también el más sorprendente para sus invitados.</span>
+                                    <span className="text-amber-400 font-bold underline decoration-amber-500/30 text-lg">Haz que el día más importante de tu vida sea también el más sorprendente para tus invitados.</span>
                                 </p>
                                 <p>
-                                    Ángel Ruiz, <strong className="text-amber-400">experto en magia en Madrid</strong> y referente de la <strong>magia en la Sierra</strong>, se especializa en crear momentos de asombro que actúan como el hilo conductor perfecto para su enlace. Una boda es una celebración de emociones, y no hay nada que conecte mejor a familias y amigos que la vivencia compartida de lo imposible.
+                                    Ángel Ruiz, <strong className="text-amber-400">experto en magia en Madrid</strong> y referente de la <strong>magia en la Sierra</strong>, se especializa en crear momentos de asombro que actúan como el hilo conductor perfecto para tu enlace. Una boda es una celebración de emociones, y no hay nada que conecte mejor a familias y amigos que la vivencia compartida de lo imposible.
                                 </p>
 
                                 <div className="grid grid-cols-2 gap-4 py-6 border-y border-white/5">
@@ -144,7 +150,7 @@ export default function BodasDetailPage() {
                                 </div>
 
                                 <p>
-                                    Como <strong className="text-amber-400">mago para bodas en Madrid</strong>, formado bajo la mentoría directa de <strong>Dani DaOrtiz</strong>, mi propuesta se aleja del espectáculo genérico para centrarse en la <u>exclusividad de la Cartomagia de autor</u>. Los milagros ocurren en las propias manos de sus invitados, respetando en todo momento el flujo del evento y aportando ese toque purista y sofisticado que requieren las fincas más exclusivas de la capital.
+                                    Como <strong className="text-amber-400">mago para bodas en Madrid</strong>, formado bajo la mentoría directa de <strong>Dani DaOrtiz</strong>, mi propuesta se aleja del espectáculo genérico para centrarse en la <u>exclusividad de la Cartomagia de autor</u>. Los milagros ocurren en las propias manos de tus invitados, respetando en todo momento el flujo del evento y aportando ese toque purista y sofisticado que requieren las fincas más exclusivas de la capital.
                                 </p>
 
                                 <p>
@@ -168,7 +174,7 @@ export default function BodasDetailPage() {
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
                             <div className="absolute bottom-6 left-6 right-6">
                                 <p className="text-[10px] text-amber-500 font-bold uppercase tracking-widest mb-1">Impacto Emocional</p>
-                                <p className="text-white font-[Cinzel] text-sm italic">"Un recuerdo que sus invitados guardarán para siempre"</p>
+                                <p className="text-white font-[Cinzel] text-sm italic">"Un recuerdo que tus invitados guardarán para siempre"</p>
                             </div>
                         </div>
                     </div>
@@ -270,6 +276,63 @@ export default function BodasDetailPage() {
                                     <li className="flex items-center gap-2"><span className="text-amber-500">✦</span> <strong>Desplazamiento:</strong> Incluido para Madrid Capital y Sierra.</li>
                                 </ul>
                             </div>
+                        </div>
+                    </div>
+
+                    {/* SECCIÓN: ¿Qué incluye el servicio? */}
+                    <div className="max-w-5xl mx-auto py-16 border-t border-white/5">
+                        <div className="text-center mb-12">
+                            <h2 className="text-2xl md:text-3xl font-[Cinzel] text-white uppercase tracking-widest">
+                                ¿Qué incluye el servicio de magia para bodas?
+                            </h2>
+                            <p className="text-slate-400 mt-4 max-w-2xl mx-auto text-sm">
+                                Contratar a un <strong className="text-white">ilusionista para bodas en Madrid</strong> es mucho más que tener a alguien haciendo trucos con cartas. Mi servicio está pensado para ofrecerte tranquilidad total y una experiencia cuidada hasta el último detalle.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all flex items-start gap-4">
+                                <span className="text-amber-500 text-xl mt-1">✦</span>
+                                <div>
+                                    <h3 className="text-white font-bold text-sm mb-2">Desplazamiento sin coste extra</h3>
+                                    <p className="text-slate-400 text-xs leading-relaxed">
+                                        El desplazamiento está incluido en toda la zona noroeste de Madrid: Torrelodones, Las Rozas, Majadahonda, Pozuelo, El Escorial, Boadilla y alrededores. Para fincas fuera de esta zona, te informo del suplemento de forma clara antes de confirmar.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all flex items-start gap-4">
+                                <span className="text-amber-500 text-xl mt-1">✦</span>
+                                <div>
+                                    <h3 className="text-white font-bold text-sm mb-2">Coordinación previa con tu wedding planner</h3>
+                                    <p className="text-slate-400 text-xs leading-relaxed">
+                                        Antes de tu boda, me pongo en contacto con tu wedding planner, el maître o directamente contigo para cuadrar los tiempos de actuación. Así la <strong>magia de cerca en bodas</strong> encaja de forma natural en el ritmo del evento, sin interrumpir momentos importantes como los discursos o el primer baile.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all flex items-start gap-4">
+                                <span className="text-amber-500 text-xl mt-1">✦</span>
+                                <div>
+                                    <h3 className="text-white font-bold text-sm mb-2">Adaptación total al protocolo del evento</h3>
+                                    <p className="text-slate-400 text-xs leading-relaxed">
+                                        Cada boda tiene su estilo. Me adapto a la etiqueta de tu celebración, ya sea una boda íntima en un jardín privado o un gran enlace en una finca con cientos de invitados. Mi presencia es discreta, elegante y siempre alineada con el tono que habéis elegido como pareja.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all flex items-start gap-4">
+                                <span className="text-amber-500 text-xl mt-1">✦</span>
+                                <div>
+                                    <h3 className="text-white font-bold text-sm mb-2">Seguro de responsabilidad civil incluido</h3>
+                                    <p className="text-slate-400 text-xs leading-relaxed">
+                                        Trabajo con seguro de responsabilidad civil, un requisito que muchas fincas y hoteles exigen y que te da la tranquilidad de saber que todo está cubierto. Es un detalle que diferencia a un <strong>mago boda cóctel Madrid</strong> profesional de uno amateur.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="mt-10 text-center">
+                            <p className="text-slate-300 text-sm max-w-2xl mx-auto leading-relaxed">
+                                En resumen, cuando me contratas como <strong className="text-amber-400">mago para bodas Madrid</strong>, no solo llevas magia a tu celebración: llevas la certeza de un servicio profesional, coordinado y sin sorpresas desagradables. Tu único trabajo es disfrutar del día.
+                            </p>
                         </div>
                     </div>
 

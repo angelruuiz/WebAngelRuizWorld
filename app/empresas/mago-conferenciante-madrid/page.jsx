@@ -98,7 +98,7 @@ export default function MagoConferenciantePage() {
                                         <div className="text-amber-500 font-bold">02</div>
                                         <div>
                                             <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Anclaje Emocional</h4>
-                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Vinculamos los valores de su marca a emociones positivas y de sorpresa, garantizando la retención del mensaje a largo plazo.</p>
+                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Vinculamos los valores de tu marca a emociones positivas y de sorpresa, garantizando la retención del mensaje a largo plazo.</p>
                                         </div>
                                     </div>
                                 </div>

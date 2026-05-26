@@ -20,7 +20,6 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'es_ES',
-    url: 'https://angelruiz.world',
     title: 'Angel Ruiz | Mago e Ilusionista',
     description: 'Ángel Ruiz, mago e ilusionista profesional especializado en magia de cerca exclusiva para eventos corporativos, bodas y celebraciones.',
     siteName: 'Ángel Ruiz | Mago e Ilusionista',

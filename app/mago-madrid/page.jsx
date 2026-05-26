@@ -71,7 +71,7 @@ export default function MagoMadridPage() {
                     { "@type": "Question", "name": "¿Cuánto cuesta contratar un mago en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "El precio varía según el tipo de evento. Para eventos privados y bodas en Madrid, el rango habitual de un mago profesional premium es de 400€ a 900€. Para eventos corporativos y ferias, se presupuesta por jornada desde 600€." } },
                     { "@type": "Question", "name": "¿Qué tipo de magia es mejor para un evento en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "La magia de cerca (close-up) es la más demandada en Madrid para cócteles, bodas y cenas de empresa. Se realiza a centímetros del espectador sin necesidad de escenario." } },
                     { "@type": "Question", "name": "¿Te desplazas a cualquier zona de Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Cubro Madrid capital, la zona noroeste (Las Rozas, Pozuelo, Majadahonda), la Sierra de Madrid y los centros de convenciones como IFEMA." } },
-                    { "@type": "Question", "name": "¿Puedo personalizar el espectáculo?", "acceptedAnswer": { "@type": "Answer", "text": "Cada actuación es diseñada a medida. Puedo integrar mensajes corporativos, adaptar el tono al protocolo de su empresa o crear momentos especiales para los novios en una boda." } }
+                    { "@type": "Question", "name": "¿Puedo personalizar el espectáculo?", "acceptedAnswer": { "@type": "Answer", "text": "Cada actuación es diseñada a medida. Puedo integrar mensajes corporativos, adaptar el tono al protocolo de tu empresa o crear momentos especiales para los novios en una boda." } }
                 ]
             }
         ]
@@ -226,7 +226,7 @@ export default function MagoMadridPage() {
                             </div>
                             <div className="bg-white/5 p-6 rounded-xl border border-white/10">
                                 <h3 className="text-amber-400 font-bold mb-3 text-sm">¿Puedo personalizar el espectáculo?</h3>
-                                <p className="text-slate-400 text-xs leading-relaxed text-justify">Cada actuación es diseñada a medida. Puedo integrar mensajes corporativos, adaptar el tono al protocolo de su empresa o crear momentos especiales para los novios en una boda.</p>
+                                <p className="text-slate-400 text-xs leading-relaxed text-justify">Cada actuación es diseñada a medida. Puedo integrar mensajes corporativos, adaptar el tono al protocolo de tu empresa o crear momentos especiales para los novios en una boda.</p>
                             </div>
                         </div>
                     </div>

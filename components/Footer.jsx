@@ -10,7 +10,7 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                         <h3 className={`text-3xl font-[Cinzel] ${isLight ? 'text-slate-950' : 'text-white'} font-bold`}>Ángel Ruiz | Mago e Ilusionista</h3>
                         <p className={`${isLight ? 'text-slate-700' : 'text-slate-300'} text-lg leading-relaxed max-w-lg`}>Ilusionista profesional para eventos corporativos,<br />celebraciones y bodas.</p>
                         <button onClick={onOpenContact} className="group relative px-8 py-3 bg-transparent overflow-hidden rounded-full border border-amber-500 text-amber-500 font-bold uppercase tracking-widest text-xs hover:text-slate-950 transition-colors mt-6">
-                            <span className="relative z-10 flex items-center justify-center gap-2">Reservar Experiencia <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></span>
+                            <span className="relative z-10 flex items-center justify-center gap-2">Contratar a Ángel Ruiz <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></span>
                             <div className="absolute inset-0 bg-amber-500 w-0 group-hover:w-full transition-all duration-300 ease-out z-0" />
                         </button>
 

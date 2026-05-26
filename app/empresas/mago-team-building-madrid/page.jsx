@@ -51,7 +51,7 @@ export default function TeamBuildingPage() {
                 "name": "¿Se puede hacer el team building de magia en nuestras oficinas de Madrid?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Sí, el taller de magia para empresas es totalmente adaptable. Me desplazo con todo el material necesario a las oficinas de su empresa en Madrid, o bien a hoteles, salas de reuniones o fincas donde estén realizando su evento corporativo."
+                    "text": "Sí, el taller de magia para empresas es totalmente adaptable. Me desplazo con todo el material necesario a las oficinas de tu empresa en Madrid, o bien a hoteles, salas de reuniones o fincas donde estén realizando tu evento corporativo."
                 }
             },
             {
@@ -136,7 +136,7 @@ export default function TeamBuildingPage() {
                                 </div>
 
                                 <p>
-                                    Ya sea en las propias oficinas de su empresa, en hoteles de <strong>Madrid Centro</strong> o en entornos naturales de la <strong>Sierra Noroeste</strong>, diseño sesiones de <Link href="/empresas" className="text-amber-400 hover:underline font-bold">talleres de magia corporativa</Link> donde sus empleados no solo ven magia de alto nivel, sino que <u>aprenden a ejecutar efectos seleccionados</u> trabajando en equipo. El <strong>team building magia</strong> rompe jerarquías y une a los departamentos.
+                                    Ya sea en las propias oficinas de tu empresa, en hoteles de <strong>Madrid Centro</strong> o en entornos naturales de la <strong>Sierra Noroeste</strong>, diseño sesiones de <Link href="/empresas" className="text-amber-400 hover:underline font-bold">talleres de magia corporativa</Link> donde tus empleados no solo ven magia de alto nivel, sino que <u>aprenden a ejecutar efectos seleccionados</u> trabajando en equipo. El <strong>team building magia</strong> rompe jerarquías y une a los departamentos.
                                 </p>
 
                                 <p className="bg-white/5 p-4 rounded-lg italic text-slate-300">

@@ -143,7 +143,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                                 }}
                                 className="w-full py-5 bg-amber-500 text-slate-950 font-bold rounded-2xl uppercase tracking-widest text-sm shadow-lg shadow-amber-500/30 text-center flex justify-center items-center"
                             >
-                                Reservar Ahora
+                                Contratar Ahora
                             </button>
                         </motion.div>
                     </motion.div>

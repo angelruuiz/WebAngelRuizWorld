@@ -77,7 +77,7 @@ export default function SobreMiClient({ children }) {
                         className="space-y-8 relative z-20"
                     >
                         <div className="inline-block border-b-2 border-amber-500 pb-2 mb-4">
-                            <h1 className="text-5xl md:text-7xl font-[Cinzel] font-bold text-white tracking-widest drop-shadow-lg uppercase">Sobre Mí</h1>
+                            <h1 className="text-2xl md:text-4xl lg:text-5xl font-[Cinzel] font-bold text-white tracking-wider drop-shadow-lg uppercase leading-tight">Ángel Ruiz, Mago Profesional en Madrid con +10 Años de Experiencia</h1>
                         </div>
                         
                         {children}

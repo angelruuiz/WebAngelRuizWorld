@@ -35,12 +35,12 @@ const slides = [
         type: 'services',
         label: 'Qué Ofrezco',
         title: 'Servicios de Élite',
-        subtitle: 'Cada actuación, diseñada a medida para su empresa',
+        subtitle: 'Cada actuación, diseñada a medida para tu empresa',
         items: [
             { id: '01', icon: '◈', title: 'Cóctel & Networking', desc: 'Magia de cerca que rompe barreras entre invitados. El asombro compartido crea conversaciones que el catering no puede.', tags: ['Close-Up', 'Networking'], featured: true },
-            { id: '02', icon: '◉', title: 'Ferias & Stands', desc: 'Parada de tráfico garantizada. Integramos su mensaje de marca en la rutina mágica. De transeúnte a lead en 90 segundos.', tags: ['IFEMA', 'Lead Gen'] },
+            { id: '02', icon: '◉', title: 'Ferias & Stands', desc: 'Parada de tráfico garantizada. Integramos tu mensaje de marca en la rutina mágica. De transeúnte a lead en 90 segundos.', tags: ['IFEMA', 'Lead Gen'] },
             { id: '03', icon: '◆', title: 'Cenas de Gala', desc: 'Magia entre platos en hoteles exclusivos y fincas. Entretenimiento no invasivo que eleva la calidad percibida del evento.', tags: ['Gala', 'VIP'] },
-            { id: '04', icon: '◎', title: 'Presentación de Producto', desc: 'Su lanzamiento aparece literalmente de la nada. Alto impacto visual, perfecto para prensa y redes sociales. Imposible e imborrable.', tags: ['Marketing', 'Prensa'] }
+            { id: '04', icon: '◎', title: 'Presentación de Producto', desc: 'Tu lanzamiento aparece literalmente de la nada. Alto impacto visual, perfecto para prensa y redes sociales. Imposible e imborrable.', tags: ['Marketing', 'Prensa'] }
         ]
     },
     {

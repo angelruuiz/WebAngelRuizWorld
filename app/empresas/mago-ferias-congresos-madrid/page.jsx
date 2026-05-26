@@ -91,7 +91,7 @@ export default function FeriasCongresosPage() {
                                         <div className="text-amber-500 font-bold">01</div>
                                         <div>
                                             <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Atracción de Tráfico</h4>
-                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Freno a los asistentes en el pasillo, generando grupos frente a su exposición.</p>
+                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Freno a los asistentes en el pasillo, generando grupos frente a tu exposición.</p>
                                         </div>
                                     </div>
                                     <div className="flex items-start gap-3">

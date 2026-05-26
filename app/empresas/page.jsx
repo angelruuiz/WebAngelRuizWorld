@@ -6,12 +6,13 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: 'Mago para Empresas en Madrid | Eventos Corporativos VIP',
+    title: { absolute: 'Mago para Empresas en Madrid | Ángel Ruiz' },
     description: 'Ángel Ruiz, ilusionista profesional para eventos corporativos en Madrid. Magia elegante para cenas de empresa, congresos e IFEMA. Solicita dossier premium.',
     alternates: {
         canonical: 'https://angelruiz.world/empresas',
     },
     openGraph: {
+        url: 'https://angelruiz.world/empresas',
         title: 'Magia para Empresas en Madrid | Ángel Ruiz | Mago e Ilusionista',
         description: 'Eleva el nivel de tu evento corporativo con magia de alto impacto. Especialista en cenas de empresa, congresos y team building.',
         images: [{ url: '/images/mago-empresas-madrid-angel-ruiz.svg' }],
@@ -41,8 +42,8 @@ export default function EmpresasPage() {
 
     const faqSchema = {
         "mainEntity": [
-            { "@type": "Question", "name": "¿Qué beneficios aporta la magia a un evento de empresa?", "acceptedAnswer": { "@type": "Answer", "text": "La magia corporativa rompe barreras de comunicación, fomenta el networking y facilita que el mensaje de su marca sea recordado de forma positiva y asombrosa." } },
-            { "@type": "Question", "name": "¿Se puede personalizar el show con mi marca?", "acceptedAnswer": { "@type": "Answer", "text": "Totalmente. Puedo integrar su logo, eslóganes o mensajes de marketing en los efectos de ilusionismo para reforzar la identidad corporativa durante el evento." } },
+            { "@type": "Question", "name": "¿Qué beneficios aporta la magia a un evento de empresa?", "acceptedAnswer": { "@type": "Answer", "text": "La magia corporativa rompe barreras de comunicación, fomenta el networking y facilita que el mensaje de tu marca sea recordado de forma positiva y asombrosa." } },
+            { "@type": "Question", "name": "¿Se puede personalizar el show con mi marca?", "acceptedAnswer": { "@type": "Answer", "text": "Totalmente. Puedo integrar tu logo, eslóganes o mensajes de marketing en los efectos de ilusionismo para reforzar la identidad corporativa durante el evento." } },
             { "@type": "Question", "name": "¿Para qué eventos empresariales es recomendable?", "acceptedAnswer": { "@type": "Answer", "text": "Es ideal para cenas de gala, ferias comerciales (para atraer público al stand), presentaciones de producto y jornadas de team building." } }
         ]
     };
@@ -135,10 +136,10 @@ export default function EmpresasPage() {
 
                              <div className="space-y-6 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
                                  <p className="border-l-2 border-amber-500 pl-4 py-1">
-                                    <span className="text-amber-400 font-bold underline decoration-amber-500/30 text-lg">Eleve el impacto de su marca con una experiencia de asombro diseñada a medida por profesionales.</span>
+                                    <span className="text-amber-400 font-bold underline decoration-amber-500/30 text-lg">Eleva el impacto de tu marca con una experiencia de asombro diseñada a medida por profesionales.</span>
                                 </p>
                                  <p>
-                                    Angel Ruiz, reconocido <strong className="text-amber-400 font-bold">ilusionista corporativo en Madrid</strong> y formado en la prestigiosa <strong>Escuela DaOrtiz</strong>, ofrece un enfoque sofisticado que lo distancia de las agencias de ocio convencionales. Mi especialización en <u>Cartomagia de alta calidad</u> permite ofrecer una experiencia premium en vivo, posicionándome como una de las herramientas más potentes de marketing offline y fidelización para su empresa. No se trata solo de trucos, sino de una técnica refinada para captar la atención plena de sus invitados y asociar su marca a un recuerdo exclusivo y verdaderamente sorprendente.
+                                    Angel Ruiz, reconocido <strong className="text-amber-400 font-bold">ilusionista corporativo en Madrid</strong> y formado en la prestigiosa <strong>Escuela DaOrtiz</strong>, ofrece un enfoque sofisticado que lo distancia de las agencias de ocio convencionales. Mi especialización en <u>Cartomagia de alta calidad</u> permite ofrecer una experiencia premium en vivo, posicionándome como una de las herramientas más potentes de marketing offline y fidelización para tu empresa. No se trata solo de trucos, sino de una técnica refinada para captar la atención plena de tus invitados y asociar tu marca a un recuerdo exclusivo y verdaderamente sorprendente.
                                 </p>
 
                                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-6 border-y border-white/5">
@@ -160,13 +161,13 @@ export default function EmpresasPage() {
                                         <div className="text-amber-500 font-bold">03</div>
                                         <div>
                                             <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Magia Personalizada</h4>
-                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Integración del logo y mensaje de su empresa en los efectos.</p>
+                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Integración del logo y mensaje de tu empresa en los efectos.</p>
                                         </div>
                                     </div>
                                 </div>
 
                                 <p>
-                                    Si busca potenciar el <strong className="text-amber-400">engagement</strong> de sus clientes o la cohesión de sus equipos de trabajo, mi propuesta combina elegancia y humor inteligente. Me adapto con precisión al protocolo empresarial de las compañías más exigentes, operando habitualmente en el eje de la <strong>A-6</strong>, los parques empresariales de <strong>Las Rozas y Pozuelo</strong>, y los centros de convenciones de <strong>Madrid Centro</strong> e IFEMA.
+                                    Si buscas potenciar el <strong className="text-amber-400">engagement</strong> de tus clientes o la cohesión de tus equipos de trabajo, mi propuesta combina elegancia y humor inteligente. Me adapto con precisión al protocolo empresarial de las compañías más exigentes, operando habitualmente en el eje de la <strong>A-6</strong>, los parques empresariales de <strong>Las Rozas y Pozuelo</strong>, y los centros de convenciones de <strong>Madrid Centro</strong> e IFEMA.
                                 </p>
 
                                 <p className="bg-white/5 p-4 rounded-lg italic text-slate-300">
@@ -174,7 +175,7 @@ export default function EmpresasPage() {
                                 </p>
 
                                 <p>
-                                    Al buscar el mejor <strong className="text-amber-400">mago para empresas en Madrid</strong>, la logística y puntualidad son claves. Como <a href="/mago-madrid" className="text-amber-500 hover:underline">experto en magia en Madrid</a> operando desde la zona noroeste, cubro toda la comunidad con agilidad logística, garantizando un servicio integral que incluye desde la gestión de la atmósfera mágica hasta la coordinación con otros proveedores de su evento corporativo.
+                                    Al buscar el mejor <strong className="text-amber-400">mago para empresas en Madrid</strong>, la logística y puntualidad son claves. Como <a href="/mago-madrid" className="text-amber-500 hover:underline">experto en magia en Madrid</a> operando desde la zona noroeste, cubro toda la comunidad con agilidad logística, garantizando un servicio integral que incluye desde la gestión de la atmósfera mágica hasta la coordinación con otros proveedores de tu evento corporativo.
                                 </p>
                             </div>
 

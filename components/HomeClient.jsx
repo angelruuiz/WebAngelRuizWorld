@@ -34,19 +34,36 @@ const HeroClient = ({ onOpenModal }) => {
     
     return (
         <section className="relative h-[100dvh] flex items-center justify-center overflow-hidden z-10">
-            <div className="absolute inset-0 z-0 overflow-hidden">
-                <video 
-                    autoPlay 
-                    loop 
-                    muted 
-                    playsInline 
-                    preload="metadata"
-                    className="w-full h-full object-cover"
-                >
-                    <source src="/spring.webm" type="video/webm" />
-                    <source src="/spring.mp4" type="video/mp4" />
-                    <div className="w-full h-full bg-slate-950"></div>
-                </video>
+            <div className="absolute inset-0 z-0 overflow-hidden" style={{ aspectRatio: '16/9', width: '100%', height: '100%' }}>
+                {/* Desktop: video */}
+                <div className="hidden md:block absolute inset-0">
+                    <video 
+                        autoPlay 
+                        loop 
+                        muted 
+                        playsInline 
+                        preload="none"
+                        poster="/images/hero-poster.webp"
+                        className="w-full h-full object-cover"
+                    >
+                        <source src="/spring.webm" type="video/webm" />
+                        <source src="/spring.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                {/* Mobile: imagen estática de alta calidad */}
+                <div className="block md:hidden absolute inset-0">
+                    <picture>
+                        <source srcSet="/images/hero-poster.webp" type="image/webp" />
+                        <img 
+                            src="/images/hero-poster.webp" 
+                            alt="Ángel Ruiz, mago e ilusionista profesional en Madrid" 
+                            className="w-full h-full object-cover" 
+                            loading="eager"
+                            width={1920}
+                            height={1080}
+                        />
+                    </picture>
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-950/60 to-slate-950/90" />
             </div>
             
@@ -64,7 +81,7 @@ const HeroClient = ({ onOpenModal }) => {
                 </motion.div>
                 
                 <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.5, duration: 1 }} className="text-slate-400 text-base md:text-xl font-light italic mt-4 md:mt-6 px-4">
-                    "LA MAGIA ES EL ENGAÑO MÁS HONESTO."
+                    "LA MAGIA QUE HACE QUE TU EVENTO SEA INOLVIDABLE."
                 </motion.p>
                 
                 <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1.8, duration: 1 }} className="mt-8 md:mt-10 w-full max-w-xs md:max-w-none md:w-auto">
@@ -81,7 +98,7 @@ const HeroClient = ({ onOpenModal }) => {
                     >
                         <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-amber-600 to-amber-400 opacity-90 group-hover:opacity-100 transition-opacity" />
                         <span className="relative flex items-center justify-center gap-3 text-slate-950 font-bold tracking-widest uppercase text-sm md:text-sm">
-                            Reservar Experiencia <Sparkles className="w-4 h-4" />
+                            Contratar a Ángel Ruiz <Sparkles className="w-4 h-4" />
                         </span>
                         <div className="absolute inset-0 rounded-full blur-xl bg-amber-400/50 scale-110 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </motion.button>
