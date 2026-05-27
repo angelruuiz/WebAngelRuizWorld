@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import InteractiveCardDeck from '@/components/InteractiveCardDeck';
-import { ParticleBackground } from '@/components/VisualEffects';
+import { ParticleBackground, MagicCursor } from '@/components/VisualEffects';
 
 export const metadata = {
     title: 'Experiencia 3D - Ángel Ruiz',
     description: 'Prototipo interactivo de galería 3D con físicas realistas.',
     robots: {
-        index: false, // Ocultar a Google por ahora por ser un prototipo
+        index: false,
         follow: false
     }
 };
@@ -15,6 +15,7 @@ export default function Galeria2Page() {
     return (
         <main className="bg-slate-950 min-h-screen text-slate-200 relative overflow-hidden flex flex-col">
             <ParticleBackground />
+            <MagicCursor />
             
             {/* Header / Nav minimalista */}
             <header className="w-full p-6 md:p-10 flex flex-col md:flex-row justify-between items-center gap-6 relative z-20">
