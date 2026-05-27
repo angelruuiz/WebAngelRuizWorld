@@ -198,7 +198,7 @@ export default function InteractiveCardDeck() {
     return (
         <div 
             ref={containerRef}
-            className="w-full h-full min-h-[400px] flex items-center justify-center relative overflow-hidden perspective-[1200px]"
+            className="w-full h-full min-h-[calc(100vh-150px)] flex items-center justify-center relative overflow-visible perspective-[1200px]"
             style={{ touchAction: 'none' }}
         >
             <motion.div 
