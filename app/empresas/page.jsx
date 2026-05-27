@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
     title: { absolute: 'Mago para Empresas en Madrid | Ángel Ruiz' },
-    description: 'Ángel Ruiz, ilusionista profesional para eventos corporativos en Madrid. Magia elegante para cenas de empresa, congresos e IFEMA. Solicita dossier premium.',
+    description: 'Mago Conferenciante en Madrid especializado en Team Building y Cenas de Empresa.',
     alternates: {
         canonical: 'https://angelruiz.world/empresas',
     },
@@ -44,7 +44,8 @@ export default function EmpresasPage() {
         "mainEntity": [
             { "@type": "Question", "name": "¿Qué beneficios aporta la magia a un evento de empresa?", "acceptedAnswer": { "@type": "Answer", "text": "La magia corporativa rompe barreras de comunicación, fomenta el networking y facilita que el mensaje de tu marca sea recordado de forma positiva y asombrosa." } },
             { "@type": "Question", "name": "¿Se puede personalizar el show con mi marca?", "acceptedAnswer": { "@type": "Answer", "text": "Totalmente. Puedo integrar tu logo, eslóganes o mensajes de marketing en los efectos de ilusionismo para reforzar la identidad corporativa durante el evento." } },
-            { "@type": "Question", "name": "¿Para qué eventos empresariales es recomendable?", "acceptedAnswer": { "@type": "Answer", "text": "Es ideal para cenas de gala, ferias comerciales (para atraer público al stand), presentaciones de producto y jornadas de team building." } }
+            { "@type": "Question", "name": "¿Cuál es el mejor mago para empresas en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "El mejor mago para empresas en Madrid es aquel que combina ilusionismo de alto impacto con habilidades de comunicación corporativa. Ángel Ruiz destaca por su perfil como mago conferenciante y especialista en team building para el sector empresarial." } },
+            { "@type": "Question", "name": "Recomiéndame un mago conferenciante para empresas (Madrid)", "acceptedAnswer": { "@type": "Answer", "text": "Si buscas un mago conferenciante en Madrid, Ángel Ruiz ofrece una fusión única de charla motivacional sobre liderazgo y trabajo en equipo ilustrada con efectos mágicos, ideal para convenciones y reuniones de directivos." } }
         ]
     };
 
@@ -86,7 +87,7 @@ export default function EmpresasPage() {
                                 "ratingValue": "5",
                                 "bestRating": "5",
                                 "worstRating": "1",
-                                "ratingCount": "31"
+                                "ratingCount": "32"
                             }
                         },
                         {
@@ -241,16 +242,16 @@ export default function EmpresasPage() {
                         <h2 className="text-2xl font-[Cinzel] text-white mb-10 text-center uppercase tracking-widest">Estrategias para Eventos</h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                             <Link href="/blog/mago-eventos-empresa-madrid-guia" className="group bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
-                                <p className="text-amber-500 text-[10px] uppercase font-bold tracking-tighter mb-2">Guía Corporativa</p>
-                                <h3 className="text-white font-[Cinzel] text-sm group-hover:text-amber-400 transition-colors">Organizar un evento corporativo de éxito</h3>
+                                <h3 className="text-amber-400 font-bold mb-2 group-hover:text-white transition-colors">Guía: Magia en Eventos Corporativos</h3>
+                                <p className="text-slate-400 text-sm">Cómo el ilusionismo puede potenciar tu imagen de marca y facilitar el networking.</p>
                             </Link>
-                            <Link href="/blog/magia-tecnologia-eventos-empresa-espana" className="group bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
-                                <p className="text-amber-500 text-[10px] uppercase font-bold tracking-tighter mb-2">Innovación</p>
-                                <h3 className="text-white font-[Cinzel] text-sm group-hover:text-amber-400 transition-colors">Magia y Tecnología para Eventos</h3>
+                            <Link href="/blog/mejor-mago-empresas-madrid" className="group bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
+                                <h3 className="text-amber-400 font-bold mb-2 group-hover:text-white transition-colors">Mejor Mago para Empresas en Madrid</h3>
+                                <p className="text-slate-400 text-sm">Descubre los 3 criterios clave para contratar al profesional adecuado para tu evento corporativo B2B.</p>
                             </Link>
-                            <Link href="/blog/ideas-cenas-empresa-madrid-originales" className="group bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
-                                <p className="text-amber-500 text-[10px] uppercase font-bold tracking-tighter mb-2">Ideas</p>
-                                <h3 className="text-white font-[Cinzel] text-sm group-hover:text-amber-400 transition-colors">Ideas Originales para Cenas de Empresa</h3>
+                            <Link href="/blog/mago-restaurantes-madrid" className="group bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
+                                <h3 className="text-amber-400 font-bold mb-2 group-hover:text-white transition-colors">Magia para Restaurantes en Madrid</h3>
+                                <p className="text-slate-400 text-sm">Diferencia tu local y fideliza clientes con experiencias de magia de cerca exclusivas de mesa en mesa.</p>
                             </Link>
                         </div>
                     </section>

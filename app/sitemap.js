@@ -43,7 +43,7 @@ export default function sitemap() {
       url: 'https://angelruiz.world/particulares/bodas',
       lastModified: lastMod,
       changeFrequency: 'monthly',
-      priority: 0.9,
+      priority: 0.95,
     },
     {
       url: 'https://angelruiz.world/particulares/eventos',
@@ -61,7 +61,7 @@ export default function sitemap() {
       url: 'https://angelruiz.world/empresas',
       lastModified: lastMod,
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.95,
     },
     {
       url: 'https://angelruiz.world/empresas/mago-cenas-empresa-madrid',

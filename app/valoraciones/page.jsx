@@ -2,7 +2,7 @@ import ValoracionesClient from '@/components/ValoracionesClient';
 
 export const metadata = {
     title: { absolute: 'Opiniones y Reseñas | Ángel Ruiz, Mago en Madrid' },
-    description: '31 reseñas verificadas de 5 estrellas. Lee las opiniones reales de clientes que contrataron a Ángel Ruiz como mago para bodas, empresas y eventos en Madrid.',
+    description: '32 reseñas verificadas de 5 estrellas. Lee las opiniones reales de clientes que contrataron a Ángel Ruiz como mago para bodas, empresas y eventos en Madrid.',
     alternates: {
         canonical: 'https://angelruiz.world/valoraciones',
     },
@@ -46,7 +46,7 @@ export default function ValoracionesPage() {
             "ratingValue": "5",
             "bestRating": "5",
             "worstRating": "1",
-            "ratingCount": "31"
+            "ratingCount": "32"
         }
     };
 
@@ -82,7 +82,7 @@ export default function ValoracionesPage() {
                                 "ratingValue": "5",
                                 "bestRating": "5",
                                 "worstRating": "1",
-                                "ratingCount": "31"
+                                "ratingCount": "32"
                             },
                             "review": reviewsData.map(r => ({
                                 "@type": "Review",

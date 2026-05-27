@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export const metadata = {
     title: 'Ángel Ruiz | Mago Profesional en Madrid para Bodas y Empresas',
-    description: '¿Buscas el mejor mago profesional en Madrid? Sorprende a tus invitados con magia de cerca increíble. Especialista en bodas, empresas y eventos privados. ¡Pide tu presupuesto!',
+    description: '+10 años de recorrido en la magia y alumno de la prestigiosa escuela DaOrtiz.',
     alternates: {
         canonical: 'https://angelruiz.world',
     },
@@ -187,7 +187,7 @@ export default function Home() {
             "ratingValue": "5",
             "bestRating": "5",
             "worstRating": "1",
-            "ratingCount": "31"
+            "ratingCount": "32"
         }
     };
 
@@ -217,7 +217,13 @@ export default function Home() {
                                 "addressRegion": "Comunidad de Madrid",
                                 "postalCode": "28250",
                                 "addressCountry": "ES"
-                            }
+                            },
+                            "sameAs": [
+                                "https://instagram.com/angellruuiz",
+                                "https://tiktok.com/@angellruuiz",
+                                "https://youtube.com/@angellruuiz",
+                                "https://facebook.com/angellruuiz"
+                            ]
                         },
                         {
                             "@type": "EntertainmentBusiness",

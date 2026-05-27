@@ -126,7 +126,7 @@ export default function LocationPageTemplate({ location, allLocations }) {
                                 "ratingValue": "5",
                                 "bestRating": "5",
                                 "worstRating": "1",
-                                "ratingCount": "31"
+                                "ratingCount": "32"
                             }
                         },
                         {

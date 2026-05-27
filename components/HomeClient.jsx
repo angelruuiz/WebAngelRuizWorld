@@ -70,11 +70,11 @@ const HeroClient = ({ onOpenModal }) => {
             </div>
             
             <motion.div style={{ y: y1, opacity, scale }} className="text-center px-6 relative z-10 flex flex-col items-center w-full">
-                <h1 className="sr-only">Ángel Ruiz | Mago e Ilusionista en Madrid</h1>
-                <div aria-hidden="true" className="font-[Cinzel] text-5xl sm:text-6xl md:text-8xl font-bold mb-4 md:mb-8 tracking-wider drop-shadow-lg leading-none pointer-events-none">
-                    <span className="text-[#d4a853] block mb-1"><SplitText text="ANGEL" /></span>
-                    <span className="text-white block"><SplitText text="RUIZ" /></span>
-                </div>
+                <h1 className="font-[Cinzel] text-5xl sm:text-6xl md:text-8xl font-bold mb-4 md:mb-8 tracking-wider drop-shadow-lg leading-none pointer-events-none flex flex-col items-center">
+                    <span className="sr-only">Ángel Ruiz | Mago e Ilusionista en Madrid</span>
+                    <span aria-hidden="true" className="text-[#d4a853] block mb-1"><SplitText text="ANGEL" /></span>
+                    <span aria-hidden="true" className="text-white block"><SplitText text="RUIZ" /></span>
+                </h1>
                 
                 <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1.0, duration: 1 }} className="my-3 md:my-6">
                     <p className="text-sm sm:text-lg md:text-xl text-slate-200 tracking-[0.15em] uppercase border-y border-[#d4a853]/20 py-3 md:py-4 px-5 md:px-8 inline-block backdrop-blur-sm bg-[rgba(3,7,18,0.5)] text-center leading-relaxed font-accent rounded-xl">

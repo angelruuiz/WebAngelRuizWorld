@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
     title: 'Mago en Madrid | Ángel Ruiz · Ilusionista Profesional para Eventos',
-    description: 'Ángel Ruiz, mago profesional en Madrid. Ilusionismo de cerca para bodas, empresas y eventos privados en toda la Comunidad de Madrid. 31 reseñas · 5 estrellas.',
+    description: 'Ángel Ruiz, mago profesional en Madrid. Ilusionismo de cerca para bodas, empresas y eventos privados en toda la Comunidad de Madrid. 32 reseñas · 5 estrellas.',
     alternates: {
         canonical: 'https://angelruiz.world/mago-madrid',
     },
@@ -41,7 +41,7 @@ export default function MagoMadridPage() {
                     "ratingValue": "5",
                     "bestRating": "5",
                     "worstRating": "1",
-                    "ratingCount": "31"
+                    "ratingCount": "32"
                 },
                 "areaServed": {
                     "@type": "City",
@@ -142,7 +142,7 @@ export default function MagoMadridPage() {
                                 </p>
 
                                 <p className="bg-white/5 p-4 rounded-lg italic text-slate-300">
-                                    "31 reseñas de 5 estrellas en Google. Empresas como Movistar Estudiantes ya confían en mi magia para sus eventos corporativos."
+                                    "32 reseñas de 5 estrellas en Google. Empresas como Movistar Estudiantes ya confían en mi magia para sus eventos corporativos."
                                 </p>
                             </div>
 

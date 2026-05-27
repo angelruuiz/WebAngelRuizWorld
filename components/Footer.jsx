@@ -66,6 +66,9 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                                 <a href="https://facebook.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="glass-pill">Facebook</a>
                             </div>
                             <div className="flex flex-wrap justify-center md:justify-end gap-2 mt-6">
+                                <a href="/mago-madrid" className="glass-pill text-[#d4a853] font-bold">Mago en Madrid</a>
+                                <a href="/empresas" className="glass-pill text-[#d4a853] font-bold">Mago para Empresas Madrid</a>
+                                <a href="/particulares/bodas" className="glass-pill text-[#d4a853] font-bold">Mago para Bodas Madrid</a>
                                 <a href="/particulares/fiestas-cumpleanos-madrid" className="glass-pill text-[#d4a853]">Mago para Cumpleaños Madrid</a>
                                 <a href="/mago-sierra-madrid" className="glass-pill text-[#e8cc8a]">Mago Sierra de Madrid</a>
                                 <a href="/mago-torrelodones" className="glass-pill">Mago en Torrelodones</a>
