@@ -45,9 +45,9 @@ const generateScatter = (index, total) => {
         x: Math.cos(angle) * radius,
         y: Math.sin(angle) * radius,
         rotateZ: -60 + Math.random() * 120,
-        rotateY: -15 + Math.random() * 30,
-        rotateX: -15 + Math.random() * 30,
-        z: index * 5 
+        rotateX: 0,
+        rotateY: 0,
+        z: index * 2 // Separación mínima para que el navegador decida bien el orden
     };
 };
 
