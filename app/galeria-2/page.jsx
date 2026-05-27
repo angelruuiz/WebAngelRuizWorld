@@ -17,16 +17,18 @@ export default function Galeria2Page() {
             <ParticleBackground />
             
             {/* Header / Nav minimalista */}
-            <header className="w-full p-6 md:p-10 flex justify-between items-center relative z-20">
-                <div>
+            <header className="w-full p-6 md:p-10 flex flex-col md:flex-row justify-between items-center gap-6 relative z-20">
+                <div className="text-center md:text-left">
                     <h1 className="text-xl md:text-3xl font-[Cinzel] text-white font-bold tracking-widest uppercase">
-                        LAB <span className="text-[#d4a853]">3D</span>
+                        VALORACIONES <span className="text-[#d4a853]">3D</span>
                     </h1>
-                    <p className="text-slate-500 text-xs tracking-[0.2em] uppercase mt-1">Prototipo Interactivo</p>
+                    <p className="text-slate-400 text-xs tracking-[0.1em] uppercase mt-2 max-w-md">
+                        Puedes mover y tirar las cartas libremente por la mesa. <strong className="text-amber-500">Haz clic</strong> en cualquiera de ellas para leer la reseña completa.
+                    </p>
                 </div>
                 <Link 
                     href="/" 
-                    className="glass-pill text-[#d4a853] hover:text-white transition-colors"
+                    className="glass-pill text-[#d4a853] hover:text-white transition-colors whitespace-nowrap"
                 >
                     Volver al Inicio
                 </Link>
