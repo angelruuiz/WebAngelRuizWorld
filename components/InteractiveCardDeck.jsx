@@ -39,15 +39,20 @@ const CARDS_DATA = REVIEWS_DATA.map((review, i) => {
 });
 
 const generateScatter = (index, total) => {
+    const isDesktop = window.innerWidth > 768;
+    const minRadius = isDesktop ? 100 : 20;
+    const maxRadius = isDesktop ? 500 : 180;
+    const yOffset = isDesktop ? 0 : -30; // Subir un poco las cartas en móvil
+    
     const angle = (Math.random() * Math.PI * 2);
-    const radius = 50 + Math.random() * 250;
+    const radius = minRadius + Math.random() * (maxRadius - minRadius);
     return {
         x: Math.cos(angle) * radius,
-        y: Math.sin(angle) * radius,
+        y: Math.sin(angle) * radius + yOffset,
         rotateZ: -60 + Math.random() * 120,
         rotateX: 0,
         rotateY: 0,
-        z: index * 2 // Separación mínima para que el navegador decida bien el orden
+        z: index * 2
     };
 };
 
@@ -193,7 +198,7 @@ export default function InteractiveCardDeck() {
     return (
         <div 
             ref={containerRef}
-            className="w-full h-[60vh] md:h-[800px] flex items-center justify-center relative overflow-hidden perspective-[1200px]"
+            className="w-full h-full min-h-[400px] flex items-center justify-center relative overflow-hidden perspective-[1200px]"
             style={{ touchAction: 'none' }}
         >
             <motion.div 
