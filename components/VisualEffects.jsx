@@ -17,10 +17,10 @@ export const MagicCursor = ({ isLight = false }) => {
     }, []);
     return (
         <motion.div className={`fixed top-0 left-0 pointer-events-none z-[9999999] hidden md:block`}
-            animate={{ x: mousePosition.x - (isHovering ? 32 : 16), y: mousePosition.y - (isHovering ? 32 : 16), scale: isHovering ? 1.5 : 1 }}
+            animate={{ x: mousePosition.x - (isHovering ? 28 : 12), y: mousePosition.y - (isHovering ? 28 : 12), scale: isHovering ? 1.5 : 1 }}
             transition={{ x: { duration: 0 }, y: { duration: 0 }, scale: { type: 'spring', stiffness: 500, damping: 28 } }}>
-            <div className={`rounded-full blur-xl transition-all duration-300 ${isLight ? 'bg-slate-950/20' : 'bg-amber-400 opacity-60'} ${isHovering ? 'w-16 h-16' : 'w-8 h-8'}`} />
-            <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 transition-all duration-300 ${isLight ? 'border-slate-950' : 'border-amber-400 shadow-[0_0_15px_rgba(245,158,11,0.5)]'} ${isHovering ? 'w-12 h-12' : 'w-4 h-4'}`} />
+            <div className={`rounded-full blur-xl transition-all duration-300 ${isLight ? 'bg-slate-950/20' : 'bg-[#d4a853] opacity-40'} ${isHovering ? 'w-14 h-14' : 'w-6 h-6'}`} />
+            <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-2 transition-all duration-300 ${isLight ? 'border-slate-950' : 'border-[#d4a853] shadow-[0_0_20px_rgba(212,168,83,0.4)]'} ${isHovering ? 'w-10 h-10' : 'w-3 h-3'}`} />
         </motion.div>
     );
 };
@@ -39,7 +39,7 @@ export const ReadingProgress = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
             
             <motion.div
-                className="absolute top-0 bottom-0 left-0 bg-gradient-to-r from-amber-600 via-amber-400 to-white origin-left shadow-[0_0_20px_rgba(245,158,11,0.6)]"
+                className="absolute top-0 bottom-0 left-0 bg-gradient-to-r from-[#b8860b] via-[#d4a853] to-[#e8cc8a] origin-left shadow-[0_0_25px_rgba(212,168,83,0.5)]"
                 style={{ scaleX, width: '100%' }}
             />
             
@@ -56,28 +56,31 @@ export const ReadingProgress = () => {
 
 export const ParticleBackground = () => {
     const [particles] = useState(() => {
-        const count = typeof window !== 'undefined' && window.innerWidth < 768 ? 15 : 35;
+        const count = typeof window !== 'undefined' && window.innerWidth < 768 ? 10 : 25;
+        const colors = ['bg-[#d4a853]/15', 'bg-[#c9956b]/12', 'bg-[#e8cc8a]/10'];
         return Array.from({ length: count }).map((_, i) => ({ 
             id: i, 
             x: Math.random() * 100, 
             y: Math.random() * 100, 
-            size: Math.random() * 2 + 1, 
-            duration: Math.random() * 15 + 15,
-            delay: Math.random() * 10
+            size: Math.random() * 2.5 + 0.5, 
+            duration: Math.random() * 18 + 12,
+            delay: Math.random() * 10,
+            color: colors[Math.floor(Math.random() * colors.length)]
         }));
     });
     return (
         <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
-            <div className="absolute inset-0 bg-[#020617] z-0" />
+            <div className="absolute inset-0 bg-[#030712] z-0" />
             {particles.map((p) => (
                 <motion.div 
                     key={p.id} 
-                    className="absolute rounded-full bg-amber-500/20 blur-[1px]" 
+                    className={`absolute rounded-full ${p.color} blur-[1px]`}
                     style={{ left: `${p.x}%`, top: `${p.y}%`, width: p.size, height: p.size }} 
                     animate={{ 
-                        y: [0, -200], 
-                        opacity: [0, 0.4, 0],
-                        scale: [1, 1.5, 1]
+                        y: [0, -250], 
+                        x: [0, (Math.random() - 0.5) * 40],
+                        opacity: [0, 0.35, 0],
+                        scale: [0.8, 1.3, 0.8]
                     }} 
                     transition={{ 
                         duration: p.duration, 
@@ -87,7 +90,7 @@ export const ParticleBackground = () => {
                     }} 
                 />
             ))}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-[#020617] z-10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-[#030712] z-10" />
         </div>
     );
 };

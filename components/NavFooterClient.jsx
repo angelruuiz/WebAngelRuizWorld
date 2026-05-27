@@ -9,7 +9,7 @@ export default function NavFooterClient({ children }) {
     const [isContactOpen, setIsContactOpen] = useState(false);
 
     return (
-        <div className="bg-slate-950 min-h-screen text-slate-200">
+        <div className="bg-[var(--surface-0,#030712)] min-h-screen text-slate-200">
             <Navbar onOpenContact={() => setIsContactOpen(true)} />
             {children}
             <Footer onOpenContact={() => setIsContactOpen(true)} />

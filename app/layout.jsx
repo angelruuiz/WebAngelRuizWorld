@@ -61,7 +61,7 @@ import dynamic from 'next/dynamic';
 const NewsletterModal = dynamic(() => import('@/components/NewsletterModal'), { ssr: false });
 const CookieBanner = dynamic(() => import('@/components/CookieBanner'), { ssr: false });
 
-import { Cinzel, Playfair_Display, Inter } from 'next/font/google';
+import { Cinzel, Cormorant_Garamond, Outfit } from 'next/font/google';
 
 const cinzel = Cinzel({ 
   subsets: ['latin'],
@@ -69,21 +69,22 @@ const cinzel = Cinzel({
   display: 'swap',
 });
 
-const playfair = Playfair_Display({
+const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
-  variable: '--font-playfair',
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-cormorant',
   display: 'swap',
 });
 
-const inter = Inter({
+const outfit = Outfit({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-outfit',
   display: 'swap',
 });
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className={`${cinzel.variable} ${playfair.variable} ${inter.variable}`}>
+    <html lang="es" className={`${cinzel.variable} ${cormorant.variable} ${outfit.variable}`}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
