@@ -72,7 +72,7 @@ const HeroClient = ({ onOpenModal }) => {
             <motion.div style={{ y: y1, opacity, scale }} className="text-center px-6 relative z-10 flex flex-col items-center w-full">
                 <h1 className="sr-only">Ángel Ruiz | Mago e Ilusionista en Madrid</h1>
                 <div aria-hidden="true" className="font-[Cinzel] text-5xl sm:text-6xl md:text-8xl font-bold mb-4 md:mb-8 tracking-wider drop-shadow-lg leading-none pointer-events-none">
-                    <span className="text-gradient-gold block mb-1"><SplitText text="ANGEL" /></span>
+                    <span className="text-[#d4a853] block mb-1"><SplitText text="ANGEL" /></span>
                     <span className="text-white block"><SplitText text="RUIZ" /></span>
                 </div>
                 
