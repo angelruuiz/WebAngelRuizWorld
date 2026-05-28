@@ -77,12 +77,15 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                 </div>
 
                 <div className="hidden md:flex items-center gap-6">
-                    <button 
+                    <motion.button 
+                        whileHover={{ scale: 1.05, y: -2 }}
+                        whileTap={{ scale: 0.95 }}
+                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
                         onClick={onOpenContact} 
                         className="btn-glass flex items-center gap-2 border border-[#d4a853]/30"
                     >
                         Contacto <Sparkles className="w-3 h-3" />
-                    </button>
+                    </motion.button>
                 </div>
             </nav>
 

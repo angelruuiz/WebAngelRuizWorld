@@ -75,7 +75,7 @@ export const ParticleBackground = () => {
                 <motion.div 
                     key={p.id} 
                     className={`absolute rounded-full ${p.color} blur-[1px]`}
-                    style={{ left: `${p.x}%`, top: `${p.y}%`, width: p.size, height: p.size }} 
+                    style={{ left: `${p.x}%`, top: `${p.y}%`, width: p.size, height: p.size, willChange: 'transform, opacity' }} 
                     animate={{ 
                         y: [0, -250], 
                         x: [0, (Math.random() - 0.5) * 40],
