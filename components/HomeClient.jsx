@@ -58,7 +58,7 @@ const HeroClient = ({ onOpenModal }) => {
                         <img 
                             src="/images/hero-poster.webp" 
                             alt="Ángel Ruiz, mago e ilusionista profesional en Madrid" 
-                            className="w-full h-full object-cover" 
+                            className="w-full h-full object-cover object-[50%_75%]" 
                             loading="eager"
                             width={1920}
                             height={1080}

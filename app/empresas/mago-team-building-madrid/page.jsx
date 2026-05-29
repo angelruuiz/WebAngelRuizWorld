@@ -136,10 +136,47 @@ export default function TeamBuildingPage() {
                                 </div>
 
                                 <p>
-                                    Ya sea en las propias oficinas de tu empresa, en hoteles de <strong>Madrid Centro</strong> o en entornos naturales de la <strong>Sierra Noroeste</strong>, diseño sesiones de <Link href="/empresas" className="text-amber-400 hover:underline font-bold">talleres de magia corporativa</Link> donde tus empleados no solo ven magia de alto nivel, sino que <u>aprenden a ejecutar efectos seleccionados</u> trabajando en equipo. El <strong>team building magia</strong> rompe jerarquías y une a los departamentos.
+                                    Ya sea en las propias oficinas de tu empresa, en hoteles de <strong>Madrid Centro</strong> o en entornos naturales de la <strong>Sierra Noroeste</strong>, el <strong>team building magia</strong> rompe jerarquías y une a los departamentos. 
                                 </p>
+                                
+                                <div className="mt-10 mb-8">
+                                    <h2 className="text-2xl font-[Cinzel] text-amber-500 mb-6 border-b border-amber-500/20 pb-2 uppercase tracking-widest">Formatos de Actividad para Empresas</h2>
+                                    <div className="space-y-6">
+                                        <div className="bg-slate-900/40 p-5 rounded-xl border border-white/5">
+                                            <h3 className="text-lg font-bold text-white mb-2 font-[Cinzel]">1. Talleres de Magia (Magic Workshops)</h3>
+                                            <p className="text-sm text-slate-300">Sesiones interactivas donde tus empleados no solo ven magia de alto nivel, sino que <u>aprenden a ejecutar efectos seleccionados</u> trabajando en equipo. El objetivo final es una "actuación" grupal que refuerza la confianza y la oratoria.</p>
+                                        </div>
+                                        <div className="bg-slate-900/40 p-5 rounded-xl border border-white/5">
+                                            <h3 className="text-lg font-bold text-white mb-2 font-[Cinzel]">2. Dinámicas de Resolución de Problemas</h3>
+                                            <p className="text-sm text-slate-300">Utilizamos el secreto detrás de los trucos de ilusionismo como una poderosa metáfora para el pensamiento crítico, la planificación estratégica y la resolución de conflictos reales dentro de la empresa.</p>
+                                        </div>
+                                        <div className="bg-slate-900/40 p-5 rounded-xl border border-white/5">
+                                            <h3 className="text-lg font-bold text-white mb-2 font-[Cinzel]">3. Espectáculos Corporativos Personalizados</h3>
+                                            <p className="text-sm text-slate-300">Un show de magia adaptado a los valores, productos o mensajes clave de tu marca, ideal para amenizar cenas de empresa o convenciones tras una larga jornada de trabajo.</p>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                <p className="bg-white/5 p-4 rounded-lg italic text-slate-300">
+                                <div className="mt-8">
+                                    <h2 className="text-xl font-[Cinzel] text-amber-500 mb-4 uppercase">Beneficios del Team Building con Magia para Empresas</h2>
+                                    <p className="mb-4">
+                                        Las actividades de <strong>team building con magia</strong> son una de las tendencias más fuertes en <strong>Madrid</strong>. Al enfrentar a los participantes a lo "imposible", se humaniza al personal y se fomentan dinámicas de colaboración únicas.
+                                    </p>
+                                    <ul className="list-disc pl-6 space-y-2 text-slate-300">
+                                        <li><strong className="text-white">Desarrollo de habilidades de presentación:</strong> Aprender magia mejora la confianza al hablar en público, ideal para equipos comerciales.</li>
+                                        <li><strong className="text-white">Rompehielos perfecto:</strong> Ideal para convenciones donde asisten delegaciones de diferentes ciudades o países.</li>
+                                        <li><strong className="text-white">Adaptabilidad y gestión de la frustración:</strong> La magia requiere paciencia y práctica, enseñando valiosas lecciones sobre el manejo del error.</li>
+                                    </ul>
+                                </div>
+
+                                <div className="mt-8 mb-6">
+                                    <h3 className="text-lg font-[Cinzel] text-white mb-3 uppercase">¿Buscas el mejor mago para Team Building en Madrid?</h3>
+                                    <p className="text-sm text-slate-400">
+                                        Con más de 10 años de experiencia, mi propuesta de <strong>team building magia</strong> está diseñada específicamente para el sector corporativo. No es un espectáculo infantil adaptado, es ilusionismo de alto impacto combinado con dinámicas de <em>team building</em> real.
+                                    </p>
+                                </div>
+
+                                <p className="bg-white/5 p-4 rounded-lg italic text-slate-300 text-sm">
                                     "El taller de magia corporativa fue un soplo de aire fresco. Ver a nuestro equipo financiero colaborando con los comerciales para lograr un truco de cartomagia no tuvo precio."
                                 </p>
 

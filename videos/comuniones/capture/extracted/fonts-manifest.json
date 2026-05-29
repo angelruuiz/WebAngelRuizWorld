@@ -1,0 +1,209 @@
+{
+  "files": [
+    {
+      "file": "19cfc7226ec3afaa-s.woff2",
+      "family": "Inter",
+      "rawFamily": "Inter",
+      "subfamily": "Regular",
+      "postscript": "Inter-Regular",
+      "weight": 400,
+      "style": "normal",
+      "variationAxes": [
+        "wght"
+      ],
+      "identified": true
+    },
+    {
+      "file": "21350d82a1f187e9-s.woff2",
+      "family": "Inter",
+      "rawFamily": "Inter",
+      "subfamily": "Regular",
+      "postscript": "Inter-Regular",
+      "weight": 400,
+      "style": "normal",
+      "variationAxes": [
+        "wght"
+      ],
+      "identified": true
+    },
+    {
+      "file": "28a2004cf8372660-s.woff2",
+      "family": "Playfair Display",
+      "rawFamily": "Playfair Display",
+      "subfamily": "Regular",
+      "postscript": "PlayfairDisplay-Regular",
+      "weight": 400,
+      "style": "normal",
+      "variationAxes": [
+        "wght"
+      ],
+      "identified": true
+    },
+    {
+      "file": "47f136985ef5b5cb-s.woff2",
+      "family": "Playfair Display",
+      "rawFamily": "Playfair Display",
+      "subfamily": "Regular",
+      "postscript": "PlayfairDisplay-Regular",
+      "weight": 400,
+      "style": "normal",
+      "variationAxes": [
+        "wght"
+      ],
+      "identified": true
+    },
+    {
+      "file": "4ead58c4dcc3f285-s.woff2",
+      "family": "Playfair Display",
+      "rawFamily": "Playfair Display",
+      "subfamily": "Regular",
+      "postscript": "PlayfairDisplay-Regular",
+      "weight": 400,
+      "style": "normal",
+      "variationAxes": [
+        "wght"
+      ],
+      "identified": true
+    },
+    {
+      "file": "8e9860b6e62d6359-s.woff2",
+      "family": "Inter",
+      "rawFamily": "Inter",
+      "subfamily": "Regular",
+      "postscript": "Inter-Regular",
+      "weight": 400,
+      "style": "normal",
+      "variationAxes": [
+        "wght"
+      ],
+      "identified": true
+    },
+    {
+      "file": "a273567b21a7c318-s.p.woff2",
+      "family": "Cinzel",
+      "rawFamily": "Cinzel",
+      "subfamily": "Regular",
+      "postscript": "Cinzel-Regular",
+      "weight": 400,
+      "style": "normal",
+      "variationAxes": [
+        "wght"
+      ],
+      "identified": true
+    },
+    {
+      "file": "b497598118275079-s.woff2",
+      "family": "Cinzel",
+      "rawFamily": "Cinzel",
+      "subfamily": "Regular",
+      "postscript": "Cinzel-Regular",
+      "weight": 400,
+      "style": "normal",
+      "variationAxes": [
+        "wght"
+      ],
+      "identified": true
+    },
+    {
+      "file": "ba9851c3c22cd980-s.woff2",
+      "family": "Inter",
+      "rawFamily": "Inter",
+      "subfamily": "Regular",
+      "postscript": "Inter-Regular",
+      "weight": 400,
+      "style": "normal",
+      "variationAxes": [
+        "wght"
+      ],
+      "identified": true
+    },
+    {
+      "file": "c5fe6dc8356a8c31-s.woff2",
+      "family": "Inter",
+      "rawFamily": "Inter",
+      "subfamily": "Regular",
+      "postscript": "Inter-Regular",
+      "weight": 400,
+      "style": "normal",
+      "variationAxes": [
+        "wght"
+      ],
+      "identified": true
+    },
+    {
+      "file": "df0a9ae256c0569c-s.woff2",
+      "family": "Inter",
+      "rawFamily": "Inter",
+      "subfamily": "Regular",
+      "postscript": "Inter-Regular",
+      "weight": 400,
+      "style": "normal",
+      "variationAxes": [
+        "wght"
+      ],
+      "identified": true
+    },
+    {
+      "file": "eaead17c7dbfcd5d-s.p.woff2",
+      "family": "Playfair Display",
+      "rawFamily": "Playfair Display",
+      "subfamily": "Regular",
+      "postscript": "PlayfairDisplay-Regular",
+      "weight": 400,
+      "style": "normal",
+      "variationAxes": [
+        "wght"
+      ],
+      "identified": true
+    }
+  ],
+  "families": [
+    {
+      "family": "Cinzel",
+      "weights": [
+        400
+      ],
+      "variable": true,
+      "fileCount": 2,
+      "files": [
+        "a273567b21a7c318-s.p.woff2",
+        "b497598118275079-s.woff2"
+      ]
+    },
+    {
+      "family": "Inter",
+      "weights": [
+        400
+      ],
+      "variable": true,
+      "fileCount": 6,
+      "files": [
+        "19cfc7226ec3afaa-s.woff2",
+        "21350d82a1f187e9-s.woff2",
+        "8e9860b6e62d6359-s.woff2",
+        "ba9851c3c22cd980-s.woff2",
+        "c5fe6dc8356a8c31-s.woff2",
+        "df0a9ae256c0569c-s.woff2"
+      ]
+    },
+    {
+      "family": "Playfair Display",
+      "weights": [
+        400
+      ],
+      "variable": true,
+      "fileCount": 4,
+      "files": [
+        "28a2004cf8372660-s.woff2",
+        "47f136985ef5b5cb-s.woff2",
+        "4ead58c4dcc3f285-s.woff2",
+        "eaead17c7dbfcd5d-s.p.woff2"
+      ]
+    }
+  ],
+  "unidentified": [],
+  "meta": {
+    "generatedAt": "2026-05-27T11:46:16.692Z",
+    "tool": "fontkit"
+  }
+}

@@ -211,9 +211,9 @@ export default function EmpresasPage() {
                                 </p>
                             </Link>
                             <Link href="/empresas/mago-team-building-madrid" className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all group block">
-                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3 group-hover:underline">Team Building</h3>
+                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3 group-hover:underline">Team Building con Magia</h3>
                                 <p className="text-slate-300 text-sm leading-relaxed">
-                                    Agilidad logística en fincas de la Sierra y Madrid. Jornadas de Team Building donde la magia fomenta la cohesión, comunicación y creatividad empresarial.
+                                    Agilidad logística en fincas de la Sierra y Madrid. Jornadas de <strong>Team Building</strong> corporativo donde la magia fomenta la cohesión de equipos, comunicación, motivación y creatividad empresarial a través de un <strong>taller de magia corporativa</strong>.
                                 </p>
                             </Link>
                             <Link href="/empresas/mago-para-restaurantes-madrid" className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all group block">
