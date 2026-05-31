@@ -186,6 +186,52 @@ export default function EmpresasPage() {
                         </div>
                     </div>
 
+                    {/* BLOQUE EMPRESAS CONFIAN (INFINITE MARQUEE) */}
+                    <div className="max-w-6xl mx-auto py-16 mt-8 border-t border-white/5 overflow-hidden">
+                        <div className="text-center mb-10">
+                            <h2 className="text-xl md:text-2xl font-[Cinzel] text-amber-500 uppercase tracking-widest">
+                                Han confiado en mi ilusionismo
+                            </h2>
+                        </div>
+                        
+                        <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+                            <ul className="flex items-center justify-center md:justify-start [&_li]:mx-12 [&_img]:max-w-none animate-marquee">
+                                {[
+                                    { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
+                                    { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
+                                    { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' },
+                                    { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
+                                    { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
+                                    { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' },
+                                    { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
+                                    { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
+                                    { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' }
+                                ].map((logo, idx) => (
+                                    <li key={idx}>
+                                        <Image src={logo.src} alt={logo.alt} width={180} height={80} className="object-contain h-16 w-auto grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
+                                    </li>
+                                ))}
+                            </ul>
+                            <ul className="flex items-center justify-center md:justify-start [&_li]:mx-12 [&_img]:max-w-none animate-marquee" aria-hidden="true">
+                                {[
+                                    { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
+                                    { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
+                                    { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' },
+                                    { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
+                                    { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
+                                    { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' },
+                                    { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
+                                    { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
+                                    { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' }
+                                ].map((logo, idx) => (
+                                    <li key={`copy-${idx}`}>
+                                        <Image src={logo.src} alt={logo.alt} width={180} height={80} className="object-contain h-16 w-auto grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+
                     {/* BLOQUE ESPECIALIZACIÓN MADRID - CONCISO Y ELEGANTE */}
                     <div className="max-w-5xl mx-auto py-16 border-t border-white/5">
                         <div className="text-center mb-12">
