@@ -14,138 +14,138 @@ export const metadata = {
 const images = [
     {
         src: '/images/evento-angel-ruiz-magia.webp',
-        alt: 'Mago para empresas Angel Ruiz Madrid',
+        alt: 'El ilusionista Ángel Ruiz realizando un espectáculo de magia corporativa para empresas en Madrid',
         aspect: 'aspect-[3/4]'
     },
     {
         src: '/images/angel-ruiz-mago-corporativo.jpg',
-        alt: 'Angel Ruiz mago corporativo',
+        alt: 'El mago Ángel Ruiz interactuando de cerca con asistentes en un evento corporativo',
         aspect: 'aspect-[4/5]'
     },
     {
         src: '/images/angel-ruiz-mago-madrid.webp',
-        alt: 'Angel Ruiz mago profesional Madrid',
+        alt: 'Retrato profesional del mago Ángel Ruiz durante una actuación en Madrid',
         aspect: 'aspect-square'
     },
     {
         src: '/images/espectaculo-magia-madrid.webp',
-        alt: 'Espectáculo de magia en Madrid',
+        alt: 'Impresionante momento de gran formato en un espectáculo de magia en vivo en Madrid',
         aspect: 'aspect-video'
     },
     {
         src: '/images/magia-corporativa-angel-ruiz.webp',
-        alt: 'Magia corporativa premium Angel Ruiz',
+        alt: 'Magia de cerca premium por Ángel Ruiz cautivando a invitados en un evento exclusivo',
         aspect: 'aspect-[4/3]'
     },
     {
         src: '/images/magia-comuniones-madrid.jpg',
-        alt: 'Magia comuniones Madrid',
+        alt: 'El mago Ángel Ruiz realizando trucos de magia infantil y familiar en una comunión en Madrid',
         aspect: 'aspect-[3/4]'
     },
     {
         src: '/images/mago-profesional-madrid.webp',
-        alt: 'Mago profesional Madrid',
+        alt: 'Actuación en directo de Ángel Ruiz como mago profesional en la capital',
         aspect: 'aspect-[2/3]'
     },
     {
         src: '/images/cartomagia-angel-ruiz.webp',
-        alt: 'Cartomagia de cerca Angel Ruiz',
+        alt: 'Primer plano de las manos de Ángel Ruiz realizando cartomagia de autor de cerca',
         aspect: 'aspect-[4/5]'
     },
     {
         src: '/images/mago-para-empresas-en-madrid.webp',
-        alt: 'Mago para empresas en Madrid',
+        alt: 'Ángel Ruiz amenizando una convención con magia para empresas en Madrid',
         aspect: 'aspect-video',
         position: 'object-[center_25%]'
     },
     {
         src: '/images/ilusionista-madrid-closeup.webp',
-        alt: 'Ilusionista Madrid close-up magia',
+        alt: 'Invitada sonriendo ante la magia close-up del ilusionista madrileño Ángel Ruiz',
         aspect: 'aspect-[3/4]'
     },
     {
         src: '/images/reacciones-magia-empresas.jpg',
-        alt: 'Reacciones magia empresas',
+        alt: 'Caras de asombro y aplausos durante un espectáculo de magia para empresas',
         aspect: 'aspect-[4/3]'
     },
     {
         src: '/images/mago-para-eventos-empresa-madrid.webp',
-        alt: 'Mago para eventos de empresa Madrid',
+        alt: 'Presentación impactante del mago Ángel Ruiz en un evento de empresa en Madrid',
         aspect: 'aspect-square'
     },
     {
         src: '/images/mago-bodas-madrid-eventos.webp',
-        alt: 'Mago bodas Madrid eventos',
+        alt: 'Magia romántica y elegante durante el cóctel de una boda exclusiva en Madrid',
         aspect: 'aspect-[4/3]'
     },
     {
         src: '/images/mago-madrid-evento-privado.webp',
-        alt: 'Mago para eventos privados en Madrid',
+        alt: 'Ángel Ruiz sorprendiendo a un grupo reducido en un evento privado en Madrid',
         aspect: 'aspect-[4/5]'
     },
     {
         src: '/images/magia-cocktail-empresa-madrid.jpg',
-        alt: 'Magia cocktail empresa Madrid',
+        alt: 'El ilusionista Ángel Ruiz realizando magia de cóctel entre los invitados de una empresa en Madrid',
         aspect: 'aspect-video'
     },
     {
         src: '/images/angel-ruiz-evento.webp',
-        alt: 'Evento de magia en Madrid Angel Ruiz',
+        alt: 'Mesa rodeada de espectadores durante una demostración de magia de salón por Ángel Ruiz',
         aspect: 'aspect-square'
     },
     {
         src: '/images/ilusionista-profesional-madrid.webp',
-        alt: 'Ilusionista profesional Madrid',
+        alt: 'El ilusionista profesional Ángel Ruiz posando con su baraja de cartas en Madrid',
         aspect: 'aspect-[4/3]'
     },
     {
         src: '/images/mejor-mago-eventos-corporativos.webp',
-        alt: 'El mejor mago para eventos corporativos',
+        alt: 'Momentos de participación del público en un show de magia para eventos corporativos',
         aspect: 'aspect-[4/5]'
     },
     {
         src: '/images/magia-eventos-cocktail.jpg',
-        alt: 'Magia eventos cocktail',
+        alt: 'Invitados riendo durante una sesión de magia interactiva en un cóctel',
         aspect: 'aspect-[3/4]'
     },
     {
         src: '/images/ilusionista-eventos-madrid-fotos.webp',
-        alt: 'Ilusionista profesional en Madrid fotos',
+        alt: 'Ángel Ruiz demostrando su habilidad como ilusionista profesional en un evento madrileño',
         aspect: 'aspect-[3/4]'
     },
     {
         src: '/images/mago-para-bodas-en-madrid.webp',
-        alt: 'Mago para bodas en Madrid Ángel Ruiz',
+        alt: 'Detalle de un truco de magia especial para los novios durante una boda en Madrid',
         aspect: 'aspect-video'
     },
     {
         src: '/images/mago-profesional-eventos-madrid.webp',
-        alt: 'Mago profesional para eventos en Madrid',
+        alt: 'Invitados asombrados viendo de cerca la magia profesional de Ángel Ruiz en Madrid',
         aspect: 'aspect-[4/5]'
     },
     {
         src: '/images/mago-empresas-madrid-eventos.webp',
-        alt: 'Mago empresas Madrid eventos',
+        alt: 'Actuación dinámica de magia de salón para una cena de empresa en Madrid',
         aspect: 'aspect-[2/3]'
     },
     {
         src: '/images/evento-empresa-mago-angel-ruiz.webp',
-        alt: 'Magia corporativa para empresas Madrid',
+        alt: 'Efecto de ilusionismo visual en una gala corporativa para empresas en Madrid',
         aspect: 'aspect-video'
     },
     {
         src: '/images/angel-ruiz-mago-profesional-madrid.webp',
-        alt: 'Ángel Ruiz mago profesional Madrid',
+        alt: 'Perfil del mago madrileño Ángel Ruiz interactuando con su audiencia',
         aspect: 'aspect-[3/4]'
     },
     {
         src: '/images/ilusionista-eventos-empresa-madrid.webp',
-        alt: 'Ilusionista eventos empresa Madrid',
+        alt: 'Momento mágico que conecta a los empleados durante un evento de empresa en Madrid',
         aspect: 'aspect-[4/3]'
     },
     {
         src: '/images/angel-ruiz-mago-eventos-madrid.webp',
-        alt: 'Ángel Ruiz mago para eventos exclusivos en Madrid',
+        alt: 'Espectáculo de magia elegante y exclusiva por Ángel Ruiz en Madrid',
         aspect: 'aspect-[4/3]'
     }
 ];
