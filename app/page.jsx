@@ -36,15 +36,62 @@ const SEOContent = () => {
                     </div>
                 </div>
 
-                <div className="mt-12 text-center border-t border-white/5 pt-12">
-                    <p className="text-xs uppercase tracking-[0.2em] font-bold text-slate-500 mb-8">Empresas e instituciones que confían en mi ilusionismo corporativo</p>
-                    <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-                        <img src="/images/logo-movistar.webp" alt="Movistar Estudiantes" className="h-8 md:h-12 object-contain filter brightness-110" />
-                        <img src="/images/logo-escombrera.webp" alt="Peña La Escombrera" className="h-10 md:h-14 object-contain filter brightness-110" />
-                        <img src="/images/logo-gondomar.webp" alt="Colegio Gondomar" className="h-10 md:h-14 object-contain filter brightness-110" />
-                        <img src="/images/logo-senescal.webp" alt="Catering Senescal" className="h-10 md:h-14 object-contain filter brightness-110" />
-                        <img src="/images/logo-alcampo.webp" alt="Alcampo" className="h-6 md:h-10 object-contain filter brightness-110" />
-                        <img src="/images/logo-ahorramas.webp" alt="Ahorramás" className="h-6 md:h-10 object-contain filter brightness-110" />
+                <div className="mt-12 border-t border-white/5 pt-12 overflow-hidden">
+                    <p className="text-xs text-center uppercase tracking-[0.2em] font-bold text-slate-500 mb-8">Empresas e instituciones que confían en mi ilusionismo corporativo</p>
+                    
+                    <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
+                        <ul className="flex items-center justify-center md:justify-start [&_li]:mx-12 [&_img]:max-w-none animate-marquee">
+                            {[
+                                { src: '/images/logo-movistar.webp', alt: 'Movistar Estudiantes' },
+                                { src: '/images/logo-escombrera.webp', alt: 'Peña La Escombrera' },
+                                { src: '/images/logo-gondomar.webp', alt: 'Colegio Gondomar' },
+                                { src: '/images/logo-senescal.webp', alt: 'Catering Senescal' },
+                                { src: '/images/logo-alcampo.webp', alt: 'Alcampo' },
+                                { src: '/images/logo-ahorramas.webp', alt: 'Ahorramás' },
+                                { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
+                                { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
+                                { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' },
+                                { src: '/images/logo-movistar.webp', alt: 'Movistar Estudiantes' },
+                                { src: '/images/logo-escombrera.webp', alt: 'Peña La Escombrera' },
+                                { src: '/images/logo-gondomar.webp', alt: 'Colegio Gondomar' },
+                                { src: '/images/logo-senescal.webp', alt: 'Catering Senescal' },
+                                { src: '/images/logo-alcampo.webp', alt: 'Alcampo' },
+                                { src: '/images/logo-ahorramas.webp', alt: 'Ahorramás' },
+                                { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
+                                { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
+                                { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' }
+                            ].map((logo, idx) => (
+                                <li key={idx}>
+                                    <img src={logo.src} alt={logo.alt} className="h-10 md:h-14 object-contain filter brightness-110 grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
+                                </li>
+                            ))}
+                        </ul>
+                        <ul className="flex items-center justify-center md:justify-start [&_li]:mx-12 [&_img]:max-w-none animate-marquee" aria-hidden="true">
+                            {[
+                                { src: '/images/logo-movistar.webp', alt: 'Movistar Estudiantes' },
+                                { src: '/images/logo-escombrera.webp', alt: 'Peña La Escombrera' },
+                                { src: '/images/logo-gondomar.webp', alt: 'Colegio Gondomar' },
+                                { src: '/images/logo-senescal.webp', alt: 'Catering Senescal' },
+                                { src: '/images/logo-alcampo.webp', alt: 'Alcampo' },
+                                { src: '/images/logo-ahorramas.webp', alt: 'Ahorramás' },
+                                { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
+                                { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
+                                { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' },
+                                { src: '/images/logo-movistar.webp', alt: 'Movistar Estudiantes' },
+                                { src: '/images/logo-escombrera.webp', alt: 'Peña La Escombrera' },
+                                { src: '/images/logo-gondomar.webp', alt: 'Colegio Gondomar' },
+                                { src: '/images/logo-senescal.webp', alt: 'Catering Senescal' },
+                                { src: '/images/logo-alcampo.webp', alt: 'Alcampo' },
+                                { src: '/images/logo-ahorramas.webp', alt: 'Ahorramás' },
+                                { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
+                                { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
+                                { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' }
+                            ].map((logo, idx) => (
+                                <li key={`copy-${idx}`}>
+                                    <img src={logo.src} alt={logo.alt} className="h-10 md:h-14 object-contain filter brightness-110 grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 </div>
 
