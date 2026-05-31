@@ -2,7 +2,7 @@
 <html lang="es" data-resolution="1080p">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=1920, height=1080" />
+    <meta name="viewport" content="width=1080, height=1920" />
     <title>Magia para Hostelería B2B</title>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
     <style>
@@ -13,8 +13,8 @@
       }
       
       html, body {
-        width: 1920px;
-        height: 1080px;
+        width: 1080px;
+        height: 1920px;
         overflow: hidden;
         background: #0a0c10;
         font-family: 'Inter', sans-serif;
@@ -22,8 +22,8 @@
 
       #main-stage {
         position: relative;
-        width: 1920px;
-        height: 1080px;
+        width: 1080px;
+        height: 1920px;
         overflow: hidden;
         background: #0a0c10;
       }
@@ -34,7 +34,7 @@
         justify-content: center;
         width: 100%;
         height: 100%;
-        padding: 120px 160px;
+        padding: 120px 80px;
         box-sizing: border-box;
         position: absolute;
         inset: 0;
@@ -49,8 +49,8 @@
       }
       .logo-container {
         position: relative;
-        width: 300px;
-        height: 466px;
+        width: 400px;
+        height: 620px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -66,15 +66,15 @@
       #s1-problem {
         align-items: center;
         text-align: center;
-        background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%); /* Tonos fríos */
+        background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
       }
       .s1-text-3d {
         font-family: 'Cinzel', 'Times New Roman', serif;
-        font-size: 85px;
+        font-size: 80px;
         font-weight: 700;
         color: #e2e8f0;
         text-shadow: 0 20px 40px rgba(0,0,0,0.8), 0 4px 10px rgba(0,0,0,0.5);
-        max-width: 1400px;
+        max-width: 900px;
         line-height: 1.2;
       }
       .s1-glitch-layer {
@@ -90,24 +90,27 @@
       /* SCENE 2: THE SOLUTION                     */
       /* ========================================= */
       #s2-solution {
-        align-items: flex-start;
-        background: linear-gradient(135deg, #451a03 0%, #0a0c10 100%); /* Tonos ámbar cálidos */
+        align-items: center;
+        text-align: center;
+        background: linear-gradient(135deg, #451a03 0%, #0a0c10 100%);
+        isolation: isolate;
+        z-index: 1;
       }
       .s2-headline {
         font-family: 'Cinzel', 'Times New Roman', serif;
-        font-size: 110px;
+        font-size: 90px;
         font-weight: 700;
         color: #fbbf24;
         text-shadow: 0 0 40px rgba(245, 158, 11, 0.4);
-        margin-bottom: 24px;
+        margin-bottom: 40px;
       }
       .s2-subheadline {
-        font-size: 55px;
+        font-size: 45px;
         font-weight: 600;
         color: #ffffff;
         background: rgba(255, 255, 255, 0.1);
-        padding: 20px 40px;
-        border-radius: 12px;
+        padding: 30px 50px;
+        border-radius: 16px;
         backdrop-filter: blur(10px);
         border: 1px solid rgba(255,255,255,0.2);
         box-shadow: 0 0 30px rgba(255,255,255,0.1);
@@ -115,84 +118,100 @@
       .s2-parallax-bg {
         position: absolute;
         inset: -100px;
-        background: url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1920&auto=format&fit=crop') center/cover;
-        opacity: 0.3;
-        z-index: -1;
+        background: url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?q=80&w=1080&h=1920&auto=format&fit=crop') center/cover;
+        opacity: 0.1;
+        z-index: -2;
         mix-blend-mode: screen;
         filter: sepia(0.8) hue-rotate(-15deg) saturate(2);
+      }
+      .s2-grid-container {
+        position: absolute;
+        top: -20%; left: -20%; width: 140%; height: 140%;
+        overflow: hidden;
+        z-index: -1;
+        opacity: 0.7; /* Increased opacity from 0.3 to 0.7 */
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        transform: rotate(-10deg);
+      }
+      .s2-grid-row {
+        display: flex;
+        gap: 20px;
+        width: max-content;
+      }
+      .s2-grid-img {
+        width: 450px;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
       }
 
       /* ========================================= */
       /* SCENE 3: SERVICE 1 (COCKTAIL)             */
       /* ========================================= */
       #s3-service-1 {
-        align-items: flex-start;
-        justify-content: flex-end;
-        padding-bottom: 160px;
         background: #0f172a;
       }
       .s3-glass-panel {
         background: rgba(20, 23, 29, 0.6);
         backdrop-filter: blur(20px);
         border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 24px;
+        border-radius: 32px;
         padding: 60px;
-        width: 800px;
+        width: 900px;
         box-shadow: 0 40px 100px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.2);
+        text-align: center;
       }
       .s3-glass-title {
         font-family: 'Cinzel', 'Times New Roman', serif;
-        font-size: 60px;
+        font-size: 65px;
         color: #f59e0b;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
       }
       .s3-glass-desc {
-        font-size: 32px;
+        font-size: 38px;
         color: #cbd5e1;
         line-height: 1.5;
         margin-bottom: 40px;
       }
       .s3-glass-price {
-        font-size: 48px;
+        font-size: 55px;
         font-weight: 800;
         color: #ffffff;
         display: inline-block;
         border-top: 2px solid rgba(245, 158, 11, 0.5);
-        padding-top: 20px;
+        padding-top: 30px;
       }
 
       /* ========================================= */
       /* SCENE 4: SERVICE 2 (THEME NIGHT)          */
       /* ========================================= */
-      #s4-service-2 {
-        align-items: flex-end;
-        background: radial-gradient(circle at 70% 30%, #451a03 0%, #000000 80%);
-      }
       .s4-spotlight {
         position: absolute;
-        top: -200px;
+        top: 0;
         left: 200px;
         width: 600px;
         height: 1500px;
         background: linear-gradient(to bottom, rgba(245,158,11,0.3) 0%, transparent 100%);
-        transform: rotate(-30deg);
         z-index: 0;
         mix-blend-mode: screen;
         pointer-events: none;
       }
       .s4-panel {
         z-index: 1;
-        width: 800px;
+        width: 900px;
       }
-      .s4-title { font-family: 'Cinzel', 'Times New Roman', serif; font-size: 80px; color: #ffffff; margin-bottom: 20px; text-shadow: 0 10px 30px rgba(0,0,0,0.8); }
-      .s4-desc { font-size: 36px; color: #fbbf24; margin-bottom: 40px; line-height: 1.4; }
+      .s4-title { font-family: 'Cinzel', 'Times New Roman', serif; font-size: 85px; color: #ffffff; margin-bottom: 30px; text-shadow: 0 10px 30px rgba(0,0,0,0.8); }
+      .s4-desc { font-size: 40px; color: #fbbf24; margin-bottom: 50px; line-height: 1.4; }
       .s4-price-box {
         background: #f59e0b;
         color: #000;
-        font-size: 50px;
+        font-size: 60px;
         font-weight: 800;
-        padding: 20px 40px;
-        border-radius: 12px;
+        padding: 30px 50px;
+        border-radius: 16px;
         display: inline-block;
       }
 
@@ -206,18 +225,18 @@
       }
       .s5-counter-wrapper {
         text-align: center;
-        margin-bottom: 80px;
+        margin-bottom: 60px;
         z-index: 2;
       }
       .s5-counter-title {
         font-family: 'Cinzel', 'Times New Roman', serif;
-        font-size: 130px;
+        font-size: 160px;
         color: #f59e0b;
         font-weight: 700;
         line-height: 1;
       }
       .s5-counter-subtitle {
-        font-size: 40px;
+        font-size: 45px;
         color: #cbd5e1;
         letter-spacing: 5px;
         margin-top: 20px;
@@ -225,30 +244,26 @@
       
       .s5-reviews-container {
         position: relative;
-        width: 1200px;
-        height: 300px;
+        width: 900px;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        gap: 40px;
         align-items: center;
         transform-style: preserve-3d;
       }
       
       .review-card {
         background: white;
-        border-radius: 16px;
-        padding: 30px;
-        width: 350px;
+        border-radius: 20px;
+        padding: 40px 50px;
+        width: 850px;
         box-shadow: 0 30px 60px rgba(0,0,0,0.4);
         transform-style: preserve-3d;
         color: #0f172a;
       }
-      .stars { color: #f59e0b; font-size: 30px; margin-bottom: 15px; }
-      .review-text { font-size: 20px; font-weight: 600; line-height: 1.4; }
-      .review-author { font-size: 16px; color: #64748b; margin-top: 15px; }
-      
-      .card-1 { transform: rotateY(25deg) rotateX(10deg); }
-      .card-2 { transform: translateZ(100px); }
-      .card-3 { transform: rotateY(-25deg) rotateX(10deg); }
+      .stars { color: #f59e0b; font-size: 45px; margin-bottom: 20px; }
+      .review-text { font-size: 32px; font-weight: 600; line-height: 1.4; }
+      .review-author { font-size: 24px; color: #64748b; margin-top: 20px; }
 
       /* ========================================= */
       /* SCENE 6: CTA                              */
@@ -260,19 +275,19 @@
       }
       .s6-headline {
         font-family: 'Cinzel', 'Times New Roman', serif;
-        font-size: 80px;
+        font-size: 70px;
         color: #ffffff;
-        margin-bottom: 60px;
+        margin-bottom: 50px;
         line-height: 1.2;
       }
       .s6-divider {
-        width: 200px;
-        height: 2px;
+        width: 300px;
+        height: 3px;
         background: #f59e0b;
-        margin: 0 auto 60px;
+        margin: 0 auto 50px;
       }
       .s6-contact-info {
-        font-size: 45px;
+        font-size: 50px;
         color: #cbd5e1;
         line-height: 1.8;
       }
@@ -288,10 +303,18 @@
       id="main-stage"
       data-composition-id="hosteleria-promo"
       data-start="0"
-      data-duration="52"
-      data-width="1920"
-      data-height="1080"
+      data-duration="35"
+      data-width="1080"
+      data-height="1920"
     >
+      <audio
+        id="bg-music"
+        data-start="0"
+        data-duration="35"
+        data-track-index="90"
+        data-volume="0.65"
+        src="capture/assets/upbeat-music.mp3"
+      ></audio>
       
       <!-- SCENE 0: LOGO INTRO (0 - 3s) -->
       <div id="s0-logo-intro" class="clip scene-content" data-start="0" data-duration="3" data-track-index="1">
@@ -307,20 +330,66 @@
       <!-- GLITCH TRANSITION -->
       <div id="glitch-layer" class="clip s1-glitch-layer" data-start="2.8" data-duration="1" data-track-index="3"></div>
 
-      <!-- SCENE 1: THE PROBLEM (3 - 10s) -->
-      <div id="s1-problem" class="clip scene-content" data-start="3" data-duration="7" data-track-index="2">
+      <!-- SCENE 1: THE PROBLEM (3 - 6s) -->
+      <div id="s1-problem" class="clip scene-content" data-start="3" data-duration="3" data-track-index="2">
         <h1 class="s1-text-3d">¿Qué hace que un cliente no solo vuelva,<br>sino que te <span style="color: #fbbf24;">recomiende</span>?</h1>
       </div>
 
-      <!-- SCENE 2: THE SOLUTION (10 - 18s) -->
-      <div id="s2-solution" class="clip scene-content" data-start="10" data-duration="8" data-track-index="1">
+      <!-- SCENE 2: THE SOLUTION (6.5 - 11s) -->
+      <div id="s2-solution" class="clip scene-content" data-start="6.5" data-duration="4.5" data-track-index="1">
         <div class="s2-parallax-bg" id="s2-bg"></div>
+        <div class="s2-grid-container" id="s2-grid">
+          <div class="s2-grid-row" id="s2-row-1">
+            <img class="s2-grid-img" src="../../../public/images/angel-ruiz-evento.webp" />
+            <img class="s2-grid-img" src="../../../public/images/angel-ruiz-mago-eventos-madrid.webp" />
+            <img class="s2-grid-img" src="../../../public/images/boda-magia-madrid.webp" />
+            <img class="s2-grid-img" src="../../../public/images/cartomagia-angel-ruiz.webp" />
+            <img class="s2-grid-img" src="../../../public/images/espectaculo-magia-madrid.webp" />
+          </div>
+          <div class="s2-grid-row" id="s2-row-2">
+            <img class="s2-grid-img" src="../../../public/images/evento-angel-ruiz-magia.webp" />
+            <img class="s2-grid-img" src="../../../public/images/fiesta-eventos-madrid.webp" />
+            <img class="s2-grid-img" src="../../../public/images/ilusionista-eventos-madrid-fotos.webp" />
+            <img class="s2-grid-img" src="../../../public/images/mago-madrid-evento-privado.webp" />
+            <img class="s2-grid-img" src="../../../public/images/show-de-magia-para-empresas.webp" />
+          </div>
+          <div class="s2-grid-row" id="s2-row-3">
+            <img class="s2-grid-img" src="../../../public/images/angel-ruiz-mago-madrid.webp" />
+            <img class="s2-grid-img" src="../../../public/images/foto-profesional-mirando-carta.webp" />
+            <img class="s2-grid-img" src="../../../public/images/mago-profesional-angel-ruiz.webp" />
+            <img class="s2-grid-img" src="../../../public/images/mejor-mago-eventos-corporativos.webp" />
+            <img class="s2-grid-img" src="../../../public/images/evento-empresa-mago-angel-ruiz.webp" />
+          </div>
+          <div class="s2-grid-row" id="s2-row-4">
+            <img class="s2-grid-img" src="../../../public/images/ilusionista-madrid-closeup.webp" />
+            <img class="s2-grid-img" src="../../../public/images/mago-para-eventos-empresa-madrid.webp" />
+            <img class="s2-grid-img" src="../../../public/images/angel-ruiz-mago-profesional-madrid.webp" />
+            <img class="s2-grid-img" src="../../../public/images/mago-profesional-eventos-madrid.webp" />
+            <img class="s2-grid-img" src="../../../public/images/ilusionista-eventos-empresa-madrid.webp" />
+          </div>
+          <div class="s2-grid-row" id="s2-row-5">
+            <img class="s2-grid-img" src="../../../public/images/angel-ruiz-evento.webp" />
+            <img class="s2-grid-img" src="../../../public/images/angel-ruiz-mago-eventos-madrid.webp" />
+            <img class="s2-grid-img" src="../../../public/images/boda-magia-madrid.webp" />
+            <img class="s2-grid-img" src="../../../public/images/cartomagia-angel-ruiz.webp" />
+            <img class="s2-grid-img" src="../../../public/images/espectaculo-magia-madrid.webp" />
+          </div>
+          <div class="s2-grid-row" id="s2-row-6">
+            <img class="s2-grid-img" src="../../../public/images/evento-angel-ruiz-magia.webp" />
+            <img class="s2-grid-img" src="../../../public/images/fiesta-eventos-madrid.webp" />
+            <img class="s2-grid-img" src="../../../public/images/ilusionista-eventos-madrid-fotos.webp" />
+            <img class="s2-grid-img" src="../../../public/images/mago-madrid-evento-privado.webp" />
+            <img class="s2-grid-img" src="../../../public/images/show-de-magia-para-empresas.webp" />
+          </div>
+        </div>
+        <div style="position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(10,12,16,0.2) 0%, rgba(10,12,16,0.85) 90%); z-index: -1;"></div>
         <h2 class="s2-headline" id="s2-text-1">Magia Profesional<br>para Hostelería</h2>
         <div class="s2-subheadline" id="s2-text-2">Diferenciación = Reseñas de 5 Estrellas</div>
       </div>
 
-      <!-- SCENE 3: SERVICE 1 (18 - 28s) -->
-      <div id="s3-service-1" class="clip scene-content" data-start="18" data-duration="10" data-track-index="2">
+      <!-- SCENE 3: SERVICE 1 (11 - 17.2s) -->
+      <div id="s3-service-1" class="clip scene-content" data-start="11" data-duration="6.2" data-track-index="2" style="flex-direction: column; align-items: center; justify-content: center; gap: 60px;">
+        <img class="s3-image" src="../../../public/images/mago-para-bodas-en-madrid.webp" style="width: 800px; height: 600px; object-fit: cover; border-radius: 32px; box-shadow: 0 40px 100px rgba(0,0,0,0.8);" />
         <div class="s3-glass-panel" id="s3-panel">
           <h2 class="s3-glass-title">Magia de Cocktail<br>y Entre Mesas</h2>
           <p class="s3-glass-desc">Mitigación de tiempos de espera en mesas y barra. Interacción directa y fidelización inmediata.</p>
@@ -328,18 +397,19 @@
         </div>
       </div>
 
-      <!-- SCENE 4: SERVICE 2 (28 - 38s) -->
-      <div id="s4-service-2" class="clip scene-content" data-start="28" data-duration="10" data-track-index="1">
-        <div class="s4-spotlight" id="s4-light"></div>
-        <div class="s4-panel" id="s4-panel-content">
+      <!-- SCENE 4: SERVICE 2 (17.2 - 23.4s) -->
+      <div id="s4-service-2" class="clip scene-content" data-start="17.2" data-duration="6.2" data-track-index="1" style="flex-direction: column; align-items: center; justify-content: center; gap: 60px; background: radial-gradient(circle at 50% 30%, #451a03 0%, #000000 80%);">
+        <div class="s4-panel" id="s4-panel-content" style="text-align: center;">
           <h2 class="s4-title">Noche<br>Temática</h2>
           <p class="s4-desc">Aumento de reservas en días de baja facturación. Show central de una hora para todo el local.</p>
           <div class="s4-price-box">200 € <span style="font-size: 24px; font-weight: 600;">/ Show Completo</span></div>
         </div>
+        <img class="s4-image" src="../../../public/images/magia-corporativa-angel-ruiz.webp" style="width: 800px; height: 600px; object-fit: cover; border-radius: 32px; box-shadow: 0 40px 100px rgba(0,0,0,0.8);" />
+        <div class="s4-spotlight" id="s4-light" style="top: 0; left: 240px; transform: rotate(0deg);"></div>
       </div>
 
-      <!-- SCENE 5: ROI (38 - 46s) -->
-      <div id="s5-roi" class="clip scene-content" data-start="38" data-duration="8" data-track-index="2">
+      <!-- SCENE 5: ROI (23.4 - 29.4s) -->
+      <div id="s5-roi" class="clip scene-content" data-start="23.4" data-duration="6" data-track-index="2">
         <div class="s5-counter-wrapper">
           <div class="s5-counter-title"><span id="s5-number">0</span>%</div>
           <div class="s5-counter-subtitle">MÁS RESEÑAS. MÁS VISIBILIDAD.</div>
@@ -364,14 +434,17 @@
         </div>
       </div>
 
-      <!-- SCENE 6: CTA (46 - 52s) -->
-      <div id="s6-cta" class="clip scene-content" data-start="46" data-duration="6" data-track-index="1">
-        <h2 class="s6-headline" id="s6-head">Haz que la gente venga por la comida,<br>y regrese por la <span style="color: #fbbf24;">experiencia</span>.</h2>
-        <div class="s6-divider" id="s6-div"></div>
-        <div class="s6-contact-info" id="s6-contact">
-          Reserva tu fecha<br>
-          <span class="s6-contact-highlight">648 055 636</span><br>
-          angelruiz.world
+      <!-- SCENE 6: CTA (29.4 - 35s) -->
+      <div id="s6-cta" class="clip scene-content" data-start="29.4" data-duration="5.6" data-track-index="1" style="flex-direction: column; align-items: center; justify-content: center; gap: 60px;">
+        <img class="s6-foto-bio" src="../../../public/images/foto-bio.webp" style="width: 500px; height: 600px; object-fit: cover; object-position: center 10%; border-radius: 40px; box-shadow: 0 20px 80px rgba(0,0,0,0.5);" />
+        <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+          <h2 class="s6-headline" id="s6-head" style="text-align: center;">Haz que la gente venga por la comida,<br>y regrese por la <span style="color: #fbbf24;">experiencia</span>.</h2>
+          <div class="s6-divider" id="s6-div" style="margin: 30px auto;"></div>
+          <div class="s6-contact-info" id="s6-contact" style="text-align: center;">
+            Reserva tu fecha<br>
+            <span class="s6-contact-highlight">648 055 636</span><br>
+            angelruiz.world
+          </div>
         </div>
       </div>
 
@@ -404,79 +477,88 @@
       tl.to('.s1-glitch-layer', { opacity: 1, duration: 0.1, ease: "steps(1)", yoyo: true, repeat: 3 }, 2.8);
 
       // =========================================
-      // SCENE 1: THE PROBLEM (3s)
+      // SCENE 1: THE PROBLEM (3s - 6.5s)
       // =========================================
-      // Whip-pan entrance (simulated by rapid x movement and opacity)
       tl.from(".s1-text-3d", { 
-        x: 800, 
+        y: 100, 
         scale: 0.8,
         opacity: 0, 
         duration: 0.8, 
         ease: "expo.out" 
-      }, 3.2);
+      }, 3.1);
 
       // =========================================
-      // SCENE 2: THE SOLUTION (10s)
+      // SCENE 2: THE SOLUTION (6.5s - 11s)
       // =========================================
-      tl.from("#s2-bg", { scale: 1.2, opacity: 0, duration: 2, ease: "power2.out" }, 10);
-      tl.from("#s2-text-1", { x: -300, opacity: 0, duration: 0.8, ease: "back.out(1.2)" }, 10.3);
-      tl.from("#s2-text-2", { x: 300, opacity: 0, duration: 0.8, ease: "power3.out" }, 10.6);
+      tl.from("#s2-grid", { opacity: 0, duration: 1.0, ease: "power2.out" }, 6.5);
+      tl.fromTo("#s2-row-1", { x: 0 }, { x: -300, duration: 3, ease: "linear" }, 6.5);
+      tl.fromTo("#s2-row-2", { x: -200 }, { x: -500, duration: 3, ease: "linear" }, 6.5);
+      tl.fromTo("#s2-row-3", { x: 0 }, { x: -300, duration: 3, ease: "linear" }, 6.5);
+      tl.fromTo("#s2-row-4", { x: -200 }, { x: -500, duration: 3, ease: "linear" }, 6.5);
+      tl.fromTo("#s2-row-5", { x: 0 }, { x: -300, duration: 3, ease: "linear" }, 6.5);
+      tl.fromTo("#s2-row-6", { x: -200 }, { x: -500, duration: 3, ease: "linear" }, 6.5);
+      tl.from("#s2-bg", { scale: 1.2, duration: 3, ease: "power1.out" }, 6.5);
+      tl.from("#s2-text-1", { y: 100, opacity: 0, duration: 0.8, ease: "power3.out" }, 6.7);
+      tl.from("#s2-text-2", { y: 100, opacity: 0, duration: 0.6, ease: "power3.out" }, 6.9);
 
       // =========================================
-      // SCENE 3: SERVICE 1 (18s)
+      // SCENE 3: SERVICE 1 (11s - 17.2s)
       // =========================================
-      tl.from("#s3-panel", { x: -200, opacity: 0, duration: 1, ease: "power3.out" }, 18.2);
-      tl.from(".s3-glass-title", { y: 30, opacity: 0, duration: 0.6, ease: "power2.out" }, 18.5);
-      tl.from(".s3-glass-desc", { y: 30, opacity: 0, duration: 0.6, ease: "power2.out" }, 18.7);
-      tl.from(".s3-glass-price", { y: 30, opacity: 0, duration: 0.6, ease: "back.out(1.5)" }, 18.9);
+      tl.from(".s3-image", { scale: 1.1, opacity: 0, duration: 0.8, ease: "power2.out" }, 11.0);
+      tl.from("#s3-panel", { y: 100, opacity: 0, duration: 0.8, ease: "power3.out" }, 11.2);
+      tl.from(".s3-glass-title", { y: 30, opacity: 0, duration: 0.4, ease: "power2.out" }, 11.4);
+      tl.from(".s3-glass-desc", { y: 30, opacity: 0, duration: 0.4, ease: "power2.out" }, 11.6);
+      tl.from(".s3-glass-price", { y: 30, opacity: 0, duration: 0.4, ease: "back.out(1.5)" }, 11.8);
 
       // =========================================
-      // SCENE 4: SERVICE 2 (28s)
+      // SCENE 4: SERVICE 2 (17.2s - 23.4s)
       // =========================================
-      tl.from("#s4-light", { opacity: 0, rotation: -60, duration: 1.5, ease: "power2.out" }, 28.1);
-      tl.from("#s4-panel-content", { x: 200, opacity: 0, duration: 0.8, ease: "power3.out" }, 28.4);
-      tl.from(".s4-title", { y: -40, opacity: 0, duration: 0.6, ease: "power2.out" }, 28.6);
-      tl.from(".s4-desc", { y: 30, opacity: 0, duration: 0.6, ease: "power2.out" }, 28.8);
-      tl.from(".s4-price-box", { scale: 0.5, opacity: 0, duration: 0.6, ease: "back.out(1.5)" }, 29.0);
+      tl.from(".s4-image", { scale: 1.1, opacity: 0, duration: 0.8, ease: "power2.out" }, 17.2);
+      tl.from("#s4-light", { opacity: 0, duration: 1.0, ease: "power2.out" }, 17.3);
+      tl.from("#s4-panel-content", { y: -100, opacity: 0, duration: 0.6, ease: "power3.out" }, 17.5);
+      tl.from(".s4-title", { y: -40, opacity: 0, duration: 0.4, ease: "power2.out" }, 17.7);
+      tl.from(".s4-desc", { y: 30, opacity: 0, duration: 0.4, ease: "power2.out" }, 17.9);
+      tl.from(".s4-price-box", { scale: 0.5, opacity: 0, duration: 0.4, ease: "back.out(1.5)" }, 18.1);
 
       // =========================================
-      // SCENE 5: ROI (38s)
+      // SCENE 5: ROI (23.4s - 29.4s)
       // =========================================
       // Text and counter
-      tl.from(".s5-counter-wrapper", { y: -50, opacity: 0, duration: 0.8, ease: "power2.out" }, 38.2);
+      tl.from(".s5-counter-wrapper", { y: -50, opacity: 0, duration: 0.6, ease: "power2.out" }, 23.6);
       
       // Animate number from 0 to 100
       let counterObj = { val: 0 };
       tl.to(counterObj, {
         val: 300,
-        duration: 2.5,
+        duration: 1.5,
         ease: "power3.out",
         onUpdate: function() {
           document.getElementById("s5-number").textContent = Math.floor(counterObj.val);
         }
-      }, 38.5);
+      }, 23.8);
 
       // Screen shake on number hitting big value
       tl.fromTo("#s5-roi", 
         { x: -5 }, { x: 5, duration: 0.05, ease: "rough({strength: 2, points: 10})", clearProps: "x", repeat: 5 }, 
-      40.5);
+      25.3);
 
       // 3D Cards popping in
-      tl.from("#s5-card-1", { z: -500, rotationY: 0, opacity: 0, duration: 0.8, ease: "back.out(1.2)" }, 38.6);
-      tl.from("#s5-card-2", { z: -500, y: 100, opacity: 0, duration: 0.8, ease: "back.out(1.2)" }, 38.8);
-      tl.from("#s5-card-3", { z: -500, rotationY: 0, opacity: 0, duration: 0.8, ease: "back.out(1.2)" }, 39.0);
+      tl.from("#s5-card-1", { z: -500, rotationY: 0, opacity: 0, duration: 0.6, ease: "back.out(1.2)" }, 23.9);
+      tl.from("#s5-card-2", { z: -500, rotationY: 0, opacity: 0, duration: 0.6, ease: "back.out(1.2)" }, 24.1);
+      tl.from("#s5-card-3", { z: -500, rotationY: 0, opacity: 0, duration: 0.6, ease: "back.out(1.2)" }, 24.3);
 
       // =========================================
-      // SCENE 6: CTA (46s)
+      // SCENE 6: CTA (29.4s - 35s)
       // =========================================
       // Fade in effect
-      tl.from("#s6-cta", { opacity: 0, duration: 1.5, ease: "power1.inOut" }, 46);
-      tl.from("#s6-head", { y: 30, opacity: 0, duration: 0.8, ease: "power2.out" }, 47);
-      tl.from("#s6-div", { scaleX: 0, opacity: 0, duration: 0.6, ease: "power2.out" }, 47.4);
-      tl.from("#s6-contact", { y: 30, opacity: 0, duration: 0.8, ease: "power2.out" }, 47.6);
+      tl.from("#s6-cta", { opacity: 0, duration: 1.0, ease: "power1.inOut" }, 29.4);
+      tl.from(".s6-foto-bio", { y: -50, opacity: 0, duration: 0.8, ease: "power2.out" }, 29.7);
+      tl.from("#s6-head", { y: 30, opacity: 0, duration: 0.6, ease: "power2.out" }, 29.9);
+      tl.from("#s6-div", { scaleX: 0, opacity: 0, duration: 0.4, ease: "power2.out" }, 30.2);
+      tl.from("#s6-contact", { y: 30, opacity: 0, duration: 0.6, ease: "power2.out" }, 30.4);
       
       // Fade out final (only allowed on last scene)
-      tl.to("#s6-cta", { opacity: 0, duration: 1, ease: "power1.inOut" }, 51);
+      tl.to("#s6-cta", { opacity: 0, duration: 1, ease: "power1.inOut" }, 34.0);
 
     </script>
   </body>

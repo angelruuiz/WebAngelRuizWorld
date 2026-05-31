@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="es" data-resolution="1080p">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Cumpleaños Promo</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        width: 1080px; height: 1920px; overflow: hidden;
+        background: #030005; font-family: 'Inter', sans-serif;
+      }
+
+      #main-stage {
+        position: relative; width: 1080px; height: 1920px;
+        overflow: hidden; background: #030005;
+      }
+
+      .scene-content {
+        display: flex; flex-direction: column; justify-content: center;
+        width: 100%; height: 100%; padding: 120px 80px;
+        box-sizing: border-box; position: absolute; inset: 0;
+      }
+
+      /* ========================================= */
+      /* SCENE 1: EL GANCHO (0s - 5s)              */
+      /* ========================================= */
+      #s1-hook {
+        align-items: center; text-align: center;
+        background: radial-gradient(circle at center, #1a0b2e 0%, #030005 100%);
+      }
+      .s1-text {
+        font-family: 'Cinzel', serif; font-size: 85px; font-weight: 800;
+        color: #ffffff; text-shadow: 0 10px 40px rgba(0,0,0,0.9), 0 0 20px #9d4edd;
+        line-height: 1.2; z-index: 2;
+      }
+      .s1-highlight { color: #ffd60a; text-shadow: 0 0 30px #ffb703; }
+      
+      .glitch-layer {
+        position: absolute; inset: 0; background: url('../../../public/images/evento-angel-ruiz-magia.webp') center/cover;
+        opacity: 0; z-index: 1;
+      }
+
+      /* ========================================= */
+      /* SCENE 2: EL CONTRASTE (5s - 12s)          */
+      /* ========================================= */
+      #s2-contrast {
+        align-items: center; text-align: center;
+        background: #0a0a0a; overflow: hidden;
+      }
+      .s2-grid-container {
+        position: absolute; width: 3000px; height: 3000px;
+        display: flex; flex-direction: column; gap: 20px;
+        transform: rotate(-15deg) scale(1.2); opacity: 0.3; z-index: 0;
+      }
+      .s2-grid-row { display: flex; gap: 20px; }
+      .s2-img { width: 500px; height: 350px; object-fit: cover; border-radius: 20px; filter: grayscale(80%); }
+      .s2-text {
+        font-size: 80px; font-weight: 900; color: #fff; z-index: 2;
+        text-shadow: 0 20px 50px rgba(0,0,0,1); line-height: 1.3;
+      }
+
+      /* ========================================= */
+      /* SCENE 3: LA SOLUCIÓN ÉPICA (12s - 22s)    */
+      /* ========================================= */
+      #s3-epic {
+        align-items: center; justify-content: center; text-align: center; background: #000;
+      }
+      .s3-text-container { position: absolute; z-index: 10; width: 100%; text-align: center; }
+      .s3-text-1 {
+        font-family: 'Cinzel', serif; font-size: 140px; font-weight: 900; color: #ffd60a;
+        text-shadow: 0 10px 50px rgba(255,214,10,0.5); opacity: 0;
+      }
+      .s3-text-2 {
+        font-size: 70px; font-weight: 800; color: #fff; margin-top: 30px;
+        text-shadow: 0 10px 40px rgba(0,0,0,0.9); opacity: 0;
+      }
+      
+      /* Montaje rápido de fotos */
+      .fast-cut-container {
+        position: absolute; inset: 0; width: 100%; height: 100%;
+        z-index: 1; opacity: 0;
+      }
+      .fast-cut-img {
+        position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+        opacity: 0; transform: scale(1.1); filter: contrast(1.1) brightness(0.9);
+      }
+
+      /* ========================================= */
+      /* SCENE 4: IMPACTO INVITADOS (22s - 28s)    */
+      /* ========================================= */
+      #s4-social {
+        align-items: center; justify-content: center;
+        background: url('../../../public/images/ilusionista-eventos-madrid-fotos.webp') center/cover;
+      }
+      .s4-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(15px); }
+      
+      .s4-bubble {
+        position: absolute; background: rgba(255,255,255,0.1); border: 2px solid rgba(255,255,255,0.2);
+        padding: 40px 60px; border-radius: 40px; color: #fff; font-size: 45px; font-weight: 600;
+        box-shadow: 0 30px 60px rgba(0,0,0,0.5); backdrop-filter: blur(20px); opacity: 0;
+      }
+      .b1 { top: 300px; left: 100px; width: 700px; transform: rotate(-5deg); }
+      .b2 { top: 600px; right: 100px; width: 800px; transform: rotate(3deg); }
+      .b3 { top: 950px; left: 150px; width: 750px; transform: rotate(-2deg); background: rgba(255, 214, 10, 0.15); border-color: rgba(255,214,10,0.5); }
+      
+      .s4-main-text {
+        position: absolute; bottom: 200px; font-family: 'Cinzel', serif; font-size: 75px;
+        color: #ffd60a; text-align: center; text-shadow: 0 10px 40px rgba(0,0,0,0.9);
+        font-weight: 800; z-index: 10; opacity: 0;
+      }
+
+      /* ========================================= */
+      /* SCENE 5: CTA (28s - 35s)                  */
+      /* ========================================= */
+      #s5-cta {
+        align-items: center; justify-content: center; text-align: center;
+        background: radial-gradient(circle at center, #2e1a0b 0%, #050505 100%);
+      }
+      .s5-foto-container {
+        position: relative; width: 500px; height: 500px; margin-bottom: 60px;
+      }
+      .s5-halo {
+        position: absolute; inset: -40px; border-radius: 50%;
+        background: conic-gradient(from 0deg, transparent, #ffd60a, transparent, #e85d04, transparent);
+        animation: spin 4s linear infinite; filter: blur(20px); opacity: 0.6;
+      }
+      @keyframes spin { 100% { transform: rotate(360deg); } }
+      .s5-foto {
+        position: relative; width: 100%; height: 100%; object-fit: cover; object-position: center 20%;
+        border-radius: 50%; border: 6px solid #ffd60a; box-shadow: 0 20px 80px rgba(0,0,0,0.8);
+      }
+      .s5-headline { font-size: 75px; font-weight: 900; color: #fff; margin-bottom: 20px; line-height: 1.1; }
+      .s5-sub { font-size: 45px; color: #cbd5e1; margin-bottom: 50px; }
+      .s5-btn {
+        background: linear-gradient(135deg, #ffd60a 0%, #ff9e00 100%);
+        color: #000; font-size: 55px; font-weight: 800; padding: 30px 80px;
+        border-radius: 20px; box-shadow: 0 20px 50px rgba(255, 214, 10, 0.4);
+      }
+
+    </style>
+  </head>
+  <body>
+    <div
+      id="main-stage"
+      data-composition-id="cumpleanos-promo"
+      data-start="0"
+      data-duration="35"
+      data-width="1080"
+      data-height="1920"
+    >
+      <audio
+        id="bg-music"
+        data-start="0"
+        data-duration="35"
+        data-track-index="90"
+        data-volume="0.8"
+        src="capture/assets/upbeat-music.mp3"
+      ></audio>
+
+      <!-- SCENE 1: HOOK (0 - 5s) -->
+      <div id="s1-hook" class="clip scene-content" data-start="0" data-duration="5" data-track-index="1">
+        <div class="glitch-layer s1-glitch-1"></div>
+        <div class="glitch-layer s1-glitch-2" style="background-image: url('../../../public/images/fiesta-eventos-madrid.webp');"></div>
+        <h1 class="s1-text" id="s1-t1">¿Se acerca tu<br>cumpleaños...</h1>
+        <h1 class="s1-text" id="s1-t2" style="margin-top: 50px; opacity: 0;">y quieres que sea<br><span class="s1-highlight">INOLVIDABLE?</span></h1>
+      </div>
+
+      <!-- SCENE 2: CONTRASTE (5 - 12s) -->
+      <div id="s2-contrast" class="clip scene-content" data-start="5" data-duration="7" data-track-index="2">
+        <div class="s2-grid-container" id="s2-grid">
+          <div class="s2-grid-row" id="s2-r1">
+            <img class="s2-img" src="../../../public/images/boda-magia-madrid.webp" />
+            <img class="s2-img" src="../../../public/images/angel-ruiz-mago-madrid.webp" />
+            <img class="s2-img" src="../../../public/images/espectaculo-magia-madrid.webp" />
+            <img class="s2-img" src="../../../public/images/evento-angel-ruiz-magia.webp" />
+            <img class="s2-img" src="../../../public/images/fiesta-eventos-madrid.webp" />
+            <img class="s2-img" src="../../../public/images/ilusionista-madrid-closeup.webp" />
+          </div>
+          <div class="s2-grid-row" id="s2-r2">
+            <img class="s2-img" src="../../../public/images/mago-madrid-evento-privado.webp" />
+            <img class="s2-img" src="../../../public/images/mago-profesional-angel-ruiz.webp" />
+            <img class="s2-img" src="../../../public/images/mejor-mago-eventos-corporativos.webp" />
+            <img class="s2-img" src="../../../public/images/show-de-magia-para-empresas.webp" />
+            <img class="s2-img" src="../../../public/images/boda-magia-madrid.webp" />
+            <img class="s2-img" src="../../../public/images/cartomagia-angel-ruiz.webp" />
+          </div>
+          <div class="s2-grid-row" id="s2-r3">
+            <img class="s2-img" src="../../../public/images/angel-ruiz-evento.webp" />
+            <img class="s2-img" src="../../../public/images/angel-ruiz-mago-eventos-madrid.webp" />
+            <img class="s2-img" src="../../../public/images/espectaculo-magia-madrid.webp" />
+            <img class="s2-img" src="../../../public/images/evento-angel-ruiz-magia.webp" />
+            <img class="s2-img" src="../../../public/images/fiesta-eventos-madrid.webp" />
+            <img class="s2-img" src="../../../public/images/ilusionista-madrid-closeup.webp" />
+          </div>
+          <div class="s2-grid-row" id="s2-r4">
+            <img class="s2-img" src="../../../public/images/ilusionista-eventos-madrid-fotos.webp" />
+            <img class="s2-img" src="../../../public/images/mago-bodas-madrid-eventos.webp" />
+            <img class="s2-img" src="../../../public/images/mago-empresas-madrid-eventos.webp" />
+            <img class="s2-img" src="../../../public/images/mago-para-eventos-empresa-madrid.webp" />
+            <img class="s2-img" src="../../../public/images/ilusionista-eventos-empresa-madrid.webp" />
+            <img class="s2-img" src="../../../public/images/ilusionista-profesional-madrid.webp" />
+          </div>
+          <div class="s2-grid-row" id="s2-r5">
+            <img class="s2-img" src="../../../public/images/magia-corporativa-angel-ruiz.webp" />
+            <img class="s2-img" src="../../../public/images/mago-profesional-angel-ruiz.webp" />
+            <img class="s2-img" src="../../../public/images/boda-magia-madrid.webp" />
+            <img class="s2-img" src="../../../public/images/angel-ruiz-mago-madrid.webp" />
+            <img class="s2-img" src="../../../public/images/espectaculo-magia-madrid.webp" />
+            <img class="s2-img" src="../../../public/images/fiesta-eventos-madrid.webp" />
+          </div>
+          <div class="s2-grid-row" id="s2-r6">
+            <img class="s2-img" src="../../../public/images/show-de-magia-para-empresas.webp" />
+            <img class="s2-img" src="../../../public/images/mejor-mago-eventos-corporativos.webp" />
+            <img class="s2-img" src="../../../public/images/evento-empresa-mago-angel-ruiz.webp" />
+            <img class="s2-img" src="../../../public/images/ilusionista-madrid-closeup.webp" />
+            <img class="s2-img" src="../../../public/images/angel-ruiz-evento.webp" />
+            <img class="s2-img" src="../../../public/images/cartomagia-angel-ruiz.webp" />
+          </div>
+          <div class="s2-grid-row" id="s2-r7">
+            <img class="s2-img" src="../../../public/images/angel-ruiz-mago-eventos-madrid.webp" />
+            <img class="s2-img" src="../../../public/images/mago-para-eventos-empresa-madrid.webp" />
+            <img class="s2-img" src="../../../public/images/mago-bodas-madrid-eventos.webp" />
+            <img class="s2-img" src="../../../public/images/ilusionista-eventos-empresa-madrid.webp" />
+            <img class="s2-img" src="../../../public/images/mago-empresas-madrid-eventos.webp" />
+            <img class="s2-img" src="../../../public/images/mago-madrid-evento-privado.webp" />
+          </div>
+        </div>
+        <div style="position: absolute; inset: 0; background: radial-gradient(circle, transparent 0%, #000 80%); z-index: 1;"></div>
+        <h2 class="s2-text" id="s2-t1">Olvídate de la<br>típica fiesta<br>aburrida...</h2>
+      </div>
+
+      <!-- SCENE 3: SOLUCIÓN ÉPICA Y MONTAJE (12 - 22s) -->
+      <div id="s3-epic" class="clip scene-content" data-start="12" data-duration="10" data-track-index="1">
+        <div class="s3-text-container">
+          <div class="s3-text-1" id="s3-t1">Hazlo<br>ÉPICO.</div>
+          <div class="s3-text-2" id="s3-t2">Magia de Alto Impacto.</div>
+        </div>
+        
+        <div class="fast-cut-container" id="fc-container">
+          <!-- 15 images for the fast cut -->
+          <img class="fast-cut-img" id="fc-1" src="../../../public/images/angel-ruiz-mago-profesional-madrid.webp" />
+          <img class="fast-cut-img" id="fc-2" src="../../../public/images/cartomagia-angel-ruiz.webp" />
+          <img class="fast-cut-img" id="fc-3" src="../../../public/images/evento-empresa-mago-angel-ruiz.webp" />
+          <img class="fast-cut-img" id="fc-4" src="../../../public/images/ilusionista-eventos-empresa-madrid.webp" />
+          <img class="fast-cut-img" id="fc-5" src="../../../public/images/ilusionista-eventos-madrid-fotos.webp" />
+          <img class="fast-cut-img" id="fc-6" src="../../../public/images/mago-bodas-madrid-eventos.webp" />
+          <img class="fast-cut-img" id="fc-7" src="../../../public/images/mago-empresas-madrid-eventos.webp" />
+          <img class="fast-cut-img" id="fc-8" src="../../../public/images/mago-para-eventos-empresa-madrid.webp" />
+          <img class="fast-cut-img" id="fc-9" src="../../../public/images/mejor-mago-eventos-corporativos.webp" />
+          <img class="fast-cut-img" id="fc-10" src="../../../public/images/show-de-magia-para-empresas.webp" />
+          <img class="fast-cut-img" id="fc-11" src="../../../public/images/angel-ruiz-evento.webp" />
+          <img class="fast-cut-img" id="fc-12" src="../../../public/images/fiesta-eventos-madrid.webp" />
+          <img class="fast-cut-img" id="fc-13" src="../../../public/images/mago-madrid-evento-privado.webp" />
+          <img class="fast-cut-img" id="fc-14" src="../../../public/images/ilusionista-profesional-madrid.webp" />
+          <img class="fast-cut-img" id="fc-15" src="../../../public/images/mago-profesional-angel-ruiz.webp" />
+          
+        </div>
+      </div>
+
+      <!-- SCENE 4: IMPACTO INVITADOS (22 - 28s) -->
+      <div id="s4-social" class="clip scene-content" data-start="22" data-duration="6" data-track-index="2">
+        <div class="s4-overlay"></div>
+        <div class="s4-bubble b1" id="s4-b1">"¡Me he quedado sin palabras!"</div>
+        <div class="s4-bubble b2" id="s4-b2">"¿Pero cómo lo ha hecho? 🤯"</div>
+        <div class="s4-bubble b3" id="s4-b3">"Tus invitados dirán: ¡Es lo más increíble que he visto!"</div>
+        <!-- <h2 class="s4-main-text" id="s4-main">Tus invitados dirán:<br>¡Es lo más increíble que he visto!</h2> -->
+      </div>
+
+      <!-- SCENE 5: CTA (28 - 35s) -->
+      <div id="s5-cta" class="clip scene-content" data-start="28" data-duration="7" data-track-index="1">
+        <div class="s5-foto-container" id="s5-pic">
+          <div class="s5-halo"></div>
+          <img class="s5-foto" src="../../../public/images/foto-bio.webp" />
+        </div>
+        <h2 class="s5-headline" id="s5-h1">Fechas limitadas.</h2>
+        <p class="s5-sub" id="s5-h2">Asegura un espectáculo que nadie olvidará.</p>
+        <div class="s5-btn" id="s5-btn">RESERVA AHORA</div>
+        <div style="font-size: 40px; color: #fff; margin-top: 40px; opacity: 0;" id="s5-tel">
+          📞 648 055 636
+        </div>
+      </div>
+
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      window.__timelines["cumpleanos-promo"] = tl;
+
+      // =========================================
+      // SCENE 1: HOOK (0 - 5s)
+      // =========================================
+      tl.from("#s1-t1", { scale: 3, opacity: 0, duration: 0.6, ease: "back.out(1.5)" }, 0.5);
+      
+      // Glitches synced to beat
+      tl.to(".s1-glitch-1", { opacity: 0.6, duration: 0.1, ease: "steps(1)", yoyo: true, repeat: 3 }, 1.5);
+      tl.to(".s1-glitch-2", { opacity: 0.8, duration: 0.1, ease: "steps(1)", yoyo: true, repeat: 3 }, 2.2);
+
+      tl.fromTo("#s1-t2", { y: 100, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power4.out" }, 2.5);
+      
+      // Screen shake
+      tl.to("#main-stage", { x: -10, y: 5, duration: 0.05, yoyo: true, repeat: 5, ease: "rough({strength: 2, points: 10})" }, 2.5);
+
+      // =========================================
+      // SCENE 2: CONTRASTE (5s - 12s)
+      // =========================================
+      tl.fromTo("#s2-grid", { opacity: 0 }, { opacity: 0.4, duration: 1 }, 5);
+      tl.fromTo("#s2-r1", { x: 0 }, { x: -800, duration: 7, ease: "linear" }, 5);
+      tl.fromTo("#s2-r2", { x: -500 }, { x: 200, duration: 7, ease: "linear" }, 5);
+      tl.fromTo("#s2-r3", { x: -200 }, { x: -1000, duration: 7, ease: "linear" }, 5);
+      tl.fromTo("#s2-r4", { x: 100 }, { x: -600, duration: 7, ease: "linear" }, 5);
+      tl.fromTo("#s2-r5", { x: -400 }, { x: 300, duration: 7, ease: "linear" }, 5);
+      tl.fromTo("#s2-r6", { x: -100 }, { x: -900, duration: 7, ease: "linear" }, 5);
+      tl.fromTo("#s2-r7", { x: -600 }, { x: 100, duration: 7, ease: "linear" }, 5);
+
+      tl.from("#s2-t1", { scale: 0.5, opacity: 0, rotationX: 90, duration: 1, ease: "back.out(1.7)" }, 5.5);
+      // Continuous slow scale on text
+      tl.to("#s2-t1", { scale: 1.1, duration: 6, ease: "linear" }, 6.5);
+
+      // =========================================
+      // SCENE 3: SOLUCIÓN ÉPICA Y MONTAJE (12s - 22s)
+      // =========================================
+      tl.to("#s3-t1", { opacity: 1, scale: 1, duration: 0.1 }, 12.0);
+      tl.fromTo("#s3-t1", { scale: 2 }, { scale: 1, duration: 0.5, ease: "expo.out" }, 12.0);
+      tl.to("#main-stage", { x: 15, duration: 0.05, yoyo: true, repeat: 3 }, 12.0); // Big impact
+
+      tl.to("#s3-t2", { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 12.8);
+      tl.fromTo("#s3-t2", { y: 50 }, { y: 0, duration: 0.5 }, 12.8);
+
+      // Fade out texts to start montage
+      tl.to(["#s3-t1", "#s3-t2"], { opacity: 0, scale: 1.5, duration: 0.4, ease: "power2.in" }, 14.0);
+      tl.to("#fc-container", { opacity: 1, duration: 0.1 }, 14.4);
+
+      // Fast Cut Montage (14.5s to 21.5s) -> 7 seconds, 15 photos -> ~0.46s per photo
+      let fcTime = 14.5;
+      const photos = 15;
+      const durationPerPhoto = 0.45;
+      
+      for(let i=1; i<=photos; i++) {
+        // Instantly show photo (no fade = no flash)
+        tl.set(`#fc-${i}`, { opacity: 1 }, fcTime);
+        // Slight zoom effect while visible
+        tl.to(`#fc-${i}`, { scale: 1.0, duration: durationPerPhoto, ease: "linear" }, fcTime);
+        
+        // Instantly hide previous photo (if not first)
+        if(i > 1) {
+          tl.set(`#fc-${i-1}`, { opacity: 0 }, fcTime);
+        }
+
+        fcTime += durationPerPhoto;
+      }
+      
+      // Final photo stays a bit longer then fades
+      tl.to(`#fc-${photos}`, { opacity: 0, duration: 0.5 }, fcTime);
+
+      // =========================================
+      // SCENE 4: IMPACTO INVITADOS (22s - 28s)
+      // =========================================
+      tl.fromTo("#s4-b1", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: "back.out(1.5)" }, 22.5);
+      tl.fromTo("#s4-b2", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: "back.out(1.5)" }, 23.5);
+      tl.fromTo("#s4-b3", { scale: 0, opacity: 0, y: 100 }, { scale: 1, opacity: 1, y: 0, duration: 0.8, ease: "back.out(1.2)" }, 25.0);
+      
+      // Float animation
+      tl.to("#s4-b1", { y: -20, duration: 2, yoyo: true, repeat: -1, ease: "sine.inOut" }, 23.1);
+      tl.to("#s4-b2", { y: 20, duration: 2.5, yoyo: true, repeat: -1, ease: "sine.inOut" }, 24.1);
+      tl.to("#s4-b3", { y: -15, duration: 2.2, yoyo: true, repeat: -1, ease: "sine.inOut" }, 25.8);
+
+      // =========================================
+      // SCENE 5: CTA (28s - 35s)
+      // =========================================
+      tl.fromTo("#s5-pic", { scale: 0, rotation: -90, opacity: 0 }, { scale: 1, rotation: 0, opacity: 1, duration: 1.2, ease: "elastic.out(1, 0.5)" }, 28.5);
+      tl.fromTo("#s5-h1", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 29.5);
+      tl.fromTo("#s5-h2", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power3.out" }, 29.8);
+      tl.fromTo("#s5-btn", { scale: 0.5, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.6, ease: "back.out(2)" }, 30.5);
+      tl.fromTo("#s5-tel", { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" }, 31.0);
+      
+      // Pulse button
+      tl.to("#s5-btn", { scale: 1.05, duration: 0.5, yoyo: true, repeat: 5, ease: "sine.inOut" }, 31.5);
+
+      // Fade out
+      tl.to("#s5-cta", { opacity: 0, duration: 1 }, 34.0);
+
+    </script>
+  </body>
+</html>
