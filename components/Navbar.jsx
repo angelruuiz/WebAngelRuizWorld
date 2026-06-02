@@ -76,15 +76,72 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                     ))}
                 </div>
 
-                <div className="hidden md:flex items-center gap-6">
+                <div className="hidden md:flex items-center gap-6 relative group">
+                    <motion.div 
+                        animate={{ opacity: [0.2, 0.5, 0.2], scale: [1, 1.05, 1] }} 
+                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                        className="absolute inset-0 bg-amber-500 blur-[15px] rounded-full pointer-events-none"
+                    />
+
                     <motion.button 
-                        whileHover={{ scale: 1.05, y: -2 }}
-                        whileTap={{ scale: 0.95 }}
-                        transition={{ type: "spring", stiffness: 400, damping: 10 }}
                         onClick={onOpenContact} 
-                        className="btn-glass flex items-center gap-2 border border-[#d4a853]/30"
+                        initial="rest"
+                        animate="rest"
+                        whileHover="hover" 
+                        whileTap="tap" 
+                        variants={{
+                            rest: { scale: 1 },
+                            hover: { scale: 1.05, y: -2 },
+                            tap: { scale: 0.95, y: 0 }
+                        }}
+                        transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                        className="relative px-5 py-2.5 overflow-hidden rounded-full cursor-pointer border border-amber-300/50 shadow-[0_0_15px_rgba(245,158,11,0.3)] z-10 bg-[rgba(3,7,18,0.5)] backdrop-blur-md"
                     >
-                        Contacto <Sparkles className="w-3 h-3" />
+                        <motion.div 
+                            animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+                            transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                            className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-90 transition-opacity duration-300"
+                            style={{ 
+                                background: "linear-gradient(90deg, rgba(212,168,83,0.9), rgba(245,158,11,0.9), rgba(251,191,36,0.9), rgba(212,168,83,0.9))",
+                                backgroundSize: "200% 200%"
+                            }}
+                        />
+                        
+                        <motion.div
+                            variants={{
+                                hover: { x: ["-150%", "350%"], transition: { repeat: Infinity, duration: 1.2, ease: "linear" } },
+                                rest: { x: "-150%" },
+                                tap: { x: "350%" }
+                            }}
+                            className="absolute inset-0 w-[50%] bg-gradient-to-r from-transparent via-white/80 to-transparent skew-x-[30deg] pointer-events-none"
+                        />
+
+                        <motion.div 
+                            variants={{
+                                tap: { scale: 2.5, opacity: 0, transition: { duration: 0.6, ease: "easeOut" } },
+                                hover: { scale: 1, opacity: 0 },
+                                rest: { scale: 1, opacity: 0 }
+                            }}
+                            className="absolute inset-0 rounded-full border-[2px] border-white pointer-events-none"
+                        />
+                        
+                        <motion.span 
+                            variants={{
+                                tap: { filter: "blur(2px)", scale: 0.95 },
+                                hover: { filter: "blur(0px)", scale: 1 },
+                                rest: { filter: "blur(0px)", scale: 1 }
+                            }}
+                            className="relative z-10 flex items-center justify-center gap-2 text-slate-100 group-hover:text-slate-950 font-bold tracking-[0.1em] uppercase text-xs transition-colors duration-300"
+                        >
+                            Contacto 
+                            <motion.div variants={{
+                                hover: { rotate: 180, scale: 1.2, transition: { duration: 0.4 } },
+                                rest: { rotate: 0, scale: 1 },
+                                tap: { rotate: -45, scale: 0.8 }
+                            }}>
+                                <Sparkles className="w-3 h-3" />
+                            </motion.div>
+                        </motion.span>
                     </motion.button>
                 </div>
             </nav>
