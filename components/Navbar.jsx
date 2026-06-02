@@ -65,6 +65,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
             ]
         },
         { name: 'Galería', href: '/galeria' },
+        { name: 'Valoraciones', href: '/valoraciones' },
         { name: 'Blog', href: '/blog' },
     ];
 
