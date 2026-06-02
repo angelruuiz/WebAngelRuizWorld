@@ -6,14 +6,14 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import Link from 'next/link';
 
 export const metadata = {
-    title: 'Mago para Restaurantes en Madrid | Atrae y Fideliza Clientes',
-    description: 'Destaca tu local contratando un mago para restaurantes en Madrid. Magia de mesa en mesa para amenizar esperas, atraer cenas de grupo y fidelizar clientes.',
+    title: 'Mago para Restaurantes en Madrid 🍷 Aumenta tu Ticket Medio',
+    description: '¿Buscas mago para tu restaurante en Madrid? Magia de mesa en mesa (table hopping) para fidelizar clientes, amenizar esperas y destacar tu local.',
     alternates: {
         canonical: 'https://angelruiz.world/empresas/mago-para-restaurantes-madrid',
     },
     keywords: 'mago para restaurantes madrid, magia en restaurantes madrid, ilusionista restaurantes madrid, entretenimiento para restaurantes, cenas con espectaculo madrid, fidelizar clientes restaurante, mago hosteleria',
     openGraph: {
-        title: 'Mago para Restaurantes y Hostelería en Madrid | Ángel Ruiz',
+        title: 'Mago para Restaurantes en Madrid 🍷 Aumenta tu Ticket Medio',
         description: 'Aumenta el ticket medio y la fidelización de tus clientes con magia de mesa en mesa. El entretenimiento perfecto para restaurantes en Madrid.',
         images: [{ url: '/images/foto-spring-cartas.webp' }],
     }

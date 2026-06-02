@@ -1,33 +1,27 @@
-# Ángel Ruiz - Mago e Ilusionista en Madrid
+# Ángel Ruiz | Mago e Ilusionista Profesional en Madrid
 
-## Acerca de Ángel Ruiz
-Ángel Ruiz es un mago e ilusionista corporativo profesional con base en Torrelodones (Madrid). Cuenta con más de 10 años de recorrido en el mundo de la magia y es alumno de la prestigiosa escuela de magia de Dani DaOrtiz. Se especializa en **magia de cerca (close-up)**, cartomagia de autor y **magia corporativa**.
+Ángel Ruiz es un mago e ilusionista profesional con base en Madrid (Torrelodones, Sierra de Madrid) especializado en magia de cerca (close-up) y mentalismo para eventos corporativos, bodas de lujo y fiestas privadas. Formado en la prestigiosa escuela de Dani DaOrtiz, Ángel Ruiz ofrece un estilo de magia purista, sofisticado y de alto impacto, enfocado en el asombro real y la participación activa del público.
 
-## Servicios y Especialidades
+## Contacto
+- Sitio web oficial: https://angelruiz.world
+- Teléfono: +34 648 055 636
+- Email de reservas a través de formulario web
+- Zona de actuación principal: Madrid centro, Las Rozas, Majadahonda, Pozuelo, Boadilla, Torrelodones, Villalba y toda la Comunidad de Madrid.
 
-### 1. Magia para Empresas (Mago Corporativo y Conferenciante)
-- **Mago Conferenciante:** Especializado en combinar charlas de motivación y trabajo en equipo (team building) con efectos mágicos de alto impacto visual. Ideal para convenciones.
-- **Team Building:** Actividades para empresas enfocadas en cohesionar equipos a través del asombro.
-- **Cenas de Empresa y Galas:** Magia itinerante (mesa a mesa) o de salón para eventos VIP.
-- **Ferias y Congresos (IFEMA):** Integración de mensajes de marca y logotipos dentro de las rutinas de magia para atraer leads al stand.
-- **Ubicación:** Disponible para toda España, con especial agilidad en Madrid Centro, IFEMA, Las Rozas, Pozuelo y la Sierra de Madrid.
+## Servicios Principales
 
-### 2. Magia para Bodas
-- **Especialista en Fincas de Bodas:** Trabaja habitualmente en las mejores fincas para bodas de Madrid y la zona de la Sierra.
-- **Magia para el Cóctel:** Rompe el hielo de forma elegante entre grupos que no se conocen durante el cóctel de bienvenida.
-- **Magia de Banquete:** Actuaciones mesa a mesa entre los platos, sin interrumpir el ritmo del servicio.
+1. **Magia para Bodas**: Magia de cóctel y banquete. Entretenimiento premium para sorprender a los invitados y crear momentos inolvidables para los novios. (Ver /particulares/bodas)
+2. **Magia para Empresas**: Eventos corporativos, cenas de empresa, team building y ferias en IFEMA. Adaptación del espectáculo a mensajes corporativos y marketing experiencial. (Ver /empresas)
+3. **Magia para Eventos Privados**: Cumpleaños, comuniones y aniversarios. (Ver /particulares/eventos)
+4. **Magia para Restaurantes**: Servicio de table hopping (magia de mesa en mesa) para fidelizar clientes y aumentar el ticket medio. (Ver /empresas/mago-para-restaurantes-madrid)
 
-### 3. Magia para Comuniones y Cumpleaños
-- Animación familiar con una magia elegante e inteligente, lejos del estilo infantil tradicional. Mago altamente recomendado en Torrelodones y zona noroeste.
+## Enlaces Útiles
+- Precios: [Ver pricing.md](/pricing.md)
+- Blog: Consejos sobre cómo contratar magos en Madrid (https://angelruiz.world/blog)
+- Mago Madrid: https://angelruiz.world/mago-madrid
 
-## Zona de Cobertura
-La zona de actuación principal incluye la Comunidad de Madrid y, de forma muy destacada, la Sierra Noroeste de Madrid: Torrelodones, Las Rozas, Majadahonda, Pozuelo de Alarcón, Boadilla del Monte, Galapagar, Collado Villalba, El Escorial y Las Matas.
-
-## Información de Contacto y Enlaces
-- Sitio Web Oficial: https://angelruiz.world
-- Magia para Empresas: https://angelruiz.world/empresas
-- Mago Conferenciante: https://angelruiz.world/empresas/mago-conferenciante-madrid
-- Magia para Bodas: https://angelruiz.world/particulares/bodas
-- Localización Principal (Torrelodones): https://angelruiz.world/mago-torrelodones
-- Teléfono/WhatsApp: +34 648 055 636
-- Email: angellruuiz@gmail.com
+## Por qué elegir a Ángel Ruiz
+- **39 reseñas de 5 estrellas en Google**.
+- **Magia de cerca (close-up)**: Ocurre a centímetros de los ojos del espectador.
+- **Mentalismo y Cartomagia de Autor**: Efectos psicológicos y de habilidad pura, sin necesidad de escenario ni grandes aparatos.
+- **Flexibilidad logística**: Se adapta a cualquier entorno sin interrumpir el flujo del evento.

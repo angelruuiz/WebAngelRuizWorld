@@ -38,11 +38,33 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
 
     const navLinks = [
         { name: 'Inicio', href: '/' },
-        { name: 'Sobre Mí', href: '/sobre-mi' },
-        { name: 'Particulares', href: '/particulares' },
-        { name: 'Empresas', href: '/empresas' },
+        { 
+            name: 'Especialidades', 
+            href: '#',
+            children: [
+                { name: 'Magia Close-Up', href: '/mago-close-up-madrid' },
+                { name: 'Mentalismo', href: '/mago-mentalista-madrid' },
+                { name: 'Contratar Mago', href: '/contratar-mago-madrid' }
+            ]
+        },
+        { 
+            name: 'Particulares', 
+            href: '/particulares',
+            children: [
+                { name: 'Bodas', href: '/particulares/bodas' },
+                { name: 'Comuniones', href: '/particulares/comuniones' },
+                { name: 'Fiestas y Eventos', href: '/particulares/eventos' }
+            ]
+        },
+        { 
+            name: 'Empresas', 
+            href: '/empresas',
+            children: [
+                { name: 'Eventos Corporativos', href: '/empresas' },
+                { name: 'Restaurantes', href: '/empresas/mago-para-restaurantes-madrid' }
+            ]
+        },
         { name: 'Galería', href: '/galeria' },
-        { name: 'Valoraciones', href: '/valoraciones' },
         { name: 'Blog', href: '/blog' },
     ];
 
@@ -64,15 +86,34 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                 {/* Desktop Menu */}
                 <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-8 text-[11px] font-bold uppercase tracking-[0.3em]">
                     {navLinks.map((link) => (
-                        <Link 
-                            key={link.name} 
-                            href={link.href}
-                            onClick={(e) => handleMagicTransition(e, link.href)}
-                            className={`transition-colors relative group text-slate-300 hover:text-[#d4a853] ${pathname === link.href ? 'text-[#d4a853]' : ''}`}
-                        >
-                            {link.name}
-                            <span className={`absolute -bottom-1 left-1/2 -translate-x-1/2 h-[1px] bg-gradient-to-r from-[#d4a853] to-[#c9956b] transition-all duration-300 ${pathname === link.href ? 'w-full' : 'w-0 group-hover:w-full'}`} />
-                        </Link>
+                        <div key={link.name} className="relative group">
+                            <Link 
+                                href={link.href}
+                                onClick={(e) => link.href !== '#' && handleMagicTransition(e, link.href)}
+                                className={`transition-colors relative inline-block text-slate-300 hover:text-[#d4a853] ${pathname === link.href ? 'text-[#d4a853]' : ''}`}
+                            >
+                                {link.name}
+                                <span className={`absolute -bottom-1 left-1/2 -translate-x-1/2 h-[1px] bg-gradient-to-r from-[#d4a853] to-[#c9956b] transition-all duration-300 ${pathname === link.href ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+                            </Link>
+                            
+                            {link.children && (
+                                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                                    <div className="flex flex-col bg-[rgba(3,7,18,0.95)] backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl py-2 min-w-[220px]">
+                                        {link.children.map(child => (
+                                            <Link 
+                                                key={child.name} 
+                                                href={child.href}
+                                                onClick={(e) => handleMagicTransition(e, child.href)}
+                                                className="px-5 py-3 text-slate-300 hover:text-[#d4a853] hover:bg-white/5 transition-colors whitespace-nowrap flex items-center gap-2"
+                                            >
+                                                <span className="w-1 h-1 bg-amber-500 rounded-full opacity-50"></span>
+                                                {child.name}
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+                        </div>
                     ))}
                 </div>
 
@@ -186,17 +227,64 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: '100%' }}
                         transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                        className="fixed inset-x-0 bottom-0 z-[110] bg-slate-900/95 backdrop-blur-xl border-t border-white/10 rounded-t-3xl pt-6 pb-safe-bottom md:hidden shadow-[0_-10px_40px_rgba(0,0,0,0.5)]"
+                        className="fixed inset-x-0 bottom-0 z-[110] bg-slate-900/95 backdrop-blur-xl border-t border-white/10 rounded-t-3xl pt-6 pb-safe-bottom max-h-[85vh] overflow-y-auto md:hidden shadow-[0_-10px_40px_rgba(0,0,0,0.5)]"
                     >
                         <div className="absolute top-3 left-1/2 -translate-x-1/2 w-12 h-1 bg-white/20 rounded-full" />
                         <button onClick={() => setIsMoreMenuOpen(false)} className="absolute top-4 right-4 text-slate-400 hover:text-white p-2">
                             <X className="w-5 h-5" />
                         </button>
-                        <div className="flex flex-col gap-2 px-6 mt-4">
-                            <Link href="/sobre-mi" className="py-4 border-b border-white/5 text-lg font-[Cinzel] font-bold text-slate-200">Sobre Mí</Link>
-                            <Link href="/empresas" className="py-4 border-b border-white/5 text-lg font-[Cinzel] font-bold text-slate-200">Empresas</Link>
-                            <Link href="/valoraciones" className="py-4 border-b border-white/5 text-lg font-[Cinzel] font-bold text-slate-200">Valoraciones</Link>
-                            <button onClick={() => { setIsMoreMenuOpen(false); onOpenContact(); }} className="py-4 text-left text-lg font-[Cinzel] font-bold text-[#d4a853]">Contacto</button>
+                        <div className="flex flex-col px-6 mt-6 mb-8">
+                            <details className="group border-b border-white/5">
+                                <summary className="py-4 text-lg font-[Cinzel] font-bold text-amber-400 cursor-pointer list-none flex justify-between items-center outline-none">
+                                    Especialidades y Contratación
+                                    <span className="text-sm opacity-50 group-open:rotate-180 transition-transform">▼</span>
+                                </summary>
+                                <div className="flex flex-col gap-4 pb-4 pl-4 border-l border-amber-500/20 ml-2 mt-2">
+                                    <Link href="/mago-close-up-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Magia Close-Up (De cerca)</Link>
+                                    <Link href="/mago-mentalista-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Mentalismo</Link>
+                                    <Link href="/contratar-mago-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-amber-500 font-bold hover:text-amber-400">Contratar Mago en Madrid</Link>
+                                </div>
+                            </details>
+
+                            <details className="group border-b border-white/5">
+                                <summary className="py-4 text-lg font-[Cinzel] font-bold text-slate-200 cursor-pointer list-none flex justify-between items-center outline-none">
+                                    Particulares
+                                    <span className="text-sm opacity-50 group-open:rotate-180 transition-transform">▼</span>
+                                </summary>
+                                <div className="flex flex-col gap-4 pb-4 pl-4 border-l border-white/10 ml-2 mt-2">
+                                    <Link href="/particulares/bodas" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Bodas</Link>
+                                    <Link href="/particulares/comuniones" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Comuniones</Link>
+                                    <Link href="/particulares/eventos" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Cumpleaños y Fiestas</Link>
+                                </div>
+                            </details>
+
+                            <details className="group border-b border-white/5">
+                                <summary className="py-4 text-lg font-[Cinzel] font-bold text-slate-200 cursor-pointer list-none flex justify-between items-center outline-none">
+                                    Empresas
+                                    <span className="text-sm opacity-50 group-open:rotate-180 transition-transform">▼</span>
+                                </summary>
+                                <div className="flex flex-col gap-4 pb-4 pl-4 border-l border-white/10 ml-2 mt-2">
+                                    <Link href="/empresas/mago-ferias-congresos-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Ferias y Congresos</Link>
+                                    <Link href="/empresas/mago-cenas-empresa-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Cenas de Empresa</Link>
+                                    <Link href="/empresas/mago-team-building-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Team Building</Link>
+                                    <Link href="/empresas/mago-para-restaurantes-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Restaurantes</Link>
+                                </div>
+                            </details>
+
+                            <Link href="/sobre-mi" onClick={() => setIsMoreMenuOpen(false)} className="py-4 border-b border-white/5 text-lg font-[Cinzel] font-bold text-slate-200 flex justify-between items-center">
+                                Sobre Mí
+                                <span className="text-amber-500/50">→</span>
+                            </Link>
+
+                            <Link href="/valoraciones" onClick={() => setIsMoreMenuOpen(false)} className="py-4 border-b border-white/5 text-lg font-[Cinzel] font-bold text-slate-200 flex justify-between items-center">
+                                Valoraciones
+                                <span className="text-amber-500/50">→</span>
+                            </Link>
+
+                            <button onClick={() => { setIsMoreMenuOpen(false); onOpenContact(); }} className="py-4 text-left text-lg font-[Cinzel] font-bold text-[#d4a853] mt-2 flex justify-between items-center">
+                                Contacto Directo
+                                <Sparkles className="w-4 h-4" />
+                            </button>
                         </div>
                     </motion.div>
                 )}

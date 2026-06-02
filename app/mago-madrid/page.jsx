@@ -6,13 +6,13 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: 'Mago en Madrid | Ángel Ruiz · Ilusionista Profesional para Eventos',
-    description: 'Ángel Ruiz, mago profesional en Madrid. Ilusionismo de cerca para bodas, empresas y eventos privados en toda la Comunidad de Madrid. 32 reseñas · 5 estrellas.',
+    title: 'Contratar Mago en Madrid ✨ Ángel Ruiz | +10 Años de Magia Premium',
+    description: '¿Buscas mago en Madrid? Ángel Ruiz, experto en ilusionismo premium para bodas, empresas y eventos. Magia de cerca (close-up) inolvidable. ⭐ 39 reseñas.',
     alternates: {
         canonical: 'https://angelruiz.world/mago-madrid',
     },
     openGraph: {
-        title: 'Mago en Madrid | Ángel Ruiz · Ilusionista Profesional',
+        title: 'Contratar Mago en Madrid ✨ Ángel Ruiz',
         description: 'El mago de referencia en Madrid para bodas exclusivas y eventos corporativos. Magia de cerca, mentalismo y cartomagia de autor.',
         images: [{ url: '/images/foto-bio.png' }],
     }
