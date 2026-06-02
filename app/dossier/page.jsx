@@ -19,7 +19,7 @@ const slides = [
             { label: 'Eventos Realizados', value: '100+' },
             { label: 'Satisfacción', value: '100%' }
         ],
-        image: '/images/foto-profesional-mirando-carta.webp'
+        image: '/images/IMG_20260531_162002.png'
     },
     {
         id: 'perfil',
