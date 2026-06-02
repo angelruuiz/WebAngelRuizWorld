@@ -49,7 +49,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
         },
         { 
             name: 'Particulares', 
-            href: '/particulares',
+            href: '#',
             children: [
                 { name: 'Bodas', href: '/particulares/bodas' },
                 { name: 'Comuniones', href: '/particulares/comuniones' },
@@ -196,10 +196,10 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                     </svg>
                     <span>Inicio</span>
                 </Link>
-                <Link href="/particulares" className={`tab-item flex-1 ${pathname.startsWith('/particulares') ? 'active' : ''}`}>
+                <button onClick={() => setIsMoreMenuOpen(true)} className={`tab-item flex-1 ${pathname.startsWith('/particulares') || pathname.startsWith('/empresas') ? 'active' : ''}`}>
                     <Sparkles className="w-5 h-5" />
                     <span>Servicios</span>
-                </Link>
+                </button>
                 <Link href="/galeria" className={`tab-item flex-1 ${pathname === '/galeria' ? 'active' : ''}`}>
                     <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth={1.5} stroke='currentColor' className='w-5 h-5'>
                         <path d='M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6z' /> <path d='M14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6z' /> <path d='M4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2z' /> <path d='M14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z' />
