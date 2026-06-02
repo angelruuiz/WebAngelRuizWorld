@@ -1,6 +1,6 @@
 ---
 title: "Mago para Restaurantes en Madrid: Cómo Aumentar tu Facturación y Retención"
-date: '2026-06-02'
+date: '2026-05-18'
 excerpt: 'Integrar un mago en tu restaurante en Madrid no es un gasto, es una inversión en experiencia de cliente que dispara las reseñas positivas y la fidelidad.'
 category: 'Empresas'
 readTime: '5 MIN'

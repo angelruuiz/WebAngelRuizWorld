@@ -1,6 +1,6 @@
 ---
 title: "Mago para Comuniones en Madrid: La Guía Completa de Contratación"
-date: '2026-06-02'
+date: '2026-06-01'
 excerpt: 'Todo lo que necesitas saber antes de contratar a un mago para comuniones. Tipos de show, presupuestos y consejos para elegir la mejor animación de eventos infantiles y familiares.'
 category: 'Particulares'
 readTime: '5 MIN'

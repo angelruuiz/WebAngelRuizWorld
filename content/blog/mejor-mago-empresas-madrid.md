@@ -1,6 +1,6 @@
 ---
 title: "¿Cuál es el mejor mago para empresas en Madrid?"
-date: '2026-06-02'
+date: '2026-05-10'
 excerpt: 'Descubre los criterios clave para identificar y contratar al mejor mago corporativo para tu próximo evento en Madrid. No contrates simple entretenimiento, busca Retorno de Inversión.'
 category: 'Empresas'
 readTime: '6 MIN'

@@ -1,6 +1,6 @@
 ---
 title: "Cenas de Empresa Originales en Madrid: El Factor Mágico"
-date: '2026-06-02'
+date: '2026-05-25'
 excerpt: 'Olvídate de las aburridas cenas corporativas. Te contamos por qué incluir magia y mentalismo es el secreto para organizar cenas de empresa divertidas y memorables en Madrid.'
 category: 'Empresas'
 readTime: '4 MIN'
