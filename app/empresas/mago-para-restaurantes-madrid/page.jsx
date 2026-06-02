@@ -1,5 +1,6 @@
 import React from 'react';
 import NavFooterClient from '@/components/NavFooterClient';
+import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import FAQItem from '@/components/FAQItem';
 
 export const metadata = {
@@ -21,6 +22,8 @@ const faqs = [
 export default function Page() {
   return (
     <NavFooterClient>
+      <MagicCursor />
+      <ParticleBackground />
     <div className="min-h-screen bg-[#0A0A0A] text-slate-300 font-sans selection:bg-amber-500/30">
       
       {/* HEADER B2B BRUTALIST */}
