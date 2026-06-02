@@ -34,16 +34,28 @@ export default function sitemap() {
       priority: 0.95,
     },
     {
-      url: 'https://angelruiz.world/particulares',
+      url: 'https://angelruiz.world/mago-close-up-madrid',
       lastModified: lastMod,
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.95,
+    },
+    {
+      url: 'https://angelruiz.world/contratar-mago-madrid',
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 1.0,
     },
     {
       url: 'https://angelruiz.world/particulares/bodas',
       lastModified: lastMod,
       changeFrequency: 'monthly',
       priority: 0.95,
+    },
+    {
+      url: 'https://angelruiz.world/particulares/comuniones',
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.9,
     },
     {
       url: 'https://angelruiz.world/particulares/eventos',
