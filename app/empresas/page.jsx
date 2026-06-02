@@ -196,10 +196,15 @@ export default function EmpresasPage() {
                             <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] mt-6">
                                 <ul className="flex items-center justify-center md:justify-start [&_li]:mx-12 [&_img]:max-w-none animate-marquee">
                                     {[
-                                        { src: '/images/logo-movistar.webp', alt: 'Movistar' },
+                                        { src: '/images/logo-movistar.webp', alt: 'Movistar Estudiantes' },
+                                        { src: '/images/logo-escombrera.webp', alt: 'Peña La Escombrera' },
+                                        { src: '/images/logo-gondomar.webp', alt: 'Colegio Gondomar' },
+                                        { src: '/images/logo-senescal.webp', alt: 'Catering Senescal' },
                                         { src: '/images/logo-alcampo.webp', alt: 'Alcampo' },
                                         { src: '/images/logo-ahorramas.webp', alt: 'Ahorramás' },
-                                        { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' }
+                                        { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
+                                        { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
+                                        { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' }
                                     ].map((logo, idx) => (
                                         <li key={idx}>
                                             <Image src={logo.src} alt={logo.alt} width={120} height={40} className="object-contain h-8 w-auto filter grayscale opacity-40 hover:opacity-100 transition-opacity duration-300" />

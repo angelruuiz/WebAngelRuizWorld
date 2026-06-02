@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import FAQItem from '@/components/FAQItem';
 import Link from 'next/link';
 import NavFooterClient from '@/components/NavFooterClient';
 import ContactButtonClient from '@/components/ContactButtonClient';
@@ -210,15 +211,7 @@ export default function ContratarMagoMadridPage() {
                         </div>
                         <div className="max-w-3xl mx-auto space-y-4">
                             {faqs.map((faq, index) => (
-                                <details key={index} className="group bg-white/5 border border-white/10 rounded-2xl p-6 [&_summary::-webkit-details-marker]:hidden cursor-pointer hover:bg-white/10 transition-colors">
-                                    <summary className="flex items-center justify-between font-bold text-white text-lg">
-                                        {faq.name}
-                                        <span className="ml-4 text-emerald-500 group-open:-rotate-180 transition-transform duration-300">▼</span>
-                                    </summary>
-                                    <p className="mt-4 text-slate-400 leading-relaxed">
-                                        {faq.acceptedAnswer.text}
-                                    </p>
-                                </details>
+                                <FAQItem key={index} faq={faq} />
                             ))}
                         </div>
                     </section>

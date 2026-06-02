@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import FAQItem from '@/components/FAQItem';
 import NavFooterClient from '@/components/NavFooterClient';
 import ContactButtonClient from '@/components/ContactButtonClient';
 import { MagicCursor, ParticleBackground, FadeIn } from '@/components/VisualEffects';
@@ -260,18 +261,8 @@ export default function BodasDetailPage() {
                                 <h2 className="text-3xl font-[Cinzel] text-white mb-8">Preguntas Frecuentes</h2>
                                 <div className="space-y-4">
                                     {faqSchema.mainEntity.map((faq, index) => (
-                                        <details key={index} className="group bg-[#111111]/50 border border-white/5 rounded-2xl overflow-hidden cursor-pointer">
-                                            <summary className="flex items-center justify-between p-6 text-white font-medium text-sm">
-                                                <span>{faq.name}</span>
-                                                <span className="text-[#d4a853] transition-transform group-open:rotate-180">
-                                                    ↓
-                                                </span>
-                                            </summary>
-                                            <div className="px-6 pb-6 text-slate-400 text-sm font-light leading-relaxed">
-                                                {faq.acceptedAnswer.text}
-                                            </div>
-                                        </details>
-                                    ))}
+                                <FAQItem key={index} faq={faq} />
+                            ))}
                                 </div>
                             </FadeIn>
                             <FadeIn delay={0.2}>
