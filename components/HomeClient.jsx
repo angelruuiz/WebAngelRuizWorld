@@ -86,19 +86,72 @@ const HeroClient = ({ onOpenModal }) => {
                     "LA MAGIA QUE HACE QUE TU EVENTO SEA INOLVIDABLE."
                 </motion.p>
                 
-                <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1.8, duration: 1 }} className="mt-8 md:mt-10 w-full max-w-xs md:max-w-none md:w-auto animate-pulse-gold rounded-full">
+                <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 1.8, duration: 1 }} className="mt-8 md:mt-10 w-full max-w-xs md:max-w-none md:w-auto rounded-full relative group">
+                    <motion.div 
+                        animate={{ opacity: [0.3, 0.6, 0.3], scale: [1, 1.05, 1] }} 
+                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                        className="absolute inset-0 bg-amber-500 blur-[25px] rounded-full pointer-events-none"
+                    />
+
                     <motion.button 
                         onClick={onOpenModal} 
-                        whileHover={{ scale: 1.02 }} 
-                        whileTap={{ scale: 0.97 }} 
-                        transition={{ type: "spring", duration: 0.4, bounce: 0.2 }}
-                        className="relative group w-full md:w-auto px-8 md:px-12 py-5 md:py-4 bg-transparent overflow-hidden rounded-full cursor-pointer border border-[#d4a853]/30"
+                        initial="rest"
+                        animate="rest"
+                        whileHover="hover" 
+                        whileTap="tap" 
+                        variants={{
+                            rest: { scale: 1 },
+                            hover: { scale: 1.05 },
+                            tap: { scale: 0.92 }
+                        }}
+                        transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                        className="relative w-full md:w-auto px-8 md:px-12 py-5 md:py-4 overflow-hidden rounded-full cursor-pointer border border-amber-300/60 shadow-[0_0_20px_rgba(245,158,11,0.5)] z-10"
                     >
-                        <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-[#d4a853] to-[#c9956b] opacity-90 group-hover:opacity-100 transition-opacity" />
-                        <span className="relative flex items-center justify-center gap-3 text-slate-950 font-bold tracking-widest uppercase text-sm md:text-sm group-active:blur-[2px] group-active:opacity-80 transition-all duration-200 ease-out">
-                            Contratar a Ángel Ruiz <Sparkles className="w-4 h-4" />
-                        </span>
-                        <div className="absolute inset-0 rounded-full blur-xl bg-amber-400/50 scale-110 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        <motion.div 
+                            animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+                            transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                            className="absolute inset-0 w-full h-full opacity-90 group-hover:opacity-100"
+                            style={{ 
+                                background: "linear-gradient(90deg, #d4a853, #f59e0b, #fbbf24, #d4a853)",
+                                backgroundSize: "200% 200%"
+                            }}
+                        />
+                        
+                        <motion.div
+                            variants={{
+                                hover: { x: ["-150%", "350%"], transition: { repeat: Infinity, duration: 1.2, ease: "linear" } },
+                                rest: { x: "-150%" },
+                                tap: { x: "350%" }
+                            }}
+                            className="absolute inset-0 w-[50%] bg-gradient-to-r from-transparent via-white/90 to-transparent skew-x-[30deg] pointer-events-none"
+                        />
+
+                        <motion.div 
+                            variants={{
+                                tap: { scale: 2.5, opacity: 0, transition: { duration: 0.6, ease: "easeOut" } },
+                                hover: { scale: 1, opacity: 0 },
+                                rest: { scale: 1, opacity: 0 }
+                            }}
+                            className="absolute inset-0 rounded-full border-[3px] border-white pointer-events-none"
+                        />
+                        
+                        <motion.span 
+                            variants={{
+                                tap: { filter: "blur(2px)", scale: 0.95 },
+                                hover: { filter: "blur(0px)", scale: 1 },
+                                rest: { filter: "blur(0px)", scale: 1 }
+                            }}
+                            className="relative z-10 flex items-center justify-center gap-3 text-slate-950 font-black tracking-[0.2em] uppercase text-sm md:text-sm"
+                        >
+                            Contratar a Ángel Ruiz 
+                            <motion.div variants={{
+                                hover: { rotate: 180, scale: 1.2, transition: { duration: 0.4 } },
+                                rest: { rotate: 0, scale: 1 },
+                                tap: { rotate: -45, scale: 0.8 }
+                            }}>
+                                <Sparkles className="w-5 h-5" />
+                            </motion.div>
+                        </motion.span>
                     </motion.button>
                 </motion.div>
             </motion.div>
