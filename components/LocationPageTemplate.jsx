@@ -54,7 +54,7 @@ export default function LocationPageTemplate({ location, allLocations }) {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": `Ángel Ruiz | Mago e Ilusionista en ${location.name}`,
-        "image": "https://angelruiz.world/images/foto-bio.webp",
+        "image": "https://angelruiz.world/images/foto-bio.png",
         "url": `https://angelruiz.world/mago-${location.slug}`,
         "telephone": "+34648055636",
         "address": {
@@ -110,7 +110,7 @@ export default function LocationPageTemplate({ location, allLocations }) {
                             "@id": "https://angelruiz.world/#organization",
                             "name": "Ángel Ruiz | Mago e Ilusionista",
                             "url": "https://angelruiz.world",
-                            "image": "https://angelruiz.world/images/foto-bio.webp",
+                            "image": "https://angelruiz.world/images/foto-bio.png",
                             "telephone": "+34648055636",
                             "priceRange": "€€€",
                             "address": {
@@ -269,3 +269,4 @@ export default function LocationPageTemplate({ location, allLocations }) {
         </>
     );
 }
+

@@ -14,7 +14,7 @@ export const metadata = {
     openGraph: {
         title: 'Mago en Madrid | Ángel Ruiz · Ilusionista Profesional',
         description: 'El mago de referencia en Madrid para bodas exclusivas y eventos corporativos. Magia de cerca, mentalismo y cartomagia de autor.',
-        images: [{ url: '/images/foto-bio.webp' }],
+        images: [{ url: '/images/foto-bio.png' }],
     }
 };
 
@@ -27,7 +27,7 @@ export default function MagoMadridPage() {
                 "@id": "https://angelruiz.world/#organization",
                 "name": "Ángel Ruiz | Mago e Ilusionista",
                 "url": "https://angelruiz.world",
-                "image": "https://angelruiz.world/images/foto-bio.webp",
+                "image": "https://angelruiz.world/images/foto-bio.png",
                 "telephone": "+34648055636",
                 "priceRange": "€€€",
                 "address": {
@@ -91,7 +91,7 @@ export default function MagoMadridPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-20">
                         <div className="relative md:sticky md:top-32 h-auto rounded-2xl overflow-hidden border border-slate-800 shadow-xl order-2 md:order-1 group bg-slate-900/50">
                             <Image
-                                src="/images/foto-bio.webp"
+                                src="/images/foto-bio.png"
                                 alt="Ángel Ruiz mago profesional en Madrid"
                                 width={800}
                                 height={1000}
@@ -236,3 +236,4 @@ export default function MagoMadridPage() {
         </>
     );
 }
+

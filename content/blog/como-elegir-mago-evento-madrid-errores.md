@@ -3,7 +3,7 @@ title: "Cómo Elegir un Mago para tu Evento en Madrid: 5 Errores que Debes Evita
 date: "2026-05-10"
 excerpt: "Contratar al mago equivocado puede arruinar tu evento. Te explico los 5 errores más comunes al buscar un ilusionista en Madrid y cómo evitarlos para acertar a la primera."
 author: "Ángel Ruiz"
-image: "/images/foto-bio.webp"
+image: "/images/foto-bio.png"
 category: "Consejos"
 tags: ["Consejos", "Madrid", "Contratación", "Eventos"]
 faq:
@@ -65,3 +65,4 @@ Elegir bien a tu mago es elegir bien la experiencia que vivirán tus invitados. 
 ---
 
 *¿Quieres acertar a la primera? [Contacta conmigo](/mago-madrid) y te explico cómo puedo hacer que tu evento en Madrid sea inolvidable.*
+

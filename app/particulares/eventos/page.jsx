@@ -13,13 +13,13 @@ export const metadata = {
     openGraph: {
         title: 'Mago para Eventos Privados en Madrid | Ángel Ruiz | Mago e Ilusionista',
         description: 'Magia de cerca y mentalismo para tus celebraciones privadas. Un espectáculo inolvidable en la comodidad de tu casa.',
-        images: [{ url: '/images/foto-bio.webp' }],
+        images: [{ url: '/images/foto-bio.png' }],
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Mago para Eventos Privados en Madrid | Ángel Ruiz | Mago e Ilusionista',
         description: 'Lleva el asombro a tu propia fiesta con Ángel Ruiz.',
-        images: ['/images/foto-bio.webp'],
+        images: ['/images/foto-bio.png'],
     },
 };
 
@@ -68,7 +68,7 @@ export default function EventosDetailPage() {
                             "@id": "https://angelruiz.world/#organization",
                             "name": "Ángel Ruiz | Mago e Ilusionista",
                             "url": "https://angelruiz.world",
-                            "image": "https://angelruiz.world/images/foto-bio.webp",
+                            "image": "https://angelruiz.world/images/foto-bio.png",
                             "telephone": "+34648055636",
                             "priceRange": "€€€",
                             "address": {
@@ -199,3 +199,4 @@ export default function EventosDetailPage() {
         </>
     );
 }
+

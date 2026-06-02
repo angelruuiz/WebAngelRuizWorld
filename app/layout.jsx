@@ -24,7 +24,7 @@ export const metadata = {
     description: 'Ángel Ruiz, mago e ilusionista profesional especializado en magia de cerca exclusiva para eventos corporativos, bodas y celebraciones.',
     siteName: 'Ángel Ruiz | Mago e Ilusionista',
     images: [{
-      url: '/images/foto-bio.webp',
+      url: '/images/foto-bio.png',
       width: 1200,
       height: 630,
       alt: 'Ángel Ruiz Ilusionista Profesional en plena actuación'
@@ -34,7 +34,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Angel Ruiz | Mago e Ilusionista',
     description: 'Ilusionista especializado en eventos exclusivos y magia de cerca.',
-    images: ['/images/foto-bio.webp'],
+    images: ['/images/foto-bio.png'],
     site: '@angellruuizz',
     creator: '@angellruuizz',
   },
@@ -114,3 +114,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+

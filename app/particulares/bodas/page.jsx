@@ -14,13 +14,13 @@ export const metadata = {
         url: 'https://angelruiz.world/particulares/bodas',
         title: 'Mago para Bodas en Madrid | Ángel Ruiz | Mago e Ilusionista',
         description: 'La magia perfecta para tu cóctel de boda. Conecta a tus invitados y crea recuerdos inolvidables.',
-        images: [{ url: '/images/foto-bio.webp' }],
+        images: [{ url: '/images/foto-bio.png' }],
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Mago para Bodas en Madrid | Angel Ruiz',
         description: 'Momentos imposibles para el día más importante de tu vida.',
-        images: ['/images/foto-bio.webp'],
+        images: ['/images/foto-bio.png'],
     },
 };
 
@@ -75,7 +75,7 @@ export default function BodasDetailPage() {
                             "@id": "https://angelruiz.world/#organization",
                             "name": "Ángel Ruiz | Mago e Ilusionista",
                             "url": "https://angelruiz.world",
-                            "image": "https://angelruiz.world/images/foto-bio.webp",
+                            "image": "https://angelruiz.world/images/foto-bio.png",
                             "telephone": "+34648055636",
                             "priceRange": "€€€",
                             "address": {
@@ -414,3 +414,4 @@ export default function BodasDetailPage() {
         </>
     );
 }
+

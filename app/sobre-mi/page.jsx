@@ -19,7 +19,7 @@ export default function SobreMiPage() {
         "name": "Ángel Ruiz",
         "jobTitle": "Mago e Ilusionista Profesional",
         "url": "https://angelruiz.world/sobre-mi",
-        "image": "https://angelruiz.world/images/foto-bio.webp",
+        "image": "https://angelruiz.world/images/foto-bio.png",
         "sameAs": [
             "https://instagram.com/angellruuiz",
             "https://tiktok.com/@angellruuiz",
@@ -75,3 +75,4 @@ export default function SobreMiPage() {
         </>
     );
 }
+

@@ -66,7 +66,7 @@ export default function ValoracionesPage() {
                             "@id": "https://angelruiz.world/#organization",
                             "name": "Ángel Ruiz | Mago e Ilusionista",
                             "url": "https://angelruiz.world",
-                            "image": "https://angelruiz.world/images/foto-bio.webp",
+                            "image": "https://angelruiz.world/images/foto-bio.png",
                             "telephone": "+34648055636",
                             "priceRange": "€€€",
                             "address": {
@@ -120,3 +120,4 @@ export default function ValoracionesPage() {
         </>
     );
 }
+
