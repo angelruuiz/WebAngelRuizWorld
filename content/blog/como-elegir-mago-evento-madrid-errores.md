@@ -1,18 +1,33 @@
 ---
-title: "5 Errores al Contratar un Mago en Madrid [Guía 2026]"
-date: "2026-05-10"
-excerpt: "¿Buscas mago en Madrid? Evita estos 5 errores críticos al contratar magia para tu evento, boda o cena de empresa. Consejos de un ilusionista profesional."
-author: "Ángel Ruiz"
-image: "/images/foto-bio.png"
-category: "Consejos"
-tags: ["Consejos", "Madrid", "Contratación", "Eventos"]
+title: Cómo Elegir Mago para tu Evento en Madrid (Y Errores a Evitar)
+date: '2026-05-10'
+excerpt: >-
+  ¿Buscas mago en Madrid? Evita estos 5 errores críticos al contratar magia para
+  tu evento, boda o cena de empresa. Consejos de un ilusionista profesional.
+author: Ángel Ruiz
+image: /images/foto-bio.png
+category: Consejos
+tags:
+  - Guía
+  - Madrid
+  - Contratación
 faq:
-  - question: "¿Cómo sé si un mago es profesional de verdad?"
-    answer: "Pide vídeos de actuaciones reales (no montajes), comprueba sus reseñas en Google, verifica que tenga seguro de responsabilidad civil y que emita factura. Un profesional responde rápido, hace preguntas sobre tu evento y te envía un presupuesto detallado."
-  - question: "¿Es mejor un mago de cerca o de escenario para mi evento?"
-    answer: "Depende del formato. Para cócteles, bodas y cenas, la magia de cerca es la opción más versátil y elegante. Para convenciones de más de 100 personas donde todos deben ver a la vez, un show de escenario es más adecuado."
-  - question: "¿Con cuánta antelación debo contratar un mago en Madrid?"
-    answer: "Lo ideal es reservar con 3-4 semanas de antelación. Para temporada alta (bodas de mayo a octubre, Navidad para empresas), recomiendo 6-8 semanas mínimo, ya que los mejores profesionales agotan disponibilidad."
+  - question: ¿Cómo sé si un mago es profesional de verdad?
+    answer: >-
+      Pide vídeos de actuaciones reales (no montajes), comprueba sus reseñas en
+      Google, verifica que tenga seguro de responsabilidad civil y que emita
+      factura. Un profesional responde rápido, hace preguntas sobre tu evento y
+      te envía un presupuesto detallado.
+  - question: ¿Es mejor un mago de cerca o de escenario para mi evento?
+    answer: >-
+      Depende del formato. Para cócteles, bodas y cenas, la magia de cerca es la
+      opción más versátil y elegante. Para convenciones de más de 100 personas
+      donde todos deben ver a la vez, un show de escenario es más adecuado.
+  - question: ¿Con cuánta antelación debo contratar un mago en Madrid?
+    answer: >-
+      Lo ideal es reservar con 3-4 semanas de antelación. Para temporada alta
+      (bodas de mayo a octubre, Navidad para empresas), recomiendo 6-8 semanas
+      mínimo, ya que los mejores profesionales agotan disponibilidad.
 ---
 
 Contratar un **mago en Madrid** debería ser sencillo, pero la realidad es que el sector tiene mucho intrusismo y poca transparencia. Cada semana recibo llamadas de clientes que vienen de una mala experiencia con otro "mago" y no quieren repetir el error en su próximo evento.
@@ -66,3 +81,14 @@ Elegir bien a tu mago es elegir bien la experiencia que vivirán tus invitados. 
 
 *¿Quieres acertar a la primera? [Contacta conmigo](/mago-madrid) y te explico cómo puedo hacer que tu evento en Madrid sea inolvidable.*
 
+
+
+---
+
+### 🔮 Sigue leyendo sobre precios
+
+Si te ha parecido interesante, quizás te interese seguir leyendo estos artículos relacionados:
+
+- [¿Cuánto Cuesta un Mago en Madrid? [Tarifas y Precios 2026]](/blog/cuanto-cuesta-mago-madrid-precios)
+- [Magia de Cerca vs. Magia de Escenario: ¿Cuál es el formato ideal para tu evento?](/blog/magia-de-cerca-vs-escenario)
+- [Magia de Cerca en Madrid: El Secreto para un Evento o Boda Inolvidable (2026)](/blog/magia-de-cerca-madrid-eventos-bodas)

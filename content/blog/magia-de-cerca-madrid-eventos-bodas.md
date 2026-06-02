@@ -1,18 +1,37 @@
 ---
-title: "Magia de Cerca en Madrid: El Secreto para un Evento o Boda Inolvidable (2026)"
-date: "2026-05-26"
-excerpt: "Descubre por qué la magia de cerca (close-up) es el entretenimiento de etiqueta más demandado para bodas, cócteles y eventos corporativos en Madrid. Asombro a centímetros de tus ojos."
-author: "Ángel Ruiz"
-image: "/images/cartomagia-angel-ruiz.webp"
-category: "Ilusionismo"
-tags: ["Magia de Cerca", "Madrid", "Bodas", "Eventos Corporativos"]
+title: Magia de Cerca en Madrid para Eventos y Bodas Inolvidables
+date: '2026-05-26'
+excerpt: >-
+  Descubre por qué la magia de cerca (close-up) es el entretenimiento de
+  etiqueta más demandado para bodas, cócteles y eventos corporativos en Madrid.
+  Asombro a centímetros de tus ojos.
+author: Ángel Ruiz
+image: /images/cartomagia-angel-ruiz.webp
+category: Ilusionismo
+tags:
+  - Magia de Cerca
+  - Madrid
+  - Eventos
+  - Bodas
 faq:
-  - question: "¿Qué ventajas tiene la magia de cerca frente a un show de escenario?"
-    answer: "La magia de cerca no requiere montaje técnico ni escenario. Se realiza directamente entre los invitados (de pie o en las mesas), lo que genera una interacción muy íntima y un asombro imposible de replicar a la distancia."
-  - question: "¿Es adecuada la magia de cerca para un cóctel de empresa en IFEMA o Madrid Centro?"
-    answer: "Es el formato perfecto. Al ser itinerante, ayuda a romper el hielo entre asistentes, fomenta el networking y genera un gran dinamismo en el stand o salón del evento."
-  - question: "¿Con cuánta antelación se debe contratar un mago de cerca en Madrid?"
-    answer: "Para asegurar la fecha de tu boda o evento corporativo, especialmente en temporada alta (de mayo a octubre y en la campaña de Navidad), lo ideal es reservar con al menos 1 o 2 meses de antelación."
+  - question: ¿Qué ventajas tiene la magia de cerca frente a un show de escenario?
+    answer: >-
+      La magia de cerca no requiere montaje técnico ni escenario. Se realiza
+      directamente entre los invitados (de pie o en las mesas), lo que genera
+      una interacción muy íntima y un asombro imposible de replicar a la
+      distancia.
+  - question: >-
+      ¿Es adecuada la magia de cerca para un cóctel de empresa en IFEMA o Madrid
+      Centro?
+    answer: >-
+      Es el formato perfecto. Al ser itinerante, ayuda a romper el hielo entre
+      asistentes, fomenta el networking y genera un gran dinamismo en el stand o
+      salón del evento.
+  - question: ¿Con cuánta antelación se debe contratar un mago de cerca en Madrid?
+    answer: >-
+      Para asegurar la fecha de tu boda o evento corporativo, especialmente en
+      temporada alta (de mayo a octubre y en la campaña de Navidad), lo ideal es
+      reservar con al menos 1 o 2 meses de antelación.
 ---
 
 Imagina esto por un momento: estás en un cóctel al aire libre en una de las fincas exclusivas de la **Sierra de Madrid**, con una copa en la mano charlando con amigos. De repente, un ilusionista se acerca a tu grupo. Coge una baraja, te pide que firmes una carta y, ante tus propios ojos, a escasos centímetros de tu cara, esa carta firmada viaja al interior de una cartera cerrada que ha estado encima de la mesa todo el tiempo. No hay espejos, no hay distancias, no hay trampa ni cartón. Eso es la **magia de cerca en Madrid**.
@@ -60,3 +79,14 @@ Tanto si buscas un ambiente sofisticado en el Barrio de Salamanca como un evento
 ---
 
 *¿Quieres que tu boda o evento de empresa sea inolvidable? No lo dejes para última hora. **[Contacta conmigo hoy mismo](/contacto)** para comprobar la disponibilidad de fechas y diseñar un espectáculo de magia de cerca a tu medida.*
+
+
+---
+
+### 🔮 Sigue leyendo sobre precios
+
+Si te ha parecido interesante, quizás te interese seguir leyendo estos artículos relacionados:
+
+- [¿Cuánto Cuesta un Mago en Madrid? [Tarifas y Precios 2026]](/blog/cuanto-cuesta-mago-madrid-precios)
+- [Cómo Elegir Mago para tu Evento en Madrid (Y Errores a Evitar)](/blog/como-elegir-mago-evento-madrid-errores)
+- [Magia de Cerca vs Magia de Escenario: ¿Qué formato elegir para tu evento?](/blog/magia-de-cerca-vs-escenario)

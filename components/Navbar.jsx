@@ -63,6 +63,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                 { name: 'Restaurantes', href: '/empresas/mago-para-restaurantes-madrid' }
             ]
         },
+        { name: 'Sobre Mí', href: '/sobre-mi' },
         { name: 'Galería', href: '/galeria' },
         { name: 'Valoraciones', href: '/valoraciones' },
         { name: 'Blog', href: '/blog' },

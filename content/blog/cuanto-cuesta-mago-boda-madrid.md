@@ -1,10 +1,17 @@
 ---
-title: "¿Cuánto cuesta un mago para una boda en Madrid? Guía de precios y tarifas 2026"
-date: "2026-04-14"
-excerpt: "Descubre el presupuesto real para contratar un mago de bodas en Madrid. Analizamos tarifas, variables que influyen en el precio y cómo elegir el mejor ilusionista para tu gran día."
-author: "Ángel Ruiz"
-image: "/images/boda-magia-madrid.webp"
-tags: ["Bodas", "Precios", "Madrid", "Presupuesto"]
+title: '¿Cuánto Cuesta un Mago para Bodas en Madrid? [Precios 2026]'
+date: '2026-04-14'
+excerpt: >-
+  Descubre el presupuesto real para contratar un mago de bodas en Madrid.
+  Analizamos tarifas, variables que influyen en el precio y cómo elegir el mejor
+  ilusionista para tu gran día.
+author: Ángel Ruiz
+image: /images/boda-magia-madrid.webp
+tags:
+  - Bodas
+  - Madrid
+  - Precios
+category: Bodas
 ---
 
 Si estás planeando tu enlace matrimonial, es probable que ya te hayas hecho la gran pregunta: **¿cuánto cuesta un mago para una boda en Madrid?** La respuesta no es única, pero en esta guía vamos a desglosar las tarifas reales, los factores que influyen en el presupuesto y por qué la honestidad en el precio es fundamental para contratar un servicio de calidad.
@@ -54,3 +61,15 @@ Si además de la magia buscas otras formas de sorprender, te recomendamos explor
 
 ---
 *Angel Ruiz - Ilusionista Profesional. Especialista en Bodas y Eventos en Madrid, Las Rozas, Pozuelo y Torrelodones.*
+
+
+---
+
+### 🔮 Sigue leyendo sobre bodas
+
+Si te ha parecido interesante, quizás te interese seguir leyendo estos artículos relacionados:
+
+- [Mago para Bodas en Madrid [2026]: Magia y Entretenimiento Inolvidable](/blog/mago-bodas-madrid-entretenimiento)
+- [Mago para Bodas en Madrid: La Guía Definitiva para una Celebración Mágica (2026)](/blog/mago-para-bodas-madrid-faq)
+- [Mejores Fincas para Bodas en Madrid donde Sorprender con un Espectáculo (2026)](/blog/mejores-fincas-bodas-madrid-magia)
+- [10 Ideas originales para entretener a tus invitados en la boda (Madrid 2026)](/blog/ideas-originales-entretenimiento-bodas-madrid)

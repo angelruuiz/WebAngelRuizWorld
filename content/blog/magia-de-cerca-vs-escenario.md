@@ -1,17 +1,35 @@
 ---
-title: "Magia de Cerca vs. Magia de Escenario: ¿Cuál es el formato ideal para tu evento?"
-date: "2026-04-13"
-excerpt: "Elegir el formato adecuado de ilusionismo es clave para el éxito de tu celebración. Analizamos las diferencias entre la magia de cerca y de escenario para que tu evento en Madrid sea inolvidable."
-author: "Angel Ruiz"
-image: "/images/blog-cerca-vs-escenario.webp"
-tags: ["Consejos", "Madrid", "Eventos", "Magia de Cerca", "Escenario"]
+title: 'Magia de Cerca vs Magia de Escenario: ¿Qué formato elegir para tu evento?'
+date: '2026-04-13'
+excerpt: >-
+  Elegir el formato adecuado de ilusionismo es clave para el éxito de tu
+  celebración. Analizamos las diferencias entre la magia de cerca y de escenario
+  para que tu evento en Madrid sea inolvidable.
+author: Angel Ruiz
+image: /images/blog-cerca-vs-escenario.webp
+tags:
+  - Formatos
+  - Magia de Cerca
+  - Escenario
 faq:
-  - question: "¿Es posible combinar ambos tipos de magia en un mismo evento?"
-    answer: "Absolutamente. De hecho, es una de las opciones más recomendadas para eventos corporativos en Madrid. Se puede empezar con magia de cerca durante el cóctel para romper el hielo y culminar con un show de escenario tras la cena para cerrar la noche por todo lo alto."
-  - question: "¿Para qué número de invitados se recomienda el show de escenario?"
-    answer: "A partir de 30-40 personas, el formato de escenario garantiza que todo el mundo viva la misma experiencia al mismo tiempo. Para grupos más pequeños, la magia de cerca suele ofrecer una conexión más íntima y poderosa."
-  - question: "¿Requiere mucha logística un espectáculo de escenario?"
-    answer: "Mi espectáculo de escenario está diseñado para ser versátil. Solo se necesita un espacio con buena visibilidad y un equipo de sonido básico que, en la mayoría de los casos, puedo proporcionar yo mismo. Lo importante es que el asombro llegue a la última fila."
+  - question: ¿Es posible combinar ambos tipos de magia en un mismo evento?
+    answer: >-
+      Absolutamente. De hecho, es una de las opciones más recomendadas para
+      eventos corporativos en Madrid. Se puede empezar con magia de cerca
+      durante el cóctel para romper el hielo y culminar con un show de escenario
+      tras la cena para cerrar la noche por todo lo alto.
+  - question: ¿Para qué número de invitados se recomienda el show de escenario?
+    answer: >-
+      A partir de 30-40 personas, el formato de escenario garantiza que todo el
+      mundo viva la misma experiencia al mismo tiempo. Para grupos más pequeños,
+      la magia de cerca suele ofrecer una conexión más íntima y poderosa.
+  - question: ¿Requiere mucha logística un espectáculo de escenario?
+    answer: >-
+      Mi espectáculo de escenario está diseñado para ser versátil. Solo se
+      necesita un espacio con buena visibilidad y un equipo de sonido básico
+      que, en la mayoría de los casos, puedo proporcionar yo mismo. Lo
+      importante es que el asombro llegue a la última fila.
+category: Guía
 ---
 
 La planificación de un evento de éxito, ya sea una boda elegante en **Torrelodones** o una convención corporativa en el centro de **Madrid**, pasa por una decisión fundamental: ¿Cómo queremos que se sientan nuestros invitados? El **ilusionismo profesional** ofrece dos herramientas poderosas, pero muy distintas, para lograr este objetivo. 
@@ -70,3 +88,14 @@ La magia no es lo que el mago hace, es lo que el invitado recuerda. **Hagamos qu
 ---
 
 *¿Tienes dudas sobre qué formato encaja mejor en tu celebración? Diseñaremos el plan de asombro perfecto para tu fecha en Madrid, Torrelodones o alrededores.*
+
+
+---
+
+### 🔮 Sigue leyendo sobre precios
+
+Si te ha parecido interesante, quizás te interese seguir leyendo estos artículos relacionados:
+
+- [¿Cuánto Cuesta un Mago en Madrid? [Tarifas y Precios 2026]](/blog/cuanto-cuesta-mago-madrid-precios)
+- [Cómo Elegir Mago para tu Evento en Madrid (Y Errores a Evitar)](/blog/como-elegir-mago-evento-madrid-errores)
+- [Magia de Cerca en Madrid: El Secreto para un Evento o Boda Inolvidable (2026)](/blog/magia-de-cerca-madrid-eventos-bodas)

@@ -1,10 +1,17 @@
 ---
-title: "10 Ideas originales para entretener a tus invitados en la boda (Madrid 2026)"
-date: "2026-04-14"
-excerpt: "¿Buscas algo diferente al photocall? Descubre 10 ideas creativas de entretenimiento para bodas en Madrid que dejarán a tus invitados con la boca abierta."
-author: "Ángel Ruiz"
-image: "/images/boda-magia-madrid.webp"
-tags: ["Bodas", "Madrid", "Entretenimiento", "Ideas"]
+title: Ideas Originales de Entretenimiento para Bodas en Madrid
+date: '2026-04-14'
+excerpt: >-
+  ¿Buscas algo diferente al photocall? Descubre 10 ideas creativas de
+  entretenimiento para bodas en Madrid que dejarán a tus invitados con la boca
+  abierta.
+author: Ángel Ruiz
+image: /images/boda-magia-madrid.webp
+tags:
+  - Bodas
+  - Madrid
+  - Ideas
+category: Bodas
 ---
 
 El éxito de una boda no solo se mide por el menú o el lugar; se mide por lo bien que se lo pasen tus invitados. En una ciudad con tanta oferta como **Madrid**, los novios buscan constantemente ese "algo más" que rompa con lo tradicional. Si estás cansado de las mismas opciones de siempre, aquí tienes **10 ideas originales para entretener a tus invitados en la boda** que funcionan de maravilla.
@@ -70,3 +77,15 @@ También puedes visitar mi sección de [Magia para Bodas](/particulares/bodas) y
 
 ---
 *Angel Ruiz - Especialista en crear momentos imposibles en las bodas más exclusivas de Madrid y alrededores.*
+
+
+---
+
+### 🔮 Sigue leyendo sobre bodas
+
+Si te ha parecido interesante, quizás te interese seguir leyendo estos artículos relacionados:
+
+- [Mago para Bodas en Madrid [2026]: Magia y Entretenimiento Inolvidable](/blog/mago-bodas-madrid-entretenimiento)
+- [Mago para Bodas en Madrid: La Guía Definitiva para una Celebración Mágica (2026)](/blog/mago-para-bodas-madrid-faq)
+- [¿Cuánto Cuesta un Mago para Bodas en Madrid? [Precios 2026]](/blog/cuanto-cuesta-mago-boda-madrid)
+- [Mejores Fincas para Bodas en Madrid donde Sorprender con un Espectáculo (2026)](/blog/mejores-fincas-bodas-madrid-magia)
