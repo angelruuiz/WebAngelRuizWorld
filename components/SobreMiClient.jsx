@@ -10,9 +10,9 @@ import { ContactFormModal } from '@/components/Modals';
 
 const MagicalCarousel = () => {
     const images = [
-        "/images/galeria/evento-angel-ruiz-madrid-3.webp",
+        "/images/angel-ruiz-mago-profesional-madrid.webp",
         "/images/IMG_20260531_162002.png", 
-        "/images/galeria/evento-angel-ruiz-madrid-2.webp"
+        "/images/evento-angel-ruiz-magia.webp"
     ];
     const [index, setIndex] = useState(0);
 
