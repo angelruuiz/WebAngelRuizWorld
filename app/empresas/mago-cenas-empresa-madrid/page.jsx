@@ -23,7 +23,6 @@ export default function Page() {
   return (
     <NavFooterClient>
       <MagicCursor />
-      <ParticleBackground />
     <div className="min-h-screen bg-[#0A0A0A] text-slate-300 font-sans selection:bg-amber-500/30">
       
       {/* HEADER B2B BRUTALIST */}
