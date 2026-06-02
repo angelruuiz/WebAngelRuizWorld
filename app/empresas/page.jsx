@@ -96,10 +96,6 @@ export default function EmpresasPage() {
                             "@id": "https://angelruiz.world/empresas/#service"
                         },
                         {
-                            "@type": "FAQPage",
-                            "mainEntity": faqSchema.mainEntity
-                        },
-                        {
                             "@type": "BreadcrumbList",
                             "itemListElement": breadcrumbSchema.itemListElement
                         }
