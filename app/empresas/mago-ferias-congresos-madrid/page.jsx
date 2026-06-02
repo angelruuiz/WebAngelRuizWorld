@@ -53,72 +53,75 @@ export default function FeriasCongresosPage() {
                 <MagicCursor />
                 <ParticleBackground />
 
-                <main>
-                <section className="pt-24 pb-16 px-6 max-w-6xl mx-auto relative z-10">
-                    <Breadcrumbs />
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-20">
-                        <div className="relative md:sticky md:top-32 h-auto rounded-2xl overflow-hidden border border-slate-800 shadow-xl order-2 md:order-1 group bg-slate-900/50">
-                            <Image
-                                src="/images/evento-angel-ruiz-magia.webp"
-                                alt="Mago para Ferias Comerciales en IFEMA Madrid"
-                                width={800}
-                                height={1000}
-                                className="w-full h-auto transition-all duration-700 group-hover:scale-105"
-                                priority
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 to-transparent" />
-                        </div>
+                <main className="bg-[#0A0A0A] text-[#EAEAEA] font-mono selection:bg-amber-500 selection:text-black">
+                    <section className="pt-32 pb-24 px-6 max-w-7xl mx-auto relative z-10">
+                        <Breadcrumbs />
+                        
+                        <div className="mt-12 mb-20">
+                            <header className="border-b-[4px] border-amber-500 pb-8 mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
+                                <div className="max-w-3xl">
+                                    <div className="inline-block bg-amber-500 text-black px-3 py-1 font-black uppercase text-[10px] tracking-widest mb-6">
+                                        MÓDULO: TRADE SHOW MAGIC
+                                    </div>
+                                    <h1 className="text-4xl md:text-6xl font-sans font-black uppercase tracking-tighter leading-none text-[#EAEAEA]">
+                                        Mago para <span className="text-amber-500">Ferias y Congresos</span> en Madrid
+                                    </h1>
+                                </div>
+                                <div className="bg-[#121212] border border-[#EAEAEA]/20 p-4 text-xs">
+                                    <div className="text-amber-500 mb-1 tracking-widest uppercase">KPI Proyectado</div>
+                                    <div className="text-3xl font-black font-sans">+300% <span className="text-sm font-mono font-normal">Captación de Leads</span></div>
+                                </div>
+                            </header>
 
-                        <div className="order-1 md:order-2">
-                             <p className="text-amber-500 uppercase tracking-widest text-[10px] font-bold mb-2 drop-shadow-md">
-                                Marketing Ferial | Trade Show Magic
-                             </p>
-                             <h1 className="text-4xl md:text-5xl font-[Cinzel] text-white mb-6 border-b border-amber-500/50 pb-2 font-bold leading-tight uppercase">
-                                Mago para Ferias e IFEMA en Madrid
-                             </h1>
+                            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-16">
+                                <div className="md:col-span-7 space-y-8">
+                                    <div className="text-lg leading-relaxed text-[#EAEAEA]/80 font-sans border-l border-amber-500 pl-6">
+                                        Asistir a <strong>IFEMA Madrid</strong> requiere una inversión sustancial. El ilusionismo B2B no es ocio; es un catalizador táctico diseñado para <strong className="text-amber-500">frenar el tráfico en el pasillo</strong>, capturar la atención de los asistentes e incrementar drásticamente tu <strong>Retorno de Inversión (ROI)</strong>.
+                                    </div>
 
-                             <div className="space-y-6 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
-                                 <p className="border-l-2 border-amber-500 pl-4 py-1">
-                                    <span className="text-amber-400 font-bold underline decoration-amber-500/30 text-lg">Convierte tu stand en el mayor foco de atención de toda la feria.</span>
-                                </p>
-                                 <p>
-                                    Asistir a un gran congreso en <strong>IFEMA Madrid</strong> requiere una inversión importante. Sin embargo, muchos expositores cometen el error de esperar pasivamente a que los clientes se acerquen. Como <Link href="/empresas" className="text-amber-400 hover:underline font-bold">mago corporativo especializado</Link>, utilizo la magia (Trade Show Magic) como un imán para captar tráfico, retener a la audiencia y cualificar leads antes de pasarlos a tu equipo comercial.
-                                </p>
-
-                                <div className="grid grid-cols-2 gap-4 py-6 border-y border-white/5">
-                                    <div className="flex items-start gap-3">
-                                        <div className="text-amber-500 font-bold">01</div>
-                                        <div>
-                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Atracción de Tráfico</h4>
-                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Freno a los asistentes en el pasillo, generando grupos frente a tu exposición.</p>
+                                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-[#EAEAEA]/10 border border-[#EAEAEA]/20 p-px">
+                                        <div className="bg-[#0A0A0A] p-6">
+                                            <div className="text-amber-500 text-xs mb-2 tracking-widest">/// 01</div>
+                                            <h3 className="font-sans font-black uppercase text-xl mb-3">Atracción de Tráfico</h3>
+                                            <p className="text-xs text-[#EAEAEA]/60">Dinamización in-situ. Multiplicamos la densidad de público agrupado frente a tu exposición, generando efecto llamada inmediato.</p>
+                                        </div>
+                                        <div className="bg-[#0A0A0A] p-6">
+                                            <div className="text-amber-500 text-xs mb-2 tracking-widest">/// 02</div>
+                                            <h3 className="font-sans font-black uppercase text-xl mb-3">Mensaje de Marca</h3>
+                                            <p className="text-xs text-[#EAEAEA]/60">Integración de atributos de producto directamente dentro de los efectos visuales. El mensaje no se escucha, se experimenta.</p>
+                                        </div>
+                                        <div className="bg-[#0A0A0A] p-6 sm:col-span-2">
+                                            <div className="text-amber-500 text-xs mb-2 tracking-widest">/// 03</div>
+                                            <h3 className="font-sans font-black uppercase text-xl mb-3">Cualificación de Leads</h3>
+                                            <p className="text-xs text-[#EAEAEA]/60">Retención de la audiencia el tiempo suficiente para que tu equipo comercial intercepte leads de alto valor ya receptivos y fascinados. Maximizamos el <strong>Engagement</strong> general del stand.</p>
                                         </div>
                                     </div>
-                                    <div className="flex items-start gap-3">
-                                        <div className="text-amber-500 font-bold">02</div>
-                                        <div>
-                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Mensaje de Marca</h4>
-                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Integro los beneficios de tu producto o eslóganes directamente dentro de los efectos visuales.</p>
-                                        </div>
+
+                                    <div className="bg-amber-500/10 border border-amber-500/30 p-6 mt-8">
+                                        <blockquote className="text-sm italic text-[#EAEAEA]/80 border-l-2 border-amber-500 pl-4">
+                                            "No dimos abasto escaneando acreditaciones. Ángel conseguía reunir a decenas de personas en nuestro stand cada hora, entregándonos una audiencia ya fascinada y receptiva."
+                                        </blockquote>
                                     </div>
                                 </div>
 
-                                <p>
-                                    El ilusionismo corporativo en <strong>ferias y congresos en Madrid</strong> no es simplemente "hacer trucos", es una herramienta de marketing B2B altamente efectiva. Presento tu producto de una manera imposible de ignorar, generando un recuerdo de marca imborrable y aumentando drásticamente el ROI de tu participación en el evento.
-                                </p>
-
-                                <p className="bg-white/5 p-4 rounded-lg italic text-slate-300">
-                                    "No dimos abasto escaneando acreditaciones. Ángel conseguía reunir a decenas de personas en nuestro stand cada hora, entregándonos una audiencia ya fascinada y receptiva."
-                                </p>
-
-                            </div>
-
-                            <div className="mt-12">
-                                <ContactButtonClient label="Diseñar Estrategia para mi Stand" />
+                                <div className="md:col-span-5 relative">
+                                    <div className="aspect-[4/5] relative border border-amber-500/30 bg-[#121212] overflow-hidden grayscale hover:grayscale-0 transition-all duration-700">
+                                        <Image
+                                            src="/images/evento-angel-ruiz-magia.webp"
+                                            alt="Mago para Ferias Comerciales en IFEMA Madrid"
+                                            fill
+                                            className="object-cover opacity-70 mix-blend-screen"
+                                            priority
+                                        />
+                                        <div className="absolute top-0 left-0 w-full h-full bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none"></div>
+                                        <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-[#0A0A0A] to-transparent">
+                                            <ContactButtonClient label="DESPLEGAR ESTRATEGIA STAND" className="w-full bg-amber-500 hover:bg-[#EAEAEA] text-[#0A0A0A] font-black uppercase tracking-widest text-xs py-4 rounded-none transition-colors" />
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
                 </main>
             </NavFooterClient>
         </>

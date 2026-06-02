@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import NavFooterClient from '@/components/NavFooterClient';
 import ContactButtonClient from '@/components/ContactButtonClient';
-import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
+import { MagicCursor, ParticleBackground, FadeIn } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
@@ -114,302 +114,134 @@ export default function BodasDetailPage() {
                 <MagicCursor />
                 <ParticleBackground />
 
-                <main className="relative z-10 pt-24 pb-16 px-6 max-w-6xl mx-auto">
+                <main className="relative z-10 pt-32 pb-32 px-6 max-w-7xl mx-auto font-sans">
                     <Breadcrumbs />
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-20">
-                        <div>
-                            <p className="text-amber-500 uppercase tracking-widest text-[10px] font-bold mb-2 drop-shadow-md">
-                                Especialista en Bodas | Sierra de Madrid
-                            </p>
-                            <h1 className="text-4xl md:text-5xl font-[Cinzel] text-white mb-6 border-b border-amber-500/50 pb-2 font-bold leading-tight uppercase">
-                                Mago para Bodas en Madrid
+                    
+                    {/* Hero Section */}
+                    <div className="flex flex-col-reverse lg:flex-row gap-16 lg:gap-24 items-center mb-32">
+                        <FadeIn className="flex-1 space-y-8" y={40}>
+                            <div className="inline-block px-4 py-2 rounded-full border border-[#d4a853]/30 bg-[#d4a853]/5">
+                                <span className="text-[#d4a853] text-xs font-semibold tracking-widest uppercase">
+                                    Bodas en Madrid y Sierra
+                                </span>
+                            </div>
+                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-[Cinzel] text-white font-bold leading-[1.1] tracking-tight">
+                                El Día Más <br/><span className="text-[#d4a853] italic font-light">Especial</span>
                             </h1>
+                            <p className="text-lg text-slate-300 leading-relaxed max-w-xl font-light">
+                                Recuerdos inolvidables construidos en el momento perfecto. La magia de Ángel Ruiz aporta esas emociones de asombro y elegancia que convierten un cóctel de boda en una experiencia legendaria para todos tus invitados.
+                            </p>
+                            <div className="pt-4">
+                                <ContactButtonClient label="Solicitar Disponibilidad" />
+                            </div>
+                        </FadeIn>
+                        
+                        <FadeIn className="flex-1 relative w-full aspect-[4/5] lg:aspect-[3/4]" delay={0.2}>
+                            <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden">
+                                <Image
+                                    src="/images/boda-magia-madrid.webp"
+                                    alt="Mago de bodas en Madrid Angel Ruiz creando recuerdos inolvidables"
+                                    fill
+                                    className="object-cover object-top hover:scale-105 transition-transform duration-[2s] ease-out"
+                                    priority
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/80 via-transparent to-transparent" />
+                            </div>
+                        </FadeIn>
+                    </div>
 
-                            <div className="space-y-6 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
-                                <p className="border-l-2 border-amber-500 pl-4 py-1">
-                                    <span className="text-amber-400 font-bold underline decoration-amber-500/30 text-lg">Haz que el día más importante de tu vida sea también el más sorprendente para tus invitados.</span>
-                                </p>
-                                <p>
-                                    Ángel Ruiz, <strong className="text-amber-400">experto en magia en Madrid</strong> y referente de la <strong>magia en la Sierra</strong>, se especializa en crear momentos de asombro que actúan como el hilo conductor perfecto para tu enlace. Una boda es una celebración de emociones, y no hay nada que conecte mejor a familias y amigos que la vivencia compartida de lo imposible.
-                                </p>
+                    {/* Moments Section - Asymmetrical Grid */}
+                    <FadeIn y={30} className="py-24">
+                        <div className="text-center mb-20">
+                            <h2 className="text-3xl md:text-4xl font-[Cinzel] text-white mb-6">Emociones que conectan</h2>
+                            <p className="text-slate-400 font-light text-base max-w-2xl mx-auto">
+                                La magia no es un show aislado, es el hilo conductor que fluye durante vuestra celebración.
+                            </p>
+                        </div>
 
-                                <div className="grid grid-cols-2 gap-4 py-6 border-y border-white/5">
-                                    <div className="flex items-start gap-3">
-                                        <div className="text-amber-500 font-bold">01</div>
-                                        <div>
-                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Cóctel & Bienvenida</h4>
-                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Magia itinerante para romper el hielo entre grupos.</p>
-                                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+                            <div className="md:col-span-7 bg-[#111111]/80 rounded-[2rem] p-10 lg:p-14 border border-white/5 relative overflow-hidden group">
+                                <div className="absolute top-0 right-0 w-64 h-64 bg-[#d4a853]/5 rounded-full blur-[80px] -mr-20 -mt-20 transition-opacity group-hover:opacity-100 opacity-50" />
+                                <span className="text-5xl text-white/10 font-bold mb-6 block font-[Cinzel]">01</span>
+                                <h3 className="text-2xl font-[Cinzel] text-white mb-4">El Cóctel</h3>
+                                <p className="text-slate-300 font-light leading-relaxed">
+                                    Magia itinerante que rompe el hielo. Mientras vosotros os hacéis las fotos, vuestros invitados comparten risas y momentos inolvidables a pocos centímetros de sus ojos.
+                                </p>
+                            </div>
+                            <div className="md:col-span-5 bg-[#111111]/80 rounded-[2rem] p-10 lg:p-14 border border-white/5 relative overflow-hidden group">
+                                <span className="text-5xl text-white/10 font-bold mb-6 block font-[Cinzel]">02</span>
+                                <h3 className="text-2xl font-[Cinzel] text-white mb-4">El Banquete</h3>
+                                <p className="text-slate-300 font-light leading-relaxed">
+                                    Intervenciones mesa a mesa. Magia elegante y sutil entre platos que mantiene la energía alta sin interrumpir el ritmo del servicio.
+                                </p>
+                            </div>
+                        </div>
+                    </FadeIn>
+
+                    {/* Experiencia Section */}
+                    <div className="py-24 border-t border-white/5">
+                        <FadeIn y={20} className="max-w-4xl mx-auto text-center mb-16">
+                            <h2 className="text-3xl md:text-4xl font-[Cinzel] text-white mb-6">Tranquilidad y Exclusividad</h2>
+                            <p className="text-slate-300 font-light text-lg leading-relaxed">
+                                Un servicio diseñado para que el día de tu boda solo tengas que disfrutar. Me coordino directamente con tu wedding planner o la finca para asegurar que cada momento ocurra en su tiempo exacto.
+                            </p>
+                        </FadeIn>
+                        
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                            {[
+                                { title: "Cero Estrés", desc: "Coordinación total con catering y planners." },
+                                { title: "Zona Noroeste", desc: "Desplazamiento incluido a fincas de Madrid y Sierra." },
+                                { title: "Magia Premium", desc: "Formado bajo la tutela de Dani DaOrtiz." }
+                            ].map((item, idx) => (
+                                <FadeIn key={idx} delay={idx * 0.15} y={20}>
+                                    <div className="h-full bg-transparent border border-white/5 p-8 rounded-3xl text-center hover:bg-white/[0.02] transition-colors">
+                                        <h4 className="text-white font-medium mb-3">{item.title}</h4>
+                                        <p className="text-slate-400 text-sm font-light leading-relaxed">{item.desc}</p>
                                     </div>
-                                    <div className="flex items-start gap-3">
-                                        <div className="text-amber-500 font-bold">02</div>
-                                        <div>
-                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Magia de Banquete</h4>
-                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Intervenciones elegantes durante el servicio de mesa.</p>
-                                        </div>
-                                    </div>
+                                </FadeIn>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* FAQ & Blog Section */}
+                    <div className="py-24 border-t border-white/5">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                            <FadeIn>
+                                <h2 className="text-2xl font-[Cinzel] text-white mb-8">Preguntas Frecuentes</h2>
+                                <div className="space-y-4">
+                                    {faqSchema.mainEntity.slice(0, 4).map((faq, index) => (
+                                        <details key={index} className="group bg-[#111111]/50 border border-white/5 rounded-2xl overflow-hidden cursor-pointer">
+                                            <summary className="flex items-center justify-between p-6 text-white font-medium text-sm">
+                                                <span>{faq.name}</span>
+                                                <span className="text-[#d4a853] transition-transform group-open:rotate-180">
+                                                    ↓
+                                                </span>
+                                            </summary>
+                                            <div className="px-6 pb-6 text-slate-400 text-sm font-light leading-relaxed">
+                                                {faq.acceptedAnswer.text}
+                                            </div>
+                                        </details>
+                                    ))}
                                 </div>
-
-                                <p>
-                                    Como <strong className="text-amber-400">mago para bodas en Madrid</strong>, formado bajo la mentoría directa de <strong>Dani DaOrtiz</strong>, mi propuesta se aleja del espectáculo genérico para centrarse en la <u>exclusividad de la Cartomagia de autor</u>. Los milagros ocurren en las propias manos de tus invitados, respetando en todo momento el flujo del evento y aportando ese toque purista y sofisticado que requieren las fincas más exclusivas de la capital.
-                                </p>
-
-                                <p>
-                                    Al ser <strong>mago torrelodones</strong> y de toda la zona noroeste, ofrezco una cobertura excepcional en <strong>Las Rozas, Pozuelo, El Escorial y Majadahonda</strong>. Mi conocimiento de los espacios y wedding planners locales garantiza una coordinación impecable sin complicaciones logísticas para los novios.
-                                </p>
-                            </div>
-
-                            <div className="mt-12 flex justify-start">
-                                <ContactButtonClient label="Consultar Disponibilidad Bodas" />
-                            </div>
-                        </div>
-
-                        <div className="relative md:sticky md:top-32 h-[350px] md:h-[500px] rounded-2xl overflow-hidden border border-slate-800 shadow-xl group">
-                            <Image
-                                src="/images/boda-magia-madrid.webp"
-                                alt="Mago de bodas en Madrid Angel Ruiz realizando magia de cerca en una finca de la sierra de Madrid"
-                                fill
-                                className="object-cover object-top group-hover:scale-110 transition-transform duration-[3s]"
-                                priority
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
-                            <div className="absolute bottom-6 left-6 right-6">
-                                <p className="text-[10px] text-amber-500 font-bold uppercase tracking-widest mb-1">Impacto Emocional</p>
-                                <p className="text-white font-[Cinzel] text-sm italic">"Un recuerdo que tus invitados guardarán para siempre"</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* SECCIÓN: Cómo Funciona */}
-                    <div className="max-w-5xl mx-auto py-16 border-t border-white/5">
-                        <div className="text-center mb-12">
-                            <h2 className="text-2xl md:text-3xl font-[Cinzel] text-white uppercase tracking-widest">
-                                ¿Cómo funciona la magia en una boda?
-                            </h2>
-                            <p className="text-slate-400 mt-4 max-w-2xl mx-auto text-sm">
-                                Un proceso sencillo pensado para que tú solo tengas que disfrutar de tu gran día.
-                            </p>
-                        </div>
-                        
-                        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-                            <div className="bg-slate-900/40 p-6 rounded-xl border border-white/5 text-center">
-                                <div className="text-amber-500 font-bold text-2xl mb-2">1</div>
-                                <h3 className="text-white font-bold text-sm mb-2">Contacto</h3>
-                                <p className="text-slate-400 text-xs">Me cuentas la fecha, el lugar y el estilo de tu boda. Te asesoro sin compromiso.</p>
-                            </div>
-                            <div className="bg-slate-900/40 p-6 rounded-xl border border-white/5 text-center">
-                                <div className="text-amber-500 font-bold text-2xl mb-2">2</div>
-                                <h3 className="text-white font-bold text-sm mb-2">Propuesta a Medida</h3>
-                                <p className="text-slate-400 text-xs">Diseño una intervención adaptada a tu timing: cóctel, banquete o ambos.</p>
-                            </div>
-                            <div className="bg-slate-900/40 p-6 rounded-xl border border-white/5 text-center">
-                                <div className="text-amber-500 font-bold text-2xl mb-2">3</div>
-                                <h3 className="text-white font-bold text-sm mb-2">Coordinación</h3>
-                                <p className="text-slate-400 text-xs">Me coordino con tu wedding planner o el responsable de la finca para una logística perfecta.</p>
-                            </div>
-                            <div className="bg-slate-900/40 p-6 rounded-xl border border-white/5 text-center">
-                                <div className="text-amber-500 font-bold text-2xl mb-2">4</div>
-                                <h3 className="text-white font-bold text-sm mb-2">El Gran Día</h3>
-                                <p className="text-slate-400 text-xs">Llego puntual, con elegancia discreta, y hago que tus invitados vivan algo inolvidable.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* SECCIÓN: Momentos Clave */}
-                    <div className="max-w-5xl mx-auto py-16 border-t border-white/5">
-                        <h2 className="text-2xl md:text-3xl font-[Cinzel] text-white uppercase tracking-widest text-center mb-12">
-                            Los 3 Momentos Clave para la Magia en tu Boda
-                        </h2>
-                        
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            <div className="bg-slate-900/40 p-8 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all">
-                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3">El Cóctel de Bienvenida</h3>
-                                <p className="text-slate-300 text-sm leading-relaxed mb-3">
-                                    Es el <strong className="text-white">momento estrella</strong> para la magia de cerca. Mientras los invitados toman sus primeros aperitivos, me muevo entre los grupos realizando efectos imposibles con cartas y objetos cotidianos.
-                                </p>
-                                <p className="text-slate-400 text-xs leading-relaxed">
-                                    Resultado: rompe el hielo entre familias que no se conocen, elimina los silencios incómodos y convierte la espera en puro entretenimiento. Ideal para <strong>bodas en fincas de Madrid</strong> con cócteles al aire libre.
-                                </p>
-                            </div>
-                            <div className="bg-slate-900/40 p-8 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all">
-                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3">Entre Platos del Banquete</h3>
-                                <p className="text-slate-300 text-sm leading-relaxed mb-3">
-                                    La magia <strong className="text-white">mesa a mesa</strong> durante la cena es elegante y no interrumpe la conversación. Los invitados ven la magia a centímetros de sus ojos mientras esperan entre platos.
-                                </p>
-                                <p className="text-slate-400 text-xs leading-relaxed">
-                                    Es un formato íntimo y sofisticado, perfecto para bodas que buscan un toque de <strong>entretenimiento premium</strong> sin cortar el flujo del servicio de catering.
-                                </p>
-                            </div>
-                            <div className="bg-slate-900/40 p-8 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all">
-                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3">La Fiesta y Postcena</h3>
-                                <p className="text-slate-300 text-sm leading-relaxed mb-3">
-                                    Mientras suena la música, la <strong className="text-white">magia de salón</strong> puede ser el momento central de la velada. Un show breve de 15-20 minutos que aglutina a todos los invitados antes de abrir pista.
-                                </p>
-                                <p className="text-slate-400 text-xs leading-relaxed">
-                                    Es el broche perfecto para bodas que quieren un <strong>espectáculo de magia para bodas</strong> con protagonismo visual y mucha participación de los novios.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* SECCIÓN: Precios y Transparencia */}
-                    <div className="max-w-5xl mx-auto py-16 border-t border-white/5">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                            <div>
-                                <h2 className="text-2xl md:text-3xl font-[Cinzel] text-white uppercase tracking-widest mb-6">
-                                    Precios de un Mago para Bodas en Madrid
-                                </h2>
-                                <p className="text-slate-300 text-sm leading-relaxed text-justify mb-4">
-                                    La transparencia es fundamental. El precio de contratar a un <strong className="text-amber-400">mago para bodas en Madrid</strong> varía en función del tiempo de actuación, el número de invitados y el momento elegido (cóctel vs banquete). 
-                                </p>
-                                <p className="text-slate-300 text-sm leading-relaxed text-justify mb-6">
-                                    Como <strong>experto en magia en Madrid</strong>, mi caché refleja la calidad de un servicio premium, la formación de élite y la tranquilidad de dejar el entretenimiento en manos de un profesional con años de experiencia en el sector nupcial.
-                                </p>
-                                <a href="/blog/cuanto-cuesta-mago-boda-madrid" className="inline-block bg-white/5 border border-amber-500/30 text-amber-400 font-bold px-6 py-3 rounded-full hover:bg-amber-500 hover:text-slate-950 transition-colors uppercase tracking-[0.1em] text-xs">
-                                    Ver Guía de Precios →
-                                </a>
-                            </div>
-                            <div className="bg-slate-900/40 p-8 rounded-xl border border-white/5">
-                                <h3 className="text-white font-[Cinzel] text-lg uppercase mb-4 text-center">Factores del Presupuesto</h3>
-                                <ul className="space-y-3 text-sm text-slate-400">
-                                    <li className="flex items-center gap-2"><span className="text-amber-500">✦</span> <strong>Duración:</strong> Normalmente entre 1.5h y 2h.</li>
-                                    <li className="flex items-center gap-2"><span className="text-amber-500">✦</span> <strong>Formato:</strong> Magia itinerante vs Magia de salón.</li>
-                                    <li className="flex items-center gap-2"><span className="text-amber-500">✦</span> <strong>Desplazamiento:</strong> Incluido para Madrid Capital y Sierra.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* SECCIÓN: ¿Qué incluye el servicio? */}
-                    <div className="max-w-5xl mx-auto py-16 border-t border-white/5">
-                        <div className="text-center mb-12">
-                            <h2 className="text-2xl md:text-3xl font-[Cinzel] text-white uppercase tracking-widest">
-                                ¿Qué incluye el servicio de magia para bodas?
-                            </h2>
-                            <p className="text-slate-400 mt-4 max-w-2xl mx-auto text-sm">
-                                Contratar a un <strong className="text-white">ilusionista para bodas en Madrid</strong> es mucho más que tener a alguien haciendo trucos con cartas. Mi servicio está pensado para ofrecerte tranquilidad total y una experiencia cuidada hasta el último detalle.
-                            </p>
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all flex items-start gap-4">
-                                <span className="text-amber-500 text-xl mt-1">✦</span>
-                                <div>
-                                    <h3 className="text-white font-bold text-sm mb-2">Desplazamiento sin coste extra</h3>
-                                    <p className="text-slate-400 text-xs leading-relaxed">
-                                        El desplazamiento está incluido en toda la zona noroeste de Madrid: Torrelodones, Las Rozas, Majadahonda, Pozuelo, El Escorial, Boadilla y alrededores. Para fincas fuera de esta zona, te informo del suplemento de forma clara antes de confirmar.
-                                    </p>
+                            </FadeIn>
+                            <FadeIn delay={0.2}>
+                                <h2 className="text-2xl font-[Cinzel] text-white mb-8">Inspiración para tu Enlace</h2>
+                                <div className="space-y-6">
+                                    <a href="/blog/cuanto-cuesta-mago-boda-madrid" className="block p-8 rounded-3xl bg-gradient-to-br from-[#111111] to-[#1a1a1a] border border-white/5 hover:border-[#d4a853]/30 transition-all">
+                                        <span className="text-[#d4a853] text-[10px] uppercase tracking-widest mb-3 block">Transparencia</span>
+                                        <h3 className="text-white text-lg mb-2">¿Cuánto cuesta un mago para boda?</h3>
+                                        <p className="text-slate-400 font-light text-sm">Guía completa de precios y formatos en Madrid.</p>
+                                    </a>
+                                    <a href="/blog/ideas-originales-entretenimiento-bodas-madrid" className="block p-8 rounded-3xl bg-gradient-to-br from-[#111111] to-[#1a1a1a] border border-white/5 hover:border-[#d4a853]/30 transition-all">
+                                        <span className="text-[#d4a853] text-[10px] uppercase tracking-widest mb-3 block">Ideas Creativas</span>
+                                        <h3 className="text-white text-lg mb-2">10 Ideas de Entretenimiento</h3>
+                                        <p className="text-slate-400 font-light text-sm">Sorprende a tus invitados con detalles únicos.</p>
+                                    </a>
                                 </div>
-                            </div>
-                            <div className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all flex items-start gap-4">
-                                <span className="text-amber-500 text-xl mt-1">✦</span>
-                                <div>
-                                    <h3 className="text-white font-bold text-sm mb-2">Coordinación previa con tu wedding planner</h3>
-                                    <p className="text-slate-400 text-xs leading-relaxed">
-                                        Antes de tu boda, me pongo en contacto con tu wedding planner, el maître o directamente contigo para cuadrar los tiempos de actuación. Así la <strong>magia de cerca en bodas</strong> encaja de forma natural en el ritmo del evento, sin interrumpir momentos importantes como los discursos o el primer baile.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all flex items-start gap-4">
-                                <span className="text-amber-500 text-xl mt-1">✦</span>
-                                <div>
-                                    <h3 className="text-white font-bold text-sm mb-2">Adaptación total al protocolo del evento</h3>
-                                    <p className="text-slate-400 text-xs leading-relaxed">
-                                        Cada boda tiene su estilo. Me adapto a la etiqueta de tu celebración, ya sea una boda íntima en un jardín privado o un gran enlace en una finca con cientos de invitados. Mi presencia es discreta, elegante y siempre alineada con el tono que habéis elegido como pareja.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all flex items-start gap-4">
-                                <span className="text-amber-500 text-xl mt-1">✦</span>
-                                <div>
-                                    <h3 className="text-white font-bold text-sm mb-2">Seguro de responsabilidad civil incluido</h3>
-                                    <p className="text-slate-400 text-xs leading-relaxed">
-                                        Trabajo con seguro de responsabilidad civil, un requisito que muchas fincas y hoteles exigen y que te da la tranquilidad de saber que todo está cubierto. Es un detalle que diferencia a un <strong>mago boda cóctel Madrid</strong> profesional de uno amateur.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="mt-10 text-center">
-                            <p className="text-slate-300 text-sm max-w-2xl mx-auto leading-relaxed">
-                                En resumen, cuando me contratas como <strong className="text-amber-400">mago para bodas Madrid</strong>, no solo llevas magia a tu celebración: llevas la certeza de un servicio profesional, coordinado y sin sorpresas desagradables. Tu único trabajo es disfrutar del día.
-                            </p>
+                            </FadeIn>
                         </div>
                     </div>
-
-                    {/* SECCIÓN: Cobertura geográfica */}
-                    <div className="max-w-5xl mx-auto py-16 border-t border-white/5">
-                        <div className="text-center mb-12">
-                            <h2 className="text-2xl md:text-3xl font-[Cinzel] text-white uppercase tracking-widest">
-                                Cobertura para Bodas en Madrid
-                            </h2>
-                            <p className="text-slate-400 mt-4 max-w-2xl mx-auto text-sm">
-                                Desde mi base en Torrelodones, cubro bodas en toda la Comunidad de Madrid con logística ágil y sin sorpresas.
-                            </p>
-                        </div>
-                        
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <div className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all">
-                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3">Fincas de la Sierra</h3>
-                                <p className="text-slate-300 text-sm leading-relaxed">
-                                    Conozco las principales fincas de bodas en <strong>Torrelodones, El Escorial, Galapagar y Collado Villalba</strong>. Coordinación perfecta para magia al aire libre durante el cóctel en entornos rurales.
-                                </p>
-                            </div>
-                            <div className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all">
-                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3">Zona Noroeste</h3>
-                                <p className="text-slate-300 text-sm leading-relaxed">
-                                    Cobertura inmediata en <strong>Las Rozas, Majadahonda, Pozuelo y Boadilla</strong>. Entretenimiento premium para enlaces exclusivos en entornos residenciales y hoteles de la A-6.
-                                </p>
-                            </div>
-                            <div className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all">
-                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3">Madrid Centro</h3>
-                                <p className="text-slate-300 text-sm leading-relaxed">
-                                    Etiqueta impecable para bodas cosmopolitas en <strong>hoteles del centro, Barrio de Salamanca y Retiro</strong>. Magia de cerca de alto impacto visual sin interrumpir el ritmo del banquete.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* SECCIÓN: Testimonio */}
-                        <div className="text-center space-y-4 py-8">
-                            <p className="text-amber-500 font-bold uppercase tracking-widest text-xs">Testimonio Destacado:</p>
-                            <p className="text-lg text-white font-[Cinzel] italic max-w-2xl mx-auto">
-                                "Ángel hizo que el cóctel volara. Nuestros invitados todavía nos preguntan cómo hizo aquello con las cartas. Fue el toque elegante que buscábamos."
-                            </p>
-                            <p className="text-slate-500 text-[10px] uppercase">— Novios en Finca de Torrelodones, 2025</p>
-                        </div>
-
-                {/* FAQ Section */}
-                <section className="border-t border-white/5 pt-16 mt-16">
-                    <h2 className="text-2xl font-[Cinzel] text-white mb-12 text-center uppercase tracking-widest">Preguntas Frecuentes</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                        {faqSchema.mainEntity.map((faq, index) => (
-                            <div key={index} className="bg-white/5 p-6 rounded-xl border border-white/10">
-                                <h3 className="text-amber-400 font-bold mb-3 text-sm">{faq.name}</h3>
-                                <p className="text-slate-400 text-xs leading-relaxed text-justify">{faq.acceptedAnswer.text}</p>
-                            </div>
-                        ))}
-                    </div>
-                </section>
-                {/* Related Blog Posts Section */}
-                <section className="border-t border-white/5 pt-16 mt-16 pb-8">
-                    <h2 className="text-2xl font-[Cinzel] text-white mb-10 text-center uppercase tracking-widest">Consejos para tu Boda</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <a href="/blog/cuanto-cuesta-mago-boda-madrid" className="group bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
-                            <p className="text-amber-500 text-[10px] uppercase font-bold tracking-tighter mb-2">Precios y Tarifas</p>
-                            <h3 className="text-white font-[Cinzel] text-sm group-hover:text-amber-400 transition-colors">¿Cuánto cuesta un mago para boda?</h3>
-                        </a>
-                        <a href="/blog/ideas-originales-entretenimiento-bodas-madrid" className="group bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
-                            <p className="text-amber-500 text-[10px] uppercase font-bold tracking-tighter mb-2">Ideas Creativas</p>
-                            <h3 className="text-white font-[Cinzel] text-sm group-hover:text-amber-400 transition-colors">10 Ideas para entretener invitados</h3>
-                        </a>
-                        <a href="/blog/mago-para-bodas-madrid-faq" className="group bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
-                            <p className="text-amber-500 text-[10px] uppercase font-bold tracking-tighter mb-2">Guía Completa</p>
-                            <h3 className="text-white font-[Cinzel] text-sm group-hover:text-amber-400 transition-colors">Mago para bodas: La Guía Definitiva</h3>
-                        </a>
-                    </div>
-                </section>
-            </main>
+                </main>
         </NavFooterClient>
         </>
     );

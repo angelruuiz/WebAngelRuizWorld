@@ -85,123 +85,85 @@ export default function TeamBuildingPage() {
                 <MagicCursor />
                 <ParticleBackground />
 
-                <main>
-                <section className="pt-24 pb-16 px-6 max-w-6xl mx-auto relative z-10">
-                    <Breadcrumbs />
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-20">
-                        <div className="relative md:sticky md:top-32 h-auto rounded-2xl overflow-hidden border border-slate-800 shadow-xl order-2 md:order-1 group bg-slate-900/50">
-                            <Image
-                                src="/images/evento-angel-ruiz-magia.webp"
-                                alt="Team Building Magia para Empresas en Madrid"
-                                width={800}
-                                height={1000}
-                                className="w-full h-auto transition-all duration-700 group-hover:scale-105"
-                                priority
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 to-transparent" />
+                <main className="bg-[#0A0A0A] text-[#EAEAEA] font-mono selection:bg-amber-500 selection:text-black">
+                    <section className="pt-32 pb-24 px-6 max-w-7xl mx-auto relative z-10">
+                        <Breadcrumbs />
+                        
+                        <div className="mt-16 border-t-2 border-b-2 border-[#EAEAEA] py-12 mb-16 relative">
+                            <h1 className="text-5xl md:text-8xl font-sans font-black uppercase tracking-tighter text-[#EAEAEA] leading-[0.8] mix-blend-difference z-10 relative text-center">
+                                TEAM BUILDING<br/><span className="text-amber-500">MAGIA</span> MADRID
+                            </h1>
                         </div>
 
-                        <div className="order-1 md:order-2">
-                             <p className="text-amber-500 uppercase tracking-widest text-[10px] font-bold mb-2 drop-shadow-md">
-                                RRHH e Incentivos | Dinámicas Originales
-                             </p>
-                             <h1 className="text-4xl md:text-5xl font-[Cinzel] text-white mb-6 border-b border-amber-500/50 pb-2 font-bold leading-tight uppercase">
-                                Team Building con Magia en Madrid
-                             </h1>
-
-                             <div className="space-y-6 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
-                                 <p className="border-l-2 border-amber-500 pl-4 py-1">
-                                    <span className="text-amber-400 font-bold underline decoration-amber-500/30 text-lg">Mucho más que un espectáculo: una experiencia formativa y participativa.</span>
-                                </p>
-                                 <p>
-                                    Atrás quedaron las aburridas dinámicas de grupo. Las empresas modernas y departamentos de RRHH en <strong>Madrid</strong> buscan actividades de incentivo que saquen a los empleados de su zona de confort fomentando el compañerismo. Un <strong className="text-amber-400">team building de magia</strong> es la herramienta corporativa perfecta para lograr cohesión, risas y aprendizaje lateral de una forma inolvidable.
-                                </p>
-
-                                <div className="grid grid-cols-2 gap-4 py-6 border-y border-white/5">
-                                    <div className="flex items-start gap-3">
-                                        <div className="text-amber-500 font-bold">01</div>
-                                        <div>
-                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Comunicación</h4>
-                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">La magia requiere empatía y claridad verbal, habilidades críticas para las ventas y atención al cliente.</p>
-                                        </div>
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                            <div className="lg:col-span-5 flex flex-col gap-8">
+                                <div className="border border-amber-500/30 bg-[#121212] p-8 h-full">
+                                    <div className="text-amber-500 uppercase tracking-widest text-[10px] font-black mb-6 pb-2 border-b border-amber-500/30">
+                                        &gt;&gt;&gt; RRHH_INCENTIVOS_PROTOCOL
                                     </div>
-                                    <div className="flex items-start gap-3">
-                                        <div className="text-amber-500 font-bold">02</div>
-                                        <div>
-                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Pensamiento Lateral</h4>
-                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Estimula la resolución creativa de problemas enseñando a ver los desafíos desde ángulos imposibles.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <p>
-                                    Ya sea en las propias oficinas de tu empresa, en hoteles de <strong>Madrid Centro</strong> o en entornos naturales de la <strong>Sierra Noroeste</strong>, el <strong>team building magia</strong> rompe jerarquías y une a los departamentos. 
-                                </p>
-                                
-                                <div className="mt-10 mb-8">
-                                    <h2 className="text-2xl font-[Cinzel] text-amber-500 mb-6 border-b border-amber-500/20 pb-2 uppercase tracking-widest">Formatos de Actividad para Empresas</h2>
-                                    <div className="space-y-6">
-                                        <div className="bg-slate-900/40 p-5 rounded-xl border border-white/5">
-                                            <h3 className="text-lg font-bold text-white mb-2 font-[Cinzel]">1. Talleres de Magia (Magic Workshops)</h3>
-                                            <p className="text-sm text-slate-300">Sesiones interactivas donde tus empleados no solo ven magia de alto nivel, sino que <u>aprenden a ejecutar efectos seleccionados</u> trabajando en equipo. El objetivo final es una "actuación" grupal que refuerza la confianza y la oratoria.</p>
-                                        </div>
-                                        <div className="bg-slate-900/40 p-5 rounded-xl border border-white/5">
-                                            <h3 className="text-lg font-bold text-white mb-2 font-[Cinzel]">2. Dinámicas de Resolución de Problemas</h3>
-                                            <p className="text-sm text-slate-300">Utilizamos el secreto detrás de los trucos de ilusionismo como una poderosa metáfora para el pensamiento crítico, la planificación estratégica y la resolución de conflictos reales dentro de la empresa.</p>
-                                        </div>
-                                        <div className="bg-slate-900/40 p-5 rounded-xl border border-white/5">
-                                            <h3 className="text-lg font-bold text-white mb-2 font-[Cinzel]">3. Espectáculos Corporativos Personalizados</h3>
-                                            <p className="text-sm text-slate-300">Un show de magia adaptado a los valores, productos o mensajes clave de tu marca, ideal para amenizar cenas de empresa o convenciones tras una larga jornada de trabajo.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="mt-8">
-                                    <h2 className="text-xl font-[Cinzel] text-amber-500 mb-4 uppercase">Beneficios del Team Building con Magia para Empresas</h2>
-                                    <p className="mb-4">
-                                        Las actividades de <strong>team building con magia</strong> son una de las tendencias más fuertes en <strong>Madrid</strong>. Al enfrentar a los participantes a lo "imposible", se humaniza al personal y se fomentan dinámicas de colaboración únicas.
+                                    <p className="text-sm leading-relaxed mb-6">
+                                        Las corporaciones modernas en Madrid requieren dinámicas disruptivas. Nuestro <strong className="text-amber-500">taller de magia corporativo</strong> es un mecanismo de alto rendimiento para forzar el pensamiento lateral, estimular el <strong className="text-amber-500">engagement</strong> interdepartamental y consolidar equipos operativos cohesivos.
                                     </p>
-                                    <ul className="list-disc pl-6 space-y-2 text-slate-300">
-                                        <li><strong className="text-white">Desarrollo de habilidades de presentación:</strong> Aprender magia mejora la confianza al hablar en público, ideal para equipos comerciales.</li>
-                                        <li><strong className="text-white">Rompehielos perfecto:</strong> Ideal para convenciones donde asisten delegaciones de diferentes ciudades o países.</li>
-                                        <li><strong className="text-white">Adaptabilidad y gestión de la frustración:</strong> La magia requiere paciencia y práctica, enseñando valiosas lecciones sobre el manejo del error.</li>
-                                    </ul>
+                                    
+                                    <div className="bg-[#0A0A0A] p-4 border border-[#EAEAEA]/10 mb-8">
+                                        <div className="text-[10px] text-amber-500 uppercase tracking-widest mb-1">Métricas de Impacto / ROI</div>
+                                        <div className="w-full bg-[#EAEAEA]/10 h-2 mt-2">
+                                            <div className="bg-amber-500 h-2 w-[95%]"></div>
+                                        </div>
+                                        <div className="flex justify-between text-[10px] mt-1 text-[#EAEAEA]/60">
+                                            <span>Incremento de Cohesión</span>
+                                            <span>95%</span>
+                                        </div>
+                                    </div>
+
+                                    <ContactButtonClient label="SOLICITAR DOSSIER DE CAPACITACIÓN" className="w-full bg-amber-500 text-black font-black rounded-none py-4 uppercase text-[10px] tracking-widest" />
                                 </div>
-
-                                <div className="mt-8 mb-6">
-                                    <h3 className="text-lg font-[Cinzel] text-white mb-3 uppercase">¿Buscas el mejor mago para Team Building en Madrid?</h3>
-                                    <p className="text-sm text-slate-400">
-                                        Con más de 10 años de experiencia, mi propuesta de <strong>team building magia</strong> está diseñada específicamente para el sector corporativo. No es un espectáculo infantil adaptado, es ilusionismo de alto impacto combinado con dinámicas de <em>team building</em> real.
-                                    </p>
-                                </div>
-
-                                <p className="bg-white/5 p-4 rounded-lg italic text-slate-300 text-sm">
-                                    "El taller de magia corporativa fue un soplo de aire fresco. Ver a nuestro equipo financiero colaborando con los comerciales para lograr un truco de cartomagia no tuvo precio."
-                                </p>
-
                             </div>
 
-                            <div className="mt-12">
-                                <ContactButtonClient label="Solicitar Dossier de Team Building" />
+                            <div className="lg:col-span-7">
+                                <div className="grid grid-cols-1 gap-px bg-amber-500/20 border border-amber-500/30">
+                                    <div className="bg-[#0A0A0A] p-6 hover:bg-[#121212] transition-colors">
+                                        <div className="flex items-center justify-between mb-4">
+                                            <h3 className="text-xl font-sans font-black uppercase text-white">01. Magic Workshops</h3>
+                                            <span className="text-amber-500 font-mono text-[10px] tracking-widest px-2 border border-amber-500">CORE</span>
+                                        </div>
+                                        <p className="text-xs text-[#EAEAEA]/70">Capacitación práctica. Los empleados ejecutan efectos trabajando en equipo, entrenando habilidades críticas de comunicación, oratoria y liderazgo táctico.</p>
+                                    </div>
+
+                                    <div className="bg-[#0A0A0A] p-6 hover:bg-[#121212] transition-colors">
+                                        <div className="flex items-center justify-between mb-4">
+                                            <h3 className="text-xl font-sans font-black uppercase text-white">02. Resolución de Problemas</h3>
+                                            <span className="text-amber-500 font-mono text-[10px] tracking-widest px-2 border border-amber-500">STRATEGY</span>
+                                        </div>
+                                        <p className="text-xs text-[#EAEAEA]/70">Desmontaje de ilusiones como metáfora para el pensamiento crítico. Abordaje de desafíos corporativos desde ángulos imposibles para disolver bloqueos operativos.</p>
+                                    </div>
+
+                                    <div className="bg-[#0A0A0A] p-6 hover:bg-[#121212] transition-colors">
+                                        <div className="flex items-center justify-between mb-4">
+                                            <h3 className="text-xl font-sans font-black uppercase text-white">03. Show Personalizado</h3>
+                                            <span className="text-amber-500 font-mono text-[10px] tracking-widest px-2 border border-amber-500">EXECUTION</span>
+                                        </div>
+                                        <p className="text-xs text-[#EAEAEA]/70">Espectáculo adaptado a mensajes clave corporativos. Ideal para convenciones de gran escala donde se requiere anclar la identidad de marca tras intensas jornadas de trabajo.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    {/* FAQ Section */}
-                    <section className="border-t border-white/5 pt-16 mb-8 mt-12">
-                        <h2 className="text-2xl font-[Cinzel] text-white mb-10 text-center uppercase tracking-widest">Preguntas Frecuentes sobre el Team Building</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                            {faqSchema.mainEntity.map((faq, index) => (
-                                <div key={index} className="bg-slate-900/40 p-6 rounded-xl border border-white/10 hover:border-amber-500/30 transition-colors">
-                                    <h3 className="text-amber-400 font-bold mb-3 text-sm">{faq.name}</h3>
-                                    <p className="text-slate-400 text-xs leading-relaxed text-justify">{faq.acceptedAnswer.text}</p>
-                                </div>
-                            ))}
+                        <div className="mt-24 border-t border-amber-500/30 pt-16">
+                            <h2 className="text-2xl font-sans font-black text-amber-500 uppercase text-center mb-12 tracking-widest">
+                                /// PREGUNTAS FRECUENTES ///
+                            </h2>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-[#EAEAEA]/10 border border-[#EAEAEA]/20">
+                                {faqSchema.mainEntity.map((faq, index) => (
+                                    <div key={index} className="bg-[#0A0A0A] p-8 hover:bg-[#121212] transition-colors">
+                                        <h3 className="text-amber-500 font-black mb-4 text-sm font-sans uppercase">{faq.name}</h3>
+                                        <p className="text-[#EAEAEA]/60 text-xs leading-relaxed">{faq.acceptedAnswer.text}</p>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
+
                     </section>
-
-                </section>
                 </main>
             </NavFooterClient>
         </>

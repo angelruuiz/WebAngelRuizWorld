@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import NavFooterClient from '@/components/NavFooterClient';
 import ContactButtonClient from '@/components/ContactButtonClient';
-import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
+import { MagicCursor, ParticleBackground, FadeIn } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import BusinessSchema from '@/components/BusinessSchema';
 
@@ -61,197 +61,145 @@ export default function MagoComunionesPage() {
                 <MagicCursor />
                 <ParticleBackground />
 
-                <main>
-                <section className="pt-24 pb-16 px-6 max-w-6xl mx-auto relative z-10">
+                <main className="relative z-10 pt-32 pb-32 px-6 max-w-7xl mx-auto font-sans">
                     <Breadcrumbs />
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-20">
-                        <div className="relative md:sticky md:top-32 h-auto rounded-2xl overflow-hidden border border-slate-800 shadow-xl order-2 md:order-1 group bg-slate-900/50">
-                            <Image
-                                src="/images/magia-comuniones-madrid.jpg"
-                                alt="Mago para comuniones en Madrid - Ángel Ruiz"
-                                width={800}
-                                height={1000}
-                                className="w-full h-auto object-cover aspect-[4/5] transition-all duration-700 group-hover:scale-105"
-                                priority
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent" />
-                        </div>
-
-                        <div className="order-1 md:order-2">
-                            <p className="text-amber-500 uppercase tracking-widest text-[10px] font-bold mb-2 drop-shadow-md">
-                                Magia Familiar y Eventos Privados
-                            </p>
-                            <h1 className="text-4xl md:text-5xl font-[Cinzel] text-white mb-6 border-b border-amber-500/50 pb-2 font-bold leading-tight uppercase">
-                                Mago para Comuniones en Madrid
+                    {/* Hero Section */}
+                    <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center mb-32 mt-8">
+                        <FadeIn className="flex-1 relative w-full aspect-[4/5] lg:aspect-square" delay={0.2} scale={0.95}>
+                            <div className="absolute inset-0 rounded-full overflow-hidden border-8 border-[#111111] shadow-2xl">
+                                <Image
+                                    src="/images/magia-comuniones-madrid.jpg"
+                                    alt="Mago para comuniones en Madrid - Ángel Ruiz"
+                                    fill
+                                    className="object-cover transition-transform duration-[3s] ease-in-out hover:scale-110"
+                                    priority
+                                />
+                                <div className="absolute inset-0 bg-[#d4a853]/10 mix-blend-overlay" />
+                            </div>
+                        </FadeIn>
+                        
+                        <FadeIn className="flex-1 space-y-8" y={40}>
+                            <div className="inline-block px-4 py-2 rounded-full border border-[#d4a853]/30 bg-[#d4a853]/5">
+                                <span className="text-[#d4a853] text-xs font-semibold tracking-widest uppercase">
+                                    Primera Comunión
+                                </span>
+                            </div>
+                            <h1 className="text-5xl md:text-6xl font-[Cinzel] text-white font-bold leading-[1.1] tracking-tight">
+                                El Día de su <br/><span className="text-[#d4a853] italic font-light">Vida</span>
                             </h1>
-
-                            <div className="space-y-6 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
-                                {/* AI-SEO Answer Block (40-60 words) */}
-                                <p className="border-l-2 border-amber-500 pl-4 py-1">
-                                    <span className="text-amber-400 font-bold underline decoration-amber-500/30 text-lg block mb-2">
-                                        ¿Qué incluye un mago para comuniones en Madrid?
-                                    </span>
-                                    Un espectáculo de magia para primera comunión combina ilusionismo visual, participación directa del niño protagonista y humor para todas las edades. La duración ideal es de 60 minutos, garantizando un entretenimiento elegante y sorprendente para que familiares, adultos y niños compartan una experiencia mágica inolvidable.
-                                </p>
-                                
-                                <p>
-                                    La Primera Comunión es uno de los días más importantes en la vida de un niño. Como <strong className="text-amber-400 font-bold">mago para fiestas infantiles en Madrid</strong>, mi objetivo no es solo entretener, sino crear asombro genuino. A diferencia de las animaciones infantiles tradicionales, ofrezco un espectáculo de <strong>ilusionismo profesional</strong> donde la calidad técnica de la magia es equiparable a mis eventos corporativos, pero con un tono adaptado a un público familiar.
-                                </p>
-                                <p>
-                                    El homenajeado se convierte en el <strong>ayudante estrella</strong>. Es él quien hace la magia, llevándose los aplausos y creando un recuerdo imborrable frente a toda su familia.
-                                </p>
-
-                                {/* AI-SEO Statistics Block */}
-                                <div className="bg-slate-900/60 p-5 rounded-lg border border-slate-700/50 mt-6">
-                                    <h4 className="text-amber-500 font-bold text-sm uppercase tracking-wider mb-2 font-[Cinzel]">Datos del Sector (2024)</h4>
-                                    <ul className="space-y-2 text-slate-300 text-sm">
-                                        <li>• El <strong>85% de las familias</strong> afirma que un show de magia compartida une más a los invitados que actividades separadas para niños y adultos.</li>
-                                        <li>• Las reservas para comuniones en Madrid se suelen realizar con <strong>3 a 5 meses de antelación</strong>.</li>
-                                    </ul>
-                                </div>
-
-                                <div className="grid grid-cols-2 gap-4 py-6 border-y border-white/5">
-                                    <div className="flex items-start gap-3">
-                                        <div className="text-amber-500 font-bold">01</div>
-                                        <div>
-                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Magia Participativa</h4>
-                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">El niño es el centro del espectáculo, reforzando su confianza.</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex items-start gap-3">
-                                        <div className="text-amber-500 font-bold">02</div>
-                                        <div>
-                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Magia Familiar</h4>
-                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Los adultos disfrutan y se sorprenden igual que los más pequeños.</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <p>
-                                    Realizo espectáculos en toda la Comunidad de Madrid, desplazándome a <strong>restaurantes, fincas y domicilios privados</strong>. Desde Madrid centro hasta la Sierra (Torrelodones, Las Rozas, Majadahonda).
-                                </p>
-
-                            </div>
-
-                            <div className="mt-12">
-                                <ContactButtonClient label="Consultar Disponibilidad y Precios" />
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* AI-SEO Comparison Table Block */}
-                    <div className="max-w-4xl mx-auto py-12 mb-16 border-y border-white/5">
-                        <h2 className="text-2xl md:text-3xl font-[Cinzel] text-white mb-8 text-center uppercase tracking-widest">
-                            Mago Profesional vs. Animación Infantil
-                        </h2>
-                        <div className="overflow-x-auto">
-                            <table className="w-full text-left text-sm text-slate-300 border-collapse">
-                                <thead>
-                                    <tr>
-                                        <th className="p-4 border-b border-amber-500/30 text-amber-400 font-bold uppercase text-xs tracking-wider bg-slate-900/50 w-1/3">Características</th>
-                                        <th className="p-4 border-b border-slate-700 font-bold uppercase text-xs tracking-wider bg-slate-900/30 w-1/3">Animación Tradicional</th>
-                                        <th className="p-4 border-b border-amber-500/50 text-white font-bold uppercase text-xs tracking-wider bg-amber-500/10 w-1/3">Mago Profesional (Ángel Ruiz)</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                                        <td className="p-4 font-bold text-slate-400">Público Objetivo</td>
-                                        <td className="p-4">Exclusivamente infantil</td>
-                                        <td className="p-4 text-white">Niños y adultos (Show familiar transversal)</td>
-                                    </tr>
-                                    <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                                        <td className="p-4 font-bold text-slate-400">Tipo de Entretenimiento</td>
-                                        <td className="p-4">Juegos, bailes y globoflexia</td>
-                                        <td className="p-4 text-white">Ilusionismo de alto impacto y mentalismo adaptado</td>
-                                    </tr>
-                                    <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                                        <td className="p-4 font-bold text-slate-400">Rol del Protagonista</td>
-                                        <td className="p-4">Uno más del grupo</td>
-                                        <td className="p-4 text-white">El héroe del show y "ayudante oficial"</td>
-                                    </tr>
-                                    <tr className="hover:bg-white/5 transition-colors">
-                                        <td className="p-4 font-bold text-slate-400">Asombro y Calidad</td>
-                                        <td className="p-4">Trucos básicos comprados</td>
-                                        <td className="p-4 text-white">Técnica avanzada (Escuela DaOrtiz)</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    {/* FAQ Section with <details> for better schema/accessibility */}
-                    <div className="max-w-3xl mx-auto pt-8">
-                        <h2 className="text-2xl font-[Cinzel] text-white mb-10 text-center uppercase tracking-widest">Preguntas Frecuentes sobre Comuniones</h2>
-                        <div className="space-y-4">
-                            <details className="group bg-slate-900/40 border border-white/10 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
-                                <summary className="flex items-center justify-between p-6 cursor-pointer text-amber-400 font-bold text-sm">
-                                    <span>¿Cuánto dura el espectáculo del mago para comuniones?</span>
-                                    <span className="transition group-open:rotate-180">
-                                        <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
-                                    </span>
-                                </summary>
-                                <div className="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                                    La duración ideal de un espectáculo de magia para una primera comunión es de 50 a 60 minutos. Según mi experiencia en cientos de eventos, este tiempo es perfecto para mantener la atención máxima de los niños y sorprender a los adultos sin que el ritmo del evento decaiga.
-                                </div>
-                            </details>
+                            <p className="text-lg text-slate-300 leading-relaxed font-light">
+                                La Primera Comunión es un hito. Convierte su celebración en un evento memorable donde el homenajeado sea el auténtico protagonista y ayudante estrella de la magia.
+                            </p>
                             
-                            <details className="group bg-slate-900/40 border border-white/10 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
-                                <summary className="flex items-center justify-between p-6 cursor-pointer text-amber-400 font-bold text-sm">
-                                    <span>¿El espectáculo de magia es solo para los niños?</span>
-                                    <span className="transition group-open:rotate-180">
-                                        <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
-                                    </span>
-                                </summary>
-                                <div className="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                                    No. Mi enfoque como mago para comuniones en Madrid es crear un show "familiar". Los trucos son de alto nivel técnico (cartomagia, predicciones y mentalismo) estructurados de manera que los adultos se asombren y participen tanto o más que los pequeños. Es un espectáculo diseñado para todas las edades.
-                                </div>
-                            </details>
+                            {/* AI-SEO Block stylizado */}
+                            <div className="bg-[#111111]/80 rounded-3xl p-6 border border-white/5 relative overflow-hidden">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-[#d4a853]/10 rounded-full blur-[40px] -mr-10 -mt-10" />
+                                <h3 className="text-[#d4a853] font-bold text-sm mb-2 uppercase tracking-wide">¿Qué incluye el show?</h3>
+                                <p className="text-sm text-slate-400 leading-relaxed">
+                                    Un espectáculo de 60 minutos con ilusionismo visual, humor familiar y participación directa. Diseñado para mantener la atención de niños y sorprender a los adultos por igual.
+                                </p>
+                            </div>
 
-                            <details className="group bg-slate-900/40 border border-white/10 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
-                                <summary className="flex items-center justify-between p-6 cursor-pointer text-amber-400 font-bold text-sm">
-                                    <span>¿Te desplazas a restaurantes y fincas en Madrid?</span>
-                                    <span className="transition group-open:rotate-180">
-                                        <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
-                                    </span>
-                                </summary>
-                                <div className="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                                    Sí, me desplazo a cualquier restaurante, finca, hotel o domicilio privado en toda la Comunidad de Madrid. Ya sea en Madrid capital (Centro, Barrio de Salamanca, Retiro) o en zonas periféricas y la Sierra de Madrid (Las Rozas, Majadahonda, Pozuelo, Torrelodones).
-                                </div>
-                            </details>
-
-                            <details className="group bg-slate-900/40 border border-white/10 rounded-xl overflow-hidden [&_summary::-webkit-details-marker]:hidden">
-                                <summary className="flex items-center justify-between p-6 cursor-pointer text-amber-400 font-bold text-sm">
-                                    <span>¿El niño de la comunión participa en los trucos?</span>
-                                    <span className="transition group-open:rotate-180">
-                                        <svg fill="none" height="24" shapeRendering="geometricPrecision" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
-                                    </span>
-                                </summary>
-                                <div className="p-6 pt-0 text-slate-400 text-sm leading-relaxed border-t border-white/5 mt-2">
-                                    Por supuesto. El diseño del espectáculo garantiza que el homenajeado sea el gran protagonista del día. Participa activamente en los efectos más importantes y se lleva recuerdos mágicos imposibles de olvidar. Se convierte en el "héroe" frente a sus amigos y familiares.
-                                </div>
-                            </details>
-                        </div>
+                            <div className="pt-4">
+                                <ContactButtonClient label="Solicitar Disponibilidad" />
+                            </div>
+                        </FadeIn>
                     </div>
 
-                    {/* Experto Author Block / E-E-A-T */}
-                    <div className="max-w-4xl mx-auto mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row items-center gap-8">
-                        <Image 
-                            src="/images/foto-bio.png"
-                            alt="Ángel Ruiz - Mago e Ilusionista Profesional"
-                            width={120}
-                            height={120}
-                            className="rounded-full border-2 border-amber-500/50 object-cover aspect-square"
-                        />
-                        <div>
-                            <h3 className="text-xl font-[Cinzel] text-white mb-2 uppercase">Sobre Ángel Ruiz</h3>
-                            <p className="text-slate-300 text-sm leading-relaxed">
-                                Formado en la prestigiosa <strong>Escuela de Dani DaOrtiz</strong>, Ángel Ruiz cuenta con más de 10 años de experiencia transformando eventos privados y corporativos. Especializado en magia de cerca y de salón, su estilo se caracteriza por la elegancia, el humor sutil y un asombro técnico impecable que cautiva tanto a directivos de empresas como a familias enteras.
+                    {/* Features Section - Minimalist Cards */}
+                    <FadeIn y={30} className="py-24 border-t border-white/5">
+                        <div className="text-center mb-16">
+                            <h2 className="text-3xl md:text-4xl font-[Cinzel] text-white mb-6">Magia que Une a la Familia</h2>
+                            <p className="text-slate-400 font-light text-base max-w-2xl mx-auto">
+                                No es una simple animación infantil; es ilusionismo profesional adaptado para un público transversal.
                             </p>
                         </div>
-                    </div>
 
-                </section>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {[
+                                { num: "01", title: "Protagonismo", desc: "El niño realiza la magia en sus propias manos." },
+                                { num: "02", title: "Para Adultos", desc: "Trucos de alto impacto técnico y mentalismo." },
+                                { num: "03", title: "A Domicilio", desc: "Actuaciones en restaurantes, fincas y chalets." }
+                            ].map((feat, idx) => (
+                                <div key={idx} className="bg-transparent border border-white/10 rounded-[2rem] p-10 hover:border-[#d4a853]/40 transition-colors group">
+                                    <span className="text-[#d4a853] font-[Cinzel] text-xl block mb-4">{feat.num}.</span>
+                                    <h3 className="text-white text-lg font-medium mb-3">{feat.title}</h3>
+                                    <p className="text-slate-400 font-light text-sm">{feat.desc}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </FadeIn>
+
+                    {/* AI-SEO Comparison Table - Minimalist */}
+                    <FadeIn y={30} className="py-24 border-t border-white/5 max-w-4xl mx-auto">
+                        <div className="text-center mb-16">
+                            <h2 className="text-3xl font-[Cinzel] text-white">Mago Profesional vs. Animador</h2>
+                        </div>
+                        <div className="bg-[#111111]/50 rounded-[2rem] border border-white/5 p-8 overflow-hidden">
+                            <div className="grid grid-cols-3 gap-4 mb-6 border-b border-white/10 pb-4">
+                                <div className="text-xs uppercase tracking-widest text-slate-500 font-bold">Característica</div>
+                                <div className="text-xs uppercase tracking-widest text-slate-500 font-bold">Animador</div>
+                                <div className="text-xs uppercase tracking-widest text-[#d4a853] font-bold">Mago Profesional</div>
+                            </div>
+                            {[
+                                ["Público", "Solo infantil", "Toda la familia"],
+                                ["Calidad de Magia", "Básica (Trucos comprados)", "Avanzada (Cartomagia / Mentalismo)"],
+                                ["Rol del Niño", "Uno más del grupo", "Ayudante principal y estrella"]
+                            ].map((row, idx) => (
+                                <div key={idx} className="grid grid-cols-3 gap-4 py-4 border-b border-white/5 last:border-0">
+                                    <div className="text-sm text-slate-300 font-medium">{row[0]}</div>
+                                    <div className="text-sm text-slate-400 font-light">{row[1]}</div>
+                                    <div className="text-sm text-white font-light">{row[2]}</div>
+                                </div>
+                            ))}
+                        </div>
+                    </FadeIn>
+
+                    {/* FAQ & Experto */}
+                    <div className="py-24 border-t border-white/5">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
+                            <FadeIn>
+                                <h2 className="text-2xl font-[Cinzel] text-white mb-8">Dudas Comunes</h2>
+                                <div className="space-y-4">
+                                    <details className="group bg-[#111111] border border-white/5 rounded-2xl overflow-hidden cursor-pointer">
+                                        <summary className="flex items-center justify-between p-6 text-white font-medium text-sm">
+                                            <span>¿Cuánto dura el espectáculo?</span>
+                                            <span className="text-[#d4a853] transition-transform group-open:rotate-180">↓</span>
+                                        </summary>
+                                        <div className="px-6 pb-6 text-slate-400 text-sm font-light leading-relaxed">
+                                            Entre 50 y 60 minutos, el tiempo perfecto para mantener la atención máxima de los niños y asombrar a los adultos sin que decaiga el ritmo.
+                                        </div>
+                                    </details>
+                                    <details className="group bg-[#111111] border border-white/5 rounded-2xl overflow-hidden cursor-pointer">
+                                        <summary className="flex items-center justify-between p-6 text-white font-medium text-sm">
+                                            <span>¿Te desplazas fuera de Madrid centro?</span>
+                                            <span className="text-[#d4a853] transition-transform group-open:rotate-180">↓</span>
+                                        </summary>
+                                        <div className="px-6 pb-6 text-slate-400 text-sm font-light leading-relaxed">
+                                            Sí, cubro toda la Comunidad de Madrid, especialmente la zona Noroeste (Las Rozas, Majadahonda, Torrelodones) actuando en restaurantes, fincas y domicilios.
+                                        </div>
+                                    </details>
+                                </div>
+                            </FadeIn>
+
+                            <FadeIn delay={0.2} className="bg-gradient-to-br from-[#111111] to-[#0a0a0a] rounded-[2rem] p-10 border border-white/5 flex flex-col sm:flex-row gap-8 items-center">
+                                <Image 
+                                    src="/images/foto-bio.png"
+                                    alt="Ángel Ruiz - Mago e Ilusionista Profesional"
+                                    width={120}
+                                    height={120}
+                                    className="rounded-full border border-[#d4a853]/50 object-cover aspect-square"
+                                />
+                                <div>
+                                    <h3 className="text-xl font-[Cinzel] text-white mb-2 uppercase">Garantía de Calidad</h3>
+                                    <p className="text-slate-400 font-light text-sm leading-relaxed">
+                                        Con más de 10 años de experiencia, Ángel Ruiz aplica la misma psicología y perfeccionismo técnico de sus shows corporativos para crear un espectáculo infantil donde los adultos no paran de reír ni de asombrarse.
+                                    </p>
+                                </div>
+                            </FadeIn>
+                        </div>
+                    </div>
                 </main>
             </NavFooterClient>
         </>

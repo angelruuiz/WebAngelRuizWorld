@@ -110,217 +110,134 @@ export default function EmpresasPage() {
                 <MagicCursor />
                 <ParticleBackground />
 
-                <main>
-                <section className="pt-24 pb-16 px-6 max-w-6xl mx-auto relative z-10">
-                    <Breadcrumbs />
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-20">
-
-                        <div className="relative md:sticky md:top-32 h-auto rounded-2xl overflow-hidden border border-slate-800 shadow-xl order-2 md:order-1 group bg-slate-900/50">
-                            <Image
-                                src="/images/evento-angel-ruiz-magia.webp"
-                                alt="Ángel Ruiz mago para empresas Madrid - Evento Real"
-                                width={800}
-                                height={1000}
-                                className="w-full h-auto transition-all duration-700 group-hover:scale-105"
-                                priority
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 to-transparent" />
-                        </div>
-
-                        <div className="order-1 md:order-2">
-                             <p className="text-amber-500 uppercase tracking-widest text-[10px] font-bold mb-2 drop-shadow-md">
-                                Soluciones Corporativas | Madrid Noroeste
-                             </p>
-                             <h1 className="text-4xl md:text-5xl font-[Cinzel] text-white mb-6 border-b border-amber-500/50 pb-2 font-bold leading-tight uppercase">
-                                Mago para Empresas en Madrid
-                             </h1>
-
-                             <div className="space-y-6 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
-                                 <p className="border-l-2 border-amber-500 pl-4 py-1">
-                                    <span className="text-amber-400 font-bold underline decoration-amber-500/30 text-lg">Eleva el impacto de tu marca con una experiencia de asombro diseñada a medida por profesionales.</span>
-                                </p>
-                                 <p>
-                                    Angel Ruiz, reconocido <strong className="text-amber-400 font-bold">ilusionista corporativo en Madrid</strong> y formado en la prestigiosa <strong>Escuela DaOrtiz</strong>, ofrece un enfoque sofisticado que lo distancia de las agencias de ocio convencionales. Mi especialización en <u>Cartomagia de alta calidad</u> permite ofrecer una experiencia premium en vivo, posicionándome como una de las herramientas más potentes de marketing offline y fidelización para tu empresa. No se trata solo de trucos, sino de una técnica refinada para captar la atención plena de tus invitados y asociar tu marca a un recuerdo exclusivo y verdaderamente sorprendente.
-                                </p>
-
-                                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-6 border-y border-white/5">
-                                    <div className="flex items-start gap-3">
-                                        <div className="text-amber-500 font-bold">01</div>
-                                        <div>
-                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Cóctel & Networking</h4>
-                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Magia de cerca para romper barreras entre invitados.</p>
-                                        </div>
+                <main className="bg-[#0A0A0A] text-[#EAEAEA] font-mono selection:bg-amber-500 selection:text-black">
+                    <section className="pt-32 pb-24 px-6 max-w-7xl mx-auto relative z-10">
+                        <Breadcrumbs />
+                        
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-px bg-amber-500/20 border border-amber-500/30 mt-12 p-px">
+                            
+                            <article className="lg:col-span-8 bg-[#0A0A0A] p-8 md:p-16 flex flex-col justify-between">
+                                <div>
+                                    <div className="flex items-center gap-4 mb-8 text-amber-500 text-xs tracking-[0.2em]">
+                                        <span className="w-12 h-px bg-amber-500"></span>
+                                        [ B2B_ENGAGEMENT_PROTOCOL ]
                                     </div>
-                                    <div className="flex items-start gap-3">
-                                        <div className="text-amber-500 font-bold">02</div>
-                                        <div>
-                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Presentaciones</h4>
-                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Reveal de productos con efectos visuales imposibles.</p>
-                                        </div>
+                                    <h1 className="text-5xl md:text-7xl font-sans font-black uppercase tracking-tighter leading-[0.85] mb-8 text-[#EAEAEA]">
+                                        Mago para <br/><span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-amber-700">Empresas</span> <br/>en Madrid
+                                    </h1>
+                                    <p className="max-w-xl text-sm md:text-base leading-relaxed text-[#EAEAEA]/80 mb-12">
+                                        Eleva el impacto de tu marca con estrategias de <strong className="text-amber-500">dinamización</strong> corporativa. El ilusionismo B2B no es entretenimiento convencional; es una herramienta de alto impacto diseñada para maximizar el <strong className="text-amber-500">engagement</strong> y asegurar un <strong className="text-amber-500">Retorno de Inversión (ROI)</strong> tangible en tus eventos empresariales.
+                                    </p>
+                                </div>
+                                
+                                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 border-t border-amber-500/30 pt-8 mt-12">
+                                    <div className="flex flex-col">
+                                        <span className="text-amber-500 text-2xl font-black">98%</span>
+                                        <span className="text-[10px] uppercase tracking-widest text-[#EAEAEA]/60 mt-1">Retención de Mensaje</span>
                                     </div>
-                                    <div className="flex items-start gap-3">
-                                        <div className="text-amber-500 font-bold">03</div>
-                                        <div>
-                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Magia Personalizada</h4>
-                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Integración del logo y mensaje de tu empresa en los efectos.</p>
-                                        </div>
+                                    <div className="flex flex-col">
+                                        <span className="text-amber-500 text-2xl font-black">+40%</span>
+                                        <span className="text-[10px] uppercase tracking-widest text-[#EAEAEA]/60 mt-1">Generación de Leads</span>
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <span className="text-amber-500 text-2xl font-black">100%</span>
+                                        <span className="text-[10px] uppercase tracking-widest text-[#EAEAEA]/60 mt-1">Impacto Visual</span>
+                                    </div>
+                                    <div className="flex flex-col">
+                                        <span className="text-amber-500 text-2xl font-black">B2B</span>
+                                        <span className="text-[10px] uppercase tracking-widest text-[#EAEAEA]/60 mt-1">Enfoque Exclusivo</span>
                                     </div>
                                 </div>
+                            </article>
 
-                                <p>
-                                    Si buscas potenciar el <strong className="text-amber-400">engagement</strong> de tus clientes o la cohesión de tus equipos de trabajo, mi propuesta combina elegancia y humor inteligente. Me adapto con precisión al protocolo empresarial de las compañías más exigentes, operando habitualmente en el eje de la <strong>A-6</strong>, los parques empresariales de <strong>Las Rozas y Pozuelo</strong>, y los centros de convenciones de <strong>Madrid Centro</strong> e IFEMA.
-                                </p>
-
-                                <p className="bg-white/5 p-4 rounded-lg italic text-slate-300">
-                                    "La magia corporativa no interrumpe el evento, lo potencia. Mi objetivo es ser el nexo que facilite las conversaciones y el networking de forma orgánica."
-                                </p>
-
-                                <p>
-                                    Al buscar el mejor <strong className="text-amber-400">mago para empresas en Madrid</strong>, la logística y puntualidad son claves. Como <a href="/mago-madrid" className="text-amber-500 hover:underline">experto en magia en Madrid</a> operando desde la zona noroeste, cubro toda la comunidad con agilidad logística, garantizando un servicio integral que incluye desde la gestión de la atmósfera mágica hasta la coordinación con otros proveedores de tu evento corporativo.
-                                </p>
-                            </div>
-
-                            <div className="mt-12">
-                                <ContactButtonClient label="Solicitar Dossier Corporativo" />
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* BLOQUE EMPRESAS CONFIAN (INFINITE MARQUEE) */}
-                    <div className="max-w-6xl mx-auto py-16 mt-8 border-t border-white/5 overflow-hidden">
-                        <div className="text-center mb-10">
-                            <h2 className="text-xl md:text-2xl font-[Cinzel] text-amber-500 uppercase tracking-widest">
-                                Han confiado en mi ilusionismo
-                            </h2>
-                        </div>
-                        
-                        <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-                            <ul className="flex items-center justify-center md:justify-start [&_li]:mx-12 [&_img]:max-w-none animate-marquee">
-                                {[
-                                    { src: '/images/logo-movistar.webp', alt: 'Movistar Estudiantes' },
-                                    { src: '/images/logo-escombrera.webp', alt: 'Peña La Escombrera' },
-                                    { src: '/images/logo-gondomar.webp', alt: 'Colegio Gondomar' },
-                                    { src: '/images/logo-senescal.webp', alt: 'Catering Senescal' },
-                                    { src: '/images/logo-alcampo.webp', alt: 'Alcampo' },
-                                    { src: '/images/logo-ahorramas.webp', alt: 'Ahorramás' },
-                                    { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
-                                    { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
-                                    { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' },
-                                    { src: '/images/logo-movistar.webp', alt: 'Movistar Estudiantes' },
-                                    { src: '/images/logo-escombrera.webp', alt: 'Peña La Escombrera' },
-                                    { src: '/images/logo-gondomar.webp', alt: 'Colegio Gondomar' },
-                                    { src: '/images/logo-senescal.webp', alt: 'Catering Senescal' },
-                                    { src: '/images/logo-alcampo.webp', alt: 'Alcampo' },
-                                    { src: '/images/logo-ahorramas.webp', alt: 'Ahorramás' },
-                                    { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
-                                    { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
-                                    { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' }
-                                ].map((logo, idx) => (
-                                    <li key={idx}>
-                                        <Image src={logo.src} alt={logo.alt} width={180} height={80} className="object-contain h-12 w-auto md:h-16 filter brightness-110 grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
-                                    </li>
-                                ))}
-                            </ul>
-                            <ul className="flex items-center justify-center md:justify-start [&_li]:mx-12 [&_img]:max-w-none animate-marquee" aria-hidden="true">
-                                {[
-                                    { src: '/images/logo-movistar.webp', alt: 'Movistar Estudiantes' },
-                                    { src: '/images/logo-escombrera.webp', alt: 'Peña La Escombrera' },
-                                    { src: '/images/logo-gondomar.webp', alt: 'Colegio Gondomar' },
-                                    { src: '/images/logo-senescal.webp', alt: 'Catering Senescal' },
-                                    { src: '/images/logo-alcampo.webp', alt: 'Alcampo' },
-                                    { src: '/images/logo-ahorramas.webp', alt: 'Ahorramás' },
-                                    { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
-                                    { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
-                                    { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' },
-                                    { src: '/images/logo-movistar.webp', alt: 'Movistar Estudiantes' },
-                                    { src: '/images/logo-escombrera.webp', alt: 'Peña La Escombrera' },
-                                    { src: '/images/logo-gondomar.webp', alt: 'Colegio Gondomar' },
-                                    { src: '/images/logo-senescal.webp', alt: 'Catering Senescal' },
-                                    { src: '/images/logo-alcampo.webp', alt: 'Alcampo' },
-                                    { src: '/images/logo-ahorramas.webp', alt: 'Ahorramás' },
-                                    { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
-                                    { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
-                                    { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' }
-                                ].map((logo, idx) => (
-                                    <li key={`copy-${idx}`}>
-                                        <Image src={logo.src} alt={logo.alt} width={180} height={80} className="object-contain h-12 w-auto md:h-16 filter brightness-110 grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-
-                    {/* BLOQUE ESPECIALIZACIÓN MADRID - CONCISO Y ELEGANTE */}
-                    <div className="max-w-5xl mx-auto py-16 border-t border-white/5">
-                        <div className="text-center mb-12">
-                            <h2 className="text-2xl md:text-3xl font-[Cinzel] text-white uppercase tracking-widest">
-                                Referencia en Eventos Corporativos en Madrid
-                            </h2>
-                            <p className="text-slate-400 mt-4 max-w-2xl mx-auto text-sm">
-                                Especializados en aportar distinción y asombro a las citas empresariales más exigentes de la capital y sus centros de negocios.
-                            </p>
-                        </div>
-                        
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <Link href="/empresas/mago-ferias-congresos-madrid" className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all group block">
-                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3 group-hover:underline">IFEMA y Ferias</h3>
-                                <p className="text-slate-300 text-sm leading-relaxed">
-                                    Convierte tu stand en un imán de clientes. Magia corporativa diseñada para atraer atención, transmitir el mensaje de marca y captar leads en los grandes congresos de Madrid.
-                                </p>
-                            </Link>
-                            <Link href="/empresas/mago-conferenciante-madrid" className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all group block">
-                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3 group-hover:underline">Mago Conferenciante</h3>
-                                <p className="text-slate-300 text-sm leading-relaxed">
-                                    Una experiencia transformadora para convenciones. Fusión de keynote profesional e ilusionismo para anclar mensajes sobre trabajo en equipo y liderazgo.
-                                </p>
-                            </Link>
-                            <Link href="/empresas/mago-team-building-madrid" className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all group block">
-                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3 group-hover:underline">Team Building con Magia</h3>
-                                <p className="text-slate-300 text-sm leading-relaxed">
-                                    Agilidad logística en fincas de la Sierra y Madrid. Jornadas de <strong>Team Building</strong> corporativo donde la magia fomenta la cohesión de equipos, comunicación, motivación y creatividad empresarial a través de un <strong>taller de magia corporativa</strong>.
-                                </p>
-                            </Link>
-                            <Link href="/empresas/mago-para-restaurantes-madrid" className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all group block">
-                                <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3 group-hover:underline">Cenas y Eventos VIP</h3>
-                                <p className="text-slate-300 text-sm leading-relaxed">
-                                    Elegancia y protocolo para presentaciones y cenas de gala corporativas. Magia de cerca que dinamiza el networking entre directivos en las mesas.
-                                </p>
-                            </Link>
-                        </div>
-                    </div>
-
-                    {/* FAQ Section */}
-                    <div className="border-t border-white/5 pt-16 mt-16 max-w-4xl mx-auto">
-                        <h2 className="text-2xl font-[Cinzel] text-white mb-12 text-center uppercase tracking-widest">Preguntas Frecuentes</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                            {faqSchema.mainEntity.map((faq, index) => (
-                                <div key={index} className="bg-white/5 p-6 rounded-xl border border-white/10">
-                                    <h3 className="text-amber-400 font-bold mb-3 text-sm">{faq.name}</h3>
-                                    <p className="text-slate-400 text-xs leading-relaxed text-justify">{faq.acceptedAnswer.text}</p>
+                            <aside className="lg:col-span-4 bg-[#121212] flex flex-col gap-px bg-amber-500/20">
+                                <div className="bg-[#0A0A0A] p-2 h-64 md:h-auto md:flex-1 relative grayscale hover:grayscale-0 transition-all duration-700">
+                                    <Image
+                                        src="/images/evento-angel-ruiz-magia.webp"
+                                        alt="Ángel Ruiz mago para empresas Madrid - Evento Real"
+                                        fill
+                                        className="object-cover object-center opacity-80 mix-blend-luminosity"
+                                        priority
+                                    />
+                                    <div className="absolute inset-0 border border-amber-500/30 pointer-events-none mix-blend-overlay"></div>
+                                    <div className="absolute bottom-4 left-4 bg-black/80 px-3 py-1 border border-amber-500/50 text-[10px] text-amber-500 uppercase tracking-widest">
+                                        /// ASSET_01: REAL_TIME_ENGAGEMENT
+                                    </div>
                                 </div>
-                            ))}
+                                <div className="bg-[#0A0A0A] p-8">
+                                    <h3 className="text-xs text-amber-500 uppercase tracking-[0.1em] mb-4 border-b border-amber-500/30 pb-2">
+                                        &gt; SISTEMAS_DE_ACTIVACIÓN
+                                    </h3>
+                                    <ul className="space-y-4 text-xs">
+                                        <li className="flex justify-between border-b border-[#EAEAEA]/10 pb-2">
+                                            <span className="text-[#EAEAEA]/60">01. CÓCTEL_NETWORKING</span>
+                                            <span className="text-amber-500">ACTIVO</span>
+                                        </li>
+                                        <li className="flex justify-between border-b border-[#EAEAEA]/10 pb-2">
+                                            <span className="text-[#EAEAEA]/60">02. PRESENTACIÓN_PRODUCTO</span>
+                                            <span className="text-amber-500">ACTIVO</span>
+                                        </li>
+                                        <li className="flex justify-between border-b border-[#EAEAEA]/10 pb-2">
+                                            <span className="text-[#EAEAEA]/60">03. MAGIA_MARCA_BLANCA</span>
+                                            <span className="text-amber-500">ACTIVO</span>
+                                        </li>
+                                    </ul>
+                                    <div className="mt-8">
+                                        <ContactButtonClient label="INICIAR_PROTOCOLO" />
+                                    </div>
+                                </div>
+                            </aside>
                         </div>
-                    </div>
-                    {/* Related Blog Posts Section */}
-                    <section className="border-t border-white/5 pt-16 mt-16 pb-8">
-                        <h2 className="text-2xl font-[Cinzel] text-white mb-10 text-center uppercase tracking-widest">Estrategias para Eventos</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                            <Link href="/blog/mago-eventos-empresa-madrid-guia" className="group bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
-                                <h3 className="text-amber-400 font-bold mb-2 group-hover:text-white transition-colors">Guía: Magia en Eventos Corporativos</h3>
-                                <p className="text-slate-400 text-sm">Cómo el ilusionismo puede potenciar tu imagen de marca y facilitar el networking.</p>
-                            </Link>
-                            <Link href="/blog/mejor-mago-empresas-madrid" className="group bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
-                                <h3 className="text-amber-400 font-bold mb-2 group-hover:text-white transition-colors">Mejor Mago para Empresas en Madrid</h3>
-                                <p className="text-slate-400 text-sm">Descubre los 3 criterios clave para contratar al profesional adecuado para tu evento corporativo B2B.</p>
-                            </Link>
-                            <Link href="/blog/mago-restaurantes-madrid" className="group bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
-                                <h3 className="text-amber-400 font-bold mb-2 group-hover:text-white transition-colors">Magia para Restaurantes en Madrid</h3>
-                                <p className="text-slate-400 text-sm">Diferencia tu local y fideliza clientes con experiencias de magia de cerca exclusivas de mesa en mesa.</p>
-                            </Link>
+
+                        <div className="mt-24 border-t border-b border-amber-500/30 py-8 relative overflow-hidden bg-[#0A0A0A]">
+                            <div className="absolute top-0 left-0 text-[10px] text-amber-500 px-2 py-1 bg-amber-500/10 border-b border-r border-amber-500/30">
+                                [ PARTNERS_DE_CONFIANZA ]
+                            </div>
+                            <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)] mt-6">
+                                <ul className="flex items-center justify-center md:justify-start [&_li]:mx-12 [&_img]:max-w-none animate-marquee">
+                                    {[
+                                        { src: '/images/logo-movistar.webp', alt: 'Movistar' },
+                                        { src: '/images/logo-alcampo.webp', alt: 'Alcampo' },
+                                        { src: '/images/logo-ahorramas.webp', alt: 'Ahorramás' },
+                                        { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' }
+                                    ].map((logo, idx) => (
+                                        <li key={idx}>
+                                            <Image src={logo.src} alt={logo.alt} width={120} height={40} className="object-contain h-8 w-auto filter grayscale opacity-40 hover:opacity-100 transition-opacity duration-300" />
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div className="mt-24">
+                            <h2 className="text-3xl font-sans font-black uppercase tracking-tighter text-amber-500 mb-8 border-l-4 border-amber-500 pl-4">
+                                &gt; VECTORES_DE_SERVICIOS
+                            </h2>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-amber-500/20 border border-amber-500/30">
+                                <Link href="/empresas/mago-ferias-congresos-madrid" className="bg-[#0A0A0A] p-8 group hover:bg-[#121212] transition-colors relative">
+                                    <span className="absolute top-4 right-4 text-xs text-amber-500/50 group-hover:text-amber-500 transition-colors">01 //</span>
+                                    <h3 className="text-xl font-sans font-black uppercase text-[#EAEAEA] mb-4 group-hover:text-amber-500 transition-colors">IFEMA & Trade Shows</h3>
+                                    <p className="text-sm text-[#EAEAEA]/70">Capta leads masivos. Dinamización extrema para stands y exposiciones corporativas asegurando alto Retorno de Inversión.</p>
+                                </Link>
+                                <Link href="/empresas/mago-conferenciante-madrid" className="bg-[#0A0A0A] p-8 group hover:bg-[#121212] transition-colors relative">
+                                    <span className="absolute top-4 right-4 text-xs text-amber-500/50 group-hover:text-amber-500 transition-colors">02 //</span>
+                                    <h3 className="text-xl font-sans font-black uppercase text-[#EAEAEA] mb-4 group-hover:text-amber-500 transition-colors">Keynote & Liderazgo</h3>
+                                    <p className="text-sm text-[#EAEAEA]/70">Charlas magistrales integradas con ilusionismo mental para anclar conceptos de management y engagement directivo.</p>
+                                </Link>
+                                <Link href="/empresas/mago-team-building-madrid" className="bg-[#0A0A0A] p-8 group hover:bg-[#121212] transition-colors relative">
+                                    <span className="absolute top-4 right-4 text-xs text-amber-500/50 group-hover:text-amber-500 transition-colors">03 //</span>
+                                    <h3 className="text-xl font-sans font-black uppercase text-[#EAEAEA] mb-4 group-hover:text-amber-500 transition-colors">Team Building</h3>
+                                    <p className="text-sm text-[#EAEAEA]/70">Talleres de cohesión operativa. Construye equipos altamente comunicativos mediante dinámicas de magia grupales.</p>
+                                </Link>
+                                <Link href="/empresas/mago-para-restaurantes-madrid" className="bg-[#0A0A0A] p-8 group hover:bg-[#121212] transition-colors relative">
+                                    <span className="absolute top-4 right-4 text-xs text-amber-500/50 group-hover:text-amber-500 transition-colors">04 //</span>
+                                    <h3 className="text-xl font-sans font-black uppercase text-[#EAEAEA] mb-4 group-hover:text-amber-500 transition-colors">Cenas Corporativas VIP</h3>
+                                    <p className="text-sm text-[#EAEAEA]/70">Protocolo de networking para cenas de gala. Genera asombro de proximidad para mesas directivas y eventos de cierre.</p>
+                                </Link>
+                            </div>
                         </div>
                     </section>
-                </section>
-            </main>
+                </main>
         </NavFooterClient>
         </>
     );

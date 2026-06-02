@@ -85,86 +85,72 @@ export default function RestaurantPage() {
                 <MagicCursor />
                 <ParticleBackground />
 
-                <main>
-                <section className="pt-24 pb-16 px-6 max-w-6xl mx-auto relative z-10">
-                    <Breadcrumbs />
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-20">
-                        <div className="relative md:sticky md:top-32 h-auto rounded-2xl overflow-hidden border border-slate-800 shadow-xl order-2 md:order-1 group bg-slate-900/50">
-                            <Image
-                                src="/images/foto-spring-cartas.webp"
-                                alt="Mago actuando en un restaurante en Madrid"
-                                width={800}
-                                height={1000}
-                                className="w-full h-auto transition-all duration-700 group-hover:scale-105"
-                                priority
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent" />
-                        </div>
-
-                        <div className="order-1 md:order-2">
-                             <p className="text-amber-500 uppercase tracking-widest text-[10px] font-bold mb-2 drop-shadow-md">
-                                Fidelización en Hostelería | Magia de Mesa en Mesa
-                             </p>
-                             <h1 className="text-4xl md:text-5xl font-[Cinzel] text-white mb-6 border-b border-amber-500/50 pb-2 font-bold leading-tight uppercase">
-                                Mago para Restaurantes en Madrid
-                             </h1>
-
-                             <div className="space-y-6 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
-                                 <p className="border-l-2 border-amber-500 pl-4 py-1">
-                                    <span className="text-amber-400 font-bold underline decoration-amber-500/30 text-lg">Diferencia tu local de la competencia y convierte una cena normal en una experiencia gastronómica inolvidable.</span>
-                                </p>
-                                 <p>
-                                    La hostelería en la capital es altamente competitiva. Ofrecer buena comida ya no es suficiente; los clientes buscan <strong>experiencias</strong>. Contratar un <strong className="text-amber-400">mago para restaurantes en Madrid</strong> es una de las estrategias de marketing en el local más efectivas para sorprender a los comensales, generar reseñas positivas y garantizar que vuelvan a reservar.
+                <main className="bg-[#0A0A0A] text-[#EAEAEA] font-mono selection:bg-amber-500 selection:text-black">
+                    <section className="pt-32 pb-24 px-6 max-w-7xl mx-auto relative z-10">
+                        <Breadcrumbs />
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-12 gap-px bg-amber-500/20 border border-amber-500/30 mt-12">
+                            
+                            <div className="md:col-span-8 bg-[#0A0A0A] p-10 lg:p-16">
+                                <div className="text-amber-500 uppercase tracking-widest text-[10px] font-black border-l-2 border-amber-500 pl-3 mb-8">
+                                    /// HORECA_ROI_OPTIMIZATION
+                                </div>
+                                <h1 className="text-5xl lg:text-7xl font-sans font-black uppercase tracking-tighter leading-none mb-10 text-white">
+                                    Mago para <br/><span className="text-amber-500">Restaurantes</span>
+                                </h1>
+                                
+                                <p className="text-sm md:text-base leading-relaxed text-[#EAEAEA]/80 mb-12 max-w-2xl">
+                                    El sector hostelero en Madrid exige diferenciación. El ilusionismo <em>Table Hopping</em> no solo aporta valor experiencial; incrementa el <strong className="text-amber-500">ticket medio</strong>, neutraliza quejas por esperas y catapulta las métricas de fidelización y <strong className="text-amber-500">engagement</strong> del comensal. Alto <strong>Retorno de Inversión</strong> por cada mesa cubierta.
                                 </p>
 
-                                <div className="grid grid-cols-2 gap-4 py-6 border-y border-white/5">
-                                    <div className="flex items-start gap-3">
-                                        <div className="text-amber-500 font-bold">01</div>
-                                        <div>
-                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Ameniza las Esperas</h4>
-                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Los retrasos en cocina desaparecen cuando los clientes están asombrados y riendo con un juego de magia en sus propias manos.</p>
-                                        </div>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-[#EAEAEA]/10 border border-[#EAEAEA]/20 p-px">
+                                    <div className="bg-[#0A0A0A] p-6 hover:bg-[#121212] transition-colors">
+                                        <div className="text-amber-500 text-2xl font-black mb-2">+25%</div>
+                                        <h4 className="font-sans font-black uppercase text-sm mb-1 text-white">Aumento Consumo Mesa</h4>
+                                        <p className="text-[10px] text-[#EAEAEA]/60 uppercase tracking-widest">Postres & Sobremesa</p>
                                     </div>
-                                    <div className="flex items-start gap-3">
-                                        <div className="text-amber-500 font-bold">02</div>
-                                        <div>
-                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Aumenta el Ticket</h4>
-                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Un ambiente animado en la sobremesa invita a pedir más postres, cafés y copas, rentabilizando tu negocio rápidamente.</p>
-                                        </div>
+                                    <div className="bg-[#0A0A0A] p-6 hover:bg-[#121212] transition-colors">
+                                        <div className="text-amber-500 text-2xl font-black mb-2">0</div>
+                                        <h4 className="font-sans font-black uppercase text-sm mb-1 text-white">Fricción en Sala</h4>
+                                        <p className="text-[10px] text-[#EAEAEA]/60 uppercase tracking-widest">Coordinación Total Maître</p>
                                     </div>
                                 </div>
-
-                                <p>
-                                    A través de la modalidad <em>Table Hopping</em> (magia de mesa en mesa), me desplazo discretamente entre los grupos. Si estás organizando jornadas gastronómicas, cenas de empresa, o simplemente quieres darle un valor premium a los fines de semana en tu local, un <strong>ilusionista profesional</strong> es el gancho perfecto. Trabajo en colaboración total con el maître y el equipo de sala.
-                                </p>
-
-                                <p className="bg-white/5 p-4 rounded-lg italic text-slate-300">
-                                    "Desde que introdujimos los jueves mágicos en el restaurante, tenemos lleno absoluto. Las reseñas en Google mencionando al mago no paran de crecer."
-                                </p>
-
                             </div>
 
-                            <div className="mt-12">
-                                <ContactButtonClient label="Consultar Tarifas para Hostelería" />
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* FAQ Section */}
-                    <section className="border-t border-white/5 pt-16 mb-8 mt-12">
-                        <h2 className="text-2xl font-[Cinzel] text-white mb-10 text-center uppercase tracking-widest">Preguntas Frecuentes sobre Magia en Restaurantes</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-                            {faqSchema.mainEntity.map((faq, index) => (
-                                <div key={index} className="bg-slate-900/40 p-6 rounded-xl border border-white/10 hover:border-amber-500/30 transition-colors">
-                                    <h3 className="text-amber-400 font-bold mb-3 text-sm">{faq.name}</h3>
-                                    <p className="text-slate-400 text-xs leading-relaxed text-justify">{faq.acceptedAnswer.text}</p>
+                            <div className="md:col-span-4 bg-[#121212] flex flex-col justify-between">
+                                <div className="relative h-64 md:h-auto md:flex-1 w-full filter grayscale hover:grayscale-0 transition-all duration-700">
+                                    <Image
+                                        src="/images/foto-spring-cartas.webp"
+                                        alt="Mago actuando en un restaurante en Madrid"
+                                        fill
+                                        className="object-cover opacity-80 mix-blend-luminosity"
+                                        priority
+                                    />
+                                    <div className="absolute inset-0 bg-[#0A0A0A]/30 mix-blend-multiply"></div>
                                 </div>
-                            ))}
+                                <div className="p-8 border-t border-amber-500/30">
+                                    <ContactButtonClient label="EVALUAR_VIABILIDAD_LOCAL" className="w-full bg-amber-500 text-black font-black uppercase text-xs py-4 rounded-none tracking-widest hover:bg-white transition-colors" />
+                                </div>
+                            </div>
+
                         </div>
+
+                        <div className="mt-24 pt-16 border-t-[1px] border-[#EAEAEA]/20">
+                            <h2 className="text-2xl font-sans font-black text-white mb-12 uppercase tracking-widest text-center">
+                                DATOS TÉCNICOS & FAQ
+                            </h2>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                                {faqSchema.mainEntity.map((faq, index) => (
+                                    <div key={index} className="border border-[#EAEAEA]/20 bg-[#0A0A0A] p-6 relative group">
+                                        <div className="absolute top-0 left-0 w-full h-1 bg-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+                                        <h3 className="text-amber-500 font-sans font-black mb-3 text-sm uppercase">{faq.name}</h3>
+                                        <p className="text-[#EAEAEA]/70 text-xs leading-relaxed">{faq.acceptedAnswer.text}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
                     </section>
-
-                </section>
                 </main>
             </NavFooterClient>
         </>

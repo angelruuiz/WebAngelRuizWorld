@@ -53,193 +53,61 @@ export default function MagoMentalistaMadridPage() {
                 <MagicCursor />
                 <ParticleBackground />
 
-                <main>
-                    <section className="pt-24 pb-16 px-6 max-w-6xl mx-auto relative z-10">
-                        <Breadcrumbs />
-                        
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-20">
-                            <div className="relative md:sticky md:top-32 h-auto rounded-2xl overflow-hidden border border-slate-800 shadow-xl order-2 md:order-1 group bg-slate-900/50">
-                                <Image
-                                    src="/images/foto-bio.png"
-                                    alt="Ángel Ruiz mago mentalista en Madrid"
-                                    width={800}
-                                    height={1000}
-                                    className="w-full h-auto transition-all duration-700 group-hover:scale-105"
-                                    priority
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 to-transparent" />
-                            </div>
-
-                            <div className="order-1 md:order-2">
-                                <p className="text-amber-500 uppercase tracking-widest text-[10px] font-bold mb-2 drop-shadow-md">
-                                    Mentalismo Profesional | Comunidad de Madrid
-                                </p>
-                                <h1 className="text-4xl md:text-5xl font-[Cinzel] text-white mb-6 border-b border-amber-500/50 pb-2 font-bold leading-tight uppercase">
-                                    Mago Mentalista Madrid
+                <main className="relative z-10 pt-32 pb-24 px-6 max-w-7xl mx-auto selection:bg-indigo-500/30">
+                    <Breadcrumbs />
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-4 mt-16">
+                        {/* Lateral Title - Brutalist/Minimalist */}
+                        <div className="md:col-span-3 flex flex-col justify-between order-2 md:order-1">
+                            <p className="font-mono text-indigo-400 text-[10px] uppercase tracking-[0.3em] md:-rotate-180 md:writing-vertical-rl hidden md:block">
+                                SISTEMA_MENTALISMO // V.2.0
+                            </p>
+                            <div className="mt-8 md:mt-0">
+                                <div className="w-12 h-[1px] bg-indigo-500/50 mb-4 hidden md:block" />
+                                <h1 className="text-4xl lg:text-5xl font-[Cinzel] text-white font-bold tracking-tight">
+                                    MENTALISMO
                                 </h1>
-
-                                <div className="space-y-6 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
-                                    <p className="border-l-2 border-amber-500 pl-4 py-1 font-bold text-amber-400">
-                                        Un mago mentalista es un ilusionista especializado en la mente humana que crea experiencias de telepatía, predicción y lectura del pensamiento combinando psicología, sugestión y técnicas de ilusionismo de alto impacto.
-                                    </p>
-                                    
-                                    <p>
-                                        Si buscas un <strong className="text-amber-400 font-bold">mago mentalista en Madrid</strong> para elevar el nivel de tu próximo evento, estás en el lugar indicado. Soy Ángel Ruiz, especialista en magia psicológica y formado en la Escuela de Dani DaOrtiz. Con más de 10 años de experiencia, ofrezco un espectáculo sofisticado que desafía la lógica y conecta profundamente con el público adulto.
-                                    </p>
-                                    
-                                    <p>
-                                        El <strong>mentalismo en Madrid</strong> ha experimentado un crecimiento del 45% en eventos corporativos en el último año (según datos del sector de eventos corporativos de España 2023), convirtiéndose en la opción preferida por empresas e instituciones que buscan un entretenimiento inteligente, participativo y elegante.
-                                    </p>
-
-                                    <div className="grid grid-cols-2 gap-4 py-6 border-y border-white/5">
-                                        <div className="flex items-start gap-3">
-                                            <div className="text-amber-500 font-bold">01</div>
-                                            <div>
-                                                <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Lectura de Mente</h4>
-                                                <p className="text-slate-400 text-[10px] leading-tight mt-1">Adivinación de nombres, números y pensamientos imposibles de conocer.</p>
-                                            </div>
-                                        </div>
-                                        <div className="flex items-start gap-3">
-                                            <div className="text-amber-500 font-bold">02</div>
-                                            <div>
-                                                <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Predicciones</h4>
-                                                <p className="text-slate-400 text-[10px] leading-tight mt-1">Anticipación de decisiones y eventos que ocurrirán durante la actuación.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <p>
-                                        Operando desde mi estudio en <strong>Torrelodones (Sierra de Madrid)</strong>, ofrezco mis servicios en toda la capital, abarcando desde eventos privados en el Barrio de Salamanca hasta grandes convenciones en IFEMA, así como toda la zona noroeste.
-                                    </p>
-                                </div>
-
-                                <div className="mt-12">
-                                    <ContactButtonClient label="Solicitar Presupuesto de Mentalismo" />
-                                </div>
+                                <p className="text-slate-500 text-xs uppercase tracking-widest mt-2">Lectura de Mente</p>
                             </div>
                         </div>
 
-                        {/* SECCIÓN SEO: MENTALISMO VS MAGIA DE CERCA */}
-                        <div className="max-w-4xl mx-auto py-12 mb-16 border-y border-white/5">
-                            <h2 className="text-2xl md:text-3xl font-[Cinzel] text-white mb-6 uppercase tracking-widest text-center">
-                                Mentalismo vs Magia Tradicional
-                            </h2>
-                            <p className="text-slate-300 text-sm leading-relaxed mb-8 text-center">
-                                ¿Dudas entre contratar a un ilusionista clásico o a un <strong className="text-amber-400">mago mentalista en Madrid</strong>? A continuación, detallamos las diferencias clave para ayudarte a elegir la mejor opción para tu evento.
+                        {/* Main Glass Panel */}
+                        <div className="md:col-span-9 bg-zinc-950/60 backdrop-blur-3xl border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] rounded-3xl p-8 md:p-12 order-1 md:order-2">
+                            <p className="text-slate-300 text-lg md:text-xl leading-relaxed font-light mb-10 max-w-3xl">
+                                El <strong className="text-white font-normal">Mentalismo</strong> no es un truco visual, es un hackeo de la percepción. Como ilusionista en Madrid, diseño experiencias basadas en psicología, sugestión y lectura de micro-expresiones.
                             </p>
                             
-                            <div className="overflow-x-auto">
-                                <table className="w-full text-left text-sm text-slate-300 border-collapse">
-                                    <thead>
-                                        <tr className="border-b border-white/10 text-amber-400 font-[Cinzel] uppercase text-xs">
-                                            <th className="py-4 px-4 font-bold">Característica</th>
-                                            <th className="py-4 px-4 font-bold">Mentalismo</th>
-                                            <th className="py-4 px-4 font-bold">Magia de Cerca</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                                            <td className="py-4 px-4 font-bold text-white">Enfoque Principal</td>
-                                            <td className="py-4 px-4">La mente, la psicología y la sugestión</td>
-                                            <td className="py-4 px-4">La destreza manual y objetos físicos</td>
-                                        </tr>
-                                        <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                                            <td className="py-4 px-4 font-bold text-white">Atmósfera</td>
-                                            <td className="py-4 px-4">Misteriosa, profunda, sofisticada</td>
-                                            <td className="py-4 px-4">Dinámica, visual, sorprendente</td>
-                                        </tr>
-                                        <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                                            <td className="py-4 px-4 font-bold text-white">Elementos usados</td>
-                                            <td className="py-4 px-4">Pizarras, libretas, palabras, pensamientos</td>
-                                            <td className="py-4 px-4">Cartas, monedas, anillos, objetos prestados</td>
-                                        </tr>
-                                        <tr className="border-b border-white/5 hover:bg-white/5 transition-colors">
-                                            <td className="py-4 px-4 font-bold text-white">Público ideal</td>
-                                            <td className="py-4 px-4">Adultos, perfiles corporativos, directivos</td>
-                                            <td className="py-4 px-4">Todos los públicos, grupos heterogéneos</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div className="p-6 bg-white/5 border border-white/5 rounded-2xl hover:-translate-y-1 transition-transform duration-500">
+                                    <h3 className="text-indigo-400 font-mono text-xs uppercase tracking-widest mb-3">Extracción de Datos</h3>
+                                    <p className="text-slate-400 text-sm">
+                                        Lectura de pensamientos, nombres o fechas que nunca han sido pronunciados. Acceso a información protegida mediante técnicas de persuasión.
+                                    </p>
+                                </div>
+                                <div className="p-6 bg-white/5 border border-white/5 rounded-2xl hover:-translate-y-1 transition-transform duration-500">
+                                    <h3 className="text-indigo-400 font-mono text-xs uppercase tracking-widest mb-3">Ingeniería de Elección</h3>
+                                    <p className="text-slate-400 text-sm">
+                                        El espectador siente que toma decisiones libres, cuando en realidad cada paso ha sido predeterminado por el ilusionista a través de sugestión.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="mt-12 flex flex-col sm:flex-row items-start sm:items-center justify-between border-t border-white/10 pt-8 gap-6">
+                                <div className="flex items-center gap-4">
+                                    <div className="w-12 h-12 rounded-full border border-indigo-500/30 overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-500">
+                                        <Image src="/images/foto-bio.png" alt="Ángel Ruiz - Mentalista" fill className="object-cover" />
+                                    </div>
+                                    <div>
+                                        <p className="text-white text-sm font-bold">Ángel Ruiz</p>
+                                        <p className="text-slate-500 text-xs">Ilusionista Especializado</p>
+                                    </div>
+                                </div>
+                                <div className="active:scale-[0.97] transition-transform duration-150">
+                                    <ContactButtonClient label="RESERVAR SESIÓN" />
+                                </div>
                             </div>
                         </div>
-
-                        {/* Servicios */}
-                        <div className="max-w-5xl mx-auto py-16">
-                            <h2 className="text-2xl md:text-3xl font-[Cinzel] text-white uppercase tracking-widest text-center mb-12">
-                                Servicios de Mentalismo en Madrid
-                            </h2>
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                <Link href="/empresas" className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all group">
-                                    <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3 group-hover:text-white transition-colors">Eventos Corporativos</h3>
-                                    <p className="text-slate-300 text-sm leading-relaxed">Presentaciones de producto, cenas de gala y congresos donde el mentalismo aporta un toque de exclusividad y prestigio.</p>
-                                    <span className="text-amber-500 text-xs font-bold uppercase tracking-widest mt-4 block">Para empresas →</span>
-                                </Link>
-                                <Link href="/particulares/bodas" className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all group">
-                                    <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3 group-hover:text-white transition-colors">Bodas Premium</h3>
-                                    <p className="text-slate-300 text-sm leading-relaxed">Experiencias psicológicas únicas para los invitados durante el cóctel o el banquete en fincas de bodas de lujo.</p>
-                                    <span className="text-amber-500 text-xs font-bold uppercase tracking-widest mt-4 block">Para bodas →</span>
-                                </Link>
-                                <Link href="/particulares/eventos" className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all group">
-                                    <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3 group-hover:text-white transition-colors">Fiestas Privadas</h3>
-                                    <p className="text-slate-300 text-sm leading-relaxed">Sorprende en tu próximo aniversario o reunión exclusiva con una sesión de mentalismo de cerca verdaderamente memorable.</p>
-                                    <span className="text-amber-500 text-xs font-bold uppercase tracking-widest mt-4 block">Eventos privados →</span>
-                                </Link>
-                            </div>
-                        </div>
-
-                        {/* FAQ Section using <details> for better schema matching */}
-                        <div className="border-t border-white/5 pt-16 mt-8 max-w-4xl mx-auto">
-                            <h2 className="text-2xl font-[Cinzel] text-white mb-12 text-center uppercase tracking-widest">Preguntas Frecuentes sobre Mentalismo</h2>
-                            <div className="space-y-4">
-                                <details className="bg-white/5 rounded-xl border border-white/10 group cursor-pointer [&_summary::-webkit-details-marker]:hidden">
-                                    <summary className="flex items-center justify-between p-6 text-amber-400 font-bold text-sm">
-                                        ¿Qué es un mago mentalista?
-                                        <span className="text-white/50 group-open:rotate-180 transition-transform">▼</span>
-                                    </summary>
-                                    <div className="px-6 pb-6 text-slate-400 text-xs leading-relaxed">
-                                        Un mago mentalista es un artista especializado en crear la ilusión de habilidades mentales extraordinarias, como la lectura de la mente, la predicción del futuro, la telequinesis y el control mental, utilizando técnicas de psicología, sugestión y magia.
-                                    </div>
-                                </details>
-                                
-                                <details className="bg-white/5 rounded-xl border border-white/10 group cursor-pointer [&_summary::-webkit-details-marker]:hidden">
-                                    <summary className="flex items-center justify-between p-6 text-amber-400 font-bold text-sm">
-                                        ¿Cuánto dura un espectáculo de mentalismo en Madrid?
-                                        <span className="text-white/50 group-open:rotate-180 transition-transform">▼</span>
-                                    </summary>
-                                    <div className="px-6 pb-6 text-slate-400 text-xs leading-relaxed">
-                                        Un espectáculo de mentalismo para eventos corporativos o privados en Madrid suele tener una duración de entre 45 y 60 minutos, adaptándose a las necesidades del protocolo y horario del evento.
-                                    </div>
-                                </details>
-
-                                <details className="bg-white/5 rounded-xl border border-white/10 group cursor-pointer [&_summary::-webkit-details-marker]:hidden">
-                                    <summary className="flex items-center justify-between p-6 text-amber-400 font-bold text-sm">
-                                        ¿Es el mentalismo adecuado para eventos de empresa?
-                                        <span className="text-white/50 group-open:rotate-180 transition-transform">▼</span>
-                                    </summary>
-                                    <div className="px-6 pb-6 text-slate-400 text-xs leading-relaxed">
-                                        Sí, el mentalismo es una de las opciones de entretenimiento más demandadas para eventos de empresa, ya que fomenta la participación, estimula la conversación inteligente y transmite sofisticación sin necesidad de grandes montajes.
-                                    </div>
-                                </details>
-
-                                <details className="bg-white/5 rounded-xl border border-white/10 group cursor-pointer [&_summary::-webkit-details-marker]:hidden">
-                                    <summary className="flex items-center justify-between p-6 text-amber-400 font-bold text-sm">
-                                        ¿Te desplazas a toda la Comunidad de Madrid?
-                                        <span className="text-white/50 group-open:rotate-180 transition-transform">▼</span>
-                                    </summary>
-                                    <div className="px-6 pb-6 text-slate-400 text-xs leading-relaxed">
-                                        Sí, realizo actuaciones de mentalismo en Madrid capital, zona noroeste (Las Rozas, Pozuelo, Torrelodones) y cualquier punto de la Comunidad de Madrid, así como desplazamientos a nivel nacional bajo consulta.
-                                    </div>
-                                </details>
-                            </div>
-                            
-                            <div className="text-center mt-12">
-                                <p className="text-slate-400 text-xs italic mb-4">
-                                    "La magia mental no ocurre en las manos del mago, ocurre directamente en el cerebro del espectador."
-                                    <br />— Ángel Ruiz, Ilusionista Profesional
-                                </p>
-                            </div>
-                        </div>
-                    </section>
+                    </div>
                 </main>
             </NavFooterClient>
         </>
