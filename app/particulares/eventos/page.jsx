@@ -42,7 +42,12 @@ export default function EventosDetailPage() {
         "mainEntity": [
             { "@type": "Question", "name": "¿La magia es adecuada para todas las edades?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, Angel adapta su repertorio según el público. Para eventos familiares, el show combina efectos visuales impactantes que fascinan tanto a niños como a adultos." } },
             { "@type": "Question", "name": "¿Qué espacio se necesita para la actuación?", "acceptedAnswer": { "@type": "Answer", "text": "La magia de cerca no requiere escenario. Se puede realizar de pie durante un cóctel o pasando por las mesas, adaptándose totalmente a la comodidad de tu salón o jardín." } },
-            { "@type": "Question", "name": "¿Cuánto dura el espectáculo?", "acceptedAnswer": { "@type": "Answer", "text": "Normalmente la intervención dura entre 60 y 90 minutos, dependiendo del número de invitados y el tipo de evento, para asegurar que todos vivan la experiencia de cerca." } }
+            { "@type": "Question", "name": "¿Cuánto dura el espectáculo?", "acceptedAnswer": { "@type": "Answer", "text": "Normalmente la intervención dura entre 60 y 90 minutos, dependiendo del número de invitados y el tipo de evento, para asegurar que todos vivan la experiencia de cerca." } },
+            { "@type": "Question", "name": "¿Puedo contratar a Ángel para una fiesta sorpresa?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutamente. Las fiestas sorpresa son el escenario perfecto para el ilusionismo. El factor sorpresa inicial se potencia cuando el regalo de cumpleaños es un asombro imposible." } },
+            { "@type": "Question", "name": "¿Realizas eventos fuera de la capital?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, me desplazo a toda la Comunidad de Madrid, incluyendo Torrelodones, Las Rozas, Majadahonda, Pozuelo, y otros municipios." } },
+            { "@type": "Question", "name": "¿Qué se necesita por parte del anfitrión?", "acceptedAnswer": { "@type": "Answer", "text": "Prácticamente nada. Ángel lleva todo lo necesario en su maletín. No necesitas focos, sonido ni escenarios si se trata de magia itinerante." } },
+            { "@type": "Question", "name": "¿Se pueden personalizar algunos trucos?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, en eventos privados a menudo podemos integrar elementos personales del homenajeado o mensajes específicos para hacer el momento aún más memorable." } },
+            { "@type": "Question", "name": "¿Cómo se realiza el pago?", "acceptedAnswer": { "@type": "Answer", "text": "Generalmente se solicita una pequeña señal para reservar la fecha y el resto se abona el día del evento. Todo se realiza con la máxima transparencia y mediante factura profesional." } }
         ]
     };
 
@@ -109,92 +114,140 @@ export default function EventosDetailPage() {
 
                 <main className="relative z-10 pt-24 pb-16 px-6 max-w-6xl mx-auto">
                     <Breadcrumbs />
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-20">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-20 mt-8">
 
-                    <div>
-                        <p className="text-amber-500 uppercase tracking-widest text-[10px] font-bold mb-2 drop-shadow-md">
-                            Celebraciones Únicas
-                        </p>
-                        <h1 className="text-4xl md:text-5xl font-[Cinzel] text-white mb-4 border-b border-amber-500/50 pb-2 font-bold leading-tight uppercase">
-                            Mago para Eventos
-                        </h1>
-
-                        <div className="space-y-6 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
-                            <p>
-                                <span className="text-amber-400 font-bold underline decoration-amber-500/30">Lleva tu celebración al siguiente nivel con un toque de asombro.</span>{' '}
-                                Ángel Ruiz, ilusionista profesional experto en <strong>eventos Madrid</strong> y <strong className="text-amber-400">magia para fiestas privadas</strong>, se encargará de que tu reunión social sea recordada durante años. El asombro ocurre a escasos centímetros, creando una atmósfera de misterio y diversión inmejorable.
+                        <div>
+                            <p className="text-amber-500 uppercase tracking-widest text-[10px] font-bold mb-2 drop-shadow-md">
+                                Celebraciones Únicas
                             </p>
+                            <h1 className="text-4xl md:text-5xl font-[Cinzel] text-white mb-4 border-b border-amber-500/50 pb-2 font-bold leading-tight uppercase">
+                                Mago para Eventos
+                            </h1>
 
-                            {/* Mini Features Grid para cohesión visual */}
-                            <div className="grid grid-cols-2 gap-4 py-6 border-y border-white/5">
-                                <div className="flex items-start gap-3">
-                                    <div className="text-amber-500 font-bold">01</div>
-                                    <div>
-                                        <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Cóctel Mágico</h4>
-                                        <p className="text-slate-400 text-[10px] leading-tight mt-1">Dinamización itinerante entre grupos.</p>
+                            <div className="space-y-6 text-white text-sm md:text-base leading-relaxed text-justify opacity-90">
+                                <p>
+                                    <span className="text-amber-400 font-bold underline decoration-amber-500/30">Lleva tu celebración al siguiente nivel con un toque de asombro.</span>{' '}
+                                    Ángel Ruiz, ilusionista profesional experto en <strong>eventos Madrid</strong> y <strong className="text-amber-400">magia para fiestas privadas</strong>, se encargará de que tu reunión social sea recordada durante años. El asombro ocurre a escasos centímetros, creando una atmósfera de misterio y diversión inmejorable.
+                                </p>
+
+                                {/* Mini Features Grid para cohesión visual */}
+                                <div className="grid grid-cols-2 gap-4 py-6 border-y border-white/5">
+                                    <div className="flex items-start gap-3">
+                                        <div className="text-amber-500 font-bold">01</div>
+                                        <div>
+                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Cóctel Mágico</h4>
+                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Dinamización itinerante entre grupos.</p>
+                                        </div>
+                                    </div>
+                                    <div className="flex items-start gap-3">
+                                        <div className="text-amber-500 font-bold">02</div>
+                                        <div>
+                                            <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Show de Salón</h4>
+                                            <p className="text-slate-400 text-[10px] leading-tight mt-1">Espectáculo central muy participativo.</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="flex items-start gap-3">
-                                    <div className="text-amber-500 font-bold">02</div>
-                                    <div>
-                                        <h4 className="text-white font-[Cinzel] text-xs font-bold uppercase">Show de Salón</h4>
-                                        <p className="text-slate-400 text-[10px] leading-tight mt-1">Espectáculo central muy participativo.</p>
-                                    </div>
+
+                                <p>
+                                    Como <strong className="text-amber-400">mago para cumpleaños y aniversarios</strong>, complemento cualquier evento con un entretenimiento que respeta la exclusividad de tu espacio, actuando en domicilios y fincas desde el centro de la capital hasta <strong>El Escorial o Majadahonda</strong>.
+                                </p>
+
+                                <p>
+                                    Al ser <strong>mago para eventos en Torrelodones</strong>, cubro toda la zona noroeste con cercanía y profesionalidad total: <strong>Las Rozas, Pozuelo, Boadilla y Villalba</strong>. Sin complicaciones y con la garantía de un experto local para tu día inolvidable.
+                                </p>
+                            </div>
+
+                            <div className="mt-12 flex justify-start">
+                                <ContactButtonClient label="Solicitar Presupuesto Eventos" />
+                            </div>
+                        </div>
+
+                        <div className="relative md:sticky md:top-32 h-[350px] md:h-[450px] rounded-2xl overflow-hidden border border-slate-800 shadow-xl">
+                            <Image
+                                src="/images/fiesta-eventos-madrid.webp"
+                                alt="Mago para eventos privados en Madrid Ángel Ruiz ilusionista especializado en cumpleaños y fiestas"
+                                fill
+                                className="object-cover object-top"
+                                priority
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 to-transparent" />
+                        </div>
+                    </div>
+
+                    {/* Storytelling Emocional */}
+                    <section className="border-t border-white/5 pt-16 mt-16 max-w-4xl mx-auto">
+                        <h2 className="text-3xl font-[Cinzel] text-white mb-8 text-center">El antídoto contra las fiestas previsibles</h2>
+                        <div className="space-y-6 text-slate-300 text-lg font-light leading-relaxed text-justify">
+                            <p>
+                                Organizar un evento privado —ya sea un 40 cumpleaños, una fiesta de graduación o un aniversario de bodas de plata— conlleva una presión enorme. Quieres que la comida esté perfecta, que la música encaje y que la gente se mezcle. Pero a menudo te encuentras siendo más un 'productor de eventos' que un verdadero anfitrión, preocupado constantemente por si todos lo están pasando bien o si hay silencios incómodos.
+                            </p>
+                            <p>
+                                ¿Qué pasa cuando los grupos de amigos no se mezclan? ¿Qué pasa cuando después de cenar la energía decae y la gente empieza a mirar el reloj? Aquí es donde el ilusionismo se convierte en el salvavidas de tu evento. La magia rompe el hielo de forma elegante e inmediata. Al ver un imposible en sus propias manos, las personas no pueden evitar gritar de sorpresa, reír y comentarlo con el que tienen al lado. Magia familiar y para adultos que elimina barreras.
+                            </p>
+                            <p>
+                                Imagina poder relajarte en tu propia fiesta, con una copa en la mano, sabiendo que tus invitados están viviendo algo extraordinario y que el éxito del evento está completamente asegurado. Esa es la verdadera tranquilidad que aporta la magia profesional.
+                            </p>
+                        </div>
+                    </section>
+
+                    {/* Timeline del Evento */}
+                    <section className="border-t border-white/5 pt-16 mt-16">
+                        <h2 className="text-3xl font-[Cinzel] text-white mb-12 text-center uppercase tracking-widest">Timeline de la Experiencia</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div className="bg-slate-900/40 border border-slate-800 p-8 rounded-2xl relative overflow-hidden group">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-[40px] -mr-10 -mt-10 transition-opacity group-hover:opacity-100 opacity-50" />
+                                <span className="text-amber-500 font-[Cinzel] text-xl font-bold mb-4 block">Fase 01</span>
+                                <h3 className="text-white text-xl font-bold mb-3 uppercase font-[Cinzel]">Recepción</h3>
+                                <p className="text-slate-400 font-light text-sm leading-relaxed text-justify">
+                                    Los invitados llegan, algunos no conocen a nadie. Me acerco, realizo pequeños trucos visuales rápidos e impactantes. La primera sonrisa del evento se enciende, el ambiente se relaja y la charla comienza a fluir de forma natural.
+                                </p>
+                            </div>
+                            <div className="bg-slate-900/40 border border-slate-800 p-8 rounded-2xl relative overflow-hidden group">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-[40px] -mr-10 -mt-10 transition-opacity group-hover:opacity-100 opacity-50" />
+                                <span className="text-amber-500 font-[Cinzel] text-xl font-bold mb-4 block">Fase 02</span>
+                                <h3 className="text-white text-xl font-bold mb-3 uppercase font-[Cinzel]">El Clímax</h3>
+                                <p className="text-slate-400 font-light text-sm leading-relaxed text-justify">
+                                    El momento de mayor intensidad. Ya sea con un pase de magia itinerante durante el cóctel que va in crescendo, o con un show de salón para todos a la vez donde el homenajeado es la estrella de un efecto mentalismo imposible.
+                                </p>
+                            </div>
+                            <div className="bg-slate-900/40 border border-slate-800 p-8 rounded-2xl relative overflow-hidden group">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-[40px] -mr-10 -mt-10 transition-opacity group-hover:opacity-100 opacity-50" />
+                                <span className="text-amber-500 font-[Cinzel] text-xl font-bold mb-4 block">Fase 03</span>
+                                <h3 className="text-white text-xl font-bold mb-3 uppercase font-[Cinzel]">El Cierre</h3>
+                                <p className="text-slate-400 font-light text-sm leading-relaxed text-justify">
+                                    Un efecto dedicado, una sorpresa emotiva para que los anfitriones se lleven el mejor recuerdo. La energía queda en el punto más alto, dejando paso a la música o a la continuación de la fiesta de forma inmejorable.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section className="border-t border-white/5 pt-16 mt-16">
+                        <h2 className="text-3xl font-[Cinzel] text-white mb-12 text-center uppercase tracking-widest">Preguntas Frecuentes</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                            {faqSchema.mainEntity.map((faq, index) => (
+                                <div key={index} className="bg-slate-900/40 p-8 rounded-xl border border-white/10 hover:border-amber-500/20 transition-colors">
+                                    <h3 className="text-amber-400 font-bold mb-3 text-lg">{faq.name}</h3>
+                                    <p className="text-slate-400 font-light text-sm leading-relaxed text-justify">{faq.acceptedAnswer.text}</p>
                                 </div>
-                            </div>
-
-                            <p>
-                                Como <strong className="text-amber-400">mago para cumpleaños y aniversarios</strong>, complemento cualquier evento con un entretenimiento que respeta la exclusividad de tu espacio, actuando en domicilios y fincas desde el centro de la capital hasta <strong>El Escorial o Majadahonda</strong>.
-                            </p>
-
-                            <p>
-                                Al ser <strong>mago para eventos en Torrelodones</strong>, cubro toda la zona noroeste con cercanía y profesionalidad total: <strong>Las Rozas, Pozuelo, Boadilla y Villalba</strong>. Sin complicaciones y con la garantía de un experto local.
-                            </p>
+                            ))}
                         </div>
-
-                        <div className="mt-12 flex justify-start">
-                            <ContactButtonClient label="Solicitar Presupuesto Eventos" />
+                    </section>
+                    
+                    {/* Related Blog Posts Section */}
+                    <section className="border-t border-white/5 pt-16 mt-16 pb-8">
+                        <h2 className="text-3xl font-[Cinzel] text-white mb-10 text-center uppercase tracking-widest">Inspiración para tu Fiesta</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                            <a href="/blog/ideas-originales-entretenimiento-bodas-madrid" className="group bg-slate-900/40 p-8 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
+                                <p className="text-amber-500 text-[10px] uppercase font-bold tracking-tighter mb-2">Entretenimiento</p>
+                                <h3 className="text-white font-[Cinzel] text-lg group-hover:text-amber-400 transition-colors">10 Ideas para sorprender a tus invitados</h3>
+                            </a>
+                            <a href="/blog/cuanto-cuesta-mago-boda-madrid" className="group bg-slate-900/40 p-8 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
+                                <p className="text-amber-500 text-[10px] uppercase font-bold tracking-tighter mb-2">Presupuesto</p>
+                                <h3 className="text-white font-[Cinzel] text-lg group-hover:text-amber-400 transition-colors">¿Cuánto cuesta contratar un mago?</h3>
+                            </a>
                         </div>
-                    </div>
-
-                    <div className="relative md:sticky md:top-32 h-[350px] md:h-[450px] rounded-2xl overflow-hidden border border-slate-800 shadow-xl">
-                        <Image
-                            src="/images/fiesta-eventos-madrid.webp"
-                            alt="Mago para eventos privados en Madrid Ángel Ruiz ilusionista especializado en cumpleaños y fiestas"
-                            fill
-                            className="object-cover object-top"
-                            priority
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 to-transparent" />
-                    </div>
-                </div>
-
-                <section className="border-t border-white/5 pt-16 mt-16">
-                    <h2 className="text-2xl font-[Cinzel] text-white mb-12 text-center uppercase tracking-widest">Preguntas Frecuentes</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                        {faqSchema.mainEntity.map((faq, index) => (
-                            <div key={index} className="bg-white/5 p-6 rounded-xl border border-white/10">
-                                <h3 className="text-amber-400 font-bold mb-3 text-sm">{faq.name}</h3>
-                                <p className="text-slate-400 text-xs leading-relaxed text-justify">{faq.acceptedAnswer.text}</p>
-                            </div>
-                        ))}
-                    </div>
-                </section>
-                {/* Related Blog Posts Section */}
-                <section className="border-t border-white/5 pt-16 mt-16 pb-8">
-                    <h2 className="text-2xl font-[Cinzel] text-white mb-10 text-center uppercase tracking-widest">Inspiración para tu Fiesta</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                        <a href="/blog/ideas-originales-entretenimiento-bodas-madrid" className="group bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
-                            <p className="text-amber-500 text-[10px] uppercase font-bold tracking-tighter mb-2">Entretenimiento</p>
-                            <h3 className="text-white font-[Cinzel] text-sm group-hover:text-amber-400 transition-colors">10 Ideas para sorprender a tus invitados</h3>
-                        </a>
-                        <a href="/blog/cuanto-cuesta-mago-boda-madrid" className="group bg-slate-900/40 p-6 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
-                            <p className="text-amber-500 text-[10px] uppercase font-bold tracking-tighter mb-2">Presupuesto</p>
-                            <h3 className="text-white font-[Cinzel] text-sm group-hover:text-amber-400 transition-colors">¿Cuánto cuesta contratar un mago?</h3>
-                        </a>
-                    </div>
-                </section>
-            </main>
+                    </section>
+                </main>
         </NavFooterClient>
         </>
     );

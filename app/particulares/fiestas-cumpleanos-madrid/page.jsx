@@ -45,7 +45,12 @@ export default function CumpleanosAdultosPage() {
         "mainEntity": [
             { "@type": "Question", "name": "¿El espectáculo es adecuado para un cumpleaños de adultos (40 o 50 años)?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutamente. Mi magia está diseñada para un público adulto y sofisticado. Mezclo impacto visual, psicología y un humor inteligente perfecto para hacer que el homenajeado se sienta especial." } },
             { "@type": "Question", "name": "¿Te desplazas a domicilio en Madrid o a restaurantes?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, realizo la mayor parte de estas actuaciones en chalets privados, salones de restaurantes y fincas en toda la Comunidad de Madrid, adaptándome al espacio disponible." } },
-            { "@type": "Question", "name": "¿Es mejor magia de cerca o de salón para una fiesta privada?", "acceptedAnswer": { "@type": "Answer", "text": "Depende de la estructura de tu fiesta. Si es un formato cóctel de pie, la magia itinerante funciona genial. Si todos están sentados o queréis un momento central tras la cena, la magia de salón de 30-45 minutos es el broche de oro perfecto." } }
+            { "@type": "Question", "name": "¿Es mejor magia de cerca o de salón para una fiesta privada?", "acceptedAnswer": { "@type": "Answer", "text": "Depende de la estructura de tu fiesta. Si es un formato cóctel de pie, la magia itinerante funciona genial. Si todos están sentados o queréis un momento central tras la cena, la magia de salón de 30-45 minutos es el broche de oro perfecto." } },
+            { "@type": "Question", "name": "¿Es posible adaptar los trucos a una sorpresa personalizada?", "acceptedAnswer": { "@type": "Answer", "text": "Totalmente. Muchos de mis clientes me contactan para fiestas sorpresa, y a menudo preparo efectos especiales donde aparece el regalo, un mensaje o un guiño a la profesión o aficiones del homenajeado." } },
+            { "@type": "Question", "name": "¿Incluyes sonido e iluminación si es un jardín grande?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, para los shows de salón llevo mi propio equipo de sonido profesional que cubre perfectamente un jardín o salón amplio, asegurando que todos escuchen cada detalle de la actuación." } },
+            { "@type": "Question", "name": "¿Pueden participar los niños si es una fiesta familiar?", "acceptedAnswer": { "@type": "Answer", "text": "Por supuesto. Aunque el tono del espectáculo esté pensado para los adultos que cumplen años, la magia tiene un lenguaje universal y los niños también se asombrarán y disfrutarán al máximo. Es magia familiar de calidad." } },
+            { "@type": "Question", "name": "¿Hasta qué zonas te desplazas?", "acceptedAnswer": { "@type": "Answer", "text": "Me desplazo por toda la Comunidad de Madrid. Esto incluye Madrid centro, la zona noroeste (Las Rozas, Majadahonda, Torrelodones, Pozuelo), y también otras provincias limítrofes si el evento lo requiere." } },
+            { "@type": "Question", "name": "¿Con cuánto tiempo de antelación debo avisar?", "acceptedAnswer": { "@type": "Answer", "text": "Para asegurar disponibilidad, recomiendo avisar con al menos 2-3 meses de antelación, especialmente si el cumpleaños se celebra en fin de semana durante los meses de primavera u otoño." } }
         ]
     };
 
@@ -103,7 +108,7 @@ export default function CumpleanosAdultosPage() {
                     <Breadcrumbs />
                     
                     {/* Hero Section */}
-                    <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center mb-32 mt-8">
+                    <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center mb-24 mt-8">
                         <FadeIn className="flex-1 space-y-8" y={40}>
                             <div className="inline-block px-4 py-2 rounded-full border border-[#d4a853]/30 bg-[#d4a853]/5">
                                 <span className="text-[#d4a853] text-xs font-semibold tracking-widest uppercase">
@@ -114,7 +119,7 @@ export default function CumpleanosAdultosPage() {
                                 Sorprende en <br/>tu <span className="text-[#d4a853] italic font-light">Cumpleaños</span>
                             </h1>
                             <p className="text-lg text-slate-300 leading-relaxed font-light">
-                                Hacerse mayor no significa perder la capacidad de asombro. Regala una experiencia inolvidable con ilusionismo moderno y magia a domicilio en Madrid.
+                                Hacerse mayor no significa perder la capacidad de asombro. Regala una experiencia y un día inolvidable con ilusionismo moderno y magia a domicilio en Madrid.
                             </p>
                             
                             <div className="grid grid-cols-2 gap-4 py-6 border-y border-white/5">
@@ -153,6 +158,66 @@ export default function CumpleanosAdultosPage() {
                         </FadeIn>
                     </div>
 
+                    {/* Storytelling Emocional */}
+                    <FadeIn y={30} className="py-24 border-t border-white/5">
+                        <div className="max-w-4xl mx-auto space-y-8">
+                            <h2 className="text-3xl md:text-5xl font-[Cinzel] text-white mb-8 text-center">Cumplir 40 o 50 merece algo espectacular</h2>
+                            <p className="text-slate-300 font-light text-lg leading-relaxed text-justify">
+                                Cuando organizas un cambio de década —los famosos 40, 50 o 60 años— no quieres otra cena aburrida en un restaurante donde apenas hablas con los de las esquinas. Quieres que la gente ría, quieres que la gente se mezcle, y sobre todo, quieres sorprender a esa persona especial. El gran problema de estas fiestas suele ser el temido "bajón" post-cena, cuando los invitados ya han comido, han charlado y el ambiente comienza a decaer lentamente antes de que empiece la música o las copas.
+                            </p>
+                            <p className="text-slate-300 font-light text-lg leading-relaxed text-justify">
+                                La magia irrumpe precisamente ahí para revitalizar la energía de la sala. Es la inyección de adrenalina y sorpresa que transforma una simple reunión en una fiesta épica. Al llevar magia a domicilio o al restaurante, consigues que la celebración sea sofisticada pero inmensamente divertida. Es magia de cerca que pone al homenajeado en el centro del escenario, haciéndole sentir la auténtica estrella de su día. Una dosis de asombro, humor elegante y magia familiar que borrará cualquier atisbo de aburrimiento.
+                            </p>
+                        </div>
+                    </FadeIn>
+
+                    {/* Timeline del Evento */}
+                    <FadeIn y={30} className="py-24 border-t border-white/5">
+                        <div className="text-center mb-20">
+                            <h2 className="text-3xl md:text-4xl font-[Cinzel] text-white mb-6">El Timeline de la Fiesta</h2>
+                            <p className="text-slate-400 font-light text-base max-w-2xl mx-auto">
+                                Así se integra el ilusionismo para que el ritmo de tu celebración nunca decaiga.
+                            </p>
+                        </div>
+
+                        <div className="space-y-12 max-w-5xl mx-auto">
+                            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-[#111111]/80 rounded-[2rem] p-10 border border-white/5 relative overflow-hidden group">
+                                <div className="md:col-span-3 text-center md:text-left border-b md:border-b-0 md:border-r border-white/10 pb-6 md:pb-0 md:pr-6">
+                                    <span className="text-[#d4a853] font-[Cinzel] text-xl block mb-2">Fase 1</span>
+                                    <h3 className="text-2xl font-[Cinzel] text-white">Llegada / Cóctel</h3>
+                                </div>
+                                <div className="md:col-span-9">
+                                    <p className="text-slate-300 font-light leading-relaxed text-justify">
+                                        Empiezo rompiendo el hielo. Cuando la gente aún está con la primera copa y quizá no se conocen todos, mi magia actúa como un conector instantáneo. Risas y asombro compartidos que preparan a todos para disfrutar al máximo.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-[#111111]/80 rounded-[2rem] p-10 border border-white/5 relative overflow-hidden group">
+                                <div className="absolute top-0 right-0 w-64 h-64 bg-[#d4a853]/5 rounded-full blur-[80px] -mr-20 -mt-20 transition-opacity group-hover:opacity-100 opacity-50" />
+                                <div className="md:col-span-3 text-center md:text-left border-b md:border-b-0 md:border-r border-white/10 pb-6 md:pb-0 md:pr-6">
+                                    <span className="text-[#d4a853] font-[Cinzel] text-xl block mb-2">Fase 2</span>
+                                    <h3 className="text-2xl font-[Cinzel] text-white">El Clímax (Show Central)</h3>
+                                </div>
+                                <div className="md:col-span-9 relative z-10">
+                                    <p className="text-slate-300 font-light leading-relaxed text-justify">
+                                        Tras la cena o el picoteo, concentro la atención de todos en un espectáculo de salón. Es un show diseñado con humor inteligente donde el homenajeado o homenajeada participa de forma destacada, creando el momento cumbre del cumpleaños.
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-[#111111]/80 rounded-[2rem] p-10 border border-white/5 relative overflow-hidden group">
+                                <div className="md:col-span-3 text-center md:text-left border-b md:border-b-0 md:border-r border-white/10 pb-6 md:pb-0 md:pr-6">
+                                    <span className="text-[#d4a853] font-[Cinzel] text-xl block mb-2">Fase 3</span>
+                                    <h3 className="text-2xl font-[Cinzel] text-white">El Regalo Mágico</h3>
+                                </div>
+                                <div className="md:col-span-9">
+                                    <p className="text-slate-300 font-light leading-relaxed text-justify">
+                                        Para cerrar, puedo integrar la aparición de vuestro regalo o dar un mensaje emotivo de parte de la familia mediante un efecto imposible. El final perfecto antes de abrir paso a las copas o la música.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </FadeIn>
+
                     {/* Formatos Section */}
                     <FadeIn y={30} className="py-24 border-t border-white/5">
                         <div className="text-center mb-16">
@@ -165,8 +230,8 @@ export default function CumpleanosAdultosPage() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div className="bg-[#111111]/50 border border-white/5 p-12 rounded-[2rem] hover:bg-[#111111] transition-colors group">
                                 <h3 className="text-[#d4a853] font-[Cinzel] text-2xl mb-4">Magia Itinerante</h3>
-                                <p className="text-slate-300 font-light text-sm leading-relaxed mb-6">
-                                    Ideal para cócteles, picoteos o barbacoas. Me muevo entre los grupos realizando efectos visuales a escasos centímetros. Dinamiza la fiesta sin acaparar la atención de todos a la vez.
+                                <p className="text-slate-300 font-light text-sm leading-relaxed mb-6 text-justify">
+                                    Ideal para cócteles, picoteos o barbacoas en chalets. Me muevo entre los grupos realizando efectos visuales a escasos centímetros. Dinamiza la fiesta sin acaparar la atención de todos a la vez, creando focos de sorpresa.
                                 </p>
                                 <ul className="text-slate-400 text-sm space-y-3 font-light">
                                     <li className="flex gap-3"><span className="text-[#d4a853]">✓</span> No requiere espacio escénico</li>
@@ -175,12 +240,12 @@ export default function CumpleanosAdultosPage() {
                             </div>
                             <div className="bg-[#111111]/50 border border-white/5 p-12 rounded-[2rem] hover:bg-[#111111] transition-colors group">
                                 <h3 className="text-[#d4a853] font-[Cinzel] text-2xl mb-4">Show de Salón</h3>
-                                <p className="text-slate-300 font-light text-sm leading-relaxed mb-6">
-                                    El colofón perfecto tras la cena o antes de abrir regalos. Un espectáculo central de 30-45 minutos donde todos prestan atención al mismo tiempo y el cumpleañero es parte activa.
+                                <p className="text-slate-300 font-light text-sm leading-relaxed mb-6 text-justify">
+                                    El colofón perfecto tras la cena o antes de abrir regalos. Un espectáculo central de 45-60 minutos donde todos prestan atención al mismo tiempo y el cumpleañero es parte activa. Potente, emotivo y muy humorístico.
                                 </p>
                                 <ul className="text-slate-400 text-sm space-y-3 font-light">
                                     <li className="flex gap-3"><span className="text-[#d4a853]">✓</span> Homenajeado como centro de atención</li>
-                                    <li className="flex gap-3"><span className="text-[#d4a853]">✓</span> Gran impacto visual y humor</li>
+                                    <li className="flex gap-3"><span className="text-[#d4a853]">✓</span> Gran impacto visual y carcajadas</li>
                                 </ul>
                             </div>
                         </div>
@@ -192,7 +257,7 @@ export default function CumpleanosAdultosPage() {
                             <div className="absolute inset-0 bg-[#d4a853]/5 mix-blend-overlay" />
                             <h2 className="text-3xl font-[Cinzel] text-white mb-6 relative z-10">Magia a Domicilio: Cero Complicaciones</h2>
                             <p className="text-slate-300 font-light text-lg max-w-2xl mx-auto leading-relaxed mb-10 relative z-10">
-                                Llevo mi propia maleta con todo lo necesario. Tú no tienes que preocuparte de nada logístico, solo de disfrutar con tus invitados.
+                                Llevo mi propia maleta con todo lo necesario (incluso sonido portátil si se requiere). Tú no tienes que preocuparte de nada logístico, solo de disfrutar con tus invitados del día.
                             </p>
                             <div className="flex flex-wrap gap-3 justify-center relative z-10">
                                 {["Madrid Capital", "Las Rozas", "Majadahonda", "Pozuelo", "Boadilla", "Torrelodones", "La Moraleja"].map((zona) => (
@@ -206,8 +271,8 @@ export default function CumpleanosAdultosPage() {
 
                     {/* FAQ */}
                     <FadeIn y={30} className="py-24 border-t border-white/5">
-                        <h2 className="text-2xl font-[Cinzel] text-white mb-12 text-center">Preguntas Frecuentes</h2>
-                        <div className="max-w-3xl mx-auto space-y-4">
+                        <h2 className="text-3xl font-[Cinzel] text-white mb-12 text-center">Preguntas Frecuentes</h2>
+                        <div className="max-w-4xl mx-auto space-y-4">
                             {faqSchema.mainEntity.map((faq, index) => (
                                 <details key={index} className="group bg-[#111111]/50 border border-white/5 rounded-2xl overflow-hidden cursor-pointer">
                                     <summary className="flex items-center justify-between p-6 text-white font-medium text-sm">

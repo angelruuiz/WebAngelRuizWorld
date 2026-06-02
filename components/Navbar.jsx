@@ -43,7 +43,6 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
             href: '#',
             children: [
                 { name: 'Magia Close-Up', href: '/mago-close-up-madrid' },
-                { name: 'Mentalismo', href: '/mago-mentalista-madrid' },
                 { name: 'Contratar Mago', href: '/contratar-mago-madrid' }
             ]
         },

@@ -118,7 +118,7 @@ export default function BodasDetailPage() {
                     <Breadcrumbs />
                     
                     {/* Hero Section */}
-                    <div className="flex flex-col-reverse lg:flex-row gap-16 lg:gap-24 items-center mb-32">
+                    <div className="flex flex-col-reverse lg:flex-row gap-16 lg:gap-24 items-center mb-24">
                         <FadeIn className="flex-1 space-y-8" y={40}>
                             <div className="inline-block px-4 py-2 rounded-full border border-[#d4a853]/30 bg-[#d4a853]/5">
                                 <span className="text-[#d4a853] text-xs font-semibold tracking-widest uppercase">
@@ -129,7 +129,7 @@ export default function BodasDetailPage() {
                                 El Día Más <br/><span className="text-[#d4a853] italic font-light">Especial</span>
                             </h1>
                             <p className="text-lg text-slate-300 leading-relaxed max-w-xl font-light">
-                                Recuerdos inolvidables construidos en el momento perfecto. La magia de Ángel Ruiz aporta esas emociones de asombro y elegancia que convierten un cóctel de boda en una experiencia legendaria para todos tus invitados.
+                                Recuerdos inolvidables construidos en el momento perfecto. La magia de Ángel Ruiz aporta esas emociones de asombro y elegancia que convierten un cóctel de boda en una experiencia legendaria para todos tus invitados. Un día inolvidable merece detalles a la altura.
                             </p>
                             <div className="pt-4">
                                 <ContactButtonClient label="Solicitar Disponibilidad" />
@@ -150,30 +150,80 @@ export default function BodasDetailPage() {
                         </FadeIn>
                     </div>
 
-                    {/* Moments Section - Asymmetrical Grid */}
-                    <FadeIn y={30} className="py-24">
+                    {/* Storytelling Emocional */}
+                    <FadeIn y={30} className="py-24 border-t border-white/5">
+                        <div className="max-w-4xl mx-auto space-y-8">
+                            <h2 className="text-3xl md:text-5xl font-[Cinzel] text-white mb-8 text-center">El miedo al silencio: Que ningún invitado se aburra</h2>
+                            <p className="text-slate-300 font-light text-lg leading-relaxed text-justify">
+                                Has pasado meses planificando cada detalle: las flores, el menú, la música, la finca perfecta. Pero hay algo que a menudo escapa al control de los novios: los tiempos muertos. Ese momento durante el cóctel o entre platos en el que los grupos que no se conocen se quedan en silencio, mirando sus teléfonos, esperando a que ocurra algo. Es el gran temor de cualquier pareja: que sus invitados se aburran en su día más especial.
+                            </p>
+                            <p className="text-slate-300 font-light text-lg leading-relaxed text-justify">
+                                Aquí es donde la magia interviene no como un simple espectáculo, sino como un <strong className="text-white font-normal">catalizador social</strong>. Una sorpresa elegante que irrumpe en el momento exacto. Imagina a ese grupo de compañeros de trabajo que apenas conocen a la familia, estallando en carcajadas y gritos de asombro porque una carta ha desaparecido en sus propias manos. De repente, tienen un tema de conversación. De repente, el hielo se ha roto. De repente, tu boda pasa de ser "una boda más" a ser <em>la boda</em> de la que hablarán durante años. Magia familiar y sofisticada que une a las personas.
+                            </p>
+                        </div>
+                    </FadeIn>
+
+                    {/* Timeline del Evento */}
+                    <FadeIn y={30} className="py-24 border-t border-white/5">
                         <div className="text-center mb-20">
-                            <h2 className="text-3xl md:text-4xl font-[Cinzel] text-white mb-6">Emociones que conectan</h2>
+                            <h2 className="text-3xl md:text-4xl font-[Cinzel] text-white mb-6">Timeline del Evento: El Asombro Paso a Paso</h2>
                             <p className="text-slate-400 font-light text-base max-w-2xl mx-auto">
-                                La magia no es un show aislado, es el hilo conductor que fluye durante vuestra celebración.
+                                Descubre cómo la magia se integra orgánicamente en cada fase de tu celebración para garantizar un día inolvidable.
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-                            <div className="md:col-span-7 bg-[#111111]/80 rounded-[2rem] p-10 lg:p-14 border border-white/5 relative overflow-hidden group">
-                                <div className="absolute top-0 right-0 w-64 h-64 bg-[#d4a853]/5 rounded-full blur-[80px] -mr-20 -mt-20 transition-opacity group-hover:opacity-100 opacity-50" />
-                                <span className="text-5xl text-white/10 font-bold mb-6 block font-[Cinzel]">01</span>
-                                <h3 className="text-2xl font-[Cinzel] text-white mb-4">El Cóctel</h3>
-                                <p className="text-slate-300 font-light leading-relaxed">
-                                    Magia itinerante que rompe el hielo. Mientras vosotros os hacéis las fotos, vuestros invitados comparten risas y momentos inolvidables a pocos centímetros de sus ojos.
-                                </p>
+                        <div className="space-y-12 max-w-5xl mx-auto">
+                            {/* Recepción */}
+                            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-[#111111]/80 rounded-[2rem] p-10 border border-white/5 relative overflow-hidden group">
+                                <div className="md:col-span-3 text-center md:text-left border-b md:border-b-0 md:border-r border-white/10 pb-6 md:pb-0 md:pr-6">
+                                    <span className="text-[#d4a853] font-[Cinzel] text-xl block mb-2">Fase 1</span>
+                                    <h3 className="text-2xl font-[Cinzel] text-white">La Recepción</h3>
+                                </div>
+                                <div className="md:col-span-9">
+                                    <p className="text-slate-300 font-light leading-relaxed text-justify">
+                                        Mientras los invitados van llegando a la finca y vosotros quizá estáis terminando la sesión de fotos, el ambiente puede sentirse un poco frío. Empiezo a acercarme a los primeros grupos con pequeños milagros visuales. Magia rápida, directa, que despierta sonrisas y genera la primera sorpresa del día.
+                                    </p>
+                                </div>
                             </div>
-                            <div className="md:col-span-5 bg-[#111111]/80 rounded-[2rem] p-10 lg:p-14 border border-white/5 relative overflow-hidden group">
-                                <span className="text-5xl text-white/10 font-bold mb-6 block font-[Cinzel]">02</span>
-                                <h3 className="text-2xl font-[Cinzel] text-white mb-4">El Banquete</h3>
-                                <p className="text-slate-300 font-light leading-relaxed">
-                                    Intervenciones mesa a mesa. Magia elegante y sutil entre platos que mantiene la energía alta sin interrumpir el ritmo del servicio.
-                                </p>
+
+                            {/* Cóctel */}
+                            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-[#111111]/80 rounded-[2rem] p-10 border border-white/5 relative overflow-hidden group">
+                                <div className="absolute top-0 right-0 w-64 h-64 bg-[#d4a853]/5 rounded-full blur-[80px] -mr-20 -mt-20 transition-opacity group-hover:opacity-100 opacity-50" />
+                                <div className="md:col-span-3 text-center md:text-left border-b md:border-b-0 md:border-r border-white/10 pb-6 md:pb-0 md:pr-6">
+                                    <span className="text-[#d4a853] font-[Cinzel] text-xl block mb-2">Fase 2</span>
+                                    <h3 className="text-2xl font-[Cinzel] text-white">El Cóctel</h3>
+                                </div>
+                                <div className="md:col-span-9 relative z-10">
+                                    <p className="text-slate-300 font-light leading-relaxed text-justify">
+                                        El momento estrella. Me muevo ágilmente entre los invitados, realizando magia de cerca (Close-up). Las reacciones son explosivas. El sonido de los aplausos y las risas se contagia por todo el jardín. Es el momento perfecto para crear recuerdos inolvidables y fotografías llenas de emoción espontánea.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Banquete */}
+                            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-[#111111]/80 rounded-[2rem] p-10 border border-white/5 relative overflow-hidden group">
+                                <div className="md:col-span-3 text-center md:text-left border-b md:border-b-0 md:border-r border-white/10 pb-6 md:pb-0 md:pr-6">
+                                    <span className="text-[#d4a853] font-[Cinzel] text-xl block mb-2">Fase 3</span>
+                                    <h3 className="text-2xl font-[Cinzel] text-white">El Banquete</h3>
+                                </div>
+                                <div className="md:col-span-9">
+                                    <p className="text-slate-300 font-light leading-relaxed text-justify">
+                                        Intervenciones sutiles mesa a mesa entre plato y plato. Me coordino con el maître para no entorpecer el servicio. Magia elegante, mentalismo y participación colectiva en la mesa para mantener la energía alta y evitar los clásicos bajones de ritmo durante la comida.
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Sobremesa */}
+                            <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center bg-[#111111]/80 rounded-[2rem] p-10 border border-white/5 relative overflow-hidden group">
+                                <div className="md:col-span-3 text-center md:text-left border-b md:border-b-0 md:border-r border-white/10 pb-6 md:pb-0 md:pr-6">
+                                    <span className="text-[#d4a853] font-[Cinzel] text-xl block mb-2">Fase 4</span>
+                                    <h3 className="text-2xl font-[Cinzel] text-white">La Sobremesa</h3>
+                                </div>
+                                <div className="md:col-span-9">
+                                    <p className="text-slate-300 font-light leading-relaxed text-justify">
+                                        Justo antes del baile, un efecto especial dedicado exclusivamente a los novios. Un momento íntimo, cargado de emoción y significado, que servirá de puente perfecto hacia la fiesta. Una sorpresa que atesoraréis para siempre.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </FadeIn>
@@ -189,13 +239,13 @@ export default function BodasDetailPage() {
                         
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-5xl mx-auto">
                             {[
-                                { title: "Cero Estrés", desc: "Coordinación total con catering y planners." },
-                                { title: "Zona Noroeste", desc: "Desplazamiento incluido a fincas de Madrid y Sierra." },
-                                { title: "Magia Premium", desc: "Formado bajo la tutela de Dani DaOrtiz." }
+                                { title: "Cero Estrés", desc: "Coordinación total con catering y planners. No tienes que preocuparte por nada logístico." },
+                                { title: "Zona Noroeste", desc: "Desplazamiento incluido a las mejores fincas de Madrid, Torrelodones y la Sierra." },
+                                { title: "Magia Premium", desc: "Formado bajo la tutela de los mejores ilusionistas, con un estilo elegante y no invasivo." }
                             ].map((item, idx) => (
                                 <FadeIn key={idx} delay={idx * 0.15} y={20}>
                                     <div className="h-full bg-transparent border border-white/5 p-8 rounded-3xl text-center hover:bg-white/[0.02] transition-colors">
-                                        <h4 className="text-white font-medium mb-3">{item.title}</h4>
+                                        <h4 className="text-white font-medium mb-3 text-xl">{item.title}</h4>
                                         <p className="text-slate-400 text-sm font-light leading-relaxed">{item.desc}</p>
                                     </div>
                                 </FadeIn>
@@ -207,9 +257,9 @@ export default function BodasDetailPage() {
                     <div className="py-24 border-t border-white/5">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
                             <FadeIn>
-                                <h2 className="text-2xl font-[Cinzel] text-white mb-8">Preguntas Frecuentes</h2>
+                                <h2 className="text-3xl font-[Cinzel] text-white mb-8">Preguntas Frecuentes</h2>
                                 <div className="space-y-4">
-                                    {faqSchema.mainEntity.slice(0, 4).map((faq, index) => (
+                                    {faqSchema.mainEntity.map((faq, index) => (
                                         <details key={index} className="group bg-[#111111]/50 border border-white/5 rounded-2xl overflow-hidden cursor-pointer">
                                             <summary className="flex items-center justify-between p-6 text-white font-medium text-sm">
                                                 <span>{faq.name}</span>
@@ -225,16 +275,16 @@ export default function BodasDetailPage() {
                                 </div>
                             </FadeIn>
                             <FadeIn delay={0.2}>
-                                <h2 className="text-2xl font-[Cinzel] text-white mb-8">Inspiración para tu Enlace</h2>
+                                <h2 className="text-3xl font-[Cinzel] text-white mb-8">Inspiración para tu Enlace</h2>
                                 <div className="space-y-6">
                                     <a href="/blog/cuanto-cuesta-mago-boda-madrid" className="block p-8 rounded-3xl bg-gradient-to-br from-[#111111] to-[#1a1a1a] border border-white/5 hover:border-[#d4a853]/30 transition-all">
                                         <span className="text-[#d4a853] text-[10px] uppercase tracking-widest mb-3 block">Transparencia</span>
-                                        <h3 className="text-white text-lg mb-2">¿Cuánto cuesta un mago para boda?</h3>
+                                        <h3 className="text-white text-xl mb-2">¿Cuánto cuesta un mago para boda?</h3>
                                         <p className="text-slate-400 font-light text-sm">Guía completa de precios y formatos en Madrid.</p>
                                     </a>
                                     <a href="/blog/ideas-originales-entretenimiento-bodas-madrid" className="block p-8 rounded-3xl bg-gradient-to-br from-[#111111] to-[#1a1a1a] border border-white/5 hover:border-[#d4a853]/30 transition-all">
                                         <span className="text-[#d4a853] text-[10px] uppercase tracking-widest mb-3 block">Ideas Creativas</span>
-                                        <h3 className="text-white text-lg mb-2">10 Ideas de Entretenimiento</h3>
+                                        <h3 className="text-white text-xl mb-2">10 Ideas de Entretenimiento</h3>
                                         <p className="text-slate-400 font-light text-sm">Sorprende a tus invitados con detalles únicos.</p>
                                     </a>
                                 </div>
