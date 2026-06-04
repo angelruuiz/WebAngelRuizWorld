@@ -1197,35 +1197,47 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
     });
     document.body.appendChild(rainContainer);
 
+    let availableProjects = [...PROJECTS].sort(() => Math.random() - 0.5);
+    let projectIndex = 0;
+
     function spawnRain() {
+      if (projectIndex >= availableProjects.length) {
+        availableProjects = [...PROJECTS].sort(() => Math.random() - 0.5);
+        projectIndex = 0;
+      }
+      const p = availableProjects[projectIndex++];
+
       const img = document.createElement('img');
-      const p = PROJECTS[Math.floor(Math.random() * PROJECTS.length)];
       img.src = p.img;
       const size = Math.random() * 120 + 80;
-      const left = Math.random() * 90;
-      const duration = Math.random() * 12 + 10;
+      const left = Math.random() * 80; // keep it somewhat away from edges
+      const duration = 25; // 25 seconds for a very slow, elegant fall
       
       Object.assign(img.style, {
         position: 'absolute', top: '-250px', left: `${left}vw`,
         width: `${size}px`, height: 'auto', borderRadius: '12px',
         objectFit: 'cover', transition: `transform ${duration}s linear`,
-        transform: `translateY(0) rotate(${Math.random()*40 - 20}deg)`,
-        filter: 'grayscale(30%)', opacity: Math.random() * 0.6 + 0.4
+        transform: `translateY(0) rotate(${Math.random()*30 - 15}deg)`,
+        filter: 'grayscale(30%)', opacity: Math.random() * 0.4 + 0.3
       });
 
       rainContainer.appendChild(img);
       
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
-          img.style.transform = `translateY(${window.innerHeight + 400}px) rotate(${Math.random()*80 - 40}deg)`;
+          img.style.transform = `translateY(${window.innerHeight + 400}px) rotate(${Math.random()*60 - 30}deg)`;
         });
       });
 
       setTimeout(() => img.remove(), duration * 1000);
     }
     
-    for(let i=0; i<5; i++) setTimeout(spawnRain, Math.random() * 4000);
-    setInterval(spawnRain, 3500);
+    // Spawn just a couple initially so it's not crowded
+    setTimeout(spawnRain, 500);
+    setTimeout(spawnRain, 4000);
+    
+    // Spawn a new one every 9 seconds (very spaced out)
+    setInterval(spawnRain, 9000);
   }
 
   /* ── BUILD PROJECT INDEX ── */
