@@ -89,6 +89,33 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
 .nav-beh.in { opacity:.65; }
 .nav-beh:hover { opacity:1!important; color:var(--orange); }
 
+.nav-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+.nav-secret {
+  background: transparent;
+  border: 1px solid var(--red);
+  color: var(--red);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: auto;
+  transition: opacity .8s var(--ease) 1.2s, background .2s, color .2s;
+}
+.nav-secret.in { opacity: 0.6; }
+.nav-secret:hover { background: var(--red); color: var(--bg); opacity: 1; }
+
 /* ══ HERO ══ */
 .hero {
   position:relative; height:100vh; overflow:hidden; z-index:2;
@@ -633,6 +660,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
   .navbar { padding:18px 5vw; }
   .nav-logo { opacity:1 !important; transform:none !important; font-size:.95rem; }
   .nav-beh { opacity:.65 !important; font-size:.82rem; }
+  .nav-links { gap: 12px; }
 
   /* Hero */
   .hero {
@@ -897,7 +925,13 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
 <!-- NAV -->
 <nav class="navbar">
   <span class="nav-logo" id="nav-logo">MG.<span>2026</span></span>
-  <a class="nav-beh" id="nav-beh" href="https://www.behance.net/soymarinagodar" target="_blank" rel="noopener">Behance ↗</a>
+  <div class="nav-right" id="nav-right">
+    <div class="nav-links">
+      <a class="nav-beh" id="nav-beh" href="https://www.behance.net/soymarinagodar" target="_blank" rel="noopener">Behance ↗</a>
+      <a class="nav-beh" id="nav-lin" href="https://www.linkedin.com/in/marina-godar-hern%C3%A1ndez/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+    <button class="nav-secret" id="btn-secret" data-win="w-secret">NO TOCAR</button>
+  </div>
 </nav>
 
 <!-- ════ HERO ════ -->
@@ -1167,6 +1201,22 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
   </div>
 </div>
 
+<!-- ════ MODAL 06 — SECRET ════ -->
+<div class="os-win" id="w-secret" role="dialog" aria-label="Secreto">
+  <div class="win-bar">
+    <div class="win-dots">
+      <button class="win-dot d-close" data-action="close" aria-label="Cerrar"></button>
+    </div>
+    <div class="win-title">⚠️ ADVERTENCIA</div>
+  </div>
+  <div class="win-body" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding: 10vh 5vw; background:#111;">
+    <p style="font-family:'Space Grotesk',sans-serif; font-size:clamp(1.2rem, 3.5vw, 1.8rem); line-height:1.5; color:var(--red); max-width:600px; margin-bottom:40px;">
+      "La curiosidad mató al gato, pero hizo brillar a la marca. Ya que te gusta saltarte las normas... ¿hablamos de tu próximo proyecto?"
+    </p>
+    <a href="mailto:soymarinagodar@gmail.com" class="secret-btn" style="font-family:'Space Grotesk',sans-serif; font-size:0.85rem; font-weight:600; color:var(--bg); background:var(--red); padding:10px 24px; border-radius:100px; text-transform:uppercase; letter-spacing:0.05em; text-decoration:none; transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Hablemos en secreto</a>
+  </div>
+</div>
+
 <!-- MINIMIZE DOCK -->
 <div class="min-dock" id="min-dock"></div>
 
@@ -1309,7 +1359,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
   /* ── INTRO ANIMATION ── */
   setTimeout(()=>{ document.getElementById('tl1')?.classList.add('in'); document.getElementById('nav-logo')?.classList.add('in'); }, 80);
   setTimeout(()=>{ document.getElementById('tl2')?.classList.add('in'); }, 260);
-  setTimeout(()=>{ document.getElementById('hero-sub')?.classList.add('in'); document.getElementById('nav-beh')?.classList.add('in'); }, 500);
+  setTimeout(()=>{ document.getElementById('hero-sub')?.classList.add('in'); document.getElementById('nav-beh')?.classList.add('in'); document.getElementById('nav-lin')?.classList.add('in'); document.getElementById('btn-secret')?.classList.add('in'); }, 500);
   setTimeout(()=>{ document.getElementById('menu-bar')?.classList.add('in'); }, 720);
 
   /* ── MOBILE BACKDROP OVERLAY ── */
@@ -1446,7 +1496,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
 
   /* ── MENU BUTTONS ── */
   let openCount = 0;
-  document.querySelectorAll('.menu-btn').forEach(btn => {
+  document.querySelectorAll('.menu-btn, .nav-secret').forEach(btn => {
     btn.addEventListener('click', () => {
       const id  = btn.getAttribute('data-win');
       const win = document.getElementById(id);
