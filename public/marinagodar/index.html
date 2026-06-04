@@ -1250,7 +1250,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
     let availableProjects = [...PROJECTS].sort(() => Math.random() - 0.5);
     let projectIndex = 0;
 
-    function spawnRain() {
+    function spawnRain(startY = -250) {
       if (projectIndex >= availableProjects.length) {
         availableProjects = [...PROJECTS].sort(() => Math.random() - 0.5);
         projectIndex = 0;
@@ -1264,7 +1264,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
       const duration = 25; // 25 seconds for a very slow, elegant fall
       
       Object.assign(img.style, {
-        position: 'absolute', top: '-250px', left: `${left}vw`,
+        position: 'absolute', top: `${startY}px`, left: `${left}vw`,
         width: `${size}px`, height: 'auto', borderRadius: '12px',
         objectFit: 'cover', transition: `transform ${duration}s linear`,
         transform: `translateY(0) rotate(${Math.random()*30 - 15}deg)`,
@@ -1275,7 +1275,8 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
       
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
-          img.style.transform = `translateY(${window.innerHeight + 400}px) rotate(${Math.random()*60 - 30}deg)`;
+          // Adjust translation distance based on starting position so it keeps same speed visually
+          img.style.transform = `translateY(${window.innerHeight + Math.abs(startY) + 200}px) rotate(${Math.random()*60 - 30}deg)`;
         });
       });
 
@@ -1283,12 +1284,15 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
     }
     
     // Spawn a few initially so it's not crowded but has presence
-    setTimeout(spawnRain, 500);
-    setTimeout(spawnRain, 3000);
-    setTimeout(spawnRain, 5500);
+    // The very first one starts already inside the screen (e.g. 100px from top) so it's seen immediately
+    setTimeout(() => spawnRain(100), 50);
+    // The second one starts slightly above
+    setTimeout(() => spawnRain(-50), 2000);
+    // The third one starts further up
+    setTimeout(() => spawnRain(-200), 4500);
     
-    // Spawn a new one every 6 seconds (150% density compared to 9s)
-    setInterval(spawnRain, 6000);
+    // Spawn a new one every 6 seconds from way above the screen
+    setInterval(() => spawnRain(-250), 6000);
   }
 
   /* ── BUILD PROJECT INDEX ── */
