@@ -732,11 +732,8 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
 
   /* Guide */
   .guide {
-    right:14px; bottom:68px;
-    animation:none;
+    display: none !important;
   }
-  .guide-orb { width:38px; height:38px; font-size:1.2rem; }
-  .guide-tip { font-size:.68rem; max-width:180px; }
 
   /* Theme toggle */
   .theme-btn {
@@ -1190,6 +1187,46 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
     { img:'/marinagodar/images/project_1.jpg',  title:'Dona antes de irte',           cat:'Campaña Social · Cruz Roja', url:'https://www.behance.net/gallery/250079459/Dona-antes-de-irte' },
     { img:'/marinagodar/images/project_5.jpg',  title:'¿Y si el Copy fuera Z?',       cat:'Copywriting',                url:'https://www.behance.net/gallery/247778755/Y-si-el-Copy-hubiera-sido-Z' },
   ];
+
+  /* ── RAINING PROJECTS (MOBILE ONLY) ── */
+  if (window.innerWidth <= 768) {
+    const rainContainer = document.createElement('div');
+    Object.assign(rainContainer.style, {
+      position: 'fixed', inset: '0', overflow: 'hidden', 
+      pointerEvents: 'none', zIndex: '0', opacity: '0.15'
+    });
+    document.body.appendChild(rainContainer);
+
+    function spawnRain() {
+      const img = document.createElement('img');
+      const p = PROJECTS[Math.floor(Math.random() * PROJECTS.length)];
+      img.src = p.img;
+      const size = Math.random() * 120 + 80;
+      const left = Math.random() * 90;
+      const duration = Math.random() * 12 + 10;
+      
+      Object.assign(img.style, {
+        position: 'absolute', top: '-250px', left: `${left}vw`,
+        width: `${size}px`, height: 'auto', borderRadius: '12px',
+        objectFit: 'cover', transition: `transform ${duration}s linear`,
+        transform: `translateY(0) rotate(${Math.random()*40 - 20}deg)`,
+        filter: 'grayscale(30%)', opacity: Math.random() * 0.6 + 0.4
+      });
+
+      rainContainer.appendChild(img);
+      
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          img.style.transform = `translateY(${window.innerHeight + 400}px) rotate(${Math.random()*80 - 40}deg)`;
+        });
+      });
+
+      setTimeout(() => img.remove(), duration * 1000);
+    }
+    
+    for(let i=0; i<5; i++) setTimeout(spawnRain, Math.random() * 4000);
+    setInterval(spawnRain, 3500);
+  }
 
   /* ── BUILD PROJECT INDEX ── */
   const indexEl = document.getElementById('proj-index');
