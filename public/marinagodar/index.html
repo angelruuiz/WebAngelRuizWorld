@@ -298,11 +298,17 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
 .win-bar:active { cursor:grabbing; }
 .win-dots { display:flex; gap:7px; margin-right:14px; }
 .win-dot {
-  width:14px; height:14px; border-radius:50%;
+  width:16px; height:16px; border-radius:50%;
   border:1px solid rgba(0,0,0,.12);
   display:flex; align-items:center; justify-content:center;
-  font-size:8px; font-weight:900; color:transparent;
+  font-size:9px; font-weight:900; color:transparent;
   transition:filter .18s,color .18s;
+  position:relative;
+}
+.win-dot::before {
+  content:''; position:absolute;
+  top:-12px; bottom:-12px; left:-12px; right:-12px;
+  border-radius:50%;
 }
 .win-dot:hover { filter:brightness(.8); color:rgba(0,0,0,.5); }
 .d-close { background:#FF5F56; }
