@@ -1232,12 +1232,13 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
       setTimeout(() => img.remove(), duration * 1000);
     }
     
-    // Spawn just a couple initially so it's not crowded
+    // Spawn a few initially so it's not crowded but has presence
     setTimeout(spawnRain, 500);
-    setTimeout(spawnRain, 4000);
+    setTimeout(spawnRain, 3000);
+    setTimeout(spawnRain, 5500);
     
-    // Spawn a new one every 9 seconds (very spaced out)
-    setInterval(spawnRain, 9000);
+    // Spawn a new one every 6 seconds (150% density compared to 9s)
+    setInterval(spawnRain, 6000);
   }
 
   /* ── BUILD PROJECT INDEX ── */
