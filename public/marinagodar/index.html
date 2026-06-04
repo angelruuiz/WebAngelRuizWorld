@@ -1610,7 +1610,6 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
     });
   }
 
-})();
   /* ── OS ERROR SEQUENCE (NO TOCAR) ── */
   const btnSecret = document.getElementById('btn-secret');
   let activeJokes = [];
@@ -1724,6 +1723,8 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
   const secretCloseBtn = document.querySelector('#w-secret .d-close');
   if (secretCloseBtn) secretCloseBtn.addEventListener('click', clearJokes);
   if (backdrop) backdrop.addEventListener('click', clearJokes);
+
+})();
 </script>
 </body>
 </html>
