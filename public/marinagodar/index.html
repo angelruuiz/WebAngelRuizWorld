@@ -1,15 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Marina Godar â€” DirecciÃ³n de Arte & DiseÃ±o Digital</title>
-<meta name="description" content="Portfolio de Marina Godar. DirecciÃ³n de arte, estrategia creativa y diseÃ±o digital. Madrid Â· Sydney Â· 2026.">
+<title>Marina Godar — Dirección de Arte & Diseño Digital</title>
+<meta name="description" content="Portfolio de Marina Godar. Dirección de arte, estrategia creativa y diseño digital. Madrid · Sydney · 2026.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-/* â•â• VARIABLES â•â• */
+/* ══ VARIABLES ══ */
 :root {
   --orange:    #FF5E00;
   --red:       #E63946;
@@ -36,7 +36,7 @@ body {
 }
 a, button { color: inherit; text-decoration: none; cursor: none; }
 
-/* â•â• OVERLAYS â•â• */
+/* ══ OVERLAYS ══ */
 .noise-overlay {
   position:fixed; inset:0; pointer-events:none; z-index:10000; opacity:.035;
   background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
@@ -52,7 +52,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
                     linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
 }
 
-/* â•â• CURSOR â•â• */
+/* ══ CURSOR ══ */
 .cursor-dot {
   position:fixed; width:8px; height:8px; background:var(--orange);
   border-radius:50%; pointer-events:none; z-index:99999;
@@ -68,7 +68,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
 .cursor-ring.big { width:60px; height:60px; opacity:.55; border-color:var(--red); }
 .cursor-dot.big  { width:12px; height:12px; background:var(--red); }
 
-/* â•â• NAVBAR â•â• */
+/* ══ NAVBAR ══ */
 .navbar {
   position:fixed; top:0; left:0; right:0;
   display:flex; align-items:center; justify-content:space-between;
@@ -89,7 +89,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
 .nav-beh.in { opacity:.65; }
 .nav-beh:hover { opacity:1!important; color:var(--orange); }
 
-/* â•â• HERO â•â• */
+/* ══ HERO ══ */
 .hero {
   position:relative; height:100vh; overflow:hidden; z-index:2;
   display:flex; flex-direction:column; justify-content:center;
@@ -113,7 +113,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
 .title-bottom  { position:relative; z-index:2; }
 .word-godar    { color:var(--orange); }
 
-/* â•â• HERO BLOB PHOTO â•â• */
+/* ══ HERO BLOB PHOTO ══ */
 .hero-photo-float {
   position:absolute; right:0; top:0; bottom:0; width:44vw;
   display:flex; align-items:center; justify-content:center;
@@ -171,7 +171,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
   50%    {transform:translateY(-14px)}
 }
 
-/* â•â• HERO SUB + MENU â•â• */
+/* ══ HERO SUB + MENU ══ */
 .hero-sub {
   font-family:'Space Grotesk',sans-serif;
   font-size:clamp(.72rem,1vw,.95rem); color:var(--muted);
@@ -208,7 +208,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
 .menu-btn:hover { background:var(--text); color:var(--bg); transform:translateY(-3px); }
 .menu-btn.is-active { background:var(--orange); color:#fff; border-color:var(--orange); }
 
-/* â•â• OS WINDOWS â•â• */
+/* ══ OS WINDOWS ══ */
 .os-win {
   position:fixed; display:flex; flex-direction:column;
   background:var(--bg); color:var(--text);
@@ -233,7 +233,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
 }
 #w-portfolio { width:74vw; height:78vh; }
 
-/* â•â• MINIMIZE DOCK â•â• */
+/* ══ MINIMIZE DOCK ══ */
 .min-dock {
   position:fixed; bottom:68px; left:50%; transform:translateX(-50%);
   display:flex; gap:8px; z-index:9500;
@@ -279,11 +279,11 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
 }
 .win-dot:hover { filter:brightness(.8); color:rgba(0,0,0,.5); }
 .d-close { background:#FF5F56; }
-.d-close::after { content:'âœ•'; }
+.d-close::after { content:'✕'; }
 .d-min   { background:#FFBD2E; }
-.d-min::after   { content:'âˆ’'; }
+.d-min::after   { content:'−'; }
 .d-max   { background:#27C93F; }
-.d-max::after   { content:'ï¼‹'; }
+.d-max::after   { content:'＋'; }
 .win-title {
   font-family:'Space Grotesk',sans-serif;
   font-size:.78rem; font-weight:600; text-transform:uppercase;
@@ -305,7 +305,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
   text-transform:uppercase; color:var(--orange); margin-bottom:2rem;
 }
 
-/* â•â• MODAL 01 â€” ROL/VIBE â•â• */
+/* ══ MODAL 01 — ROL/VIBE ══ */
 .vibe-row { display:flex; align-items:center; gap:28px; margin-bottom:32px; }
 .vibe-photo {
   width:clamp(65px,9vw,130px); flex-shrink:0;
@@ -359,7 +359,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
 .edu-name { font-size:.98rem; font-weight:600; margin-bottom:2px; }
 .edu-info { font-size:.88rem; color:var(--muted); }
 
-/* â•â• MODAL 02 â€” TOOLKIT â•â• */
+/* ══ MODAL 02 — TOOLKIT ══ */
 .tool-grid {
   display:flex; flex-wrap:wrap; gap:2vw;
   justify-content:center; padding-top:2vh;
@@ -394,7 +394,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
 }
 .skill-chip:hover { background:var(--orange); border-color:var(--orange); color:#fff; }
 
-/* â•â• MODAL 03 â€” EXPERIENCIA â•â• */
+/* ══ MODAL 03 — EXPERIENCIA ══ */
 .exp-list { border-top:2px solid var(--text); }
 .exp-row {
   display:flex; align-items:flex-start;
@@ -426,7 +426,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
 }
 .exp-row:hover .exp-chip { border-color:rgba(245,240,235,.28); color:rgba(245,240,235,.45); }
 
-/* â•â• MODAL 04 â€” PROYECTOS: INDEX + PREVIEW â•â• */
+/* ══ MODAL 04 — PROYECTOS: INDEX + PREVIEW ══ */
 .proj-layout {
   display:grid;
   grid-template-columns:1fr 1.5fr;
@@ -513,7 +513,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
 }
 .pm-link:hover { color:var(--orange); border-color:var(--orange); }
 
-/* â•â• MODAL 05 â€” CONTACTO â•â• */
+/* ══ MODAL 05 — CONTACTO ══ */
 .contact-scene {
   background:#0A192F; color:#F5F0EB;
   height:100%; display:flex; flex-direction:column;
@@ -558,7 +558,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
 }
 .contact-lnk:hover { color:var(--orange); border-color:var(--orange); }
 
-/* â•â• GUIDE CHARACTER â•â• */
+/* ══ GUIDE CHARACTER ══ */
 .guide {
   position:fixed; right:22px; bottom:76px; z-index:8500;
   display:flex; flex-direction:column; align-items:center; gap:7px;
@@ -597,7 +597,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
   100%{transform:scale(1) rotate(0)}
 }
 
-/* â•â• THEME TOGGLE â•â• */
+/* ══ THEME TOGGLE ══ */
 .theme-btn {
   position:fixed; bottom:26px; left:50%; transform:translateX(-50%);
   z-index:9000; background:var(--text); border:none; color:var(--bg);
@@ -608,9 +608,9 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
 }
 .theme-btn:hover { opacity:1; transform:translateX(-50%) scale(1.04); }
 
-/* â•â• RESPONSIVE â•â• */
+/* ══ RESPONSIVE ══ */
 
-/* â”€â”€ TABLET LANDSCAPE (â‰¤1024px) â”€â”€ */
+/* ── TABLET LANDSCAPE (≤1024px) ── */
 @media (max-width:1024px) {
   .hero-inner { width:60%; }
   .hero-photo-float { width:38vw; }
@@ -621,7 +621,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
   .vibe-cols { column-gap:28px; }
 }
 
-/* â”€â”€ TABLET PORTRAIT (â‰¤768px) â”€â”€ */
+/* ── TABLET PORTRAIT (≤768px) ── */
 @media (max-width:768px) {
   body { overflow-y:auto; overflow-x:hidden; height:auto; cursor:auto; }
   a, button { cursor:auto; }
@@ -670,7 +670,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
     font-size:.75rem;
   }
 
-  /* Windows â€” mobile sheet cards */
+  /* Windows — mobile sheet cards */
   .os-win {
     position:fixed !important;
     width:94vw !important; height:auto !important;
@@ -754,7 +754,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
   .edu-info { font-size:.82rem; }
 }
 
-/* â”€â”€ SMALL MOBILE (â‰¤480px) â”€â”€ */
+/* ── SMALL MOBILE (≤480px) ── */
 @media (max-width:480px) {
   .hero { padding:80px 5vw 32px; }
   .hero-title { font-size:clamp(2.6rem,16vw,4.5rem); }
@@ -815,7 +815,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
   .dock-item { font-size:.6rem; padding:6px 10px; border-radius:8px; }
 }
 
-/* â”€â”€ EXTRA SMALL (â‰¤360px) â”€â”€ */
+/* ── EXTRA SMALL (≤360px) ── */
 @media (max-width:360px) {
   .hero-title { font-size:clamp(2.2rem,18vw,3.5rem); }
   .hero-blob { width:100px; height:120px; }
@@ -825,7 +825,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
   .email-btn { font-size:.85rem; padding:14px 22px; }
 }
 
-/* â”€â”€ Touch-specific improvements â”€â”€ */
+/* ── Touch-specific improvements ── */
 @media (hover:none) and (pointer:coarse) {
   .cursor-dot, .cursor-ring { display:none !important; }
   body { cursor:auto; }
@@ -861,7 +861,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
   .win-body { -webkit-overflow-scrolling:touch; }
 }
 
-/* â”€â”€ Safe area for notched devices â”€â”€ */
+/* ── Safe area for notched devices ── */
 @supports (padding-bottom:env(safe-area-inset-bottom)) {
   @media (max-width:768px) {
     .theme-btn { bottom:calc(14px + env(safe-area-inset-bottom)); }
@@ -870,7 +870,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
   }
 }
 
-/* â”€â”€ Landscape mobile â”€â”€ */
+/* ── Landscape mobile ── */
 @media (max-height:500px) and (orientation:landscape) {
   .hero { min-height:auto; padding:60px 5vw 24px; }
   .hero-title { font-size:clamp(2rem,8vh,3rem); }
@@ -890,20 +890,20 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
 
 <!-- GUIDE -->
 <div class="guide" id="guide" aria-hidden="true">
-  <div class="guide-tip" id="guide-tip">Â¡Bienvenido/a a mi rincÃ³n creativo!</div>
-  <div class="guide-orb" id="guide-orb" role="button" tabindex="-1" aria-label="GuÃ­a">ðŸ˜Š</div>
+  <div class="guide-tip" id="guide-tip">¡Bienvenido/a a mi rincón creativo!</div>
+  <div class="guide-orb" id="guide-orb" role="button" tabindex="-1" aria-label="Guía">😊</div>
 </div>
 
 <!-- THEME -->
-<button class="theme-btn" id="theme-btn">[ â˜¼ Light ]</button>
+<button class="theme-btn" id="theme-btn">[ ☼ Light ]</button>
 
 <!-- NAV -->
 <nav class="navbar">
   <span class="nav-logo" id="nav-logo">MG.<span>2026</span></span>
-  <a class="nav-beh" id="nav-beh" href="https://www.behance.net/soymarinagodar" target="_blank" rel="noopener">Behance â†—</a>
+  <a class="nav-beh" id="nav-beh" href="https://www.behance.net/soymarinagodar" target="_blank" rel="noopener">Behance ↗</a>
 </nav>
 
-<!-- â•â•â•â• HERO â•â•â•â• -->
+<!-- ════ HERO ════ -->
 <main class="hero" id="hero">
   <div class="hero-inner">
     <h1 class="hero-title" aria-label="Marina Godar">
@@ -913,7 +913,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
       </div>
     </h1>
     <p class="hero-sub" id="hero-sub">
-      Estudiante de <em>Publicidad &amp; DiseÃ±o Digital</em> Â· Madrid
+      Estudiante de <em>Publicidad &amp; Diseño Digital</em> · Madrid
     </p>
     <div class="menu-bar" id="menu-bar">
       <div class="menu-rule"></div>
@@ -927,15 +927,15 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
     </div>
   </div>
 
-  <!-- BLOB PHOTO â€” right side -->
+  <!-- BLOB PHOTO — right side -->
   <div class="hero-photo-float" id="hero-photo-float">
     <div class="hero-blob" id="hero-blob">
-      <img src="images/marina seria.jpeg" alt="Marina Godar" draggable="false">
+      <img src="/marinagodar/images/marina seria.jpeg" alt="Marina Godar" draggable="false">
     </div>
   </div>
 </main>
 
-<!-- â•â•â•â• MODAL 01 â€” ROL / VIBE â•â•â•â• -->
+<!-- ════ MODAL 01 — ROL / VIBE ════ -->
 <div class="os-win" id="w-about" role="dialog" aria-label="Rol y Vibe">
   <div class="win-bar">
     <div class="win-dots">
@@ -943,21 +943,21 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
       <button class="win-dot d-min"   data-action="min"   aria-label="Minimizar"></button>
       <button class="win-dot d-max"   data-action="max"   aria-label="Maximizar"></button>
     </div>
-    <div class="win-title">01 â€” Rol / Vibe</div>
+    <div class="win-title">01 — Rol / Vibe</div>
   </div>
   <div class="win-body">
     <span class="s-label" data-r>01 / Perfil</span>
 
     <div class="vibe-row" data-r>
-      <img src="images/marina divertida.jpeg" class="vibe-photo" alt="Marina">
+      <img src="/marinagodar/images/marina divertida.jpeg" class="vibe-photo" alt="Marina">
       <h2 class="vibe-big">THE<br>VIBE</h2>
     </div>
 
     <div class="vibe-cols">
-      <p data-r>Soy una profesional de la publicidad con un perfil <strong>hÃ­brido</strong> que une la <em>direcciÃ³n de arte visual</em>, el <strong>pensamiento estratÃ©gico</strong> y una mentalidad resolutiva frente a cualquier reto de comunicaciÃ³n.</p>
-      <p data-r>Entiendo la creatividad como un <em>deporte colectivo</em>: el mejor trabajo nace de la suma de perspectivas diversas. Aporto visiÃ³n fresca, sensibilidad estÃ©tica y atenciÃ³n al detalle que convierte ideas en piezas <strong>memorables</strong>.</p>
-      <p data-r>Mi trayectoria abarca desde la <strong>direcciÃ³n creativa de eventos</strong> en Festival Tocados hasta el <strong>marketing B2B</strong> en Denodo Sydney, pasando por la <strong>gestiÃ³n de activos digitales en Repsol</strong> â€” siempre con un hilo conductor: que la marca sea reconocible por su esencia.</p>
-      <p data-r>Graduada en el Doble Grado de <em>Publicidad &amp; RRPP + DiseÃ±o Digital</em> en Nebrija y enriquecida por un <strong>Study Abroad en UTS Sydney</strong>, he aprendido a liderar equipos multidisciplinares e internacionales con soltura y criterio.</p>
+      <p data-r>Soy una profesional de la publicidad con un perfil <strong>híbrido</strong> que une la <em>dirección de arte visual</em>, el <strong>pensamiento estratégico</strong> y una mentalidad resolutiva frente a cualquier reto de comunicación.</p>
+      <p data-r>Entiendo la creatividad como un <em>deporte colectivo</em>: el mejor trabajo nace de la suma de perspectivas diversas. Aporto visión fresca, sensibilidad estética y atención al detalle que convierte ideas en piezas <strong>memorables</strong>.</p>
+      <p data-r>Mi trayectoria abarca desde la <strong>dirección creativa de eventos</strong> en Festival Tocados hasta el <strong>marketing B2B</strong> en Denodo Sydney, pasando por la <strong>gestión de activos digitales en Repsol</strong> — siempre con un hilo conductor: que la marca sea reconocible por su esencia.</p>
+      <p data-r>Graduada en el Doble Grado de <em>Publicidad &amp; RRPP + Diseño Digital</em> en Nebrija y enriquecida por un <strong>Study Abroad en UTS Sydney</strong>, he aprendido a liderar equipos multidisciplinares e internacionales con soltura y criterio.</p>
     </div>
 
     <div class="vibe-manifesto" data-r>
@@ -971,27 +971,27 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
       </div>
       <div class="vibe-item">
         <span class="vibe-item-num">03</span>
-        <span class="vibe-item-text">La marca mÃ¡s poderosa es la que se reconoce sin ver el logo</span>
+        <span class="vibe-item-text">La marca más poderosa es la que se reconoce sin ver el logo</span>
       </div>
     </div>
 
     <div class="edu-section" data-r>
-      <p class="edu-label">EducaciÃ³n</p>
+      <p class="edu-label">Educación</p>
       <div class="edu-list">
         <div>
-          <div class="edu-name">Doble Grado â€” Publicidad &amp; RRPP + DiseÃ±o Digital y Multimedia</div>
-          <div class="edu-info">Universidad Antonio de Nebrija Â· Madrid Â· En curso</div>
+          <div class="edu-name">Doble Grado — Publicidad &amp; RRPP + Diseño Digital y Multimedia</div>
+          <div class="edu-info">Universidad Antonio de Nebrija · Madrid · En curso</div>
         </div>
         <div>
           <div class="edu-name">Study Abroad</div>
-          <div class="edu-info">University of Technology Sydney (UTS) Â· Sydney, Australia</div>
+          <div class="edu-info">University of Technology Sydney (UTS) · Sydney, Australia</div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- â•â•â•â• MODAL 02 â€” TOOLKIT â•â•â•â• -->
+<!-- ════ MODAL 02 — TOOLKIT ════ -->
 <div class="os-win" id="w-skills" role="dialog" aria-label="Toolkit">
   <div class="win-bar">
     <div class="win-dots">
@@ -999,7 +999,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
       <button class="win-dot d-min"   data-action="min"   aria-label="Minimizar"></button>
       <button class="win-dot d-max"   data-action="max"   aria-label="Maximizar"></button>
     </div>
-    <div class="win-title">02 â€” Toolkit</div>
+    <div class="win-title">02 — Toolkit</div>
   </div>
   <div class="win-body">
     <span class="s-label" data-r>02 / Herramientas &amp; Habilidades</span>
@@ -1038,10 +1038,10 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
       </div>
     </div>
     <div class="skill-chips" data-r>
-      <span class="skill-chip">ConceptualizaciÃ³n</span>
+      <span class="skill-chip">Conceptualización</span>
       <span class="skill-chip">Narrativa Human-Centric</span>
-      <span class="skill-chip">DirecciÃ³n de Arte</span>
-      <span class="skill-chip">VisiÃ³n 360Â°</span>
+      <span class="skill-chip">Dirección de Arte</span>
+      <span class="skill-chip">Visión 360°</span>
       <span class="skill-chip">UI / UX</span>
       <span class="skill-chip">Copywriting</span>
       <span class="skill-chip">Branding</span>
@@ -1050,7 +1050,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
   </div>
 </div>
 
-<!-- â•â•â•â• MODAL 03 â€” EXPERIENCIA â•â•â•â• -->
+<!-- ════ MODAL 03 — EXPERIENCIA ════ -->
 <div class="os-win" id="w-exp" role="dialog" aria-label="Experiencia">
   <div class="win-bar">
     <div class="win-dots">
@@ -1058,20 +1058,20 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
       <button class="win-dot d-min"   data-action="min"   aria-label="Minimizar"></button>
       <button class="win-dot d-max"   data-action="max"   aria-label="Maximizar"></button>
     </div>
-    <div class="win-title">03 â€” Experiencia</div>
+    <div class="win-title">03 — Experiencia</div>
   </div>
   <div class="win-body">
-    <span class="s-label" data-r>03 / Trayectoria â€” <a href="https://www.linkedin.com/in/marina-godar-hern%C3%A1ndez/" target="_blank" style="color:var(--orange);text-decoration:none">LinkedIn â†—</a></span>
+    <span class="s-label" data-r>03 / Trayectoria — <a href="https://www.linkedin.com/in/marina-godar-hern%C3%A1ndez/" target="_blank" style="color:var(--orange);text-decoration:none">LinkedIn ↗</a></span>
     <div class="exp-list">
       <div class="exp-row" data-r>
         <span class="exp-yr">2026</span>
         <div class="exp-body">
           <span class="exp-role">Directora de Creatividad</span>
-          <span class="exp-where">Festival Tocados Â· Madrid Â· Oct 2025 â€“ Abr 2026</span>
+          <span class="exp-where">Festival Tocados · Madrid · Oct 2025 – Abr 2026</span>
           <div class="exp-chips">
-            <span class="exp-chip">Identidad Visual 360Â°</span>
+            <span class="exp-chip">Identidad Visual 360°</span>
             <span class="exp-chip">OOH</span>
-            <span class="exp-chip">DiseÃ±o Experiencial</span>
+            <span class="exp-chip">Diseño Experiencial</span>
             <span class="exp-chip">Liderazgo de Equipos</span>
           </div>
         </div>
@@ -1079,8 +1079,8 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
       <div class="exp-row" data-r>
         <span class="exp-yr">2025</span>
         <div class="exp-body">
-          <span class="exp-role">Marketing &amp; ComunicaciÃ³n</span>
-          <span class="exp-where">Denodo Â· Sydney, Australia Â· Mar â€“ Jun 2025</span>
+          <span class="exp-role">Marketing &amp; Comunicación</span>
+          <span class="exp-where">Denodo · Sydney, Australia · Mar – Jun 2025</span>
           <div class="exp-chips">
             <span class="exp-chip">Ecosistema Social</span>
             <span class="exp-chip">Art Direction B2B</span>
@@ -1093,10 +1093,10 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
         <span class="exp-yr">2024</span>
         <div class="exp-body">
           <span class="exp-role">Colaboradora Redes Sociales</span>
-          <span class="exp-where">Repsol Â· Madrid Â· Mar â€“ Jun 2024</span>
+          <span class="exp-where">Repsol · Madrid · Mar – Jun 2024</span>
           <div class="exp-chips">
             <span class="exp-chip">Sistemas Visuales</span>
-            <span class="exp-chip">GestiÃ³n Activos Digitales</span>
+            <span class="exp-chip">Gestión Activos Digitales</span>
           </div>
         </div>
       </div>
@@ -1104,7 +1104,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
   </div>
 </div>
 
-<!-- â•â•â•â• MODAL 04 â€” PROYECTOS: INDEX + PREVIEW â•â•â•â• -->
+<!-- ════ MODAL 04 — PROYECTOS: INDEX + PREVIEW ════ -->
 <div class="os-win" id="w-portfolio" role="dialog" aria-label="Proyectos">
   <div class="win-bar">
     <div class="win-dots">
@@ -1112,7 +1112,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
       <button class="win-dot d-min"   data-action="min"   aria-label="Minimizar"></button>
       <button class="win-dot d-max"   data-action="max"   aria-label="Maximizar"></button>
     </div>
-    <div class="win-title">04 â€” Proyectos Behance</div>
+    <div class="win-title">04 — Proyectos Behance</div>
   </div>
   <div class="win-body" style="padding:0; overflow:hidden;">
     <div class="proj-layout">
@@ -1132,7 +1132,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
           <div class="pm-title" id="pm-title">Thyssen-Bornemisza</div>
           <div class="pm-row">
             <span class="pm-cat" id="pm-cat">Identidad Visual</span>
-            <a class="pm-link" id="pm-link" href="https://www.behance.net/gallery/239996693/Thyssen-Bornemisza" target="_blank" rel="noopener">Ver en Behance â†—</a>
+            <a class="pm-link" id="pm-link" href="https://www.behance.net/gallery/239996693/Thyssen-Bornemisza" target="_blank" rel="noopener">Ver en Behance ↗</a>
           </div>
         </div>
       </div>
@@ -1141,7 +1141,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
   </div>
 </div>
 
-<!-- â•â•â•â• MODAL 05 â€” CONTACTO â•â•â•â• -->
+<!-- ════ MODAL 05 — CONTACTO ════ -->
 <div class="os-win" id="w-contact" role="dialog" aria-label="Contacto">
   <div class="win-bar">
     <div class="win-dots">
@@ -1149,22 +1149,22 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
       <button class="win-dot d-min"   data-action="min"   aria-label="Minimizar"></button>
       <button class="win-dot d-max"   data-action="max"   aria-label="Maximizar"></button>
     </div>
-    <div class="win-title">05 â€” Contacto</div>
+    <div class="win-title">05 — Contacto</div>
   </div>
   <div class="win-body" style="padding:0;overflow:hidden;">
     <div class="contact-scene">
       <div class="marquee-track">
         <div class="marquee-inner">
-          <span>LET'S TALK â€” DISPONIBLE PARA COLABORAR â€”</span>
-          <span>LET'S TALK â€” DISPONIBLE PARA COLABORAR â€”</span>
-          <span>LET'S TALK â€” DISPONIBLE PARA COLABORAR â€”</span>
-          <span>LET'S TALK â€” DISPONIBLE PARA COLABORAR â€”</span>
+          <span>LET'S TALK — DISPONIBLE PARA COLABORAR —</span>
+          <span>LET'S TALK — DISPONIBLE PARA COLABORAR —</span>
+          <span>LET'S TALK — DISPONIBLE PARA COLABORAR —</span>
+          <span>LET'S TALK — DISPONIBLE PARA COLABORAR —</span>
         </div>
       </div>
       <a href="mailto:soymarinagodar@gmail.com" class="email-btn" data-r>ENVIAR EMAIL</a>
       <div class="contact-row" data-r>
-        <a href="https://www.behance.net/soymarinagodar" target="_blank" rel="noopener" class="contact-lnk">Behance â†—</a>
-        <a href="https://www.linkedin.com/in/marina-godar-hern%C3%A1ndez/" target="_blank" rel="noopener" class="contact-lnk">LinkedIn â†—</a>
+        <a href="https://www.behance.net/soymarinagodar" target="_blank" rel="noopener" class="contact-lnk">Behance ↗</a>
+        <a href="https://www.linkedin.com/in/marina-godar-hern%C3%A1ndez/" target="_blank" rel="noopener" class="contact-lnk">LinkedIn ↗</a>
       </div>
     </div>
   </div>
@@ -1173,25 +1173,25 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
 <!-- MINIMIZE DOCK -->
 <div class="min-dock" id="min-dock"></div>
 
-<!-- â•â•â•â• JAVASCRIPT â•â•â•â• -->
+<!-- ════ JAVASCRIPT ════ -->
 <script>
 (function () {
   'use strict';
 
-  /* â”€â”€ PROJECT DATA â”€â”€ */
+  /* ── PROJECT DATA ── */
   const PROJECTS = [
-    { img:'images/project_6.jpg',  title:'Thyssen-Bornemisza',           cat:'Identidad Visual',           url:'https://www.behance.net/gallery/239996693/Thyssen-Bornemisza' },
-    { img:'images/project_4.jpg',  title:'Filmin â€” Blue Monday',         cat:'DirecciÃ³n Creativa / UI',    url:'https://www.behance.net/gallery/241992143/FILMIN-BLUE-MONDAY' },
-    { img:'images/project_1.png',  title:'Zeta!',                        cat:'Editorial / Arte Urbano',    url:'https://www.behance.net/gallery/238623717/Zeta' },
-    { img:'images/project_8.png',  title:'Lillo',                        cat:'CampaÃ±a',                    url:'https://www.behance.net/gallery/248920909/Lillo' },
-    { img:'images/project_9.jpg',  title:'Tus palabras tapan el problema', cat:'Cartel Social',             url:'https://www.behance.net/gallery/250072513/Tus-palabras-tapan-el-problema' },
-    { img:'images/project_2.jpg',  title:'Twister Ã— National Geographic', cat:'ColaboraciÃ³n de Marca',     url:'https://www.behance.net/gallery/250076483/Twister-x-National-Geographic' },
-    { img:'images/project_7.jpg',  title:'Tocados XXII',                 cat:'Branding de Evento',         url:'https://www.behance.net/gallery/249410953/TOCADOS-XXII' },
-    { img:'images/project_1.jpg',  title:'Dona antes de irte',           cat:'CampaÃ±a Social Â· Cruz Roja', url:'https://www.behance.net/gallery/250079459/Dona-antes-de-irte' },
-    { img:'images/project_5.jpg',  title:'Â¿Y si el Copy fuera Z?',       cat:'Copywriting',                url:'https://www.behance.net/gallery/247778755/Y-si-el-Copy-hubiera-sido-Z' },
+    { img:'/marinagodar/images/project_6.jpg',  title:'Thyssen-Bornemisza',           cat:'Identidad Visual',           url:'https://www.behance.net/gallery/239996693/Thyssen-Bornemisza' },
+    { img:'/marinagodar/images/project_4.jpg',  title:'Filmin — Blue Monday',         cat:'Dirección Creativa / UI',    url:'https://www.behance.net/gallery/241992143/FILMIN-BLUE-MONDAY' },
+    { img:'/marinagodar/images/project_1.png',  title:'Zeta!',                        cat:'Editorial / Arte Urbano',    url:'https://www.behance.net/gallery/238623717/Zeta' },
+    { img:'/marinagodar/images/project_8.png',  title:'Lillo',                        cat:'Campaña',                    url:'https://www.behance.net/gallery/248920909/Lillo' },
+    { img:'/marinagodar/images/project_9.jpg',  title:'Tus palabras tapan el problema', cat:'Cartel Social',             url:'https://www.behance.net/gallery/250072513/Tus-palabras-tapan-el-problema' },
+    { img:'/marinagodar/images/project_2.jpg',  title:'Twister × National Geographic', cat:'Colaboración de Marca',     url:'https://www.behance.net/gallery/250076483/Twister-x-National-Geographic' },
+    { img:'/marinagodar/images/project_7.jpg',  title:'Tocados XXII',                 cat:'Branding de Evento',         url:'https://www.behance.net/gallery/249410953/TOCADOS-XXII' },
+    { img:'/marinagodar/images/project_1.jpg',  title:'Dona antes de irte',           cat:'Campaña Social · Cruz Roja', url:'https://www.behance.net/gallery/250079459/Dona-antes-de-irte' },
+    { img:'/marinagodar/images/project_5.jpg',  title:'¿Y si el Copy fuera Z?',       cat:'Copywriting',                url:'https://www.behance.net/gallery/247778755/Y-si-el-Copy-hubiera-sido-Z' },
   ];
 
-  /* â”€â”€ BUILD PROJECT INDEX â”€â”€ */
+  /* ── BUILD PROJECT INDEX ── */
   const indexEl = document.getElementById('proj-index');
   PROJECTS.forEach((p, i) => {
     const el = document.createElement('div');
@@ -1200,7 +1200,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
     indexEl.appendChild(el);
   });
 
-  /* â”€â”€ PREVIEW CROSS-FADE â”€â”€ */
+  /* ── PREVIEW CROSS-FADE ── */
   const layerA = document.getElementById('ppi-a');
   const layerB = document.getElementById('ppi-b');
   const pmTitle = document.getElementById('pm-title');
@@ -1236,7 +1236,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
     el.addEventListener('click', () => window.open(PROJECTS[i].url, '_blank', 'noopener'));
   });
 
-  /* â”€â”€ CURSOR â”€â”€ */
+  /* ── CURSOR ── */
   if (window.matchMedia('(pointer:fine)').matches) {
     const dot  = document.getElementById('cdot');
     const ring = document.getElementById('cring');
@@ -1256,13 +1256,13 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
       });
   }
 
-  /* â”€â”€ INTRO ANIMATION â”€â”€ */
+  /* ── INTRO ANIMATION ── */
   setTimeout(()=>{ document.getElementById('tl1')?.classList.add('in'); document.getElementById('nav-logo')?.classList.add('in'); }, 80);
   setTimeout(()=>{ document.getElementById('tl2')?.classList.add('in'); }, 260);
   setTimeout(()=>{ document.getElementById('hero-sub')?.classList.add('in'); document.getElementById('nav-beh')?.classList.add('in'); }, 500);
   setTimeout(()=>{ document.getElementById('menu-bar')?.classList.add('in'); }, 720);
 
-  /* â”€â”€ MOBILE BACKDROP OVERLAY â”€â”€ */
+  /* ── MOBILE BACKDROP OVERLAY ── */
   const backdrop = document.createElement('div');
   backdrop.id = 'mobile-backdrop';
   Object.assign(backdrop.style, {
@@ -1297,7 +1297,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
     hideBackdrop();
   });
 
-  /* â”€â”€ OS WINDOW ENGINE â”€â”€ */
+  /* ── OS WINDOW ENGINE ── */
   let topZ = 1000;
   const wins = document.querySelectorAll('.os-win');
 
@@ -1363,7 +1363,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
     });
   });
 
-  /* â”€â”€ MINIMIZE / DOCK HELPERS â”€â”€ */
+  /* ── MINIMIZE / DOCK HELPERS ── */
   const dock = document.getElementById('min-dock');
 
   function minimizeWin(win) {
@@ -1394,7 +1394,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
     dock.querySelector(`[data-dock="${winId}"]`)?.remove();
   }
 
-  /* â”€â”€ MENU BUTTONS â”€â”€ */
+  /* ── MENU BUTTONS ── */
   let openCount = 0;
   document.querySelectorAll('.menu-btn').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -1402,7 +1402,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
       const win = document.getElementById(id);
       if (!win) return;
 
-      // If minimized â†’ restore
+      // If minimized → restore
       if (win.classList.contains('minimized')) {
         restoreWin(win);
         btn.classList.add('is-active');
@@ -1447,24 +1447,24 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
     });
   });
 
-  /* â”€â”€ THEME â”€â”€ */
+  /* ── THEME ── */
   const themeBtn = document.getElementById('theme-btn');
   themeBtn?.addEventListener('click', () => {
     const dark = document.documentElement.getAttribute('data-theme')==='dark';
     document.documentElement.setAttribute('data-theme', dark?'':'dark');
-    themeBtn.textContent = dark ? '[ â˜¾ Dark ]' : '[ â˜¼ Light ]';
+    themeBtn.textContent = dark ? '[ ☾ Dark ]' : '[ ☼ Light ]';
   });
 
-  /* â”€â”€ GUIDE CHARACTER â”€â”€ */
+  /* ── GUIDE CHARACTER ── */
   const guide = document.getElementById('guide');
   const guideTip = document.getElementById('guide-tip');
   const guideOrb = document.getElementById('guide-orb');
   const tips = [
-    'Â¡Bienvenido/a a mi rincÃ³n creativo!',
-    isMobile() ? 'Â¡Toca los botones para explorar!' : 'Â¡Haz click en los botones de arriba!',
-    isMobile() ? 'Toca un proyecto para verlo ðŸŽ¨' : 'Pasa el ratÃ³n por los proyectos ðŸŽ¨',
-    'Prueba el modo oscuro ðŸŒ™',
-    isMobile() ? 'Â¡Desliza para ver mÃ¡s!' : 'Â¡Las ventanas se pueden mover!',
+    '¡Bienvenido/a a mi rincón creativo!',
+    isMobile() ? '¡Toca los botones para explorar!' : '¡Haz click en los botones de arriba!',
+    isMobile() ? 'Toca un proyecto para verlo 🎨' : 'Pasa el ratón por los proyectos 🎨',
+    'Prueba el modo oscuro 🌙',
+    isMobile() ? '¡Desliza para ver más!' : '¡Las ventanas se pueden mover!',
   ];
   let tipIdx=0, idleTimer;
   function flashTip() {
@@ -1483,7 +1483,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
   // First greeting after 3s
   setTimeout(flashTip, 3000);
 
-  /* â”€â”€ GRID PARALLAX (desktop only) â”€â”€ */
+  /* ── GRID PARALLAX (desktop only) ── */
   if (!isMobile()) {
     const gridEl = document.querySelector('.grid-overlay');
     document.addEventListener('mousemove', e => {
@@ -1493,7 +1493,7 @@ a, button { color: inherit; text-decoration: none; cursor: none; }
     }, {passive:true});
   }
 
-  /* â”€â”€ PROJECT TAP ON MOBILE â”€â”€ */
+  /* ── PROJECT TAP ON MOBILE ── */
   if (isMobile()) {
     document.querySelectorAll('.proj-entry').forEach((el, i) => {
       el.addEventListener('click', () => showProject(i));
