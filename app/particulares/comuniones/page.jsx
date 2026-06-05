@@ -15,7 +15,7 @@ export const metadata = {
     openGraph: {
         title: 'Mago para Comuniones en Madrid | Ángel Ruiz',
         description: 'El mejor mago para comuniones y fiestas infantiles en Madrid. Espectáculos adaptados para toda la familia donde el niño es el gran protagonista.',
-        images: [{ url: '/images/magia-comuniones-madrid.jpg' }],
+        images: [{ url: '/images/magia-comuniones-madrid.webp' }],
     }
 };
 
@@ -73,7 +73,7 @@ export default function MagoComunionesPage() {
                         <FadeIn className="flex-1 relative w-full aspect-[4/5] lg:aspect-square" delay={0.2} scale={0.95}>
                             <div className="absolute inset-0 rounded-full overflow-hidden border-8 border-[#111111] shadow-2xl">
                                 <Image
-                                    src="/images/magia-comuniones-madrid.jpg"
+                                    src="/images/magia-comuniones-madrid.webp"
                                     alt="Mago para comuniones en Madrid - Ángel Ruiz"
                                     fill
                                     className="object-cover transition-transform duration-[3s] ease-in-out hover:scale-110"
@@ -242,7 +242,7 @@ export default function MagoComunionesPage() {
 
                             <FadeIn delay={0.2} className="bg-gradient-to-br from-[#111111] to-[#0a0a0a] rounded-[2rem] p-10 border border-white/5 flex flex-col sm:flex-row gap-8 items-center sticky top-32">
                                 <Image 
-                                    src="/images/foto-bio.png"
+                                    src="/images/foto-bio.webp"
                                     alt="Ángel Ruiz - Mago e Ilusionista Profesional"
                                     width={120}
                                     height={120}

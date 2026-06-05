@@ -77,7 +77,7 @@ export default function CumpleanosAdultosPage() {
                             "@id": "https://angelruiz.world/#organization",
                             "name": "Ángel Ruiz | Mago e Ilusionista",
                             "url": "https://angelruiz.world",
-                            "image": "https://angelruiz.world/images/foto-bio.png",
+                            "image": "https://angelruiz.world/images/foto-bio.webp",
                             "telephone": "+34648055636",
                             "priceRange": "€€",
                             "address": {

@@ -1,16 +1,15 @@
 ---
-title: '¿Cuánto Cuesta un Mago en Madrid? [Tarifas y Precios 2026]'
+title: '¿Cuánto Cuesta un Mago en Madrid? Tarifas y Precios Reales 2026'
 date: '2026-04-13'
 excerpt: >-
-  Descubre de qué depende el presupuesto de un ilusionista profesional en
-  Madrid. Una guía transparente sobre precios, tipos de magia y cómo elegir al
-  mejor mago para tu boda o evento.
-author: Angel Ruiz
-image: /images/foto-bio.png
+  ¿Cuánto cuesta contratar un mago en Madrid en 2026? Guía completa y transparente con precios reales por tipo de evento: bodas, cenas de empresa, cumpleaños y más. Escrita por un ilusionista profesional.
+author: Ángel Ruiz
+image: /images/foto-bio.webp
 tags:
   - Precios
   - Madrid
   - Contratación
+  - Guía
 faq:
   - question: ¿Por qué los precios varían tanto entre un mago y otro?
     answer: >-

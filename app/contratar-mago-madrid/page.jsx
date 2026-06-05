@@ -7,7 +7,7 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: 'Contratar Mago en Madrid ✨ Precios y Guía 2024 | Ángel Ruiz',
+    title: 'Guía para Contratar un Mago en Madrid (Precios y Consejos) 2026 | Ángel Ruiz',
     description: 'Guía completa para contratar mago en Madrid. Precios, tipos de magia (close-up, escenario) y proceso de contratación con Ángel Ruiz, ilusionista premium.',
     alternates: {
         canonical: 'https://angelruiz.world/contratar-mago-madrid',
@@ -15,7 +15,7 @@ export const metadata = {
     openGraph: {
         title: 'Contratar Mago en Madrid ✨ Guía y Precios | Ángel Ruiz',
         description: 'Todo lo que necesitas saber para contratar un ilusionista en Madrid para bodas, empresas o eventos privados. Presupuesto sin compromiso.',
-        images: [{ url: '/images/foto-bio.png' }],
+        images: [{ url: '/images/foto-bio.webp' }],
     }
 };
 
@@ -91,7 +91,7 @@ export default function ContratarMagoMadridPage() {
                 "@id": "https://angelruiz.world/#organization",
                 "name": "Ángel Ruiz | Mago e Ilusionista",
                 "url": "https://angelruiz.world",
-                "image": "https://angelruiz.world/images/foto-bio.png",
+                "image": "https://angelruiz.world/images/foto-bio.webp",
                 "telephone": "+34648055636",
                 "priceRange": "400€ - 900€",
                 "address": {

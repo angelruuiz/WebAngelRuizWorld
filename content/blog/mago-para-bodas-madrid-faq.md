@@ -1,35 +1,32 @@
 ---
 title: >-
-  Mago para Bodas en Madrid: La Guía Definitiva para una Celebración Mágica
-  (2026)
+  Mago para Bodas en Madrid 2026: La Guía Definitiva para una Celebración Mágica
 date: '2026-04-10'
 excerpt: >-
-  Descubre cómo un ilusionista profesional puede transformar tu boda en Madrid
-  en un evento inolvidable. Consejos, momentos clave y por qué la magia de cerca
-  es tendencia.
+  ¿Buscas mago para tu boda en Madrid? Descubre cuándo contratar un ilusionista, cuánto cuesta, qué tipo de magia funciona mejor y cómo transformar el cóctel en el momento más recordado del día.
 author: Ángel Ruiz
 image: /images/boda-magia-madrid.webp
 tags:
   - Bodas
   - Madrid
+  - Guía
   - FAQ
 faq:
-  - question: ¿Es la magia adecuada para todas las edades?
+  - question: ¿Cuánto cuesta contratar un mago para una boda en Madrid?
     answer: >-
-      Efectivamente. La magia de calidad cautiva desde los niños hasta los
-      abuelos. Sin embargo, mi estilo está enfocado a una magia adulta y
-      sofisticada, perfecta para el tono de una boda elegante.
-  - question: ¿En qué momento es mejor realizar la magia?
+      En 2026, el precio de un mago profesional para bodas en Madrid oscila entre 400€ y 1.000€. Para el cóctel (1-1,5h), entre 400€ y 700€. Para cóctel + banquete (2-3h), entre 700€ y 1.000€. El precio varía según la experiencia del artista, la duración y la personalización del servicio.
+  - question: ¿Es la magia adecuada para todas las edades en una boda?
     answer: >-
-      Lo más demandado es el cóctel de bienvenida. Es el momento donde la gente
-      está de pie, con una copa en la mano y lista para interactuar. No
-      obstante, realizar magia corta en las mesas durante el banquete también
-      funciona a la perfección.
-  - question: ¿Con cuánta antelación debo reservar?
+      Efectivamente. La magia de calidad cautiva desde los niños hasta los abuelos. El estilo de Ángel Ruiz está enfocado en una magia adulta y sofisticada, perfecta para el tono de una boda elegante, pero visualmente impactante para que también los niños disfruten al máximo.
+  - question: ¿En qué momento es mejor realizar la magia en una boda?
     answer: >-
-      Madrid es una ciudad con mucha demanda, especialmente en temporada de
-      bodas (mayo a octubre). Lo ideal es reservar con mínimo mes y medio de
-      antelación para asegurar la fecha de tu evento.
+      Lo más demandado es el cóctel de bienvenida. Es el momento donde los invitados están de pie, con una copa en la mano y listos para interactuar, mientras los novios hacen fotos. También funciona perfectamente la magia de mesa entre plato y plato durante el banquete.
+  - question: ¿Con cuánta antelación debo contratar un mago para mi boda en Madrid?
+    answer: >-
+      En Madrid, especialmente en temporada de bodas (mayo a octubre), lo ideal es reservar con mínimo 3 meses de antelación. Para bodas en fincas de la Sierra o en fechas muy concretas, se recomienda hasta 6 meses para asegurar disponibilidad.
+  - question: ¿Qué es la magia de cerca y por qué es perfecta para bodas?
+    answer: >-
+      La magia de cerca o close-up es un estilo de ilusionismo que sucede a centímetros de los ojos del espectador: cartas, monedas y objetos cotidianos que se transforman o desaparecen ante tus propios ojos. Es perfecta para bodas porque no necesita escenario, se adapta a cualquier espacio y crea momentos de asombro personal e íntimo que las fotografías y vídeos de boda capturan de forma espectacular.
 category: Bodas
 ---
 

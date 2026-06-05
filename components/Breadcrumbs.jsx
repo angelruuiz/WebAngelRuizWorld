@@ -28,6 +28,22 @@ export default function Breadcrumbs() {
     'mago-boadilla': 'Boadilla',
     'mago-villalba': 'Villalba',
     'mago-el-escorial': 'El Escorial',
+    'mago-alcorcon': 'Alcorcón',
+    'mago-leganes': 'Leganés',
+    'mago-mostoles': 'Móstoles',
+    'mago-getafe': 'Getafe',
+    'mago-alcobendas': 'Alcobendas',
+    'mago-madrid': 'Mago en Madrid',
+    'mago-close-up-madrid': 'Magia de Cerca',
+    'contratar-mago-madrid': 'Contratar Mago',
+    'comuniones': 'Comuniones',
+    'fiestas-cumpleanos-madrid': 'Fiestas y Cumpleaños',
+    'despedidas-soltera-madrid': 'Despedidas de Soltera',
+    'mago-cenas-empresa-madrid': 'Cenas de Empresa',
+    'mago-ferias-congresos-madrid': 'Ferias y Congresos',
+    'mago-team-building-madrid': 'Team Building',
+    'mago-conferenciante-madrid': 'Mago Conferenciante',
+    'mago-para-restaurantes-madrid': 'Restaurantes',
     'galeria': 'Galería'
   };
 

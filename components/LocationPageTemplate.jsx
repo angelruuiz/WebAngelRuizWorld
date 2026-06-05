@@ -12,7 +12,7 @@ import BusinessSchema from '@/components/BusinessSchema';
 const MagicalCarousel = ({ locationName, locationImages }) => {
     const images = locationImages && locationImages.length > 0 
         ? locationImages 
-        : ["/images/IMG_20260531_162002.png", "/images/foto-spring-cartas.webp"];
+        : ["/images/IMG_20260531_162002.webp", "/images/foto-spring-cartas.webp"];
         
     const [index, setIndex] = useState(0);
 
@@ -54,7 +54,7 @@ export default function LocationPageTemplate({ location, allLocations }) {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": `Ángel Ruiz | Mago e Ilusionista en ${location.name}`,
-        "image": "https://angelruiz.world/images/foto-bio.png",
+        "image": "https://angelruiz.world/images/foto-bio.webp",
         "url": `https://angelruiz.world/mago-${location.slug}`,
         "telephone": "+34648055636",
         "address": {
@@ -88,12 +88,16 @@ export default function LocationPageTemplate({ location, allLocations }) {
         ]
     };
 
+    const isSur = ['alcorcon', 'leganes', 'getafe', 'mostoles'].includes(location.slug);
+    const parentName = isSur ? "Mago Madrid" : "Mago Sierra Madrid";
+    const parentSlug = isSur ? "mago-madrid" : "mago-sierra-madrid";
+
     const breadcrumbSchema = {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
-            { "@type": "ListItem", "position": 2, "name": "Mago Sierra Madrid", "item": "https://angelruiz.world/mago-sierra-madrid" },
+            { "@type": "ListItem", "position": 2, "name": parentName, "item": `https://angelruiz.world/${parentSlug}` },
             { "@type": "ListItem", "position": 3, "name": location.name, "item": `https://angelruiz.world/mago-${location.slug}` }
         ]
     };
@@ -110,7 +114,7 @@ export default function LocationPageTemplate({ location, allLocations }) {
                             "@id": "https://angelruiz.world/#organization",
                             "name": "Ángel Ruiz | Mago e Ilusionista",
                             "url": "https://angelruiz.world",
-                            "image": "https://angelruiz.world/images/foto-bio.png",
+                            "image": "https://angelruiz.world/images/foto-bio.webp",
                             "telephone": "+34648055636",
                             "priceRange": "€€€",
                             "address": {
@@ -126,7 +130,7 @@ export default function LocationPageTemplate({ location, allLocations }) {
                                 "ratingValue": "5",
                                 "bestRating": "5",
                                 "worstRating": "1",
-                                "ratingCount": "32"
+                                "ratingCount": "39"
                             }
                         },
                         {
@@ -217,7 +221,7 @@ export default function LocationPageTemplate({ location, allLocations }) {
                             <div className="space-y-4">
                                 <h2 className="text-2xl font-[Cinzel] text-white font-bold">Otras Zonas de Actuación</h2>
                                 <p className="text-slate-400 text-justify text-sm leading-relaxed">
-                                    Además de {location.name}, Angel Ruiz ofrece cobertura total en toda la zona noroeste, incluyendo:
+                                    Además de {location.name}, Ángel Ruiz ofrece cobertura total en la Comunidad de Madrid, incluyendo:
                                 </p>
                                 <div className="flex flex-wrap gap-2 text-xs">
                                     {allLocations.filter(l => l.slug !== location.slug).map(l => (
@@ -233,7 +237,7 @@ export default function LocationPageTemplate({ location, allLocations }) {
                             <div className="space-y-4">
                                 <h2 className="text-2xl font-[Cinzel] text-white font-bold">Cobertura en Madrid Capital</h2>
                                 <p className="text-slate-400 text-justify text-sm leading-relaxed">
-                                    Aunque {location.name} es una de mis bases operativas clave en la sierra, mi mercado abarca toda la comunidad. Descubre por qué soy el <Link href="/mago-madrid" className="text-amber-400 font-bold hover:underline">mago de referencia en Madrid</Link>. Si estás organizando un congreso en el centro o IFEMA, descubre mis servicios como <Link href="/empresas" className="text-amber-400 font-bold hover:underline">mago para empresas en Madrid</Link>. Si planeas dar el &apos;sí quiero&apos; en una finca exclusiva, explora mi propuesta como <Link href="/particulares/bodas" className="text-amber-400 font-bold hover:underline">mago para bodas en Madrid</Link>.
+                                    Aunque {location.name} es una de mis zonas de actuación habituales, mi mercado abarca toda la comunidad. Descubre por qué soy el <Link href="/mago-madrid" className="text-amber-400 font-bold hover:underline">mago de referencia en Madrid</Link>. Si estás organizando un congreso en el centro o IFEMA, descubre mis servicios como <Link href="/empresas" className="text-amber-400 font-bold hover:underline">mago para empresas en Madrid</Link>. Si planeas dar el &apos;sí quiero&apos; en una finca exclusiva, explora mi propuesta como <Link href="/particulares/bodas" className="text-amber-400 font-bold hover:underline">mago para bodas en Madrid</Link>.
                                 </p>
                             </div>
                         </div>

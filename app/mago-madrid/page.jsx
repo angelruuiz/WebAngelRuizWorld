@@ -6,15 +6,16 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: 'Contratar Mago en Madrid ✨ Ángel Ruiz | +10 Años de Magia Premium',
-    description: '¿Buscas mago en Madrid? Ángel Ruiz, experto en ilusionismo premium para bodas, empresas y eventos. Magia de cerca (close-up) inolvidable. ⭐ 39 reseñas.',
+    title: 'Mago en Madrid 2026 | Contratar Mago para Bodas y Empresas | Ángel Ruiz',
+    description: '¿Buscas mago en Madrid? Ángel Ruiz: ilusionista profesional para bodas, cenas de empresa y eventos privados. +10 años, 39 reseñas ⭐⭐⭐⭐⭐. Magia de cerca y mentalismo. Solicita presupuesto.',
+    keywords: ['mago madrid', 'mago en madrid', 'contratar mago madrid', 'mago profesional madrid', 'ilusionista madrid', 'mago para bodas madrid', 'mago para empresas madrid', 'mago close-up madrid', 'magia de cerca madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/mago-madrid',
     },
     openGraph: {
-        title: 'Contratar Mago en Madrid ✨ Ángel Ruiz',
-        description: 'El mago de referencia en Madrid para bodas exclusivas y eventos corporativos. Magia de cerca, mentalismo y cartomagia de autor.',
-        images: [{ url: '/images/foto-bio.png' }],
+        title: 'Mago en Madrid 2026 | Contratar Mago para Bodas y Empresas | Ángel Ruiz',
+        description: 'Ilusionista profesional en Madrid para bodas, eventos corporativos y celebraciones privadas. +10 años de experiencia, 39 reseñas 5⭐. Magia de cerca y mentalismo.',
+        images: [{ url: '/images/foto-bio.webp', width: 1200, height: 630 }],
     }
 };
 
@@ -27,7 +28,7 @@ export default function MagoMadridPage() {
                 "@id": "https://angelruiz.world/#organization",
                 "name": "Ángel Ruiz | Mago e Ilusionista",
                 "url": "https://angelruiz.world",
-                "image": "https://angelruiz.world/images/foto-bio.png",
+                "image": "https://angelruiz.world/images/foto-bio.webp",
                 "telephone": "+34648055636",
                 "priceRange": "€€€",
                 "address": {
@@ -41,7 +42,7 @@ export default function MagoMadridPage() {
                     "ratingValue": "5",
                     "bestRating": "5",
                     "worstRating": "1",
-                    "ratingCount": "32"
+                    "ratingCount": "39"
                 },
                 "areaServed": {
                     "@type": "City",
@@ -91,7 +92,7 @@ export default function MagoMadridPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-20">
                         <div className="relative md:sticky md:top-32 h-auto rounded-2xl overflow-hidden border border-slate-800 shadow-xl order-2 md:order-1 group bg-slate-900/50">
                             <Image
-                                src="/images/foto-bio.png"
+                                src="/images/foto-bio.webp"
                                 alt="Ángel Ruiz mago profesional en Madrid"
                                 width={800}
                                 height={1000}
@@ -142,7 +143,7 @@ export default function MagoMadridPage() {
                                 </p>
 
                                 <p className="bg-white/5 p-4 rounded-lg italic text-slate-300">
-                                    "32 reseñas de 5 estrellas en Google. Empresas como Movistar Estudiantes ya confían en mi magia para sus eventos corporativos."
+                                    "39 reseñas de 5 estrellas en Google. Empresas como Movistar Estudiantes ya confían en mi magia para sus eventos corporativos."
                                 </p>
                             </div>
 

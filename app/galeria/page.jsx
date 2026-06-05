@@ -18,7 +18,7 @@ const images = [
         aspect: 'aspect-[3/4]'
     },
     {
-        src: '/images/angel-ruiz-mago-corporativo.jpg',
+        src: '/images/angel-ruiz-mago-corporativo.webp',
         alt: 'El mago Ángel Ruiz interactuando de cerca con asistentes en un evento corporativo',
         aspect: 'aspect-[4/5]'
     },
@@ -38,7 +38,7 @@ const images = [
         aspect: 'aspect-[4/3]'
     },
     {
-        src: '/images/magia-comuniones-madrid.jpg',
+        src: '/images/magia-comuniones-madrid.webp',
         alt: 'El mago Ángel Ruiz realizando trucos de magia infantil y familiar en una comunión en Madrid',
         aspect: 'aspect-[3/4]'
     },
@@ -64,7 +64,7 @@ const images = [
         aspect: 'aspect-[3/4]'
     },
     {
-        src: '/images/reacciones-magia-empresas.jpg',
+        src: '/images/reacciones-magia-empresas.webp',
         alt: 'Caras de asombro y aplausos durante un espectáculo de magia para empresas',
         aspect: 'aspect-[4/3]'
     },
@@ -84,7 +84,7 @@ const images = [
         aspect: 'aspect-[4/5]'
     },
     {
-        src: '/images/magia-cocktail-empresa-madrid.jpg',
+        src: '/images/magia-cocktail-empresa-madrid.webp',
         alt: 'El ilusionista Ángel Ruiz realizando magia de cóctel entre los invitados de una empresa en Madrid',
         aspect: 'aspect-video'
     },
@@ -104,7 +104,7 @@ const images = [
         aspect: 'aspect-[4/5]'
     },
     {
-        src: '/images/magia-eventos-cocktail.jpg',
+        src: '/images/magia-eventos-cocktail.webp',
         alt: 'Invitados riendo durante una sesión de magia interactiva en un cóctel',
         aspect: 'aspect-[3/4]'
     },

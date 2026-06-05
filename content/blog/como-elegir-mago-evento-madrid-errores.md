@@ -5,7 +5,7 @@ excerpt: >-
   ¿Buscas mago en Madrid? Evita estos 5 errores críticos al contratar magia para
   tu evento, boda o cena de empresa. Consejos de un ilusionista profesional.
 author: Ángel Ruiz
-image: /images/foto-bio.png
+image: /images/foto-bio.webp
 category: Consejos
 tags:
   - Guía

@@ -1,13 +1,16 @@
 import HomeClient, { PerpetualCard } from '@/components/HomeClient';
+import Image from 'next/image';
 
 export const metadata = {
-    title: 'Ángel Ruiz | Mago Profesional en Madrid para Bodas y Empresas',
-    description: '+10 años de recorrido en la magia y alumno de la prestigiosa escuela DaOrtiz.',
+    title: 'Mago en Madrid | Ángel Ruiz | Ilusionista para Bodas y Empresas 2026',
+    description: 'Ángel Ruiz, mago profesional en Madrid para bodas, cenas de empresa y eventos privados. +10 años de experiencia, alumno de DaOrtiz. 39 reseñas ⭐⭐⭐⭐⭐. Solicita presupuesto sin compromiso.',
     alternates: {
         canonical: 'https://angelruiz.world',
     },
     openGraph: {
         url: 'https://angelruiz.world',
+        title: 'Mago en Madrid | Ángel Ruiz | Ilusionista para Bodas y Empresas 2026',
+        description: 'Ilusionista profesional en Madrid. Especialista en magia de cerca para bodas, cenas de empresa y eventos corporativos. +10 años, 39 reseñas 5 estrellas.',
     },
 };
 
@@ -162,7 +165,7 @@ const SEOContent = () => {
                                         { src: '/images/logo-alcampo.webp', alt: 'Alcampo' },
                                         { src: '/images/logo-ahorramas.webp', alt: 'Ahorramás' },
                                         { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
-                                        { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
+                                        { src: '/images/logos/logo-zeppelin.webp', alt: 'Zeppelin' },
                                         { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' },
                                         { src: '/images/logo-movistar.webp', alt: 'Movistar Estudiantes' },
                                         { src: '/images/logo-escombrera.webp', alt: 'Peña La Escombrera' },
@@ -171,11 +174,11 @@ const SEOContent = () => {
                                         { src: '/images/logo-alcampo.webp', alt: 'Alcampo' },
                                         { src: '/images/logo-ahorramas.webp', alt: 'Ahorramás' },
                                         { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
-                                        { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
+                                        { src: '/images/logos/logo-zeppelin.webp', alt: 'Zeppelin' },
                                         { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' }
                                     ].map((logo, idx) => (
-                                        <li key={idx}>
-                                            <img src={logo.src} alt={logo.alt} className="h-10 md:h-14 object-contain filter brightness-110 grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
+                                        <li key={idx} className="relative w-32 h-14 mx-12">
+                                            <Image src={logo.src} alt={logo.alt} fill sizes="128px" className="object-contain filter brightness-110 grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
                                         </li>
                                     ))}
                                 </ul>
@@ -188,7 +191,7 @@ const SEOContent = () => {
                                         { src: '/images/logo-alcampo.webp', alt: 'Alcampo' },
                                         { src: '/images/logo-ahorramas.webp', alt: 'Ahorramás' },
                                         { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
-                                        { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
+                                        { src: '/images/logos/logo-zeppelin.webp', alt: 'Zeppelin' },
                                         { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' },
                                         { src: '/images/logo-movistar.webp', alt: 'Movistar Estudiantes' },
                                         { src: '/images/logo-escombrera.webp', alt: 'Peña La Escombrera' },
@@ -197,11 +200,11 @@ const SEOContent = () => {
                                         { src: '/images/logo-alcampo.webp', alt: 'Alcampo' },
                                         { src: '/images/logo-ahorramas.webp', alt: 'Ahorramás' },
                                         { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
-                                        { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
+                                        { src: '/images/logos/logo-zeppelin.webp', alt: 'Zeppelin' },
                                         { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' }
                                     ].map((logo, idx) => (
-                                        <li key={`copy-${idx}`}>
-                                            <img src={logo.src} alt={logo.alt} className="h-10 md:h-14 object-contain filter brightness-110 grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
+                                        <li key={`copy-${idx}`} className="relative w-32 h-14 mx-12">
+                                            <Image src={logo.src} alt={logo.alt} fill sizes="128px" className="object-contain filter brightness-110 grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
                                         </li>
                                     ))}
                                 </ul>
@@ -215,18 +218,17 @@ const SEOContent = () => {
     );
 };
 
-import BusinessSchema from '@/components/BusinessSchema';
+
+
+
+
 
 export default function Home() {
-
-
-
-
     const videoSchema = {
         "@type": "VideoObject",
         "name": "Ángel Ruiz | Magia de Cerca en Madrid",
         "description": "Video promocional de ilusionismo profesional y magia de cerca por Ángel Ruiz.",
-        "thumbnailUrl": "https://angelruiz.world/images/foto-bio.png",
+        "thumbnailUrl": "https://angelruiz.world/images/foto-bio.webp",
         "uploadDate": "2026-04-10T10:00:00+02:00",
         "duration": "PT1M0S",
         "contentUrl": "https://angelruiz.world/spring.mp4"
@@ -241,7 +243,7 @@ export default function Home() {
             "ratingValue": "5",
             "bestRating": "5",
             "worstRating": "1",
-            "ratingCount": "32"
+            "ratingCount": "39"
         }
     };
 
@@ -263,6 +265,10 @@ export default function Home() {
                             "@id": "https://angelruiz.world/#organization",
                             "name": "Ángel Ruiz | Mago e Ilusionista",
                             "url": "https://angelruiz.world",
+                            "telephone": "+34648055636",
+                            "email": "angellruuiz@gmail.com",
+                            "description": "Mago e ilusionista profesional en Madrid. Especialista en magia de cerca para bodas, eventos corporativos y celebraciones privadas.",
+                            "areaServed": ["Madrid", "Torrelodones", "Las Rozas", "Majadahonda", "Pozuelo de Alarcón", "Boadilla del Monte", "Galapagar", "Collado Villalba", "El Escorial", "Las Matas"],
                             "aggregateRating": ratingSchema.aggregateRating,
                             "address": {
                                 "@type": "PostalAddress",
@@ -270,27 +276,6 @@ export default function Home() {
                                 "addressLocality": "Torrelodones",
                                 "addressRegion": "Comunidad de Madrid",
                                 "postalCode": "28250",
-                                "addressCountry": "ES"
-                            },
-                            "sameAs": [
-                                "https://instagram.com/angellruuiz",
-                                "https://tiktok.com/@angellruuiz",
-                                "https://youtube.com/@angellruuiz",
-                                "https://facebook.com/angellruuiz"
-                            ]
-                        },
-                        {
-                            "@type": "EntertainmentBusiness",
-                            "name": "Ángel Ruiz | Mago e Ilusionista",
-                            "url": "https://angelruiz.world",
-                            "telephone": "+34648055636",
-                            "email": "angellruuiz@gmail.com",
-                            "description": "Mago e ilusionista profesional en Madrid. Especialista en magia de cerca para bodas, eventos corporativos y celebraciones privadas en la Sierra de Madrid y zona noroeste.",
-                            "areaServed": ["Madrid", "Torrelodones", "Las Rozas", "Majadahonda", "Pozuelo de Alarcón", "Boadilla del Monte", "Galapagar", "Collado Villalba", "El Escorial", "Las Matas"],
-                            "address": {
-                                "@type": "PostalAddress",
-                                "addressLocality": "Torrelodones",
-                                "addressRegion": "Comunidad de Madrid",
                                 "addressCountry": "ES"
                             },
                             "sameAs": [

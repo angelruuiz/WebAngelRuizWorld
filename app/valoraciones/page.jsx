@@ -2,7 +2,7 @@ import ValoracionesClient from '@/components/ValoracionesClient';
 
 export const metadata = {
     title: { absolute: 'Opiniones y Reseñas | Ángel Ruiz, Mago en Madrid' },
-    description: '32 reseñas verificadas de 5 estrellas. Lee las opiniones reales de clientes que contrataron a Ángel Ruiz como mago para bodas, empresas y eventos en Madrid.',
+    description: '39 reseñas verificadas de 5 estrellas. Lee las opiniones reales de clientes que contrataron a Ángel Ruiz como mago para bodas, empresas y eventos en Madrid.',
     alternates: {
         canonical: 'https://angelruiz.world/valoraciones',
     },
@@ -46,7 +46,7 @@ export default function ValoracionesPage() {
             "ratingValue": "5",
             "bestRating": "5",
             "worstRating": "1",
-            "ratingCount": "32"
+            "ratingCount": "39"
         }
     };
 
@@ -66,7 +66,7 @@ export default function ValoracionesPage() {
                             "@id": "https://angelruiz.world/#organization",
                             "name": "Ángel Ruiz | Mago e Ilusionista",
                             "url": "https://angelruiz.world",
-                            "image": "https://angelruiz.world/images/foto-bio.png",
+                            "image": "https://angelruiz.world/images/foto-bio.webp",
                             "telephone": "+34648055636",
                             "priceRange": "€€€",
                             "address": {
@@ -82,7 +82,7 @@ export default function ValoracionesPage() {
                                 "ratingValue": "5",
                                 "bestRating": "5",
                                 "worstRating": "1",
-                                "ratingCount": "32"
+                                "ratingCount": "39"
                             },
                             "review": reviewsData.map(r => ({
                                 "@type": "Review",
@@ -110,7 +110,7 @@ export default function ValoracionesPage() {
                             Las valoraciones de mis clientes no son solo palabras; son la base de mi <strong>reputación profesional como ilusionista</strong>. En cada evento en Madrid y la zona de la sierra, mi prioridad es la búsqueda de la <u>excelencia técnica y la satisfacción total del cliente</u>. Entiendo que un evento es un hito irrepetible, y por ello mi compromiso es con la puntualidad, la elegancia en el trato y, sobre todo, la entrega de un asombro de primer nivel.
                         </p>
                         <p>
-                            Contar con más de <strong className="text-white">31 valoraciones de 5 estrellas</strong> en plataformas independientes avala mi trayectoria como <strong>mago para empresas</strong> y bodas. Aquí puedes explorar testimonios detallados que reflejan la autenticidad de mi propuesta y la garantía de éxito para tu próxima celebración privada o corporativa.
+                            Contar con más de <strong className="text-white">39 valoraciones de 5 estrellas</strong> en plataformas independientes avala mi trayectoria como <strong>mago para empresas</strong> y bodas. Aquí puedes explorar testimonios detallados que reflejan la autenticidad de mi propuesta y la garantía de éxito para tu próxima celebración privada o corporativa.
                         </p>
                     </div>
                 </div>

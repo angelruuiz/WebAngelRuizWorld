@@ -4,23 +4,72 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import FAQItem from '@/components/FAQItem';
 
 export const metadata = {
-  title: 'Mago para Cenas de Empresa en Madrid | Impacto B2B',
-  description: 'Descubre cómo potenciar tu evento corporativo con nuestro Mago para Cenas de Empresa. Metodología brutalista B2B, alta retención y ROI garantizado.',
+  title: 'Mago para Cenas de Empresa en Madrid 2026 | Ángel Ruiz | Ilusionismo Corporativo',
+  description: '¿Buscas mago para la cena de empresa en Madrid? Ángel Ruiz transforma cenas de Navidad, fin de año y eventos corporativos en experiencias inolvidables. ⭐⭐⭐⭐⭐ 39 reseñas. Solicita presupuesto.',
+  keywords: ['mago cenas empresa madrid', 'mago para cena empresa madrid', 'mago cena navidad empresa madrid', 'contratar mago cena empresa', 'entretenimiento cenas empresa madrid', 'mago corporativo madrid', 'animacion cenas empresa madrid'],
+  alternates: {
+    canonical: 'https://angelruiz.world/empresas/mago-cenas-empresa-madrid',
+  },
+  openGraph: {
+    url: 'https://angelruiz.world/empresas/mago-cenas-empresa-madrid',
+    title: 'Mago para Cenas de Empresa en Madrid 2026 | Ángel Ruiz',
+    description: 'Transforma la cena de empresa en Madrid en un evento memorable con magia de cerca corporativa. 39 reseñas 5⭐.',
+    images: [{ url: '/images/evento-angel-ruiz-magia.webp', width: 1200, height: 630 }],
+  },
 };
 
 const faqs = [
-  { name: '¿Cuál es el ROI esperado de un cena de empresa?', acceptedAnswer: { text: 'Nuestra metodología B2B asegura que la marca se grabe en la mente de los asistentes, aumentando el engagement y acelerando el ciclo de cierre en ferias y eventos.' } },
-  { name: '¿Cómo se integra el show en la agenda corporativa?', acceptedAnswer: { text: 'Diseñamos intervenciones modulares. No interrumpimos tu evento, lo potenciamos. Intervenciones de alto impacto entre bloques o como main event.' } },
-  { name: '¿Se adapta a los valores de nuestra marca?', acceptedAnswer: { text: 'Totalmente. Integramos los mensajes clave de tu empresa (productos, KPIs, cultura corporativa) en las experiencias de asombro.' } },
-  { name: '¿Qué requerimientos técnicos tiene el espectáculo?', acceptedAnswer: { text: 'Mínimos. Nuestro enfoque es "Plug & Play". Llevamos la tecnología necesaria para impactar sin complicar tu producción.' } },
-  { name: '¿Realizan presentaciones en inglés?', acceptedAnswer: { text: 'Sí, trabajamos en entornos corporativos multinacionales, garantizando un inglés fluido y profesional de alto impacto B2B.' } },
-  { name: '¿Es adecuado para públicos de alto nivel (C-Level)?', acceptedAnswer: { text: 'Diseñado específicamente para ello. Una comunicación sofisticada, humor inteligente y un respeto absoluto a la jerarquía y el entorno.' } },
-  { name: '¿Cuánto tiempo de antelación es necesario para reservar?', acceptedAnswer: { text: 'Para fechas clave (cenas de navidad, grandes congresos), recomendamos reservar con 2-3 meses de antelación.' } },
-  { name: '¿Cómo medimos el éxito de la intervención?', acceptedAnswer: { text: 'Proporcionamos herramientas post-evento para medir la recordación del mensaje y el incremento en el engagement de los asistentes.' } }
+  { name: '¿Cuánto cuesta contratar un mago para una cena de empresa en Madrid?', acceptedAnswer: { text: 'Para cenas de empresa en Madrid, el precio de un mago profesional oscila entre 500€ y 900€ dependiendo del formato (cóctel de pie, magia de mesa o espectáculo central) y la duración. Para cenas de Navidad grandes (+50 personas), consulta presupuesto personalizado.' } },
+  { name: '¿Qué diferencia hay entre magia para cena de empresa y un animador de eventos?', acceptedAnswer: { text: 'Un mago corporativo como Ángel Ruiz no solo entretiene: integra el mensaje de tu empresa en los efectos mágicos, fomentando el networking y dejando una impresión duradera de tu marca. Un animador genérico no puede ofrecer esa personalización ni ese nivel de impacto.' } },
+  { name: '¿Cómo se integra el mago en la agenda de la cena de empresa?', acceptedAnswer: { text: 'Diseñamos la intervención según tu agenda: magia de cerca durante el cóctel (perfecto para romper el hielo), pases de mesa durante la cena, o un espectáculo central de 20-35 min durante la sobremesa. También podemos combinar formatos para máximo impacto.' } },
+  { name: '¿Se puede personalizar el espectáculo con la marca de la empresa?', acceptedAnswer: { text: 'Totalmente. Integramos el logo, eslóganes, productos o mensajes clave de tu empresa en los efectos de ilusionismo. Los asistentes vivirán la magia de la marca de forma literal y memorable.' } },
+  { name: '¿Es adecuado para públicos de alto nivel (C-Level) en Madrid?', acceptedAnswer: { text: 'Sí, está diseñado específicamente para ello. El estilo de Ángel Ruiz es sofisticado, con humor inteligente y un respeto absoluto al protocolo corporativo. Ha actuado para directivos de empresas como Movistar Estudiantes con total éxito.' } },
+  { name: '¿Con cuánta antelación debo reservar el mago para la cena de empresa?', acceptedAnswer: { text: 'Para cenas de Navidad en Madrid, se recomienda reservar con 2-3 meses de antelación (octubre-noviembre), ya que noviembre y diciembre son los meses con más demanda. Para otras fechas, 3-4 semanas suele ser suficiente.' } },
+  { name: '¿El mago actúa en toda la Comunidad de Madrid para eventos corporativos?', acceptedAnswer: { text: 'Sí. Ángel Ruiz cubre toda la Comunidad de Madrid para cenas de empresa: Madrid capital, La Moraleja, Alcobendas, Las Rozas, Pozuelo de Alarcón, Majadahonda, y todos los principales núcleos empresariales del área metropolitana.' } },
+  { name: '¿Pueden realizar la presentación en inglés para empresas multinacionales?', acceptedAnswer: { text: 'Sí, trabajamos en entornos corporativos multinacionales con inglés fluido y profesional, garantizando un impacto equivalente al de las actuaciones en castellano.' } }
 ];
+
+const schemaJson = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://angelruiz.world/#organization",
+      "name": "Ángel Ruiz | Mago e Ilusionista",
+      "url": "https://angelruiz.world",
+      "telephone": "+34648055636",
+      "priceRange": "€€€",
+      "address": { "@type": "PostalAddress", "addressLocality": "Madrid", "addressRegion": "Comunidad de Madrid", "addressCountry": "ES" },
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "bestRating": "5", "worstRating": "1", "ratingCount": "39" }
+    },
+    {
+      "@type": "Service",
+      "name": "Mago para Cenas de Empresa en Madrid",
+      "provider": { "@type": "Person", "name": "Ángel Ruiz" },
+      "areaServed": "Comunidad de Madrid",
+      "description": "Espectáculo de magia corporativa para cenas de empresa en Madrid. Personalizable con marca, logotipos y mensajes de empresa.",
+      "serviceType": "Corporate Entertainment",
+      "url": "https://angelruiz.world/empresas/mago-cenas-empresa-madrid"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.name, "acceptedAnswer": { "@type": "Answer", "text": f.acceptedAnswer.text } }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
+        { "@type": "ListItem", "position": 2, "name": "Mago para Empresas", "item": "https://angelruiz.world/empresas" },
+        { "@type": "ListItem", "position": 3, "name": "Mago Cenas de Empresa Madrid", "item": "https://angelruiz.world/empresas/mago-cenas-empresa-madrid" }
+      ]
+    }
+  ]
+};
 
 export default function Page() {
   return (
+    <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />
     <NavFooterClient>
       <MagicCursor />
     <div className="min-h-screen bg-[#0A0A0A] text-slate-300 font-sans selection:bg-amber-500/30">
@@ -188,5 +237,6 @@ export default function Page() {
 
     </div>
     </NavFooterClient>
+    </>
   );
 }

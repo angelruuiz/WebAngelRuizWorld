@@ -61,7 +61,7 @@ export default function MagoSierraMadridHub() {
                             "@id": "https://angelruiz.world/#organization",
                             "name": "Ángel Ruiz | Mago e Ilusionista",
                             "url": "https://angelruiz.world",
-                            "image": "https://angelruiz.world/images/foto-bio.png",
+                            "image": "https://angelruiz.world/images/foto-bio.webp",
                             "telephone": "+34648055636",
                             "priceRange": "€€€",
                             "address": {
@@ -77,7 +77,7 @@ export default function MagoSierraMadridHub() {
                                 "ratingValue": "5",
                                 "bestRating": "5",
                                 "worstRating": "1",
-                                "ratingCount": "32"
+                                "ratingCount": "39"
                             }
                         },
                         {

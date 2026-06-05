@@ -35,7 +35,7 @@ export default function MagoConferencianteBlogPage() {
             "name": "Ángel Ruiz | Mago e Ilusionista",
             "logo": {
                 "@type": "ImageObject",
-                "url": "https://angelruiz.world/images/foto-bio.png"
+                "url": "https://angelruiz.world/images/foto-bio.webp"
             }
         },
         "datePublished": "2026-05-29",

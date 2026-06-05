@@ -72,7 +72,7 @@ Un **[mago para eventos de empresa](/empresas)** especializado en close-up aport
 
 ## ¿Por qué elegir a Ángel Ruiz para tu Evento en Madrid?
 
-Con más de 10 años de trayectoria como ilusionista profesional y más de 31 reseñas reales de 5 estrellas de clientes satisfechos, mi enfoque no se basa en "hacer trucos". Mi compromiso consiste en **diseñar atmósferas de asombro inteligente adaptadas a la etiqueta de tu evento**.
+Con más de 10 años de trayectoria como ilusionista profesional y más de 39 reseñas reales de 5 estrellas de clientes satisfechos, mi enfoque no se basa en "hacer trucos". Mi compromiso consiste en **diseñar atmósferas de asombro inteligente adaptadas a la etiqueta de tu evento**.
 
 Tanto si buscas un ambiente sofisticado en el Barrio de Salamanca como un evento más rústico e íntimo en **Galapagar o Torrelodones**, me adapto al protocolo y etiqueta de tu celebración garantizando un comportamiento elegante y profesional de principio a fin.
 

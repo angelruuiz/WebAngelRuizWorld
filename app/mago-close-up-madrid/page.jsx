@@ -16,7 +16,7 @@ export const metadata = {
     openGraph: {
         title: 'Mago Close-Up Madrid | Magia de Cerca',
         description: 'Especialista en magia de cerca (close-up) en Madrid. Cartomagia purista e ilusionismo de alto impacto a centímetros de tus ojos.',
-        images: [{ url: '/images/IMG_20260531_162002.png' }],
+        images: [{ url: '/images/IMG_20260531_162002.webp' }],
     }
 };
 
@@ -97,7 +97,7 @@ export default function MagoCloseUpMadridPage() {
 
     return (
         <>
-            <BusinessSchema rating={{ "@type": "AggregateRating", "ratingValue": "5", "bestRating": "5", "worstRating": "1", "ratingCount": "32" }} />
+            <BusinessSchema rating={{ "@type": "AggregateRating", "ratingValue": "5", "bestRating": "5", "worstRating": "1", "ratingCount": "39" }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
             
@@ -130,7 +130,7 @@ export default function MagoCloseUpMadridPage() {
 
                         <div className="md:col-span-4 relative rounded-[2rem] overflow-hidden border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] aspect-square md:aspect-auto group">
                             <Image
-                                src="/images/IMG_20260531_162002.png"
+                                src="/images/IMG_20260531_162002.webp"
                                 alt="Sleight of hand y micromagia en Madrid"
                                 fill
                                 className="object-cover scale-105 group-hover:scale-100 transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] mix-blend-luminosity group-hover:mix-blend-normal"

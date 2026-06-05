@@ -6,22 +6,23 @@ import { MagicCursor, ParticleBackground, FadeIn } from '@/components/VisualEffe
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: 'Mago para Bodas en Madrid | Ilusionismo Elegante y Exclusivo',
-    description: 'Magia exclusiva para bodas en Madrid. Transforma tu cóctel en una experiencia inolvidable.',
+    title: 'Mago para Bodas en Madrid 2026 | Precios y Guía | Ángel Ruiz',
+    description: '¿Buscas mago para tu boda en Madrid? Ángel Ruiz transforma el cóctel y banquete en momentos mágicos inolvidables. Especialista en fincas del noroeste. ⭐⭐⭐⭐⭐ 39 reseñas. Consulta disponibilidad.',
+    keywords: ['mago para bodas madrid', 'mago bodas madrid', 'contratar mago boda madrid', 'mago coctel boda madrid', 'ilusionista bodas madrid', 'mago para bodas precio madrid', 'mago boda noroeste madrid', 'entretenimiento bodas madrid', 'mago para mi boda madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/particulares/bodas',
     },
     openGraph: {
         url: 'https://angelruiz.world/particulares/bodas',
-        title: 'Mago para Bodas en Madrid | Ángel Ruiz | Mago e Ilusionista',
-        description: 'La magia perfecta para tu cóctel de boda. Conecta a tus invitados y crea recuerdos inolvidables.',
-        images: [{ url: '/images/foto-bio.png' }],
+        title: 'Mago para Bodas en Madrid 2026 | Ángel Ruiz | Ilusionista Profesional',
+        description: 'Transforma el cóctel y el banquete de tu boda en Madrid en una experiencia mágica e inolvidable. +10 años, 39 reseñas 5⭐. Solicita disponibilidad.',
+        images: [{ url: '/images/boda-magia-madrid.webp', width: 1200, height: 630 }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago para Bodas en Madrid | Angel Ruiz',
-        description: 'Momentos imposibles para el día más importante de tu vida.',
-        images: ['/images/foto-bio.png'],
+        title: 'Mago para Bodas en Madrid 2026 | Ángel Ruiz',
+        description: 'Magia de cerca para bodas en Madrid. Transforma el cóctel en el momento más recordado del día.',
+        images: ['/images/boda-magia-madrid.webp'],
     },
 };
 
@@ -76,7 +77,7 @@ export default function BodasDetailPage() {
                             "@id": "https://angelruiz.world/#organization",
                             "name": "Ángel Ruiz | Mago e Ilusionista",
                             "url": "https://angelruiz.world",
-                            "image": "https://angelruiz.world/images/foto-bio.png",
+                            "image": "https://angelruiz.world/images/foto-bio.webp",
                             "telephone": "+34648055636",
                             "priceRange": "€€€",
                             "address": {
@@ -92,7 +93,7 @@ export default function BodasDetailPage() {
                                 "ratingValue": "5",
                                 "bestRating": "5",
                                 "worstRating": "1",
-                                "ratingCount": "32"
+                                "ratingCount": "39"
                             }
                         },
                         {

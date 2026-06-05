@@ -4,7 +4,10 @@ import { motion } from 'framer-motion';
 import { Phone, Mail, Globe, MapPin, CheckCircle2, Star } from 'lucide-react';
 import { Sparkles } from '@/components/Icons';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
+import { Cinzel, Outfit } from 'next/font/google';
 import Image from 'next/image';
+
+
 
 const slides = [
     {
@@ -19,7 +22,7 @@ const slides = [
             { label: 'Eventos Realizados', value: '100+' },
             { label: 'Satisfacción', value: '100%' }
         ],
-        image: '/images/IMG_20260531_162002.png'
+        image: '/images/IMG_20260531_162002.webp'
     },
     {
         id: 'perfil',
