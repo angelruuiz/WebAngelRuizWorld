@@ -209,7 +209,7 @@ export default function EmpresasPage() {
                                         { src: '/images/logo-alcampo.webp', alt: 'Alcampo' },
                                         { src: '/images/logo-ahorramas.webp', alt: 'Ahorramás' },
                                         { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
-                                        { src: '/images/logos/logo-zeppelin.webp', alt: 'Zeppelin' },
+                                        { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
                                         { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' }
                                     ].map((logo, idx) => (
                                         <li key={idx}>
