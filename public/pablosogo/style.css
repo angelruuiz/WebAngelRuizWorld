@@ -781,6 +781,12 @@ ul { list-style: none; }
   .reviews-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+@media (max-width: 768px) {
+  .reviews { padding: 72px 20px; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .review-card { padding: 24px 20px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition-duration: 0.01ms !important; }
 }
