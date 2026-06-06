@@ -2,12 +2,12 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg: #0F0F0E;
-  --bg-alt: #181816;
-  --ink: #F0EFE8;
-  --ink-mid: #9A9A92;
-  --ink-light: #4A4A46;
-  --accent: #C94060;
+  --bg: #000000;
+  --bg-alt: #0A0A0A;
+  --ink: #FFFFFF;
+  --ink-mid: #A0A0A0;
+  --ink-light: #505050;
+  --accent: #8F172B;
   --white: #FFFFFF;
   --ff-serif: 'Cormorant Garamond', Georgia, serif;
   --ff-sans: 'DM Sans', system-ui, sans-serif;
@@ -36,11 +36,11 @@ ul { list-style: none; }
   top: 0; left: 0; right: 0;
   z-index: 100;
   height: var(--nav-h);
-  background: var(--bg);
+  background: var(--accent);
   border-bottom: 1px solid transparent;
   transition: border-color 0.3s;
 }
-.nav.scrolled { border-color: rgba(240,239,232,0.1); }
+.nav.scrolled { border-color: rgba(255,255,255,0.1); }
 
 .nav-inner {
   max-width: var(--max);
@@ -76,17 +76,17 @@ ul { list-style: none; }
 
 .nav-links a {
   font-size: 0.8rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--ink-mid);
+  color: rgba(255, 255, 255, 0.7);
   transition: color 0.2s;
 }
-.nav-links a:hover { color: var(--ink); }
+.nav-links a:hover { color: var(--white); }
 
 .nav-cta {
-  color: var(--accent) !important;
-  border-bottom: 1px solid var(--accent);
+  color: var(--white) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
   padding-bottom: 1px;
 }
 
@@ -103,7 +103,7 @@ ul { list-style: none; }
   display: block;
   width: 24px;
   height: 1.5px;
-  background: var(--ink);
+  background: var(--white);
   transition: transform 0.3s, opacity 0.3s;
 }
 .nav-toggle.open span:first-child { transform: rotate(45deg) translate(5px, 5px); }
@@ -602,11 +602,11 @@ ul { list-style: none; }
   .nav-links {
     position: fixed;
     top: var(--nav-h); left: 0; right: 0;
-    background: var(--bg);
+    background: var(--accent);
     flex-direction: column;
     padding: 32px 20px;
     gap: 28px;
-    border-bottom: 1px solid rgba(240,239,232,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
     transform: translateY(-110%);
     opacity: 0;
     pointer-events: none;
