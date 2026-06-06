@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estrategia de Contenido – Ángel Ruiz Mago</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #080810;
+    color: #f0f0f0;
+    min-height: 100vh;
+    padding: 28px 18px 48px;
+  }
+
+  /* HEADER */
+  .header {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .header .eyebrow {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #d4a843;
+    margin-bottom: 6px;
+  }
+  .header h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #d4a843, #f0c96a, #c8891e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 4px;
+  }
+  .header p {
+    font-size: 0.75rem;
+    color: #888;
+  }
+
+  /* TABS */
+  .tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 22px;
+    background: #12121e;
+    border-radius: 14px;
+    padding: 6px;
+    border: 1px solid #1e1e30;
+  }
+  .tab {
+    flex: 1;
+    padding: 9px 4px;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    cursor: pointer;
+    background: transparent;
+    color: #666;
+    transition: all 0.22s;
+    line-height: 1.3;
+  }
+  .tab.active {
+    background: linear-gradient(135deg, #b8860b, #d4a843);
+    color: #080810;
+    box-shadow: 0 4px 16px rgba(212,168,67,0.3);
+  }
+
+  .section { display: none; }
+  .section.active { display: block; animation: fadeIn 0.25s ease; }
+  @keyframes fadeIn { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:none; } }
+
+  /* CARD BASE */
+  .card {
+    background: #12121e;
+    border: 1px solid #1e1e30;
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+  .card-accent { border-left: 4px solid; }
+
+  /* PILARES */
+  .pillar { border-left-color: #d4a843; }
+  .pillar-header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .pillar-icon { font-size: 1.4rem; }
+  .pillar-title { font-size: 0.88rem; font-weight: 700; }
+  .pillar-pct { margin-left: auto; font-size: 0.72rem; font-weight: 800; color: #d4a843; background: #1e1808; padding: 3px 10px; border-radius: 99px; }
+  .pillar-desc { font-size: 0.73rem; color: #aaa; line-height: 1.6; margin-bottom: 10px; }
+  .idea-list { display: flex; flex-direction: column; gap: 5px; }
+  .idea { display: flex; align-items: flex-start; gap: 7px; font-size: 0.71rem; color: #ccc; }
+  .idea::before { content: '✦'; color: #d4a843; font-size: 0.6rem; margin-top: 2px; flex-shrink: 0; }
+
+  /* FORMATOS */
+  .format-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #12121e;
+    border: 1px solid #1e1e30;
+    border-radius: 12px;
+    padding: 13px;
+    margin-bottom: 9px;
+  }
+  .format-emoji { font-size: 1.6rem; width: 38px; text-align: center; flex-shrink: 0; }
+  .format-body { flex: 1; }
+  .format-body h4 { font-size: 0.8rem; font-weight: 700; margin-bottom: 2px; }
+  .format-body p { font-size: 0.68rem; color: #999; line-height: 1.4; }
+  .freq {
+    font-size: 0.62rem;
+    font-weight: 800;
+    padding: 4px 9px;
+    border-radius: 99px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .freq-gold { background: #1e1808; color: #d4a843; }
+  .freq-green { background: #0a1f12; color: #4ade80; }
+  .freq-purple { background: #14102a; color: #a78bfa; }
+
+  /* CALENDARIO */
+  .week-card {
+    background: #12121e;
+    border: 1px solid #1e1e30;
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 10px;
+  }
+  .week-day {
+    font-size: 0.68rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #d4a843;
+    margin-bottom: 8px;
+  }
+  .cal-item {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    margin-bottom: 6px;
+    font-size: 0.72rem;
+  }
+  .cal-dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+  .dot-gold { background: #d4a843; }
+  .dot-green { background: #4ade80; }
+  .dot-blue { background: #60a5fa; }
+  .dot-pink { background: #f472b6; }
+  .cal-platform { font-weight: 700; color: #ccc; }
+  .cal-desc { color: #999; }
+
+  /* IDEAS DE CONTENIDO */
+  .idea-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .idea-card {
+    background: #12121e;
+    border: 1px solid #1e1e30;
+    border-radius: 12px;
+    padding: 13px;
+  }
+  .idea-card .tag-top {
+    font-size: 0.6rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 2px 8px;
+    border-radius: 99px;
+    margin-bottom: 7px;
+    display: inline-block;
+  }
+  .tag-viral { background: #1e0a0a; color: #f87171; }
+  .tag-trust { background: #0a1f12; color: #4ade80; }
+  .tag-edu { background: #14102a; color: #a78bfa; }
+  .tag-promo { background: #1e1808; color: #d4a843; }
+  .idea-card h4 { font-size: 0.76rem; font-weight: 700; margin-bottom: 4px; }
+  .idea-card p { font-size: 0.67rem; color: #999; line-height: 1.4; }
+
+  /* MÉTRICAS */
+  .kpi-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 14px; }
+  .kpi-card {
+    background: #12121e;
+    border: 1px solid #1e1e30;
+    border-radius: 12px;
+    padding: 14px;
+    text-align: center;
+  }
+  .kpi-val {
+    font-size: 1.5rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #d4a843, #f0c96a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .kpi-label { font-size: 0.65rem; color: #888; margin-top: 3px; line-height: 1.3; }
+
+  .objective-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #12121e;
+    border: 1px solid #1e1e30;
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+  }
+  .obj-name { font-size: 0.74rem; }
+  .obj-target { font-size: 0.7rem; font-weight: 700; color: #d4a843; }
+
+  .tip-box {
+    background: linear-gradient(135deg, #1a1208, #1e1808);
+    border: 1px solid #d4a84340;
+    border-radius: 12px;
+    padding: 14px;
+    margin-top: 16px;
+    font-size: 0.72rem;
+    color: #ccc;
+    line-height: 1.6;
+  }
+  .tip-box strong { color: #d4a843; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 12px; }
+  .legend-item { display: flex; align-items: center; gap: 5px; font-size: 0.67rem; color: #888; }
+  .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="eyebrow">✦ Plan Personalizado @angellruuiz ✦</div>
+  <h1>🃏 Ángel Ruiz · Estrategia de Contenido</h1>
+  <p>Mago e Ilusionista en Madrid · Instagram & TikTok · 2025–2026</p>
+</div>
+
+<div class="tabs">
+  <button class="tab active" onclick="showTab('pilares', this)">🎯<br>Pilares</button>
+  <button class="tab" onclick="showTab('formatos', this)">📱<br>Formatos</button>
+  <button class="tab" onclick="showTab('calendario', this)">📅<br>Semana tipo</button>
+  <button class="tab" onclick="showTab('ideas', this)">💡<br>Ideas</button>
+  <button class="tab" onclick="showTab('metricas', this)">📊<br>Métricas</button>
+</div>
+
+
+<!-- ===================== PILARES ===================== -->
+<div id="pilares" class="section active">
+
+  <div class="card card-accent pillar">
+    <div class="pillar-header">
+      <div class="pillar-icon">🃏</div>
+      <div class="pillar-title">Asombro en vivo</div>
+      <div class="pillar-pct">35%</div>
+    </div>
+    <div class="pillar-desc">El core de tu marca. Capturas de actuaciones reales, reacciones genuinas del público, close-up que provoque "¿Cómo ha hecho eso?". Es el contenido que engancha y se comparte.</div>
+    <div class="idea-list">
+      <div class="idea">Reacciones espontáneas de invitados en bodas o cenas de empresa</div>
+      <div class="idea">Efecto de cartomagia rodado en primer plano extremo</div>
+      <div class="idea">POV desde el espectador: "Lo vi con mis propios ojos"</div>
+      <div class="idea">Compilaciones de los mejores momentos de un evento</div>
+    </div>
+  </div>
+
+  <div class="card card-accent pillar">
+    <div class="pillar-header">
+      <div class="pillar-icon">🎩</div>
+      <div class="pillar-title">El mago detrás de la magia</div>
+      <div class="pillar-pct">25%</div>
+    </div>
+    <div class="pillar-desc">Humaniza tu marca. Muestra el proceso, la preparación, la técnica, tu historia con DaOrtiz. Genera confianza y diferenciación frente a magos genéricos.</div>
+    <div class="idea-list">
+      <div class="idea">Preparación antes de un evento: rituales, materiales, mentalidad</div>
+      <div class="idea">Cómo elegí estudiar con Dani DaOrtiz (historia personal)</div>
+      <div class="idea">Errores reales que cometí al empezar y qué aprendí</div>
+      <div class="idea">Mis cartas favoritas y por qué (colección personal)</div>
+    </div>
+  </div>
+
+  <div class="card card-accent pillar">
+    <div class="pillar-header">
+      <div class="pillar-icon">🧠</div>
+      <div class="pillar-title">Educación & Curiosidad</div>
+      <div class="pillar-pct">25%</div>
+    </div>
+    <div class="pillar-desc">Contenido que enseña algo. Historia de la magia, psicología del ilusionismo, por qué funciona un truco… Atrae a nuevas audiencias y posiciona como experto.</div>
+    <div class="idea-list">
+      <div class="idea">La psicología detrás de por qué no puedes ver el truco</div>
+      <div class="idea">Historia de la cartomagia en 60 segundos</div>
+      <div class="idea">"Cosas que los magos NUNCA te dicen" (sin revelar secretos)</div>
+      <div class="idea">Diferencia entre un mago de fiesta y un ilusionista profesional</div>
+    </div>
+  </div>
+
+  <div class="card card-accent pillar">
+    <div class="pillar-header">
+      <div class="pillar-icon">💼</div>
+      <div class="pillar-title">Social Proof & Contratación</div>
+      <div class="pillar-pct">15%</div>
+    </div>
+    <div class="pillar-desc">Convierte seguidores en clientes. Testimonios, marcas con las que has trabajado (Movistar, Alcampo…), proceso de contratación desmitificado.</div>
+    <div class="idea-list">
+      <div class="idea">Video-testimonio de pareja de boda antes/después del cóctel</div>
+      <div class="idea">"¿Cuánto cuesta contratar un mago?" — La respuesta honesta</div>
+      <div class="idea">Story: "Así fue mi actuación en [empresa conocida]"</div>
+      <div class="idea">Responde las 3 preguntas más frecuentes al contratar un mago</div>
+    </div>
+  </div>
+
+  <div class="tip-box">
+    <strong>✦ Tu ventaja diferencial única:</strong> Eres alumno de DaOrtiz + especializas en close-up de élite para eventos premium en Madrid. Eso no lo tiene nadie más. Úsalo en cada pilar, no solo en el de contratación.
+  </div>
+</div>
+
+
+<!-- ===================== FORMATOS ===================== -->
+<div id="formatos" class="section">
+
+  <div class="format-row">
+    <div class="format-emoji">🎬</div>
+    <div class="format-body">
+      <h4>Reel / TikTok — Reacción de asombro</h4>
+      <p>Capta la reacción real de un espectador. Sin cortes, sin música excesiva. El asombro genuino es el gancho. Hook en los primeros 1,5 segundos.</p>
+    </div>
+    <span class="freq freq-gold">4x / semana</span>
+  </div>
+
+  <div class="format-row">
+    <div class="format-emoji">🔍</div>
+    <div class="format-body">
+      <h4>Reel close-up extremo — La carta en cámara</h4>
+      <p>Macro del efecto: la carta que cambia, el objeto que aparece. Formato muy compartido. Añade texto como "¿Cómo?" para provocar comentarios.</p>
+    </div>
+    <span class="freq freq-gold">3x / semana</span>
+  </div>
+
+  <div class="format-row">
+    <div class="format-emoji">📖</div>
+    <div class="format-body">
+      <h4>Stories diarias — Detrás de cámaras</h4>
+      <p>Fácil de consumir y de producir. Camino a un evento, preparación, poll del día ("¿Sabrías cómo hago esto?"), sticker de preguntas.</p>
+    </div>
+    <span class="freq freq-green">Cada día</span>
+  </div>
+
+  <div class="format-row">
+    <div class="format-emoji">🎙️</div>
+    <div class="format-body">
+      <h4>Talking-head con subtítulos — Educar o provocar</h4>
+      <p>Tú hablando a cámara. "El mayor mito sobre los magos", "Por qué no revelo mis trucos". Genera conversación y humaniza la marca.</p>
+    </div>
+    <span class="freq freq-gold">2x / semana</span>
+  </div>
+
+  <div class="format-row">
+    <div class="format-emoji">📸</div>
+    <div class="format-body">
+      <h4>Foto de evento + copy potente</h4>
+      <p>Imagen de actuación en boda o empresa con un caption que cuente la historia del momento. Ideal para Instagram feed.</p>
+    </div>
+    <span class="freq freq-gold">2x / semana</span>
+  </div>
+
+  <div class="format-row">
+    <div class="format-emoji">🔴</div>
+    <div class="format-body">
+      <h4>Live de magia en directo</h4>
+      <p>Actúa en directo, responde preguntas, haz participar a los viewers. Notificación a seguidores = pico de engagement garantizado.</p>
+    </div>
+    <span class="freq freq-purple">1x / mes</span>
+  </div>
+
+</div>
+
+
+<!-- ===================== CALENDARIO ===================== -->
+<div id="calendario" class="section">
+
+  <div class="week-card">
+    <div class="week-day">🌙 Lunes — Arranque fuerte</div>
+    <div class="cal-item"><div class="cal-dot dot-gold"></div><div><span class="cal-platform">Reel/TikTok:</span> <span class="cal-desc">Efecto de cartomagia en close-up extremo. Hook: "¿Ves algo raro?" Caption: llama a comentar.</span></div></div>
+    <div class="cal-item"><div class="cal-dot dot-blue"></div><div><span class="cal-platform">Stories:</span> <span class="cal-desc">Poll del día — "¿Crees que puedes adivinar la carta?" + cuenta atrás al vídeo</span></div></div>
+  </div>
+
+  <div class="week-card">
+    <div class="week-day">🔥 Martes — Humanizar</div>
+    <div class="cal-item"><div class="cal-dot dot-pink"></div><div><span class="cal-platform">TikTok/Reel:</span> <span class="cal-desc">BTS o talking-head: "Lo que nadie te cuenta sobre ser mago en Madrid"</span></div></div>
+    <div class="cal-item"><div class="cal-dot dot-blue"></div><div><span class="cal-platform">Stories:</span> <span class="cal-desc">Sticker de preguntas: "Pregúntame lo que quieras sobre magia"</span></div></div>
+  </div>
+
+  <div class="week-card">
+    <div class="week-day">🎯 Miércoles — Prueba social</div>
+    <div class="cal-item"><div class="cal-dot dot-green"></div><div><span class="cal-platform">Reel/Post:</span> <span class="cal-desc">Reacción real de boda o evento corporativo. Caption con testimonio del cliente.</span></div></div>
+    <div class="cal-item"><div class="cal-dot dot-blue"></div><div><span class="cal-platform">Stories:</span> <span class="cal-desc">Repost de story del cliente o foto del evento + "Así fue la noche de [nombre]"</span></div></div>
+  </div>
+
+  <div class="week-card">
+    <div class="week-day">🧠 Jueves — Educar & provocar</div>
+    <div class="cal-item"><div class="cal-dot dot-gold"></div><div><span class="cal-platform">TikTok/Reel:</span> <span class="cal-desc">Talking-head educativo: "La psicología de por qué no ves el truco" o mito sobre magos</span></div></div>
+    <div class="cal-item"><div class="cal-dot dot-blue"></div><div><span class="cal-platform">Stories:</span> <span class="cal-desc">Continuación del tema: respuestas al sticker de ayer, más info</span></div></div>
+  </div>
+
+  <div class="week-card">
+    <div class="week-day">✨ Viernes — Asombro & viral</div>
+    <div class="cal-item"><div class="cal-dot dot-gold"></div><div><span class="cal-platform">Reel/TikTok:</span> <span class="cal-desc">Tu mejor efecto de la semana. El más espectacular, el que más "¿CÓMO?" provoque.</span></div></div>
+    <div class="cal-item"><div class="cal-dot dot-blue"></div><div><span class="cal-platform">Stories:</span> <span class="cal-desc">"Esta semana actué en… " Mini-resumen de la semana, qué viene la próxima</span></div></div>
+  </div>
+
+  <div class="week-card">
+    <div class="week-day">🎪 Sábado — Comunidad & casual</div>
+    <div class="cal-item"><div class="cal-dot dot-pink"></div><div><span class="cal-platform">TikTok:</span> <span class="cal-desc">Contenido más distendido o trending: dueto, reto, algo de tu día libre</span></div></div>
+    <div class="cal-item"><div class="cal-dot dot-blue"></div><div><span class="cal-platform">Stories:</span> <span class="cal-desc">Muestra tu lado más personal: descanso, aficiones, Madrid en sábado</span></div></div>
+  </div>
+
+  <div class="tip-box">
+    <strong>✦ Mejor hora para publicar en tu caso:</strong> Reels/TikTok → 18:00–21:00h. Stories → mañana (9–10h) y tarde (19–20h). Domingo: descansa o programa contenido. La constancia vale más que la perfección.
+  </div>
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot dot-gold" style="background:#d4a843"></div>Vídeo principal</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#4ade80"></div>Social proof</div>
+    <div class="legend-item"><div class="legend-dot dot-blue" style="background:#60a5fa"></div>Stories</div>
+    <div class="legend-item"><div class="legend-dot dot-pink" style="background:#f472b6"></div>BTS / personal</div>
+  </div>
+</div>
+
+
+<!-- ===================== IDEAS ===================== -->
+<div id="ideas" class="section">
+  <div class="idea-grid">
+
+    <div class="idea-card">
+      <span class="tag-top tag-viral">🔥 Viral</span>
+      <h4>"Adivina la carta" Challenge</h4>
+      <p>Pide a tus seguidores que elijan una carta mentalmente. Revela en el siguiente vídeo. Genera expectativa y comentarios.</p>
+    </div>
+
+    <div class="idea-card">
+      <span class="tag-top tag-trust">✅ Confianza</span>
+      <h4>Mago vs. Agencia</h4>
+      <p>"Por qué contratar un mago directamente vs. a través de agencia" — Honesto, útil, posiciona frente a la competencia.</p>
+    </div>
+
+    <div class="idea-card">
+      <span class="tag-top tag-edu">🧠 Educativo</span>
+      <h4>Historia de DaOrtiz en 60"</h4>
+      <p>Tu conexión con la escuela más importante de cartomagia. Cuenta qué aprendiste y cómo cambió tu forma de hacer magia.</p>
+    </div>
+
+    <div class="idea-card">
+      <span class="tag-top tag-viral">🔥 Viral</span>
+      <h4>Reacción de la abuela / el escéptico</h4>
+      <p>Busca al espectador más difícil del evento. La reacción del más incrédulo genera más empatía y shares.</p>
+    </div>
+
+    <div class="idea-card">
+      <span class="tag-top tag-promo">💼 Promo</span>
+      <h4>"Así fue la boda de [nombre]"</h4>
+      <p>Mini documental de 30–60" de un evento real con permiso del cliente. Prueba social + storytelling.</p>
+    </div>
+
+    <div class="idea-card">
+      <span class="tag-top tag-edu">🧠 Educativo</span>
+      <h4>Mitos sobre la magia</h4>
+      <p>"Los magos usan espejos" ❌ / "Todo está preparado" ❌. Desmonta creencias falsas con humor y autoridad.</p>
+    </div>
+
+    <div class="idea-card">
+      <span class="tag-top tag-viral">🔥 Viral</span>
+      <h4>POV: Ser mago en una boda en Madrid</h4>
+      <p>Vídeo en primera persona del día del evento: llegada a la finca, preparación, actuación, fin.</p>
+    </div>
+
+    <div class="idea-card">
+      <span class="tag-top tag-trust">✅ Confianza</span>
+      <h4>"¿Cuánto cuesta un mago?"</h4>
+      <p>El vídeo más buscado por tus clientes potenciales. Sé honesto, explica los rangos y qué determina el precio.</p>
+    </div>
+
+    <div class="idea-card">
+      <span class="tag-top tag-viral">🔥 Viral</span>
+      <h4>El efecto que más falla — y por qué</h4>
+      <p>Muestra un momento de tensión real o un ensayo que salió mal. La vulnerabilidad genera conexión y millones de views.</p>
+    </div>
+
+    <div class="idea-card">
+      <span class="tag-top tag-edu">🧠 Educativo</span>
+      <h4>¿Qué es la cartomagia purista?</h4>
+      <p>Explica en 60" qué la diferencia de la magia "normal". Tu especialidad explicada para no iniciados. Te posiciona como nicho de élite.</p>
+    </div>
+
+    <div class="idea-card">
+      <span class="tag-top tag-viral">🔥 Viral</span>
+      <h4>Dueto con otro creator de magia</h4>
+      <p>Colabora con otro mago o ilusionista de TikTok/IG. El crossover de audiencias es el atajo más rápido para crecer.</p>
+    </div>
+
+    <div class="idea-card">
+      <span class="tag-top tag-promo">💼 Promo</span>
+      <h4>"Así es actuar en La Finca / Somosaguas"</h4>
+      <p>Muestra las fincas exclusivas donde trabajas. Aspira a tu cliente ideal y demuestra que ya estás en su mundo.</p>
+    </div>
+
+    <div class="idea-card">
+      <span class="tag-top tag-trust">✅ Confianza</span>
+      <h4>Testimonios en vídeo espontáneos</h4>
+      <p>Al final de la actuación, pide a 2-3 invitados que graben 10 segundos diciendo qué sintieron. Sin guión, sin edición. Oro puro.</p>
+    </div>
+
+    <div class="idea-card">
+      <span class="tag-top tag-edu">🧠 Educativo</span>
+      <h4>"3 cosas que hago ANTES de cada evento"</h4>
+      <p>Ritual de preparación: mentalidad, material, reconocimiento del espacio. Humaniza y profesionaliza tu imagen a la vez.</p>
+    </div>
+
+    <div class="idea-card">
+      <span class="tag-top tag-viral">🔥 Viral</span>
+      <h4>Magia en la calle de Madrid</h4>
+      <p>Sal a Malasaña, Retiro o Gran Vía y actúa con transeúntes. Las reacciones de desconocidos son las más auténticas y virales.</p>
+    </div>
+
+    <div class="idea-card">
+      <span class="tag-top tag-edu">🧠 Educativo</span>
+      <h4>La diferencia entre ilusionismo y mentalismo</h4>
+      <p>Contenido educativo que también amplía tu autoridad. Muchos lo confunden. Tú lo aclaras como experto.</p>
+    </div>
+
+    <div class="idea-card">
+      <span class="tag-top tag-promo">💼 Promo</span>
+      <h4>"¿Cuándo es el mejor momento para el mago en una boda?"</h4>
+      <p>Guía práctica para novios. El cóctel, la hora del postre… Útil para quien te va a contratar y demuestra que conoces los eventos por dentro.</p>
+    </div>
+
+    <div class="idea-card">
+      <span class="tag-top tag-viral">🔥 Viral</span>
+      <h4>Speed-run de tu día en un evento</h4>
+      <p>Comprime un día completo (de casa al evento y vuelta) en 30-45 segundos con timelapse y música. Formato muy replicado y fácil de ver.</p>
+    </div>
+
+    <div class="idea-card">
+      <span class="tag-top tag-trust">✅ Confianza</span>
+      <h4>"Por qué estudio magia desde hace 10 años"</h4>
+      <p>Storytelling de origen. ¿Qué te enganchó? ¿Cuál fue tu primer truco? La historia personal genera la comunidad más fiel.</p>
+    </div>
+
+    <div class="idea-card">
+      <span class="tag-top tag-viral">🔥 Viral</span>
+      <h4>Reto: "Encuentra el fallo"</h4>
+      <p>Muestra un efecto y reta a los seguidores a encontrar cómo lo haces. Los comentarios explotan. El algoritmo lo premia.</p>
+    </div>
+
+    <div class="idea-card">
+      <span class="tag-top tag-edu">🧠 Educativo</span>
+      <h4>Los 5 magos que debes conocer</h4>
+      <p>Lista de referentes mundiales (DaOrtiz, Erdnase, Lennart Green…). Posicionas tu linaje y aportas valor a fans de la magia.</p>
+    </div>
+
+    <div class="idea-card">
+      <span class="tag-top tag-promo">💼 Promo</span>
+      <h4>Team Building mágico: ¿cómo funciona?</h4>
+      <p>Explica tu servicio para empresas en formato educativo. Habla de Movistar u otras marcas. Atrae a responsables de RRHH y eventos.</p>
+    </div>
+
+    <div class="idea-card">
+      <span class="tag-top tag-trust">✅ Confianza</span>
+      <h4>Antes y después del cóctel (con mago vs. sin mago)</h4>
+      <p>Recoge testimonios que describan cómo era el ambiente antes y después de tu actuación. Demuestra el ROI emocional de contratarte.</p>
+    </div>
+
+  </div>
+
+  <div class="tip-box" style="margin-top:14px;">
+    <strong>✦ Hashtags clave para @angellruuiz:</strong><br>
+    Instagram: #magomadrid #ilusionistamadrid #magiadecerca #bodas2026 #eventoscorporativos #cartomagia #daortiz<br>
+    TikTok: #mago #magia #closeupmagic #ilusionismo #madrid #foryou #fyp #bodas
+  </div>
+</div>
+
+
+<!-- ===================== MÉTRICAS ===================== -->
+<div id="metricas" class="section">
+
+  <div class="kpi-grid">
+    <div class="kpi-card">
+      <div class="kpi-val">9–11</div>
+      <div class="kpi-label">Posts por semana (Reels + Stories)</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-val">30d</div>
+      <div class="kpi-label">Para ver primeros resultados medibles</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-val">90d</div>
+      <div class="kpi-label">Para comunidad activa y primeros leads orgánicos</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-val">5%+</div>
+      <div class="kpi-label">Engagement rate objetivo (muy alto = comunidad real)</div>
+    </div>
+  </div>
+
+  <div class="objective-row">
+    <span class="obj-name">📈 Seguidores nuevos</span>
+    <span class="obj-target">+200/mes → +500/mes (mes 3+)</span>
+  </div>
+  <div class="objective-row">
+    <span class="obj-name">💾 Guardados por Reel</span>
+    <span class="obj-target">Métrica #1 para el algoritmo</span>
+  </div>
+  <div class="objective-row">
+    <span class="obj-name">↗️ Compartidos / Shares</span>
+    <span class="obj-target">Indica contenido de asombro real</span>
+  </div>
+  <div class="objective-row">
+    <span class="obj-name">📩 DMs recibidos</span>
+    <span class="obj-target">Proxy de intención de contratación</span>
+  </div>
+  <div class="objective-row">
+    <span class="obj-name">🌐 Clicks a angelruiz.world</span>
+    <span class="obj-target">Bio link + stories con enlace (IG)</span>
+  </div>
+  <div class="objective-row">
+    <span class="obj-name">🎥 Vídeos >50K views</span>
+    <span class="obj-target">Objetivo: 1 viral/mes en TikTok</span>
+  </div>
+
+  <div class="tip-box">
+    <strong>✦ Regla de oro para tu nicho:</strong> El contenido de magia tiene un superpoder — el asombro se comparte solo. No necesitas trucos de marketing, necesitas que la cámara esté encendida cuando ocurre el milagro. Cada actuación es potencialmente viral. <strong>Grábalo todo, publica lo mejor.</strong>
+  </div>
+</div>
+
+<script>
+  function showTab(id, el) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    el.classList.add('active');
+  }
+</script>
+</body>
+</html>
