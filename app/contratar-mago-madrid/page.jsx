@@ -26,10 +26,10 @@ export default function ContratarMagoMadridPage() {
         "mainEntity": [
             { 
                 "@type": "Question", 
-                "name": "¿Cuánto cuesta contratar un mago en Madrid?", 
+                "name": "¿Cuánto cuesta contratar un mago en Madrid? (Precios 2026)", 
                 "acceptedAnswer": { 
                     "@type": "Answer", 
-                    "text": "El precio para contratar un mago en Madrid varía entre 400€ y 900€ para eventos sociales como bodas o fiestas privadas. Para eventos corporativos y ferias, la tarifa base suele partir de 600€ por jornada, dependiendo del formato y los requerimientos técnicos. El presupuesto se personaliza siempre según las necesidades del cliente." 
+                    "text": "El precio mago boda 2026 y fiestas privadas varía entre 400€ y 900€. Si necesitas saber el precio mago cena empresa o evento corporativo, la tarifa base suele partir de 600€ por jornada, dependiendo del formato y requerimientos. El presupuesto se personaliza siempre." 
                 } 
             },
             { 
@@ -78,6 +78,14 @@ export default function ContratarMagoMadridPage() {
                 "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "El servicio incluye la asesoría inicial para estructurar el evento, la personalización de la rutina si es para empresas (incorporando mensajes o logotipos), y la ejecución milimétrica del show de magia en el evento, garantizando una técnica depurada y control de atención total."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "¿Hay que pagar señal para reservar? ¿Y si llueve?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, se requiere una señal en concepto de reserva para bloquear la fecha (especialmente en temporada alta). En caso de lluvia, la magia de cerca es totalmente adaptable a interiores, por lo que el show nunca se cancela por este motivo."
                 }
             }
         ]
@@ -219,13 +227,20 @@ export default function ContratarMagoMadridPage() {
                     {/* CONTACT BAR */}
                     <div className="bg-gradient-to-r from-emerald-900/20 to-zinc-900/40 backdrop-blur-3xl border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] rounded-[2rem] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
                         <div>
-                            <h2 className="text-2xl font-[Cinzel] text-white font-bold mb-2">Solicitar Disponibilidad y Tarifas</h2>
-                            <p className="text-slate-400 text-sm max-w-lg">
+                            <h2 className="text-2xl font-[Cinzel] text-white font-bold mb-2">Precios Mago Madrid 2026: desde 400€</h2>
+                            <p className="text-slate-400 text-sm max-w-lg mb-4">
                                 Tarifas base desde 400€ (Particulares) y 600€ (Corporativo). El presupuesto exacto se compila tras evaluar las variables de tu evento. Rellena el formulario o contacta por WhatsApp para un diseño a medida.
                             </p>
+                            <p className="text-amber-500 text-xs font-bold uppercase tracking-widest animate-pulse">
+                                Temporada alta: disponibilidad limitada
+                            </p>
                         </div>
-                        <div className="active:scale-[0.97] transition-transform duration-200 shrink-0">
+                        <div className="flex flex-col gap-4 items-end active:scale-[0.97] transition-transform duration-200 shrink-0">
                             <ContactButtonClient label="INICIAR CONTACTO" />
+                            <a href="https://wa.me/34648055636" target="_blank" rel="noopener noreferrer" className="text-sm text-emerald-400 hover:text-emerald-300 font-bold flex items-center gap-2 transition-colors">
+                                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                                Consultar disponibilidad ahora
+                            </a>
                         </div>
                     </div>
                 </main>

@@ -195,6 +195,29 @@ export default function EmpresasPage() {
                             </aside>
                         </div>
 
+                        {/* SEO Content Block Elevated */}
+                        <section className="pt-24 px-6 max-w-7xl mx-auto">
+                            <div className="max-w-4xl mx-auto">
+                                <h2 className="text-2xl md:text-3xl font-sans font-black uppercase tracking-tighter text-[#EAEAEA] mb-6 border-l-4 border-amber-500 pl-4">
+                                    Mago Profesional para Eventos de Empresa en Madrid
+                                </h2>
+                                <div className="space-y-4 text-sm text-[#EAEAEA]/70 leading-relaxed">
+                                    <p>
+                                        Contratar un <strong className="text-[#EAEAEA]">mago para empresas en Madrid</strong> es hoy una de las decisiones más inteligentes para cualquier departamento de eventos o recursos humanos. En un mercado saturado de propuestas genéricas, la magia profesional corporativa destaca como la única experiencia que genera sorpresa real, recordación de marca y conexión emocional entre los asistentes. Nuestras tarifas parten <strong>desde 500€ para cócteles y desde 700€ para sobremesa</strong>.
+                                    </p>
+                                    <p>
+                                        Ángel Ruiz lleva más de 10 años especializándose en <strong className="text-[#EAEAEA]">ilusionismo para el entorno corporativo</strong>: como <a href="/empresas/mago-para-restaurantes-madrid" className="text-amber-500 hover:underline">mago para cena de navidad empresa Madrid</a> y cenas de verano, convenciones de ventas, <a href="/empresas/mago-ferias-congresos-madrid" className="text-amber-500 hover:underline">ferias y congresos en IFEMA</a>, y cócteles de alto nivel en toda la Comunidad de Madrid. Su metodología combina magia de cerca (close-up), mentalismo y personalización de marca para crear impactos memorables.
+                                    </p>
+                                    <p>
+                                        A diferencia de un animador convencional, un <a href="/empresas/mago-conferenciante-madrid" className="text-amber-500 hover:underline">mago corporativo y conferenciante</a> adapta cada efecto al lenguaje y valores de tu organización: puede integrar el nombre de un cliente en un efecto imposible, revelar el eslogan de campaña de forma asombrosa o usar dinámicas de <a href="/empresas/mago-team-building-madrid" className="text-amber-500 hover:underline">mago team building Madrid</a> como metáfora visual de liderazgo durante una keynote.
+                                    </p>
+                                    <p>
+                                        Sus servicios cubren toda la <strong className="text-[#EAEAEA]">Comunidad de Madrid</strong>: Madrid capital (La Castellana, IFEMA, Salamanca), zonas empresariales (Las Rozas, Pozuelo, Majadahonda, Alcobendas, La Moraleja) y la Sierra. Con más de 39 reseñas de 5 estrellas y clientes como Movistar Estudiantes, es el <strong className="text-[#EAEAEA]">mago de referencia para eventos corporativos en Madrid</strong>.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
                         <div className="mt-24 border-t border-b border-amber-500/30 py-8 relative overflow-hidden bg-[#0A0A0A]">
                             <div className="absolute top-0 left-0 text-[10px] text-amber-500 px-2 py-1 bg-amber-500/10 border-b border-r border-amber-500/30">
                                 [ PARTNERS_DE_CONFIANZA ]
@@ -249,28 +272,6 @@ export default function EmpresasPage() {
                         </div>
                     </section>
 
-                    {/* SEO Content Block */}
-                    <section className="pt-24 px-6 max-w-7xl mx-auto">
-                        <div className="max-w-4xl mx-auto">
-                            <h2 className="text-2xl md:text-3xl font-sans font-black uppercase tracking-tighter text-[#EAEAEA] mb-6 border-l-4 border-amber-500 pl-4">
-                                Mago Profesional para Eventos de Empresa en Madrid
-                            </h2>
-                            <div className="space-y-4 text-sm text-[#EAEAEA]/70 leading-relaxed">
-                                <p>
-                                    Contratar un <strong className="text-[#EAEAEA]">mago para empresas en Madrid</strong> es hoy una de las decisiones más inteligentes para cualquier departamento de eventos o recursos humanos. En un mercado saturado de propuestas genéricas, la magia profesional corporativa destaca como la única experiencia que genera sorpresa real, recordación de marca y conexión emocional entre los asistentes.
-                                </p>
-                                <p>
-                                    Ángel Ruiz lleva más de 10 años especializándose en <strong className="text-[#EAEAEA]">ilusionismo para el entorno corporativo</strong>: cenas de empresa navideñas y de verano, team building, lanzamientos de producto, convenciones de ventas, ferias en IFEMA y cócteles de alto nivel en toda la Comunidad de Madrid. Su metodología combina magia de cerca (close-up), mentalismo y personalización de marca para crear impactos memorables.
-                                </p>
-                                <p>
-                                    A diferencia de un animador convencional, un <strong className="text-[#EAEAEA]">mago corporativo</strong> adapta cada efecto al lenguaje y valores de tu organización: puede integrar el nombre de un cliente en un efecto imposible, revelar el eslogan de campaña de forma asombrosa o usar la magia como metáfora visual de liderazgo durante una keynote.
-                                </p>
-                                <p>
-                                    Sus servicios cubren toda la <strong className="text-[#EAEAEA]">Comunidad de Madrid</strong>: Madrid capital (La Castellana, IFEMA, Salamanca), zonas empresariales (Las Rozas, Pozuelo, Majadahonda, Alcobendas, La Moraleja) y la Sierra. Con más de 39 reseñas de 5 estrellas y clientes como Movistar Estudiantes, es el <strong className="text-[#EAEAEA]">mago de referencia para eventos corporativos en Madrid</strong>.
-                                </p>
-                            </div>
-                        </div>
-                    </section>
 
                     {/* FAQ Section */}
                     <section className="py-16 px-6 max-w-7xl mx-auto border-t border-amber-500/20 mt-16">

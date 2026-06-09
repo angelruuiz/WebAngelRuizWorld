@@ -123,7 +123,7 @@ export default function MagoCloseUpMadridPage() {
                             </div>
                             <div className="max-w-md mt-12 md:mt-0">
                                 <p className="text-slate-400 text-sm md:text-base leading-relaxed">
-                                    Ejecución milimétrica a centímetros del espectador. El <strong>Sleight of hand</strong> en su estado más puro, sin escenarios, sin barreras. Ilusionismo táctil para mentes exigentes en Madrid.
+                                    Ejecución milimétrica a centímetros del espectador, ideal para <strong>bodas y cócteles</strong>. El <strong>Sleight of hand</strong> en su estado más puro, sin escenarios, sin barreras. Ilusionismo táctil para mentes exigentes en Madrid.
                                 </p>
                             </div>
                         </div>
@@ -143,9 +143,12 @@ export default function MagoCloseUpMadridPage() {
                     {/* 2. BENEFICIOS DEL CLOSE-UP */}
                     <section className="mb-24">
                         <div className="mb-12 md:mb-16">
-                            <h2 className="text-4xl md:text-5xl font-[Cinzel] text-white font-bold mb-4">La Fuerza de lo Táctil</h2>
+                            <h2 className="text-4xl md:text-5xl font-[Cinzel] text-white font-bold mb-4">Mago Close-Up Madrid para Bodas y Eventos</h2>
+                            <p className="text-slate-400 max-w-2xl leading-relaxed mb-4">
+                                La micromagia elimina la cuarta pared en bodas y cócteles. El engaño se construye mediante la interacción psicológica y una prestidigitación impecable, aportando un toque exclusivo a tu celebración.
+                            </p>
                             <p className="text-slate-400 max-w-2xl leading-relaxed">
-                                La micromagia elimina la cuarta pared. El engaño se construye mediante la interacción psicológica y una prestidigitación impecable.
+                                Contratar un servicio de <strong>close-up en bodas Madrid</strong> garantiza que durante la recepción o el cóctel no haya momentos vacíos, manteniendo a todos los invitados asombrados y conectados.
                             </p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -208,7 +211,7 @@ export default function MagoCloseUpMadridPage() {
                     <section className="mb-24">
                         <div className="text-center mb-16">
                             <h2 className="text-3xl md:text-5xl font-[Cinzel] text-white font-bold mb-4">Protocolo Operativo</h2>
-                            <p className="text-slate-400">Cómo se integra la magia de proximidad en tu evento.</p>
+                            <p className="text-slate-400">Cómo se integra la magia de proximidad en tu evento. Puedes <a href="/contratar-mago-madrid" className="text-amber-500 hover:underline">ver tarifas</a> en la sección de contratación.</p>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {[

@@ -29,7 +29,7 @@ const SEOContent = () => {
                         <div className="pt-8 border-t border-white/10 space-y-6">
                             <p className="text-xs uppercase tracking-[0.3em] font-bold text-amber-500 mb-2 text-left">Experiencia Certificada y Formación de Élite</p>
                             <p className="text-sm md:text-base leading-relaxed text-gold-50/90">
-                                Ángel Ruiz se ha consolidado como uno de los <strong className="text-amber-400">ilusionistas más modernos de la capital</strong>, formado en la prestigiosa <u>Escuela de Magia de Dani DaOrtiz</u>. Esta formación de élite se traduce en una especialización en <strong>Cartomagia Purista</strong> y un "caos controlado" que lo distancia de los magos genéricos. Como <strong>mago para bodas en Madrid</strong> e ilusionista de alto nivel para marcas, su enfoque se centra en la <u>magia de cerca (close-up) de alta calidad</u>, donde el milagro ocurre literalmente a escasos centímetros del espectador.
+                                Ángel Ruiz se ha consolidado como uno de los <strong className="text-amber-400">ilusionistas más modernos de la capital</strong> y como el <strong>mago para bodas en Madrid</strong> más solicitado, formado en la prestigiosa <u>Escuela de Magia de Dani DaOrtiz</u>. Esta formación de élite se traduce en una especialización en <strong>Cartomagia Purista</strong> y un "caos controlado" que lo distancia de los magos genéricos. Como experto <strong>mago para bodas en Madrid</strong> e ilusionista de alto nivel para marcas, su enfoque se centra en la <u>magia de cerca (close-up) de alta calidad</u>, donde el milagro ocurre literalmente a escasos centímetros del espectador.
                             </p>
                             <p className="text-sm md:text-base leading-relaxed text-gold-50/90">
                                 En un mercado saturado de agencias, mi propuesta ofrece la distinción de un <strong>especialista</strong>. Mi magia no solo ejecuta trucos; se trata de <strong>diseñar atmósferas de asombro inteligente</strong>. Ya sea en un cóctel de bienvenida o en una cena de gala corporativa, mi trabajo bajo el sello de la cartomagia de autor asegura que tu celebración sea recordada por su sofisticación y verdadera imposibilidad.
@@ -87,7 +87,7 @@ const SEOContent = () => {
 
                     {/* Features block - Span 4 x3 */}
                     <PerpetualCard className="md:col-span-12 lg:col-span-4 flex flex-col justify-start">
-                        <h3 className="text-white font-[Cinzel] text-xl uppercase tracking-tight mb-4 border-b border-white/10 pb-4">Magia para Bodas Exclusivas</h3>
+                        <h2 className="text-white font-[Cinzel] text-xl uppercase tracking-tight mb-4 border-b border-white/10 pb-4">Mago para Bodas en Madrid</h2>
                         <p className="text-sm md:text-base leading-relaxed text-gold-50/80">
                             El <strong className="text-amber-500">mago para bodas en Madrid</strong> es la figura que asegura que el cóctel de bienvenida no sea "solo una espera". Mi magia de cerca rompe el hielo de forma elegante, uniendo a familias y amigos bajo un mismo sentimiento de asombro y alegría.
                         </p>
@@ -103,7 +103,7 @@ const SEOContent = () => {
                     <PerpetualCard className="md:col-span-12 lg:col-span-4 flex flex-col justify-start">
                         <h3 className="text-white font-[Cinzel] text-xl uppercase tracking-tight mb-4 border-b border-white/10 pb-4">Experto en Magia en Madrid</h3>
                         <p className="text-sm md:text-base leading-relaxed text-gold-50/80">
-                            Reconocido como un <strong className="text-amber-500">experto en magia en Madrid</strong>, aporto años de experiencia y técnica refinada (Escuela DaOrtiz) para garantizar el éxito de tu evento, con puntualidad y excelencia técnica en toda la Comunidad.
+                            Reconocido como un <strong className="text-amber-500">experto en magia en Madrid</strong>, aporto años de experiencia y técnica refinada (Escuela DaOrtiz) en especialidades como <a href="/mago-close-up-madrid" className="text-amber-400 hover:text-white underline decoration-amber-500/30">magia de cerca</a> para garantizar el éxito de tu evento, con puntualidad y excelencia técnica en toda la Comunidad.
                         </p>
                     </PerpetualCard>
 
@@ -125,7 +125,7 @@ const SEOContent = () => {
                         <div>
                             <h2 className="text-2xl font-[Cinzel] text-white mb-6 uppercase tracking-widest">¿Hablamos del asombro que merece tu próximo evento?</h2>
                             <p className="text-sm md:text-base text-gold-50/90 leading-relaxed mb-8">
-                                Cada actuación es personalizada. No busco simplemente "hacer trucos", busco entender la dinámica de tu celebración para aportar el máximo valor posible a través del <strong>ilusionismo profesional</strong>. <u>La magia es el lenguaje universal del asombro</u>, déjame hablarlo para tus invitados.
+                                Cada actuación es personalizada. No busco simplemente "hacer trucos", busco entender la dinámica de tu celebración para aportar el máximo valor posible a través del <strong>ilusionismo profesional</strong>. <u>La magia es el lenguaje universal del asombro</u>, déjame hablarlo para tus invitados. Si quieres consultar tarifas, visita la sección para <a href="/contratar-mago-madrid" className="text-amber-500 hover:underline font-bold">contratar mago Madrid</a>.
                             </p>
                         </div>
                         <a href="/mago-sierra-madrid" className="group inline-block bg-white text-surface-0 font-bold px-8 py-4 rounded-full hover:bg-amber-500 hover:scale-[1.02] active:scale-[0.97] transition-all duration-[160ms] ease-out uppercase tracking-[0.2em] text-xs">
@@ -283,6 +283,19 @@ export default function Home() {
                                 "https://tiktok.com/@angellruuiz",
                                 "https://youtube.com/@angellruuiz",
                                 "https://facebook.com/angellruuiz"
+                            ]
+                        },
+                        {
+                            "@type": "FAQPage",
+                            "mainEntity": [
+                                {
+                                    "@type": "Question",
+                                    "name": "¿Por qué contratar un mago profesional para tu evento?",
+                                    "acceptedAnswer": {
+                                        "@type": "Answer",
+                                        "text": "Contratar un mago profesional con trayectoria no es solo añadir un número de entretenimiento; es transformar radicalmente la percepción de tus invitados sobre el evento. El ilusionismo moderno sirve para: Networking Natural, Eliminar tiempos muertos, y Refuerzo de Marca."
+                                    }
+                                }
                             ]
                         }
                     ]
