@@ -36,9 +36,9 @@ Más allá del buffet, pensad en carritos de helados antiguos, cortadores de jam
 
 Una tendencia que ha llegado para quedarse en las fiestas post-banquete. Un equipo de maquilladores profesionales que llena de brillo y color a los invitados durante el baile.
 
-### 6. Mentalismo Psicológico Proyectos
+### 6. Cartomagia de Autor
 
-Imaginería un artista capaz de adivinar el nombre del primer amor de un invitado o el código de desbloqueo de su teléfono. El **mentalismo en Madrid** es una de las opciones más sofisticadas para bodas que buscan un toque intelectual y misterioso.
+Imagina un artista capaz de hacer aparecer una carta firmada en el lugar más imposible o de transformar un billete prestado ante tus ojos. La **cartomagia de autor en Madrid** es una de las opciones más sofisticadas para bodas que buscan un toque intelectual y misterioso.
 
 ### 7. Videoboard de Mensajes en Tiempo Real
 

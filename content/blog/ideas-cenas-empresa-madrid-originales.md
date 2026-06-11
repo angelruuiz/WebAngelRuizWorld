@@ -30,7 +30,7 @@ No hablamos del clásico espectáculo infantil, sino de **ilusionismo estratégi
 Existen principalmente dos formatos que encajan a la perfección en la dinámica de las cenas corporativas madrileñas:
 
 1.  **Magia de Cóctel (Rompehielos):** Durante la recepción previa a la cena. El mago se acerca a los corrillos que se van formando, realizando trucos impactantes a pocos centímetros de los ojos de los asistentes. Es la manera perfecta de arrancar sonrisas y relajar el ambiente desde el minuto uno.
-2.  **Espectáculo Central de Sobremesa:** Justo después de los postres (o de los posibles discursos de dirección), un show de mentalismo participativo de unos 30-40 minutos capta la atención de toda la sala, uniendo a toda la plantilla bajo una misma experiencia colectiva.
+2.  **Espectáculo Central de Sobremesa:** Justo después de los postres (o de los posibles discursos de dirección), un show de magia de salón participativa de unos 30-40 minutos capta la atención de toda la sala, uniendo a toda la plantilla bajo una misma experiencia colectiva.
 
 ### Un Retorno de Inversión (ROI) Emocional
 

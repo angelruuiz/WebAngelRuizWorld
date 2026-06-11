@@ -35,7 +35,7 @@ Antes de buscar presupuestos, necesitas saber qué tipo de actuación se adapta 
 
 ### Magia de Cerca o Close-Up
 
-Es la modalidad más demandada en Madrid. El mago actúa directamente entre los asistentes, realizando efectos imposibles a centímetros de sus ojos: cartas que desaparecen, monedas que atraviesan objetos sólidos, mentalismo de cerca. No necesita escenario ni equipos técnicos. Es perfecta para:
+Es la modalidad más demandada en Madrid. El mago actúa directamente entre los asistentes, realizando efectos imposibles a centímetros de sus ojos: cartas que desaparecen, monedas que atraviesan objetos sólidos, magia de cerca. No necesita escenario ni equipos técnicos. Es perfecta para:
 
 - **Cócteles de boda**: El momento estrella. Rompe el hielo entre invitados mientras los novios hacen fotos.
 - **Cenas de empresa**: Magia de mesa entre plato y plato, o itinerante durante el cóctel.
@@ -50,9 +50,9 @@ El mago actúa en un espacio delimitado ante un público que observa desde su po
 - Galas corporativas de empresa
 - Eventos donde todo el público debe ver al mismo tiempo
 
-### Mentalismo
+### Magia de Salón
 
-Una rama especial de la magia que explora la psicología y la percepción. El ilusionista parece leer la mente, predecir decisiones o influir en los pensamientos del espectador. Tiene un impacto emocional muy potente y es especialmente eficaz en:
+Un formato pensado para que todo el grupo disfrute del espectáculo a la vez: cartomagia de autor, participación del público y rutinas de gran impacto visual con una puesta en escena elegante. Es especialmente eficaz en:
 
 - Keynotes y charlas motivacionales
 - Eventos ejecutivos y de alto nivel

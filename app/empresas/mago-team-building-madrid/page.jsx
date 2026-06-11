@@ -4,8 +4,8 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import FAQItem from '@/components/FAQItem';
 
 export const metadata = {
-  title: 'Mago para Team Building en Madrid | Impacto B2B',
-  description: 'Descubre cómo potenciar tu evento corporativo con nuestro Mago para Team Building. Metodología brutalista B2B, alta retención y ROI garantizado.',
+  title: 'Mago para Team Building en Madrid | Dinámicas de Empresa',
+  description: 'Fomenta la cohesión de equipos y el liderazgo con un Team Building diferente en Madrid. Dinámicas basadas en ilusionismo corporativo.',
 };
 
 const faqs = [
@@ -180,7 +180,7 @@ export default function Page() {
             Inicializa tu <span className="text-amber-500">Siguiente Evento</span>
           </h2>
           <p className="text-xl text-slate-400 mb-10 font-mono">No dejes la retención de marca al azar. Despliega una estrategia de impacto asegurada.</p>
-          <a href="/contacto" className="inline-flex items-center justify-center px-8 py-4 border-2 border-amber-500 bg-amber-500/10 text-amber-500 hover:bg-amber-500 hover:text-black font-mono font-bold uppercase tracking-widest transition-all duration-300">
+          <a href="https://wa.me/34648055636" className="inline-flex items-center justify-center px-8 py-4 border-2 border-amber-500 bg-amber-500/10 text-amber-500 hover:bg-amber-500 hover:text-black font-mono font-bold uppercase tracking-widest transition-all duration-300">
             [ SOLICITAR PROPUESTA B2B ]
           </a>
         </div>

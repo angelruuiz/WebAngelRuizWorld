@@ -1,5 +1,5 @@
 export const metadata = {
-    title: 'Mago en Torrelodones | Ángel Ruiz | Mago e Ilusionista',
+    title: { absolute: 'Mago en Torrelodones | Ángel Ruiz | Mago e Ilusionista' },
     description: '¿Buscas un mago en Torrelodones? Ángel Ruiz ofrece el mejor ilusionismo y magia de cerca para tu boda o evento en la zona noroeste de Madrid. ¡Reserva hoy y sorprende!',
     alternates: {
         canonical: 'https://angelruiz.world/mago-torrelodones',

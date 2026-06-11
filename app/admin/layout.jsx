@@ -1,5 +1,5 @@
 export const metadata = {
-    title: 'Control Maestro | Ángel Ruiz',
+    title: { absolute: 'Control Maestro | Ángel Ruiz' },
     description: 'Espacio privado para la gestión de servicios e ilusionismo.',
     robots: {
         index: false,

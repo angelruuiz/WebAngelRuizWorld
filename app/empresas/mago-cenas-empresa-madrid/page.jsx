@@ -4,7 +4,7 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import FAQItem from '@/components/FAQItem';
 
 export const metadata = {
-  title: 'Mago para Cenas de Empresa en Madrid 2026 | Ángel Ruiz | Ilusionismo Corporativo',
+  title: { absolute: 'Mago para Cenas de Empresa en Madrid 2026 | Ángel Ruiz | Ilusionismo Corporativo' },
   description: '¿Buscas mago para la cena de empresa en Madrid? Ángel Ruiz transforma cenas de Navidad, fin de año y eventos corporativos en experiencias inolvidables. ⭐⭐⭐⭐⭐ 39 reseñas. Solicita presupuesto.',
   keywords: ['mago cenas empresa madrid', 'mago para cena empresa madrid', 'mago cena navidad empresa madrid', 'contratar mago cena empresa', 'entretenimiento cenas empresa madrid', 'mago corporativo madrid', 'animacion cenas empresa madrid'],
   alternates: {
@@ -229,7 +229,7 @@ export default function Page() {
             Inicializa tu <span className="text-amber-500">Siguiente Evento</span>
           </h2>
           <p className="text-xl text-slate-400 mb-10 font-mono">No dejes la retención de marca al azar. Despliega una estrategia de impacto asegurada.</p>
-          <a href="/contacto" className="inline-flex items-center justify-center px-8 py-4 border-2 border-amber-500 bg-amber-500/10 text-amber-500 hover:bg-amber-500 hover:text-black font-mono font-bold uppercase tracking-widest transition-all duration-300">
+          <a href="https://wa.me/34648055636" className="inline-flex items-center justify-center px-8 py-4 border-2 border-amber-500 bg-amber-500/10 text-amber-500 hover:bg-amber-500 hover:text-black font-mono font-bold uppercase tracking-widest transition-all duration-300">
             [ SOLICITAR PROPUESTA B2B ]
           </a>
         </div>

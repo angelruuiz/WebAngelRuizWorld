@@ -6,15 +6,15 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: 'Mago en Madrid 2026 | Contratar Mago para Bodas y Empresas | Ángel Ruiz',
-    description: '¿Buscas mago en Madrid? Ángel Ruiz: ilusionista profesional para bodas, cenas de empresa y eventos privados. +10 años, 39 reseñas ⭐⭐⭐⭐⭐. Magia de cerca y mentalismo. Solicita presupuesto.',
+    title: { absolute: 'Mago en Madrid 2026 | Contratar Mago para Bodas y Empresas | Ángel Ruiz' },
+    description: '¿Buscas mago en Madrid? Ángel Ruiz: ilusionista profesional para bodas, cenas de empresa y eventos privados. +10 años, 39 reseñas ⭐⭐⭐⭐⭐. Magia de cerca y de salón. Solicita presupuesto.',
     keywords: ['mago madrid', 'mago en madrid', 'contratar mago madrid', 'mago profesional madrid', 'ilusionista madrid', 'mago para bodas madrid', 'mago para empresas madrid', 'mago close-up madrid', 'magia de cerca madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/mago-madrid',
     },
     openGraph: {
         title: 'Mago en Madrid 2026 | Contratar Mago para Bodas y Empresas | Ángel Ruiz',
-        description: 'Ilusionista profesional en Madrid para bodas, eventos corporativos y celebraciones privadas. +10 años de experiencia, 39 reseñas 5⭐. Magia de cerca y mentalismo.',
+        description: 'Ilusionista profesional en Madrid para bodas, eventos corporativos y celebraciones privadas. +10 años de experiencia, 39 reseñas 5⭐. Magia de cerca y de salón.',
         images: [{ url: '/images/foto-bio.webp', width: 1200, height: 630 }],
     }
 };
@@ -118,7 +118,7 @@ export default function MagoMadridPage() {
                                     Si buscas un <strong className="text-amber-400 font-bold">mago en Madrid</strong> que vaya más allá del entretenimiento convencional, has llegado al lugar correcto. Soy Ángel Ruiz, ilusionista profesional formado en la prestigiosa <strong>Escuela de Dani DaOrtiz</strong>, con más de 10 años transformando eventos en experiencias que tus invitados recordarán durante años.
                                 </p>
                                 <p>
-                                    Mi especialidad es la <strong className="text-amber-400">magia de cerca</strong> (close-up): cartomagia de autor y mentalismo que suceden a centímetros de los ojos del espectador. Sin escenario, sin grandes producciones. Solo técnica pura, psicología y un asombro imposible de explicar.
+                                    Mi especialidad es la <strong className="text-amber-400">magia de cerca</strong> (close-up): cartomagia de autor que sucede a centímetros de los ojos del espectador. Sin escenario, sin grandes producciones. Solo técnica pura, psicología y un asombro imposible de explicar.
                                 </p>
 
                                 <div className="grid grid-cols-2 gap-4 py-6 border-y border-white/5">
@@ -179,7 +179,7 @@ export default function MagoMadridPage() {
                             </Link>
                             <Link href="/particulares/bodas" className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all group">
                                 <h3 className="text-amber-400 font-bold text-lg font-[Cinzel] mb-3 group-hover:text-white transition-colors">Magia para Bodas</h3>
-                                <p className="text-slate-300 text-sm leading-relaxed">El mejor <strong className="font-bold">mago para bodas en Madrid</strong>. Magia de cóctel y mentalismo para el día más importante en fincas exclusivas.</p>
+                                <p className="text-slate-300 text-sm leading-relaxed">El mejor <strong className="font-bold">mago para bodas en Madrid</strong>. Magia de cóctel y magia de salón para el día más importante en fincas exclusivas.</p>
                                 <span className="text-amber-500 text-xs font-bold uppercase tracking-widest mt-4 block">Ver bodas →</span>
                             </Link>
                             <Link href="/particulares/eventos" className="bg-slate-900/40 p-6 rounded-xl border border-white/5 hover:border-amber-500/30 transition-all group">

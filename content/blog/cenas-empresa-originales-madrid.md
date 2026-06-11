@@ -3,7 +3,7 @@ title: 'Cenas de Empresa Originales en Madrid: Sorprende con Magia'
 date: '2026-05-25'
 excerpt: >-
   Olvídate de las aburridas cenas corporativas. Te contamos por qué incluir
-  magia y mentalismo es el secreto para organizar cenas de empresa divertidas y
+  magia y magia de salón es el secreto para organizar cenas de empresa divertidas y
   memorables en Madrid.
 category: Empresas
 readTime: 4 MIN
@@ -30,7 +30,7 @@ Llega el final de año o el cierre del trimestre y el departamento de Recursos H
 Las cenas en las que los empleados solo hablan con los que tienen a su lado están obsoletas. La clave para que el evento sea un éxito reside en el **Team Building** encubierto a través del entretenimiento.
 
 ## Magia: El Rompehielos Definitivo
-Contratar a un ilusionista para tu cena asegura **cenas de empresa divertidas en Madrid**. La magia funciona como un ecualizador social: rompe jerarquías. Ver al CEO de la compañía y a los empleados de reciente incorporación asombrarse juntos ante un efecto de **magia blanca** o mentalismo crea lazos instantáneos.
+Contratar a un ilusionista para tu cena asegura **cenas de empresa divertidas en Madrid**. La magia funciona como un ecualizador social: rompe jerarquías. Ver al CEO de la compañía y a los empleados de reciente incorporación asombrarse juntos ante un efecto de **magia blanca** o magia de salón crea lazos instantáneos.
 
 ## Formatos de Intervención
 - **Magia de Cóctel (Mix & Mingle):** Ideal para la recepción. El mago se mueve entre los grupos pequeños generando sorpresa y conversación.

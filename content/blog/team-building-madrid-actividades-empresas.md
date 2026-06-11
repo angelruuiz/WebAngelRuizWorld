@@ -22,7 +22,7 @@ Las jornadas de *Team Building* se han convertido en un estándar indispensable 
 
 Cuando sugerimos incluir a un **[mago para empresas en Madrid](/empresas)** en una jornada formativa o de integración, no estamos hablando simplemente de hacer un alto en el trabajo para ver un show. Estamos integrando el asombro como motor de reflexión.
 
-La magia, por su propia naturaleza, desafía las reglas preestablecidas. Cuando un equipo presencia un efecto de mentalismo complejo, ocurren tres cosas a nivel cognitivo y social:
+La magia, por su propia naturaleza, desafía las reglas preestablecidas. Cuando un equipo presencia un efecto de magia de salón compleja, ocurren tres cosas a nivel cognitivo y social:
 
 1.  **Suspensión del Ego y las Jerarquías:** Ante lo inexplicable, el Director General y el becario recién llegado están en absoluta igualdad de condiciones. Ambos reaccionan con la misma fascinación. Esto aplana temporalmente la estructura corporativa y fomenta una comunicación mucho más horizontal y genuina.
 2.  **Estímulo del Pensamiento Lateral (Out of the box):** El ilusionismo nos obliga a pensar en soluciones alternativas cuando la vía lógica falla. Como ilusionista, a menudo genero debates espontáneos en los equipos de trabajo madrileños sobre cómo resolvemos problemas complejos aplicando esta misma creatividad en el día a día corporativo.

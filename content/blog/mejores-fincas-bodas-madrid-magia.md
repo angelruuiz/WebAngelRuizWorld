@@ -35,7 +35,7 @@ Ya sea en un jardín al aire libre en primavera o en un salón acristalado de To
 No todos los entretenimientos encajan en la elegancia de una boda. El ilusionismo que ofrezco está diseñado para ser **sofisticado, moderno y respetuoso**, pensado para un público adulto que valora el buen gusto. 
 
 *   **Experiencia contrastada:** Años de trayectoria en el exigente sector de eventos de la capital.
-*   **Magia de Alto Impacto:** Efectos visuales y mentalismo que tus invitados recordarán durante años.
+*   **Magia de Alto Impacto:** Efectos visuales y magia de salón que tus invitados recordarán durante años.
 *   **Trato exclusivo:** Solo realizo un número limitado de bodas al año para garantizar la máxima energía y dedicación en cada una.
 
 Si estás organizando tu enlace y buscas un toque de distinción que deje a todos boquiabiertos, descubre todo lo que un [mago para bodas en Madrid](/particulares/bodas) puede aportar a vuestro gran día. El asombro será el mejor regalo para tus invitados.

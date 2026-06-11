@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import BusinessSchema from '@/components/BusinessSchema';
 
 export const metadata = {
-    title: 'Mago Close-Up Madrid | Magia de Cerca por Ángel Ruiz',
+    title: { absolute: 'Mago Close-Up Madrid | Magia de Cerca por Ángel Ruiz' },
     description: 'Especialista en magia de cerca (close-up) en Madrid. Cartomagia purista e ilusionismo de alto impacto a centímetros de tus ojos. Formado por DaOrtiz.',
     alternates: {
         canonical: 'https://angelruiz.world/mago-close-up-madrid',
@@ -30,7 +30,7 @@ export default function MagoCloseUpMadridPage() {
                 "name": "¿Qué es un mago close up o de magia de cerca?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Un mago close-up es un especialista en ilusionismo que actúa a escasos centímetros del público, sin necesidad de escenario. Se basa en cartomagia, numismagia y mentalismo, creando un impacto muy fuerte al suceder la magia en las propias manos del espectador."
+                    "text": "Un mago close-up es un especialista en ilusionismo que actúa a escasos centímetros del público, sin necesidad de escenario. Se basa en cartomagia y numismagia, creando un impacto muy fuerte al suceder la magia en las propias manos del espectador."
                 }
             },
             {

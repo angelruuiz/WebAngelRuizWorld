@@ -12,7 +12,7 @@ export const metadata = {
     },
     openGraph: {
         title: 'Mago para Eventos Privados en Madrid | Ángel Ruiz | Mago e Ilusionista',
-        description: 'Magia de cerca y mentalismo para tus celebraciones privadas. Un espectáculo inolvidable en la comodidad de tu casa.',
+        description: 'Magia de cerca y de salón para tus celebraciones privadas. Un espectáculo inolvidable en la comodidad de tu casa.',
         images: [{ url: '/images/foto-bio.webp' }],
     },
     twitter: {
@@ -207,7 +207,7 @@ export default function EventosDetailPage() {
                                 <span className="text-amber-500 font-[Cinzel] text-xl font-bold mb-4 block">Fase 02</span>
                                 <h3 className="text-white text-xl font-bold mb-3 uppercase font-[Cinzel]">El Clímax</h3>
                                 <p className="text-slate-400 font-light text-sm leading-relaxed text-justify">
-                                    El momento de mayor intensidad. Ya sea con un pase de magia itinerante durante el cóctel que va in crescendo, o con un show de salón para todos a la vez donde el homenajeado es la estrella de un efecto mentalismo imposible.
+                                    El momento de mayor intensidad. Ya sea con un pase de magia itinerante durante el cóctel que va in crescendo, o con un show de salón para todos a la vez donde el homenajeado es la estrella de un efecto magia imposible.
                                 </p>
                             </div>
                             <div className="bg-slate-900/40 border border-slate-800 p-8 rounded-2xl relative overflow-hidden group">

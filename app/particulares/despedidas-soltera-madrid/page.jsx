@@ -7,7 +7,7 @@ import FAQItem from '@/components/FAQItem';
 import Link from 'next/link';
 
 export const metadata = {
-    title: 'Mago para Despedidas de Soltera en Madrid 2026 | Ángel Ruiz',
+    title: { absolute: 'Mago para Despedidas de Soltera en Madrid 2026 | Ángel Ruiz' },
     description: '¿Buscas mago para despedida de soltera en Madrid? Ángel Ruiz ofrece magia de cerca e ilusionismo sorprendente para despedidas de soltera y soltero. Diversión garantizada. ⭐⭐⭐⭐⭐',
     keywords: ['mago despedidas soltera madrid', 'mago para despedida de soltera madrid', 'ilusionista despedida soltera', 'entretenimiento despedida soltera madrid', 'mago despedida soltero madrid', 'contratar mago despedida soltera'],
     alternates: {

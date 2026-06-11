@@ -19,7 +19,7 @@ const REVIEWS_DATA = [
     { text: "Vino a la comunión de mi hijo. Pensábamos que era solo para los niños pero los padres acabamos más enganchados que ellos. Muy recomendable si quieres algo diferente.", author: "Familia de Marcos" },
     { text: "Estuvo en la inauguración de la peña y nos dejó rotos. Cogió una baraja nuestra, la mezcló uno de nosotros y sacó los cuatro ases como si nada. Un fiera.", author: "Peña 'La Escombrera'" },
     { text: "Para mi 50 cumpleaños vino a casa y fue la bomba. Iba pasando por los grupos de invitados en el jardín y de repente hizo aparecer una moneda firmada dentro de una lata cerrada. Todos alucinaron.", author: "Ana P." },
-    { text: "Le contratamos para una cena de empresa con directivos para romper un poco el hielo. Súper elegante y puntual. Hizo un número de mentalismo al final que nos dejó a todos locos.", author: "Carlos M." },
+    { text: "Le contratamos para una cena de empresa con directivos para romper un poco el hielo. Súper elegante y puntual. Hizo un número final que nos dejó a todos locos.", author: "Carlos M." },
     { text: "Vino a una cena privada. Mientras cenábamos se acercaba a las mesas y hacía su magia de cerca. A mi marido le sacó una carta pensada del bolsillo de otro invitado. Increíble.", author: "Patricia Ruiz" },
     { text: "Estuvo dinamizando nuestro stand en IFEMA. Consiguió que la gente se parara a mirar y nos sirvió de gancho perfecto para empezar a vender. Lo volveremos a llevar seguro.", author: "Miguel Jiménez" },
     { text: "Nos lo recomendaron para el cóctel de la boda y de 10. Lo mejor fue ver a mis tíos, que siempre le buscan el truco a todo, rindiéndose porque no entendían nada. Nos reímos muchísimo.", author: "Laura García y Jorge" },

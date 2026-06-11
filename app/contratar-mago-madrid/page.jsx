@@ -7,7 +7,7 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: 'Guía para Contratar un Mago en Madrid (Precios y Consejos) 2026 | Ángel Ruiz',
+    title: { absolute: 'Guía para Contratar un Mago en Madrid (Precios y Consejos) 2026 | Ángel Ruiz' },
     description: 'Guía completa para contratar mago en Madrid. Precios, tipos de magia (close-up, escenario) y proceso de contratación con Ángel Ruiz, ilusionista premium.',
     alternates: {
         canonical: 'https://angelruiz.world/contratar-mago-madrid',
@@ -53,7 +53,7 @@ export default function ContratarMagoMadridPage() {
                 "name": "¿Qué formatos de ilusionismo ofreces al contratarte?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ofrezco magia de cerca (micromagia y cartomagia en formato cóctel o por mesas) y magia de salón/mentalismo (para todo el grupo a la vez). Se puede combinar ambas disciplinas dependiendo de la estructura del evento, asegurando el máximo impacto emocional."
+                    "text": "Ofrezco magia de cerca (micromagia y cartomagia en formato cóctel o por mesas) y magia de salón (para todo el grupo a la vez). Se puede combinar ambas disciplinas dependiendo de la estructura del evento, asegurando el máximo impacto emocional."
                 }
             },
             {
@@ -69,7 +69,7 @@ export default function ContratarMagoMadridPage() {
                 "name": "¿Se requiere equipo técnico o escenario para contratar un mago?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Para el formato de Magia de Cerca (Close-Up) no se requiere ningún tipo de infraestructura, escenario ni sonido. Es un formato totalmente adaptable y versátil. Para el show de Mentalismo y Salón sí se requiere un pequeño espacio escénico y sonido para audiencias de más de 40 personas."
+                    "text": "Para el formato de Magia de Cerca (Close-Up) no se requiere ningún tipo de infraestructura, escenario ni sonido. Es un formato totalmente adaptable y versátil. Para el show de salón sí se requiere un pequeño espacio escénico y sonido para audiencias de más de 40 personas."
                 }
             },
             {
@@ -146,7 +146,7 @@ export default function ContratarMagoMadridPage() {
                             CONTRATAR <br/> ILUSIONISTA
                         </h1>
                         <p className="text-slate-400 max-w-xl mx-auto text-sm md:text-base leading-relaxed mb-12">
-                            Asegura la disponibilidad para tu evento en Madrid. Desde Magia de Cerca y Sleight of Hand hasta Mentalismo corporativo de alto impacto. Una experiencia de técnica depurada y misdirection profesional.
+                            Asegura la disponibilidad para tu evento en Madrid. Desde Magia de Cerca y Sleight of Hand hasta magia de salón corporativa de alto impacto. Una experiencia de técnica depurada y misdirection profesional.
                         </p>
                     </div>
 
@@ -158,7 +158,7 @@ export default function ContratarMagoMadridPage() {
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {[
-                                { step: '01', title: 'PARÁMETROS', desc: 'Analizamos las necesidades. Define el formato (Close-up o Mentalismo de Escenario), la fecha, el lugar en Madrid y el volumen de espectadores para determinar la mejor aproximación mágica.' },
+                                { step: '01', title: 'PARÁMETROS', desc: 'Analizamos las necesidades. Define el formato (Close-up o Magia de Salón), la fecha, el lugar en Madrid y el volumen de espectadores para determinar la mejor aproximación mágica.' },
                                 { step: '02', title: 'CALIBRACIÓN', desc: 'Diseño y personalización de la rutina técnica adaptada a la arquitectura del evento. Si es corporativo, integramos mensajes de marca usando juegos interactivos.' },
                                 { step: '03', title: 'EJECUCIÓN', desc: 'Despliegue del ilusionista en el evento con precisión absoluta. Control de la atención y asombro a centímetros de distancia, logrando el máximo impacto emocional.' }
                             ].map((item) => (
@@ -180,7 +180,7 @@ export default function ContratarMagoMadridPage() {
                             <div>
                                 <h2 className="text-3xl md:text-5xl font-[Cinzel] text-white font-bold mb-6">Por qué elegir a un especialista</h2>
                                 <p className="text-slate-400 mb-6 leading-relaxed">
-                                    Contratar a un mago en Madrid no se trata solo de ver trucos, se trata de experimentar <strong>arte en tiempo real</strong>. Especialista en cartomagia de la escuela de DaOrtiz y mentalismo psicológico, ofrezco un nivel de ilusionismo que desafía el intelecto.
+                                    Contratar a un mago en Madrid no se trata solo de ver trucos, se trata de experimentar <strong>arte en tiempo real</strong>. Especialista en cartomagia de la escuela de DaOrtiz, ofrezco un nivel de ilusionismo que desafía el intelecto.
                                 </p>
                                 <ul className="space-y-4">
                                     {[

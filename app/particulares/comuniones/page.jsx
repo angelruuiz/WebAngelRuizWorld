@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import BusinessSchema from '@/components/BusinessSchema';
 
 export const metadata = {
-    title: 'Mago para Comuniones en Madrid | Ángel Ruiz · Fiestas Infantiles',
+    title: { absolute: 'Mago para Comuniones en Madrid | Ángel Ruiz · Fiestas Infantiles' },
     description: 'Ángel Ruiz, mago para comuniones en Madrid. Magia participativa, familiar y de alto impacto para hacer de su primera comunión un día inolvidable.',
     alternates: {
         canonical: 'https://angelruiz.world/particulares/comuniones',
@@ -45,10 +45,10 @@ export default function MagoComunionesPage() {
                 "@type": "FAQPage",
                 "mainEntity": [
                     { "@type": "Question", "name": "¿Cuánto dura el espectáculo del mago para comuniones?", "acceptedAnswer": { "@type": "Answer", "text": "La duración ideal de un espectáculo de magia para una primera comunión es de 50 a 60 minutos. Este tiempo es perfecto para mantener la atención de los niños y sorprender a los adultos sin que el ritmo decaiga." } },
-                    { "@type": "Question", "name": "¿El espectáculo de magia es solo para los niños?", "acceptedAnswer": { "@type": "Answer", "text": "No. Mi enfoque como mago para comuniones en Madrid es crear un show 'familiar'. Los trucos son de alto nivel técnico (cartomagia y mentalismo adaptado) para que los adultos se asombren tanto o más que los pequeños." } },
+                    { "@type": "Question", "name": "¿El espectáculo de magia es solo para los niños?", "acceptedAnswer": { "@type": "Answer", "text": "No. Mi enfoque como mago para comuniones en Madrid es crear un show 'familiar'. Los trucos son de alto nivel técnico (cartomagia y magia de salón adaptada) para que los adultos se asombren tanto o más que los pequeños." } },
                     { "@type": "Question", "name": "¿Te desplazas a restaurantes y fincas en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, me desplazo a cualquier restaurante, finca, hotel o domicilio privado en toda la Comunidad de Madrid. Ya sea en Madrid capital, en la Sierra de Madrid o en los municipios del noroeste." } },
                     { "@type": "Question", "name": "¿El niño de la comunión participa en los trucos?", "acceptedAnswer": { "@type": "Answer", "text": "Por supuesto. El diseño del espectáculo garantiza que el homenajeado sea el gran protagonista. Participa en los efectos más importantes y se lleva recuerdos mágicos imposibles de olvidar." } },
-                    { "@type": "Question", "name": "¿Qué incluye el espectáculo de magia familiar?", "acceptedAnswer": { "@type": "Answer", "text": "El espectáculo incluye un equipo de sonido propio para asegurar la calidad en cualquier entorno, efectos visuales de gran formato, cartomagia, mentalismo adaptado y una gran dosis de humor inteligente y participativo." } },
+                    { "@type": "Question", "name": "¿Qué incluye el espectáculo de magia familiar?", "acceptedAnswer": { "@type": "Answer", "text": "El espectáculo incluye un equipo de sonido propio para asegurar la calidad en cualquier entorno, efectos visuales de gran formato, cartomagia, magia de salón adaptada y una gran dosis de humor inteligente y participativo." } },
                     { "@type": "Question", "name": "¿Con cuánta antelación debo reservar?", "acceptedAnswer": { "@type": "Answer", "text": "Las fechas de comuniones (mayo y junio) se llenan muy rápido. Lo ideal es reservar con al menos 4-5 meses de antelación para asegurar disponibilidad en la fecha y hora de la celebración." } },
                     { "@type": "Question", "name": "¿El mago necesita mucho espacio para actuar?", "acceptedAnswer": { "@type": "Answer", "text": "Me adapto a casi cualquier espacio. Para el show de salón o magia de escena solo necesito un pequeño rincón donde todos puedan verme cómodamente. Si es al aire libre en un jardín o finca, también cuento con equipo preparado para exteriores." } },
                     { "@type": "Question", "name": "¿Es posible hacer magia mesa por mesa durante la comida?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, la magia itinerante de cerca es una excelente opción si no queréis un show centralizado, aunque para comuniones siempre recomiendo el show de salón donde todos los invitados comparten la risa y la sorpresa simultáneamente con el homenajeado como estrella." } }
@@ -59,7 +59,7 @@ export default function MagoComunionesPage() {
 
     return (
         <>
-            <BusinessSchema />
+            <BusinessSchema rating={{ "@type": "AggregateRating", "ratingValue": "5", "bestRating": "5", "worstRating": "1", "ratingCount": "39" }} />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
             <NavFooterClient>
                 <MagicCursor />
@@ -183,7 +183,7 @@ export default function MagoComunionesPage() {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                             {[
                                 { num: "01", title: "Protagonismo", desc: "El niño realiza la magia en sus propias manos. Es la estrella del show." },
-                                { num: "02", title: "Para Adultos", desc: "Trucos de alto impacto técnico y mentalismo que dejarán boquiabiertos a tíos y abuelos." },
+                                { num: "02", title: "Para Adultos", desc: "Trucos de alto impacto técnico y cartomagia de alto impacto que dejará boquiabiertos a tíos y abuelos." },
                                 { num: "03", title: "A Domicilio", desc: "Actuaciones en restaurantes, fincas, salones comunitarios y chalets en todo Madrid." }
                             ].map((feat, idx) => (
                                 <div key={idx} className="bg-transparent border border-white/10 rounded-[2rem] p-10 hover:border-[#d4a853]/40 transition-colors group">
@@ -208,7 +208,7 @@ export default function MagoComunionesPage() {
                             </div>
                             {[
                                 ["Público Principal", "Solo los niños más pequeños", "Toda la familia al completo"],
-                                ["Calidad de Magia", "Básica (Cajas pintadas y trucos comprados)", "Avanzada (Cartomagia / Mentalismo)"],
+                                ["Calidad de Magia", "Básica (Cajas pintadas y trucos comprados)", "Avanzada (Cartomagia de autor)"],
                                 ["Rol del Niño", "Uno más del grupo haciendo juegos", "Ayudante principal y estrella mágica"]
                             ].map((row, idx) => (
                                 <div key={idx} className="grid grid-cols-3 gap-4 py-4 border-b border-white/5 last:border-0">

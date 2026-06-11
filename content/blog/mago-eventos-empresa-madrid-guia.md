@@ -32,7 +32,7 @@ A diferencia de otro tipo de entretenimientos, la magia profesional es altamente
 Dependiendo del formato de tu evento, existen diferentes modalidades de actuación:
 
 *   **Magia de Cerca (Close-up) en Cócteles**: El mago se desplaza entre los invitados mientras estos degustan el catering. Es elegante, discreta y muy efectiva en presentaciones de producto o recepciones VIP.
-*   **Show de Salón / Mentalismo**: Un espectáculo central de 45-60 minutos diseñado para que todos lo vivan a la vez. El **mentalismo en Madrid** tiene un éxito rotundo en cenas de empresa por su fuerte componente intelectual y participativo.
+*   **Show de Salón / Magia de Salón**: Un espectáculo central de 45-60 minutos diseñado para que todos lo vivan a la vez. La **magia de salón en Madrid** tiene un éxito rotundo en cenas de empresa por su fuerte componente intelectual y participativo.
 *   **Magia de Escenario para Convenciones**: Espectáculos de gran formato que pueden servir como el broche de oro de una jornada de conferencias o el cierre de una convención anual.
 
 ### Claves para contratar un ilusionista profesional en la capital

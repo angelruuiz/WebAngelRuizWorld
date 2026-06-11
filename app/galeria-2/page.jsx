@@ -3,7 +3,7 @@ import InteractiveCardDeck from '@/components/InteractiveCardDeck';
 import { ParticleBackground, MagicCursor } from '@/components/VisualEffects';
 
 export const metadata = {
-    title: 'Experiencia 3D - Ángel Ruiz',
+    title: { absolute: 'Experiencia 3D - Ángel Ruiz' },
     description: 'Prototipo interactivo de galería 3D con físicas realistas.',
     robots: {
         index: false,

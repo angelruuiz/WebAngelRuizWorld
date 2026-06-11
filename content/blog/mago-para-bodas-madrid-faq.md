@@ -54,7 +54,7 @@ Como **mago en Torrelodones** y referente en la zona noroeste (**Las Rozas, Maja
 
 ### La Psicología del Asombro: Mucho más que Trucos de Cartas
 
-La magia moderna va más allá de la baraja. Incluye **mentalismo en Madrid**, efectos con objetos prestados y una participación tan intensa que los invitados se convierten en los verdaderos protagonistas. Cuando un espectador ve desaparecer su propio anillo o siente que alguien "lee" su pensamiento, el impacto emocional es diez veces mayor. 
+La magia moderna va más allá de la baraja. Incluye **magia de salón en Madrid**, efectos con objetos prestados y una participación tan intensa que los invitados se convierten en los verdaderos protagonistas. Cuando un espectador ve desaparecer su propio anillo o siente que alguien "lee" su pensamiento, el impacto emocional es diez veces mayor. 
 
 Esta conexión emocional es lo que buscamos como profesionales del **ilusionismo profesional**. Queremos que tus invitados se vayan a casa diciendo: "La comida estuvo increíble, el vestido era precioso, pero ¡lo que hizo el mago fue imposible!". Es ese recuerdo el que perdura cuando los detalles del menú se han olvidado. La magia es el único entretenimiento que desafía la realidad tal como la conocemos.
 

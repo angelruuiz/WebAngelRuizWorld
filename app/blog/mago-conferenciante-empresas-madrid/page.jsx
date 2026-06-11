@@ -6,7 +6,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import Link from 'next/link';
 
 export const metadata = {
-    title: 'Mago Conferenciante para Empresas en Madrid | Ángel Ruiz',
+    title: { absolute: 'Mago Conferenciante para Empresas en Madrid | Ángel Ruiz' },
     description: '¿Buscas un orador diferente para tu convención? Descubre por qué contratar a un mago conferenciante en Madrid es la mejor decisión para tu evento empresarial.',
     alternates: {
         canonical: 'https://angelruiz.world/blog/mago-conferenciante-empresas-madrid',

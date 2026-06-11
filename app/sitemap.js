@@ -46,6 +46,24 @@ export default function sitemap() {
       priority: 1.0,
     },
     {
+      url: 'https://angelruiz.world/particulares',
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+    {
+      url: 'https://angelruiz.world/dossier',
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: 'https://angelruiz.world/blog/mago-conferenciante-empresas-madrid',
+      lastModified: lastMod,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: 'https://angelruiz.world/particulares/bodas',
       lastModified: lastMod,
       changeFrequency: 'weekly',

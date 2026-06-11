@@ -31,7 +31,7 @@ const slides = [
         label: 'Sobre Mí',
         title: 'Ilusionista Profesional',
         text: 'Formado en la Escuela de Dani DaOrtiz — uno de los mejores cartomagos del mundo — mi especialidad es el Close-Up y la Cartomagia de Élite. No ejecuto trucos. Diseño atmósferas de asombro inteligente que transforman eventos corporativos y bodas en experiencias que tus invitados recordarán para siempre.',
-        badges: ['Cartomagia Purista', 'Close-Up', 'Mentalismo', 'Protocolo Corporativo', 'Escuela DaOrtiz', 'Madrid Noroeste']
+        badges: ['Cartomagia Purista', 'Close-Up', 'Protocolo Corporativo', 'Escuela DaOrtiz', 'Madrid Noroeste']
     },
     {
         id: 'servicios',

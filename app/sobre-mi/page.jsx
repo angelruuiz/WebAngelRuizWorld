@@ -32,7 +32,7 @@ export default function SobreMiPage() {
             "@id": "https://angelruiz.world/#organization",
             "name": "Ángel Ruiz | Mago e Ilusionista"
         },
-        "knowsAbout": ["Magia de Cerca", "Cartomagia", "Mentalismo", "Ilusionismo Corporativo", "Magia para Bodas"],
+        "knowsAbout": ["Magia de Cerca", "Cartomagia", "Ilusionismo Corporativo", "Magia para Bodas"],
         "alumniOf": "Escuela de Dani DaOrtiz",
         "areaServed": "Comunidad de Madrid"
     };

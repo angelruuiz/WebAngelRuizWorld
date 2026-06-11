@@ -35,7 +35,7 @@ El entorno laboral actual exige profesionales capaces de adaptarse a lo inespera
 Durante una sesión de magia interactiva, los cargos y títulos desaparecen. Ver a la dirección general y a los nuevos talentos sorprenderse y reír juntos crea una empatía inmediata y derriba barreras de comunicación.
 
 ### 2. Pensamiento Lateral y Resolución de Problemas
-El ilusionismo, y en particular el **mentalismo**, obliga al cerebro a buscar soluciones fuera de la lógica habitual. Al presenciar o participar en juegos donde lo imposible sucede, los equipos aprenden a aplicar el "pensamiento fuera de la caja" (out-of-the-box) a sus retos empresariales diarios.
+El ilusionismo, y en particular la **magia de salón**, obliga al cerebro a buscar soluciones fuera de la lógica habitual. Al presenciar o participar en juegos donde lo imposible sucede, los equipos aprenden a aplicar el "pensamiento fuera de la caja" (out-of-the-box) a sus retos empresariales diarios.
 
 ## Formatos Disponibles en Madrid
 

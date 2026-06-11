@@ -8,7 +8,7 @@ export const metadata = {
     default: 'Mago en Madrid | Ángel Ruiz | Ilusionista para Bodas y Empresas',
     template: '%s | Ángel Ruiz | Mago Madrid'
   },
-  description: 'Ángel Ruiz, mago profesional en Madrid para bodas, cenas de empresa y eventos privados. +10 años de experiencia, 39 reseñas ⭐⭐⭐⭐⭐. Magia de cerca y mentalismo. Solicita presupuesto.',
+  description: 'Ángel Ruiz, mago profesional en Madrid para bodas, cenas de empresa y eventos privados. +10 años de experiencia, 39 reseñas ⭐⭐⭐⭐⭐. Magia de cerca y de salón. Solicita presupuesto.',
   keywords: ['mago madrid', 'mago en madrid', 'contratar mago madrid', 'mago para bodas madrid', 'mago para empresas madrid', 'mago profesional madrid', 'ilusionista madrid', 'magia de cerca madrid', 'mago cenas empresa madrid', 'mago comuniones madrid', 'mago team building madrid', 'mago close-up madrid', 'Ángel Ruiz mago'],
   authors: [{ name: 'Ángel Ruiz | Mago e Ilusionista' }],
   creator: 'Ángel Ruiz | Mago e Ilusionista',
@@ -20,8 +20,8 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'es_ES',
-    title: 'Angel Ruiz | Mago e Ilusionista',
-    description: 'Ángel Ruiz, mago e ilusionista profesional especializado en magia de cerca exclusiva para eventos corporativos, bodas y celebraciones.',
+    title: 'Mago en Madrid | Ángel Ruiz | Ilusionista para Bodas y Empresas',
+    description: 'Mago profesional en Madrid para bodas, cenas de empresa y eventos privados. +10 años de experiencia y 39 reseñas 5 estrellas. Solicita presupuesto.',
     siteName: 'Ángel Ruiz | Mago e Ilusionista',
     images: [{
       url: '/images/foto-bio.webp',
@@ -32,8 +32,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Angel Ruiz | Mago e Ilusionista',
-    description: 'Ilusionista especializado en eventos exclusivos y magia de cerca.',
+    title: 'Mago en Madrid | Ángel Ruiz | Ilusionista para Bodas y Empresas',
+    description: 'Mago profesional en Madrid para bodas, cenas de empresa y eventos privados. +10 años de experiencia y 39 reseñas 5 estrellas.',
     images: ['/images/foto-bio.webp'],
     site: '@angellruuizz',
     creator: '@angellruuizz',

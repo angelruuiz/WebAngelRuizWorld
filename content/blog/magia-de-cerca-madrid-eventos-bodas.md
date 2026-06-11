@@ -66,7 +66,7 @@ En el ámbito corporativo de **Madrid Centro** y los polos empresariales como **
 Un **[mago para eventos de empresa](/empresas)** especializado en close-up aporta un valor incalculable:
 1. **Dinamización de stands en IFEMA:** Al realizar efectos breves e impactantes en el pasillo, freno el tráfico de asistentes y capto su atención de inmediato, dándole a tu equipo comercial el pie perfecto para conectar y calificar al lead.
 2. **Cenas corporativas:** La magia entre platos mantiene el ritmo del evento alto y evita los momentos de silencio incómodo antes o después del servicio.
-3. **Networking y Team Building:** Al aprender habilidades compartidas o presenciar mentalismo sofisticado, los lazos entre departamentos se estrechan en un ambiente relajado y moderno.
+3. **Networking y Team Building:** Al aprender habilidades compartidas o presenciar magia de salón sofisticada, los lazos entre departamentos se estrechan en un ambiente relajado y moderno.
 
 ---
 

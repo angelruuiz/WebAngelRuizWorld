@@ -2,7 +2,7 @@ import HomeClient, { PerpetualCard } from '@/components/HomeClient';
 import Image from 'next/image';
 
 export const metadata = {
-    title: 'Mago en Madrid | Ángel Ruiz | Ilusionista para Bodas y Empresas 2026',
+    title: { absolute: 'Mago en Madrid | Ángel Ruiz | Ilusionista para Bodas y Empresas 2026' },
     description: 'Ángel Ruiz, mago profesional en Madrid para bodas, cenas de empresa y eventos privados. +10 años de experiencia, alumno de DaOrtiz. 39 reseñas ⭐⭐⭐⭐⭐. Solicita presupuesto sin compromiso.',
     alternates: {
         canonical: 'https://angelruiz.world',

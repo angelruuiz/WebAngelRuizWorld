@@ -6,7 +6,7 @@ import { MagicCursor, ParticleBackground, FadeIn } from '@/components/VisualEffe
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: 'Mago para Bodas en Madrid 2026 | Precios y Guía | Ángel Ruiz',
+    title: { absolute: 'Mago para Bodas en Madrid 2026 | Precios y Guía | Ángel Ruiz' },
     description: '¿Buscas mago para tu boda en Madrid? Ángel Ruiz transforma el cóctel y banquete en momentos mágicos inolvidables. Especialista en fincas del noroeste. ⭐⭐⭐⭐⭐ 39 reseñas. Consulta disponibilidad.',
     keywords: ['mago para bodas madrid', 'mago bodas madrid', 'contratar mago boda madrid', 'mago coctel boda madrid', 'ilusionista bodas madrid', 'mago para bodas precio madrid', 'mago boda noroeste madrid', 'entretenimiento bodas madrid', 'mago para mi boda madrid'],
     alternates: {
@@ -210,7 +210,7 @@ export default function BodasDetailPage() {
                                 </div>
                                 <div className="md:col-span-9">
                                     <p className="text-slate-300 font-light leading-relaxed text-justify">
-                                        Intervenciones sutiles mesa a mesa entre plato y plato. Me coordino con el maître para no entorpecer el servicio. Magia elegante, mentalismo y participación colectiva en la mesa para mantener la energía alta y evitar los clásicos bajones de ritmo durante la comida.
+                                        Intervenciones sutiles mesa a mesa entre plato y plato. Me coordino con el maître para no entorpecer el servicio. Magia elegante y participación colectiva en la mesa para mantener la energía alta y evitar los clásicos bajones de ritmo durante la comida.
                                     </p>
                                 </div>
                             </div>

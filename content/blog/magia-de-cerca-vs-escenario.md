@@ -51,7 +51,7 @@ Como **mago en Las Rozas y Majadahonda**, he comprobado que la magia de cerca es
 
 ### Magia de Escenario: El poder de la experiencia compartida
 
-Si lo que buscas es un gran final o un momento donde toda la audiencia esté conectada por una misma emoción, la **magia de escenario** es la respuesta. Aquí, el enfoque se centra en la narrativa, el impacto visual y el **mentalismo profesional**.
+Si lo que buscas es un gran final o un momento donde toda la audiencia esté conectada por una misma emoción, la **magia de escenario** es la respuesta. Aquí, el enfoque se centra en la narrativa, el impacto visual y el **magia de salón profesional**.
 
 #### ¿Por qué elegir Magia de Escenario?
 1. **Impacto Colectivo**: Todo el mundo ríe y se asombra al mismo tiempo. Es ideal para reforzar mensajes de marca en eventos corporativos o para dar un discurso mágico en el centro de Madrid.
@@ -75,7 +75,7 @@ Para eventos en grandes fincas de **El Escorial** o auditorios en la capital, un
 
 ### El "Combo" Ganador: Lo mejor de ambos mundos
 
-Muchos clientes que buscan un **mago para eventos en Madrid** optan por una estructura mixta. Mi recomendación para eventos de alto nivel es realizar 60-90 minutos de **magia de cerca** durante el cóctel, permitiendo que la gente interactúe, seguido de un "showcase" de **20 minutos de escenario/mentalismo** para terminar. 
+Muchos clientes que buscan un **mago para eventos en Madrid** optan por una estructura mixta. Mi recomendación para eventos de alto nivel es realizar 60-90 minutos de **magia de cerca** durante el cóctel, permitiendo que la gente interactúe, seguido de un "showcase" de **20 minutos de escenario/magia de salón** para terminar. 
 
 Esta estructura garantiza que la magia esté presente durante todo el evento sin saturar, dejando un sabor de boca legendario.
 

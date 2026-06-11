@@ -242,7 +242,6 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                                 </summary>
                                 <div className="flex flex-col gap-4 pb-4 pl-4 border-l border-amber-500/20 ml-2 mt-2">
                                     <Link href="/mago-close-up-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Magia Close-Up (De cerca)</Link>
-                                    <Link href="/mago-mentalista-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Mentalismo</Link>
                                     <Link href="/contratar-mago-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-amber-500 font-bold hover:text-amber-400">Contratar Mago en Madrid</Link>
                                 </div>
                             </details>
