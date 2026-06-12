@@ -1,8 +1,7 @@
 
 
 export default function BusinessSchema({ rating = null }) {
-  const schema = {
-    "@context": "https://schema.org",
+  const business = {
     "@type": "ProfessionalService",
     "@id": "https://angelruiz.world/#organization",
     "name": "Ángel Ruiz | Mago e Ilusionista",
@@ -11,8 +10,10 @@ export default function BusinessSchema({ rating = null }) {
     "url": "https://angelruiz.world",
     "logo": "https://angelruiz.world/icon.webp",
     "image": "https://angelruiz.world/images/foto-bio.webp",
-    "priceRange": "€€€",
+    "priceRange": "400€ - 900€",
     "telephone": "+34648055636",
+    "founder": { "@id": "https://angelruiz.world/#person" },
+    "slogan": "Magia de cerca de alto impacto para eventos en Madrid",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Zona Noroeste",
@@ -34,10 +35,48 @@ export default function BusinessSchema({ rating = null }) {
       { "@type": "City", "name": "Pozuelo de Alarcón" },
       { "@type": "City", "name": "Aravaca" },
       { "@type": "City", "name": "Boadilla del Monte" },
-      { "@type": "City", "name": "Villalba" },
+      { "@type": "City", "name": "Collado Villalba" },
       { "@type": "City", "name": "Galapagar" },
-      { "@type": "City", "name": "El Escorial" }
+      { "@type": "City", "name": "El Escorial" },
+      { "@type": "City", "name": "Alcobendas" },
+      { "@type": "City", "name": "Alcorcón" },
+      { "@type": "City", "name": "Leganés" },
+      { "@type": "City", "name": "Móstoles" },
+      { "@type": "City", "name": "Getafe" }
     ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Espectáculos de magia en Madrid",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Mago para bodas en Madrid", "url": "https://angelruiz.world/particulares/bodas" },
+          "priceSpecification": { "@type": "PriceSpecification", "minPrice": 400, "maxPrice": 900, "priceCurrency": "EUR" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Mago para eventos de empresa en Madrid", "url": "https://angelruiz.world/empresas" },
+          "priceSpecification": { "@type": "PriceSpecification", "minPrice": 600, "priceCurrency": "EUR" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Magia para team building", "url": "https://angelruiz.world/empresas/mago-team-building-madrid" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Mago para ferias y congresos (IFEMA)", "url": "https://angelruiz.world/empresas/mago-ferias-congresos-madrid" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Magia para restaurantes (table hopping)", "url": "https://angelruiz.world/empresas/mago-para-restaurantes-madrid" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Mago para comuniones, cumpleaños y fiestas privadas", "url": "https://angelruiz.world/particulares" },
+          "priceSpecification": { "@type": "PriceSpecification", "minPrice": 400, "maxPrice": 900, "priceCurrency": "EUR" }
+        }
+      ]
+    },
     "sameAs": [
       "https://www.instagram.com/angellruuiz",
       "https://www.tiktok.com/@angellruuiz",
@@ -47,8 +86,33 @@ export default function BusinessSchema({ rating = null }) {
   };
 
   if (rating) {
-    schema.aggregateRating = rating;
+    business.aggregateRating = rating;
   }
+
+  const person = {
+    "@type": "Person",
+    "@id": "https://angelruiz.world/#person",
+    "name": "Ángel Ruiz",
+    "jobTitle": "Mago e ilusionista profesional",
+    "description": "Mago profesional en Madrid especializado en magia de cerca (close-up), cartomagia de autor y mentalismo. Formado en la escuela de Dani DaOrtiz. Más de 10 años de experiencia en bodas, eventos de empresa y fiestas privadas.",
+    "url": "https://angelruiz.world/sobre-mi",
+    "image": "https://angelruiz.world/images/foto-bio.webp",
+    "telephone": "+34648055636",
+    "worksFor": { "@id": "https://angelruiz.world/#organization" },
+    "knowsAbout": ["Magia de cerca", "Close-up", "Cartomagia", "Mentalismo", "Magia para bodas", "Magia corporativa", "Team building"],
+    "homeLocation": { "@type": "Place", "name": "Torrelodones, Madrid, España" },
+    "sameAs": [
+      "https://www.instagram.com/angellruuiz",
+      "https://www.tiktok.com/@angellruuiz",
+      "https://www.youtube.com/@angellruuiz",
+      "https://twitter.com/angellruuizz"
+    ]
+  };
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [business, person]
+  };
 
   return (
     <script
@@ -57,4 +121,3 @@ export default function BusinessSchema({ rating = null }) {
     />
   );
 }
-

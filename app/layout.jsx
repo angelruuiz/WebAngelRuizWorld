@@ -82,10 +82,45 @@ const outfit = Outfit({
   display: 'swap',
 });
 
+const globalSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://angelruiz.world/#website",
+      "url": "https://angelruiz.world",
+      "name": "Ángel Ruiz | Mago e Ilusionista en Madrid",
+      "description": "Web oficial de Ángel Ruiz, mago profesional en Madrid para bodas, empresas y eventos privados.",
+      "inLanguage": "es",
+      "publisher": { "@id": "https://angelruiz.world/#organization" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://angelruiz.world/#person",
+      "name": "Ángel Ruiz",
+      "jobTitle": "Mago e ilusionista profesional",
+      "url": "https://angelruiz.world/sobre-mi",
+      "image": "https://angelruiz.world/images/foto-bio.webp",
+      "telephone": "+34648055636",
+      "knowsAbout": ["Magia de cerca", "Close-up", "Cartomagia", "Mentalismo", "Magia para bodas", "Magia corporativa"],
+      "sameAs": [
+        "https://www.instagram.com/angellruuiz",
+        "https://www.tiktok.com/@angellruuiz",
+        "https://www.youtube.com/@angellruuiz",
+        "https://twitter.com/angellruuizz"
+      ]
+    }
+  ]
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`${cinzel.variable} ${cormorant.variable} ${outfit.variable}`}>
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(globalSchema) }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://cdn.trustindex.io" />
