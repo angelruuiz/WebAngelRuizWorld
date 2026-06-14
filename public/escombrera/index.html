@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carnet de Sanciones</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap');
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:#0d0d0d; color:#e8e8e8; font-family:'Inter',sans-serif; min-height:100vh; padding:20px 16px 40px; }
+
+  header { text-align:center; padding:28px 0 24px; border-bottom:2px solid #222; margin-bottom:24px; }
+  h1 { font-family:'Bebas Neue',sans-serif; font-size:clamp(2.4rem,8vw,4rem); letter-spacing:4px; background:linear-gradient(135deg,#ff4444,#ff8800); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; line-height:1; }
+  .subtitle { color:#555; font-size:0.78rem; letter-spacing:2px; text-transform:uppercase; margin-top:6px; }
+
+  .sync-bar { display:flex; align-items:center; justify-content:space-between; margin-bottom:16px; padding:10px 14px; background:#1a1a1a; border:1px solid #222; border-radius:10px; }
+  .sync-status { font-size:0.75rem; color:#555; }
+  .sync-status.ok { color:#44cc77; }
+  .sync-status.error { color:#ff4444; }
+  .sync-status.loading { color:#ff8800; }
+  .sync-btn { padding:6px 14px; background:#1e1e1e; border:1px solid #333; border-radius:8px; color:#888; font-size:0.78rem; cursor:pointer; font-family:'Inter',sans-serif; transition:all 0.2s; }
+  .sync-btn:hover { border-color:#555; color:#ccc; }
+
+  .controls { display:flex; gap:10px; margin-bottom:18px; flex-wrap:wrap; }
+  .filter-btn { padding:7px 16px; border-radius:20px; border:1px solid #333; background:#1a1a1a; color:#888; font-size:0.8rem; cursor:pointer; transition:all 0.2s; font-family:'Inter',sans-serif; }
+  .filter-btn.active { background:#ff4444; border-color:#ff4444; color:white; }
+  .search-box { flex:1; min-width:150px; padding:7px 14px; border-radius:20px; border:1px solid #333; background:#1a1a1a; color:#e8e8e8; font-size:0.85rem; font-family:'Inter',sans-serif; outline:none; }
+  .search-box:focus { border-color:#555; }
+  .search-box::placeholder { color:#444; }
+
+  .edit-list-btn { display:flex; align-items:center; gap:8px; margin-bottom:16px; padding:10px 16px; background:#1a1a1a; border:1px dashed #333; border-radius:10px; color:#666; font-size:0.82rem; cursor:pointer; transition:all 0.2s; font-family:'Inter',sans-serif; width:100%; }
+  .edit-list-btn:hover { border-color:#555; color:#aaa; }
+
+  .stats-bar { display:flex; gap:16px; margin-bottom:20px; padding:12px 16px; background:#1a1a1a; border-radius:10px; border:1px solid #222; }
+  .stat { text-align:center; flex:1; }
+  .stat-num { font-family:'Bebas Neue',sans-serif; font-size:1.6rem; line-height:1; }
+  .stat-num.red { color:#ff4444; }
+  .stat-num.orange { color:#ff8800; }
+  .stat-num.green { color:#44cc77; }
+  .stat-label { font-size:0.65rem; color:#555; text-transform:uppercase; letter-spacing:1px; margin-top:2px; }
+
+  .list { display:flex; flex-direction:column; gap:6px; }
+
+  .member-card { background:#161616; border:1px solid #222; border-radius:10px; transition:border-color 0.25s; overflow:hidden; }
+  .member-card:hover { border-color:#333; }
+  .member-card.sanctioned { background:#1a0808; border-color:#5a1515; }
+  .member-card.warning { border-color:#4a2800; background:#181108; }
+
+  .member-row { display:flex; align-items:center; justify-content:space-between; padding:13px 16px; gap:10px; }
+  .member-card.sanctioned .member-name { color:#ff4444; text-decoration:line-through; text-decoration-color:#ff4444aa; }
+
+  .member-info { display:flex; align-items:center; gap:10px; flex:1; min-width:0; }
+  .member-num { font-size:0.65rem; color:#333; width:20px; text-align:right; flex-shrink:0; }
+  .member-name-wrap { min-width:0; flex:1; }
+  .member-name { font-size:0.92rem; font-weight:500; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; transition:color 0.3s; display:block; }
+  .badge-sanctioned { font-size:0.6rem; background:#ff4444; color:white; padding:2px 7px; border-radius:20px; text-transform:uppercase; letter-spacing:0.5px; flex-shrink:0; display:none; }
+  .sanctioned .badge-sanctioned { display:inline-block; }
+
+  .strikes { display:flex; gap:8px; align-items:center; flex-shrink:0; }
+  .strike-btn { width:28px; height:28px; border-radius:50%; border:2px solid #333; background:transparent; cursor:pointer; transition:all 0.2s; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+  .strike-btn:hover:not(.filled) { border-color:#666; transform:scale(1.1); }
+  .strike-btn.filled { background:#ff4444; border-color:#ff4444; box-shadow:0 0 8px #ff444466; }
+  .strike-btn.filled::after { content:'✕'; color:white; font-size:11px; font-weight:700; }
+
+  .icon-btn { background:transparent; border:none; color:#333; cursor:pointer; font-size:14px; padding:4px; border-radius:6px; transition:all 0.2s; flex-shrink:0; line-height:1; }
+  .icon-btn:hover { color:#888; background:#222; }
+
+  .motivos-panel { border-top:1px solid #1e1e1e; padding:10px 16px 12px; display:none; flex-direction:column; gap:6px; }
+  .motivos-panel.open { display:flex; }
+  .motivo-row { display:flex; align-items:center; gap:8px; }
+  .motivo-label { font-size:0.7rem; color:#ff4444; font-weight:600; width:54px; flex-shrink:0; }
+  .motivo-input { flex:1; background:#0d0d0d; border:1px solid #2a2a2a; border-radius:6px; color:#ccc; font-size:0.78rem; padding:5px 10px; font-family:'Inter',sans-serif; outline:none; transition:border-color 0.2s; }
+  .motivo-input:focus { border-color:#444; }
+  .motivo-input::placeholder { color:#333; }
+  .motivo-input:disabled { opacity:0.3; cursor:not-allowed; }
+
+  .empty-msg { text-align:center; color:#333; padding:40px; font-size:0.9rem; }
+
+  .modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.88); display:flex; align-items:center; justify-content:center; z-index:100; padding:20px; }
+  .modal-overlay.hidden { display:none; }
+  .modal { background:#1a1a1a; border:1px solid #333; border-radius:14px; padding:24px; width:100%; max-width:360px; }
+  .modal h3 { font-family:'Bebas Neue',sans-serif; font-size:1.3rem; letter-spacing:2px; color:#ff4444; margin-bottom:6px; }
+  .modal p { font-size:0.82rem; color:#666; margin-bottom:16px; }
+  .modal-input { width:100%; background:#0d0d0d; border:1px solid #333; border-radius:8px; color:#e8e8e8; font-size:0.9rem; padding:10px 14px; font-family:'Inter',sans-serif; outline:none; margin-bottom:16px; }
+  .modal-input:focus { border-color:#555; }
+  .modal-btns { display:flex; gap:10px; justify-content:flex-end; }
+  .btn-cancel { padding:8px 18px; background:transparent; border:1px solid #333; border-radius:8px; color:#888; cursor:pointer; font-family:'Inter',sans-serif; font-size:0.85rem; transition:all 0.2s; }
+  .btn-cancel:hover { border-color:#555; color:#ccc; }
+  .btn-confirm { padding:8px 18px; background:#ff4444; border:none; border-radius:8px; color:white; cursor:pointer; font-family:'Inter',sans-serif; font-size:0.85rem; font-weight:600; transition:all 0.2s; }
+  .btn-confirm:hover { background:#ff2222; }
+  .btn-danger { padding:8px 18px; background:#8b0000; border:none; border-radius:8px; color:#ffaaaa; cursor:pointer; font-family:'Inter',sans-serif; font-size:0.85rem; font-weight:600; transition:all 0.2s; }
+  .btn-danger:hover { background:#aa0000; }
+
+  .edit-panel { background:#111; border:1px solid #2a2a2a; border-radius:12px; padding:20px; margin-bottom:20px; display:none; flex-direction:column; gap:14px; }
+  .edit-panel.open { display:flex; }
+  .edit-panel-title { font-family:'Bebas Neue',sans-serif; font-size:1.1rem; letter-spacing:2px; color:#ff8800; }
+  .edit-panel-subtitle { font-size:0.75rem; color:#444; margin-top:-8px; }
+
+  .add-row { display:flex; gap:8px; }
+  .add-input { flex:1; background:#0d0d0d; border:1px solid #333; border-radius:8px; color:#e8e8e8; font-size:0.88rem; padding:9px 14px; font-family:'Inter',sans-serif; outline:none; }
+  .add-input:focus { border-color:#ff8800; }
+  .add-input::placeholder { color:#333; }
+  .add-btn { padding:9px 18px; background:#ff8800; border:none; border-radius:8px; color:white; cursor:pointer; font-family:'Inter',sans-serif; font-size:0.85rem; font-weight:600; white-space:nowrap; transition:all 0.2s; }
+  .add-btn:hover { background:#ffaa00; }
+
+  .editable-list { display:flex; flex-direction:column; gap:5px; max-height:320px; overflow-y:auto; padding-right:4px; }
+  .edit-member-row { display:flex; align-items:center; gap:8px; padding:6px 10px; background:#161616; border:1px solid #1e1e1e; border-radius:8px; }
+  .edit-name-input { flex:1; background:transparent; border:none; color:#ccc; font-size:0.85rem; font-family:'Inter',sans-serif; outline:none; padding:2px 0; }
+  .edit-name-input:focus { color:#fff; border-bottom:1px solid #444; }
+  .save-name-btn { background:transparent; border:none; color:#44cc77; cursor:pointer; font-size:13px; padding:3px 6px; border-radius:4px; transition:all 0.2s; opacity:0; }
+  .del-btn { background:transparent; border:none; color:#333; cursor:pointer; font-size:14px; padding:3px 6px; border-radius:4px; transition:all 0.2s; }
+  .del-btn:hover { color:#ff4444; background:#1a0808; }
+
+  @media (max-width:480px) {
+    .member-num { display:none; }
+    .stats-bar { gap:8px; padding:10px; }
+    .stat-num { font-size:1.3rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Carnet de Sanciones</h1>
+  <div class="subtitle">La Peña · Sistema de Strikes</div>
+</header>
+
+<div class="sync-bar">
+  <span class="sync-status" id="sync-status">⏳ Cargando datos...</span>
+  <button class="sync-btn" id="sync-btn">🔄 Sincronizar</button>
+</div>
+
+<div class="stats-bar">
+  <div class="stat"><div class="stat-num" id="total-count">0</div><div class="stat-label">Total</div></div>
+  <div class="stat"><div class="stat-num orange" id="warning-count">0</div><div class="stat-label">Aviso</div></div>
+  <div class="stat"><div class="stat-num red" id="sanctioned-count">0</div><div class="stat-label">Sancionados</div></div>
+  <div class="stat"><div class="stat-num green" id="clean-count">0</div><div class="stat-label">Limpios</div></div>
+</div>
+
+<div class="controls">
+  <input type="text" class="search-box" id="search" placeholder="🔍  Buscar miembro...">
+  <button class="filter-btn active" data-filter="all">Todos</button>
+  <button class="filter-btn" data-filter="clean">Limpios</button>
+  <button class="filter-btn" data-filter="warning">Con aviso</button>
+  <button class="filter-btn" data-filter="sanctioned">Sancionados</button>
+</div>
+
+<button class="edit-list-btn" id="toggle-edit">
+  ✏️ &nbsp;Gestionar miembros — añadir, eliminar o renombrar
+</button>
+
+<div class="edit-panel" id="edit-panel">
+  <div>
+    <div class="edit-panel-title">✏️ Gestionar Miembros</div>
+    <div class="edit-panel-subtitle">Los cambios se guardan y sincronizan al instante</div>
+  </div>
+  <div class="add-row">
+    <input type="text" class="add-input" id="new-member-input" placeholder="Nombre del nuevo miembro..." maxlength="60">
+    <button class="add-btn" id="add-member-btn">+ Añadir</button>
+  </div>
+  <div class="editable-list" id="editable-list"></div>
+</div>
+
+<div class="list" id="member-list"></div>
+
+<div class="modal-overlay hidden" id="modal">
+  <div class="modal">
+    <h3>Strike ✕</h3>
+    <p id="modal-desc">Añade el motivo (opcional)</p>
+    <input type="text" class="modal-input" id="modal-input" placeholder="Ej: No vino a montar el escenario..." maxlength="80">
+    <div class="modal-btns">
+      <button class="btn-cancel" id="modal-cancel">Cancelar</button>
+      <button class="btn-confirm" id="modal-confirm">Confirmar</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay hidden" id="del-modal">
+  <div class="modal">
+    <h3>Eliminar</h3>
+    <p id="del-modal-desc">¿Eliminar a este miembro?</p>
+    <div class="modal-btns">
+      <button class="btn-cancel" id="del-cancel">Cancelar</button>
+      <button class="btn-danger" id="del-confirm">Eliminar</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const API = 'https://script.google.com/macros/s/AKfycbxLatF4-KETFYokCqbSYSlP5zW9fsEPLasQeYu0lBKSwCSs-Krvzy--X_PQYbQ_vxMdQA/exec';
+
+const DEFAULT_MEMBERS = [
+  "Angel Ruiz","Arturo","Mudarra","Paula","lidia cantalejo","Sergio Gallego","Ivan Alvarez",
+  "Juanma","Maria Juanma","Maria Peña","Maribel","Rafa peña","Sariitaa",
+  "Javier Fuertes","Juan Sanchez","Rocío Bodegas","Jdesala","Rafael Furnieles López",
+  "Jorge Pérez Corujo","Mery","Alvaro Losana","Lorena Junghanns","Arturo Martínez Amorós",
+  "Estalayo","Paula López","Tito","martinezz","ana ciganda","Angela","Nona","nere",
+  "Cafe Del Atril","Ana garcia","Cande","Pablo Gonzalez","Alberto Fdez de Salamanca",
+  "celiaa","Loreto","Alba","Pablo Fernández Palacio","David","Fernando Millan",
+  "Rafa","Sol","Alejandro Olalla","Ignacio Botella","Ana","jordii","Jesus",
+  "Jose luis","María Recuero","Teresa","Juanma 2","Jorgito","La Yoly",
+  "Ana Campos","Pirulo","Alberto olalla fernandez","Icíar","Nacho",
+  "🙈 (sin nombre)","😜 (sin nombre)"
+];
+
+let members = [...DEFAULT_MEMBERS];
+let data = {};
+let currentFilter = 'all';
+let pendingStrike = null;
+let pendingDelete = null;
+
+function setStatus(msg, type) {
+  const el = document.getElementById('sync-status');
+  el.textContent = msg;
+  el.className = 'sync-status ' + (type || '');
+}
+
+async function loadFromSheets() {
+  setStatus('⏳ Cargando...', 'loading');
+  try {
+    const res = await fetch(API + '?action=get');
+    const remote = await res.json();
+
+    // Mezcla: mantén lista local de nombres, actualiza datos remotos
+    Object.keys(remote).forEach(name => {
+      if (!members.includes(name)) members.push(name);
+      data[name] = remote[name];
+      if (!data[name].motivos) data[name].motivos = ['','',''];
+    });
+
+    // Asegura que todos los miembros tienen datos
+    members.forEach(m => {
+      if (!data[m]) data[m] = { strikes:0, motivos:['','',''] };
+    });
+
+    setStatus('✅ Sincronizado con Google Sheets', 'ok');
+    render();
+    updateStats();
+  } catch(e) {
+    setStatus('⚠️ Sin conexión — datos locales', 'error');
+    // Carga local como fallback
+    members.forEach(m => {
+      if (!data[m]) data[m] = { strikes:0, motivos:['','',''] };
+    });
+    render();
+    updateStats();
+  }
+}
+
+async function saveToSheets() {
+  setStatus('💾 Guardando...', 'loading');
+  try {
+    const url = API + '?action=save&data=' + encodeURIComponent(JSON.stringify(data));
+    await fetch(url);
+    setStatus('✅ Guardado en Google Sheets', 'ok');
+  } catch(e) {
+    setStatus('⚠️ Error al guardar', 'error');
+  }
+}
+
+function getStatus(strikes) {
+  if (strikes >= 3) return 'sanctioned';
+  if (strikes > 0) return 'warning';
+  return 'clean';
+}
+
+function updateStats() {
+  const counts = { clean:0, warning:0, sanctioned:0 };
+  members.forEach(m => counts[getStatus(data[m]?.strikes || 0)]++);
+  document.getElementById('total-count').textContent = members.length;
+  document.getElementById('warning-count').textContent = counts.warning;
+  document.getElementById('sanctioned-count').textContent = counts.sanctioned;
+  document.getElementById('clean-count').textContent = counts.clean;
+}
+
+function renderEditList() {
+  const el = document.getElementById('editable-list');
+  el.innerHTML = '';
+  members.forEach((m, i) => {
+    const row = document.createElement('div');
+    row.className = 'edit-member-row';
+    row.innerHTML = `
+      <span style="font-size:0.7rem;color:#333;width:18px;flex-shrink:0">${i+1}</span>
+      <input type="text" class="edit-name-input" value="${m}" data-original="${m}">
+      <button class="save-name-btn" title="Guardar">✓</button>
+      <button class="del-btn" title="Eliminar">✕</button>
+    `;
+
+    const nameInput = row.querySelector('.edit-name-input');
+    const saveBtn = row.querySelector('.save-name-btn');
+    const delBtn = row.querySelector('.del-btn');
+
+    nameInput.addEventListener('input', () => {
+      saveBtn.style.opacity = nameInput.value.trim() !== m ? '1' : '0';
+    });
+
+    const saveName = async () => {
+      const newName = nameInput.value.trim();
+      if (!newName || newName === m) return;
+      if (members.includes(newName)) { alert('Ese nombre ya existe'); nameInput.value = m; return; }
+      data[newName] = data[m] || { strikes:0, motivos:['','',''] };
+      delete data[m];
+      members[i] = newName;
+      await saveToSheets();
+      renderEditList();
+      render();
+    };
+
+    saveBtn.addEventListener('click', saveName);
+    nameInput.addEventListener('keydown', e => { if (e.key === 'Enter') saveName(); });
+
+    delBtn.addEventListener('click', () => {
+      pendingDelete = m;
+      document.getElementById('del-modal-desc').textContent = `¿Eliminar a "${m}" y todos sus strikes?`;
+      document.getElementById('del-modal').classList.remove('hidden');
+    });
+
+    el.appendChild(row);
+  });
+}
+
+function render() {
+  const search = document.getElementById('search').value.toLowerCase();
+  const list = document.getElementById('member-list');
+  list.innerHTML = '';
+  let visible = 0;
+
+  members.forEach((m, i) => {
+    const d = data[m] || { strikes:0, motivos:['','',''] };
+    const strikes = d.strikes || 0;
+    const motivos = d.motivos || ['','',''];
+    const status = getStatus(strikes);
+
+    if (currentFilter !== 'all' && currentFilter !== status) return;
+    if (search && !m.toLowerCase().includes(search)) return;
+    visible++;
+
+    const card = document.createElement('div');
+    card.className = `member-card ${status}`;
+
+    const strikesHTML = [0,1,2].map(j =>
+      `<button class="strike-btn ${j < strikes ? 'filled' : ''}" data-idx="${j}"></button>`
+    ).join('');
+
+    const motivosHTML = [0,1,2].map(j => {
+      const active = j < strikes;
+      return `<div class="motivo-row">
+        <span class="motivo-label">Strike ${j+1}</span>
+        <input type="text" class="motivo-input" data-motivo-idx="${j}"
+          placeholder="${active ? 'Sin motivo registrado' : '—'}"
+          value="${(motivos[j] || '').replace(/"/g,'&quot;')}"
+          ${!active ? 'disabled' : ''} maxlength="80">
+      </div>`;
+    }).join('');
+
+    const hasMotivos = motivos.some(x => x && x.trim());
+    const emoji = strikes > 0 && hasMotivos ? ' 📝' : '';
+
+    card.innerHTML = `
+      <div class="member-row">
+        <div class="member-info">
+          <span class="member-num">${i+1}</span>
+          <div class="member-name-wrap">
+            <span class="member-name">${m}${emoji}</span>
+          </div>
+          <span class="badge-sanctioned">⚡ Sancionado</span>
+        </div>
+        <div class="strikes">${strikesHTML}</div>
+        <button class="icon-btn motivos-toggle" title="Ver motivos">▼</button>
+        <button class="icon-btn reset-btn" title="Resetear">↺</button>
+      </div>
+      <div class="motivos-panel">${motivosHTML}</div>
+    `;
+
+    card.querySelectorAll('.strike-btn').forEach((btn, j) => {
+      btn.addEventListener('click', async e => {
+        e.stopPropagation();
+        const cur = data[m].strikes || 0;
+        if (j + 1 === cur) {
+          data[m].strikes = j;
+          data[m].motivos[j] = '';
+          render(); updateStats();
+          await saveToSheets();
+        } else if (j + 1 > cur) {
+          pendingStrike = { name: m, idx: j };
+          document.getElementById('modal-desc').textContent = `Strike ${j+1} para ${m} (motivo opcional)`;
+          document.getElementById('modal-input').value = '';
+          document.getElementById('modal').classList.remove('hidden');
+          setTimeout(() => document.getElementById('modal-input').focus(), 100);
+        }
+      });
+    });
+
+    card.querySelectorAll('.motivo-input').forEach((input, j) => {
+      input.addEventListener('change', async () => {
+        data[m].motivos[j] = input.value;
+        await saveToSheets();
+      });
+    });
+
+    card.querySelector('.motivos-toggle').addEventListener('click', e => {
+      e.stopPropagation();
+      const panel = card.querySelector('.motivos-panel');
+      const btn = card.querySelector('.motivos-toggle');
+      panel.classList.toggle('open');
+      btn.textContent = panel.classList.contains('open') ? '▲' : '▼';
+    });
+
+    card.querySelector('.reset-btn').addEventListener('click', async e => {
+      e.stopPropagation();
+      if (data[m].strikes > 0 && confirm(`¿Resetear strikes de ${m}?`)) {
+        data[m] = { strikes:0, motivos:['','',''] };
+        render(); updateStats();
+        await saveToSheets();
+      }
+    });
+
+    list.appendChild(card);
+  });
+
+  if (visible === 0) list.innerHTML = '<div class="empty-msg">Nadie encontrado</div>';
+  updateStats();
+}
+
+// Toggle editar
+document.getElementById('toggle-edit').addEventListener('click', () => {
+  const panel = document.getElementById('edit-panel');
+  const btn = document.getElementById('toggle-edit');
+  panel.classList.toggle('open');
+  if (panel.classList.contains('open')) {
+    renderEditList();
+    btn.textContent = '✖ Cerrar gestión de miembros';
+  } else {
+    btn.innerHTML = '✏️ &nbsp;Gestionar miembros — añadir, eliminar o renombrar';
+  }
+});
+
+// Añadir miembro
+document.getElementById('add-member-btn').addEventListener('click', async () => {
+  const input = document.getElementById('new-member-input');
+  const name = input.value.trim();
+  if (!name) return;
+  if (members.includes(name)) { alert('Ese nombre ya existe'); return; }
+  members.push(name);
+  data[name] = { strikes:0, motivos:['','',''] };
+  input.value = '';
+  renderEditList();
+  render();
+  await saveToSheets();
+});
+
+document.getElementById('new-member-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') document.getElementById('add-member-btn').click();
+});
+
+// Modal strike
+document.getElementById('modal-confirm').addEventListener('click', async () => {
+  if (!pendingStrike) return;
+  const { name, idx } = pendingStrike;
+  data[name].strikes = idx + 1;
+  data[name].motivos[idx] = document.getElementById('modal-input').value.trim();
+  pendingStrike = null;
+  document.getElementById('modal').classList.add('hidden');
+  render(); updateStats();
+  await saveToSheets();
+});
+
+document.getElementById('modal-cancel').addEventListener('click', () => {
+  pendingStrike = null;
+  document.getElementById('modal').classList.add('hidden');
+});
+
+document.getElementById('modal-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') document.getElementById('modal-confirm').click();
+  if (e.key === 'Escape') document.getElementById('modal-cancel').click();
+});
+
+// Modal borrar
+document.getElementById('del-confirm').addEventListener('click', async () => {
+  if (!pendingDelete) return;
+  const idx = members.indexOf(pendingDelete);
+  if (idx > -1) members.splice(idx, 1);
+  delete data[pendingDelete];
+  pendingDelete = null;
+  document.getElementById('del-modal').classList.add('hidden');
+  renderEditList();
+  render();
+  await saveToSheets();
+});
+
+document.getElementById('del-cancel').addEventListener('click', () => {
+  pendingDelete = null;
+  document.getElementById('del-modal').classList.add('hidden');
+});
+
+// Sincronizar manual
+document.getElementById('sync-btn').addEventListener('click', loadFromSheets);
+
+// Filtros
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = btn.dataset.filter;
+    render();
+  });
+});
+
+document.getElementById('search').addEventListener('input', render);
+
+// Arranque
+loadFromSheets();
+</script>
+</body>
+</html>
