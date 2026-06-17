@@ -1,9 +1,8 @@
 ---
-title: >-
-  Mago para Bodas en Madrid 2026: La Guía Definitiva para una Celebración Mágica
+title: 'Mago para Bodas en Madrid [2026]: Precios, Ideas y Guía Definitiva'
 date: '2026-04-10'
 excerpt: >-
-  ¿Buscas mago para tu boda en Madrid? Descubre cuándo contratar un ilusionista, cuánto cuesta, qué tipo de magia funciona mejor y cómo transformar el cóctel en el momento más recordado del día.
+  ¿Quieres que tu boda sea inolvidable? Descubre cómo un mago en Madrid puede transformar tu cóctel. Precios exactos, cuándo contratar y los mejores consejos.
 author: Ángel Ruiz
 image: /images/boda-magia-madrid.webp
 tags:

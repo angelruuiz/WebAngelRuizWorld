@@ -3,12 +3,21 @@ import Link from 'next/link';
 
 export const metadata = {
     title: { absolute: 'Ángel Ruiz, Mago Profesional en Madrid | +10 Años de Experiencia' },
-    description: 'Conoce a Ángel Ruiz, ilusionista profesional en Madrid formado con Dani DaOrtiz. Especialista en cartomagia y magia de cerca para bodas y empresas. 39 reseñas · 5 estrellas.',
+    description: 'Descubre al mago profesional Ángel Ruiz en Madrid. Magia de cerca de alto impacto para eventos exclusivos. Alumno de DaOrtiz. ¡Contacta para asombrar a tus invitados!',
     alternates: {
         canonical: 'https://angelruiz.world/sobre-mi',
     },
     openGraph: {
         url: 'https://angelruiz.world/sobre-mi',
+        title: 'Ángel Ruiz, Mago Profesional en Madrid',
+        description: 'Conoce a Ángel Ruiz, ilusionista especializado en magia de cerca para bodas y empresas.',
+        images: [{ url: '/images/foto-bio.webp', width: 1200, height: 630 }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Ángel Ruiz, Mago Profesional en Madrid',
+        description: 'Conoce a Ángel Ruiz, ilusionista especializado en magia de cerca para bodas y empresas.',
+        images: ['/images/foto-bio.webp'],
     },
 };
 

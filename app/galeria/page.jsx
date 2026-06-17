@@ -6,8 +6,21 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 export const metadata = {
     title: { absolute: 'Galería de Eventos Reales | Fotos de Magia en Madrid · Ángel Ruiz' },
     description: 'Fotos reales de actuaciones de Ángel Ruiz como mago en Madrid. Eventos corporativos, bodas exclusivas y magia close-up. +10 años de experiencia.',
+    keywords: ['fotos mago madrid', 'galeria mago madrid', 'imagenes magia madrid', 'mago eventos madrid fotos'],
     alternates: {
         canonical: 'https://angelruiz.world/galeria',
+    },
+    openGraph: {
+        url: 'https://angelruiz.world/galeria',
+        title: 'Galería de Eventos Reales | Fotos de Magia en Madrid · Ángel Ruiz',
+        description: 'Fotos reales de actuaciones de Ángel Ruiz como mago en Madrid. Eventos corporativos, bodas exclusivas y magia close-up.',
+        images: [{ url: '/images/evento-angel-ruiz-magia.webp', width: 1200, height: 630 }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Galería de Eventos Reales | Fotos de Magia en Madrid',
+        description: 'Fotos reales de actuaciones de Ángel Ruiz como mago en Madrid.',
+        images: ['/images/evento-angel-ruiz-magia.webp'],
     },
 };
 

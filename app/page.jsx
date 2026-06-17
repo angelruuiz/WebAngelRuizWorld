@@ -3,14 +3,14 @@ import Image from 'next/image';
 
 export const metadata = {
     title: { absolute: 'Mago en Madrid | Ángel Ruiz | Ilusionista para Bodas y Empresas 2026' },
-    description: 'Ángel Ruiz, mago profesional en Madrid para bodas, cenas de empresa y eventos privados. +10 años de experiencia, alumno de DaOrtiz. 39 reseñas ⭐⭐⭐⭐⭐. Solicita presupuesto sin compromiso.',
+    description: 'Ángel Ruiz, mago profesional en Madrid para bodas, cenas de empresa y eventos privados. +10 años de experiencia, alumno de DaOrtiz. 42 reseñas ⭐⭐⭐⭐⭐. Solicita presupuesto sin compromiso.',
     alternates: {
         canonical: 'https://angelruiz.world',
     },
     openGraph: {
         url: 'https://angelruiz.world',
-        title: 'Mago en Madrid | Ángel Ruiz | Ilusionista para Bodas y Empresas 2026',
-        description: 'Ilusionista profesional en Madrid. Especialista en magia de cerca para bodas, cenas de empresa y eventos corporativos. +10 años, 39 reseñas 5 estrellas.',
+        title: 'Ángel Ruiz | Mago e Ilusionista en Madrid para Eventos y Bodas',
+        description: 'Ilusionista profesional en Madrid. Especialista en magia de cerca para bodas, cenas de empresa y eventos corporativos. +10 años, 42 reseñas 5 estrellas.',
     },
 };
 
@@ -243,7 +243,7 @@ export default function Home() {
             "ratingValue": "5",
             "bestRating": "5",
             "worstRating": "1",
-            "ratingCount": "39"
+            "ratingCount": "42"
         }
     };
 

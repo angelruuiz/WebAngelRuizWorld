@@ -6,17 +6,40 @@ import FAQItem from '@/components/FAQItem';
 export const metadata = {
   title: 'Mago para Team Building en Madrid | Dinámicas de Empresa',
   description: 'Fomenta la cohesión de equipos y el liderazgo con un Team Building diferente en Madrid. Dinámicas basadas en ilusionismo corporativo.',
+  keywords: 'team building madrid, dinamicas de empresa madrid, mago team building madrid, actividades empresas madrid, ilusionismo corporativo, cohesion equipos, magia para empresas',
+  alternates: {
+    canonical: 'https://angelruiz.world/empresas/mago-team-building-madrid',
+  },
+  openGraph: {
+    title: 'Mago para Team Building en Madrid | Dinámicas de Empresa',
+    description: 'Fomenta la cohesión de equipos y el liderazgo con un Team Building diferente en Madrid. Dinámicas basadas en ilusionismo corporativo.',
+    url: 'https://angelruiz.world/empresas/mago-team-building-madrid',
+    siteName: 'Angel Ruiz',
+    images: [
+      {
+        url: 'https://angelruiz.world/images/og-mago-empresas.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Mago para Team Building en Madrid',
+      },
+    ],
+    locale: 'es_ES',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mago para Team Building en Madrid | Dinámicas de Empresa',
+    description: 'Fomenta la cohesión de equipos y el liderazgo con un Team Building diferente en Madrid. Dinámicas basadas en ilusionismo corporativo.',
+    images: ['https://angelruiz.world/images/og-mago-empresas.jpg'],
+  },
 };
 
 const faqs = [
-  { name: '¿Cuál es el ROI esperado de un actividad de team building?', acceptedAnswer: { text: 'Nuestra metodología B2B asegura que la marca se grabe en la mente de los asistentes, aumentando el engagement y acelerando el ciclo de cierre en ferias y eventos.' } },
-  { name: '¿Cómo se integra el show en la agenda corporativa?', acceptedAnswer: { text: 'Diseñamos intervenciones modulares. No interrumpimos tu evento, lo potenciamos. Intervenciones de alto impacto entre bloques o como main event.' } },
-  { name: '¿Se adapta a los valores de nuestra marca?', acceptedAnswer: { text: 'Totalmente. Integramos los mensajes clave de tu empresa (productos, KPIs, cultura corporativa) en las experiencias de asombro.' } },
-  { name: '¿Qué requerimientos técnicos tiene el espectáculo?', acceptedAnswer: { text: 'Mínimos. Nuestro enfoque es "Plug & Play". Llevamos la tecnología necesaria para impactar sin complicar tu producción.' } },
-  { name: '¿Realizan presentaciones en inglés?', acceptedAnswer: { text: 'Sí, trabajamos en entornos corporativos multinacionales, garantizando un inglés fluido y profesional de alto impacto B2B.' } },
-  { name: '¿Es adecuado para públicos de alto nivel (C-Level)?', acceptedAnswer: { text: 'Diseñado específicamente para ello. Una comunicación sofisticada, humor inteligente y un respeto absoluto a la jerarquía y el entorno.' } },
-  { name: '¿Cuánto tiempo de antelación es necesario para reservar?', acceptedAnswer: { text: 'Para fechas clave (cenas de navidad, grandes congresos), recomendamos reservar con 2-3 meses de antelación.' } },
-  { name: '¿Cómo medimos el éxito de la intervención?', acceptedAnswer: { text: 'Proporcionamos herramientas post-evento para medir la recordación del mensaje y el incremento en el engagement de los asistentes.' } }
+  { name: '¿En qué consiste el Team Building con magia?', acceptedAnswer: { text: 'Es una dinámica interactiva donde los empleados aprenden juegos de ilusionismo y participan en desafíos mágicos en equipo. Fomenta la comunicación, la resolución de problemas y la cohesión.' } },
+  { name: '¿Qué habilidades fomenta la magia en los equipos de trabajo?', acceptedAnswer: { text: 'La magia requiere empatía, presentación efectiva, pensamiento lateral y trabajo en equipo. Los participantes desarrollan habilidades de liderazgo y soft skills sin darse cuenta.' } },
+  { name: '¿Pueden participar grupos grandes de empleados?', acceptedAnswer: { text: 'Sí, adaptamos el taller y la sesión de team building según el tamaño de la empresa. Desde grupos reducidos de directivos hasta grandes convenciones de empleados divididos por equipos.' } },
+  { name: '¿Hacéis actividades de Team Building fuera de Madrid?', acceptedAnswer: { text: 'Principalmente operamos en Madrid, pero nos desplazamos a nivel nacional para convenciones y retiros de empresa si el evento lo requiere.' } },
+  { name: '¿Se requiere algún material especial o escenario?', acceptedAnswer: { text: 'No, nosotros aportamos todo el material mágico necesario para cada participante (cartas, monedas, accesorios). Solo necesitamos un espacio diáfano o mesas grupales para trabajar.' } }
 ];
 
 export default function Page() {

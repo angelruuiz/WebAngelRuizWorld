@@ -86,6 +86,13 @@ const globalSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Organization",
+      "@id": "https://angelruiz.world/#organization",
+      "name": "Ángel Ruiz | Mago e Ilusionista",
+      "url": "https://angelruiz.world",
+      "logo": "https://angelruiz.world/images/logo.png"
+    },
+    {
       "@type": "WebSite",
       "@id": "https://angelruiz.world/#website",
       "url": "https://angelruiz.world",

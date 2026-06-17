@@ -138,6 +138,33 @@ export default function ValoracionesClient({ reviewsData }) {
                 <ReviewsGrid reviewsData={reviewsData} />
                 <TrustedBrands />
 
+                <section className="py-12 px-6 max-w-4xl mx-auto text-center relative z-10">
+                    <div className="bg-[#1a1a1a] border border-amber-500/30 p-10 rounded-2xl flex flex-col items-center">
+                        <div className="flex items-center gap-3 mb-6">
+                            <span className="text-white font-bold text-2xl">4.9</span>
+                            <div className="flex gap-1">
+                                {[...Array(5)].map((_, i) => (<Star key={i} className="w-6 h-6 text-amber-400 fill-amber-400" />))}
+                            </div>
+                        </div>
+                        <h3 className="text-2xl md:text-3xl font-[Cinzel] text-white font-bold uppercase mb-4">Descubre qué dicen de nosotros en Google</h3>
+                        <p className="text-slate-400 mb-8 max-w-2xl">Lee las experiencias reales de más de 42 clientes satisfechos que han confiado en la magia de Ángel Ruiz para sus bodas y eventos corporativos.</p>
+                        <a 
+                            href="https://www.google.com/search?sca_esv=d1946b299fc53e00&sxsrf=ANbL-n42RqyEZw2zYhmhgDRcHZ0D7tucWg:1781705626584&q=%C3%81ngel+Ruiz+%7C+Mago+para+Bodas+y+Empresas+en+Madrid+Rese%C3%B1as&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDAwMzA2MDG2MDA0NLC0sDA2MdjAyPiK0fpwY156ao5CUGlmlUKNgm9ier5CQWJRooJTfkpisUKlgmtuQVFqMZCZmgeUTSnKTFEISi1OPbwxsXgRKyW6AUrBjt6XAAAA&rldimm=10060304380110988340&tbm=lcl&hl=es-ES&sa=X&ved=2ahUKEwiPot3Xuo6VAxWDgP0HHYtWFIIQ9fQKegQIRRAG&biw=1356&bih=611&dpr=1.42#lkt=LocalPoiReviews" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-3 px-8 py-4 bg-white text-slate-900 font-bold rounded-full hover:bg-slate-200 transition-colors"
+                        >
+                            <svg className="w-6 h-6" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                            </svg>
+                            Ver las 42 reseñas de 5 estrellas
+                        </a>
+                    </div>
+                </section>
+
                 <section className="py-24 px-6 max-w-4xl mx-auto text-center relative z-10">
                     <div className="bg-slate-900/50 border border-slate-800 p-12 rounded-3xl backdrop-blur-xl">
                         <h2 className="text-3xl md:text-5xl font-[Cinzel] text-white mb-6 font-bold uppercase">¿Quieres que tu evento sea el siguiente?</h2>

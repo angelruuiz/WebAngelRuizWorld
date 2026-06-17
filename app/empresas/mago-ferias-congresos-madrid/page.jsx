@@ -6,17 +6,40 @@ import FAQItem from '@/components/FAQItem';
 export const metadata = {
   title: 'Mago para Ferias y Congresos en Madrid | IFEMA y Stands',
   description: 'Atrae multitudes a tu stand corporativo. Ángel Ruiz, mago para ferias en IFEMA y congresos en Madrid. Generación de leads y alto impacto B2B con ilusionismo.',
+  keywords: 'mago para ferias madrid, mago para stands, ilusionista ifema, mago corporativo ferias, captacion de leads feria, animacion stand madrid, mago congresos',
+  alternates: {
+    canonical: 'https://angelruiz.world/empresas/mago-ferias-congresos-madrid',
+  },
+  openGraph: {
+    title: 'Mago para Ferias y Congresos en Madrid | IFEMA y Stands',
+    description: 'Atrae multitudes a tu stand corporativo. Ángel Ruiz, mago para ferias en IFEMA y congresos en Madrid. Generación de leads y alto impacto B2B con ilusionismo.',
+    url: 'https://angelruiz.world/empresas/mago-ferias-congresos-madrid',
+    siteName: 'Angel Ruiz',
+    images: [
+      {
+        url: 'https://angelruiz.world/images/og-mago-empresas.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Mago para Ferias y Congresos en Madrid',
+      },
+    ],
+    locale: 'es_ES',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mago para Ferias y Congresos en Madrid | IFEMA y Stands',
+    description: 'Atrae multitudes a tu stand corporativo. Ángel Ruiz, mago para ferias en IFEMA y congresos en Madrid. Generación de leads y alto impacto B2B con ilusionismo.',
+    images: ['https://angelruiz.world/images/og-mago-empresas.jpg'],
+  },
 };
 
 const faqs = [
-  { name: '¿Cuál es el ROI esperado de un stand en feria?', acceptedAnswer: { text: 'Nuestra metodología B2B asegura que la marca se grabe en la mente de los asistentes, aumentando el engagement y acelerando el ciclo de cierre en ferias y eventos.' } },
-  { name: '¿Cómo se integra el show en la agenda corporativa?', acceptedAnswer: { text: 'Diseñamos intervenciones modulares. No interrumpimos tu evento, lo potenciamos. Intervenciones de alto impacto entre bloques o como main event.' } },
-  { name: '¿Se adapta a los valores de nuestra marca?', acceptedAnswer: { text: 'Totalmente. Integramos los mensajes clave de tu empresa (productos, KPIs, cultura corporativa) en las experiencias de asombro.' } },
-  { name: '¿Qué requerimientos técnicos tiene el espectáculo?', acceptedAnswer: { text: 'Mínimos. Nuestro enfoque es "Plug & Play". Llevamos la tecnología necesaria para impactar sin complicar tu producción.' } },
-  { name: '¿Realizan presentaciones en inglés?', acceptedAnswer: { text: 'Sí, trabajamos en entornos corporativos multinacionales, garantizando un inglés fluido y profesional de alto impacto B2B.' } },
-  { name: '¿Es adecuado para públicos de alto nivel (C-Level)?', acceptedAnswer: { text: 'Diseñado específicamente para ello. Una comunicación sofisticada, humor inteligente y un respeto absoluto a la jerarquía y el entorno.' } },
-  { name: '¿Cuánto tiempo de antelación es necesario para reservar?', acceptedAnswer: { text: 'Para fechas clave (cenas de navidad, grandes congresos), recomendamos reservar con 2-3 meses de antelación.' } },
-  { name: '¿Cómo medimos el éxito de la intervención?', acceptedAnswer: { text: 'Proporcionamos herramientas post-evento para medir la recordación del mensaje y el incremento en el engagement de los asistentes.' } }
+  { name: '¿Cómo ayuda un mago a conseguir más clientes en una feria?', acceptedAnswer: { text: 'La magia funciona como un "parada-tráfico". Capta la atención de los asistentes que caminan por el pasillo, los agrupa en tu stand y rompe el hielo para que tu equipo comercial pueda cualificar el lead e iniciar el proceso de venta.' } },
+  { name: '¿Se puede integrar mi producto en los juegos de magia?', acceptedAnswer: { text: 'Sí, esa es la clave del ilusionismo corporativo o Trade Show Magic. Puedo hacer aparecer merchandising, incorporar tu logo o usar los beneficios de tu producto/software como guion del efecto mágico.' } },
+  { name: '¿Trabajas habitualmente en IFEMA?', acceptedAnswer: { text: 'Sí, tengo amplia experiencia trabajando en IFEMA y en los principales recintos feriales de Madrid y España, adaptándome a los diferentes tamaños de stand y flujos de público.' } },
+  { name: '¿En qué idiomas realizas la presentación?', acceptedAnswer: { text: 'Realizo shows tanto en español como en inglés fluido, algo fundamental en ferias internacionales donde asisten visitantes de toda Europa y resto del mundo.' } },
+  { name: '¿Cómo nos coordinamos con el equipo comercial del stand?', acceptedAnswer: { text: 'Trabajamos en sinergia. Yo me encargo de atraer, entretener e introducir el mensaje de la marca, y en el momento de máximo asombro (el "peak" emocional), realizo el traspaso fluido del grupo a vuestros comerciales.' } }
 ];
 
 export default function Page() {

@@ -10,11 +10,19 @@ export async function generateMetadata({ params }) {
   return {
     title: postData.title,
     description: postData.excerpt,
+    keywords: postData.tags,
     openGraph: {
       title: postData.title,
       description: postData.excerpt,
       type: 'article',
       url: `https://angelruiz.world/blog/${params.slug}`,
+      images: postData.image ? [{ url: postData.image }] : [],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: postData.title,
+      description: postData.excerpt,
+      images: postData.image ? [postData.image] : [],
     },
     alternates: {
       canonical: `https://angelruiz.world/blog/${params.slug}`,

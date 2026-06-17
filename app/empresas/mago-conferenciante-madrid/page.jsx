@@ -6,17 +6,40 @@ import FAQItem from '@/components/FAQItem';
 export const metadata = {
   title: 'Mago Conferenciante en Madrid | Charlas Motivacionales Diferentes',
   description: '¿Buscas una conferencia motivacional distinta? Ángel Ruiz fusiona ilusionismo y comunicación corporativa para anclar los valores de tu empresa en Madrid. Alto impacto B2B.',
+  keywords: 'mago conferenciante madrid, charlas motivacionales empresas, conferencias con magia, speaker motivacional, comunicacion corporativa, ponente empresas madrid, magia corporativa',
+  alternates: {
+    canonical: 'https://angelruiz.world/empresas/mago-conferenciante-madrid',
+  },
+  openGraph: {
+    title: 'Mago Conferenciante en Madrid | Charlas Motivacionales Diferentes',
+    description: '¿Buscas una conferencia motivacional distinta? Ángel Ruiz fusiona ilusionismo y comunicación corporativa para anclar los valores de tu empresa en Madrid. Alto impacto B2B.',
+    url: 'https://angelruiz.world/empresas/mago-conferenciante-madrid',
+    siteName: 'Angel Ruiz',
+    images: [
+      {
+        url: 'https://angelruiz.world/images/og-mago-empresas.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Mago Conferenciante en Madrid',
+      },
+    ],
+    locale: 'es_ES',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mago Conferenciante en Madrid | Charlas Motivacionales Diferentes',
+    description: '¿Buscas una conferencia motivacional distinta? Ángel Ruiz fusiona ilusionismo y comunicación corporativa para anclar los valores de tu empresa en Madrid. Alto impacto B2B.',
+    images: ['https://angelruiz.world/images/og-mago-empresas.jpg'],
+  },
 };
 
 const faqs = [
-  { name: '¿Cuál es el ROI esperado de un conferencia motivacional?', acceptedAnswer: { text: 'Nuestra metodología B2B asegura que la marca se grabe en la mente de los asistentes, aumentando el engagement y acelerando el ciclo de cierre en ferias y eventos.' } },
-  { name: '¿Cómo se integra el show en la agenda corporativa?', acceptedAnswer: { text: 'Diseñamos intervenciones modulares. No interrumpimos tu evento, lo potenciamos. Intervenciones de alto impacto entre bloques o como main event.' } },
-  { name: '¿Se adapta a los valores de nuestra marca?', acceptedAnswer: { text: 'Totalmente. Integramos los mensajes clave de tu empresa (productos, KPIs, cultura corporativa) en las experiencias de asombro.' } },
-  { name: '¿Qué requerimientos técnicos tiene el espectáculo?', acceptedAnswer: { text: 'Mínimos. Nuestro enfoque es "Plug & Play". Llevamos la tecnología necesaria para impactar sin complicar tu producción.' } },
-  { name: '¿Realizan presentaciones en inglés?', acceptedAnswer: { text: 'Sí, trabajamos en entornos corporativos multinacionales, garantizando un inglés fluido y profesional de alto impacto B2B.' } },
-  { name: '¿Es adecuado para públicos de alto nivel (C-Level)?', acceptedAnswer: { text: 'Diseñado específicamente para ello. Una comunicación sofisticada, humor inteligente y un respeto absoluto a la jerarquía y el entorno.' } },
-  { name: '¿Cuánto tiempo de antelación es necesario para reservar?', acceptedAnswer: { text: 'Para fechas clave (cenas de navidad, grandes congresos), recomendamos reservar con 2-3 meses de antelación.' } },
-  { name: '¿Cómo medimos el éxito de la intervención?', acceptedAnswer: { text: 'Proporcionamos herramientas post-evento para medir la recordación del mensaje y el incremento en el engagement de los asistentes.' } }
+  { name: '¿Cómo se integra la magia en una conferencia corporativa?', acceptedAnswer: { text: 'La magia no es un adorno, es una herramienta de comunicación. Utilizo metáforas visuales y juegos de ilusionismo para ilustrar conceptos como el liderazgo, la adaptación al cambio, el trabajo en equipo o la superación de límites, logrando que el mensaje sea inolvidable.' } },
+  { name: '¿Qué temas se pueden tratar en la ponencia?', acceptedAnswer: { text: 'Las temáticas son 100% personalizables. Las más solicitadas incluyen: motivación de equipos, innovación disruptiva, resiliencia frente a la adversidad, y la psicología del asombro aplicada a las ventas y atención al cliente.' } },
+  { name: '¿Cuánto dura la conferencia mágica?', acceptedAnswer: { text: 'El formato estándar suele durar entre 45 y 60 minutos, que es el tiempo óptimo para mantener la máxima atención y retención del mensaje. No obstante, se puede adaptar según la agenda del evento.' } },
+  { name: '¿Es una charla interactiva?', acceptedAnswer: { text: 'Completamente. Los asistentes no son meros espectadores, participan activamente en los experimentos y dinámicas propuestas, lo que aumenta exponencialmente el engagement y el impacto del mensaje.' } },
+  { name: '¿A qué tipo de público va dirigida?', acceptedAnswer: { text: 'Desde convenciones anuales de empleados hasta reuniones exclusivas de directivos (C-Level). El tono y la profundidad del mensaje se ajustan rigurosamente al perfil de la audiencia y a los objetivos estratégicos de la empresa.' } }
 ];
 
 export default function Page() {

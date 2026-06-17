@@ -2,29 +2,34 @@ import ValoracionesClient from '@/components/ValoracionesClient';
 
 export const metadata = {
     title: { absolute: 'Opiniones y Reseñas | Ángel Ruiz, Mago en Madrid' },
-    description: '39 reseñas verificadas de 5 estrellas. Lee las opiniones reales de clientes que contrataron a Ángel Ruiz como mago para bodas, empresas y eventos en Madrid.',
+    description: 'Descubre por qué Ángel Ruiz es el mago mejor valorado en Madrid. 42 reseñas verificadas de 5 estrellas en eventos, bodas y empresas. Lee testimonios reales.',
     alternates: {
         canonical: 'https://angelruiz.world/valoraciones',
     },
     openGraph: {
         url: 'https://angelruiz.world/valoraciones',
+        title: 'Opiniones y Reseñas | Ángel Ruiz, Mago en Madrid',
+        description: '42 reseñas verificadas de 5 estrellas. Lee las opiniones reales de clientes que contrataron a Ángel Ruiz como mago para bodas, empresas y eventos en Madrid.',
+    },
+    twitter: {
+        card: 'summary',
+        title: 'Opiniones y Reseñas | Ángel Ruiz, Mago en Madrid',
+        description: 'Descubre por qué Ángel Ruiz es el mago mejor valorado en Madrid. Lee testimonios reales.',
     },
 };
 
 export default function ValoracionesPage() {
     const reviewsData = [
-        { text: "Contamos con Ángel para el campamento de verano de Movistar Estudiantes y fue un acierto absoluto. Se encargó de impartir talleres prácticos para enseñar magia a los alumnos y de realizar varios shows. Conectó de inmediato con los chavales, manteniéndolos súper concentrados y divirtiéndose un montón. Gran profesional.", author: "Movistar Estudiantes" },
-        { text: "Buscábamos a alguien para el cóctel de nuestra boda y Ángel fue la mejor elección. Se mezclaba entre los grupos y la gente alucinaba. A mi suegra le hizo desaparecer un anillo que acabó dentro de una nuez cerrada. Aún hoy nuestros amigos nos preguntan por él.", author: "Sofía y David" },
-        { text: "Vino a la comunión de Marcos. Yo pensaba que los niños iban a estar entretenidos, pero es que los adultos estábamos igual de flipados. Hizo un juego en nuestra mesa con unas cartas que firmamos y nos dejó sin palabras. Un mago que vale tanto para niños como para mayores.", author: "Familia de Marcos" },
-        { text: "Estuvo en la inauguración de nuestra peña en Torrelodones. Nos dejó a todos locos. Cogió una baraja que teníamos nosotros, la mezcló un socio y sacó los cuatro ases de la nada. Es un lujo tener este nivel de magia en el pueblo.", author: "Peña 'La Escombrera' (Torrelodones)" },
-        { text: "Para mi 50 cumpleaños organicé una cena en casa y Ángel fue la sorpresa. Estuvo pasando por los grupos en el jardín y en un momento dado hizo que una moneda firmada apareciera dentro de una lata de refresco cerrada. Todo el mundo me felicitó por llevarlo.", author: "Ana P. (Madrid Noroeste)" },
-        { text: "Teníamos una cena con 50 directivos y necesitábamos romper el hielo. Ángel empezó con magia de cerca y acabó haciendo un número final donde acertó la palabra que estaba pensando el CEO. Se nota que sabe moverse en eventos de empresa. Discreto, puntual y muy bueno.", author: "Carlos M. (Director Eventos)" },
-        { text: "Vino a una cena privada que hicimos en una finca de Pozuelo. Mientras cenábamos, se acercaba a las mesas. A mi marido le hizo elegir una carta con la mente y la sacó del bolsillo de la chaqueta de otro invitado. Es de esos profesionales que no necesitan escenario para impresionarte.", author: "Patricia Ruiz" },
-        { text: "Le contratamos para dinamizar nuestro stand en IFEMA. No solo hizo magia, sino que integró nuestro producto en los trucos. Consiguió que la gente se parara y nos dio pie a iniciar la venta. Un juego con tarjetas de visita hizo que mucha gente nos grabara. 100% recomendable para ferias.", author: "Miguel Jiménez (Marketing Manager)" },
-        { text: "Se encargó de la magia en el cóctel de nuestra boda. Desde el principio nos aconsejó súper bien sobre los tiempos. Lo mejor fue ver a mis tíos, que son súper escépticos, persiguiéndole para que les hiciera más trucos. Eso no tiene precio.", author: "Laura García y Jorge" },
-        { text: "He trabajado con muchos magos, pero la limpieza que tiene Ángel con las cartas es brutal. En un evento VIP de la productora, logró que cuatro personas eligieran una carta y todas aparecieron dentro de una cartera que llevaba yo. Su técnica es espectacular.", author: "Sergio Blanco (Productor)" },
-        { text: "Para nuestro aniversario queríamos algo especial. Ángel consiguió que participáramos todos, incluso los más tímidos de la familia. Hizo un juego precioso con una foto antigua de mis abuelos que nos dejó emocionados. Fue un detalle que no olvidaremos.", author: "Carmen Martínez" },
-        { text: "Vino a la convención anual en Boadilla. Nos hizo un número donde adivinó el destino de las próximas vacaciones del director comercial, que nadie sabía. Fue el tema de conversación del equipo durante semanas. Si tienes una empresa por la zona, ni lo dudes.", author: "Javier Soler" }
+        { text: "He tenido la suerte de ver a muchos magos, pero lo que hace este es simplemente otro nivel. No es solo la técnica que es impecable, es la forma en la que conecta contigo desde el primer minuto. Cada truco está cuidado al detalle, pero lo realmente impresionante es cómo consigue que te olvides de que estás viendo magia... hasta que te deja completamente descolocado. Si buscas una experiencia diferente, de esas que recuerdas y comentas después, este es sin duda el mejor mago que puedes ver ahora mismo. Brutal.", author: "Jorge García-Alba" },
+        { text: "El mejor mago que se haya visto en mucho tiempo, muy amable, divertidisimo y super profesional. Os lo recomiendo para cualquier evento que tengáis.", author: "Alejandra Alcalá Pereira" },
+        { text: "Una pasada. Un chico con muchísimo talento y muy divertido. Me dejó boquiabierto durante todo el show. Tiene un carisma arrollador y se nota que disfruta cada segundo en escena.", author: "Rafael Montero Martín" },
+        { text: "El trato de ángel fue espectacular , se nota que le encanta lo que hace y es un gran profesional de ello , esperando la ocasión para volver a contactar con él", author: "ivan GT" },
+        { text: "Contraté a Ángel para un evento y la verdad es que nos encantó. Desde el primer momento estuvo súper cercano con la gente y creó un ambiente muy divertido. Los trucos nos dejaron con la boca abierta y todavía seguimos hablando de alguno de ellos. Además, se nota que le gusta lo que hace y eso se transmite muchísimo. Sin duda, repetiríamos con él.", author: "Marcos Hernández Piñero" },
+        { text: "Uno de los mejores magos, espectacular, y su simpatía lo mejor, gracias por entretenernos tan bien y dejarnos con la boca abierta.", author: "Marisol Bravo Flores" },
+        { text: "Es un crack!! Le encanta lo que hace. En uno de sus trucos me tocó 'ayudar' y mas bien, permítanme la expresión: 'me la metió doblada'. Fue una autentica pasada! Pronto volveré a verle.", author: "Juan Manuel Fernandez" },
+        { text: "Una experiencia única e increíble. Angel es cercano, habla con el público como si lo conociera de toda la vida y siempre tiene alguna broma preparada. Vamos, que no solo hace magia (no fuimos capaces de pillarle ni uno) también hace que te lo pases genial. REPETIRÍA SIN DUDA ALGUNA. Un gran profesional.", author: "María Fernandez Rodríguez" },
+        { text: "Contamos con la compañía de Ángel en la inauguración de la Peña y la verdad que fue una pasada. Transmite que lo que hace le apasiona y por eso se le ve tan tranquilo haciendo los trucos que nos dejaron boquiabiertos. Además, interactúa mucho con el publico, así que eso hace que los espectadores flipen mucho mas. Volveremos a llamarle sin ninguna duda!!!", author: "Peña La Escombrera" },
+        { text: "Nos encantó su actuación en Las Rozas , a nuestro parecer el mejor mago emergente de Madrid, su habilidad es impresionante!! No dudamos de que lo recomendaremos a nuestros amigos!", author: "Daniel Martín-Delgado" }
     ];
 
 
@@ -46,7 +51,7 @@ export default function ValoracionesPage() {
             "ratingValue": "5",
             "bestRating": "5",
             "worstRating": "1",
-            "ratingCount": "39"
+            "ratingCount": "42"
         }
     };
 
@@ -82,7 +87,7 @@ export default function ValoracionesPage() {
                                 "ratingValue": "5",
                                 "bestRating": "5",
                                 "worstRating": "1",
-                                "ratingCount": "39"
+                                "ratingCount": "42"
                             },
                             "review": reviewsData.map(r => ({
                                 "@type": "Review",
@@ -110,7 +115,7 @@ export default function ValoracionesPage() {
                             Las valoraciones de mis clientes no son solo palabras; son la base de mi <strong>reputación profesional como ilusionista</strong>. En cada evento en Madrid y la zona de la sierra, mi prioridad es la búsqueda de la <u>excelencia técnica y la satisfacción total del cliente</u>. Entiendo que un evento es un hito irrepetible, y por ello mi compromiso es con la puntualidad, la elegancia en el trato y, sobre todo, la entrega de un asombro de primer nivel.
                         </p>
                         <p>
-                            Contar con más de <strong className="text-white">39 valoraciones de 5 estrellas</strong> en plataformas independientes avala mi trayectoria como <strong>mago para empresas</strong> y bodas. Aquí puedes explorar testimonios detallados que reflejan la autenticidad de mi propuesta y la garantía de éxito para tu próxima celebración privada o corporativa.
+                            Contar con más de <strong className="text-white">42 valoraciones de 5 estrellas</strong> en plataformas independientes avala mi trayectoria como <strong>mago para empresas</strong> y bodas. Aquí puedes explorar testimonios detallados que reflejan la autenticidad de mi propuesta y la garantía de éxito para tu próxima celebración privada o corporativa.
                         </p>
                     </div>
                 </div>

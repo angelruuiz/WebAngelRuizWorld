@@ -6,17 +6,40 @@ import FAQItem from '@/components/FAQItem';
 export const metadata = {
   title: 'Mago para Restaurantes en Madrid | Table Hopping',
   description: 'Aumenta el ticket medio y fideliza a tus clientes. Mago para restaurantes y locales en Madrid especialista en Table Hopping (magia de mesa en mesa).',
+  keywords: 'mago para restaurantes, table hopping madrid, magia en mesas, mago para eventos en madrid, mago para locales de ocio, animacion restaurantes, ilusionista restaurantes',
+  alternates: {
+    canonical: 'https://angelruiz.world/empresas/mago-para-restaurantes-madrid',
+  },
+  openGraph: {
+    title: 'Mago para Restaurantes en Madrid | Table Hopping',
+    description: 'Aumenta el ticket medio y fideliza a tus clientes. Mago para restaurantes y locales en Madrid especialista en Table Hopping (magia de mesa en mesa).',
+    url: 'https://angelruiz.world/empresas/mago-para-restaurantes-madrid',
+    siteName: 'Angel Ruiz',
+    images: [
+      {
+        url: 'https://angelruiz.world/images/og-mago-empresas.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Mago para Restaurantes en Madrid',
+      },
+    ],
+    locale: 'es_ES',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mago para Restaurantes en Madrid | Table Hopping',
+    description: 'Aumenta el ticket medio y fideliza a tus clientes. Mago para restaurantes y locales en Madrid especialista en Table Hopping (magia de mesa en mesa).',
+    images: ['https://angelruiz.world/images/og-mago-empresas.jpg'],
+  },
 };
 
 const faqs = [
-  { name: '¿Cuál es el ROI esperado de un animación en restaurante?', acceptedAnswer: { text: 'Nuestra metodología B2B asegura que la marca se grabe en la mente de los asistentes, aumentando el engagement y acelerando el ciclo de cierre en ferias y eventos.' } },
-  { name: '¿Cómo se integra el show en la agenda corporativa?', acceptedAnswer: { text: 'Diseñamos intervenciones modulares. No interrumpimos tu evento, lo potenciamos. Intervenciones de alto impacto entre bloques o como main event.' } },
-  { name: '¿Se adapta a los valores de nuestra marca?', acceptedAnswer: { text: 'Totalmente. Integramos los mensajes clave de tu empresa (productos, KPIs, cultura corporativa) en las experiencias de asombro.' } },
-  { name: '¿Qué requerimientos técnicos tiene el espectáculo?', acceptedAnswer: { text: 'Mínimos. Nuestro enfoque es "Plug & Play". Llevamos la tecnología necesaria para impactar sin complicar tu producción.' } },
-  { name: '¿Realizan presentaciones en inglés?', acceptedAnswer: { text: 'Sí, trabajamos en entornos corporativos multinacionales, garantizando un inglés fluido y profesional de alto impacto B2B.' } },
-  { name: '¿Es adecuado para públicos de alto nivel (C-Level)?', acceptedAnswer: { text: 'Diseñado específicamente para ello. Una comunicación sofisticada, humor inteligente y un respeto absoluto a la jerarquía y el entorno.' } },
-  { name: '¿Cuánto tiempo de antelación es necesario para reservar?', acceptedAnswer: { text: 'Para fechas clave (cenas de navidad, grandes congresos), recomendamos reservar con 2-3 meses de antelación.' } },
-  { name: '¿Cómo medimos el éxito de la intervención?', acceptedAnswer: { text: 'Proporcionamos herramientas post-evento para medir la recordación del mensaje y el incremento en el engagement de los asistentes.' } }
+  { name: '¿Qué es el Table Hopping o Magia de Cerca en restaurantes?', acceptedAnswer: { text: 'Es un formato de magia itinerante donde el ilusionista se acerca de mesa en mesa para realizar pequeños shows de 5-10 minutos, amenizando las esperas y sorprendiendo a los comensales.' } },
+  { name: '¿Interfiere la magia con el servicio de los camareros?', acceptedAnswer: { text: 'En absoluto. Como mago profesional con años de experiencia en hostelería, sé cuándo acercarme a la mesa y cuándo retirarme para asegurar que los platos se sirven a la temperatura perfecta sin interrumpir al personal.' } },
+  { name: '¿Cómo beneficia a mi restaurante contratar un mago?', acceptedAnswer: { text: 'Aumenta el ticket medio, reduce la percepción del tiempo de espera entre platos, incrementa las propinas y genera reseñas positivas en Google y TripAdvisor debido a la experiencia única.' } },
+  { name: '¿Se requiere un espacio o preparación especial?', acceptedAnswer: { text: 'No. El Table Hopping no necesita escenario ni equipos de sonido. Toda la magia ocurre directamente en las manos de los clientes y con objetos cotidianos o de pequeño tamaño.' } },
+  { name: '¿Es un servicio puntual o puede ser regular?', acceptedAnswer: { text: 'Puede ser ambas cosas. Muchos restaurantes me contratan como evento puntual para San Valentín o Navidad, pero los mejores resultados de fidelización se obtienen al incluir el servicio un día fijo a la semana o al mes.' } }
 ];
 
 export default function Page() {

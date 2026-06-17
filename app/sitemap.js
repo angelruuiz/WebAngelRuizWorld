@@ -4,7 +4,7 @@ import { locations } from '@/lib/locations';
 export default function sitemap() {
   const posts = getSortedPostsData();
   
-  const lastMod = new Date();
+  const lastMod = new Date('2026-06-01');
   
   const blogUrls = posts.map((post) => ({
     url: `https://angelruiz.world/blog/${post.slug}`,
@@ -191,5 +191,9 @@ export default function sitemap() {
     },
   ];
 
-  return [...staticUrls, ...blogUrls, ...locationUrls];
+  // Avoid duplicates between locationUrls and staticUrls
+  const staticUrlStrings = staticUrls.map(u => u.url);
+  const filteredLocationUrls = locationUrls.filter(u => !staticUrlStrings.includes(u.url));
+
+  return [...staticUrls, ...blogUrls, ...filteredLocationUrls];
 }

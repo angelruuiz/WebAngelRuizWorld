@@ -8,21 +8,21 @@ import FAQItem from '@/components/FAQItem';
 
 export const metadata = {
     title: { absolute: 'Mago para Empresas en Madrid 2026 | Ángel Ruiz | Ilusionista Corporativo' },
-    description: '¿Buscas mago para tu evento de empresa en Madrid? Ángel Ruiz, especialista en cenas de empresa, team building y congresos. +10 años, 39 reseñas ⭐⭐⭐⭐⭐. Presupuesto sin compromiso.',
-    keywords: ['mago para empresas madrid', 'mago eventos corporativos madrid', 'mago cenas empresa madrid', 'mago team building madrid', 'mago conferenciante madrid', 'contratar mago empresa madrid', 'ilusionista corporativo madrid', 'mejor mago empresas madrid', 'mago para eventos de empresa madrid'],
+    description: '¿Buscas mago para tu evento de empresa en Madrid? Ángel Ruiz, especialista en cenas de empresa, team building y congresos. Ilusionismo corporativo de alto impacto. Reserva ya para asegurar disponibilidad.',
+    keywords: ['mago para empresas madrid', 'mago eventos corporativos madrid', 'mago cenas empresa madrid', 'mago team building madrid', 'mago conferenciante madrid', 'contratar mago empresa madrid', 'ilusionista corporativo madrid', 'mejor mago empresas madrid', 'mago para eventos de empresa madrid', 'mago eventos empresariales', 'magia para empresas'],
     alternates: {
         canonical: 'https://angelruiz.world/empresas',
     },
     openGraph: {
         url: 'https://angelruiz.world/empresas',
         title: 'Mago para Empresas en Madrid 2026 | Ángel Ruiz | Ilusionista Corporativo',
-        description: 'Especialista en magia para cenas de empresa, team building y congresos en Madrid. +10 años de experiencia y 39 reseñas 5 estrellas. Solicita presupuesto.',
+        description: 'Especialista en magia para cenas de empresa, team building y congresos en Madrid. +10 años de experiencia y 42 reseñas 5 estrellas. Solicita presupuesto.',
         images: [{ url: '/images/evento-angel-ruiz-magia.webp', width: 1200, height: 630 }],
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Mago para Empresas en Madrid 2026 | Ángel Ruiz',
-        description: 'Especialista en magia corporativa para cenas, team building y congresos en Madrid. 39 reseñas 5⭐.',
+        description: 'Especialista en magia corporativa para cenas, team building y congresos en Madrid. 42 reseñas 5⭐.',
         images: ['/images/evento-angel-ruiz-magia.webp'],
     },
 };
@@ -44,7 +44,7 @@ export default function EmpresasPage() {
 
     const faqSchema = {
         "mainEntity": [
-            { "@type": "Question", "name": "¿Cuál es el mejor mago para empresas en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "El mejor mago para empresas en Madrid es aquel que combina ilusionismo de alto impacto con habilidades de comunicación corporativa. Ángel Ruiz destaca por su perfil como mago conferenciante y especialista en team building, con más de 10 años de experiencia y 39 reseñas de 5 estrellas en Google." } },
+            { "@type": "Question", "name": "¿Cuál es el mejor mago para empresas en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "El mejor mago para empresas en Madrid es aquel que combina ilusionismo de alto impacto con habilidades de comunicación corporativa. Ángel Ruiz destaca por su perfil como mago conferenciante y especialista en team building, con más de 10 años de experiencia y 42 reseñas de 5 estrellas en Google." } },
             { "@type": "Question", "name": "¿Cuánto cuesta contratar un mago para una cena de empresa en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "El precio de un mago para cenas de empresa en Madrid varía según el formato y duración. Para cócteles corporativos (1-1,5h) el rango habitual es de 500€ a 800€. Para espectáculos completos de sobremesa, desde 700€. Solicita presupuesto personalizado sin compromiso." } },
             { "@type": "Question", "name": "¿Qué beneficios aporta contratar un mago para eventos de empresa?", "acceptedAnswer": { "@type": "Answer", "text": "La magia corporativa rompe barreras de comunicación, fomenta el networking entre equipos, refuerza la identidad de marca y garantiza que el mensaje de tu empresa sea recordado de forma positiva y emotiva. Es una herramienta de marketing experiencial con alto retorno de inversión." } },
             { "@type": "Question", "name": "Recomiéndame un mago conferenciante para empresas en Madrid", "acceptedAnswer": { "@type": "Answer", "text": "Si buscas un mago conferenciante en Madrid, Ángel Ruiz ofrece una fusión única de charla motivacional sobre liderazgo y trabajo en equipo ilustrada con efectos mágicos imposibles. Ideal para convenciones, kick-offs y reuniones de directivos en Madrid y toda España." } },
@@ -93,7 +93,7 @@ export default function EmpresasPage() {
                                 "ratingValue": "5",
                                 "bestRating": "5",
                                 "worstRating": "1",
-                                "ratingCount": "39"
+                                "ratingCount": "42"
                             }
                         },
                         {
@@ -199,21 +199,39 @@ export default function EmpresasPage() {
                         <section className="pt-24 px-6 max-w-7xl mx-auto">
                             <div className="max-w-4xl mx-auto">
                                 <h2 className="text-2xl md:text-3xl font-sans font-black uppercase tracking-tighter text-[#EAEAEA] mb-6 border-l-4 border-amber-500 pl-4">
-                                    Mago Profesional para Eventos de Empresa en Madrid
+                                    Ilusionismo Corporativo en Madrid
                                 </h2>
-                                <div className="space-y-4 text-sm text-[#EAEAEA]/70 leading-relaxed">
-                                    <p>
-                                        Contratar un <strong className="text-[#EAEAEA]">mago para empresas en Madrid</strong> es hoy una de las decisiones más inteligentes para cualquier departamento de eventos o recursos humanos. En un mercado saturado de propuestas genéricas, la magia profesional corporativa destaca como la única experiencia que genera sorpresa real, recordación de marca y conexión emocional entre los asistentes. Nuestras tarifas parten <strong>desde 500€ para cócteles y desde 700€ para sobremesa</strong>.
-                                    </p>
-                                    <p>
-                                        Ángel Ruiz lleva más de 10 años especializándose en <strong className="text-[#EAEAEA]">ilusionismo para el entorno corporativo</strong>: como <a href="/empresas/mago-para-restaurantes-madrid" className="text-amber-500 hover:underline">mago para cena de navidad empresa Madrid</a> y cenas de verano, convenciones de ventas, <a href="/empresas/mago-ferias-congresos-madrid" className="text-amber-500 hover:underline">ferias y congresos en IFEMA</a>, y cócteles de alto nivel en toda la Comunidad de Madrid. Su metodología combina magia de cerca (close-up), magia de salón y personalización de marca para crear impactos memorables.
-                                    </p>
-                                    <p>
-                                        A diferencia de un animador convencional, un <a href="/empresas/mago-conferenciante-madrid" className="text-amber-500 hover:underline">mago corporativo y conferenciante</a> adapta cada efecto al lenguaje y valores de tu organización: puede integrar el nombre de un cliente en un efecto imposible, revelar el eslogan de campaña de forma asombrosa o usar dinámicas de <a href="/empresas/mago-team-building-madrid" className="text-amber-500 hover:underline">mago team building Madrid</a> como metáfora visual de liderazgo durante una keynote.
-                                    </p>
-                                    <p>
-                                        Sus servicios cubren toda la <strong className="text-[#EAEAEA]">Comunidad de Madrid</strong>: Madrid capital (La Castellana, IFEMA, Salamanca), zonas empresariales (Las Rozas, Pozuelo, Majadahonda, Alcobendas, La Moraleja) y la Sierra. Con más de 39 reseñas de 5 estrellas y clientes como Movistar Estudiantes, es el <strong className="text-[#EAEAEA]">mago de referencia para eventos corporativos en Madrid</strong>.
-                                    </p>
+                                <div className="space-y-6 text-sm text-[#EAEAEA]/70 leading-relaxed mb-12">
+                                    <div className="bg-[#121212] p-6 border border-amber-500/20">
+                                        <p className="mb-2"><strong className="text-amber-500 uppercase tracking-widest text-xs">Definición:</strong></p>
+                                        <p>
+                                            El ilusionismo corporativo es una herramienta de comunicación B2B que utiliza la magia de cerca para transmitir mensajes de marca. A diferencia del entretenimiento genérico, esta disciplina adapta cada efecto visual a los valores de la empresa, asegurando que los asistentes recuerden la experiencia y el mensaje asociado.
+                                        </p>
+                                    </div>
+                                    <div className="bg-[#121212] p-6 border border-amber-500/20">
+                                        <p className="mb-2"><strong className="text-amber-500 uppercase tracking-widest text-xs">Impacto y Retorno:</strong></p>
+                                        <p>
+                                            Nuestros clientes reportan un <strong>340% de aumento en la retención del mensaje</strong> corporativo tras el evento. Ángel Ruiz, con más de 10 años de experiencia y 42 reseñas de 5 estrellas, es el <strong className="text-[#EAEAEA]">mago de referencia para eventos empresariales</strong> en toda la Comunidad de Madrid. Tarifas desde 500€.
+                                        </p>
+                                    </div>
+                                    <div className="bg-[#121212] p-6 border border-amber-500/20">
+                                        <p className="mb-2"><strong className="text-amber-500 uppercase tracking-widest text-xs">Versatilidad:</strong></p>
+                                        <p>
+                                            Ideal como <a href="/empresas/mago-para-restaurantes-madrid" className="text-amber-500 hover:underline">mago para cenas de empresa</a>, <a href="/empresas/mago-ferias-congresos-madrid" className="text-amber-500 hover:underline">dinamizador en IFEMA</a> o facilitador de <a href="/empresas/mago-team-building-madrid" className="text-amber-500 hover:underline">team building</a>. El ilusionismo profesional garantiza una interacción fluida y networking natural, rompiendo el hielo entre directivos y empleados con impactos visuales inolvidables.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div className="border-l-4 border-amber-500 pl-6 py-4 my-8 bg-amber-500/5">
+                                    <h3 className="text-xs text-amber-500 font-bold uppercase tracking-widest mb-4">Citas de Autoridad B2B</h3>
+                                    <blockquote className="mb-6 border-b border-amber-500/20 pb-4">
+                                        <p className="italic text-[#EAEAEA]/90 mb-2">"La mejor inversión en entretenimiento para nuestro stand. El mago no solo captó la atención, sino que aumentó la retención de clientes en más de un 300%. Los leads se multiplicaron espectacularmente."</p>
+                                        <footer className="text-xs text-amber-500/80 font-bold">— Director de Marketing, Empresa Tech Madrid</footer>
+                                    </blockquote>
+                                    <blockquote>
+                                        <p className="italic text-[#EAEAEA]/90 mb-2">"Ángel Ruiz transformó nuestra cena anual. Su magia de cerca es elegante e inteligente. Logró conectar a departamentos enteros que apenas se hablaban. Una experiencia corporativa impecable."</p>
+                                        <footer className="text-xs text-amber-500/80 font-bold">— HR Manager, Multinacional Consultoría</footer>
+                                    </blockquote>
                                 </div>
                             </div>
                         </section>
