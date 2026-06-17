@@ -16,7 +16,9 @@ const TrustedBrands = () => {
         { name: "Colegio Gondomar Galapagar", logo: "/images/logo-gondomar.webp" },
         { name: "Catering Senescal Torrelodones", logo: "/images/logo-senescal.webp" },
         { name: "Alcampo", logo: "/images/logo-alcampo.webp" },
-        { name: "Ahorramás", logo: "/images/logo-ahorramas.webp" }
+        { name: "Ahorramás", logo: "/images/logo-ahorramas.webp" },
+        { name: "Badulaque", logo: "/images/logos/logo-badulaque.jpeg" },
+        { name: "Zeppelin", logo: "/images/logos/logo-zeppelin.png" }
     ];
     return (
         <section className="py-24 bg-slate-950/80 border-y border-white/5 overflow-hidden relative z-10">
