@@ -91,6 +91,9 @@ const SEOContent = () => {
                         <p className="text-sm md:text-base leading-relaxed text-gold-50/80">
                             El <strong className="text-amber-500">mago para bodas en Madrid</strong> es la figura que asegura que el cóctel de bienvenida no sea "solo una espera". Mi magia de cerca rompe el hielo de forma elegante, uniendo a familias y amigos bajo un mismo sentimiento de asombro y alegría.
                         </p>
+                        <a href="/particulares/bodas" className="mt-6 inline-flex items-center text-amber-500 text-xs font-bold uppercase tracking-widest hover:text-white transition-all duration-[160ms]">
+                            Ver Mago para Bodas en Madrid →
+                        </a>
                     </PerpetualCard>
 
                     <PerpetualCard className="md:col-span-12 lg:col-span-4 flex flex-col justify-start">
@@ -98,6 +101,9 @@ const SEOContent = () => {
                         <p className="text-sm md:text-base leading-relaxed text-gold-50/80">
                             Las marcas líderes buscan formas innovadoras de conectar. Como <strong className="text-amber-500">mago para empresas en Madrid</strong>, ofrezco desde presentaciones de producto mágicas hasta entretenimiento premium para convenciones y cenas de empresa de alto nivel.
                         </p>
+                        <a href="/empresas" className="mt-6 inline-flex items-center text-amber-500 text-xs font-bold uppercase tracking-widest hover:text-white transition-all duration-[160ms]">
+                            Ver Mago para Empresas en Madrid →
+                        </a>
                     </PerpetualCard>
 
                     <PerpetualCard className="md:col-span-12 lg:col-span-4 flex flex-col justify-start">

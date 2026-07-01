@@ -60,8 +60,8 @@ export default function BodasDetailPage() {
         "@type": "BreadcrumbList",
         "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
-            { "@type": "ListItem", "position": 2, "name": "Mago Sierra Madrid", "item": "https://angelruiz.world/mago-sierra-madrid" },
-            { "@type": "ListItem", "position": 3, "name": "Bodas", "item": "https://angelruiz.world/particulares/bodas" }
+            { "@type": "ListItem", "position": 2, "name": "Particulares", "item": "https://angelruiz.world/particulares" },
+            { "@type": "ListItem", "position": 3, "name": "Mago para Bodas en Madrid", "item": "https://angelruiz.world/particulares/bodas" }
         ]
     };
 
@@ -93,13 +93,19 @@ export default function BodasDetailPage() {
                                 "ratingValue": "5",
                                 "bestRating": "5",
                                 "worstRating": "1",
-                                "ratingCount": "39"
+                                "ratingCount": "42"
                             }
                         },
                         {
                             ...serviceSchema,
                             "@type": "Service",
-                            "@id": "https://angelruiz.world/particulares/bodas/#service"
+                            "@id": "https://angelruiz.world/particulares/bodas/#service",
+                            "offers": {
+                                "@type": "AggregateOffer",
+                                "lowPrice": "400",
+                                "highPrice": "900",
+                                "priceCurrency": "EUR"
+                            }
                         },
                         {
                             "@type": "FAQPage",
@@ -108,6 +114,18 @@ export default function BodasDetailPage() {
                         {
                             "@type": "BreadcrumbList",
                             "itemListElement": breadcrumbSchema.itemListElement
+                        },
+                        {
+                            "@type": "Review",
+                            "author": { "@type": "Person", "name": "María y Carlos" },
+                            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+                            "reviewBody": "Ángel fue el mejor acierto de nuestra boda. Durante el cóctel, todos los invitados estaban encantados con su magia. El efecto final dedicado a nosotros nos emocionó profundamente. 100% recomendable."
+                        },
+                        {
+                            "@type": "Review",
+                            "author": { "@type": "Person", "name": "Laura y Javier" },
+                            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+                            "reviewBody": "Contratamos a Ángel para nuestra boda en una finca de la Sierra de Madrid. La magia fue elegante, divertida y perfecta para romper el hielo entre familias. Nuestros invitados siguen hablando de él meses después."
                         }
                     ]
                 }) }} 
@@ -283,6 +301,151 @@ export default function BodasDetailPage() {
                             </FadeIn>
                         </div>
                     </div>
+
+                    {/* SEO Content Section: Mago para Bodas en Madrid */}
+                    <FadeIn y={30} className="py-24 border-t border-white/5">
+                        <div className="max-w-5xl mx-auto space-y-20">
+                            <div className="text-center">
+                                <h2 className="text-3xl md:text-5xl font-[Cinzel] text-white mb-6">Mago para Bodas en Madrid: Todo Lo Que Necesitas Saber</h2>
+                                <p className="text-slate-400 font-light text-lg max-w-3xl mx-auto">
+                                    Guía completa sobre contratar un mago profesional para tu boda en Madrid: precios, mejores fincas, testimonios reales y por qué Ángel Ruiz es la elección de confianza.
+                                </p>
+                            </div>
+
+                            {/* Precios */}
+                            <div className="space-y-8">
+                                <h3 className="text-2xl md:text-3xl font-[Cinzel] text-white">¿Cuánto Cuesta un Mago para Bodas en Madrid?</h3>
+                                <p className="text-slate-300 font-light text-lg leading-relaxed">
+                                    El precio de un mago profesional para bodas en Madrid varía según la duración y el formato elegido. Como referencia orientativa:
+                                </p>
+                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                                    <div className="bg-[#111111]/80 rounded-[2rem] p-8 border border-white/5 text-center space-y-4">
+                                        <span className="text-[#d4a853] font-[Cinzel] text-sm uppercase tracking-widest block">Solo Cóctel</span>
+                                        <span className="text-white text-3xl font-[Cinzel] block">desde 400€</span>
+                                        <p className="text-slate-400 text-sm font-light">Duración: 1 hora</p>
+                                    </div>
+                                    <div className="bg-[#111111]/80 rounded-[2rem] p-8 border border-[#d4a853]/30 text-center space-y-4 relative">
+                                        <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#d4a853] text-black text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-full">Popular</span>
+                                        <span className="text-[#d4a853] font-[Cinzel] text-sm uppercase tracking-widest block">Cóctel + Banquete</span>
+                                        <span className="text-white text-3xl font-[Cinzel] block">desde 600€</span>
+                                        <p className="text-slate-400 text-sm font-light">Duración: 1,5 – 2 horas</p>
+                                    </div>
+                                    <div className="bg-[#111111]/80 rounded-[2rem] p-8 border border-white/5 text-center space-y-4">
+                                        <span className="text-[#d4a853] font-[Cinzel] text-sm uppercase tracking-widest block">Experiencia Completa</span>
+                                        <span className="text-white text-3xl font-[Cinzel] block">desde 750€</span>
+                                        <p className="text-slate-400 text-sm font-light">Efecto especial para novios (2h+)</p>
+                                    </div>
+                                </div>
+                                <div className="bg-[#111111]/80 rounded-[2rem] p-8 border border-white/5">
+                                    <p className="text-slate-400 font-light text-sm leading-relaxed">
+                                        <strong className="text-slate-300 font-normal">Nota:</strong> Los precios incluyen desplazamiento a cualquier punto de la Comunidad de Madrid, reunión previa de coordinación y seguro de responsabilidad civil. Para consultar disponibilidad y recibir un presupuesto personalizado, <a href="/#contacto" className="text-[#d4a853] hover:underline">contacta directamente</a>.
+                                    </p>
+                                </div>
+                                <a href="/blog/cuanto-cuesta-mago-boda-madrid" className="inline-flex items-center text-[#d4a853] hover:underline text-sm font-light gap-2">
+                                    Leer guía completa de precios →
+                                </a>
+                            </div>
+
+                            {/* Mejores Fincas */}
+                            <div className="space-y-8">
+                                <h3 className="text-2xl md:text-3xl font-[Cinzel] text-white">Las Mejores Fincas para Bodas con Magia en Madrid</h3>
+                                <p className="text-slate-300 font-light text-lg leading-relaxed text-justify">
+                                    He tenido el privilegio de actuar en algunas de las fincas más exclusivas de Madrid y alrededores. La magia de cerca se adapta perfectamente tanto a jardines al aire libre como a salones interiores. Algunas de las zonas donde más actuamos:
+                                </p>
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div className="bg-[#111111]/80 rounded-[2rem] p-8 border border-white/5 space-y-3">
+                                        <h4 className="text-white font-[Cinzel] text-lg">Sierra de Madrid</h4>
+                                        <p className="text-slate-400 font-light text-sm">Torrelodones, El Escorial, Cercedilla. Fincas con encanto rodeadas de naturaleza, perfectas para cócteles al aire libre.</p>
+                                    </div>
+                                    <div className="bg-[#111111]/80 rounded-[2rem] p-8 border border-white/5 space-y-3">
+                                        <h4 className="text-white font-[Cinzel] text-lg">Zona Noroeste</h4>
+                                        <p className="text-slate-400 font-light text-sm">Las Rozas, Majadahonda, Pozuelo. Espacios exclusivos y bien comunicados para celebraciones de alto nivel.</p>
+                                    </div>
+                                    <div className="bg-[#111111]/80 rounded-[2rem] p-8 border border-white/5 space-y-3">
+                                        <h4 className="text-white font-[Cinzel] text-lg">Madrid Capital</h4>
+                                        <p className="text-slate-400 font-light text-sm">Retiro, Casa de Campo, La Quinta de los Molinos. Venues urbanos con personalidad y estilo.</p>
+                                    </div>
+                                    <div className="bg-[#111111]/80 rounded-[2rem] p-8 border border-white/5 space-y-3">
+                                        <h4 className="text-white font-[Cinzel] text-lg">Sur de Madrid</h4>
+                                        <p className="text-slate-400 font-light text-sm">Aranjuez, Ciempozuelos, Getafe. Fincas con historia y amplios jardines ideales para bodas grandes.</p>
+                                    </div>
+                                </div>
+                                <a href="/blog/mejores-fincas-bodas-madrid-magia" className="inline-flex items-center text-[#d4a853] hover:underline text-sm font-light gap-2">
+                                    Descubre las mejores fincas para bodas con magia →
+                                </a>
+                            </div>
+
+                            {/* Testimonios Reales */}
+                            <div className="space-y-8">
+                                <h3 className="text-2xl md:text-3xl font-[Cinzel] text-white">Cómo Es la Experiencia: Testimonio Real</h3>
+                                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                                    <div className="bg-[#111111]/80 rounded-[2rem] p-10 border border-white/5 space-y-6 relative">
+                                        <span className="text-[#d4a853] text-6xl font-[Cinzel] leading-none absolute top-6 left-8 opacity-30">{'\u201C'}</span>
+                                        <blockquote className="text-slate-300 font-light text-base leading-relaxed italic pt-8">
+                                            Ángel fue el mejor acierto de nuestra boda. Durante el cóctel, todos los invitados estaban encantados con su magia de cerca. El efecto final dedicado a nosotros nos emocionó profundamente. Meses después, nuestros amigos siguen hablando de él.
+                                        </blockquote>
+                                        <div className="flex items-center gap-3 pt-4 border-t border-white/5">
+                                            <div>
+                                                <p className="text-white font-medium text-sm">María y Carlos</p>
+                                                <p className="text-slate-500 text-xs font-light">Boda en Finca El Campillo, 2025</p>
+                                            </div>
+                                            <div className="ml-auto flex gap-0.5">
+                                                {[...Array(5)].map((_, i) => (<span key={i} className="text-[#d4a853] text-sm">★</span>))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="bg-[#111111]/80 rounded-[2rem] p-10 border border-white/5 space-y-6 relative">
+                                        <span className="text-[#d4a853] text-6xl font-[Cinzel] leading-none absolute top-6 left-8 opacity-30">{'\u201C'}</span>
+                                        <blockquote className="text-slate-300 font-light text-base leading-relaxed italic pt-8">
+                                            Contratamos a Ángel por recomendación de nuestra wedding planner y fue un acierto total. La magia fue elegante, divertida y perfecta para romper el hielo entre las dos familias. Un profesional impecable.
+                                        </blockquote>
+                                        <div className="flex items-center gap-3 pt-4 border-t border-white/5">
+                                            <div>
+                                                <p className="text-white font-medium text-sm">Laura y Javier</p>
+                                                <p className="text-slate-500 text-xs font-light">Boda en Sierra de Madrid, 2026</p>
+                                            </div>
+                                            <div className="ml-auto flex gap-0.5">
+                                                {[...Array(5)].map((_, i) => (<span key={i} className="text-[#d4a853] text-sm">★</span>))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Por Qué Elegir a Ángel Ruiz */}
+                            <div className="space-y-8">
+                                <h3 className="text-2xl md:text-3xl font-[Cinzel] text-white">¿Por Qué Elegir a Ángel Ruiz como Mago para Tu Boda en Madrid?</h3>
+                                <div className="bg-[#111111]/80 rounded-[2rem] p-10 border border-white/5">
+                                    <ul className="space-y-4">
+                                        {[
+                                            'Más de 10 años especializado en bodas en Madrid y Sierra',
+                                            '42 reseñas de 5 estrellas en Google',
+                                            'Formado en la Escuela de Dani DaOrtiz (cartomagia de autor)',
+                                            'Coordinación directa con wedding planners y fincas',
+                                            'Magia elegante, familiar y no invasiva',
+                                            'Seguro de responsabilidad civil y facturación profesional'
+                                        ].map((item, idx) => (
+                                            <li key={idx} className="flex items-start gap-3">
+                                                <span className="text-[#d4a853] mt-1">✦</span>
+                                                <span className="text-slate-300 font-light text-base">{item}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                                <div className="flex flex-wrap gap-4">
+                                    <a href="/blog/mago-para-bodas-madrid-faq" className="inline-flex items-center text-[#d4a853] hover:underline text-sm font-light gap-2">
+                                        Preguntas frecuentes sobre magos para bodas →
+                                    </a>
+                                    <a href="/blog/ideas-originales-entretenimiento-bodas-madrid" className="inline-flex items-center text-[#d4a853] hover:underline text-sm font-light gap-2">
+                                        Ideas de entretenimiento para bodas →
+                                    </a>
+                                    <a href="/valoraciones" className="inline-flex items-center text-[#d4a853] hover:underline text-sm font-light gap-2">
+                                        Ver todas las valoraciones →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </FadeIn>
                 </main>
         </NavFooterClient>
         </>

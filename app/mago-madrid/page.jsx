@@ -8,7 +8,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 export const metadata = {
     title: { absolute: 'Mago en Madrid 2026 | Contratar Mago para Bodas y Empresas | Ángel Ruiz' },
     description: '¿Buscas mago en Madrid? Ángel Ruiz: ilusionista profesional para bodas, cenas de empresa y eventos privados. +10 años, 39 reseñas ⭐⭐⭐⭐⭐. Magia de cerca y de salón. Solicita presupuesto.',
-    keywords: ['mago madrid', 'mago en madrid', 'contratar mago madrid', 'mago profesional madrid', 'ilusionista madrid', 'mago para bodas madrid', 'mago para empresas madrid', 'mago close-up madrid', 'magia de cerca madrid'],
+    keywords: ['mago madrid', 'mago en madrid', 'contratar mago madrid', 'mago profesional madrid', 'ilusionista madrid', 'mago close-up madrid', 'magia de cerca madrid', 'experto en magia en madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/mago-madrid',
     },
