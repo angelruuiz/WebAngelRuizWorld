@@ -393,18 +393,7 @@ export default function AlmeriaPage() {
     setDiary((prev) => ({ ...prev, [date]: { ...prev[date], memory } }));
   };
 
-  /* ── Swipe handling ─────────────────────────────────── */
-  const touchStartX = useRef(null);
-  const handleTouchStart = (e) => { touchStartX.current = e.touches[0].clientX; };
-  const handleTouchEnd = (e) => {
-    if (touchStartX.current === null) return;
-    const diff = touchStartX.current - e.changedTouches[0].clientX;
-    if (Math.abs(diff) > 60) {
-      if (diff > 0 && selected < DAYS.length - 1) setSelected((s) => s + 1);
-      if (diff < 0 && selected > 0) setSelected((s) => s - 1);
-    }
-    touchStartX.current = null;
-  };
+  /* ── Swipe handling removed per user request ───────── */
 
   /* ── Day selector scroll ref ────────────────────────── */
   const daySelectorRef = useRef(null);
@@ -539,10 +528,7 @@ export default function AlmeriaPage() {
                 </div>
 
                 {/* Day card */}
-                <div
-                  onTouchStart={handleTouchStart}
-                  onTouchEnd={handleTouchEnd}
-                >
+                <div>
                   <AnimatePresence mode="wait">
                     <motion.div
                       key={day.date}
