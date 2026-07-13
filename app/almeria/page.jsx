@@ -8,8 +8,23 @@ import {
   Wallet, CheckSquare, Siren, CalendarDays, Plus, Trash2,
   MoonStar, SunMedium, Navigation, Phone, Hospital,
   Home as HomeIcon, Star, Sunrise, Sunset, Droplets,
-  FileText, ChevronDown, RotateCcw, ArrowRight,
+  FileText, ChevronDown, RotateCcw, ArrowRight, Flame, RefreshCw,
 } from 'lucide-react';
+
+const MOTIVATIONAL_QUOTES = [
+  "El 'no' ya lo tienes, ve a por el 'sí'. ¿Qué es lo peor que puede pasar? Que te digan que no.",
+  "Estás de vacaciones, nadie te conoce aquí y el lunes 4 vuelves a la realidad. Hazlo.",
+  "Menos pensar, más hacer. Si te lo piensas más de 3 segundos, ya has perdido la oportunidad. Ve y di 'hola'.",
+  "La vergüenza se quedó en casa. Aquí hemos venido a jugar y a pasarlo bien.",
+  "Cero expectativas, 100% actitud. Disfruta del momento sin pensar a dónde va a llegar.",
+  "El peor arrepentimiento es el de las cosas que no hiciste por vergüenza.",
+  "Sonríe, relájate y fluye. La actitud lo es absolutamente todo.",
+  "Si hay feeling, genial. Si no, anécdota pal grupo y a seguir.",
+  "En tres semanas te habrás olvidado de si hiciste el ridículo. Ve y saca tema.",
+  "¿Y si resulta que le encantas? Averígualo.",
+  "Deja de planear tanto en tu cabeza, respira, y lánzate.",
+  "La suerte favorece a los valientes. Que no se te escape este verano."
+];
 
 /* ═══════════════════════════════════════════════════════════
    DATA
@@ -299,6 +314,19 @@ export default function AlmeriaPage() {
   }, [todayISO]);
 
   const [selected, setSelected] = useState(defaultIndex);
+  const [quoteIndex, setQuoteIndex] = useState(0);
+
+  useEffect(() => {
+    setQuoteIndex(Math.floor(Math.random() * MOTIVATIONAL_QUOTES.length));
+  }, []);
+
+  const handleNextQuote = () => {
+    let nextIndex = Math.floor(Math.random() * MOTIVATIONAL_QUOTES.length);
+    while (nextIndex === quoteIndex && MOTIVATIONAL_QUOTES.length > 1) {
+      nextIndex = Math.floor(Math.random() * MOTIVATIONAL_QUOTES.length);
+    }
+    setQuoteIndex(nextIndex);
+  };
   const day = DAYS[selected];
   const theme = THEME[day.type];
   const Icon = theme.icon;
@@ -753,6 +781,46 @@ export default function AlmeriaPage() {
                     </div>
                   </motion.div>
                 )}
+
+                {/* Mood / Motivación */}
+                <div className="neu" style={{ borderRadius: 24, padding: 18, marginBottom: 16 }}>
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-2">
+                      <Flame size={16} color="#FF6B4A" />
+                      <p style={{ fontSize: 11, fontWeight: 800, color: '#FF6B4A', letterSpacing: 1 }}>
+                        MOOD DEL VERANO
+                      </p>
+                    </div>
+                    <motion.button
+                      whileTap={{ scale: 0.9, rotate: 180 }}
+                      onClick={handleNextQuote}
+                      className="touch-feedback"
+                      style={{
+                        width: 28, height: 28, borderRadius: 10,
+                        background: 'transparent', border: 'none',
+                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                        color: 'var(--text)'
+                      }}
+                    >
+                      <RefreshCw size={15} />
+                    </motion.button>
+                  </div>
+                  <AnimatePresence mode="wait">
+                    <motion.p
+                      key={quoteIndex}
+                      initial={{ opacity: 0, y: 5 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -5 }}
+                      transition={{ duration: 0.2 }}
+                      style={{
+                        fontSize: 14.5, fontWeight: 600, color: 'var(--text)',
+                        lineHeight: 1.5, margin: 0, fontStyle: 'italic'
+                      }}
+                    >
+                      "{MOTIVATIONAL_QUOTES[quoteIndex]}"
+                    </motion.p>
+                  </AnimatePresence>
+                </div>
 
                 {/* Previous / Next */}
                 <div className="flex items-center justify-between">
