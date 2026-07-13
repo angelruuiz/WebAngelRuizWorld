@@ -108,14 +108,7 @@ const THEME = {
   party: { accent: '#FF6B4A', accentSoft: '#FFE2D9', icon: PartyPopper, label: 'Noche de fiesta' },
 };
 
-const EXPENSE_CATS = [
-  { id: 'food', emoji: '🍽️', label: 'Comida' },
-  { id: 'transport', emoji: '⛽', label: 'Transporte' },
-  { id: 'party', emoji: '🎉', label: 'Fiesta' },
-  { id: 'accom', emoji: '🏠', label: 'Alojamiento' },
-  { id: 'super', emoji: '🛒', label: 'Súper' },
-  { id: 'other', emoji: '📦', label: 'Otros' },
-];
+
 
 const DEFAULT_CHECKLIST_DATA = [
   { cat: '👕 Ropa', items: ['Bañador', 'Ropa de fiesta', 'Camisetas', 'Pantalones cortos', 'Ropa interior (7 uds)', 'Pijama'] },
@@ -187,37 +180,7 @@ function mapsUrl(q) {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
 }
 
-function calcExpenses(participants, expenses) {
-  const n = participants.length || 1;
-  const total = expenses.reduce((s, e) => s + e.amount, 0);
-  const share = total / n;
-  const paid = participants.map((_, i) =>
-    expenses.filter((e) => e.payer === i).reduce((s, e) => s + e.amount, 0)
-  );
-  const balance = paid.map((p) => p - share);
 
-  const debts = [];
-  const debtors = balance.map((b, i) => ({ name: participants[i], amount: -b }))
-    .filter((d) => d.amount > 0.01).sort((a, b) => b.amount - a.amount);
-  const creditors = balance.map((b, i) => ({ name: participants[i], amount: b }))
-    .filter((c) => c.amount > 0.01).sort((a, b) => b.amount - a.amount);
-
-  let di = 0, ci = 0;
-  while (di < debtors.length && ci < creditors.length) {
-    const amt = Math.min(debtors[di].amount, creditors[ci].amount);
-    if (amt > 0.01) debts.push({ from: debtors[di].name, to: creditors[ci].name, amount: amt });
-    debtors[di].amount -= amt;
-    creditors[ci].amount -= amt;
-    if (debtors[di].amount < 0.01) di++;
-    if (creditors[ci].amount < 0.01) ci++;
-  }
-
-  const byCat = {};
-  EXPENSE_CATS.forEach((c) => { byCat[c.id] = 0; });
-  expenses.forEach((e) => { byCat[e.cat || 'other'] = (byCat[e.cat || 'other'] || 0) + e.amount; });
-
-  return { total, share, balance, debts, byCat };
-}
 
 /* ═══════════════════════════════════════════════════════════
    ANIMATION VARIANTS
@@ -359,40 +322,7 @@ export default function AlmeriaPage() {
     '--text': palette.text, '--muted': palette.muted, '--body': palette.body,
   };
 
-  /* ── Gastos state ───────────────────────────────────── */
-  const [gastos, setGastos] = useLocalStorage('almeria-gastos-2026', {
-    participants: ['Amigo 1', 'Amigo 2', 'Amigo 3'],
-    expenses: [],
-  });
-  const [newExpense, setNewExpense] = useState({ payer: 0, amount: '', desc: '', cat: 'food' });
 
-  const expenseCalc = useMemo(() => calcExpenses(gastos.participants, gastos.expenses), [gastos]);
-
-  const addExpense = () => {
-    const amount = parseFloat(newExpense.amount);
-    if (!amount || amount <= 0 || !newExpense.desc.trim()) return;
-    setGastos((prev) => ({
-      ...prev,
-      expenses: [...prev.expenses, {
-        id: Date.now(), payer: newExpense.payer, amount,
-        desc: newExpense.desc.trim(), cat: newExpense.cat,
-        date: toISODate(new Date()),
-      }],
-    }));
-    setNewExpense({ payer: newExpense.payer, amount: '', desc: '', cat: 'food' });
-  };
-
-  const removeExpense = (id) => setGastos((prev) => ({
-    ...prev, expenses: prev.expenses.filter((e) => e.id !== id),
-  }));
-
-  const renameParticipant = (i, name) => {
-    setGastos((prev) => {
-      const p = [...prev.participants];
-      p[i] = name;
-      return { ...prev, participants: p };
-    });
-  };
 
   /* ── Checklist state ────────────────────────────────── */
   const [checklist, setChecklist] = useLocalStorage('almeria-checklist-2026', buildDefaultChecklist());
@@ -480,7 +410,6 @@ export default function AlmeriaPage() {
   /* ── Tabs ────────────────────────────────────────────── */
   const TABS = [
     { id: 'hoy', label: 'Hoy', icon: CalendarDays },
-    { id: 'gastos', label: 'Gastos', icon: Wallet },
     { id: 'checklist', label: 'Maleta', icon: CheckSquare },
     { id: 'notas', label: 'Notas', icon: FileText },
     { id: 'sos', label: 'SOS', icon: Siren },
@@ -765,58 +694,60 @@ export default function AlmeriaPage() {
                   </AnimatePresence>
                 </div>
 
-                {/* El Playazo bonus section */}
-                <motion.div
-                  className="neu"
-                  style={{ borderRadius: 24, padding: 18, marginBottom: 16 }}
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.15 }}
-                >
-                  <div className="flex items-center gap-2 mb-3">
-                    <div style={{
-                      width: 36, height: 36, borderRadius: 12,
-                      background: THEME.beach.accentSoft,
-                      display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    }}>
-                      <Mountain size={18} color={THEME.beach.accent} />
-                    </div>
-                    <div>
-                      <p style={{ fontSize: 11, fontWeight: 700, color: THEME.beach.accent, letterSpacing: 1 }}>
-                        PARA SALTAR AL AGUA
-                      </p>
-                      <p className="display-font" style={{ fontSize: 15, fontWeight: 700, color: 'var(--text)' }}>
-                        El Playazo de Rodalquilar
-                      </p>
-                    </div>
-                  </div>
-                  <p style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.5, marginBottom: 10 }}>
-                    Cala junto a Rodalquilar, dentro del Parque Natural. Su duna fosilizada forma plataformas rocosas desde las que se salta a un agua turquesa muy fotogénica — uno de los sitios más conocidos de la zona. No está vigilado ni señalizado, la seguridad depende de vosotros.
-                  </p>
-                  <motion.a
-                    whileTap={{ scale: 0.97 }}
-                    href={mapsUrl('El Playazo, Rodalquilar')}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="neu-pill flex items-center justify-center gap-2 touch-feedback"
-                    style={{
-                      borderRadius: 14, padding: '9px 0', marginBottom: 10,
-                      textDecoration: 'none', color: THEME.beach.accent,
-                      fontSize: 13, fontWeight: 700, display: 'flex',
-                    }}
+                {/* El Playazo bonus section - Solo para el martes (Cabo de Gata) */}
+                {day.date === '2026-07-28' && (
+                  <motion.div
+                    className="neu"
+                    style={{ borderRadius: 24, padding: 18, marginBottom: 16 }}
+                    initial={{ opacity: 0, y: 12 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.15 }}
                   >
-                    <Navigation size={15} /> Cómo llegar al Playazo
-                  </motion.a>
-                  <div className="neu-inset flex gap-3" style={{ borderRadius: 16, padding: 12 }}>
-                    <AlertTriangle size={16} color="#E8543C" style={{ flexShrink: 0, marginTop: 2 }} />
-                    <ul style={{ fontSize: 12, color: 'var(--body)', lineHeight: 1.6, paddingLeft: 14, margin: 0 }}>
-                      <li>Bajad nadando antes para comprobar profundidad y que no hay rocas debajo.</li>
-                      <li>Nunca de cabeza la primera vez, siempre de pie.</li>
-                      <li>Saltad solo si hay alguien más delante viendo, nunca en solitario.</li>
-                      <li>Si hay oleaje o corriente ese día, mejor no saltar.</li>
-                    </ul>
-                  </div>
-                </motion.div>
+                    <div className="flex items-center gap-2 mb-3">
+                      <div style={{
+                        width: 36, height: 36, borderRadius: 12,
+                        background: THEME.beach.accentSoft,
+                        display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      }}>
+                        <Mountain size={18} color={THEME.beach.accent} />
+                      </div>
+                      <div>
+                        <p style={{ fontSize: 11, fontWeight: 700, color: THEME.beach.accent, letterSpacing: 1 }}>
+                          PARA SALTAR AL AGUA
+                        </p>
+                        <p className="display-font" style={{ fontSize: 15, fontWeight: 700, color: 'var(--text)' }}>
+                          El Playazo de Rodalquilar
+                        </p>
+                      </div>
+                    </div>
+                    <p style={{ fontSize: 13, color: 'var(--body)', lineHeight: 1.5, marginBottom: 10 }}>
+                      Cala junto a Rodalquilar, dentro del Parque Natural. Su duna fosilizada forma plataformas rocosas desde las que se salta a un agua turquesa muy fotogénica — uno de los sitios más conocidos de la zona. No está vigilado ni señalizado, la seguridad depende de vosotros.
+                    </p>
+                    <motion.a
+                      whileTap={{ scale: 0.97 }}
+                      href={mapsUrl('El Playazo, Rodalquilar')}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="neu-pill flex items-center justify-center gap-2 touch-feedback"
+                      style={{
+                        borderRadius: 14, padding: '9px 0', marginBottom: 10,
+                        textDecoration: 'none', color: THEME.beach.accent,
+                        fontSize: 13, fontWeight: 700, display: 'flex',
+                      }}
+                    >
+                      <Navigation size={15} /> Cómo llegar al Playazo
+                    </motion.a>
+                    <div className="neu-inset flex gap-3" style={{ borderRadius: 16, padding: 12 }}>
+                      <AlertTriangle size={16} color="#E8543C" style={{ flexShrink: 0, marginTop: 2 }} />
+                      <ul style={{ fontSize: 12, color: 'var(--body)', lineHeight: 1.6, paddingLeft: 14, margin: 0 }}>
+                        <li>Bajad nadando antes para comprobar profundidad y que no hay rocas debajo.</li>
+                        <li>Nunca de cabeza la primera vez, siempre de pie.</li>
+                        <li>Saltad solo si hay alguien más delante viendo, nunca en solitario.</li>
+                        <li>Si hay oleaje o corriente ese día, mejor no saltar.</li>
+                      </ul>
+                    </div>
+                  </motion.div>
+                )}
 
                 {/* Previous / Next */}
                 <div className="flex items-center justify-between">
@@ -854,237 +785,7 @@ export default function AlmeriaPage() {
               </motion.div>
             )}
 
-            {/* ═══════ TAB: GASTOS ═══════ */}
-            {tab === 'gastos' && (
-              <motion.div key="gastos" {...fadeSlide}>
 
-                {/* Balance overview */}
-                <div className="neu" style={{ borderRadius: 24, padding: 20, marginBottom: 16 }}>
-                  <p className="display-font" style={{ fontSize: 16, fontWeight: 700, color: 'var(--text)', marginBottom: 4 }}>
-                    Gastos compartidos
-                  </p>
-                  <p style={{ fontSize: 12, color: 'var(--muted)', marginBottom: 14 }}>
-                    Cada uno registra lo que paga — al final ajustáis cuentas.
-                  </p>
-
-                  {/* Participant names */}
-                  <div className="flex flex-col gap-2 mb-4">
-                    {gastos.participants.map((p, i) => (
-                      <input
-                        key={i}
-                        value={p}
-                        onChange={(e) => renameParticipant(i, e.target.value)}
-                        className="neu-inset"
-                        style={{
-                          border: 'none', outline: 'none', borderRadius: 12,
-                          padding: '8px 12px', fontSize: 13, color: 'var(--text)',
-                          background: 'var(--bg)',
-                        }}
-                      />
-                    ))}
-                  </div>
-
-                  {/* Balance cards */}
-                  <div className="flex flex-col gap-2 mb-4">
-                    {gastos.participants.map((p, i) => {
-                      const b = expenseCalc.balance[i] || 0;
-                      const positive = b >= 0.01;
-                      const negative = b <= -0.01;
-                      return (
-                        <motion.div
-                          key={i}
-                          className="neu-sm flex items-center justify-between"
-                          style={{ borderRadius: 14, padding: '10px 14px' }}
-                          layout
-                        >
-                          <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--text)' }}>{p}</span>
-                          <span style={{
-                            fontSize: 13, fontWeight: 700,
-                            color: positive ? '#12897B' : negative ? '#E8543C' : 'var(--muted)',
-                          }}>
-                            {positive ? `+${b.toFixed(2)} €` : negative ? `${b.toFixed(2)} €` : '0.00 €'}
-                          </span>
-                        </motion.div>
-                      );
-                    })}
-                  </div>
-
-                  <p style={{ fontSize: 11.5, color: 'var(--muted)', textAlign: 'center' }}>
-                    Total: <strong style={{ color: 'var(--text)' }}>{expenseCalc.total.toFixed(2)} €</strong> · {expenseCalc.share.toFixed(2)} € por persona
-                  </p>
-                </div>
-
-                {/* Who owes whom */}
-                {expenseCalc.debts.length > 0 && (
-                  <div className="neu" style={{ borderRadius: 24, padding: 20, marginBottom: 16 }}>
-                    <p className="display-font" style={{ fontSize: 14, fontWeight: 700, color: 'var(--text)', marginBottom: 10 }}>
-                      Quién debe a quién
-                    </p>
-                    <div className="flex flex-col gap-2">
-                      {expenseCalc.debts.map((d, i) => (
-                        <div key={i} className="neu-inset flex items-center gap-3" style={{ borderRadius: 14, padding: '10px 14px' }}>
-                          <span style={{ fontSize: 13, fontWeight: 600, color: '#E8543C' }}>{d.from}</span>
-                          <ArrowRight size={14} color="var(--muted)" />
-                          <span style={{ fontSize: 13, fontWeight: 600, color: '#12897B' }}>{d.to}</span>
-                          <span style={{ marginLeft: 'auto', fontSize: 13, fontWeight: 700, color: 'var(--text)' }}>
-                            {d.amount.toFixed(2)} €
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {/* Category breakdown */}
-                {expenseCalc.total > 0 && (
-                  <div className="neu" style={{ borderRadius: 24, padding: 20, marginBottom: 16 }}>
-                    <p className="display-font" style={{ fontSize: 14, fontWeight: 700, color: 'var(--text)', marginBottom: 12 }}>
-                      Por categoría
-                    </p>
-                    <div className="flex flex-col gap-2">
-                      {EXPENSE_CATS.filter((c) => expenseCalc.byCat[c.id] > 0).map((c) => {
-                        const pct = (expenseCalc.byCat[c.id] / expenseCalc.total) * 100;
-                        return (
-                          <div key={c.id}>
-                            <div className="flex items-center justify-between" style={{ marginBottom: 4 }}>
-                              <span style={{ fontSize: 12, color: 'var(--body)' }}>{c.emoji} {c.label}</span>
-                              <span style={{ fontSize: 12, fontWeight: 700, color: 'var(--text)' }}>
-                                {expenseCalc.byCat[c.id].toFixed(2)} €
-                              </span>
-                            </div>
-                            <div className="neu-inset" style={{ height: 6, borderRadius: 3 }}>
-                              <div
-                                className="expense-bar"
-                                style={{ width: `${pct}%`, height: '100%', background: theme.accent }}
-                              />
-                            </div>
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                )}
-
-                {/* Add expense form */}
-                <div className="neu" style={{ borderRadius: 24, padding: 20, marginBottom: 16 }}>
-                  <p className="display-font" style={{ fontSize: 14, fontWeight: 700, color: 'var(--text)', marginBottom: 10 }}>
-                    Añadir gasto
-                  </p>
-
-                  <select
-                    value={newExpense.payer}
-                    onChange={(e) => setNewExpense({ ...newExpense, payer: parseInt(e.target.value) })}
-                    className="neu-inset"
-                    style={{
-                      width: '100%', border: 'none', outline: 'none', borderRadius: 12,
-                      padding: '10px 12px', fontSize: 13, color: 'var(--text)',
-                      background: 'var(--bg)', marginBottom: 8,
-                    }}
-                  >
-                    {gastos.participants.map((p, i) => (
-                      <option key={i} value={i}>{p} pagó</option>
-                    ))}
-                  </select>
-
-                  {/* Category selector */}
-                  <div className="flex gap-2 overflow-x-auto scrollbar-hide mb-3" style={{ paddingBottom: 2 }}>
-                    {EXPENSE_CATS.map((c) => (
-                      <button
-                        key={c.id}
-                        onClick={() => setNewExpense({ ...newExpense, cat: c.id })}
-                        className={`cat-pill neu-pill touch-feedback ${newExpense.cat === c.id ? 'active' : ''}`}
-                        style={{
-                          borderRadius: 10, padding: '6px 10px', whiteSpace: 'nowrap',
-                          fontSize: 11, fontWeight: 600,
-                          border: newExpense.cat === c.id ? `2px solid ${theme.accent}` : '2px solid transparent',
-                          color: newExpense.cat === c.id ? theme.accent : 'var(--muted)',
-                          boxShadow: newExpense.cat === c.id
-                            ? 'inset 3px 3px 6px var(--shadow-dark), inset -3px -3px 6px var(--shadow-light)'
-                            : undefined,
-                        }}
-                      >
-                        {c.emoji} {c.label}
-                      </button>
-                    ))}
-                  </div>
-
-                  <input
-                    placeholder="¿Qué fue? (cena, gasolina, entradas...)"
-                    value={newExpense.desc}
-                    onChange={(e) => setNewExpense({ ...newExpense, desc: e.target.value })}
-                    className="neu-inset"
-                    style={{
-                      width: '100%', border: 'none', outline: 'none', borderRadius: 12,
-                      padding: '10px 12px', fontSize: 13, color: 'var(--text)',
-                      background: 'var(--bg)', marginBottom: 8, boxSizing: 'border-box',
-                    }}
-                  />
-
-                  <input
-                    placeholder="Importe en €"
-                    type="number"
-                    inputMode="decimal"
-                    value={newExpense.amount}
-                    onChange={(e) => setNewExpense({ ...newExpense, amount: e.target.value })}
-                    onKeyDown={(e) => e.key === 'Enter' && addExpense()}
-                    className="neu-inset"
-                    style={{
-                      width: '100%', border: 'none', outline: 'none', borderRadius: 12,
-                      padding: '10px 12px', fontSize: 13, color: 'var(--text)',
-                      background: 'var(--bg)', marginBottom: 10, boxSizing: 'border-box',
-                    }}
-                  />
-
-                  <motion.button
-                    whileTap={{ scale: 0.97 }}
-                    onClick={addExpense}
-                    className="neu-pill flex items-center justify-center gap-2 touch-feedback"
-                    style={{
-                      width: '100%', borderRadius: 14, padding: '10px 0',
-                      color: theme.accent, fontSize: 13, fontWeight: 700,
-                    }}
-                  >
-                    <Plus size={16} /> Añadir
-                  </motion.button>
-                </div>
-
-                {/* Expense history */}
-                <AnimatePresence>
-                  <div className="flex flex-col gap-2">
-                    {[...gastos.expenses].reverse().map((e) => {
-                      const cat = EXPENSE_CATS.find((c) => c.id === e.cat);
-                      return (
-                        <motion.div
-                          key={e.id}
-                          {...listItemVariant}
-                          layout
-                          className="neu-sm flex items-center justify-between"
-                          style={{ borderRadius: 14, padding: '10px 14px' }}
-                        >
-                          <div className="flex items-center gap-3">
-                            <span style={{ fontSize: 18 }}>{cat ? cat.emoji : '📦'}</span>
-                            <div>
-                              <p style={{ fontSize: 13, fontWeight: 600, color: 'var(--text)' }}>{e.desc}</p>
-                              <p style={{ fontSize: 11, color: 'var(--muted)' }}>
-                                {gastos.participants[e.payer]} · {e.amount.toFixed(2)} €
-                              </p>
-                            </div>
-                          </div>
-                          <motion.button
-                            whileTap={{ scale: 0.85 }}
-                            onClick={() => removeExpense(e.id)}
-                            className="touch-feedback"
-                            style={{ background: 'none', border: 'none', padding: 4 }}
-                          >
-                            <Trash2 size={16} color="#E8543C" />
-                          </motion.button>
-                        </motion.div>
-                      );
-                    })}
-                  </div>
-                </AnimatePresence>
-              </motion.div>
-            )}
 
             {/* ═══════ TAB: CHECKLIST ═══════ */}
             {tab === 'checklist' && (
