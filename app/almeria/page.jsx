@@ -24,6 +24,7 @@ const DAYS = [
     party: null,
     tip: 'Sin fiesta fuerte hoy — guardad pilas para el miércoles.',
     mapQuery: 'Playa del Zapillo, Almería',
+    image: 'https://images.unsplash.com/photo-1544148103-0773bf10d330?auto=format&fit=crop&w=800&q=80',
   },
   {
     date: '2026-07-28', dow: 'MAR', full: 'Martes',
@@ -33,6 +34,7 @@ const DAYS = [
     party: null,
     tip: 'Llevad nevera, sombrilla y agua — apenas hay chiringuitos en la zona.',
     mapQuery: 'Playa de los Genoveses, Cabo de Gata',
+    image: 'https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=80',
   },
   {
     date: '2026-07-29', dow: 'MIÉ', full: 'Miércoles',
@@ -46,6 +48,7 @@ const DAYS = [
     ],
     tip: 'Noche de tanteo, no de excesos: mañana recuperáis para el finde fuerte.',
     mapQuery: 'Plaza Masnou, Almería',
+    image: 'https://images.unsplash.com/photo-1566737236500-c8ac43014a67?auto=format&fit=crop&w=800&q=80',
   },
   {
     date: '2026-07-30', dow: 'JUE', full: 'Jueves',
@@ -55,6 +58,7 @@ const DAYS = [
     party: null,
     tip: 'Día para llegar a tope al viernes y sábado.',
     mapQuery: 'Alcazaba de Almería',
+    image: 'https://images.unsplash.com/photo-1560961911-ba7ef651a56c?auto=format&fit=crop&w=800&q=80',
   },
   {
     date: '2026-07-31', dow: 'VIE', full: 'Viernes',
@@ -68,6 +72,7 @@ const DAYS = [
     ],
     tip: 'Confirmad el cartel de la semana en Instagram antes de salir de casa.',
     mapQuery: 'Playa de Aguadulce, Almería',
+    image: 'https://images.unsplash.com/photo-1563789031959-4c02bcb41319?auto=format&fit=crop&w=800&q=80',
   },
   {
     date: '2026-08-01', dow: 'SÁB', full: 'Sábado',
@@ -81,6 +86,7 @@ const DAYS = [
     ],
     tip: 'Con coche es fácil moverse entre los 3 locales — nombrad un conductor o volved en VTC si bebéis.',
     mapQuery: 'Mandala Beach Mojácar',
+    image: 'https://images.unsplash.com/photo-1515404929826-76fff9fef6fe?auto=format&fit=crop&w=800&q=80',
   },
   {
     date: '2026-08-02', dow: 'DOM', full: 'Domingo',
@@ -90,6 +96,7 @@ const DAYS = [
     party: null,
     tip: 'Sin fiesta — el cuerpo lo necesita tras Mojácar.',
     mapQuery: 'Roquetas de Mar, paseo marítimo',
+    image: 'https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=800&q=80',
   },
   {
     date: '2026-08-03', dow: 'LUN', full: 'Lunes',
@@ -99,6 +106,7 @@ const DAYS = [
     party: null,
     tip: 'Buen viaje de vuelta — ¡nos vemos en la próxima!',
     mapQuery: 'Almería centro',
+    image: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=800&q=80',
   },
 ];
 
@@ -580,6 +588,17 @@ export default function AlmeriaPage() {
                         <h2 className="display-font" style={{ fontSize: 21, fontWeight: 700, color: 'var(--text)', margin: '10px 0 16px' }}>
                           {day.title}
                         </h2>
+
+                        {/* Image of the day */}
+                        {day.image && (
+                          <div className="neu-inset" style={{ borderRadius: 18, overflow: 'hidden', marginBottom: 16, height: 160 }}>
+                            <img
+                              src={day.image}
+                              alt={day.title}
+                              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                            />
+                          </div>
+                        )}
 
                         {/* Weather strip */}
                         {weather && (
