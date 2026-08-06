@@ -29,7 +29,7 @@ export default function ContratarMagoMadridPage() {
                 "name": "¿Cuánto cuesta contratar un mago en Madrid? (Precios 2026)", 
                 "acceptedAnswer": { 
                     "@type": "Answer", 
-                    "text": "El precio mago boda 2026 y fiestas privadas varía entre 400€ y 900€. Si necesitas saber el precio mago cena empresa o evento corporativo, la tarifa base suele partir de 600€ por jornada, dependiendo del formato y requerimientos. El presupuesto se personaliza siempre." 
+                    "text": "El precio mago boda 2026 y fiestas privadas varía entre 300€ y 900€. Si necesitas saber el precio mago cena empresa o evento corporativo, la tarifa base suele partir de 400€ por jornada, dependiendo del formato y requerimientos. El presupuesto se personaliza siempre." 
                 } 
             },
             { 
@@ -101,7 +101,7 @@ export default function ContratarMagoMadridPage() {
                 "url": "https://angelruiz.world",
                 "image": "https://angelruiz.world/images/foto-bio.webp",
                 "telephone": "+34648055636",
-                "priceRange": "400€ - 900€",
+                "priceRange": "300€ - 900€",
                 "address": {
                     "@type": "PostalAddress",
                     "addressLocality": "Madrid",
@@ -227,9 +227,9 @@ export default function ContratarMagoMadridPage() {
                     {/* CONTACT BAR */}
                     <div className="bg-gradient-to-r from-emerald-900/20 to-zinc-900/40 backdrop-blur-3xl border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] rounded-[2rem] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
                         <div>
-                            <h2 className="text-2xl font-[Cinzel] text-white font-bold mb-2">Precios Mago Madrid 2026: desde 400€</h2>
+                            <h2 className="text-2xl font-[Cinzel] text-white font-bold mb-2">Precios Mago Madrid 2026: desde 300€</h2>
                             <p className="text-slate-400 text-sm max-w-lg mb-4">
-                                Tarifas base desde 400€ (Particulares) y 600€ (Corporativo). El presupuesto exacto se compila tras evaluar las variables de tu evento. Rellena el formulario o contacta por WhatsApp para un diseño a medida.
+                                Tarifas base desde 300€ (Particulares) y 400€ (Corporativo). El presupuesto exacto se compila tras evaluar las variables de tu evento. Rellena el formulario o contacta por WhatsApp para un diseño a medida.
                             </p>
                             <p className="text-amber-500 text-xs font-bold uppercase tracking-widest animate-pulse">
                                 Temporada alta: disponibilidad limitada
