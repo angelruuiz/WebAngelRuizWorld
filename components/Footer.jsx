@@ -57,7 +57,7 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                         <h4 className="text-xl font-bold tracking-widest text-[#d4a853] uppercase">CONTACTO:</h4>
                         <div className={`flex flex-col items-center md:items-end gap-3 text-slate-300 text-base md:text-lg`}>
                             <a href="tel:+34648055636" className="py-2 md:py-0 hover:text-[#d4a853] transition-colors">+34 648 05 56 36</a>
-                            <a href="mailto:angellruuiz@gmail.com" className="py-2 md:py-0 hover:text-[#d4a853] transition-colors">angellruuiz@gmail.com</a>
+                            <a href="mailto:info@angelruiz.world" className="py-2 md:py-0 hover:text-[#d4a853] transition-colors">info@angelruiz.world</a>
                             <div className="flex flex-wrap justify-center md:justify-end gap-2 mt-4">
                                 <a href="https://instagram.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="glass-pill">Instagram</a>
                                 <a href="https://tiktok.com/@angellruuiz" target="_blank" rel="noopener noreferrer" className="glass-pill">TikTok</a>

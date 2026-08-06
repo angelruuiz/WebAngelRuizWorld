@@ -272,7 +272,7 @@ export default function Home() {
                             "name": "Ángel Ruiz | Mago e Ilusionista",
                             "url": "https://angelruiz.world",
                             "telephone": "+34648055636",
-                            "email": "angellruuiz@gmail.com",
+                            "email": "info@angelruiz.world",
                             "description": "Mago e ilusionista profesional en Madrid. Especialista en magia de cerca para bodas, eventos corporativos y celebraciones privadas.",
                             "areaServed": ["Madrid", "Torrelodones", "Las Rozas", "Majadahonda", "Pozuelo de Alarcón", "Boadilla del Monte", "Galapagar", "Collado Villalba", "El Escorial", "Las Matas"],
                             "aggregateRating": ratingSchema.aggregateRating,

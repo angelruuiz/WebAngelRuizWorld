@@ -89,7 +89,7 @@ const slides = [
         subtitle: 'Respuesta en menos de 24 horas · Sin compromiso',
         links: [
             { label: 'Teléfono', val: '+34 648 05 56 36', icon: Phone, href: 'tel:+34648055636' },
-            { label: 'Email', val: 'angellruuiz@gmail.com', icon: Mail, href: 'mailto:angellruuiz@gmail.com' },
+            { label: 'Email', val: 'info@angelruiz.world', icon: Mail, href: 'mailto:info@angelruiz.world' },
             { label: 'Web', val: 'angelruiz.world', icon: Globe, href: 'https://angelruiz.world' },
             { label: 'Ubicación', val: 'Torrelodones · Madrid', icon: MapPin, href: '#' }
         ]
