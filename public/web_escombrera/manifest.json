@@ -1,0 +1,26 @@
+{
+  "name": "Peña La Escombrera",
+  "short_name": "La Escombrera",
+  "description": "Unión, tradición, fiesta, cultura y risas. La peña de Torrelodones.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#2D5DA1",
+  "background_color": "#F5F0E8",
+  "icons": [
+    {
+      "src": "assets/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "orientation": "portrait",
+  "lang": "es",
+  "categories": ["social", "entertainment"]
+}

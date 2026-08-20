@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <!-- SEO -->
+    <title>Peña La Escombrera · Torrelodones — Unión, Tradición, Fiesta, Cultura y Deporte</title>
+    <meta name="description" content="Peña La Escombrera de Torrelodones. Fundada en 2025, somos ~52 socios unidos por la amistad, la familia y las ganas de fiesta. ¡Conócenos!">
+    <meta name="keywords" content="Peña La Escombrera, Torrelodones, peña, fiestas, tradición, jabalí, Toñín, Toñina, Madrid">
+    <meta name="author" content="Peña La Escombrera">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Peña La Escombrera · Torrelodones">
+    <meta property="og:description" content="Unión, tradición, fiesta, cultura y deporte. La peña más fresca de Torrelodones.">
+    <meta property="og:image" content="assets/logo.png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2D5DA1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="La Escombrera">
+    <link rel="apple-touch-icon" href="assets/logo.png">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ============================================================
+         SPLASH SCREEN — Pantalla de carga con vídeo del jabalí
+    ============================================================= -->
+    <div class="splash-screen" id="splash-screen">
+        <div class="splash-content">
+            <video class="splash-video" id="splash-video" autoplay muted playsinline>
+                <source src="assets/jabali-corriendo.mp4" type="video/mp4">
+            </video>
+            <p class="splash-text">Cargando la manada…</p>
+            <div class="splash-bar-track">
+                <div class="splash-bar-fill" id="splash-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function() {
+      var bar = document.getElementById('splash-bar-fill');
+      var splash = document.getElementById('splash-screen');
+      var duration = 2000;
+      var start = Date.now();
+
+      function tick() {
+        var elapsed = Date.now() - start;
+        var p = Math.min(elapsed / duration, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        bar.style.width = (eased * 100) + '%';
+
+        if (p < 1) {
+          requestAnimationFrame(tick);
+        } else {
+          setTimeout(function() {
+            splash.classList.add('hidden');
+            var app = document.getElementById('app-layout');
+            if (app) app.style.display = '';
+            setTimeout(function() { splash.remove(); }, 600);
+          }, 300);
+        }
+      }
+      requestAnimationFrame(tick);
+    })();
+    </script>
+
+    <div class="app-layout" id="app-layout" style="display:none;">
+
+        <!-- Auroras líquidas decorativas de fondo -->
+        <div class="glass-blobs-container" aria-hidden="true">
+            <div class="glass-blob blob-1"></div>
+            <div class="glass-blob blob-2"></div>
+        </div>
+
+        <!-- ============================================================
+             SIDEBAR — Desktop (vertical, fija a la izquierda)
+        ============================================================= -->
+        <aside class="sidebar" id="sidebar" role="navigation" aria-label="Navegación principal">
+            <div class="sidebar-header">
+                <img src="assets/logo.png" alt="Logo Peña La Escombrera" class="sidebar-logo" width="48" height="48">
+                <span class="sidebar-brand">La Escombrera</span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <button class="nav-item active" data-view="inicio" aria-label="Inicio" aria-current="page">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                    <span>Inicio</span>
+                </button>
+                <button class="nav-item" data-view="nosotros" aria-label="Quiénes somos">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    <span>Nosotros</span>
+                </button>
+                <button class="nav-item" data-view="eventos" aria-label="Eventos">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    <span>Eventos</span>
+                </button>
+                <button class="nav-item" data-view="news" aria-label="Jabalí News">
+                    <span class="nav-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+                    </span>
+                    <span class="nav-text">Jabalí News</span>
+                </button>
+                <button class="nav-item" data-view="mvp" aria-label="MVP — Most Valuable Parrandero">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5C7 4 7 7 7 7"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5C17 4 17 7 17 7"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+                    <span>MVP</span>
+                </button>
+
+                <button class="nav-item" data-view="sedes" aria-label="Sedes y Colaboradores">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span>Sedes</span>
+                </button>
+                <button class="nav-item" data-view="contacto" aria-label="Únete">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    <span>Únete</span>
+                </button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Cambiar tema claro/oscuro" title="Cambiar tema">
+                    <span class="theme-icon">🌙</span>
+                    <span>Tema</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- ============================================================
+             MAIN CONTENT — Zona de vistas
+        ============================================================= -->
+        <main class="main-content" id="main-content">
+
+            <!-- Header móvil (solo visible en mobile) -->
+            <header class="mobile-header" id="mobile-header">
+                <img src="assets/logo.png" alt="Logo" class="mobile-header-logo" width="32" height="32">
+                <span class="mobile-header-title">La Escombrera</span>
+                <button id="theme-toggle-mobile" class="theme-toggle-mobile" aria-label="Cambiar tema">🌙</button>
+            </header>
+
+            <!-- ====== VIEW: INICIO ====== -->
+            <div class="view active" id="view-inicio">
+                <div class="hero">
+                    <div class="hero-bg-gallery" id="hero-bg-gallery" aria-hidden="true"></div>
+                    <div class="hero-content">
+                        <img src="assets/logo-hd.png" alt="Escudo de la Peña La Escombrera" class="hero-logo reveal" width="180" height="180">
+                        <h1 class="hero-title reveal reveal-delay-1">Peña La Escombrera</h1>
+                        <p class="hero-claim reveal reveal-delay-2">Unión · Tradición · Fiesta · Cultura · Risas</p>
+                        <p class="hero-location reveal reveal-delay-3">📍 Torrelodones, Madrid · Desde 2025</p>
+                        <a href="https://www.instagram.com/laescombrera_torrelodones/" target="_blank" rel="noopener noreferrer" class="hero-cta reveal reveal-delay-4" aria-label="Síguenos en Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            Síguenos en Instagram
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sección de Cuenta Atrás del Próximo Evento -->
+                <section class="next-event-section hidden" id="next-event-section" aria-label="Próximo Evento">
+                    <p class="next-event-label">Próximo Evento</p>
+                    <div class="countdown-card">
+                        <h3 class="countdown-event-name" id="countdown-event-name"></h3>
+                        <p class="countdown-event-date" id="countdown-event-date"></p>
+                        
+                        <div class="countdown-digits">
+                            <div class="countdown-unit">
+                                <span class="countdown-value" id="cd-days">00</span>
+                                <span class="countdown-unit-label">Días</span>
+                            </div>
+                            <span class="countdown-sep">:</span>
+                            <div class="countdown-unit">
+                                <span class="countdown-value" id="cd-hours">00</span>
+                                <span class="countdown-unit-label">Horas</span>
+                            </div>
+                            <span class="countdown-sep">:</span>
+                            <div class="countdown-unit">
+                                <span class="countdown-value" id="cd-mins">00</span>
+                                <span class="countdown-unit-label">Minutos</span>
+                            </div>
+                            <span class="countdown-sep">:</span>
+                            <div class="countdown-unit">
+                                <span class="countdown-value" id="cd-secs">00</span>
+                                <span class="countdown-unit-label">Segundos</span>
+                            </div>
+                        </div>
+                        
+                        <button class="countdown-add-cal" id="countdown-add-cal" aria-label="Añadir a mi calendario">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
+                            Añadir al Calendario (.ics)
+                        </button>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ====== VIEW: NOSOTROS ====== -->
+            <div class="view" id="view-nosotros">
+                <div class="view-inner">
+                    <div class="section-header reveal">
+                        <h2 class="section-title">Quiénes somos</h2>
+                        <p class="section-subtitle">Más que una peña, una familia con pañuelo amarillo y ganas de liarla (bien)</p>
+                    </div>
+
+                    <div class="about-grid">
+                        <div class="about-text reveal">
+                            <p>La <span class="highlight">Peña La Escombrera</span> nació el <span class="highlight">25 de julio de 2025</span> en Torrelodones, Madrid. Desde entonces, somos <span class="highlight">~52 socios</span> unidos por la amistad, la familia y las ganas de hacer pueblo.</p>
+                            <p>Nuestro presidente, <span class="highlight president-name-trigger" id="president-trigger">Juan Manuel Fernández</span>, capitanea esta tropa de entusiastas que organiza desde concursos de parejas imposibles hasta carreras populares, pasando por romerías, fallas y torneos de baloncesto.</p>
+                            <p>Nuestro espíritu se resume en cinco palabras: <strong>unión, tradición, fiesta, cultura y risas</strong>. Y si lo dudas, pregúntale a nuestras mascotas. 🐗</p>
+                            
+                            <a href="assets/estatutos-la-escombrera.pdf" download="Estatutos_La_Escombrera.pdf" class="estatutos-btn reveal reveal-delay-3" aria-label="Descargar Estatutos Oficiales de la peña en PDF">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="estatutos-btn-icon"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg>
+                                Descargar Estatutos (PDF)
+                            </a>
+                        </div>
+
+                        <div class="about-mascots reveal reveal-delay-2">
+                            <div class="mascot-card neo-card">
+                                <img src="assets/tonin.png" alt="Toñín, mascota jabalí macho" width="200" height="200">
+                                <p class="mascot-name">Toñín</p>
+                                <p class="mascot-desc">Nuestro jabato oficial. Su nombre viene de San Antonio de Padua, patrón de la construcción — porque si hay escombros, hay un Toñín cerca.</p>
+                            </div>
+                            <div class="mascot-card neo-card">
+                                <img src="assets/tonina.png" alt="Toñina, mascota jabalí hembra" width="200" height="200">
+                                <p class="mascot-name">Toñina</p>
+                                <p class="mascot-desc">La otra mitad del dúo. Si Toñín monta la fiesta, Toñina la organiza. Juntos representan al jabalí, animal emblema de Torrelodones.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====== VIEW: EVENTOS ====== -->
+            <div class="view" id="view-eventos">
+                <div class="view-inner">
+                    <div class="section-header reveal">
+                        <h2 class="section-title">Eventos</h2>
+                        <p class="section-subtitle">De las fallas a la cabalgata, pasando por la feria de abril. Aquí nunca nos aburrimos.</p>
+                    </div>
+                    <div class="event-filters reveal" id="event-filters" aria-label="Filtro por años">
+                        <!-- Renderizado dinámicamente -->
+                    </div>
+                    <div class="bento-grid" id="events-grid" role="list" aria-label="Lista de eventos de la peña">
+                        <!-- Renderizado por Components.renderEventCards() -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====== VIEW: JABALÍ NEWS ====== -->
+            <div class="view" id="view-news">
+                <div class="view-inner">
+                    <div class="section-header reveal">
+                        <h2 class="section-title">Jabalí News</h2>
+                        <p class="section-subtitle">Hablan de nosotros. Las últimas noticias y apariciones de La Escombrera en los medios.</p>
+                    </div>
+                    
+                    <div class="news-grid reveal reveal-delay-1">
+                        <!-- News Item 1 -->
+                        <a href="https://lavozdelaa6.es/embrion-pena-la-escombrera-torrelodones-sentimiento-pertenencia/" target="_blank" rel="noopener noreferrer" class="news-card neo-card">
+                            <div class="news-badge">La Voz de la A6</div>
+                            <h3 class="news-title">El embrión de la Peña ‘La Escombrera’ en Torrelodones: sentimiento de pertenencia</h3>
+                            <p class="news-desc">Descubre cómo nació nuestra gran familia y el sentimiento que nos une a nuestro querido pueblo.</p>
+                            <span class="news-link-text">Leer noticia →</span>
+                        </a>
+
+                        <!-- News Item 2 -->
+                        <a href="https://torrelodones.info/2026/06/17/la-pena-la-escombrera-celebro-su-primera-romeria-de-san-antonio/" target="_blank" rel="noopener noreferrer" class="news-card neo-card">
+                            <div class="news-badge">Torrelodones.info</div>
+                            <h3 class="news-title">La Peña La Escombrera celebró su primera romería de San Antonio</h3>
+                            <p class="news-desc">Un día inolvidable acompañando a San Antonio en nuestra primera romería como peña oficial.</p>
+                            <span class="news-link-text">Leer noticia →</span>
+                        </a>
+
+                        <!-- News Item 3 -->
+                        <a href="https://lavozdelaa6.es/la-escombrera-prende-la-mecha-primeras-fallas-en-torrelodones/" target="_blank" rel="noopener noreferrer" class="news-card neo-card">
+                            <div class="news-badge">La Voz de la A6</div>
+                            <h3 class="news-title">‘La Escombrera’ prende la mecha de las primeras fallas en Torrelodones</h3>
+                            <p class="news-desc">Haciendo historia: trajimos el espíritu fallero a la sierra y la liamos pardísima.</p>
+                            <span class="news-link-text">Leer noticia →</span>
+                        </a>
+
+                        <!-- News Item 4 -->
+                        <a href="https://www.torrelodones.es/noticias/11038-concursos-navidad-de-torrelodones-ya-tienen-ganadores" target="_blank" rel="noopener noreferrer" class="news-card neo-card">
+                            <div class="news-badge">Ayto. Torrelodones</div>
+                            <h3 class="news-title">Concursos Navidad de Torrelodones ya tienen ganadores</h3>
+                            <p class="news-desc">Nuestro talento navideño reconocido en los certámenes municipales. ¡Alegría y jolgorio!</p>
+                            <span class="news-link-text">Leer noticia →</span>
+                        </a>
+
+                        <!-- News Item 5 -->
+                        <a href="https://www.torrelodones.es/noticias/11047-entregados-los-premios-a-los-ganadores-de-los-concursos-de-navidad" target="_blank" rel="noopener noreferrer" class="news-card neo-card">
+                            <div class="news-badge">Ayto. Torrelodones</div>
+                            <h3 class="news-title">Entregados los premios a los ganadores de los concursos de Navidad</h3>
+                            <p class="news-desc">La gala de entrega donde la peña recogió sus galardones con el espíritu escombrero por todo lo alto.</p>
+                            <span class="news-link-text">Leer noticia →</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====== VIEW: SEDES + COLABORADORES ====== -->
+            <div class="view" id="view-sedes">
+                <div class="view-inner">
+                    <!-- Sedes -->
+                    <div class="section-header reveal">
+                        <h2 class="section-title">Nuestras sedes</h2>
+                        <p class="section-subtitle">Donde se cuecen los planes y se brindan las victorias</p>
+                    </div>
+                    <div class="sedes-grid">
+                        <div class="sede-card neo-card reveal">
+                            <img src="assets/el-atril.webp" alt="Sede El Atril" class="sede-image" width="100%" height="200" style="object-fit: cover;">
+                            <div class="sede-info">
+                                <h3 class="sede-name">El Atril</h3>
+                                <p class="sede-address">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+                                    C. Jesusa Lara, 37, 28250 Torrelodones, Madrid
+                                </p>
+                                <p class="sede-desc">Nuestra sede social de toda la vida. El cuartel general donde empezó todo.</p>
+                            </div>
+                            <iframe class="sede-map" title="Mapa de El Atril" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d754.2!2d-3.9335!3d40.5765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418f29d9e3f32f%3A0x1!2sCalle%20Jesusa%20Lara%2C%2037%2C%2028250%20Torrelodones%2C%20Madrid!5e0!3m2!1ses!2ses" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                        </div>
+                        <div class="sede-card neo-card reveal reveal-delay-2">
+                            <img src="assets/exquisiteces.jpg" alt="Sede Exquisiteces" class="sede-image" width="100%" height="200" style="object-fit: cover;">
+                            <div class="sede-info">
+                                <h3 class="sede-name">Exquisiteces</h3>
+                                <p class="sede-address">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+                                    C. Real, 28, Loc 3, 28250 Torrelodones, Madrid
+                                </p>
+                                <p class="sede-desc">Nuestra segunda casa. Aquí también se conspira entre cafés y cañas.</p>
+                            </div>
+                            <iframe class="sede-map" title="Mapa de Exquisiteces" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d754.2!2d-3.9285!3d40.5730!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd418f29d9e3f32f%3A0x2!2sCalle%20Real%2C%2028%2C%2028250%20Torrelodones%2C%20Madrid!5e0!3m2!1ses!2ses" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Colaboradores -->
+                    <div class="section-divider"></div>
+                    <div class="section-header reveal">
+                        <h2 class="section-title">Colaboradores</h2>
+                        <p class="section-subtitle">Gracias a quienes hacen posible cada evento y cada sonrisa</p>
+                    </div>
+                    <div class="collab-grid" id="collab-grid" role="list" aria-label="Logos de colaboradores">
+                        <!-- Renderizado por Components.renderCollaborators() -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====== VIEW: MVP — MOST VALUABLE PARRANDERO ====== -->
+            <div class="view" id="view-mvp">
+                <div class="view-inner">
+                    <div class="section-header reveal">
+                        <h2 class="section-title">🏆 MVP — Most Valuable Parrandero</h2>
+                        <p class="section-subtitle">El salón de la fama de los que más la lían en cada evento</p>
+                    </div>
+                    <div id="mvp-container">
+                        <!-- Renderizado por Components.renderMVP() -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====== VIEW: JABALÍ RUN ====== -->
+            <div class="view" id="view-jabali-run">
+                <div class="view-inner">
+                    <div class="section-header reveal">
+                        <h2 class="section-title">🎮 Jabalí Run</h2>
+                        <p class="section-subtitle">Esquiva los escombros y corre con Toñín por Torrelodones</p>
+                    </div>
+                    
+                    <div class="game-view reveal reveal-delay-1">
+                        <div class="jabali-game">
+                            <div class="game-stats">
+                                <div>Puntos: <strong id="game-score">0</strong></div>
+                                <div>Récord: <strong id="game-best">0</strong></div>
+                            </div>
+                            
+                            <div class="game-arena" id="game-arena" tabindex="0">
+                                <div class="game-sky-decoration">☁️</div>
+                                <div class="game-hills"></div>
+                                <div class="game-ground"></div>
+                                
+                                <video id="game-player-video" loop muted playsinline style="position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;">
+                                    <source src="assets/jabali-corriendo.mp4" type="video/mp4">
+                                </video>
+                                <canvas id="game-player-canvas" class="game-player-canvas"></canvas>
+                                
+                                <div class="game-message hidden" id="game-message"></div>
+                            </div>
+                            
+                            <button class="game-start-button" id="game-start-button">¡Iniciar Carrera! 🐗</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====== VIEW: CONTACTO ====== -->
+            <div class="view" id="view-contacto">
+                <div class="view-inner view-centered">
+                    <div class="section-header reveal">
+                        <h2 class="section-title">¡Únete a la manada!</h2>
+                        <p class="section-subtitle">¿Quieres ser parte de La Escombrera? Escríbenos por Instagram y te contamos cómo.</p>
+                    </div>
+
+                    <div class="contact-content reveal reveal-delay-1">
+                        <div class="contact-mascots">
+                            <img src="assets/tonin.png" alt="" class="contact-mascot-img" aria-hidden="true" width="140">
+                            <img src="assets/tonina.png" alt="" class="contact-mascot-img" aria-hidden="true" width="140">
+                        </div>
+                        <p class="contact-text">
+                            Somos una peña abierta a todo aquel que comparta nuestras ganas de hacer pueblo, pasarlo bien y echar una mano cuando haga falta. Da igual tu edad, tu barrio o si prefieres la caña o el mosto — aquí hay sitio para todos. 🐗
+                        </p>
+                        <a href="https://www.instagram.com/laescombrera_torrelodones/" target="_blank" rel="noopener noreferrer" class="contact-instagram" aria-label="Ir a nuestro Instagram @laescombrera_torrelodones">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                            @laescombrera_torrelodones
+                        </a>
+                    </div>
+
+                    <footer class="site-footer reveal reveal-delay-3">
+                        <img src="assets/logo.png" alt="" class="footer-logo" aria-hidden="true" width="40" height="40">
+                        <p>© 2025 Peña La Escombrera · Torrelodones, Madrid</p>
+                        <p class="footer-sub">Hecha con 🐗 y buen rollo</p>
+                    </footer>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- ============================================================
+             BOTTOM BAR — Mobile (horizontal, fija abajo, estilo TikTok)
+        ============================================================= -->
+        <nav class="bottom-bar" id="bottom-bar" role="navigation" aria-label="Navegación móvil">
+            <button class="bar-item active" data-view="inicio" aria-label="Inicio">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                <span>Inicio</span>
+            </button>
+            <button class="bar-item" data-view="eventos" aria-label="Eventos">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <span>Eventos</span>
+            </button>
+
+            <button class="bar-item" data-view="mvp" aria-label="MVP">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5C7 4 7 7 7 7"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5C17 4 17 7 17 7"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
+                <span>MVP</span>
+            </button>
+            <button class="bar-item" id="bar-item-more" aria-label="Más opciones">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+                <span>Más</span>
+            </button>
+        </nav>
+
+        <!-- Drawer móvil para menú "Más" -->
+        <div class="mobile-drawer-overlay" id="mobile-drawer-overlay" role="dialog" aria-modal="true" aria-label="Menú adicional">
+            <div class="mobile-drawer" id="mobile-drawer">
+                <div class="mobile-drawer-header">
+                    <span class="mobile-drawer-title">Más secciones</span>
+                    <button class="mobile-drawer-close" id="mobile-drawer-close" aria-label="Cerrar menú">&times;</button>
+                </div>
+                <div class="mobile-drawer-body">
+                    <button class="drawer-item" data-view="nosotros" aria-label="Nosotros">
+                        <span class="drawer-icon">🐗</span>
+                        <span>Nosotros</span>
+                    </button>
+                    <button class="drawer-item" data-view="news" aria-label="News">
+                        <span class="drawer-icon">📰</span>
+                        <span>News</span>
+                    </button>
+                    <button class="drawer-item" data-view="sedes" aria-label="Sedes">
+                        <span class="drawer-icon">📍</span>
+                        <span>Sedes</span>
+                    </button>
+                    <button class="drawer-item" data-view="contacto" aria-label="Únete">
+                        <span class="drawer-icon">✉️</span>
+                        <span>Únete</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal de eventos -->
+    <div class="event-modal-overlay" id="event-modal-overlay" role="dialog" aria-modal="true" aria-label="Detalle del evento">
+        <div class="event-modal" id="event-modal"></div>
+    </div>
+
+    <!-- Lightbox de fotos -->
+    <div class="lightbox-overlay" id="lightbox-overlay" aria-hidden="true">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar foto">&times;</button>
+        <img src="" alt="Vista ampliada" id="lightbox-img" class="lightbox-img">
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/events.js"></script>
+    <script src="js/mvp.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/easter.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/game.js"></script>
+
+    <!-- Service Worker Registry -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('./sw.js')
+            .then(function(reg) {
+              console.log('Service Worker registrado con éxito:', reg.scope);
+            })
+            .catch(function(err) {
+              console.log('Error al registrar el Service Worker:', err);
+            });
+        });
+      }
+    </script>
+
+</body>
+</html>
