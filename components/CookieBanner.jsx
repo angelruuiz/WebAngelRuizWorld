@@ -7,9 +7,6 @@ export default function CookieBanner() {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        // No mostrar en /susana para no interrumpir la experiencia
-        if (window.location.pathname === '/susana') return;
-
         // Verificar si ya se ha aceptado
         const hasAccepted = localStorage.getItem('cookies_accepted');
         if (!hasAccepted) {

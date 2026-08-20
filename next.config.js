@@ -6,6 +6,14 @@ const nextConfig = {
         unoptimized: false,
         formats: ['image/avif', 'image/webp'],
     },
+    async rewrites() {
+        return [
+            {
+                source: '/web_escombrera',
+                destination: '/web_escombrera/index.html',
+            },
+        ];
+    },
     async redirects() {
         return [
             {

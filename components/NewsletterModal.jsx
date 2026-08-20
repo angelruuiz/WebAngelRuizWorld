@@ -10,9 +10,6 @@ export default function NewsletterModal() {
     const FORMSPREE_ENDPOINT = "https://formspree.io/f/xeoydngl";
 
     useEffect(() => {
-        // No mostrar en /susana para no interrumpir la experiencia
-        if (window.location.pathname === '/susana') return;
-
         // Verificar si ya se ha mostrado o si el usuario lo cerró
         const hasShown = localStorage.getItem('newsletter_modal_v1');
         
