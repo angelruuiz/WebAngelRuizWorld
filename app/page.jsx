@@ -274,8 +274,22 @@ export default function Home() {
                             "telephone": "+34648055636",
                             "email": "info@angelruiz.world",
                             "description": "Mago e ilusionista profesional en Madrid. Especialista en magia de cerca para bodas, eventos corporativos y celebraciones privadas.",
-                            "areaServed": ["Madrid", "Torrelodones", "Las Rozas", "Majadahonda", "Pozuelo de Alarcón", "Boadilla del Monte", "Galapagar", "Collado Villalba", "El Escorial", "Las Matas"],
+                            "areaServed": ["Madrid", "Torrelodones", "Las Rozas", "Majadahonda", "Pozuelo de Alarcón", "Boadilla del Monte", "Galapagar", "Collado Villalba", "El Escorial", "Las Matas", "Alcobendas", "Alcorcón", "Leganés", "Getafe", "Móstoles"],
                             "aggregateRating": ratingSchema.aggregateRating,
+                            "review": [
+                                {
+                                    "@type": "Review",
+                                    "author": { "@type": "Person", "name": "Jorge García-Alba" },
+                                    "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                                    "reviewBody": "He tenido la suerte de ver a muchos magos, pero lo que hace este es simplemente otro nivel. Cada truco está cuidado al detalle, la conexión con el público es brutal. Sin duda el mejor mago que puedes ver en Madrid."
+                                },
+                                {
+                                    "@type": "Review",
+                                    "author": { "@type": "Person", "name": "Alejandra Alcalá Pereira" },
+                                    "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                                    "reviewBody": "El mejor mago que se haya visto en mucho tiempo, muy amable, divertidísimo y súper profesional. Os lo recomiendo para cualquier evento que tengáis."
+                                }
+                            ],
                             "address": {
                                 "@type": "PostalAddress",
                                 "streetAddress": "Zona Noroeste",
@@ -290,6 +304,18 @@ export default function Home() {
                                 "https://youtube.com/@angellruuiz",
                                 "https://facebook.com/angellruuiz"
                             ]
+                        },
+                        {
+                            "@type": "Person",
+                            "@id": "https://angelruiz.world/#person",
+                            "name": "Ángel Ruiz",
+                            "jobTitle": "Mago e Ilusionista Profesional",
+                            "description": "Ilusionista profesional en Madrid especializado en magia de cerca, mentalismo y cartomagia de autor. Formado en la Escuela de Dani DaOrtiz.",
+                            "alumniOf": {
+                                "@type": "EducationalOrganization",
+                                "name": "Escuela de Magia Dani DaOrtiz"
+                            },
+                            "worksFor": { "@id": "https://angelruiz.world/#organization" }
                         },
                         {
                             "@type": "FAQPage",

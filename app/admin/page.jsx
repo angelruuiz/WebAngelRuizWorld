@@ -19,6 +19,8 @@ export default function AdminPage() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [password, setPassword] = useState("");
     const [loginError, setLoginError] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("");
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const [events, setEvents] = useState([]);
     const [activeTab, setActiveTab] = useState('upcoming');
     const [showAddModal, setShowAddModal] = useState(false);
@@ -38,11 +40,17 @@ export default function AdminPage() {
     useEffect(() => {
         const savedEvents = localStorage.getItem('ar_admin_events');
         const savedNotes = localStorage.getItem('ar_admin_notes');
-        const authStatus = sessionStorage.getItem('ar_admin_auth');
+        const authToken = sessionStorage.getItem('ar_admin_token');
         
-        if (savedEvents) setEvents(JSON.parse(savedEvents));
+        if (savedEvents) {
+            try {
+                setEvents(JSON.parse(savedEvents));
+            } catch (e) {
+                console.error("Error parsing saved events", e);
+            }
+        }
         if (savedNotes) setNotes(savedNotes);
-        if (authStatus === 'true') setIsAuthenticated(true);
+        if (authToken) setIsAuthenticated(true);
     }, []);
 
     // Save events to LocalStorage
@@ -59,21 +67,44 @@ export default function AdminPage() {
         }
     }, [notes, isAuthenticated]);
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
-        // Definimos la contraseña maestra (puedes cambiarla aquí o pedir al usuario que la defina)
-        if (password === 'wEyzye9b') {
-            setIsAuthenticated(true);
-            sessionStorage.setItem('ar_admin_auth', 'true');
-            setLoginError(false);
-        } else {
+        if (!password || isSubmitting) return;
+
+        setIsSubmitting(true);
+        setErrorMessage("");
+        setLoginError(false);
+
+        try {
+            const res = await fetch('/api/admin/auth', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ password })
+            });
+            const data = await res.json();
+
+            if (res.ok && data.success && data.token) {
+                setIsAuthenticated(true);
+                sessionStorage.setItem('ar_admin_token', data.token);
+                setLoginError(false);
+                setPassword("");
+            } else {
+                setLoginError(true);
+                setErrorMessage(data.error || "Contraseña incorrecta.");
+                setTimeout(() => setLoginError(false), 3000);
+            }
+        } catch (err) {
             setLoginError(true);
-            setTimeout(() => setLoginError(false), 2000);
+            setErrorMessage("Error al conectar con el servidor.");
+            setTimeout(() => setLoginError(false), 3000);
+        } finally {
+            setIsSubmitting(false);
         }
     };
 
     const handleLogout = () => {
         setIsAuthenticated(false);
+        sessionStorage.removeItem('ar_admin_token');
         sessionStorage.removeItem('ar_admin_auth');
     };
 
@@ -132,13 +163,18 @@ export default function AdminPage() {
                                 className={`w-full bg-white/5 border ${loginError ? 'border-red-500 animate-shake' : 'border-white/10'} rounded-full py-4 px-6 text-white placeholder:text-slate-600 outline-none focus:border-amber-500/50 transition-all font-mono`}
                                 placeholder="••••••••"
                                 autoFocus
+                                disabled={isSubmitting}
                             />
+                            {errorMessage && (
+                                <p className="text-red-400 text-xs text-center mt-2 font-medium">{errorMessage}</p>
+                            )}
                         </div>
                         <button 
                             type="submit"
-                            className="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-4 rounded-full transition-all uppercase tracking-widest text-xs shadow-[0_0_20px_rgba(245,158,11,0.3)] hover:shadow-[0_0_30px_rgba(245,158,11,0.5)]"
+                            disabled={isSubmitting}
+                            className="w-full bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold py-4 rounded-full transition-all uppercase tracking-widest text-xs shadow-[0_0_20px_rgba(245,158,11,0.3)] hover:shadow-[0_0_30px_rgba(245,158,11,0.5)] disabled:opacity-50"
                         >
-                            Revelar Diario
+                            {isSubmitting ? "Verificando..." : "Revelar Diario"}
                         </button>
                     </form>
                 </motion.div>

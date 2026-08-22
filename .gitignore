@@ -32,6 +32,7 @@ yarn-error.log*
 # vercel
 .vercel
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# analytics dumps & zips
+*.zip
+resultados-console-*/
+angelruiz.world-Performance-on-Search-*/

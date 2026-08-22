@@ -8,7 +8,7 @@ import FAQItem from '@/components/FAQItem';
 
 export const metadata = {
     title: { absolute: 'Mago para Empresas en Madrid 2026 | Ángel Ruiz | Ilusionista Corporativo' },
-    description: '¿Buscas mago para tu evento de empresa en Madrid? Ángel Ruiz, especialista en cenas de empresa, team building y congresos. Ilusionismo corporativo de alto impacto. Reserva ya para asegurar disponibilidad.',
+    description: 'Tus invitados seguirán hablando del evento semanas después. Ángel Ruiz: mago corporativo en Madrid para cenas, team building y congresos. Empresas como Movistar Estudiantes ya confían en él. Desde 350€.',
     keywords: ['mago para empresas madrid', 'mago eventos corporativos madrid', 'mago cenas empresa madrid', 'mago team building madrid', 'mago conferenciante madrid', 'contratar mago empresa madrid', 'ilusionista corporativo madrid', 'mejor mago empresas madrid', 'mago para eventos de empresa madrid', 'mago eventos empresariales', 'magia para empresas'],
     alternates: {
         canonical: 'https://angelruiz.world/empresas',

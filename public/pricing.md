@@ -1,13 +1,13 @@
 # Pricing — Ángel Ruiz | Mago e Ilusionista en Madrid
 
 ## Eventos Privados (Bodas, Cumpleaños, Comuniones)
-- Price: 400€ - 900€ (Dependiendo del formato y duración)
+- Price: Desde 300€ (Dependiendo del formato y duración)
 - Duración habitual: 1 - 2 horas
 - Formato: Magia de cerca (Close-up) durante el cóctel o mentalismo de salón.
 - Incluye: Desplazamiento en la Comunidad de Madrid, diseño de la actuación a medida.
 
 ## Eventos Corporativos (Cenas de Empresa, Team Building)
-- Price: Desde 600€ por evento/jornada
+- Price: Desde 350€ por evento/jornada
 - Formato: Magia de mesa en mesa, espectáculos de escenario para grupos, magia itinerante.
 - Incluye: Personalización de rutinas con mensajes corporativos o integración de producto.
 

@@ -5,15 +5,15 @@ import FAQItem from '@/components/FAQItem';
 
 export const metadata = {
   title: { absolute: 'Mago para Cenas de Empresa en Madrid 2026 | Ángel Ruiz | Ilusionismo Corporativo' },
-  description: '¿Buscas mago para la cena de empresa en Madrid? Ángel Ruiz transforma cenas de Navidad, fin de año y eventos corporativos en experiencias inolvidables. ⭐⭐⭐⭐⭐ 39 reseñas. Solicita presupuesto.',
-  keywords: ['mago cenas empresa madrid', 'mago para cena empresa madrid', 'mago cena navidad empresa madrid', 'contratar mago cena empresa', 'entretenimiento cenas empresa madrid', 'mago corporativo madrid', 'animacion cenas empresa madrid'],
+  description: 'La cena de empresa que tu equipo recuerda todo el año. Ángel Ruiz personaliza la magia con tu marca y tu mensaje. 42 reseñas 5★, clientes como Movistar Estudiantes. Desde 350€. Reserva ya la fecha de Navidad.',
+  keywords: ['mago cenas empresa madrid', 'mago para cena empresa madrid', 'mago cena navidad empresa madrid', 'contratar mago cena empresa', 'entretenimiento cenas empresa madrid', 'mago corporativo madrid', 'animacion cenas empresa madrid', 'mago para eventos de empresa madrid'],
   alternates: {
     canonical: 'https://angelruiz.world/empresas/mago-cenas-empresa-madrid',
   },
   openGraph: {
     url: 'https://angelruiz.world/empresas/mago-cenas-empresa-madrid',
     title: 'Mago para Cenas de Empresa en Madrid 2026 | Ángel Ruiz',
-    description: 'Transforma la cena de empresa en Madrid en un evento memorable con magia de cerca corporativa. 39 reseñas 5⭐.',
+    description: 'Transforma la cena de empresa en Madrid en un evento memorable con magia de cerca corporativa. 42 reseñas 5⭐.',
     images: [{ url: '/images/evento-angel-ruiz-magia.webp', width: 1200, height: 630 }],
   },
 };
@@ -40,7 +40,7 @@ const schemaJson = {
       "telephone": "+34648055636",
       "priceRange": "€€€",
       "address": { "@type": "PostalAddress", "addressLocality": "Madrid", "addressRegion": "Comunidad de Madrid", "addressCountry": "ES" },
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "bestRating": "5", "worstRating": "1", "ratingCount": "39" }
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "bestRating": "5", "worstRating": "1", "ratingCount": "42" }
     },
     {
       "@type": "Service",

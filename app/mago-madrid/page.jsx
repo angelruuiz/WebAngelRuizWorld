@@ -7,14 +7,14 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
     title: { absolute: 'Mago en Madrid 2026 | Contratar Mago para Bodas y Empresas | Ángel Ruiz' },
-    description: '¿Buscas mago en Madrid? Ángel Ruiz: ilusionista profesional para bodas, cenas de empresa y eventos privados. +10 años, 39 reseñas ⭐⭐⭐⭐⭐. Magia de cerca y de salón. Solicita presupuesto.',
-    keywords: ['mago madrid', 'mago en madrid', 'contratar mago madrid', 'mago profesional madrid', 'ilusionista madrid', 'mago close-up madrid', 'magia de cerca madrid', 'experto en magia en madrid'],
+    description: 'El mago que contratan las bodas y empresas exigentes de Madrid. Ángel Ruiz: magia de cerca a centímetros de tus ojos, sin cajas ni aparatos. 42 reseñas 5★ reales. Desde 300€, presupuesto en 24h.',
+    keywords: ['mago madrid', 'mago en madrid', 'contratar mago madrid', 'mago profesional madrid', 'ilusionista madrid', 'mago close-up madrid', 'magia de cerca madrid', 'experto en magia en madrid', 'mejor mago empresas madrid', 'mago para bodas madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/mago-madrid',
     },
     openGraph: {
         title: 'Mago en Madrid 2026 | Contratar Mago para Bodas y Empresas | Ángel Ruiz',
-        description: 'Ilusionista profesional en Madrid para bodas, eventos corporativos y celebraciones privadas. +10 años de experiencia, 39 reseñas 5⭐. Magia de cerca y de salón.',
+        description: 'Ilusionista profesional en Madrid para bodas, eventos corporativos y celebraciones privadas. +10 años de experiencia, 42 reseñas 5⭐. Magia de cerca y de salón.',
         images: [{ url: '/images/foto-bio.webp', width: 1200, height: 630 }],
     }
 };
@@ -42,7 +42,7 @@ export default function MagoMadridPage() {
                     "ratingValue": "5",
                     "bestRating": "5",
                     "worstRating": "1",
-                    "ratingCount": "39"
+                    "ratingCount": "42"
                 },
                 "areaServed": {
                     "@type": "City",
@@ -143,7 +143,7 @@ export default function MagoMadridPage() {
                                 </p>
 
                                 <p className="bg-white/5 p-4 rounded-lg italic text-slate-300">
-                                    "39 reseñas de 5 estrellas en Google. Empresas como Movistar Estudiantes ya confían en mi magia para sus eventos corporativos."
+                                    "42 reseñas de 5 estrellas en Google. Empresas como Movistar Estudiantes y colegios oficiales ya confían en mi magia para sus eventos corporativos."
                                 </p>
                             </div>
 

@@ -7,7 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
     title: { absolute: 'Mago para Bodas en Madrid 2026 | Precios y Guía | Ángel Ruiz' },
-    description: 'Sorprende a tus invitados con el mejor mago para bodas en Madrid. Magia de cerca elegante y emotiva para el cóctel. +10 años de experiencia, 100% reseñas 5 estrellas. ¡Reserva tu fecha!',
+    description: 'Tu cóctel de boda puede ser el momento más recordado del día. Ángel Ruiz: el mago que eligen las parejas exigentes en Madrid. 42 reseñas 5★, desde 300€. Consulta tu fecha antes de que se reserve.',
     keywords: ['mago para bodas madrid', 'mago bodas madrid', 'contratar mago boda madrid', 'mago coctel boda madrid', 'ilusionista bodas madrid', 'mago para bodas precio madrid', 'mago boda noroeste madrid', 'entretenimiento bodas madrid', 'mago para mi boda madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/particulares/bodas',
@@ -15,7 +15,7 @@ export const metadata = {
     openGraph: {
         url: 'https://angelruiz.world/particulares/bodas',
         title: 'Mago para Bodas en Madrid 2026 | Ángel Ruiz | Ilusionista Profesional',
-        description: 'Transforma el cóctel y el banquete de tu boda en Madrid en una experiencia mágica e inolvidable. +10 años, 39 reseñas 5⭐. Solicita disponibilidad.',
+        description: 'Transforma el cóctel y el banquete de tu boda en Madrid en una experiencia mágica e inolvidable. +10 años, 42 reseñas 5⭐. Solicita disponibilidad.',
         images: [{ url: '/images/boda-magia-madrid.webp', width: 1200, height: 630 }],
     },
     twitter: {

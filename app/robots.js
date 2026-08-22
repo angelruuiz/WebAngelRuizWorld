@@ -23,12 +23,12 @@ export default function robots() {
       ...AI_BOTS.map((bot) => ({
         userAgent: bot,
         allow: '/',
-        disallow: ['/admin', '/api', '/almeria'],
+        disallow: ['/admin', '/api'],
       })),
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/admin', '/api', '/almeria'],
+        disallow: ['/admin', '/api'],
       },
     ],
     sitemap: 'https://angelruiz.world/sitemap.xml',

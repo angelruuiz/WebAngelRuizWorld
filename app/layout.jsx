@@ -8,7 +8,7 @@ export const metadata = {
     default: 'Mago en Madrid | Ángel Ruiz | Ilusionista para Bodas y Empresas',
     template: '%s | Ángel Ruiz | Mago Madrid'
   },
-  description: 'Ángel Ruiz, mago profesional en Madrid para bodas, cenas de empresa y eventos privados. +10 años de experiencia, 42 reseñas ⭐⭐⭐⭐⭐. Magia de cerca y de salón. Solicita presupuesto.',
+  description: '¿Buscas un mago de verdad en Madrid? Ángel Ruiz: 42 reseñas de 5★ reales, +10 años en bodas y empresas. Sin agencias, trato directo. Presupuesto en 24h.',
   keywords: ['mago madrid', 'mago en madrid', 'contratar mago madrid', 'mago profesional madrid', 'ilusionista madrid', 'magia de cerca madrid', 'mago cenas empresa madrid', 'mago comuniones madrid', 'mago team building madrid', 'mago close-up madrid', 'Ángel Ruiz mago'],
   authors: [{ name: 'Ángel Ruiz | Mago e Ilusionista' }],
   creator: 'Ángel Ruiz | Mago e Ilusionista',

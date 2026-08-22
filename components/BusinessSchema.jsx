@@ -82,6 +82,26 @@ export default function BusinessSchema({ rating = null }) {
       "https://www.tiktok.com/@angellruuiz",
       "https://www.youtube.com/@angellruuiz",
       "https://twitter.com/angellruuizz"
+    ],
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Jorge García-Alba" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "He tenido la suerte de ver a muchos magos, pero lo que hace este es simplemente otro nivel. Cada truco está cuidado al detalle, la conexión con el público es brutal. Sin duda el mejor mago que puedes ver en Madrid."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Alejandra Alcalá Pereira" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "El mejor mago que se haya visto en mucho tiempo, muy amable, divertidísimo y súper profesional. 100% recomendado para bodas y empresas."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Marcos Hernández Piñero" },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Contraté a Ángel para un evento y nos encantó. Desde el primer momento estuvo súper cercano y creó un ambiente increíble. Repetiríamos sin dudarlo."
+      }
     ]
   };
 
@@ -98,8 +118,13 @@ export default function BusinessSchema({ rating = null }) {
     "url": "https://angelruiz.world/sobre-mi",
     "image": "https://angelruiz.world/images/foto-bio.webp",
     "telephone": "+34648055636",
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Escuela de Magia Dani DaOrtiz",
+      "url": "https://gkaps.com"
+    },
     "worksFor": { "@id": "https://angelruiz.world/#organization" },
-    "knowsAbout": ["Magia de cerca", "Close-up", "Cartomagia", "Mentalismo", "Magia para bodas", "Magia corporativa", "Team building"],
+    "knowsAbout": ["Magia de cerca", "Close-up Magic", "Cartomagia", "Mentalismo", "Magia para bodas", "Magia corporativa", "Team building con magia", "Ilusionismo profesional"],
     "homeLocation": { "@type": "Place", "name": "Torrelodones, Madrid, España" },
     "sameAs": [
       "https://www.instagram.com/angellruuiz",
