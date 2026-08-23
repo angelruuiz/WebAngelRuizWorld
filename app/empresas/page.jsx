@@ -46,6 +46,13 @@ export default function EmpresasPage() {
             "highPrice": "2000",
             "priceCurrency": "EUR"
         },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "ratingCount": "42",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Servicios de Magia Corporativa",
