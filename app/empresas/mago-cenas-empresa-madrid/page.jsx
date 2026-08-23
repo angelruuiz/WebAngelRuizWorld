@@ -39,8 +39,7 @@ const schemaJson = {
       "url": "https://angelruiz.world",
       "telephone": "+34648055636",
       "priceRange": "€€€",
-      "address": { "@type": "PostalAddress", "addressLocality": "Madrid", "addressRegion": "Comunidad de Madrid", "addressCountry": "ES" },
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "5", "bestRating": "5", "worstRating": "1", "ratingCount": "42" }
+      "address": { "@type": "PostalAddress", "addressLocality": "Madrid", "addressRegion": "Comunidad de Madrid", "addressCountry": "ES" }
     },
     {
       "@type": "Service",

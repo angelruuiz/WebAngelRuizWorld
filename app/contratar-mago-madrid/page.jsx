@@ -108,13 +108,6 @@ export default function ContratarMagoMadridPage() {
                     "addressRegion": "Comunidad de Madrid",
                     "addressCountry": "ES"
                 },
-                "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "5",
-                    "bestRating": "5",
-                    "worstRating": "1",
-                    "ratingCount": "39"
-                },
                 "areaServed": {
                     "@type": "City",
                     "name": "Madrid"

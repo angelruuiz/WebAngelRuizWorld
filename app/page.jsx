@@ -240,19 +240,6 @@ export default function Home() {
         "contentUrl": "https://angelruiz.world/spring.mp4"
     };
 
-    const ratingSchema = {
-        "@type": "ProfessionalService",
-        "name": "Ángel Ruiz | Mago e Ilusionista",
-        "url": "https://angelruiz.world",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "bestRating": "5",
-            "worstRating": "1",
-            "ratingCount": "42"
-        }
-    };
-
     return (
         <>
             {/* Unificamos TODO en un solo bloque @graph para que Google no pueda ver duplicados */}
@@ -275,21 +262,6 @@ export default function Home() {
                             "email": "info@angelruiz.world",
                             "description": "Mago e ilusionista profesional en Madrid. Especialista en magia de cerca para bodas, eventos corporativos y celebraciones privadas.",
                             "areaServed": ["Madrid", "Torrelodones", "Las Rozas", "Majadahonda", "Pozuelo de Alarcón", "Boadilla del Monte", "Galapagar", "Collado Villalba", "El Escorial", "Las Matas", "Alcobendas", "Alcorcón", "Leganés", "Getafe", "Móstoles"],
-                            "aggregateRating": ratingSchema.aggregateRating,
-                            "review": [
-                                {
-                                    "@type": "Review",
-                                    "author": { "@type": "Person", "name": "Jorge García-Alba" },
-                                    "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-                                    "reviewBody": "He tenido la suerte de ver a muchos magos, pero lo que hace este es simplemente otro nivel. Cada truco está cuidado al detalle, la conexión con el público es brutal. Sin duda el mejor mago que puedes ver en Madrid."
-                                },
-                                {
-                                    "@type": "Review",
-                                    "author": { "@type": "Person", "name": "Alejandra Alcalá Pereira" },
-                                    "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-                                    "reviewBody": "El mejor mago que se haya visto en mucho tiempo, muy amable, divertidísimo y súper profesional. Os lo recomiendo para cualquier evento que tengáis."
-                                }
-                            ],
                             "address": {
                                 "@type": "PostalAddress",
                                 "streetAddress": "Zona Noroeste",

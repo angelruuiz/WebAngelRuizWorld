@@ -87,13 +87,6 @@ export default function BodasDetailPage() {
                                 "addressRegion": "Comunidad de Madrid",
                                 "postalCode": "28250",
                                 "addressCountry": "ES"
-                            },
-                            "aggregateRating": {
-                                "@type": "AggregateRating",
-                                "ratingValue": "5",
-                                "bestRating": "5",
-                                "worstRating": "1",
-                                "ratingCount": "42"
                             }
                         },
                         {
@@ -114,18 +107,6 @@ export default function BodasDetailPage() {
                         {
                             "@type": "BreadcrumbList",
                             "itemListElement": breadcrumbSchema.itemListElement
-                        },
-                        {
-                            "@type": "Review",
-                            "author": { "@type": "Person", "name": "María y Carlos" },
-                            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-                            "reviewBody": "Ángel fue el mejor acierto de nuestra boda. Durante el cóctel, todos los invitados estaban encantados con su magia. El efecto final dedicado a nosotros nos emocionó profundamente. 100% recomendable."
-                        },
-                        {
-                            "@type": "Review",
-                            "author": { "@type": "Person", "name": "Laura y Javier" },
-                            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-                            "reviewBody": "Contratamos a Ángel para nuestra boda en una finca de la Sierra de Madrid. La magia fue elegante, divertida y perfecta para romper el hielo entre familias. Nuestros invitados siguen hablando de él meses después."
                         }
                     ]
                 }) }} 

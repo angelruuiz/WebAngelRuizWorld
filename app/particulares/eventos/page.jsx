@@ -83,13 +83,6 @@ export default function EventosDetailPage() {
                                 "addressRegion": "Comunidad de Madrid",
                                 "postalCode": "28250",
                                 "addressCountry": "ES"
-                            },
-                            "aggregateRating": {
-                                "@type": "AggregateRating",
-                                "ratingValue": "5",
-                                "bestRating": "5",
-                                "worstRating": "1",
-                                "ratingCount": "39"
                             }
                         },
                         {

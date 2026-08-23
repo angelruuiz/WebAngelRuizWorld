@@ -42,19 +42,6 @@ export default function ValoracionesPage() {
         ]
     };
 
-    const ratingSchema = {
-        "@type": "ProfessionalService",
-        "name": "Ángel Ruiz | Mago e Ilusionista",
-        "url": "https://angelruiz.world",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "bestRating": "5",
-            "worstRating": "1",
-            "ratingCount": "42"
-        }
-    };
-
     return (
         <>
             <script 
@@ -81,26 +68,7 @@ export default function ValoracionesPage() {
                                 "addressRegion": "Comunidad de Madrid",
                                 "postalCode": "28250",
                                 "addressCountry": "ES"
-                            },
-                            "aggregateRating": {
-                                "@type": "AggregateRating",
-                                "ratingValue": "5",
-                                "bestRating": "5",
-                                "worstRating": "1",
-                                "ratingCount": "42"
-                            },
-                            "review": reviewsData.map(r => ({
-                                "@type": "Review",
-                                "reviewBody": r.text,
-                                "author": {
-                                    "@type": "Person",
-                                    "name": r.author
-                                },
-                                "reviewRating": {
-                                    "@type": "Rating",
-                                    "ratingValue": "5"
-                                }
-                            }))
+                            }
                         }
                     ]
                 }) }} 

@@ -86,32 +86,8 @@ export default function BusinessSchema({ rating = null }) {
       "https://www.tiktok.com/@angellruuiz",
       "https://www.youtube.com/@angellruuiz",
       "https://twitter.com/angellruuizz"
-    ],
-    "review": [
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Jorge García-Alba" },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "He tenido la suerte de ver a muchos magos, pero lo que hace este es simplemente otro nivel. Cada truco está cuidado al detalle, la conexión con el público es brutal. Sin duda el mejor mago que puedes ver en Madrid."
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Alejandra Alcalá Pereira" },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "El mejor mago que se haya visto en mucho tiempo, muy amable, divertidísimo y súper profesional. 100% recomendado para bodas y empresas."
-      },
-      {
-        "@type": "Review",
-        "author": { "@type": "Person", "name": "Marcos Hernández Piñero" },
-        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-        "reviewBody": "Contraté a Ángel para un evento y nos encantó. Desde el primer momento estuvo súper cercano y creó un ambiente increíble. Repetiríamos sin dudarlo."
-      }
     ]
   };
-
-  if (rating) {
-    business.aggregateRating = rating;
-  }
 
   const person = {
     "@type": "Person",
