@@ -6,14 +6,14 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import Link from 'next/link';
 
 export const metadata = {
-    title: { absolute: 'Mago Conferenciante para Empresas en Madrid | Ángel Ruiz' },
-    description: '¿Buscas un orador diferente para tu convención? Descubre por qué contratar a un mago conferenciante en Madrid es la mejor decisión para tu evento empresarial.',
+    title: { absolute: 'Mago Conferenciante para Empresas en Madrid: Guía y Claves' },
+    description: '¿Por qué contratar un mago conferenciante en Madrid para tu convención? Descubre cómo fusionar ilusionismo y comunicación B2B para anclar tu mensaje de marca.',
     alternates: {
         canonical: 'https://angelruiz.world/blog/mago-conferenciante-empresas-madrid',
     },
     keywords: 'mago conferenciante empresas madrid, mago eventos empresariales con asesoría, mago corporativo presentador profesional, orador motivacional madrid, conferenciante magia',
     openGraph: {
-        title: 'Por qué contratar un Mago Conferenciante para tu Empresa en Madrid',
+        title: 'Mago Conferenciante para Empresas en Madrid: Guía y Claves',
         description: 'La fusión perfecta entre keynote empresarial e ilusionismo de alto impacto para anclar mensajes corporativos.',
         images: [{ url: '/images/evento-angel-ruiz-magia.webp' }],
     }

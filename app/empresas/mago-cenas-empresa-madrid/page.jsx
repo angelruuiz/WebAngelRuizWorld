@@ -4,15 +4,15 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import FAQItem from '@/components/FAQItem';
 
 export const metadata = {
-  title: { absolute: 'Mago para Cenas de Empresa en Madrid 2026 | Ángel Ruiz | Ilusionismo Corporativo' },
-  description: 'La cena de empresa que tu equipo recuerda todo el año. Ángel Ruiz personaliza la magia con tu marca y tu mensaje. 42 reseñas 5★, clientes como Movistar Estudiantes. Desde 350€. Reserva ya la fecha de Navidad.',
+  title: { absolute: 'Mago para Cenas de Empresa en Madrid | Ángel Ruiz' },
+  description: 'La cena de empresa que tu equipo recordará todo el año. Magia de cerca personalizada con la marca de tu empresa en Madrid. 42 reseñas 5★. Solicita presupuesto.',
   keywords: ['mago cenas empresa madrid', 'mago para cena empresa madrid', 'mago cena navidad empresa madrid', 'contratar mago cena empresa', 'entretenimiento cenas empresa madrid', 'mago corporativo madrid', 'animacion cenas empresa madrid', 'mago para eventos de empresa madrid'],
   alternates: {
     canonical: 'https://angelruiz.world/empresas/mago-cenas-empresa-madrid',
   },
   openGraph: {
     url: 'https://angelruiz.world/empresas/mago-cenas-empresa-madrid',
-    title: 'Mago para Cenas de Empresa en Madrid 2026 | Ángel Ruiz',
+    title: 'Mago para Cenas de Empresa en Madrid | Ángel Ruiz',
     description: 'Transforma la cena de empresa en Madrid en un evento memorable con magia de cerca corporativa. 42 reseñas 5⭐.',
     images: [{ url: '/images/evento-angel-ruiz-magia.webp', width: 1200, height: 630 }],
   },

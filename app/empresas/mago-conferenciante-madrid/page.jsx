@@ -4,15 +4,15 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import FAQItem from '@/components/FAQItem';
 
 export const metadata = {
-  title: 'Mago Conferenciante en Madrid | Charlas Motivacionales Diferentes',
-  description: '¿Buscas una conferencia motivacional distinta? Ángel Ruiz fusiona ilusionismo y comunicación corporativa para anclar los valores de tu empresa en Madrid. Alto impacto B2B.',
+  title: { absolute: 'Mago Conferenciante para Empresas en Madrid | Ángel Ruiz' },
+  description: 'Conferencias motivacionales con ilusionismo corporativo en Madrid. Ángel Ruiz ancla el mensaje de tu marca con magia de alto impacto B2B. Solicita dossier.',
   keywords: 'mago conferenciante madrid, charlas motivacionales empresas, conferencias con magia, speaker motivacional, comunicacion corporativa, ponente empresas madrid, magia corporativa',
   alternates: {
     canonical: 'https://angelruiz.world/empresas/mago-conferenciante-madrid',
   },
   openGraph: {
-    title: 'Mago Conferenciante en Madrid | Charlas Motivacionales Diferentes',
-    description: '¿Buscas una conferencia motivacional distinta? Ángel Ruiz fusiona ilusionismo y comunicación corporativa para anclar los valores de tu empresa en Madrid. Alto impacto B2B.',
+    title: 'Mago Conferenciante para Empresas en Madrid | Ángel Ruiz',
+    description: 'Conferencias motivacionales con ilusionismo corporativo en Madrid. Ángel Ruiz ancla el mensaje de tu marca con magia de alto impacto B2B.',
     url: 'https://angelruiz.world/empresas/mago-conferenciante-madrid',
     siteName: 'Angel Ruiz',
     images: [

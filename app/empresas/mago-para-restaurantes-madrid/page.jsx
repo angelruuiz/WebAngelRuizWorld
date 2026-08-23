@@ -4,14 +4,14 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import FAQItem from '@/components/FAQItem';
 
 export const metadata = {
-  title: 'Mago para Restaurantes en Madrid | Table Hopping',
-  description: 'Tus clientes vuelven, dejan reseñas y traen amigos. Magia de mesa en mesa (Table Hopping) para restaurantes en Madrid. Ángel Ruiz: el mago que eligen los hosteleros que quieren diferenciarse.',
+  title: { absolute: 'Mago para Restaurantes en Madrid | Ángel Ruiz (Table Hopping)' },
+  description: 'Fideliza a tus clientes y sube el ticket medio. Magia de cerca de mesa en mesa para restaurantes en Madrid. Ángel Ruiz: Ilusionista profesional.',
   keywords: 'mago para restaurantes, table hopping madrid, magia en mesas, mago para eventos en madrid, mago para locales de ocio, animacion restaurantes, ilusionista restaurantes',
   alternates: {
     canonical: 'https://angelruiz.world/empresas/mago-para-restaurantes-madrid',
   },
   openGraph: {
-    title: 'Mago para Restaurantes en Madrid | Table Hopping',
+    title: 'Mago para Restaurantes en Madrid | Ángel Ruiz (Table Hopping)',
     description: 'Aumenta el ticket medio y fideliza a tus clientes. Mago para restaurantes y locales en Madrid especialista en Table Hopping (magia de mesa en mesa).',
     url: 'https://angelruiz.world/empresas/mago-para-restaurantes-madrid',
     siteName: 'Angel Ruiz',

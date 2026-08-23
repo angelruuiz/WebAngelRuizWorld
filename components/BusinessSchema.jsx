@@ -52,11 +52,14 @@ export default function BusinessSchema({ rating = null }) {
           "@type": "Offer",
           "itemOffered": { "@type": "Service", "name": "Mago para bodas en Madrid", "url": "https://angelruiz.world/particulares/bodas" },
           "priceSpecification": { "@type": "PriceSpecification", "minPrice": 400, "maxPrice": 900, "priceCurrency": "EUR" }
-        },
         {
           "@type": "Offer",
           "itemOffered": { "@type": "Service", "name": "Mago para eventos de empresa en Madrid", "url": "https://angelruiz.world/empresas" },
           "priceSpecification": { "@type": "PriceSpecification", "minPrice": 600, "priceCurrency": "EUR" }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": { "@type": "Service", "name": "Mago Conferenciante para Empresas en Madrid", "url": "https://angelruiz.world/empresas/mago-conferenciante-madrid" }
         },
         {
           "@type": "Offer",
@@ -113,8 +116,8 @@ export default function BusinessSchema({ rating = null }) {
     "@type": "Person",
     "@id": "https://angelruiz.world/#person",
     "name": "Ángel Ruiz",
-    "jobTitle": "Mago e ilusionista profesional",
-    "description": "Mago profesional en Madrid especializado en magia de cerca (close-up), cartomagia de autor y mentalismo. Formado en la escuela de Dani DaOrtiz. Más de 10 años de experiencia en bodas, eventos de empresa y fiestas privadas.",
+    "jobTitle": "Mago e ilusionista profesional, Mago Conferenciante y Keynote Speaker Corporativo",
+    "description": "Mago e ilusionista profesional en Madrid especializado en magia de cerca (close-up), conferencias motivacionales para empresas (mago conferenciante) y mentalismo. Formado en la escuela de Dani DaOrtiz.",
     "url": "https://angelruiz.world/sobre-mi",
     "image": "https://angelruiz.world/images/foto-bio.webp",
     "telephone": "+34648055636",
@@ -124,7 +127,7 @@ export default function BusinessSchema({ rating = null }) {
       "url": "https://gkaps.com"
     },
     "worksFor": { "@id": "https://angelruiz.world/#organization" },
-    "knowsAbout": ["Magia de cerca", "Close-up Magic", "Cartomagia", "Mentalismo", "Magia para bodas", "Magia corporativa", "Team building con magia", "Ilusionismo profesional"],
+    "knowsAbout": ["Mago conferenciante", "Conferencias motivacionales", "Magia de cerca", "Close-up Magic", "Cartomagia", "Mentalismo", "Magia para bodas", "Magia corporativa", "Team building con magia", "Ilusionismo profesional"],
     "homeLocation": { "@type": "Place", "name": "Torrelodones, Madrid, España" },
     "sameAs": [
       "https://www.instagram.com/angellruuiz",

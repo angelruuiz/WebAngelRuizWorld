@@ -7,21 +7,21 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import FAQItem from '@/components/FAQItem';
 
 export const metadata = {
-    title: { absolute: 'Mago para Empresas en Madrid 2026 | Ángel Ruiz | Ilusionista Corporativo' },
-    description: 'Tus invitados seguirán hablando del evento semanas después. Ángel Ruiz: mago corporativo en Madrid para cenas, team building y congresos. Empresas como Movistar Estudiantes ya confían en él. Desde 350€.',
+    title: { absolute: 'Mago para Empresas en Madrid | Ángel Ruiz (Eventos B2B)' },
+    description: 'Eleva tu evento corporativo. Ángel Ruiz: mago para empresas en Madrid (cenas, team building y convenciones). Marcas líderes confían en él. Pide dossier y presupuesto.',
     keywords: ['mago para empresas madrid', 'mago eventos corporativos madrid', 'mago cenas empresa madrid', 'mago team building madrid', 'mago conferenciante madrid', 'contratar mago empresa madrid', 'ilusionista corporativo madrid', 'mejor mago empresas madrid', 'mago para eventos de empresa madrid', 'mago eventos empresariales', 'magia para empresas'],
     alternates: {
         canonical: 'https://angelruiz.world/empresas',
     },
     openGraph: {
         url: 'https://angelruiz.world/empresas',
-        title: 'Mago para Empresas en Madrid 2026 | Ángel Ruiz | Ilusionista Corporativo',
+        title: 'Mago para Empresas en Madrid | Ángel Ruiz (Eventos B2B)',
         description: 'Especialista en magia para cenas de empresa, team building y congresos en Madrid. +10 años de experiencia y 42 reseñas 5 estrellas. Solicita presupuesto.',
         images: [{ url: '/images/evento-angel-ruiz-magia.webp', width: 1200, height: 630 }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago para Empresas en Madrid 2026 | Ángel Ruiz',
+        title: 'Mago para Empresas en Madrid | Ángel Ruiz',
         description: 'Especialista en magia corporativa para cenas, team building y congresos en Madrid. 42 reseñas 5⭐.',
         images: ['/images/evento-angel-ruiz-magia.webp'],
     },

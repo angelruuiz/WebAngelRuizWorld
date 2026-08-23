@@ -8,7 +8,7 @@ const Footer = ({ onOpenContact, isLight = false }) => {
             <div className="w-full px-6 py-12 max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
                     <div className="space-y-6 text-left">
-                        <h3 className={`text-3xl font-[Cinzel] text-gradient-gold font-bold`}>Ángel Ruiz | Mago e Ilusionista</h3>
+                        <h3 className={`text-3xl font-[Cinzel] text-gradient-gold font-bold`}>Ángel Ruiz | Mago e Ilusionista en Madrid</h3>
                         <p className={`text-slate-300 text-lg leading-relaxed max-w-lg`}>Ilusionista profesional para eventos corporativos,<br />celebraciones y bodas.</p>
                         <button onClick={onOpenContact} className="btn-glass mt-6 flex items-center justify-center gap-2">
                             <span>Contratar a Ángel Ruiz</span> <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -16,7 +16,7 @@ const Footer = ({ onOpenContact, isLight = false }) => {
 
                         <div className={`mt-10 p-6 rounded-2xl glass-surface text-sm leading-relaxed`}>
                             <p className={`text-slate-400 italic text-justify`}>
-                                <strong className="text-[#d4a853]">Nota de Servicio:</strong> Con residencia y estudio principal en <strong className="text-white">Torrelodones</strong>, Ángel Ruiz ofrece sus servicios de ilusionismo profesional y magia de cerca en toda la <strong className="text-white">Sierra de Madrid y Zona Noroeste</strong>. Disponibilidad total para eventos exclusivos, bodas y empresas con la cercanía y confianza de un mago local.
+                                <strong className="text-[#d4a853]">Nota de Servicio:</strong> Con residencia y estudio principal en <strong className="text-white">Torrelodones</strong>, Ángel Ruiz ofrece sus servicios de ilusionismo profesional y magia de cerca en toda la Comunidad de <strong className="text-white">Madrid, Sierra de Madrid y Zona Noroeste</strong>. Disponibilidad total para eventos exclusivos, bodas y empresas con la cercanía y confianza de un mago local referente.
                             </p>
                         </div>
 
@@ -24,7 +24,7 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                             <p className="text-[#d4a853]/60 uppercase tracking-[0.2em] text-[10px] font-bold mb-4">Compartir Experiencia:</p>
                             <div className="flex gap-4">
                                 <a 
-                                    href={`https://wa.me/?text=${encodeURIComponent('Mira la magia de Ángel Ruiz | Mago e Ilusionista: https://angelruiz.world')}`}
+                                    href={`https://wa.me/?text=${encodeURIComponent('Mira la magia de Ángel Ruiz | Mago e Ilusionista en Madrid: https://angelruiz.world')}`}
                                     target="_blank" 
                                     rel="noopener noreferrer"
                                     className={`glass-pill group`}
@@ -36,7 +36,7 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                                     onClick={() => {
                                         if (navigator.share) {
                                             navigator.share({
-                                                title: 'Ángel Ruiz | Mago e Ilusionista',
+                                                title: 'Ángel Ruiz | Mago e Ilusionista en Madrid',
                                                 text: 'Descubre la magia de Ángel Ruiz en Madrid.',
                                                 url: 'https://angelruiz.world',
                                             });
@@ -82,7 +82,7 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                                 <a href="/mago-el-escorial" className="glass-pill">Mago en El Escorial</a>
                             </div>
                         </div>
-                        <div className="pt-8 text-sm text-slate-600"><p>© 2026 Ángel Ruiz | Mago e Ilusionista. Todos los derechos reservados.</p></div>
+                        <div className="pt-8 text-sm text-slate-600"><p>© 2026 Ángel Ruiz | Mago e Ilusionista en Madrid. Marca Oficial Registrada. Todos los derechos reservados.</p></div>
                     </div>
                 </div>
             </div>
