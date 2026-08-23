@@ -116,6 +116,6 @@ Si este año tu empresa está de celebración y quieres garantizar que el evento
 Si estás organizando un evento corporativo y buscas inspiración, te recomiendo estos artículos:
 
 - [Mago para Eventos de Empresa en Madrid: Guía Completa](/blog/mago-eventos-empresa-madrid-guia)
-- [Team Building con Magia en Madrid](/blog/team-building-magia-madrid)
+- [Team Building con Magia en Madrid](/blog/team-building-madrid-actividades-empresas)
 - [Magia y Tecnología en Eventos de Empresa](/blog/magia-tecnologia-eventos-empresa-espana)
 - [Ideas para Cenas de Empresa Originales en Madrid](/blog/ideas-cenas-empresa-madrid-originales)

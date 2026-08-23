@@ -21,6 +21,21 @@ const nextConfig = {
                 destination: '/particulares/bodas',
                 permanent: true,
             },
+            {
+                source: '/blog/mago-comuniones-madrid',
+                destination: '/blog/mago-comuniones-madrid-guia',
+                permanent: true,
+            },
+            {
+                source: '/blog/team-building-magia-madrid',
+                destination: '/blog/team-building-madrid-actividades-empresas',
+                permanent: true,
+            },
+            {
+                source: '/blog/cenas-empresa-originales-madrid',
+                destination: '/blog/ideas-cenas-empresa-madrid-originales',
+                permanent: true,
+            },
         ];
     },
     async headers() {

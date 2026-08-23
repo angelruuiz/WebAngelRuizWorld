@@ -44,5 +44,5 @@ Si buscas diferenciar tu local del resto, contar con un ilusionista residente o 
 
 Si te ha parecido interesante, quizás te interese seguir leyendo estos artículos relacionados:
 
-- [Mago para Comuniones en Madrid: Animación Infantil y Familiar](/blog/mago-comuniones-madrid)
 - [Guía Completa para Contratar un Mago para Comuniones en Madrid](/blog/mago-comuniones-madrid-guia)
+- [Mago para Restaurantes en Madrid (Página Oficial del Servicio)](/empresas/mago-para-restaurantes-madrid)

@@ -113,7 +113,6 @@ Después de cientos de fiestas infantiles, estos son los detalles que marcan la 
 Si estás organizando una celebración familiar, estos artículos te interesan:
 
 - [Mago para Comuniones en Madrid: Guía Completa](/blog/mago-comuniones-madrid-guia)
-- [Mago para Comuniones en Madrid](/blog/mago-comuniones-madrid)
 - [¿Cuánto Cuesta Contratar un Mago en Madrid? Precios Reales](/blog/cuanto-cuesta-mago-madrid-precios)
 - [Guía Definitiva para Contratar un Mago en Madrid (2026)](/blog/guia-contratar-mago-madrid-2026)
 - [Mago para Despedidas de Soltera en Madrid](/blog/mago-despedidas-soltera-madrid)

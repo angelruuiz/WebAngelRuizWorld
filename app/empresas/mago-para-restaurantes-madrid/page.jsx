@@ -17,7 +17,7 @@ export const metadata = {
     siteName: 'Angel Ruiz',
     images: [
       {
-        url: 'https://angelruiz.world/images/og-mago-empresas.jpg',
+        url: 'https://angelruiz.world/images/evento-angel-ruiz-magia.webp',
         width: 1200,
         height: 630,
         alt: 'Mago para Restaurantes en Madrid',
@@ -30,7 +30,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Mago para Restaurantes en Madrid | Table Hopping',
     description: 'Aumenta el ticket medio y fideliza a tus clientes. Mago para restaurantes y locales en Madrid especialista en Table Hopping (magia de mesa en mesa).',
-    images: ['https://angelruiz.world/images/og-mago-empresas.jpg'],
+    images: ['https://angelruiz.world/images/evento-angel-ruiz-magia.webp'],
   },
 };
 
@@ -42,8 +42,46 @@ const faqs = [
   { name: '¿Es un servicio puntual o puede ser regular?', acceptedAnswer: { text: 'Puede ser ambas cosas. Muchos restaurantes me contratan como evento puntual para San Valentín o Navidad, pero los mejores resultados de fidelización se obtienen al incluir el servicio un día fijo a la semana o al mes.' } }
 ];
 
+const schemaJson = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://angelruiz.world/#organization",
+      "name": "Ángel Ruiz | Mago e Ilusionista",
+      "url": "https://angelruiz.world",
+      "telephone": "+34648055636",
+      "priceRange": "€€€",
+      "address": { "@type": "PostalAddress", "addressLocality": "Madrid", "addressRegion": "Comunidad de Madrid", "addressCountry": "ES" }
+    },
+    {
+      "@type": "Service",
+      "name": "Mago para Restaurantes y Locales en Madrid",
+      "provider": { "@type": "Person", "name": "Ángel Ruiz" },
+      "areaServed": "Comunidad de Madrid",
+      "description": "Magia de cerca itinerante de mesa en mesa (Table Hopping) para restaurantes, hoteles y locales de ocio en Madrid.",
+      "serviceType": "Restaurant Entertainment Service",
+      "url": "https://angelruiz.world/empresas/mago-para-restaurantes-madrid"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.name, "acceptedAnswer": { "@type": "Answer", "text": f.acceptedAnswer.text } }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
+        { "@type": "ListItem", "position": 2, "name": "Empresas", "item": "https://angelruiz.world/empresas" },
+        { "@type": "ListItem", "position": 3, "name": "Restaurantes", "item": "https://angelruiz.world/empresas/mago-para-restaurantes-madrid" }
+      ]
+    }
+  ]
+};
+
 export default function Page() {
   return (
+    <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />
     <NavFooterClient>
       <MagicCursor />
     <div className="min-h-screen bg-[#0A0A0A] text-slate-300 font-sans selection:bg-amber-500/30">
@@ -211,5 +249,6 @@ export default function Page() {
 
     </div>
     </NavFooterClient>
+    </>
   );
 }

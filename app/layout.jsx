@@ -86,11 +86,27 @@ const globalSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": "ProfessionalService",
       "@id": "https://angelruiz.world/#organization",
-      "name": "Ángel Ruiz | Mago e Ilusionista",
+      "name": "Ángel Ruiz | Mago e Ilusionista en Madrid",
       "url": "https://angelruiz.world",
-      "logo": "https://angelruiz.world/images/logo.png"
+      "logo": "https://angelruiz.world/images/logo-pequeno.webp",
+      "image": "https://angelruiz.world/images/foto-bio.webp",
+      "telephone": "+34648055636",
+      "priceRange": "€€€",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Madrid",
+        "addressRegion": "Comunidad de Madrid",
+        "addressCountry": "ES"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "42"
+      }
     },
     {
       "@type": "WebSite",
@@ -109,7 +125,17 @@ const globalSchema = {
       "url": "https://angelruiz.world/sobre-mi",
       "image": "https://angelruiz.world/images/foto-bio.webp",
       "telephone": "+34648055636",
-      "knowsAbout": ["Magia de cerca", "Close-up", "Cartomagia", "Mentalismo", "Magia para bodas", "Magia corporativa"],
+      "worksFor": { "@id": "https://angelruiz.world/#organization" },
+      "alumniOf": "Escuela de Magia de Dani DaOrtiz",
+      "knowsAbout": [
+        "Magia de cerca",
+        "Close-up",
+        "Cartomagia",
+        "Mentalismo",
+        "Magia para bodas",
+        "Magia corporativa",
+        "Team building con magia"
+      ],
       "sameAs": [
         "https://www.instagram.com/angellruuiz",
         "https://www.tiktok.com/@angellruuiz",

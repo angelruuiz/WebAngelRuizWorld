@@ -4,7 +4,7 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import FAQItem from '@/components/FAQItem';
 
 export const metadata = {
-  title: 'Mago para Team Building en Madrid | Dinámicas de Empresa',
+  title: { absolute: 'Mago para Team Building en Madrid | Dinámicas · Ángel Ruiz' },
   description: 'Fomenta la cohesión de equipos y el liderazgo con un Team Building diferente en Madrid. Dinámicas basadas en ilusionismo corporativo.',
   keywords: 'team building madrid, dinamicas de empresa madrid, mago team building madrid, actividades empresas madrid, ilusionismo corporativo, cohesion equipos, magia para empresas',
   alternates: {
@@ -17,7 +17,7 @@ export const metadata = {
     siteName: 'Angel Ruiz',
     images: [
       {
-        url: 'https://angelruiz.world/images/og-mago-empresas.jpg',
+        url: 'https://angelruiz.world/images/evento-angel-ruiz-magia.webp',
         width: 1200,
         height: 630,
         alt: 'Mago para Team Building en Madrid',
@@ -30,7 +30,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Mago para Team Building en Madrid | Dinámicas de Empresa',
     description: 'Fomenta la cohesión de equipos y el liderazgo con un Team Building diferente en Madrid. Dinámicas basadas en ilusionismo corporativo.',
-    images: ['https://angelruiz.world/images/og-mago-empresas.jpg'],
+    images: ['https://angelruiz.world/images/evento-angel-ruiz-magia.webp'],
   },
 };
 
@@ -42,8 +42,46 @@ const faqs = [
   { name: '¿Se requiere algún material especial o escenario?', acceptedAnswer: { text: 'No, nosotros aportamos todo el material mágico necesario para cada participante (cartas, monedas, accesorios). Solo necesitamos un espacio diáfano o mesas grupales para trabajar.' } }
 ];
 
+const schemaJson = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://angelruiz.world/#organization",
+      "name": "Ángel Ruiz | Mago e Ilusionista",
+      "url": "https://angelruiz.world",
+      "telephone": "+34648055636",
+      "priceRange": "€€€",
+      "address": { "@type": "PostalAddress", "addressLocality": "Madrid", "addressRegion": "Comunidad de Madrid", "addressCountry": "ES" }
+    },
+    {
+      "@type": "Service",
+      "name": "Mago para Team Building en Madrid",
+      "provider": { "@type": "Person", "name": "Ángel Ruiz" },
+      "areaServed": "Comunidad de Madrid",
+      "description": "Actividades y talleres de magia corporativa para team building, liderazgo y cohesión de equipos de trabajo en Madrid.",
+      "serviceType": "Corporate Team Building Entertainment",
+      "url": "https://angelruiz.world/empresas/mago-team-building-madrid"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.name, "acceptedAnswer": { "@type": "Answer", "text": f.acceptedAnswer.text } }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
+        { "@type": "ListItem", "position": 2, "name": "Empresas", "item": "https://angelruiz.world/empresas" },
+        { "@type": "ListItem", "position": 3, "name": "Team Building", "item": "https://angelruiz.world/empresas/mago-team-building-madrid" }
+      ]
+    }
+  ]
+};
+
 export default function Page() {
   return (
+    <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />
     <NavFooterClient>
       <MagicCursor />
     <div className="min-h-screen bg-[#0A0A0A] text-slate-300 font-sans selection:bg-amber-500/30">
@@ -211,5 +249,6 @@ export default function Page() {
 
     </div>
     </NavFooterClient>
+    </>
   );
 }

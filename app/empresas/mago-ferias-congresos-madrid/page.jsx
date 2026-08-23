@@ -4,7 +4,7 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import FAQItem from '@/components/FAQItem';
 
 export const metadata = {
-  title: 'Mago para Ferias y Congresos en Madrid | IFEMA y Stands',
+  title: { absolute: 'Mago para Ferias y Congresos en Madrid | IFEMA · Ángel Ruiz' },
   description: 'Atrae multitudes a tu stand corporativo. Ángel Ruiz, mago para ferias en IFEMA y congresos en Madrid. Generación de leads y alto impacto B2B con ilusionismo.',
   keywords: 'mago para ferias madrid, mago para stands, ilusionista ifema, mago corporativo ferias, captacion de leads feria, animacion stand madrid, mago congresos',
   alternates: {
@@ -17,7 +17,7 @@ export const metadata = {
     siteName: 'Angel Ruiz',
     images: [
       {
-        url: 'https://angelruiz.world/images/og-mago-empresas.jpg',
+        url: 'https://angelruiz.world/images/evento-angel-ruiz-magia.webp',
         width: 1200,
         height: 630,
         alt: 'Mago para Ferias y Congresos en Madrid',
@@ -30,7 +30,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Mago para Ferias y Congresos en Madrid | IFEMA y Stands',
     description: 'Atrae multitudes a tu stand corporativo. Ángel Ruiz, mago para ferias en IFEMA y congresos en Madrid. Generación de leads y alto impacto B2B con ilusionismo.',
-    images: ['https://angelruiz.world/images/og-mago-empresas.jpg'],
+    images: ['https://angelruiz.world/images/evento-angel-ruiz-magia.webp'],
   },
 };
 
@@ -42,8 +42,46 @@ const faqs = [
   { name: '¿Cómo nos coordinamos con el equipo comercial del stand?', acceptedAnswer: { text: 'Trabajamos en sinergia. Yo me encargo de atraer, entretener e introducir el mensaje de la marca, y en el momento de máximo asombro (el "peak" emocional), realizo el traspaso fluido del grupo a vuestros comerciales.' } }
 ];
 
+const schemaJson = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://angelruiz.world/#organization",
+      "name": "Ángel Ruiz | Mago e Ilusionista",
+      "url": "https://angelruiz.world",
+      "telephone": "+34648055636",
+      "priceRange": "€€€",
+      "address": { "@type": "PostalAddress", "addressLocality": "Madrid", "addressRegion": "Comunidad de Madrid", "addressCountry": "ES" }
+    },
+    {
+      "@type": "Service",
+      "name": "Mago para Ferias y Congresos en Madrid",
+      "provider": { "@type": "Person", "name": "Ángel Ruiz" },
+      "areaServed": "Comunidad de Madrid",
+      "description": "Magia promocional para stands y ferias en IFEMA y recintos feriales de Madrid. Captación y cualificación de leads B2B.",
+      "serviceType": "Trade Show Magic Entertainment",
+      "url": "https://angelruiz.world/empresas/mago-ferias-congresos-madrid"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.name, "acceptedAnswer": { "@type": "Answer", "text": f.acceptedAnswer.text } }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
+        { "@type": "ListItem", "position": 2, "name": "Empresas", "item": "https://angelruiz.world/empresas" },
+        { "@type": "ListItem", "position": 3, "name": "Ferias y Congresos", "item": "https://angelruiz.world/empresas/mago-ferias-congresos-madrid" }
+      ]
+    }
+  ]
+};
+
 export default function Page() {
   return (
+    <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />
     <NavFooterClient>
       <MagicCursor />
     <div className="min-h-screen bg-[#0A0A0A] text-slate-300 font-sans selection:bg-amber-500/30">
@@ -211,5 +249,6 @@ export default function Page() {
 
     </div>
     </NavFooterClient>
+    </>
   );
 }

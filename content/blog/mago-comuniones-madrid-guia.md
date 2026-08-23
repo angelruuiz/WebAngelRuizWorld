@@ -67,8 +67,7 @@ Con **más de 10 años de experiencia** y formación directa con Dani DaOrtiz, o
 
 ---
 
-*¿Organizas la comunión de tu hijo o hija en Madrid? [Contacta conmigo](/particulares/eventos) para un presupuesto cerrado y sin compromiso.*
-
+*¿Organizas la comunión de tu hijo o hija en Madrid? [Contacta conmigo](/particulares/comuniones) para un presupuesto cerrado y sin compromiso.*
 
 ---
 
@@ -76,5 +75,6 @@ Con **más de 10 años de experiencia** y formación directa con Dani DaOrtiz, o
 
 Si te ha parecido interesante, quizás te interese seguir leyendo estos artículos relacionados:
 
-- [Mago para Comuniones en Madrid: Animación Infantil y Familiar](/blog/mago-comuniones-madrid)
+- [Mago para Comuniones en Madrid (Página Oficial del Servicio)](/particulares/comuniones)
 - [Mago para Restaurantes en Madrid: Cómo Aumentar tu Facturación y Retención](/blog/mago-restaurantes-madrid)
+- [Mago para Cumpleaños y Fiestas Privadas en Madrid](/particulares/fiestas-cumpleanos-madrid)

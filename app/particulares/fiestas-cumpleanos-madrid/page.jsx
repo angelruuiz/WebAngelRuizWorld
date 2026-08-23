@@ -6,7 +6,7 @@ import { MagicCursor, ParticleBackground, FadeIn } from '@/components/VisualEffe
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: 'Mago para Cumpleaños de Adultos y Fiestas Privadas en Madrid',
+    title: { absolute: 'Mago para Cumpleaños y Fiestas de Adultos en Madrid | Ángel Ruiz' },
     description: 'Sorprende en tu fiesta de 40, 50 o 60 cumpleaños con Ángel Ruiz. Ilusionismo moderno, elegante y muy divertido para celebraciones de adultos en Madrid y a domicilio.',
     alternates: {
         canonical: 'https://angelruiz.world/particulares/fiestas-cumpleanos-madrid',

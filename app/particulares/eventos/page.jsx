@@ -5,7 +5,7 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: 'Mago para Eventos Privados Madrid | Cumpleaños, Comuniones y Celebraciones',
+    title: { absolute: 'Mago para Eventos Privados en Madrid | Fiestas · Ángel Ruiz' },
     description: 'Espectáculos de magia close-up para eventos privados en Madrid. Cumpleaños, comuniones, aniversarios y fiestas particulares. Ángel Ruiz, mago profesional en Torrelodones.',
     alternates: {
         canonical: 'https://angelruiz.world/particulares/eventos',

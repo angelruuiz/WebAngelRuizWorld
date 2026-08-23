@@ -18,12 +18,9 @@ const clusters = {
     'mejor-mago-empresas-madrid.md',
     'magia-tecnologia-eventos-empresa-espana.md',
     'team-building-madrid-actividades-empresas.md',
-    'team-building-magia-madrid.md',
-    'cenas-empresa-originales-madrid.md',
     'ideas-cenas-empresa-madrid-originales.md'
   ],
   particulares: [
-    'mago-comuniones-madrid.md',
     'mago-comuniones-madrid-guia.md',
     'mago-restaurantes-madrid.md'
   ],

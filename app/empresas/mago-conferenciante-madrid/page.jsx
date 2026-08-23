@@ -17,7 +17,7 @@ export const metadata = {
     siteName: 'Angel Ruiz',
     images: [
       {
-        url: 'https://angelruiz.world/images/og-mago-empresas.jpg',
+        url: 'https://angelruiz.world/images/evento-angel-ruiz-magia.webp',
         width: 1200,
         height: 630,
         alt: 'Mago Conferenciante en Madrid',
@@ -30,7 +30,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Mago Conferenciante en Madrid | Charlas Motivacionales Diferentes',
     description: '¿Buscas una conferencia motivacional distinta? Ángel Ruiz fusiona ilusionismo y comunicación corporativa para anclar los valores de tu empresa en Madrid. Alto impacto B2B.',
-    images: ['https://angelruiz.world/images/og-mago-empresas.jpg'],
+    images: ['https://angelruiz.world/images/evento-angel-ruiz-magia.webp'],
   },
 };
 
@@ -42,8 +42,46 @@ const faqs = [
   { name: '¿A qué tipo de público va dirigida?', acceptedAnswer: { text: 'Desde convenciones anuales de empleados hasta reuniones exclusivas de directivos (C-Level). El tono y la profundidad del mensaje se ajustan rigurosamente al perfil de la audiencia y a los objetivos estratégicos de la empresa.' } }
 ];
 
+const schemaJson = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://angelruiz.world/#organization",
+      "name": "Ángel Ruiz | Mago e Ilusionista",
+      "url": "https://angelruiz.world",
+      "telephone": "+34648055636",
+      "priceRange": "€€€",
+      "address": { "@type": "PostalAddress", "addressLocality": "Madrid", "addressRegion": "Comunidad de Madrid", "addressCountry": "ES" }
+    },
+    {
+      "@type": "Service",
+      "name": "Mago Conferenciante para Empresas en Madrid",
+      "provider": { "@type": "Person", "name": "Ángel Ruiz" },
+      "areaServed": "Comunidad de Madrid",
+      "description": "Conferencias motivacionales y ponencias corporativas combinadas con ilusionismo para empresas y convenciones en Madrid.",
+      "serviceType": "Corporate Keynote Speaker",
+      "url": "https://angelruiz.world/empresas/mago-conferenciante-madrid"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.name, "acceptedAnswer": { "@type": "Answer", "text": f.acceptedAnswer.text } }))
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
+        { "@type": "ListItem", "position": 2, "name": "Empresas", "item": "https://angelruiz.world/empresas" },
+        { "@type": "ListItem", "position": 3, "name": "Mago Conferenciante", "item": "https://angelruiz.world/empresas/mago-conferenciante-madrid" }
+      ]
+    }
+  ]
+};
+
 export default function Page() {
   return (
+    <>
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />
     <NavFooterClient>
       <MagicCursor />
     <div className="min-h-screen bg-[#0A0A0A] text-slate-300 font-sans selection:bg-amber-500/30">
@@ -211,5 +249,6 @@ export default function Page() {
 
     </div>
     </NavFooterClient>
+    </>
   );
 }
