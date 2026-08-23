@@ -48,35 +48,6 @@ export default function EmpresasPage() {
             "highPrice": "2000",
             "priceCurrency": "EUR"
         },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "ratingCount": "42",
-            "bestRating": "5",
-            "worstRating": "1"
-        },
-        "review": [
-            {
-                "@type": "Review",
-                "itemReviewed": {
-                    "@type": "Service",
-                    "name": "Mago para Empresas en Madrid"
-                },
-                "author": { "@type": "Organization", "name": "Movistar Estudiantes" },
-                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-                "reviewBody": "Ángel Ruiz transformó nuestro evento corporativo. La magia de cerca captó la atención de todos nuestros invitados y generó un networking natural entre los asistentes. Impecable profesionalidad."
-            },
-            {
-                "@type": "Review",
-                "itemReviewed": {
-                    "@type": "Service",
-                    "name": "Mago para Empresas en Madrid"
-                },
-                "author": { "@type": "Person", "name": "Director de Marketing, Empresa Tech Madrid" },
-                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-                "reviewBody": "La mejor inversión en entretenimiento para nuestro stand. El mago no solo captó la atención, sino que aumentó la retención de clientes en más de un 300%."
-            }
-        ],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Servicios de Magia Corporativa",
