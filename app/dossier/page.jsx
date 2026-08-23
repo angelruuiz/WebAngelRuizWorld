@@ -22,7 +22,7 @@ const slides = [
             { label: 'Eventos Realizados', value: '100+' },
             { label: 'Satisfacción', value: '100%' }
         ],
-        image: '/images/IMG_20260531_162002.webp'
+        image: '/images/foto-bio.webp'
     },
     {
         id: 'perfil',

@@ -12,7 +12,7 @@ import BusinessSchema from '@/components/BusinessSchema';
 const MagicalCarousel = ({ locationName, locationImages }) => {
     const images = locationImages && locationImages.length > 0 
         ? locationImages 
-        : ["/images/IMG_20260531_162002.webp", "/images/foto-spring-cartas.webp"];
+        : ["/images/foto-bio.webp", "/images/foto-spring-cartas.webp"];
         
     const [index, setIndex] = useState(0);
 

@@ -10,7 +10,7 @@ import { ContactFormModal } from '@/components/Modals';
 
 const MagicalCarousel = () => {
     const images = [
-        "/images/IMG_20260531_162002.webp"
+        "/images/foto-bio.webp"
     ];
     const [index, setIndex] = useState(0);
 
