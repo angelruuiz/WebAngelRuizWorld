@@ -52,6 +52,7 @@ export default function BusinessSchema({ rating = null }) {
           "@type": "Offer",
           "itemOffered": { "@type": "Service", "name": "Mago para bodas en Madrid", "url": "https://angelruiz.world/particulares/bodas" },
           "priceSpecification": { "@type": "PriceSpecification", "minPrice": 400, "maxPrice": 900, "priceCurrency": "EUR" }
+        },
         {
           "@type": "Offer",
           "itemOffered": { "@type": "Service", "name": "Mago para eventos de empresa en Madrid", "url": "https://angelruiz.world/empresas" },

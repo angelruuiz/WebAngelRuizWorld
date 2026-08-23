@@ -29,12 +29,14 @@ export const metadata = {
 
 export default function EmpresasPage() {
     const serviceSchema = {
-        "@context": "https://schema.org",
         "@type": "Service",
-        "name": "Magia close-up para eventos corporativos",
+        "@id": "https://angelruiz.world/empresas/#service",
+        "name": "Mago para Empresas en Madrid",
         "provider": {
             "@type": "Person",
-            "name": "Ángel Ruiz"
+            "@id": "https://angelruiz.world/#person",
+            "name": "Ángel Ruiz",
+            "url": "https://angelruiz.world"
         },
         "areaServed": "Comunidad de Madrid",
         "description": "Espectáculos de magia close-up para empresas en Madrid. Servicio profesional de ilusionismo corporativo para cenas de empresa, team building, ferias y congresos. Más de 10 años de experiencia y 42 reseñas de 5 estrellas.",
@@ -53,6 +55,28 @@ export default function EmpresasPage() {
             "bestRating": "5",
             "worstRating": "1"
         },
+        "review": [
+            {
+                "@type": "Review",
+                "itemReviewed": {
+                    "@type": "Service",
+                    "name": "Mago para Empresas en Madrid"
+                },
+                "author": { "@type": "Organization", "name": "Movistar Estudiantes" },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                "reviewBody": "Ángel Ruiz transformó nuestro evento corporativo. La magia de cerca captó la atención de todos nuestros invitados y generó un networking natural entre los asistentes. Impecable profesionalidad."
+            },
+            {
+                "@type": "Review",
+                "itemReviewed": {
+                    "@type": "Service",
+                    "name": "Mago para Empresas en Madrid"
+                },
+                "author": { "@type": "Person", "name": "Director de Marketing, Empresa Tech Madrid" },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+                "reviewBody": "La mejor inversión en entretenimiento para nuestro stand. El mago no solo captó la atención, sino que aumentó la retención de clientes en más de un 300%."
+            }
+        ],
         "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Servicios de Magia Corporativa",
@@ -170,24 +194,9 @@ export default function EmpresasPage() {
                                 "addressRegion": "Comunidad de Madrid",
                                 "postalCode": "28250",
                                 "addressCountry": "ES"
-                            },
-                            "aggregateRating": {
-                                "@type": "AggregateRating",
-                                "ratingValue": "5",
-                                "bestRating": "5",
-                                "worstRating": "1",
-                                "ratingCount": "42"
-                            },
-                            /* TODO: Reemplaza YOUR_PLACE_ID con tu Place ID real de Google Maps */
-                            "sameAs": [
-                                "https://www.google.com/maps/place/?q=place_id:YOUR_PLACE_ID"
-                            ]
+                            }
                         },
-                        {
-                            ...serviceSchema,
-                            "@type": "Service",
-                            "@id": "https://angelruiz.world/empresas/#service"
-                        },
+                        serviceSchema,
                         {
                             "@type": "FAQPage",
                             "mainEntity": faqSchema.mainEntity
@@ -195,18 +204,6 @@ export default function EmpresasPage() {
                         {
                             "@type": "BreadcrumbList",
                             "itemListElement": breadcrumbSchema.itemListElement
-                        },
-                        {
-                            "@type": "Review",
-                            "author": { "@type": "Organization", "name": "Movistar Estudiantes" },
-                            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-                            "reviewBody": "Ángel Ruiz transformó nuestro evento corporativo. La magia de cerca captó la atención de todos nuestros invitados y generó un networking natural entre los asistentes. Impecable profesionalidad."
-                        },
-                        {
-                            "@type": "Review",
-                            "author": { "@type": "Person", "name": "Director de Marketing, Empresa Tech Madrid" },
-                            "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-                            "reviewBody": "La mejor inversión en entretenimiento para nuestro stand. El mago no solo captó la atención, sino que aumentó la retención de clientes en más de un 300%."
                         }
                     ]
                 }) }} 
