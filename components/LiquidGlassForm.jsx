@@ -91,12 +91,12 @@ export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromi
                 </div>
 
                 {/* Form */}
-                <form onSubmit={handleSubmit} className="space-y-3">
+                <form onSubmit={handleSubmit} className="space-y-3.5 sm:space-y-3">
                     <input type="text" name="_gotcha" style={{ display: 'none' }} tabIndex="-1" autoComplete="off" aria-hidden="true" />
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <div className="space-y-1">
-                            <label className="text-[10px] uppercase tracking-wider text-amber-400/90 font-medium ml-1">
+                            <label className="text-[11px] sm:text-[10px] uppercase tracking-wider text-amber-400/90 font-medium ml-1 block">
                                 Nombre *
                             </label>
                             <div className="relative">
@@ -107,13 +107,13 @@ export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromi
                                     type="text"
                                     placeholder="Tu nombre"
                                     aria-label="Tu nombre"
-                                    className="w-full bg-white/[0.04] hover:bg-white/[0.07] focus:bg-white/[0.08] border border-white/10 focus:border-amber-400/70 rounded-xl py-2.5 pl-10 pr-3 text-slate-100 text-xs focus:outline-none transition-all placeholder:text-slate-500 shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
+                                    className="w-full bg-slate-900/90 sm:bg-white/[0.04] hover:bg-white/[0.07] focus:bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 pl-10 pr-3 text-slate-100 text-sm sm:text-xs focus:outline-none transition-all placeholder:text-slate-500 shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
                                 />
                             </div>
                         </div>
 
                         <div className="space-y-1">
-                            <label className="text-[10px] uppercase tracking-wider text-amber-400/90 font-medium ml-1">
+                            <label className="text-[11px] sm:text-[10px] uppercase tracking-wider text-amber-400/90 font-medium ml-1 block">
                                 Teléfono *
                             </label>
                             <div className="relative">
@@ -127,14 +127,14 @@ export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromi
                                     onInput={handlePhoneInput}
                                     minLength="9"
                                     maxLength="9"
-                                    className="w-full bg-white/[0.04] hover:bg-white/[0.07] focus:bg-white/[0.08] border border-white/10 focus:border-amber-400/70 rounded-xl py-2.5 pl-10 pr-3 text-slate-100 text-xs focus:outline-none transition-all placeholder:text-slate-500 shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
+                                    className="w-full bg-slate-900/90 sm:bg-white/[0.04] hover:bg-white/[0.07] focus:bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 pl-10 pr-3 text-slate-100 text-sm sm:text-xs focus:outline-none transition-all placeholder:text-slate-500 shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
                                 />
                             </div>
                         </div>
                     </div>
 
                     <div className="space-y-1">
-                        <label className="text-[10px] uppercase tracking-wider text-amber-400/90 font-medium ml-1">
+                        <label className="text-[11px] sm:text-[10px] uppercase tracking-wider text-amber-400/90 font-medium ml-1 block">
                             Email *
                         </label>
                         <div className="relative">
@@ -145,21 +145,21 @@ export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromi
                                 type="email"
                                 placeholder="tu@email.com"
                                 aria-label="Correo electrónico"
-                                className="w-full bg-white/[0.04] hover:bg-white/[0.07] focus:bg-white/[0.08] border border-white/10 focus:border-amber-400/70 rounded-xl py-2.5 pl-10 pr-3 text-slate-100 text-xs focus:outline-none transition-all placeholder:text-slate-500 shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
+                                className="w-full bg-slate-900/90 sm:bg-white/[0.04] hover:bg-white/[0.07] focus:bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 pl-10 pr-3 text-slate-100 text-sm sm:text-xs focus:outline-none transition-all placeholder:text-slate-500 shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
                             />
                         </div>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <div className="space-y-1">
-                            <label className="text-[10px] uppercase tracking-wider text-amber-400/90 font-medium ml-1">
+                            <label className="text-[11px] sm:text-[10px] uppercase tracking-wider text-amber-400/90 font-medium ml-1 block">
                                 Tipo de Evento
                             </label>
                             <div className="relative">
                                 <select
                                     name="eventType"
                                     aria-label="Tipo de evento"
-                                    className="w-full bg-slate-900 border border-white/10 focus:border-amber-400/70 rounded-xl py-2.5 px-3 text-slate-200 text-xs focus:outline-none transition-all appearance-none cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
+                                    className="w-full bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 px-3.5 text-slate-200 text-sm sm:text-xs focus:outline-none transition-all appearance-none cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
                                 >
                                     <option value="Boda">Boda</option>
                                     <option value="Evento de Empresa">Evento de Empresa</option>
@@ -168,12 +168,12 @@ export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromi
                                     <option value="Restaurante / Local">Restaurante / Local</option>
                                     <option value="Otro">Otro Evento</option>
                                 </select>
-                                <div className="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none border-l-[3.5px] border-l-transparent border-t-[4px] border-t-slate-400 border-r-[3.5px] border-r-transparent" />
+                                <div className="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none border-l-[4px] border-l-transparent border-t-[5px] border-t-slate-400 border-r-[4px] border-r-transparent" />
                             </div>
                         </div>
 
                         <div className="space-y-1">
-                            <label className="text-[10px] uppercase tracking-wider text-amber-400/90 font-medium ml-1">
+                            <label className="text-[11px] sm:text-[10px] uppercase tracking-wider text-amber-400/90 font-medium ml-1 block">
                                 Fecha Estimada
                             </label>
                             <div className="relative">
@@ -183,24 +183,24 @@ export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromi
                                     type="date"
                                     min={dateMin}
                                     aria-label="Fecha estimada del evento"
-                                    className="w-full bg-white/[0.04] hover:bg-white/[0.07] focus:bg-white/[0.08] border border-white/10 focus:border-amber-400/70 rounded-xl py-2.5 pl-10 pr-3 text-slate-100 text-xs focus:outline-none transition-all [color-scheme:dark] shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
+                                    className="w-full bg-slate-900/90 sm:bg-white/[0.04] hover:bg-white/[0.07] focus:bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 pl-10 pr-3 text-slate-100 text-sm sm:text-xs focus:outline-none transition-all [color-scheme:dark] shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
                                 />
                             </div>
                         </div>
                     </div>
 
                     <div className="space-y-1">
-                        <label className="text-[10px] uppercase tracking-wider text-amber-400/90 font-medium ml-1">
+                        <label className="text-[11px] sm:text-[10px] uppercase tracking-wider text-amber-400/90 font-medium ml-1 block">
                             Detalles del Evento
                         </label>
                         <div className="relative">
-                            <MessageSquare className="absolute left-3.5 top-3 w-4 h-4 text-slate-400 pointer-events-none" />
+                            <MessageSquare className="absolute left-3.5 top-3.5 w-4 h-4 text-slate-400 pointer-events-none" />
                             <textarea
                                 name="message"
                                 rows="2"
                                 placeholder="Lugar, número aprox. de invitados, horario..."
                                 aria-label="Detalles adicionales del evento"
-                                className="w-full bg-white/[0.04] hover:bg-white/[0.07] focus:bg-white/[0.08] border border-white/10 focus:border-amber-400/70 rounded-xl py-2.5 pl-10 pr-3 text-slate-100 text-xs focus:outline-none transition-all placeholder:text-slate-500 resize-none shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
+                                className="w-full bg-slate-900/90 sm:bg-white/[0.04] hover:bg-white/[0.07] focus:bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 pl-10 pr-3 text-slate-100 text-sm sm:text-xs focus:outline-none transition-all placeholder:text-slate-500 resize-none shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
                             ></textarea>
                         </div>
                     </div>
@@ -208,7 +208,7 @@ export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromi
                     <button
                         type="submit"
                         disabled={status === "submitting"}
-                        className="w-full relative overflow-hidden bg-gradient-to-r from-[#d4a853] via-[#f59e0b] to-[#d4a853] bg-[length:200%_auto] hover:bg-right text-slate-950 font-bold py-3 px-6 rounded-xl uppercase tracking-widest text-xs shadow-[0_0_20px_rgba(245,158,11,0.3)] hover:shadow-[0_0_25px_rgba(245,158,11,0.5)] transition-all duration-300 flex items-center justify-center gap-2 mt-2 cursor-pointer"
+                        className="w-full relative overflow-hidden bg-gradient-to-r from-[#d4a853] via-[#f59e0b] to-[#d4a853] bg-[length:200%_auto] hover:bg-right text-slate-950 font-bold py-3.5 sm:py-3 px-6 rounded-xl uppercase tracking-widest text-xs shadow-[0_0_20px_rgba(245,158,11,0.3)] hover:shadow-[0_0_25px_rgba(245,158,11,0.5)] transition-all duration-300 flex items-center justify-center gap-2 mt-2 cursor-pointer"
                     >
                         {status === "submitting" ? (
                             <span>Enviando solicitud...</span>

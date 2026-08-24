@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Sparkles } from '@/components/Icons';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Navbar from '@/components/Navbar';
@@ -29,14 +29,9 @@ const SplitText = ({ text }) => {
 
 import LiquidGlassForm from '@/components/LiquidGlassForm';
 
-const HeroClient = ({ onOpenModal }) => {
-    const { scrollY } = useScroll();
-    const y1 = useTransform(scrollY, [0, 500], [0, 200]);
-    const opacity = useTransform(scrollY, [0, 300], [1, 0]);
-    const scale = useTransform(scrollY, [0, 500], [1, 1.05]);
-    
+const HeroClient = () => {
     return (
-        <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden z-10 pt-28 pb-16 lg:py-0">
+        <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden z-10 pt-24 pb-16 lg:py-0">
             <div className="absolute inset-0 z-0 overflow-hidden" style={{ aspectRatio: '16/9', width: '100%', height: '100%' }}>
                 {/* Desktop: video */}
                 <div className="hidden md:block absolute inset-0">
@@ -71,7 +66,7 @@ const HeroClient = ({ onOpenModal }) => {
                 <div className='absolute inset-0 bg-gradient-to-r from-[#030712]/80 via-[#030712]/30 to-transparent' />
             </div>
             
-            <motion.div style={{ y: y1, opacity, scale }} className="px-6 md:px-12 lg:px-16 relative z-10 w-full max-w-7xl mx-auto">
+            <div className="px-5 sm:px-8 md:px-12 lg:px-16 relative z-10 w-full max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                     {/* Left Column: Títulos y CTA Principal */}
                     <div className="lg:col-span-7 flex flex-col items-start text-left">
@@ -102,7 +97,7 @@ const HeroClient = ({ onOpenModal }) => {
                         <LiquidGlassForm />
                     </motion.div>
                 </div>
-            </motion.div>
+            </div>
             
             {/* Scroll indicator */}
             <motion.div 
