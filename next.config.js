@@ -46,6 +46,11 @@ const nextConfig = {
                 destination: '/blog/ideas-cenas-empresa-madrid-originales',
                 permanent: true,
             },
+            {
+                source: '/blog/magia-corporativa-madrid',
+                destination: '/blog/mago-eventos-empresa-madrid-guia',
+                permanent: true,
+            },
         ];
     },
     async headers() {

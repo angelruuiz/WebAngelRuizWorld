@@ -1,12 +1,26 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 import NewsletterForm from '@/components/NewsletterForm';
 import { getPostData, getSortedPostsData } from '@/lib/blog';
 import { ReadingProgress } from '@/components/VisualEffects';
 import { Sparkles, MessageSquare } from '@/components/Icons';
 
+export async function generateStaticParams() {
+  const posts = getSortedPostsData();
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+}
+
 export async function generateMetadata({ params }) {
   const postData = await getPostData(params.slug);
+  if (!postData) {
+    return {
+      title: 'Artículo no encontrado | Ángel Ruiz Mago Madrid',
+      description: 'El artículo solicitado no existe.',
+    };
+  }
   return {
     title: postData.title,
     description: postData.excerpt,
@@ -32,6 +46,9 @@ export async function generateMetadata({ params }) {
 
 export default async function BlogPost({ params }) {
   const postData = await getPostData(params.slug);
+  if (!postData) {
+    notFound();
+  }
   const allPosts = getSortedPostsData();
   const relatedPosts = allPosts.filter(p => p.slug !== params.slug).slice(0, 3);
 
