@@ -147,19 +147,41 @@ const SEOContent = () => {
                     <PerpetualCard className="md:col-span-12 !p-0 mt-8">
                         <div className="py-8 overflow-hidden bg-surface-1/50 border-b border-white/5">
                             <h2 className="text-center font-bold text-amber-500 uppercase tracking-[0.5em] text-[10px] md:text-xs mb-8 animate-pulse">Especialidades de Ilusionismo Premium</h2>
-                            <div className="relative flex overflow-hidden">
-                                <div className="flex gap-x-12 whitespace-nowrap animate-marquee">
-                                    <div className="flex gap-x-12 text-xs md:text-sm uppercase tracking-[0.3em] font-bold text-amber-400">
-                                        <span>Angel Ruiz Madrid</span>
-                                        <span>Mago para Bodas</span>
-                                        <span>Mago para Empresas</span>
-                                        <span>Ilusionismo de Gala</span>
-                                        <span>Magia para Cóctel</span>
-                                        <span>Espectáculos VIP Madrid</span>
-                                    </div>
+                            <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_64px,_black_calc(100%-64px),transparent_100%)]">
+                                <div className="flex shrink-0 items-center justify-around gap-12 min-w-full animate-marquee py-1">
+                                    {[
+                                        'Ángel Ruiz Madrid',
+                                        'Mago para Bodas',
+                                        'Mago para Empresas',
+                                        'Ilusionismo de Gala',
+                                        'Magia para Cóctel',
+                                        'Espectáculos VIP Madrid',
+                                        'Team Building Mágico',
+                                        'Eventos Exclusivos'
+                                    ].map((spec, idx) => (
+                                        <span key={`spec-1-${idx}`} className="flex items-center gap-6 text-xs md:text-sm uppercase tracking-[0.3em] font-bold text-amber-400 whitespace-nowrap">
+                                            <span>{spec}</span>
+                                            <span className="text-amber-500/40 text-[10px]">✦</span>
+                                        </span>
+                                    ))}
                                 </div>
-                                <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[var(--surface-0)] to-transparent z-10 pointer-events-none" />
-                                <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[var(--surface-0)] to-transparent z-10 pointer-events-none" />
+                                <div className="flex shrink-0 items-center justify-around gap-12 min-w-full animate-marquee py-1" aria-hidden="true">
+                                    {[
+                                        'Ángel Ruiz Madrid',
+                                        'Mago para Bodas',
+                                        'Mago para Empresas',
+                                        'Ilusionismo de Gala',
+                                        'Magia para Cóctel',
+                                        'Espectáculos VIP Madrid',
+                                        'Team Building Mágico',
+                                        'Eventos Exclusivos'
+                                    ].map((spec, idx) => (
+                                        <span key={`spec-2-${idx}`} className="flex items-center gap-6 text-xs md:text-sm uppercase tracking-[0.3em] font-bold text-amber-400 whitespace-nowrap">
+                                            <span>{spec}</span>
+                                            <span className="text-amber-500/40 text-[10px]">✦</span>
+                                        </span>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                         
