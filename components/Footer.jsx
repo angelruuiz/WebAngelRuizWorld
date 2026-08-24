@@ -92,10 +92,10 @@ const Footer = ({ onOpenContact, isLight = false }) => {
 
             {/* WhatsApp Floating Action Button - Mobile only */}
             <a
-                href="https://wa.me/34648055636"
+                href="https://wa.me/34648055636?text=Hola%20%C3%81ngel%2C%20quisiera%20consultar%20disponibilidad%20y%20presupuesto%20para%20un%20evento"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="fab-whatsapp fixed bottom-24 right-6 z-[100] md:hidden bg-green-500 w-14 h-14 rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 hover:bg-green-600 transition-colors"
+                className="fab-whatsapp fixed bottom-24 right-6 z-[100] md:hidden bg-green-500 w-14 h-14 rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 hover:bg-green-600 transition-colors active:scale-95"
                 aria-label="Contactar por WhatsApp"
             >
                 <WhatsApp className="w-7 h-7 text-white" />

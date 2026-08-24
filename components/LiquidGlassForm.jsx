@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { UserIcon, Phone, Mail, Calendar, MessageSquare, Sparkles, CheckCircle2 } from './Icons';
+import { UserIcon, Phone, Mail, Calendar, MessageSquare, Sparkles, CheckCircle2, WhatsApp } from './Icons';
 
 export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromiso", subtitle = "Respuesta inmediata en menos de 24h" }) {
     const [status, setStatus] = useState("idle");
@@ -219,6 +219,18 @@ export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromi
                             </>
                         )}
                     </button>
+
+                    <div className="pt-2 text-center border-t border-white/10 mt-3">
+                        <a
+                            href="https://wa.me/34648055636?text=Hola%20Ángel%2C%20quisiera%20consultar%20disponibilidad%20y%20presupuesto%20para%20un%20evento"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center gap-2 text-[11px] text-emerald-400 hover:text-emerald-300 transition-colors py-1.5 px-3 rounded-full bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/20 font-medium"
+                        >
+                            <WhatsApp className="w-3.5 h-3.5 fill-current" />
+                            <span>¿Prefieres WhatsApp directo? Escríbeme aquí</span>
+                        </a>
+                    </div>
 
                     {status === "error" && (
                         <p className="text-red-400 text-[11px] text-center mt-1">

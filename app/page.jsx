@@ -1,5 +1,6 @@
 import HomeClient, { PerpetualCard } from '@/components/HomeClient';
 import Image from 'next/image';
+import QuickEventSelector from '@/components/QuickEventSelector';
 
 export const metadata = {
     title: { absolute: 'Mago en Madrid | Ángel Ruiz | Ilusionista para Bodas y Empresas 2026' },
@@ -18,8 +19,11 @@ const SEOContent = () => {
     return (
         <section className="pt-0 pb-32 px-4 md:px-8 bg-surface-0 text-gold-50 relative overflow-hidden">
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/5 blur-[120px] rounded-full pointer-events-none" />
-            <div className="max-w-[1400px] mx-auto relative pt-16">
+            <div className="max-w-[1400px] mx-auto relative pt-12">
                 
+                {/* Selector Rápido de Eventos (Bodas / Empresas / Particulares) */}
+                <QuickEventSelector />
+
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 relative">
                     {/* Intro Section - Span 7 */}
                     <PerpetualCard className="md:col-span-7 flex flex-col justify-start">
