@@ -1,6 +1,6 @@
 
 
-export default function BusinessSchema({ rating = null }) {
+export default function BusinessSchema() {
   const business = {
     "@type": "ProfessionalService",
     "@id": "https://angelruiz.world/#organization",

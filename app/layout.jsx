@@ -99,13 +99,6 @@ const globalSchema = {
         "addressLocality": "Madrid",
         "addressRegion": "Comunidad de Madrid",
         "addressCountry": "ES"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "bestRating": "5",
-        "worstRating": "1",
-        "ratingCount": "42"
       }
     },
     {
