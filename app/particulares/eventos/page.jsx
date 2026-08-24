@@ -160,6 +160,7 @@ export default function EventosDetailPage() {
                                 src="/images/fiesta-eventos-madrid.webp"
                                 alt="Mago para eventos privados en Madrid Ángel Ruiz ilusionista especializado en cumpleaños y fiestas"
                                 fill
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 550px"
                                 className="object-cover object-top"
                                 priority
                             />
@@ -230,13 +231,13 @@ export default function EventosDetailPage() {
                     <section className="border-t border-white/5 pt-16 mt-16 pb-8">
                         <h2 className="text-3xl font-[Cinzel] text-white mb-10 text-center uppercase tracking-widest">Inspiración para tu Fiesta</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                            <a href="/blog/ideas-originales-entretenimiento-bodas-madrid" className="group bg-slate-900/40 p-8 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
+                            <a href="/blog/ideas-entretenimiento-fiestas-privadas-madrid" className="group bg-slate-900/40 p-8 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
                                 <p className="text-amber-500 text-[10px] uppercase font-bold tracking-tighter mb-2">Entretenimiento</p>
-                                <h3 className="text-white font-[Cinzel] text-lg group-hover:text-amber-400 transition-colors">10 Ideas para sorprender a tus invitados</h3>
+                                <h3 className="text-white font-[Cinzel] text-lg group-hover:text-amber-400 transition-colors">Ideas de entretenimiento para fiestas privadas en Madrid</h3>
                             </a>
-                            <a href="/blog/cuanto-cuesta-mago-boda-madrid" className="group bg-slate-900/40 p-8 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
-                                <p className="text-amber-500 text-[10px] uppercase font-bold tracking-tighter mb-2">Presupuesto</p>
-                                <h3 className="text-white font-[Cinzel] text-lg group-hover:text-amber-400 transition-colors">¿Cuánto cuesta contratar un mago?</h3>
+                            <a href="/blog/mago-para-cumpleanos-adultos-50-anos-madrid" className="group bg-slate-900/40 p-8 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
+                                <p className="text-amber-500 text-[10px] uppercase font-bold tracking-tighter mb-2">Cumpleaños y Celebraciones</p>
+                                <h3 className="text-white font-[Cinzel] text-lg group-hover:text-amber-400 transition-colors">Mago para cumpleaños de adultos: 40, 50 y 60 años</h3>
                             </a>
                         </div>
                     </section>

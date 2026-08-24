@@ -71,7 +71,7 @@ Los mejores **wedding planners de Madrid** incluyen la magia de cóctel como opc
 
 | Entretenimiento | Impacto | Interacción | Coste |
 |---|---|---|---|
-| **Mago de cerca** | ⭐⭐⭐⭐⭐ | Personal, 1 a 1 | Desde 400€ |
+| **Mago de cerca** | ⭐⭐⭐⭐⭐ | Personal, 1 a 1 | Desde 350€ |
 | Música en vivo (dúo/trío) | ⭐⭐⭐⭐ | Pasiva, ambiental | Desde 600€ |
 | Fotomatón | ⭐⭐⭐ | Activa, por turnos | Desde 400€ |
 | Caricaturista | ⭐⭐⭐ | Individual, lenta | Desde 350€ |
@@ -84,8 +84,8 @@ La combinación ganadora que más recomiendan los wedding planners en Madrid: **
 
 La fórmula que más reservo para bodas en Madrid es:
 
-- **Cóctel**: Magia itinerante entre los grupos de invitados (1-1,5 horas)
-- **Banquete**: Magia de mesa durante los entrantes y primer plato (45 minutos)
+- **Cóctel**: Magia itinerante entre los grupos de invitados (1 hora)
+- **Banquete**: Magia de mesa durante los entrantes y primer plato
 
 De esta forma, los invitados que estaban lejos durante el cóctel viven la magia en su mesa, y los que ya la vieron reciben efectos completamente diferentes. Cada mesa tiene su momento privado de asombro.
 
@@ -105,10 +105,9 @@ La magia de cerca funciona en cualquier espacio, pero estos son los lugares dond
 
 | Formato | Duración | Precio Orientativo |
 |---|---|---|
-| Solo cóctel | 1 hora | Desde 400€ |
-| Solo cóctel | 1,5 horas | Desde 500€ |
-| Cóctel + banquete | 2-2,5 horas | Desde 650€ |
-| Cóctel + banquete + efecto nupcial | 2,5-3 horas | Desde 800€ |
+| Solo cóctel | 1 hora | Desde 350€ |
+| Cóctel + banquete | 1,5 - 2 horas | Desde 500€ |
+| Experiencia completa (Cóctel + Banquete + Efecto nupcial) | 2h+ | Desde 600€ |
 
 > Los precios incluyen la reunión previa con los novios (o el wedding planner), la personalización de la actuación y el desplazamiento por toda la Comunidad de Madrid.
 

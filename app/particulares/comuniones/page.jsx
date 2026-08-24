@@ -70,16 +70,16 @@ export default function MagoComunionesPage() {
                     
                     {/* Hero Section */}
                     <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center mb-24 mt-8">
-                        <FadeIn className="flex-1 relative w-full aspect-[4/5] lg:aspect-square" delay={0.2} scale={0.95}>
-                            <div className="absolute inset-0 rounded-full overflow-hidden border-8 border-[#111111] shadow-2xl">
+                        <FadeIn className="flex-1 relative w-full aspect-[4/5] lg:aspect-square" delay={0.1} scale={0.98}>
+                            <div className="absolute inset-0 rounded-3xl lg:rounded-full overflow-hidden border-4 border-amber-500/20 shadow-2xl bg-slate-950">
                                 <Image
                                     src="/images/magia-comuniones-madrid.webp"
                                     alt="Mago para comuniones en Madrid - Ángel Ruiz"
                                     fill
-                                    className="object-cover transition-transform duration-[3s] ease-in-out hover:scale-110"
+                                    sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 520px"
+                                    className="object-cover"
                                     priority
                                 />
-                                <div className="absolute inset-0 bg-[#d4a853]/10 mix-blend-overlay" />
                             </div>
                         </FadeIn>
                         
@@ -251,7 +251,7 @@ export default function MagoComunionesPage() {
                                 <div>
                                     <h3 className="text-xl font-[Cinzel] text-white mb-2 uppercase">Garantía de Calidad</h3>
                                     <p className="text-slate-400 font-light text-sm leading-relaxed">
-                                        Con más de 10 años de experiencia, Ángel Ruiz aplica la misma psicología y perfeccionismo técnico de sus shows corporativos para crear un espectáculo infantil donde los adultos no paran de reír ni de asombrarse.
+                                        Ángel Ruiz aplica la misma psicología, elegancia y perfeccionismo técnico de sus shows corporativos para crear un espectáculo familiar donde los niños son las estrellas y los adultos no paran de reír y asombrarse.
                                     </p>
                                     <div className="mt-6">
                                         <ContactButtonClient label="Solicitar Presupuesto" />

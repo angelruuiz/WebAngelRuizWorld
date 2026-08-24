@@ -37,7 +37,7 @@ Una de las preguntas más frecuentes al organizar una celebración es: **¿cuán
 No existe una tarifa plana universal, ya que cada evento tiene necesidades únicas. Aquí te detallo los pilares que mueven la aguja del presupuesto:
 
 #### 1. Experiencia y Trayectoria Profesional
-Un mago con **más de 10 años de experiencia**, como es mi caso, no solo vende "trucos". Vende seguridad, manejo de grupos complicados, elegancia y la garantía de que nada saldrá mal. La veteranía en el **ilusionismo profesional** se paga porque asegura el éxito de tu inversión.
+Un mago profesional de primer nivel no solo vende "trucos". Vende seguridad, manejo de grupos complicados, elegancia y la garantía de que nada saldrá mal. La veteranía en el **ilusionismo profesional** se paga porque asegura el éxito de tu inversión.
 
 #### 2. El Tipo de Magia (Formato)
 *   **Magia de Cerca (Cóctel/Cena):** Es el formato más versátil. El mago se desplaza entre los invitados. Requiere mucha habilidad técnica pero menos logística de sonido o escenario.
@@ -50,9 +50,9 @@ Contratar un **[mago para bodas en Madrid](/particulares/bodas)** suele tener un
 
 Para que tengas una referencia real del mercado de **magos profesionales en Madrid**:
 
-*   **Eventos Privados/Cumpleaños:** Suelen oscilar entre los **200€ y 450€**, dependiendo de la duración y el día de la semana.
-*   **Bodas (Cóctel o Banquete):** Un servicio profesional de calidad suele rondar los **350€ - 600€**. Si buscas a uno de los referentes de la capital, el precio puede ser superior.
-*   **Empresas y Corporativo:** Debido a la personalización y el impacto de marca, estos servicios suelen partir de los **500€ - 800€** en adelante.
+*   **Eventos Privados / Cumpleaños:** Suelen oscilar entre los **300€ y 450€**, dependiendo de la duración y el formato.
+*   **Bodas (Cóctel o Banquete):** Tarifas desde **350€** (solo cóctel), **500€** (cóctel + banquete) y **600€** (experiencia completa con efecto especial para novios).
+*   **Empresas y Corporativo:** Formatos de cóctel networking desde **350€**, espectáculos de sobremesa desde **400€**, team building desde **500€** y dinamización en feria desde **600€**.
 
 ### La Ventaja de Contratar un Mago Local en la Sierra y Noroeste
 

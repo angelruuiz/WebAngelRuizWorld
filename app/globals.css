@@ -717,6 +717,24 @@ body::after {
     animation: marquee 30s linear infinite;
 }
 
+/* GPU Hardware-accelerated particle floating */
+@keyframes floatParticle {
+    0% {
+        transform: translate3d(0, 0, 0) scale(0.8);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.45;
+    }
+    80% {
+        opacity: 0.35;
+    }
+    100% {
+        transform: translate3d(0, -220px, 0) scale(1.2);
+        opacity: 0;
+    }
+}
+
 
 /* ═══════════════════════════════════════════════════════════
    GLASS PILL — Utility class for small tags/badges

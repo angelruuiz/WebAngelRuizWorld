@@ -95,7 +95,7 @@ export default function BodasDetailPage() {
                             "@id": "https://angelruiz.world/particulares/bodas/#service",
                             "offers": {
                                 "@type": "AggregateOffer",
-                                "lowPrice": "400",
+                                "lowPrice": "350",
                                 "highPrice": "900",
                                 "priceCurrency": "EUR"
                             }
@@ -143,7 +143,8 @@ export default function BodasDetailPage() {
                                     src="/images/boda-magia-madrid.webp"
                                     alt="Mago de bodas en Madrid Angel Ruiz creando recuerdos inolvidables"
                                     fill
-                                    className="object-cover object-top hover:scale-105 transition-transform duration-[2s] ease-out"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 550px"
+                                    className="object-cover object-top"
                                     priority
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/80 via-transparent to-transparent" />
@@ -302,18 +303,18 @@ export default function BodasDetailPage() {
                                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                                     <div className="bg-[#111111]/80 rounded-[2rem] p-8 border border-white/5 text-center space-y-4">
                                         <span className="text-[#d4a853] font-[Cinzel] text-sm uppercase tracking-widest block">Solo Cóctel</span>
-                                        <span className="text-white text-3xl font-[Cinzel] block">desde 400€</span>
+                                        <span className="text-white text-3xl font-[Cinzel] block">desde 350€</span>
                                         <p className="text-slate-400 text-sm font-light">Duración: 1 hora</p>
                                     </div>
                                     <div className="bg-[#111111]/80 rounded-[2rem] p-8 border border-[#d4a853]/30 text-center space-y-4 relative">
                                         <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#d4a853] text-black text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-full">Popular</span>
                                         <span className="text-[#d4a853] font-[Cinzel] text-sm uppercase tracking-widest block">Cóctel + Banquete</span>
-                                        <span className="text-white text-3xl font-[Cinzel] block">desde 600€</span>
+                                        <span className="text-white text-3xl font-[Cinzel] block">desde 500€</span>
                                         <p className="text-slate-400 text-sm font-light">Duración: 1,5 – 2 horas</p>
                                     </div>
                                     <div className="bg-[#111111]/80 rounded-[2rem] p-8 border border-white/5 text-center space-y-4">
                                         <span className="text-[#d4a853] font-[Cinzel] text-sm uppercase tracking-widest block">Experiencia Completa</span>
-                                        <span className="text-white text-3xl font-[Cinzel] block">desde 750€</span>
+                                        <span className="text-white text-3xl font-[Cinzel] block">desde 600€</span>
                                         <p className="text-slate-400 text-sm font-light">Efecto especial para novios (2h+)</p>
                                     </div>
                                 </div>
