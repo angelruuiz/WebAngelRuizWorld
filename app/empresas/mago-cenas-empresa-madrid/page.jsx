@@ -72,145 +72,154 @@ export default function Page() {
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }} />
     <NavFooterClient>
       <MagicCursor />
-    <div className="min-h-screen bg-[#0A0A0A] text-slate-300 font-sans selection:bg-amber-500/30">
+    <div className="min-h-screen bg-surface-0 text-slate-300 font-sans selection:bg-amber-500/30">
       
-      {/* HEADER B2B BRUTALIST */}
+      {/* HEADER LUXURY B2B */}
       <header className="relative pt-32 pb-20 border-b border-white/10 overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/10 via-[#0A0A0A] to-[#0A0A0A]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/10 via-slate-950 to-slate-950"></div>
         <div className="max-w-6xl mx-auto px-6 relative z-10">
-          <div className="inline-block border border-amber-500/50 bg-amber-500/10 px-3 py-1 mb-6 text-amber-500 font-mono text-sm tracking-widest uppercase">
-            [ STATUS: EVENTO_OPTIMIZADO ]
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 mb-6 text-amber-400 text-xs uppercase tracking-widest font-semibold">
+            <span>✦</span>
+            <span>Experiencias Exclusivas para Cenas Corporativas</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tighter mb-6 uppercase">
-            Mago para Cenas de Empresa <br/> <span className="text-amber-500 block mt-2">ALTO IMPACTO MADRID</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-[Cinzel] font-bold text-white tracking-wide mb-6 uppercase">
+            Mago para Cenas de Empresa en Madrid
           </h1>
-          <p className="text-xl md:text-2xl text-slate-400 max-w-3xl font-light font-mono leading-relaxed">
-            No contratas magia. Contratas <span className="text-white font-medium">retención de marca, captación de leads y fidelización</span>. Intervenciones premium para el ecosistema corporativo de Madrid.
+          <p className="text-lg md:text-xl text-slate-300 max-w-3xl font-light leading-relaxed">
+            Convierte la cena de empresa en un evento memorable. Ilusionismo corporativo de alta gama que fomenta el <span className="text-amber-400 font-medium">networking natural, rompe el hielo y refuerza el orgullo de marca</span>.
           </p>
         </div>
       </header>
 
       {/* DASHBOARD DE IMPACTO */}
-      <section className="py-24 border-b border-white/10">
+      <section className="py-20 border-b border-white/10">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="flex items-center gap-4 mb-12">
-            <span className="text-amber-500 font-mono text-2xl">{"//"}</span>
-            <h2 className="text-3xl font-bold text-white uppercase tracking-tight">Dashboard de Impacto B2B</h2>
+          <div className="text-center mb-12">
+            <span className="text-amber-400 text-xs font-semibold uppercase tracking-[0.2em]">Impacto Demostrado</span>
+            <h2 className="text-3xl font-[Cinzel] font-bold text-white uppercase tracking-wide mt-2">
+              Resultados y Valor para tu Marca
+            </h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-8 border border-white/10 bg-[#111111] hover:border-amber-500/50 transition-colors">
-              <div className="text-amber-500 font-mono text-sm mb-4 uppercase tracking-widest">Métrica 01</div>
-              <div className="text-5xl font-bold text-white mb-2">+340%</div>
-              <div className="text-slate-400 font-mono text-sm">Retención del Mensaje</div>
-              <p className="mt-4 text-sm text-slate-500">Los mensajes clave integrados en ilusiones se graban en la memoria a largo plazo de los asistentes.</p>
+            <div className="p-8 rounded-3xl bg-slate-950/60 border border-white/10 backdrop-blur-xl hover:border-amber-400/50 transition-all duration-300">
+              <div className="text-amber-400 text-xs uppercase tracking-widest font-semibold mb-3">Métrica 01</div>
+              <div className="text-4xl md:text-5xl font-[Cinzel] font-bold text-white mb-2">+340%</div>
+              <div className="text-amber-400/90 text-sm font-medium">Retención del Mensaje</div>
+              <p className="mt-3 text-xs text-slate-400 leading-relaxed font-light">Los mensajes clave integrados en ilusiones se graban en la memoria a largo plazo de los asistentes.</p>
             </div>
-            <div className="p-8 border border-white/10 bg-[#111111] hover:border-amber-500/50 transition-colors">
-              <div className="text-amber-500 font-mono text-sm mb-4 uppercase tracking-widest">Métrica 02</div>
-              <div className="text-5xl font-bold text-white mb-2">x3</div>
-              <div className="text-slate-400 font-mono text-sm">Generación de Leads</div>
-              <p className="mt-4 text-sm text-slate-500">Atracción masiva al stand en ferias y eventos, cualificación instantánea del prospecto B2B.</p>
+            <div className="p-8 rounded-3xl bg-slate-950/60 border border-white/10 backdrop-blur-xl hover:border-amber-400/50 transition-all duration-300">
+              <div className="text-amber-400 text-xs uppercase tracking-widest font-semibold mb-3">Métrica 02</div>
+              <div className="text-4xl md:text-5xl font-[Cinzel] font-bold text-white mb-2">x3</div>
+              <div className="text-amber-400/90 text-sm font-medium">Conexión y Networking</div>
+              <p className="mt-3 text-xs text-slate-400 leading-relaxed font-light">Interacción fluida que elimina barreras jerárquicas y conecta a directivos y empleados con humor inteligente.</p>
             </div>
-            <div className="p-8 border border-white/10 bg-[#111111] hover:border-amber-500/50 transition-colors">
-              <div className="text-amber-500 font-mono text-sm mb-4 uppercase tracking-widest">Métrica 03</div>
-              <div className="text-5xl font-bold text-white mb-2">100%</div>
-              <div className="text-slate-400 font-mono text-sm">Integración Corporativa</div>
-              <p className="mt-4 text-sm text-slate-500">El show no es un parche. Es un vehículo de comunicación adaptado 100% a la cultura de tu empresa.</p>
+            <div className="p-8 rounded-3xl bg-slate-950/60 border border-white/10 backdrop-blur-xl hover:border-amber-400/50 transition-all duration-300">
+              <div className="text-amber-400 text-xs uppercase tracking-widest font-semibold mb-3">Métrica 03</div>
+              <div className="text-4xl md:text-5xl font-[Cinzel] font-bold text-white mb-2">100%</div>
+              <div className="text-amber-400/90 text-sm font-medium">Personalización de Marca</div>
+              <p className="mt-3 text-xs text-slate-400 leading-relaxed font-light">El show se adapta 100% a los valores, eslóganes y momentos clave de la celebración de tu empresa.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* LONG FORM SEO CONTENT */}
-      <section className="py-24 border-b border-white/10 bg-[#0C0C0C]">
-        <div className="max-w-4xl mx-auto px-6 prose prose-invert prose-amber max-w-none">
-          <div className="font-mono text-amber-500 mb-8 border-l-2 border-amber-500 pl-4 py-1">
-            [ DOCUMENTACIÓN TÉCNICA: CENA DE EMPRESA ]
-          </div>
-          
-          <h2 className="text-3xl font-bold text-white uppercase tracking-tight mb-8">El Nuevo Paradigma en Eventos Corporativos</h2>
-          <p className="text-lg text-slate-400 leading-relaxed mb-6">
-            El ecosistema empresarial de Madrid exige innovación. Los eventos corporativos tradicionales ya no generan el mismo ROI. Los asistentes están expuestos a una sobreinformación constante (fatiga cognitiva), lo que hace que los mensajes clave de tu empresa se pierdan. Aquí es donde interviene nuestro servicio de <strong>Mago para Cenas de Empresa</strong>, operando como un hackeo atencional.
-          </p>
-          <p className="text-lg text-slate-400 leading-relaxed mb-6">
-            Al introducir la magia de alto impacto en el entorno corporativo, desactivamos los filtros de resistencia del cliente o empleado. A través del asombro, generamos un pico de dopamina que ancla tu marca y tu producto en la memoria del espectador de forma permanente.
-          </p>
-          
-          <h3 className="text-2xl font-bold text-white mt-12 mb-6">¿Por qué un enfoque B2B?</h3>
-          <p className="text-lg text-slate-400 leading-relaxed mb-6">
-            A diferencia de la magia convencional o de entretenimiento puro, el ilusionismo corporativo está diseñado arquitectónicamente para cumplir objetivos de negocio. No se trata solo de sorprender, sino de <strong>comunicar</strong>. Cada rutina está diseñada bajo principios psicológicos para transmitir confianza, innovación y liderazgo en el mercado madrileño y nacional.
-          </p>
-          <ul className="space-y-4 mb-8 text-slate-400 list-none pl-0">
-            <li className="flex items-start"><span className="text-amber-500 mr-3">{"->"}</span> <span><strong>Captación de Atención:</strong> Rompemos el hielo en entornos fríos o altamente competitivos.</span></li>
-            <li className="flex items-start"><span className="text-amber-500 mr-3">{"->"}</span> <span><strong>Fidelización C-Level:</strong> Experiencias sofisticadas que demuestran estatus y exclusividad.</span></li>
-            <li className="flex items-start"><span className="text-amber-500 mr-3">{"->"}</span> <span><strong>Asociación Positiva:</strong> Tu marca se convierte en el facilitador de una experiencia memorable.</span></li>
-          </ul>
+      <section className="py-20 border-b border-white/10 bg-slate-950/40">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-[Cinzel] font-bold text-white uppercase tracking-wide mb-8 border-l-4 border-amber-500 pl-4">
+            El Nuevo Paradigma en Eventos Corporativos
+          </h2>
+          <div className="space-y-6 text-sm md:text-base text-slate-300 leading-relaxed font-light">
+            <p>
+              El ecosistema empresarial de Madrid exige innovación. Los eventos corporativos tradicionales ya no generan el mismo impacto. Los asistentes están expuestos a una sobreinformación constante, lo que hace que los mensajes clave de tu empresa se pierdan. Aquí es donde interviene nuestro servicio de <strong>Mago para Cenas de Empresa</strong>, operando como un catalizador de atención y entusiasmo.
+            </p>
+            <p>
+              Al introducir la magia de alto impacto en el entorno corporativo, desactivamos los filtros de resistencia del cliente o empleado. A través del asombro, generamos una emoción positiva que ancla tu marca y tu mensaje en la memoria del espectador de forma permanente.
+            </p>
+            
+            <h3 className="text-2xl font-[Cinzel] font-bold text-white mt-10 mb-4 border-l-4 border-amber-500 pl-4">
+              ¿Por Qué Elegir Ilusionismo Corporativo de Alta Gama?
+            </h3>
+            <p>
+              A diferencia de la magia convencional o de entretenimiento infantil, el ilusionismo corporativo está diseñado específicamente para cumplir objetivos de empresa. No se trata solo de sorprender, sino de <strong>comunicar</strong>. Cada rutina está diseñada bajo principios psicológicos para transmitir confianza, innovación y liderazgo en el mercado madrileño.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-6">
+              <div className="p-5 rounded-2xl bg-slate-950/60 border border-white/10">
+                <span className="text-amber-400 text-base font-bold block mb-1">✦ Atención Total</span>
+                <p className="text-xs text-slate-400">Rompemos el hielo en entornos fríos o altamente competitivos.</p>
+              </div>
+              <div className="p-5 rounded-2xl bg-slate-950/60 border border-white/10">
+                <span className="text-amber-400 text-base font-bold block mb-1">✦ Nivel C-Suite</span>
+                <p className="text-xs text-slate-400">Experiencias sofisticadas que demuestran estatus y exclusividad.</p>
+              </div>
+              <div className="p-5 rounded-2xl bg-slate-950/60 border border-white/10">
+                <span className="text-amber-400 text-base font-bold block mb-1">✦ Recuerdo Positivo</span>
+                <p className="text-xs text-slate-400">Tu marca se convierte en la facilitadora de un momento inolvidable.</p>
+              </div>
+            </div>
 
-          <p className="text-lg text-slate-400 leading-relaxed mb-6">
-            La ciudad de Madrid alberga algunos de los eventos, ferias (como IFEMA) y convenciones más importantes de Europa. Destacar en este ruido requiere más que un buen stand o una buena cena. Requiere una disrupción cognitiva. Convertimos tu <em>cena de empresa</em> en el epicentro del evento, el lugar donde se cierran los tratos y se genera el verdadero networking.
-          </p>
-          
-          <p className="text-lg text-slate-400 leading-relaxed mb-6">
-            Nuestro protocolo de actuación implica una inmersión previa en la cultura de tu empresa. Entendemos qué vendes, a quién se lo vendes y qué problema resuelves. Luego, traducimos esa propuesta de valor a un lenguaje visual, asombroso y altamente persuasivo que tu audiencia no podrá ignorar. El resultado no es un aplauso; es un aumento en el LTV (Life-Time Value) de tus clientes y un ambiente laboral fortalecido en tus equipos.
-          </p>
+            <p>
+              La ciudad de Madrid alberga algunos de los eventos, ferias (como IFEMA) y convenciones más importantes de Europa. Destacar en este entorno requiere más que una cena convencional. Convertimos tu <em>cena de empresa</em> en el momento más esperado y comentado del año.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* METODOLOGÍA DE ACTIVACIÓN */}
-      <section className="py-24 border-b border-white/10">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex items-center gap-4 mb-16">
-            <span className="text-amber-500 font-mono text-2xl">{"//"}</span>
-            <h2 className="text-3xl font-bold text-white uppercase tracking-tight">Metodología de Activación</h2>
+      <section className="py-20 border-b border-white/10">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <span className="text-amber-400 text-xs font-semibold uppercase tracking-[0.2em]">Paso a Paso</span>
+            <h2 className="text-3xl font-[Cinzel] font-bold text-white uppercase tracking-wide mt-2">
+              Metodología de Trabajo para Empresas
+            </h2>
           </div>
           
-          <div className="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/10 before:to-transparent">
-            
-            {/* FASE 1 */}
-            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-amber-500 bg-[#0A0A0A] text-amber-500 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-[0_0_15px_rgba(245,158,11,0.2)] z-10 font-mono text-sm">
-                01
+          <div className="space-y-4">
+            <div className="p-6 rounded-2xl bg-slate-950/60 border border-white/10 backdrop-blur-xl flex flex-col md:flex-row gap-4 items-start md:items-center justify-between">
+              <div className="flex items-center gap-4">
+                <span className="text-2xl font-[Cinzel] font-bold text-amber-400">01</span>
+                <div>
+                  <h3 className="text-base font-bold text-white uppercase">Alineación y Objetivos</h3>
+                  <p className="text-xs text-slate-400 mt-0.5">Estudiamos los objetivos, la audiencia y el mensaje central del evento de tu empresa.</p>
+                </div>
               </div>
-              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 border border-white/10 bg-[#111111]">
-                <div className="text-amber-500 font-mono text-sm mb-2">FASE DE AUDITORÍA Y ALINEACIÓN</div>
-                <h3 className="text-xl font-bold text-white mb-3 uppercase">Análisis Corporativo</h3>
-                <p className="text-slate-400 text-sm">Estudiamos tus objetivos, tu audiencia y el mensaje central. Configuramos las metáforas visuales que alinearán el show con tu identidad de marca.</p>
-              </div>
+              <span className="text-xs font-mono text-amber-400 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-full whitespace-nowrap">Fase Previa</span>
             </div>
 
-            {/* FASE 2 */}
-            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white/20 bg-[#0A0A0A] text-slate-400 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 font-mono text-sm transition-colors group-hover:border-amber-500 group-hover:text-amber-500">
-                02
+            <div className="p-6 rounded-2xl bg-slate-950/60 border border-white/10 backdrop-blur-xl flex flex-col md:flex-row gap-4 items-start md:items-center justify-between">
+              <div className="flex items-center gap-4">
+                <span className="text-2xl font-[Cinzel] font-bold text-amber-400">02</span>
+                <div>
+                  <h3 className="text-base font-bold text-white uppercase">Puesta en Escena Impecable</h3>
+                  <p className="text-xs text-slate-400 mt-0.5">Actuación elegante de magia de cerca o sobremesa con respeto absoluto al protocolo corporativo.</p>
+                </div>
               </div>
-              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 border border-white/10 bg-[#111111]">
-                <div className="text-slate-500 font-mono text-sm mb-2 group-hover:text-amber-500 transition-colors">FASE DE DESPLIEGUE</div>
-                <h3 className="text-xl font-bold text-white mb-3 uppercase">Ejecución en Entorno</h3>
-                <p className="text-slate-400 text-sm">Implementación quirúrgica durante el evento. Actuamos como un catalizador social, elevando la energía de la sala y posicionando la marca en el centro de la atención.</p>
-              </div>
+              <span className="text-xs font-mono text-amber-400 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-full whitespace-nowrap">Evento en Vivo</span>
             </div>
 
-            {/* FASE 3 */}
-            <div className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
-              <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white/20 bg-[#0A0A0A] text-slate-400 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 font-mono text-sm transition-colors group-hover:border-amber-500 group-hover:text-amber-500">
-                03
+            <div className="p-6 rounded-2xl bg-slate-950/60 border border-white/10 backdrop-blur-xl flex flex-col md:flex-row gap-4 items-start md:items-center justify-between">
+              <div className="flex items-center gap-4">
+                <span className="text-2xl font-[Cinzel] font-bold text-amber-400">03</span>
+                <div>
+                  <h3 className="text-base font-bold text-white uppercase">Impacto y Memoria</h3>
+                  <p className="text-xs text-slate-400 mt-0.5">Los asistentes asocian la emoción y el asombro con tu marca durante meses.</p>
+                </div>
               </div>
-              <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 border border-white/10 bg-[#111111]">
-                <div className="text-slate-500 font-mono text-sm mb-2 group-hover:text-amber-500 transition-colors">FASE DE RETORNO</div>
-                <h3 className="text-xl font-bold text-white mb-3 uppercase">Medición de Impacto</h3>
-                <p className="text-slate-400 text-sm">El impacto se prolonga post-evento. Los asistentes recuerdan la experiencia, asocian el asombro con la empresa y los leads generados presentan un nivel de cualificación superior.</p>
-              </div>
+              <span className="text-xs font-mono text-amber-400 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-full whitespace-nowrap">Post-Evento</span>
             </div>
-
           </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-24 bg-[#0A0A0A]">
+      <section className="py-20 bg-slate-950/30">
         <div className="max-w-4xl mx-auto px-6">
-          <div className="flex items-center justify-center gap-4 mb-16 text-center">
-            <h2 className="text-3xl font-bold text-white uppercase tracking-tight">Preguntas Frecuentes <span className="text-amber-500">_FAQ</span></h2>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-[Cinzel] font-bold text-white uppercase tracking-wide">
+              Preguntas Frecuentes
+            </h2>
           </div>
           
           <div className="space-y-4">
@@ -222,21 +231,14 @@ export default function Page() {
       </section>
 
       {/* CALL TO ACTION */}
-      <section className="py-24 border-t border-white/10 relative overflow-hidden">
-        <div className="absolute inset-0 bg-amber-500/5 mix-blend-screen"></div>
+      <section className="py-20 border-t border-white/10 relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-white uppercase tracking-tighter mb-8">
-            Inicializa tu <span className="text-amber-500">Siguiente Evento</span>
+          <h2 className="text-3xl md:text-4xl font-[Cinzel] font-bold text-white uppercase tracking-wide mb-4">
+            Diseñemos una Cena de Empresa <span className="text-amber-400">Inolvidable</span>
           </h2>
-          <p className="text-xl text-slate-400 mb-10 font-mono">No dejes la retención de marca al azar. Despliega una estrategia de impacto asegurada.</p>
+          <p className="text-base text-slate-300 mb-8 max-w-xl mx-auto font-light">Solicita propuesta personalizada y consulta disponibilidad de fechas para tu evento corporativo en Madrid.</p>
           <div className="mb-10 text-left">
-            <CorporateInlineForm title="SOLICITAR PROPUESTA PARA CENA DE EMPRESA" subtitle="Presupuesto a medida y disponibilidad en menos de 24h" />
-          </div>
-          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <span className="text-slate-400 font-mono text-xs">¿Prefieres contacto directo e instantáneo?</span>
-            <a href="https://wa.me/34648055636" className="inline-flex items-center justify-center px-6 py-3 border border-amber-500/60 bg-amber-500/10 text-amber-400 hover:bg-amber-500 hover:text-black font-mono font-bold uppercase tracking-widest text-xs transition-all duration-300">
-              [ CONTACTAR POR WHATSAPP ]
-            </a>
+            <CorporateInlineForm title="Solicitar Propuesta para Cena de Empresa" subtitle="Presupuesto a medida y disponibilidad en menos de 24h" />
           </div>
         </div>
       </section>
