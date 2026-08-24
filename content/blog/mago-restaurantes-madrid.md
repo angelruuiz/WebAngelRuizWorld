@@ -6,7 +6,7 @@ excerpt: >-
   en experiencia de cliente que dispara las reseñas positivas y la fidelidad.
 category: Empresas
 readTime: 5 MIN
-image: /images/mago-close-up-madrid.webp
+image: /images/ilusionista-madrid-closeup.webp
 faq:
   - question: ¿Cómo funciona la magia para restaurantes?
     answer: >-

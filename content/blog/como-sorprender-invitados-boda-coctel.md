@@ -5,7 +5,7 @@ excerpt: >-
   Descubre 7 ideas originales para sorprender a tus invitados durante el cóctel de tu boda en Madrid. Desde magia de cerca hasta estaciones de comida temáticas.
 category: Bodas
 readTime: 6 MIN
-image: /images/mago-bodas-madrid.webp
+image: /images/boda-magia-madrid.webp
 faq:
   - question: ¿Cuánto dura la actuación del mago durante el cóctel de boda?
     answer: >-

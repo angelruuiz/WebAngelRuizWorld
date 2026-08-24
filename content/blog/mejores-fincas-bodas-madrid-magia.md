@@ -6,7 +6,7 @@ excerpt: >-
   contar con un mago profesional durante el cóctel transformará por completo la
   experiencia de tus invitados.
 author: Ángel Ruiz
-image: /images/mago-bodas-angel-ruiz.svg
+image: /images/boda-magia-madrid.webp
 tags:
   - Bodas
   - Madrid

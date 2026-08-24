@@ -6,7 +6,7 @@ excerpt: >-
   magia de cerca, música en directo, monólogos y experiencias exclusivas.
 category: Particulares
 readTime: 6 MIN
-image: /images/mago-bodas-madrid.webp
+image: /images/fiesta-eventos-madrid.webp
 faq:
   - question: ¿Qué tipo de espectáculo es mejor para una fiesta privada en casa o chalet?
     answer: >-

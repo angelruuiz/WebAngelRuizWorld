@@ -7,7 +7,7 @@ excerpt: >-
   inolvidable.
 category: Bodas
 readTime: 4 MIN
-image: /images/mago-close-up-madrid.webp
+image: /images/mago-bodas-madrid-eventos.webp
 faq:
   - question: ¿Cuál es el mejor momento para que actúe el mago en una boda?
     answer: >-

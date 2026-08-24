@@ -6,7 +6,7 @@ excerpt: >-
   Magia de sobremesa, ritmo escénico y fórmulas para evitar el aburrimiento en galas anuales.
 category: Empresas
 readTime: 6 MIN
-image: /images/mago-eventos-empresa-madrid.webp
+image: /images/mago-para-eventos-empresa-madrid.webp
 faq:
   - question: ¿En qué momentos de la cena de gala debe actuar el mago?
     answer: >-

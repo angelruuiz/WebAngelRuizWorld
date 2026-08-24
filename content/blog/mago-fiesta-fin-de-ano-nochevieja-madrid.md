@@ -5,7 +5,7 @@ excerpt: >-
   Descubre cómo un mago en Madrid puede transformar tu fiesta de Fin de Año o Nochevieja en una celebración mágica e inolvidable. ¡Reserva tu fecha antes de las campanadas!
 category: Particulares
 readTime: 5 MIN
-image: /images/mago-close-up-madrid.webp
+image: /images/espectaculo-magia-madrid.webp
 faq:
   - question: ¿Cuánto tiempo antes de Nochevieja debo reservar al mago?
     answer: >-

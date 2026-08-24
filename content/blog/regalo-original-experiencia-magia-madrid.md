@@ -5,7 +5,7 @@ excerpt: >-
   Descubre por qué regalar una experiencia de magia exclusiva en Madrid es la alternativa perfecta a los obsequios materiales. Sorpresa y emoción garantizadas.
 category: Particulares
 readTime: 5 MIN
-image: /images/mago-close-up-madrid.webp
+image: /images/cartomagia-angel-ruiz.webp
 faq:
   - question: ¿Puedo regalar la experiencia como vale o bono?
     answer: >-

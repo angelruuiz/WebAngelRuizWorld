@@ -6,7 +6,7 @@ excerpt: >-
   celebración. Analizamos las diferencias entre la magia de cerca y de escenario
   para que tu evento en Madrid sea inolvidable.
 author: Angel Ruiz
-image: /images/blog-cerca-vs-escenario.webp
+image: /images/ilusionista-madrid-closeup.webp
 tags:
   - Formatos
   - Magia de Cerca

@@ -6,7 +6,7 @@ excerpt: >-
   para fiestas privadas en chalets, restaurantes y áticos.
 category: Particulares
 readTime: 6 MIN
-image: /images/mago-bodas-madrid.webp
+image: /images/fiesta-eventos-madrid.webp
 faq:
   - question: ¿Es la magia adecuada para un cumpleaños de adultos?
     answer: >-

@@ -6,7 +6,7 @@ excerpt: >-
   Sorprende a tu equipo y clientes con magia corporativa elegante e impactante.
 category: Empresas
 readTime: 6 MIN
-image: /images/mago-eventos-empresa-madrid.webp
+image: /images/angel-ruiz-mago-corporativo.webp
 faq:
   - question: ¿Cuánto dura la actuación del mago en un aniversario de empresa?
     answer: >-
