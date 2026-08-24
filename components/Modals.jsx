@@ -96,7 +96,11 @@ export const ContactFormModal = ({ isOpen, onClose }) => {
             <div className="p-6 md:p-10 text-left">
                 <div className="text-center mb-6 md:mb-8">
                     <h3 className="text-2xl md:text-3xl font-[Cinzel] text-white mb-2">Reserva tu Fecha</h3>
-                    <p className="text-slate-500 text-xs md:text-sm font-light">Cuéntame sobre tu evento y creemos algo inolvidable.</p>
+                    <p className="text-slate-400 text-xs md:text-sm font-light">Cuéntame sobre tu evento y creemos algo inolvidable.</p>
+                    <p className="text-emerald-400/90 text-[11px] md:text-xs mt-2 font-medium flex items-center justify-center gap-1.5">
+                        <span>↓</span>
+                        <span>Si deslizas hacia abajo encontrarás mi contacto directo en WhatsApp si así lo prefieres</span>
+                    </p>
                 </div>
                 <form onSubmit={handleSubmit} className="space-y-4">
                     <input type="text" name="_gotcha" style={{ display: 'none' }} tabIndex="-1" autoComplete="off" aria-hidden="true" />

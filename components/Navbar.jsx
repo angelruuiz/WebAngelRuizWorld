@@ -87,7 +87,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                     </Link>
                     
                     {/* Desktop Menu - Responsive Flex without Absolute Overlaps */}
-                    <div className="hidden lg:flex items-center justify-center gap-4 xl:gap-7 2xl:gap-8 text-[10px] xl:text-[11px] font-bold uppercase tracking-[0.15em] xl:tracking-[0.25em]">
+                    <div className="hidden md:flex items-center justify-center gap-2 lg:gap-5 xl:gap-7 2xl:gap-8 text-[9px] lg:text-[10.5px] xl:text-[11px] font-bold uppercase tracking-[0.08em] lg:tracking-[0.18em] xl:tracking-[0.25em]">
                         {navLinks.map((link) => (
                             <div key={link.name} className="relative group py-2">
                                 <Link 
@@ -121,7 +121,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                     </div>
 
                     {/* Desktop Contact Button */}
-                    <div className="hidden lg:flex items-center shrink-0 relative group">
+                    <div className="hidden md:flex items-center shrink-0 relative group">
                         <motion.div 
                             animate={{ opacity: [0.2, 0.5, 0.2], scale: [1, 1.05, 1] }} 
                             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -140,7 +140,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                                 tap: { scale: 0.95, y: 0 }
                             }}
                             transition={{ type: "spring", stiffness: 400, damping: 15 }}
-                            className="relative px-5 py-2.5 overflow-hidden rounded-full cursor-pointer border border-amber-300/50 shadow-[0_0_15px_rgba(245,158,11,0.3)] z-10 bg-[rgba(3,7,18,0.5)] backdrop-blur-md"
+                            className="relative px-3.5 lg:px-5 py-2 lg:py-2.5 overflow-hidden rounded-full cursor-pointer border border-amber-300/50 shadow-[0_0_15px_rgba(245,158,11,0.3)] z-10 bg-[rgba(3,7,18,0.5)] backdrop-blur-md"
                         >
                             <motion.div 
                                 animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
@@ -176,7 +176,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                                     hover: { filter: "blur(0px)", scale: 1 },
                                     rest: { filter: "blur(0px)", scale: 1 }
                                 }}
-                                className="relative z-10 flex items-center justify-center gap-2 text-slate-100 group-hover:text-slate-950 font-bold tracking-[0.1em] uppercase text-xs transition-colors duration-300"
+                                className="relative z-10 flex items-center justify-center gap-1.5 lg:gap-2 text-slate-100 group-hover:text-slate-950 font-bold tracking-[0.1em] uppercase text-[11px] lg:text-xs transition-colors duration-300"
                             >
                                 Contacto 
                                 <motion.div variants={{
@@ -190,8 +190,8 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                         </motion.button>
                     </div>
 
-                    {/* Tablet / Mobile Quick Contact Button */}
-                    <div className="lg:hidden flex items-center gap-3">
+                    {/* Mobile Quick Contact Button */}
+                    <div className="md:hidden flex items-center gap-3">
                         <button 
                             onClick={onOpenContact}
                             className="px-3.5 py-1.5 rounded-full border border-amber-400/40 bg-amber-500/10 text-amber-400 text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 hover:bg-amber-500/20 transition-colors"
