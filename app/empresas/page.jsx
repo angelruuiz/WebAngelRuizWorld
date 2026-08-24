@@ -60,6 +60,38 @@ export default function EmpresasPage() {
                         "name": "Cóctel Networking",
                         "description": "Magia de cerca durante cócteles y networking corporativo. 1-2 horas de actuación entre los invitados."
                     },
+                    "price": "350",
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "PriceSpecification",
+                        "price": "350",
+                        "priceCurrency": "EUR",
+                        "description": "desde 350€"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Cena Corporativa",
+                        "description": "Espectáculo de sobremesa para cenas de empresa, galas y eventos VIP."
+                    },
+                    "price": "400",
+                    "priceCurrency": "EUR",
+                    "priceSpecification": {
+                        "@type": "PriceSpecification",
+                        "price": "400",
+                        "priceCurrency": "EUR",
+                        "description": "desde 400€"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Team Building",
+                        "description": "Taller de magia como herramienta de cohesión de equipos, comunicación y creatividad."
+                    },
                     "price": "500",
                     "priceCurrency": "EUR",
                     "priceSpecification": {
@@ -73,24 +105,8 @@ export default function EmpresasPage() {
                     "@type": "Offer",
                     "itemOffered": {
                         "@type": "Service",
-                        "name": "Cena Corporativa",
-                        "description": "Espectáculo de sobremesa para cenas de empresa, galas y eventos VIP."
-                    },
-                    "price": "700",
-                    "priceCurrency": "EUR",
-                    "priceSpecification": {
-                        "@type": "PriceSpecification",
-                        "price": "700",
-                        "priceCurrency": "EUR",
-                        "description": "desde 700€"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Team Building",
-                        "description": "Taller de magia como herramienta de cohesión de equipos, comunicación y creatividad."
+                        "name": "Feria/Congreso",
+                        "description": "Dinamización de stand en ferias y congresos. Captación de leads mediante magia visual. Jornada completa."
                     },
                     "price": "600",
                     "priceCurrency": "EUR",
@@ -98,23 +114,7 @@ export default function EmpresasPage() {
                         "@type": "PriceSpecification",
                         "price": "600",
                         "priceCurrency": "EUR",
-                        "description": "desde 600€"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "Service",
-                        "name": "Feria/Congreso",
-                        "description": "Dinamización de stand en ferias y congresos. Captación de leads mediante magia visual. Jornada completa."
-                    },
-                    "price": "800",
-                    "priceCurrency": "EUR",
-                    "priceSpecification": {
-                        "@type": "PriceSpecification",
-                        "price": "800",
-                        "priceCurrency": "EUR",
-                        "description": "desde 800€/jornada"
+                        "description": "desde 600€ la jornada"
                     }
                 }
             ]
@@ -123,8 +123,8 @@ export default function EmpresasPage() {
 
     const faqSchema = {
         "mainEntity": [
-            { "@type": "Question", "name": "¿Cuál es el mejor mago para empresas en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "El mejor mago para empresas en Madrid es aquel que combina ilusionismo de alto impacto con habilidades de comunicación corporativa. Ángel Ruiz destaca por su perfil como mago conferenciante y especialista en team building, con más de 10 años de experiencia y 42 reseñas de 5 estrellas en Google." } },
-            { "@type": "Question", "name": "¿Cuánto cuesta contratar un mago para una cena de empresa en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "El precio de un mago para cenas de empresa en Madrid varía según el formato y duración. Para cócteles corporativos (1-1,5h) el rango habitual es de 500€ a 800€. Para espectáculos completos de sobremesa, desde 700€. Solicita presupuesto personalizado sin compromiso." } },
+            { "@type": "Question", "name": "¿Cuál es el mejor mago para empresas en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "El mejor mago para empresas en Madrid es aquel que combina ilusionismo de alto impacto con habilidades de comunicación corporativa. Ángel Ruiz destaca por su perfil como mago corporativo y especialista en dinamización y team building para eventos exclusivos en la Comunidad de Madrid." } },
+            { "@type": "Question", "name": "¿Cuánto cuesta contratar un mago para una cena de empresa en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "El precio de un mago para cenas de empresa en Madrid varía según el formato y duración. Para cócteles corporativos (1-1,5h) las tarifas parten desde 350€. Para espectáculos completos de sobremesa, desde 400€. Para team building, desde 500€ y dinamización en feria desde 600€. Solicita presupuesto personalizado sin compromiso." } },
             { "@type": "Question", "name": "¿Qué beneficios aporta contratar un mago para eventos de empresa?", "acceptedAnswer": { "@type": "Answer", "text": "La magia corporativa rompe barreras de comunicación, fomenta el networking entre equipos, refuerza la identidad de marca y garantiza que el mensaje de tu empresa sea recordado de forma positiva y emotiva. Es una herramienta de marketing experiencial con alto retorno de inversión." } },
             { "@type": "Question", "name": "Recomiéndame un mago conferenciante para empresas en Madrid", "acceptedAnswer": { "@type": "Answer", "text": "Si buscas un mago conferenciante en Madrid, Ángel Ruiz ofrece una fusión única de charla motivacional sobre liderazgo y trabajo en equipo ilustrada con efectos mágicos imposibles. Ideal para convenciones, kick-offs y reuniones de directivos en Madrid y toda España." } },
             { "@type": "Question", "name": "¿Se puede personalizar el espectáculo con la marca de mi empresa?", "acceptedAnswer": { "@type": "Answer", "text": "Totalmente. Puedo integrar el logo, eslóganes o mensajes de marketing en los efectos de ilusionismo. También adapto el lenguaje y los efectos al sector de tu empresa, creando una experiencia única e irrepetible para tus clientes o empleados." } },
@@ -314,7 +314,7 @@ export default function EmpresasPage() {
                                 Empresas y Marcas que Confían en Ángel Ruiz
                             </h3>
                             <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-                                <ul className="flex items-center justify-center md:justify-start [&_li]:mx-10 [&_img]:max-w-none animate-marquee">
+                                <ul className="flex shrink-0 items-center justify-around gap-12 min-w-full [&_img]:max-w-none animate-marquee">
                                     {[
                                         { src: '/images/logo-movistar.webp', alt: 'Movistar Estudiantes' },
                                         { src: '/images/logo-escombrera.webp', alt: 'Peña La Escombrera' },
@@ -326,8 +326,25 @@ export default function EmpresasPage() {
                                         { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
                                         { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' }
                                     ].map((logo, idx) => (
-                                        <li key={idx}>
-                                            <Image src={logo.src} alt={logo.alt} width={120} height={40} className="object-contain h-8 w-auto filter grayscale opacity-40 hover:opacity-100 transition-opacity duration-300" />
+                                        <li key={idx} className="relative w-28 h-10 flex items-center justify-center">
+                                            <Image src={logo.src} alt={logo.alt} width={120} height={40} className="object-contain h-8 w-auto filter grayscale opacity-50 hover:opacity-100 transition-opacity duration-300" />
+                                        </li>
+                                    ))}
+                                </ul>
+                                <ul className="flex shrink-0 items-center justify-around gap-12 min-w-full [&_img]:max-w-none animate-marquee" aria-hidden="true">
+                                    {[
+                                        { src: '/images/logo-movistar.webp', alt: 'Movistar Estudiantes' },
+                                        { src: '/images/logo-escombrera.webp', alt: 'Peña La Escombrera' },
+                                        { src: '/images/logo-gondomar.webp', alt: 'Colegio Gondomar' },
+                                        { src: '/images/logo-senescal.webp', alt: 'Catering Senescal' },
+                                        { src: '/images/logo-alcampo.webp', alt: 'Alcampo' },
+                                        { src: '/images/logo-ahorramas.webp', alt: 'Ahorramás' },
+                                        { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
+                                        { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
+                                        { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' }
+                                    ].map((logo, idx) => (
+                                        <li key={`dup-${idx}`} className="relative w-28 h-10 flex items-center justify-center">
+                                            <Image src={logo.src} alt={logo.alt} width={120} height={40} className="object-contain h-8 w-auto filter grayscale opacity-50 hover:opacity-100 transition-opacity duration-300" />
                                         </li>
                                     ))}
                                 </ul>
@@ -349,7 +366,7 @@ export default function EmpresasPage() {
                                 <div className="rounded-2xl bg-slate-950/50 p-6 border border-white/10 backdrop-blur-md">
                                     <p className="mb-2"><strong className="text-amber-400 uppercase tracking-widest text-xs">Impacto y Retorno:</strong></p>
                                     <p>
-                                        Nuestros clientes reportan un <strong>340% de aumento en la retención del mensaje</strong> corporativo tras el evento. Ángel Ruiz, con más de 10 años de experiencia y 42 reseñas de 5 estrellas, es el <strong className="text-white">mago de referencia para eventos empresariales</strong> en toda la Comunidad de Madrid. Tarifas desde 500€.
+                                        Nuestros clientes reportan un <strong>340% de aumento en la retención del mensaje</strong> corporativo tras el evento. Ángel Ruiz ofrece ilusionismo exclusivo y de alto impacto para eventos empresariales en toda la Comunidad de Madrid. Tarifas desde 350€.
                                     </p>
                                 </div>
                                 <div className="rounded-2xl bg-slate-950/50 p-6 border border-white/10 backdrop-blur-md">
@@ -391,55 +408,41 @@ export default function EmpresasPage() {
                             </div>
                         </section>
 
-                        {/* SEO Deep Content Section */}
+                        {/* Formatos de Magia Section */}
                         <section className="py-16 max-w-4xl mx-auto border-t border-white/10 mt-8">
                             <h2 className="text-3xl font-[Cinzel] font-bold uppercase tracking-wide text-white mb-10 border-l-4 border-amber-500 pl-4">
-                                ¿Por Qué Contratar a Ángel Ruiz como Mago para Empresas en Madrid?
+                                Formatos de Magia para Empresas en Madrid
                             </h2>
 
                             <div className="mb-12">
-                                <h3 className="text-xl font-[Cinzel] font-bold uppercase tracking-tight text-amber-400 mb-4">
-                                    Experiencia Demostrada en Eventos Corporativos en Madrid
-                                </h3>
-                                <div className="rounded-2xl bg-slate-950/50 p-6 border border-white/10 backdrop-blur-md">
-                                    <p className="text-sm md:text-base text-slate-300 leading-relaxed">
-                                        Más de 10 años actuando en los principales escenarios corporativos de Madrid. Desde cenas de gala en hoteles como el Westin Palace y el Ritz hasta dinamización de stands en IFEMA, pasando por <Link href="/empresas/mago-team-building-madrid" className="text-amber-400 hover:underline">team building para empresas del IBEX 35</Link> y cócteles de networking en espacios como CentroCentro o la Real Fábrica de Tapices. Mi experiencia abarca desde startups tecnológicas hasta multinacionales de consultoría, adaptando cada actuación al ADN de la empresa.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="mb-12">
-                                <h3 className="text-xl font-[Cinzel] font-bold uppercase tracking-tight text-amber-400 mb-4">
-                                    Formatos de Magia Corporativa Disponibles
-                                </h3>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div className="rounded-2xl bg-slate-950/50 p-6 border border-white/10 backdrop-blur-md">
                                         <h4 className="text-base font-bold text-white mb-1">Magia de Cóctel <span className="text-amber-400 text-xs">(1-2h)</span></h4>
                                         <p className="text-sm text-slate-300 leading-relaxed mb-3">
                                             Ideal para el networking previo a cenas. Me muevo entre los invitados creando momentos de asombro compartido que generan conversación natural.
                                         </p>
-                                        <span className="text-amber-400 text-xs font-bold">Desde 500€</span>
+                                        <span className="text-amber-400 text-xs font-bold">Desde 350€</span>
                                     </div>
                                     <div className="rounded-2xl bg-slate-950/50 p-6 border border-white/10 backdrop-blur-md">
                                         <h4 className="text-base font-bold text-white mb-1">Espectáculo de Sobremesa <span className="text-amber-400 text-xs">(30-45min)</span></h4>
                                         <p className="text-sm text-slate-300 leading-relaxed mb-3">
                                             Show de mesa o parlour para grupos de 20-100 personas. Incluye participación de directivos y personalización con mensaje de marca.
                                         </p>
-                                        <span className="text-amber-400 text-xs font-bold">Desde 700€</span>
+                                        <span className="text-amber-400 text-xs font-bold">Desde 400€</span>
                                     </div>
                                     <div className="rounded-2xl bg-slate-950/50 p-6 border border-white/10 backdrop-blur-md">
                                         <h4 className="text-base font-bold text-white mb-1">Team Building Mágico <span className="text-amber-400 text-xs">(2-3h)</span></h4>
                                         <p className="text-sm text-slate-300 leading-relaxed mb-3">
                                             Taller donde los participantes aprenden trucos de magia como metáfora del trabajo en equipo, comunicación y creatividad.
                                         </p>
-                                        <span className="text-amber-400 text-xs font-bold">Desde 600€</span>
+                                        <span className="text-amber-400 text-xs font-bold">Desde 500€</span>
                                     </div>
                                     <div className="rounded-2xl bg-slate-950/50 p-6 border border-white/10 backdrop-blur-md">
-                                        <h4 className="text-base font-bold text-white mb-1">Dinamización de Stand/Feria <span className="text-amber-400 text-xs">(jornada completa)</span></h4>
+                                        <h4 className="text-base font-bold text-white mb-1">Dinamización de Stand / Feria <span className="text-amber-400 text-xs">(jornada completa)</span></h4>
                                         <p className="text-sm text-slate-300 leading-relaxed mb-3">
                                             Captación de leads mediante magia visual en ferias como IFEMA. Aumento demostrado del tráfico al stand.
                                         </p>
-                                        <span className="text-amber-400 text-xs font-bold">Desde 800€/jornada</span>
+                                        <span className="text-amber-400 text-xs font-bold">Desde 600€ la jornada</span>
                                     </div>
                                 </div>
                             </div>

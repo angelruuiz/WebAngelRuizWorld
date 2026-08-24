@@ -705,14 +705,16 @@ body::after {
 }
 
 
-/* Marquee animation for the homepage */
+/* Marquee animation for continuous infinite scroll */
 @keyframes marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
 }
 
 .animate-marquee {
-    animation: marquee 20s linear infinite;
+    display: flex;
+    flex-shrink: 0;
+    animation: marquee 30s linear infinite;
 }
 
 

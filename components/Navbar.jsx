@@ -72,119 +72,134 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
     return (
         <>
             <MagicSpiral isVisible={isTransitioning} />
-            <nav className={`fixed top-0 left-0 w-full z-50 flex justify-between items-center transition-all duration-500 py-4 px-6 md:px-12 ${isScrolled ? 'bg-[rgba(3,7,18,0.8)] backdrop-blur-2xl border-b border-white/[0.06] shadow-[0_4px_30px_rgba(0,0,0,0.4)]' : 'bg-transparent backdrop-blur-none'}`}>
-                <Link href="/" className="flex items-center z-50 transition-transform hover:scale-105">
-                    <Image 
-                        src="/images/logo-pequeno.webp" 
-                        alt="Ángel Ruiz mago ilusionista profesional Madrid - logo" 
-                        width={40} 
-                        height={40} 
-                        priority
-                        className="object-contain rounded-full border border-white/10 shadow-[0_0_15px_rgba(212,168,83,0.15)]"
-                    />
-                </Link>
-                
-                {/* Desktop Menu */}
-                <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-8 text-[11px] font-bold uppercase tracking-[0.3em]">
-                    {navLinks.map((link) => (
-                        <div key={link.name} className="relative group">
-                            <Link 
-                                href={link.href}
-                                onClick={(e) => link.href !== '#' && handleMagicTransition(e, link.href)}
-                                className={`transition-colors relative inline-block text-slate-300 hover:text-[#d4a853] ${pathname === link.href ? 'text-[#d4a853]' : ''}`}
-                            >
-                                {link.name}
-                                <span className={`absolute -bottom-1 left-1/2 -translate-x-1/2 h-[1px] bg-gradient-to-r from-[#d4a853] to-[#c9956b] transition-all duration-300 ${pathname === link.href ? 'w-full' : 'w-0 group-hover:w-full'}`} />
-                            </Link>
-                            
-                            {link.children && (
-                                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                                    <div className="flex flex-col bg-[rgba(3,7,18,0.95)] backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl py-2 min-w-[220px]">
-                                        {link.children.map(child => (
-                                            <Link 
-                                                key={child.name} 
-                                                href={child.href}
-                                                onClick={(e) => handleMagicTransition(e, child.href)}
-                                                className="px-5 py-3 text-slate-300 hover:text-[#d4a853] hover:bg-white/5 transition-colors whitespace-nowrap flex items-center gap-2"
-                                            >
-                                                <span className="w-1 h-1 bg-amber-500 rounded-full opacity-50"></span>
-                                                {child.name}
-                                            </Link>
-                                        ))}
+            <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 py-3.5 px-4 sm:px-6 lg:px-10 ${isScrolled ? 'bg-[rgba(3,7,18,0.85)] backdrop-blur-2xl border-b border-white/[0.06] shadow-[0_4px_30px_rgba(0,0,0,0.5)]' : 'bg-transparent backdrop-blur-none'}`}>
+                <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
+                    {/* Logo */}
+                    <Link href="/" className="flex items-center shrink-0 z-50 transition-transform hover:scale-105">
+                        <Image 
+                            src="/images/logo-pequeno.webp" 
+                            alt="Ángel Ruiz mago ilusionista profesional Madrid - logo" 
+                            width={40} 
+                            height={40} 
+                            priority
+                            className="object-contain rounded-full border border-white/10 shadow-[0_0_15px_rgba(212,168,83,0.15)]"
+                        />
+                    </Link>
+                    
+                    {/* Desktop Menu - Responsive Flex without Absolute Overlaps */}
+                    <div className="hidden lg:flex items-center justify-center gap-4 xl:gap-7 2xl:gap-8 text-[10px] xl:text-[11px] font-bold uppercase tracking-[0.15em] xl:tracking-[0.25em]">
+                        {navLinks.map((link) => (
+                            <div key={link.name} className="relative group py-2">
+                                <Link 
+                                    href={link.href}
+                                    onClick={(e) => link.href !== '#' && handleMagicTransition(e, link.href)}
+                                    className={`transition-colors relative inline-block text-slate-300 hover:text-[#d4a853] whitespace-nowrap ${pathname === link.href ? 'text-[#d4a853]' : ''}`}
+                                >
+                                    {link.name}
+                                    <span className={`absolute -bottom-1 left-1/2 -translate-x-1/2 h-[1px] bg-gradient-to-r from-[#d4a853] to-[#c9956b] transition-all duration-300 ${pathname === link.href ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+                                </Link>
+                                
+                                {link.children && (
+                                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">
+                                        <div className="flex flex-col bg-[rgba(3,7,18,0.95)] backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl py-2 min-w-[210px]">
+                                            {link.children.map(child => (
+                                                <Link 
+                                                    key={child.name} 
+                                                    href={child.href}
+                                                    onClick={(e) => handleMagicTransition(e, child.href)}
+                                                    className="px-5 py-2.5 text-slate-300 hover:text-[#d4a853] hover:bg-white/5 transition-colors whitespace-nowrap flex items-center gap-2 text-xs"
+                                                >
+                                                    <span className="w-1 h-1 bg-amber-500 rounded-full opacity-50"></span>
+                                                    {child.name}
+                                                </Link>
+                                            ))}
+                                        </div>
                                     </div>
-                                </div>
-                            )}
-                        </div>
-                    ))}
-                </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
 
-                <div className="hidden md:flex items-center gap-6 relative group">
-                    <motion.div 
-                        animate={{ opacity: [0.2, 0.5, 0.2], scale: [1, 1.05, 1] }} 
-                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                        className="absolute inset-0 bg-amber-500 blur-[15px] rounded-full pointer-events-none"
-                    />
-
-                    <motion.button 
-                        onClick={onOpenContact} 
-                        initial="rest"
-                        animate="rest"
-                        whileHover="hover" 
-                        whileTap="tap" 
-                        variants={{
-                            rest: { scale: 1 },
-                            hover: { scale: 1.05, y: -2 },
-                            tap: { scale: 0.95, y: 0 }
-                        }}
-                        transition={{ type: "spring", stiffness: 400, damping: 15 }}
-                        className="relative px-5 py-2.5 overflow-hidden rounded-full cursor-pointer border border-amber-300/50 shadow-[0_0_15px_rgba(245,158,11,0.3)] z-10 bg-[rgba(3,7,18,0.5)] backdrop-blur-md"
-                    >
+                    {/* Desktop Contact Button */}
+                    <div className="hidden lg:flex items-center shrink-0 relative group">
                         <motion.div 
-                            animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-                            transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                            className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-90 transition-opacity duration-300"
-                            style={{ 
-                                background: "linear-gradient(90deg, rgba(212,168,83,0.9), rgba(245,158,11,0.9), rgba(251,191,36,0.9), rgba(212,168,83,0.9))",
-                                backgroundSize: "200% 200%"
-                            }}
-                        />
-                        
-                        <motion.div
-                            variants={{
-                                hover: { x: ["-150%", "350%"], transition: { repeat: Infinity, duration: 1.2, ease: "linear" } },
-                                rest: { x: "-150%" },
-                                tap: { x: "350%" }
-                            }}
-                            className="absolute inset-0 w-[50%] bg-gradient-to-r from-transparent via-white/80 to-transparent skew-x-[30deg] pointer-events-none"
+                            animate={{ opacity: [0.2, 0.5, 0.2], scale: [1, 1.05, 1] }} 
+                            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                            className="absolute inset-0 bg-amber-500 blur-[15px] rounded-full pointer-events-none"
                         />
 
-                        <motion.div 
+                        <motion.button 
+                            onClick={onOpenContact} 
+                            initial="rest"
+                            animate="rest"
+                            whileHover="hover" 
+                            whileTap="tap" 
                             variants={{
-                                tap: { scale: 2.5, opacity: 0, transition: { duration: 0.6, ease: "easeOut" } },
-                                hover: { scale: 1, opacity: 0 },
-                                rest: { scale: 1, opacity: 0 }
+                                rest: { scale: 1 },
+                                hover: { scale: 1.05, y: -2 },
+                                tap: { scale: 0.95, y: 0 }
                             }}
-                            className="absolute inset-0 rounded-full border-[2px] border-white pointer-events-none"
-                        />
-                        
-                        <motion.span 
-                            variants={{
-                                tap: { filter: "blur(2px)", scale: 0.95 },
-                                hover: { filter: "blur(0px)", scale: 1 },
-                                rest: { filter: "blur(0px)", scale: 1 }
-                            }}
-                            className="relative z-10 flex items-center justify-center gap-2 text-slate-100 group-hover:text-slate-950 font-bold tracking-[0.1em] uppercase text-xs transition-colors duration-300"
+                            transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                            className="relative px-5 py-2.5 overflow-hidden rounded-full cursor-pointer border border-amber-300/50 shadow-[0_0_15px_rgba(245,158,11,0.3)] z-10 bg-[rgba(3,7,18,0.5)] backdrop-blur-md"
                         >
-                            Contacto 
-                            <motion.div variants={{
-                                hover: { rotate: 180, scale: 1.2, transition: { duration: 0.4 } },
-                                rest: { rotate: 0, scale: 1 },
-                                tap: { rotate: -45, scale: 0.8 }
-                            }}>
-                                <Sparkles className="w-3 h-3" />
-                            </motion.div>
-                        </motion.span>
-                    </motion.button>
+                            <motion.div 
+                                animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+                                transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+                                className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-90 transition-opacity duration-300"
+                                style={{ 
+                                    background: "linear-gradient(90deg, rgba(212,168,83,0.9), rgba(245,158,11,0.9), rgba(251,191,36,0.9), rgba(212,168,83,0.9))",
+                                    backgroundSize: "200% 200%"
+                                }}
+                            />
+                            
+                            <motion.div
+                                variants={{
+                                    hover: { x: ["-150%", "350%"], transition: { repeat: Infinity, duration: 1.2, ease: "linear" } },
+                                    rest: { x: "-150%" },
+                                    tap: { x: "350%" }
+                                }}
+                                className="absolute inset-0 w-[50%] bg-gradient-to-r from-transparent via-white/80 to-transparent skew-x-[30deg] pointer-events-none"
+                            />
+
+                            <motion.div 
+                                variants={{
+                                    tap: { scale: 2.5, opacity: 0, transition: { duration: 0.6, ease: "easeOut" } },
+                                    hover: { scale: 1, opacity: 0 },
+                                    rest: { scale: 1, opacity: 0 }
+                                }}
+                                className="absolute inset-0 rounded-full border-[2px] border-white pointer-events-none"
+                            />
+                            
+                            <motion.span 
+                                variants={{
+                                    tap: { filter: "blur(2px)", scale: 0.95 },
+                                    hover: { filter: "blur(0px)", scale: 1 },
+                                    rest: { filter: "blur(0px)", scale: 1 }
+                                }}
+                                className="relative z-10 flex items-center justify-center gap-2 text-slate-100 group-hover:text-slate-950 font-bold tracking-[0.1em] uppercase text-xs transition-colors duration-300"
+                            >
+                                Contacto 
+                                <motion.div variants={{
+                                    hover: { rotate: 180, scale: 1.2, transition: { duration: 0.4 } },
+                                    rest: { rotate: 0, scale: 1 },
+                                    tap: { rotate: -45, scale: 0.8 }
+                                }}>
+                                    <Sparkles className="w-3 h-3" />
+                                </motion.div>
+                            </motion.span>
+                        </motion.button>
+                    </div>
+
+                    {/* Tablet / Mobile Quick Contact Button */}
+                    <div className="lg:hidden flex items-center gap-3">
+                        <button 
+                            onClick={onOpenContact}
+                            className="px-3.5 py-1.5 rounded-full border border-amber-400/40 bg-amber-500/10 text-amber-400 text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 hover:bg-amber-500/20 transition-colors"
+                        >
+                            <span>Contacto</span>
+                            <Sparkles className="w-3 h-3" />
+                        </button>
+                    </div>
                 </div>
             </nav>
 
