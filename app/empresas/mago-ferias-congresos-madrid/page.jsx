@@ -2,6 +2,7 @@ import React from 'react';
 import NavFooterClient from '@/components/NavFooterClient';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import FAQItem from '@/components/FAQItem';
+import CorporateInlineForm from '@/components/CorporateInlineForm';
 
 export const metadata = {
   title: { absolute: 'Mago para Ferias y Congresos en Madrid | IFEMA · Ángel Ruiz' },
@@ -241,9 +242,15 @@ export default function Page() {
             Inicializa tu <span className="text-amber-500">Siguiente Evento</span>
           </h2>
           <p className="text-xl text-slate-400 mb-10 font-mono">No dejes la retención de marca al azar. Despliega una estrategia de impacto asegurada.</p>
-          <a href="https://wa.me/34648055636" className="inline-flex items-center justify-center px-8 py-4 border-2 border-amber-500 bg-amber-500/10 text-amber-500 hover:bg-amber-500 hover:text-black font-mono font-bold uppercase tracking-widest transition-all duration-300">
-            [ SOLICITAR PROPUESTA B2B ]
-          </a>
+          <div className="mb-10 text-left">
+            <CorporateInlineForm title="SOLICITAR DINAMIZACIÓN PARA FERIAS O STANDS" subtitle="Capta leads y maximiza el tráfico a tu stand en IFEMA y congresos" />
+          </div>
+          <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <span className="text-slate-400 font-mono text-xs">¿Prefieres contacto directo e instantáneo?</span>
+            <a href="https://wa.me/34648055636" className="inline-flex items-center justify-center px-6 py-3 border border-amber-500/60 bg-amber-500/10 text-amber-400 hover:bg-amber-500 hover:text-black font-mono font-bold uppercase tracking-widest text-xs transition-all duration-300">
+              [ CONTACTAR POR WHATSAPP ]
+            </a>
+          </div>
         </div>
       </section>
 

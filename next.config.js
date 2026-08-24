@@ -17,6 +17,16 @@ const nextConfig = {
     async redirects() {
         return [
             {
+                source: '/contacto',
+                destination: '/',
+                permanent: true,
+            },
+            {
+                source: '/mago-mentalista-madrid',
+                destination: '/',
+                permanent: true,
+            },
+            {
                 source: '/particulares/boda',
                 destination: '/particulares/bodas',
                 permanent: true,

@@ -5,6 +5,7 @@ import ContactButtonClient from '@/components/ContactButtonClient';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import FAQItem from '@/components/FAQItem';
+import CorporateInlineForm from '@/components/CorporateInlineForm';
 
 export const metadata = {
     title: { absolute: 'Mago para Empresas en Madrid | Ángel Ruiz (Eventos B2B)' },
@@ -369,8 +370,8 @@ export default function EmpresasPage() {
                                     <FAQItem key={index} faq={faq} />
                                 ))}
                             </div>
-                            <div className="mt-12 text-center">
-                                <ContactButtonClient label="Solicitar Presupuesto para tu Empresa" />
+                            <div className="mt-12">
+                                <CorporateInlineForm />
                             </div>
                         </div>
                     </section>

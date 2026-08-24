@@ -78,7 +78,7 @@ Tanto si buscas un ambiente sofisticado en el Barrio de Salamanca como un evento
 
 ---
 
-*¿Quieres que tu boda o evento de empresa sea inolvidable? No lo dejes para última hora. **[Contacta conmigo hoy mismo](/contacto)** para comprobar la disponibilidad de fechas y diseñar un espectáculo de magia de cerca a tu medida.*
+*¿Quieres que tu boda o evento de empresa sea inolvidable? No lo dejes para última hora. **[Contacta conmigo hoy mismo](/contratar-mago-madrid)** para comprobar la disponibilidad de fechas y diseñar un espectáculo de magia de cerca a tu medida.*
 
 
 ---
