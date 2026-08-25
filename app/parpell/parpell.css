@@ -1,6 +1,16 @@
 /* Parpell Theme & Animations */
 
 /* Base container overrides */
+html:has(.parpell-wrapper),
+body:has(.parpell-wrapper),
+body.parpell-active {
+  cursor: auto !important;
+}
+
+body.parpell-active * {
+  cursor: auto;
+}
+
 .parpell-wrapper {
   background-color: #080306;
   color: #F8F4F2;
@@ -13,15 +23,26 @@
 }
 
 .parpell-wrapper,
-.parpell-wrapper * {
+.parpell-wrapper *,
+.parpell-portal,
+.parpell-portal * {
   cursor: auto;
 }
 
-.parpell-wrapper button,
 .parpell-wrapper a,
+.parpell-wrapper button,
 .parpell-wrapper input,
+.parpell-wrapper select,
+.parpell-wrapper textarea,
 .parpell-wrapper [role="button"],
-.parpell-wrapper .cursor-pointer {
+.parpell-wrapper .cursor-pointer,
+.parpell-portal a,
+.parpell-portal button,
+.parpell-portal input,
+.parpell-portal select,
+.parpell-portal textarea,
+.parpell-portal [role="button"],
+.parpell-portal .cursor-pointer {
   cursor: pointer !important;
 }
 

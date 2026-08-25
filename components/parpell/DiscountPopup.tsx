@@ -61,7 +61,7 @@ export function DiscountPopup() {
   return createPortal(
     <AnimatePresence>
       {isOpen && (
-        <div className="fixed inset-0 z-[99999] flex items-center justify-center p-4 sm:p-6 overflow-hidden">
+        <div className="parpell-portal fixed inset-0 z-[99999] flex items-center justify-center p-4 sm:p-6 overflow-hidden select-none" style={{ cursor: "auto" }}>
           {/* Dark Blurred Backdrop */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -69,7 +69,8 @@ export function DiscountPopup() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35 }}
             onClick={handleClose}
-            className="fixed inset-0 bg-[#060109]/85 backdrop-blur-xl"
+            className="fixed inset-0 bg-[#060109]/85 backdrop-blur-xl cursor-pointer"
+            style={{ cursor: "pointer" }}
           />
 
           {/* Centered Modal Popup */}
@@ -78,7 +79,8 @@ export function DiscountPopup() {
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.8, opacity: 0, y: 30 }}
             transition={{ type: "spring", stiffness: 320, damping: 25 }}
-            className="relative z-[100000] w-full max-w-lg rounded-3xl p-7 sm:p-9 bg-gradient-to-b from-[#1C0D15] via-[#14080F] to-[#0A0307] border-2 border-[#9E5C6A]/60 shadow-[0_30px_100px_rgba(158,92,106,0.4)] text-left overflow-hidden"
+            className="relative z-[100000] w-full max-w-lg rounded-3xl p-7 sm:p-9 bg-gradient-to-b from-[#1C0D15] via-[#14080F] to-[#0A0307] border-2 border-[#9E5C6A]/60 shadow-[0_30px_100px_rgba(158,92,106,0.4)] text-left overflow-hidden select-auto"
+            style={{ cursor: "default" }}
           >
             {/* Ambient Wine Radial Flare */}
             <div className="absolute -top-20 -right-20 w-48 h-48 bg-[#9E5C6A]/30 rounded-full blur-3xl pointer-events-none" />
@@ -86,10 +88,12 @@ export function DiscountPopup() {
             {/* Close Button */}
             <button
               onClick={handleClose}
-              className="absolute top-4 right-4 p-2 rounded-full bg-white/[0.06] hover:bg-white/[0.15] text-zinc-300 hover:text-white transition-all cursor-pointer z-10"
-              title="Cerrar"
+              className="absolute top-4 right-4 p-2.5 rounded-full bg-white/[0.08] hover:bg-white/[0.2] text-zinc-300 hover:text-white transition-all cursor-pointer z-10 shadow-md"
+              title="Cerrar ventana"
+              type="button"
+              style={{ cursor: "pointer" }}
             >
-              <X className="w-4 h-4" />
+              <X className="w-5 h-5" />
             </button>
 
             {!claimed ? (
@@ -120,6 +124,7 @@ export function DiscountPopup() {
                         ? "bg-[#9E5C6A] text-white shadow-md"
                         : "text-zinc-400 hover:text-white"
                     }`}
+                    style={{ cursor: "pointer" }}
                   >
                     <Mail className="w-3.5 h-3.5" />
                     <span>Correo Electrónico</span>
@@ -132,6 +137,7 @@ export function DiscountPopup() {
                         ? "bg-[#9E5C6A] text-white shadow-md"
                         : "text-zinc-400 hover:text-white"
                     }`}
+                    style={{ cursor: "pointer" }}
                   >
                     <Phone className="w-3.5 h-3.5" />
                     <span>Teléfono / WhatsApp</span>
@@ -152,12 +158,14 @@ export function DiscountPopup() {
                       value={inputValue}
                       onChange={(e) => setInputValue(e.target.value)}
                       className="w-full h-12 pl-4 pr-12 rounded-xl bg-white/[0.05] border border-white/[0.15] focus:border-[#9E5C6A] text-sm text-white placeholder:text-zinc-500 focus:outline-none transition-all shadow-inner"
+                      style={{ cursor: "text" }}
                     />
                   </div>
 
                   <button
                     type="submit"
                     className="w-full h-12 rounded-xl bg-[#9E5C6A] hover:bg-[#854b57] text-white text-sm font-bold shadow-lg shadow-[#9E5C6A]/40 flex items-center justify-center gap-2 transition-all cursor-pointer group"
+                    style={{ cursor: "pointer" }}
                   >
                     <Sparkles className="w-4 h-4 text-amber-300" />
                     <span>Reclamar mi 15% de Descuento</span>
