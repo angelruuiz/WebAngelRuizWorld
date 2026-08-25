@@ -89,26 +89,34 @@ export const ReadingProgress = () => {
 };
 
 export const ParticleBackground = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined' && window.innerWidth >= 768) {
+            setIsDesktop(true);
+        }
+    }, []);
+
     const [particles] = useState(() => {
-        const count = typeof window !== 'undefined' && window.innerWidth < 768 ? 8 : 16;
-        const colors = ['bg-[#d4a853]/15', 'bg-[#c9956b]/12', 'bg-[#e8cc8a]/10'];
-        return Array.from({ length: count }).map((_, i) => ({ 
+        const colors = ['bg-[#d4a853]/20', 'bg-[#c9956b]/15', 'bg-[#e8cc8a]/12'];
+        return Array.from({ length: 12 }).map((_, i) => ({ 
             id: i, 
             x: Math.random() * 100, 
             y: Math.random() * 100, 
             size: Math.random() * 2 + 1, 
             duration: Math.random() * 14 + 10,
             delay: Math.random() * 8,
-            color: colors[Math.floor(Math.random() * colors.length)]
+            color: colors[i % colors.length]
         }));
     });
+
     return (
         <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden select-none">
             <div className="absolute inset-0 bg-[#030712] z-0" />
-            {particles.map((p) => (
+            {isDesktop && particles.map((p) => (
                 <div 
                     key={p.id} 
-                    className={`absolute rounded-full ${p.color} blur-[1px]`}
+                    className={`absolute rounded-full ${p.color}`}
                     style={{ 
                         left: `${p.x}%`, 
                         top: `${p.y}%`, 

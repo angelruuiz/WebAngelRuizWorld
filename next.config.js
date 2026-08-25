@@ -2,6 +2,9 @@
 const nextConfig = {
     compress: true,
     reactStrictMode: true,
+    experimental: {
+        optimizePackageImports: ['lucide-react', 'framer-motion'],
+    },
     images: {
         unoptimized: false,
         formats: ['image/avif', 'image/webp'],

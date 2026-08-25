@@ -65,19 +65,21 @@ import { Cinzel, Cormorant_Garamond, Outfit } from 'next/font/google';
 
 const cinzel = Cinzel({ 
   subsets: ['latin'],
+  weight: ['400', '700'],
   variable: '--font-cinzel',
   display: 'swap',
 });
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['400', '600'],
   variable: '--font-cormorant',
   display: 'swap',
 });
 
 const outfit = Outfit({
   subsets: ['latin'],
+  weight: ['300', '400', '600'],
   variable: '--font-outfit',
   display: 'swap',
 });
@@ -147,8 +149,6 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(globalSchema) }}
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://cdn.trustindex.io" />
         <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
         <link rel="dns-prefetch" href="https://www.instagram.com" />
