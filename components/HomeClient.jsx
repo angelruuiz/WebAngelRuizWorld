@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles } from '@/components/Icons';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
@@ -30,26 +30,36 @@ const SplitText = ({ text }) => {
 import LiquidGlassForm from '@/components/LiquidGlassForm';
 
 const HeroClient = () => {
+    const [isDesktop, setIsDesktop] = useState(false);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined' && window.innerWidth >= 768) {
+            setIsDesktop(true);
+        }
+    }, []);
+
     return (
         <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden z-10 pt-24 pb-16 lg:py-0">
             <div className="absolute inset-0 z-0 overflow-hidden" style={{ aspectRatio: '16/9', width: '100%', height: '100%' }}>
-                {/* Desktop: video */}
-                <div className="hidden md:block absolute inset-0">
-                    <video 
-                        autoPlay 
-                        loop 
-                        muted 
-                        playsInline 
-                        preload="none"
-                        poster="/images/hero-poster.webp"
-                        className="w-full h-full object-cover"
-                    >
-                        <source src="/spring.webm" type="video/webm" />
-                        <source src="/spring.mp4" type="video/mp4" />
-                    </video>
-                </div>
-                {/* Mobile: imagen estática de alta calidad */}
-                <div className="block md:hidden absolute inset-0">
+                {/* Desktop: video cargado condicionalmente en cliente para no penalizar móvil */}
+                {isDesktop && (
+                    <div className="hidden md:block absolute inset-0">
+                        <video 
+                            autoPlay 
+                            loop 
+                            muted 
+                            playsInline 
+                            preload="none"
+                            poster="/images/hero-poster.webp"
+                            className="w-full h-full object-cover"
+                        >
+                            <source src="/spring.webm" type="video/webm" />
+                            <source src="/spring.mp4" type="video/mp4" />
+                        </video>
+                    </div>
+                )}
+                {/* Mobile / Fallback Poster */}
+                <div className={`absolute inset-0 ${isDesktop ? 'md:hidden' : 'block'}`}>
                     <picture>
                         <source srcSet="/images/hero-poster.webp" type="image/webp" />
                         <img 
@@ -57,6 +67,7 @@ const HeroClient = () => {
                             alt="Ángel Ruiz, mago e ilusionista profesional en Madrid" 
                             className="w-full h-full object-cover object-[50%_75%]" 
                             loading="eager"
+                            fetchPriority="high"
                             width={1920}
                             height={1080}
                         />
@@ -157,10 +168,8 @@ export const PerpetualCard = ({ children, className = "" }) => {
             transition={{ type: "spring", duration: 0.5, bounce: 0.2 }}
             className={`p-10 rounded-[2.5rem] bg-white/5 backdrop-blur-xl border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] relative overflow-hidden group ${className}`}
         >
-            <motion.div 
-                animate={{ opacity: [0.3, 0.5, 0.3] }} 
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent pointer-events-none"
+            <div 
+                className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent pointer-events-none opacity-40 group-hover:opacity-75 transition-opacity duration-500 will-change-[opacity]"
             />
             {children}
         </motion.div>

@@ -153,8 +153,8 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
         <link rel="dns-prefetch" href="https://www.instagram.com" />
         <link rel="dns-prefetch" href="https://www.tiktok.com" />
-        <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-NWEPX8BGXB" />
-        <Script id="google-analytics" strategy="afterInteractive" dangerouslySetInnerHTML={{
+        <Script strategy="lazyOnload" src="https://www.googletagmanager.com/gtag/js?id=G-NWEPX8BGXB" />
+        <Script id="google-analytics" strategy="lazyOnload" dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

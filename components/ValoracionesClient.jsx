@@ -115,7 +115,7 @@ export default function ValoracionesClient({ reviewsData }) {
             <main className="pb-24">
                 <section className="relative h-[60vh] flex items-center justify-center overflow-hidden mb-12">
                     <div className="absolute inset-0 z-0 overflow-hidden">
-                        <video autoPlay loop muted playsInline className="w-full h-full object-cover grayscale opacity-80">
+                        <video autoPlay loop muted playsInline preload="none" className="w-full h-full object-cover grayscale opacity-80">
                             <source src="/cambio-carta.mp4" type="video/mp4" />
                             <div className="w-full h-full bg-slate-950"></div>
                         </video>

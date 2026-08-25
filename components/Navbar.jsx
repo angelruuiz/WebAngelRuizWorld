@@ -122,10 +122,8 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
 
                     {/* Desktop Contact Button */}
                     <div className="hidden md:flex items-center shrink-0 relative group">
-                        <motion.div 
-                            animate={{ opacity: [0.2, 0.5, 0.2], scale: [1, 1.05, 1] }} 
-                            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute inset-0 bg-amber-500 blur-[15px] rounded-full pointer-events-none"
+                        <div 
+                            className="absolute inset-0 bg-amber-500/30 blur-[15px] rounded-full pointer-events-none group-hover:bg-amber-500/60 transition-all duration-500"
                         />
 
                         <motion.button 
@@ -142,14 +140,8 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                             transition={{ type: "spring", stiffness: 400, damping: 15 }}
                             className="relative px-3.5 lg:px-5 py-2 lg:py-2.5 overflow-hidden rounded-full cursor-pointer border border-amber-300/50 shadow-[0_0_15px_rgba(245,158,11,0.3)] z-10 bg-[rgba(3,7,18,0.5)] backdrop-blur-md"
                         >
-                            <motion.div 
-                                animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-                                transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-                                className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-90 transition-opacity duration-300"
-                                style={{ 
-                                    background: "linear-gradient(90deg, rgba(212,168,83,0.9), rgba(245,158,11,0.9), rgba(251,191,36,0.9), rgba(212,168,83,0.9))",
-                                    backgroundSize: "200% 200%"
-                                }}
+                            <div 
+                                className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-90 transition-opacity duration-300 bg-gradient-to-r from-[#d4a853] via-amber-400 to-[#d4a853]"
                             />
                             
                             <motion.div

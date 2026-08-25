@@ -557,25 +557,35 @@ body::after {
 
 /* Gold pulse for accents */
 @keyframes pulse-gold {
-    0%, 100% { box-shadow: 0 0 0 0 var(--gold-glow); }
-    50%      { box-shadow: 0 0 20px 4px var(--gold-glow); }
+    0%, 100% { transform: scale(1); opacity: 0.85; }
+    50%      { transform: scale(1.02); opacity: 1; }
 }
 
 .animate-pulse-gold {
     animation: pulse-gold 3s ease-in-out infinite;
+    will-change: transform, opacity;
 }
 
 /* Divider gradient animation */
 @keyframes divider-shimmer {
-    0%   { background-position: -200% 0; }
-    100% { background-position: 200% 0; }
+    0%   { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
 }
 
 .divider-animated {
     height: 1px;
+    position: relative;
+    overflow: hidden;
+    background: rgba(212, 168, 83, 0.2);
+}
+
+.divider-animated::after {
+    content: '';
+    position: absolute;
+    inset: 0;
     background: linear-gradient(90deg, transparent, var(--gold-300), transparent);
-    background-size: 200% 100%;
-    animation: divider-shimmer 4s linear infinite;
+    animation: divider-shimmer 4s ease-in-out infinite;
+    will-change: transform;
 }
 
 
@@ -696,12 +706,14 @@ body::after {
 
 /* WhatsApp FAB animation */
 @keyframes fab-pulse {
-    0%, 100% { box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
-    50% { box-shadow: 0 4px 25px rgba(37, 211, 102, 0.5); }
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); }
 }
 
 .fab-whatsapp {
-    animation: fab-pulse 2.5s ease-in-out infinite;
+    animation: fab-pulse 3s ease-in-out infinite;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    will-change: transform;
 }
 
 
@@ -715,6 +727,7 @@ body::after {
     display: flex;
     flex-shrink: 0;
     animation: marquee 30s linear infinite;
+    will-change: transform;
 }
 
 /* GPU Hardware-accelerated particle floating */
