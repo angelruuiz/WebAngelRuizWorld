@@ -7,6 +7,7 @@ export const MagicCursor = ({ isLight = false }) => {
     const [isHovering, setIsHovering] = useState(false);
 
     useEffect(() => {
+        document.body.classList.add('has-magic-cursor');
         const cursor = cursorRef.current;
         if (!cursor) return;
 
@@ -39,6 +40,7 @@ export const MagicCursor = ({ isLight = false }) => {
         rafId = requestAnimationFrame(render);
 
         return () => {
+            document.body.classList.remove('has-magic-cursor');
             window.removeEventListener('mousemove', onMouseMove);
             window.removeEventListener('mouseover', onMouseOver);
             cancelAnimationFrame(rafId);

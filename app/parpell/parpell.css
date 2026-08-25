@@ -4,11 +4,11 @@
 html:has(.parpell-wrapper),
 body:has(.parpell-wrapper),
 body.parpell-active {
-  cursor: auto !important;
+  cursor: default !important;
 }
 
 body.parpell-active * {
-  cursor: auto;
+  cursor: default;
 }
 
 .parpell-wrapper {
@@ -19,31 +19,36 @@ body.parpell-active * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  cursor: auto !important;
+  cursor: default !important;
 }
 
 .parpell-wrapper,
 .parpell-wrapper *,
 .parpell-portal,
 .parpell-portal * {
-  cursor: auto;
+  cursor: default;
 }
 
 .parpell-wrapper a,
 .parpell-wrapper button,
-.parpell-wrapper input,
-.parpell-wrapper select,
-.parpell-wrapper textarea,
+.parpell-wrapper input[type="submit"],
+.parpell-wrapper input[type="button"],
 .parpell-wrapper [role="button"],
 .parpell-wrapper .cursor-pointer,
 .parpell-portal a,
 .parpell-portal button,
-.parpell-portal input,
-.parpell-portal select,
-.parpell-portal textarea,
+.parpell-portal input[type="submit"],
+.parpell-portal input[type="button"],
 .parpell-portal [role="button"],
 .parpell-portal .cursor-pointer {
   cursor: pointer !important;
+}
+
+.parpell-wrapper input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]),
+.parpell-wrapper textarea,
+.parpell-portal input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]),
+.parpell-portal textarea {
+  cursor: text !important;
 }
 
 .parpell-wrapper h1,

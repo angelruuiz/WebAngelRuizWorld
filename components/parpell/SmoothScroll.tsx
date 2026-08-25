@@ -4,10 +4,13 @@ import { useEffect } from "react";
 
 export function SmoothScroll() {
   useEffect(() => {
-    // Ensure standard cursor is active in Parpell
+    // Ensure standard OS cursor is active on HTML & Body in Parpell
+    document.documentElement.classList.add("parpell-html");
     document.body.classList.add("parpell-active");
-    const prevCursor = document.body.style.cursor;
-    document.body.style.cursor = "auto";
+    const prevBodyCursor = document.body.style.cursor;
+    const prevHtmlCursor = document.documentElement.style.cursor;
+    document.body.style.cursor = "default";
+    document.documentElement.style.cursor = "default";
 
     let lenisInstance: any;
     let rafId: number;
@@ -29,8 +32,10 @@ export function SmoothScroll() {
     })();
 
     return () => {
+      document.documentElement.classList.remove("parpell-html");
       document.body.classList.remove("parpell-active");
-      document.body.style.cursor = prevCursor;
+      document.body.style.cursor = prevBodyCursor;
+      document.documentElement.style.cursor = prevHtmlCursor;
       if (rafId) cancelAnimationFrame(rafId);
       lenisInstance?.destroy();
       delete (window as any).__parpellLenis;
