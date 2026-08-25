@@ -27,7 +27,7 @@ const comparisonData: ComparisonRow[] = [
     feature: "Todo el material audiovisual y cuentas son 100% de tu propiedad",
   },
   {
-    feature: "Auditorías con capturas reales de posicionamiento de IA cada mes",
+    feature: "Auditorías y seguimiento de posicionamiento real en IA cada mes",
   },
 ];
 

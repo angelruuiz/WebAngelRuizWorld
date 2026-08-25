@@ -375,7 +375,7 @@ export default function ParpellLanding() {
             <span>FACT</span>
           </div>
           <p className="text-xs sm:text-sm text-zinc-200 leading-relaxed font-medium">
-            <strong className="text-white">Somos 2 socios y no delegamos en becarios ni agencias externas.</strong> Para garantizar rodajes con cámara de cine y código a medida de máxima calidad, mantenemos un <strong className="text-[#E598A8]">cupo estrictamente limitado de clientes simultáneos</strong>.
+            <strong className="text-white">Somos 2 socios y trabajamos directamente contigo, sin becarios ni intermediarios.</strong> Para asegurar rodajes con cámara de cine y soluciones a medida de máxima calidad, <strong className="text-[#E598A8]">aceptamos un cupo limitado de clientes a la vez</strong>.
           </p>
         </div>
 
@@ -396,7 +396,7 @@ export default function ParpellLanding() {
             { title: "Sin intermediarios", desc: "Hablas con los 2 socios" },
             { title: "Cámara de cine", desc: "Grabamos en tu negocio" },
             { title: "Todo es tuyo", desc: "Cuentas y vídeos propios" },
-            { title: "Pruebas reales", desc: "Capturas de IA al mes" },
+            { title: "Pruebas reales", desc: "Seguimiento de IA real" },
           ].map((item) => (
             <div
               key={item.title}

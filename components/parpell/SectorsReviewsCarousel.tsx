@@ -2,7 +2,7 @@
 
 import React, { useRef } from "react";
 import { motion, useAnimationFrame } from "framer-motion";
-import { Star } from "lucide-react";
+import { Star, ShieldCheck } from "lucide-react";
 
 interface GoogleReview {
   id: number;
@@ -12,7 +12,6 @@ interface GoogleReview {
   guideInfo: string;
   date: string;
   sector: string;
-  city: string;
   text: string;
   rating: number;
 }
@@ -26,8 +25,7 @@ const googleReviews: GoogleReview[] = [
     guideInfo: "Local Guide · 28 reseñas",
     date: "Hace 4 días",
     sector: "Clínica Estética",
-    city: "Valencia",
-    text: "Increíble cómo ha cambiado la visibilidad de la clínica. Desde que salimos recomendados en ChatGPT cuando la gente busca tratamientos faciales y medicina estética en Valencia, las consultas de pacientes de calidad no paran de llegar.",
+    text: "Increíble cómo ha cambiado la visibilidad de la clínica. Desde que salimos recomendados en ChatGPT cuando la gente busca tratamientos faciales y medicina estética en la zona, las consultas de pacientes de calidad no paran de llegar.",
     rating: 5,
   },
   {
@@ -38,32 +36,28 @@ const googleReviews: GoogleReview[] = [
     guideInfo: "12 reseñas",
     date: "Hace 2 semanas",
     sector: "Gimnasio & CrossFit",
-    city: "Madrid",
-    text: "El día de rodaje con cámara de cine fue una pasada. Los vídeos tienen una calidad brutal de documental y por Instagram no paran de pedir información para apuntarse. Grandes.",
-    rating: 5,
+    text: "El día de rodaje con cámara de cine fue una pasada. Los vídeos tienen una calidad brutal de documental y por Instagram no paran de pedir información para apuntarse. Muy buen trabajo.",
+    rating: 4,
   },
   {
     id: 3,
     author: "Víctor Chen",
-    avatarUrl: "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=120&h=120&q=80", // Mascota del restaurante
+    avatarUrl: "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?auto=format&fit=crop&w=120&h=120&q=80",
     avatarBg: "from-red-500 to-rose-700",
     guideInfo: "Local Guide · 45 reseñas",
     date: "Hace 1 mes",
     sector: "Restaurante Asiático",
-    city: "Barcelona",
     text: "El trato con los dos socios es impecable. Grabaron nuestros platos y la barra de sushi con una calidad de cine. En dos meses salimos recomendados en ChatGPT cuando buscan dónde cenar ramen o sushi por la zona.",
     rating: 5,
   },
   {
     id: 4,
     author: "Javier Gómez",
-    // Sin foto (solo inicial Google)
     avatarBg: "from-emerald-600 to-teal-800",
     guideInfo: "Local Guide · 19 reseñas",
     date: "Hace 7 meses",
     sector: "Taberna & Restaurante",
-    city: "Sevilla",
-    text: "Llevábamos años dependiendo solo del boca a boca. Entre el posicionamiento en ChatGPT cuando buscan dónde comer bien en Sevilla y los vídeos que nos hicieron, los fines de semana tenemos el comedor completo.",
+    text: "Llevábamos años dependiendo solo del boca a boca. Entre el posicionamiento en ChatGPT cuando buscan dónde comer bien en el sector y los vídeos que nos hicieron, los fines de semana tenemos el comedor completo.",
     rating: 5,
   },
   {
@@ -74,19 +68,17 @@ const googleReviews: GoogleReview[] = [
     guideInfo: "8 reseñas",
     date: "Hace 3 semanas",
     sector: "Peluquería & Color",
-    city: "Alicante",
     text: "Qué gusto da trabajar con gente tan cercana. No te marean con palabras raras: vienen, graban con un estilazo que flipas y las clientas lo notan nada más entrar.",
-    rating: 5,
+    rating: 4,
   },
   {
     id: 6,
     author: "David Parejo",
-    avatarUrl: "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=120&h=120&q=80", // Dibujo / Ilustración
+    avatarUrl: "https://images.unsplash.com/photo-1578632767115-351597cf2477?auto=format&fit=crop&w=120&h=120&q=80",
     avatarBg: "from-blue-500 to-cyan-700",
     guideInfo: "Local Guide · 31 reseñas",
     date: "Hace 5 meses",
     sector: "Barbería",
-    city: "Málaga",
     text: "Antes la gente se iba a las franquicias de centro comercial. Ahora cuando buscan cortes y arreglo de barba en ChatGPT o Maps salimos los primeros y nos llega gente nueva todas las semanas.",
     rating: 5,
   },
@@ -98,21 +90,19 @@ const googleReviews: GoogleReview[] = [
     guideInfo: "15 reseñas",
     date: "Hace 6 días",
     sector: "Tienda de Ropa",
-    city: "Zaragoza",
     text: "Los vídeos verticales tienen un gancho que no había visto en ninguna agencia. Se nota mucho que no delegan en becarios, el trato de tú a tú es de 10.",
     rating: 5,
   },
   {
     id: 8,
     author: "Carlos Barroso",
-    avatarUrl: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=120&h=120&q=80", // Dibujo abstracto / Geek
+    avatarUrl: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=120&h=120&q=80",
     avatarBg: "from-cyan-500 to-blue-700",
     guideInfo: "Local Guide · 52 reseñas",
     date: "Hace 4 meses",
     sector: "Productos Electrónicos",
-    city: "Bilbao",
     text: "Nos auditaron las fugas de clientes y nos configuraron todo para salir en ChatGPT cuando alguien pide presupuestos de equipos. Un acierto absoluto.",
-    rating: 5,
+    rating: 4,
   },
   {
     id: 9,
@@ -122,57 +112,49 @@ const googleReviews: GoogleReview[] = [
     guideInfo: "9 reseñas",
     date: "Hace 11 meses",
     sector: "Bufete de Abogados",
-    city: "Murcia",
     text: "En la abogacía la reputación y la sobriedad lo son todo. El posicionamiento en IA y los vídeos nos han consolidado como despacho de referencia.",
     rating: 5,
   },
   {
     id: 10,
     author: "Tomás Hernández",
-    // Sin foto (solo inicial Google)
     avatarBg: "from-amber-600 to-yellow-800",
     guideInfo: "Local Guide · 16 reseñas",
     date: "Hace 8 meses",
     sector: "Carpintería a Medida",
-    city: "Valladolid",
     text: "Gente seria y trabajadora. Nos montaron la presencia en IA y los vídeos del taller y ahora nos llegan encargos de cocinas y muebles a medida con presupuestos muy buenos.",
-    rating: 5,
+    rating: 4,
   },
   {
     id: 11,
     author: "Manuel Ruz",
-    avatarUrl: "https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=120&h=120&q=80", // Animal / Perro
+    avatarUrl: "https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&w=120&h=120&q=80",
     avatarBg: "from-orange-500 to-red-700",
     guideInfo: "22 reseñas",
     date: "Hace 1 año",
     sector: "Ferretería Industrial",
-    city: "Córdoba",
-    text: "Pensábamos que la IA era solo para empresas modernas de software. Nos equivocamos: los profesionales de la provincia nos encuentran antes que a los almacenes grandes.",
+    text: "Pensábamos que la IA era solo para empresas de software. Nos equivocamos: los profesionales del sector nos encuentran antes que a los almacenes grandes.",
     rating: 5,
   },
   {
     id: 12,
     author: "Antonio Castillo",
-    // Sin foto (solo inicial Google)
     avatarBg: "from-stone-600 to-neutral-800",
     guideInfo: "Local Guide · 38 reseñas",
     date: "Hace 2 meses",
     sector: "Albañilería & Reformas",
-    city: "Toledo",
     text: "Trato impecable. Nos grabaron en obra con cámara de cine y la imagen que damos ahora nos permite cerrar presupuestos más altos sin que nos regateen.",
     rating: 5,
   },
   {
     id: 13,
     author: "Santiago Fuentes",
-    // Sin foto (solo inicial tradicional Google)
     avatarBg: "from-amber-700 to-yellow-900",
     guideInfo: "11 reseñas",
     date: "Hace 1 año",
     sector: "Ebanistería",
-    city: "Salamanca",
     text: "La delicadeza con la que mostraron nuestro taller y cómo nos encuentra la gente en Google y ChatGPT cuando buscan restaurar muebles antiguos no tiene precio. Muy agradecido a los dos socios.",
-    rating: 5,
+    rating: 4,
   },
 ];
 
@@ -218,10 +200,10 @@ export function SectorsReviewsCarousel() {
         <span className="text-xs font-mono font-semibold uppercase tracking-widest text-[#9E5C6A] block mb-3">
           Opiniones Reales en Google
         </span>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 leading-tight">
+        <h2 className="text-2xl sm:text-4xl md:text-5xl font-extrabold text-white mb-3 sm:mb-4 leading-tight">
           Sectores en los que ya hemos impactado.
         </h2>
-        <p className="text-sm sm:text-base text-zinc-300 max-w-lg mx-auto leading-relaxed">
+        <p className="text-xs sm:text-base text-zinc-300 max-w-lg mx-auto leading-relaxed">
           Desde clínicas y restaurantes hasta talleres artesanos y despachos. Negocios reales que ya reciben clientes gracias a la IA y el vídeo.
         </p>
       </div>
@@ -235,10 +217,16 @@ export function SectorsReviewsCarousel() {
         onMouseLeave={() => {
           isHoveredRef.current = false;
         }}
+        onTouchStart={() => {
+          isHoveredRef.current = true;
+        }}
+        onTouchEnd={() => {
+          isHoveredRef.current = false;
+        }}
       >
         {/* Soft Lateral Vignette Fades */}
-        <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-r from-[#080306] via-[#080306]/85 to-transparent z-20 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-[#080306] via-[#080306]/85 to-transparent z-20 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-[#080306] via-[#080306]/85 to-transparent z-20 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-[#080306] via-[#080306]/85 to-transparent z-20 pointer-events-none" />
 
         {/* Perpetual Infinite VSync-Synchronized Track */}
         <div
@@ -319,10 +307,14 @@ function GoogleReviewCard({ review }: { review: GoogleReview }) {
         {/* Rating & Date */}
         <div className="flex items-center gap-2 mb-3">
           <div className="flex items-center gap-0.5">
-            {[...Array(review.rating)].map((_, i) => (
+            {[...Array(5)].map((_, i) => (
               <Star
                 key={i}
-                className="w-3.5 h-3.5 fill-[#F59E0B] text-[#F59E0B]"
+                className={`w-3.5 h-3.5 ${
+                  i < review.rating
+                    ? "fill-[#F59E0B] text-[#F59E0B]"
+                    : "fill-zinc-300 text-zinc-300"
+                }`}
               />
             ))}
           </div>
@@ -335,13 +327,14 @@ function GoogleReviewCard({ review }: { review: GoogleReview }) {
         </p>
       </div>
 
-      {/* Sector Only Footer */}
+      {/* Sector Footer (No Location) */}
       <div className="mt-4 pt-3 border-t border-[#EBE3D7] flex items-center justify-between">
         <span className="text-xs font-bold text-[#883C4D] font-mono uppercase tracking-wider">
           {review.sector}
         </span>
-        <span className="text-[10px] font-mono text-zinc-500 font-medium">
-          {review.city}
+        <span className="text-[10px] font-mono text-zinc-500 font-medium flex items-center gap-1">
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+          <span>Verificada</span>
         </span>
       </div>
     </div>
