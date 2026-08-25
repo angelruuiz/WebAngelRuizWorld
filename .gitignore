@@ -36,3 +36,7 @@ yarn-error.log*
 *.zip
 resultados-console-*/
 angelruiz.world-Performance-on-Search-*/
+
+# typescript
+*.tsbuildinfo
+

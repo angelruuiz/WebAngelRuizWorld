@@ -1,15 +1,18 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Sparkles, Mail } from './Icons';
 
 export default function NewsletterModal() {
+    const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
     const [status, setStatus] = useState("idle");
     const FORMSPREE_ENDPOINT = "https://formspree.io/f/xeoydngl";
 
     useEffect(() => {
+        if (pathname?.startsWith('/parpell')) return;
         // Verificar si ya se ha mostrado o si el usuario lo cerró
         const hasShown = localStorage.getItem('newsletter_modal_v1');
         
