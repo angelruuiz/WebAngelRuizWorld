@@ -58,6 +58,10 @@ const PurpIAMascot = dynamic(
   () => import("@/components/parpell/PurpIAMascot").then((m) => m.PurpIAMascot),
   { ssr: false }
 );
+const LiquidGlassNavbar = dynamic(
+  () => import("@/components/parpell/LiquidGlassNavbar").then((m) => m.LiquidGlassNavbar),
+  { ssr: false }
+);
 
 export default function ParpellLanding() {
   const [activeTab, setActiveTab] = useState<1 | 2 | 3 | 4>(1);
@@ -257,10 +261,13 @@ export default function ParpellLanding() {
       {/* 15% Discount Pop-up */}
       <DiscountPopup />
 
+      {/* Sleek Floating Glass Mobile Header & Nav Drawer */}
+      <LiquidGlassNavbar />
+
       {/* Background Subtle Constellation Mesh */}
       <BackgroundMesh />
 
-      {/* Vertical Interactive Scroll Timeline Nav (Left Side, Layered under 3D) */}
+      {/* Vertical Interactive Scroll Timeline Nav (Left Side, Desktop only) */}
       <VerticalTimelineNav />
 
       {/* Floating Interactive Purp.IA Mascot (Bottom-Right) */}
@@ -302,14 +309,14 @@ export default function ParpellLanding() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="relative z-30 w-full max-w-4xl mx-auto px-6 sm:px-8 min-h-screen flex flex-col justify-between items-center text-center pt-10 sm:pt-14 pb-12 sm:pb-16"
+        className="relative z-30 w-full max-w-4xl mx-auto px-4 sm:px-8 min-h-[90vh] sm:min-h-screen flex flex-col justify-between items-center text-center pt-20 sm:pt-24 pb-8 sm:pb-16"
       >
         <div className="flex-1 flex flex-col justify-center items-center">
           {/* 3D Spinning Parpell Logo (Top Layer) */}
           <Parpell3DSpin onLoaded={() => setLoadProgress(100)} />
 
           {/* Sized Headline with generous breathing room */}
-          <h1 className="text-2xl sm:text-4xl md:text-[42px] lg:text-[46px] font-extrabold tracking-tight text-white mt-3 mb-2 leading-[1.2] sm:leading-[1.22]">
+          <h1 className="text-2xl sm:text-4xl md:text-[42px] lg:text-[46px] font-extrabold tracking-tight text-white mt-2 sm:mt-3 mb-2 leading-[1.2] sm:leading-[1.22]">
             Que la IA te recomiende. <br />
             <span className="shimmer-text">Que el vídeo te haga irresistible.</span> <br />
             Que tu equipo venda.
@@ -324,15 +331,15 @@ export default function ParpellLanding() {
           }}
           whileHover={{ scale: 1.05, y: -2 }}
           whileTap={{ scale: 0.96 }}
-          className="flex flex-col items-center gap-2 group cursor-pointer mt-4 mb-2"
+          className="flex flex-col items-center gap-2 group cursor-pointer mt-3 mb-2"
           title="Deslizar para descubrir más"
         >
-          <div className="flex items-center gap-3 px-6 py-2.5 rounded-full bg-[#1A0A16]/90 hover:bg-[#281022] border border-[#9E5C6A]/60 hover:border-[#C27A8A] text-xs sm:text-sm font-mono tracking-wider text-[#F8F4F2] font-bold backdrop-blur-xl shadow-[0_0_25px_rgba(158,92,106,0.35)] group-hover:shadow-[0_0_35px_rgba(158,92,106,0.6)] transition-all">
+          <div className="flex items-center gap-2.5 sm:gap-3 px-5 sm:px-6 py-2.5 rounded-full bg-[#1A0A16]/90 hover:bg-[#281022] border border-[#9E5C6A]/60 hover:border-[#C27A8A] text-xs sm:text-sm font-mono tracking-wider text-[#F8F4F2] font-bold backdrop-blur-xl shadow-[0_0_25px_rgba(158,92,106,0.35)] group-hover:shadow-[0_0_35px_rgba(158,92,106,0.6)] transition-all">
             <span>Desliza para ver más</span>
             <motion.div
               animate={{ y: [0, 4, 0] }}
               transition={{ duration: 1.4, repeat: Infinity, ease: "easeInOut" }}
-              className="w-6 h-6 rounded-full bg-[#9E5C6A]/35 border border-[#9E5C6A]/70 flex items-center justify-center text-[#F3B0BE]"
+              className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#9E5C6A]/35 border border-[#9E5C6A]/70 flex items-center justify-center text-[#F3B0BE]"
             >
               <ChevronDown className="w-3.5 h-3.5" />
             </motion.div>
@@ -349,7 +356,7 @@ export default function ParpellLanding() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.15 }}
         transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-        className="relative z-30 w-full max-w-4xl mx-auto px-6 sm:px-8 pt-10 sm:pt-14 pb-8 sm:pb-12 flex flex-col items-center text-center space-y-10 sm:space-y-12"
+        className="relative z-30 w-full max-w-4xl mx-auto px-4 sm:px-8 pt-8 sm:pt-14 pb-8 sm:pb-12 flex flex-col items-center text-center space-y-8 sm:space-y-12"
       >
         {/* Human, Friendly Subtitle with clear separation */}
         <div className="max-w-2xl mx-auto space-y-3">
@@ -357,7 +364,7 @@ export default function ParpellLanding() {
             No somos una agencia de marketing cualquiera.
           </p>
           <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-normal">
-            Aplicamos <strong className="text-[#C27A8A] font-semibold whitespace-nowrap">GEO (Generative Engine Optimization)</strong>: el posicionamiento en motores de IA para que modelos como ChatGPT citen tu negocio como la opción recomendada nº1 en tu zona.
+            Aplicamos <strong className="text-[#C27A8A] font-semibold">GEO (Generative Engine Optimization)</strong>: el posicionamiento en motores de IA para que modelos como ChatGPT citen tu negocio como la opción recomendada nº1 en tu zona.
           </p>
         </div>
 
@@ -875,19 +882,19 @@ export default function ParpellLanding() {
                   duration: 0.25,
                 },
               }}
-              className="relative z-10 w-full max-w-4xl max-h-[90vh] overflow-y-auto p-6 sm:p-10 rounded-3xl bg-[#14031B] border-2 border-fuchsia-500/70 shadow-[0_0_140px_rgba(217,70,239,0.5)] text-left"
+              className="relative z-10 w-full max-w-4xl max-h-[92vh] overflow-y-auto p-5 sm:p-8 md:p-10 rounded-3xl bg-[#14031B] border-2 border-fuchsia-500/70 shadow-[0_0_140px_rgba(217,70,239,0.5)] text-left"
             >
               {/* Header inside the Secret Chamber */}
-              <div className="flex items-center justify-between pb-4 mb-6 border-b border-fuchsia-500/30">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-purple-600 to-fuchsia-500 border border-fuchsia-300/60 flex items-center justify-center text-white shadow-[0_0_25px_rgba(217,70,239,0.5)]">
-                    <Sparkles className="w-6 h-6" />
+              <div className="flex items-center justify-between pb-4 mb-5 sm:mb-6 border-b border-fuchsia-500/30 gap-2">
+                <div className="flex items-center gap-2.5 sm:gap-3">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-tr from-purple-600 to-fuchsia-500 border border-fuchsia-300/60 flex items-center justify-center text-white shadow-[0_0_25px_rgba(217,70,239,0.5)] shrink-0">
+                    <Sparkles className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
                   <div>
-                    <span className="text-xs font-mono text-fuchsia-300 font-bold uppercase tracking-widest block">
+                    <span className="text-[10px] sm:text-xs font-mono text-fuchsia-300 font-bold uppercase tracking-widest block">
                       Has entrado en
                     </span>
-                    <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+                    <h2 className="text-lg sm:text-3xl font-black text-white tracking-tight">
                       El Cuarto Secreto
                     </h2>
                   </div>
@@ -898,10 +905,11 @@ export default function ParpellLanding() {
                   whileHover={{ scale: 1.06 }}
                   whileTap={{ scale: 0.94 }}
                   onClick={() => setIsSecretChamberOpen(false)}
-                  className="px-4 py-2 rounded-full bg-white/[0.08] hover:bg-fuchsia-600/30 border border-white/[0.15] hover:border-fuchsia-400 text-xs font-bold text-white flex items-center gap-1.5 transition-all cursor-pointer shadow-lg"
+                  className="px-3 sm:px-4 py-2 rounded-full bg-white/[0.08] hover:bg-fuchsia-600/30 border border-white/[0.15] hover:border-fuchsia-400 text-xs font-bold text-white flex items-center gap-1.5 transition-all cursor-pointer shadow-lg shrink-0"
                 >
                   <X className="w-4 h-4 text-fuchsia-300" />
-                  <span>Salir del Secreto (Esc)</span>
+                  <span className="hidden sm:inline">Salir del Secreto (Esc)</span>
+                  <span className="sm:hidden">Salir</span>
                 </motion.button>
               </div>
 

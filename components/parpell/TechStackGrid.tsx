@@ -204,7 +204,7 @@ function MeshGlobe({
   logos: LogoNode[];
 }) {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center w-full max-w-full overflow-hidden sm:overflow-visible">
       {/* Category Header Badge */}
       <div className="flex items-center gap-2.5 mb-4">
         <div className="w-8 h-8 rounded-xl flex items-center justify-center border bg-cyan-500/15 border-cyan-400/35 text-cyan-300">
@@ -217,12 +217,13 @@ function MeshGlobe({
         </div>
       </div>
 
-      {/* Constellation Mesh Sphere */}
-      <motion.div
-        animate={{ rotate: [0, 360] }}
-        transition={{ duration: 140, repeat: Infinity, ease: "linear" }}
-        className="relative w-[320px] h-[320px] sm:w-[380px] sm:h-[380px] md:w-[420px] md:h-[420px] rounded-full flex items-center justify-center bg-[#070A12]/95 border border-cyan-500/25 shadow-[0_0_55px_rgba(56,189,248,0.18)] overflow-visible group"
-      >
+      {/* Constellation Mesh Sphere with responsive mobile scaling */}
+      <div className="scale-[0.78] xs:scale-[0.88] sm:scale-100 origin-center my-[-25px] sm:my-0">
+        <motion.div
+          animate={{ rotate: [0, 360] }}
+          transition={{ duration: 140, repeat: Infinity, ease: "linear" }}
+          className="relative w-[380px] h-[380px] md:w-[420px] md:h-[420px] rounded-full flex items-center justify-center bg-[#070A12]/95 border border-cyan-500/25 shadow-[0_0_55px_rgba(56,189,248,0.18)] overflow-visible group"
+        >
         {/* Constellation Particle Canvas Mesh */}
         <ConstellationCanvas />
 
@@ -269,6 +270,7 @@ function MeshGlobe({
           })}
         </div>
       </motion.div>
+      </div>
     </div>
   );
 }

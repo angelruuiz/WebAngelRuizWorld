@@ -79,7 +79,7 @@ export function DiscountPopup() {
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.8, opacity: 0, y: 30 }}
             transition={{ type: "spring", stiffness: 320, damping: 25 }}
-            className="relative z-[100000] w-full max-w-lg rounded-3xl p-7 sm:p-9 bg-gradient-to-b from-[#1C0D15] via-[#14080F] to-[#0A0307] border-2 border-[#9E5C6A]/60 shadow-[0_30px_100px_rgba(158,92,106,0.4)] text-left overflow-hidden select-auto"
+            className="relative z-[100000] w-full max-w-lg rounded-3xl p-5 sm:p-8 md:p-9 bg-gradient-to-b from-[#1C0D15] via-[#14080F] to-[#0A0307] border-2 border-[#9E5C6A]/60 shadow-[0_30px_100px_rgba(158,92,106,0.4)] text-left max-h-[92vh] overflow-y-auto select-auto"
             style={{ cursor: "default" }}
           >
             {/* Ambient Wine Radial Flare */}
@@ -88,28 +88,28 @@ export function DiscountPopup() {
             {/* Close Button */}
             <button
               onClick={handleClose}
-              className="absolute top-4 right-4 p-2.5 rounded-full bg-white/[0.08] hover:bg-white/[0.2] text-zinc-300 hover:text-white transition-all cursor-pointer z-10 shadow-md"
+              className="absolute top-3.5 right-3.5 sm:top-4 sm:right-4 p-2.5 rounded-full bg-white/[0.08] hover:bg-white/[0.2] text-zinc-300 hover:text-white transition-all cursor-pointer z-10 shadow-md"
               title="Cerrar ventana"
               type="button"
               style={{ cursor: "pointer" }}
             >
-              <X className="w-5 h-5" />
+              <X className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
 
             {!claimed ? (
-              <div className="space-y-5">
+              <div className="space-y-4 sm:space-y-5 pt-1 sm:pt-0">
                 {/* 15% Badge */}
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#9E5C6A]/20 border border-[#9E5C6A]/50 text-xs font-mono text-[#F7EBED]">
-                  <Tag className="w-3.5 h-3.5 text-[#C27A8A]" />
+                <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 rounded-full bg-[#9E5C6A]/20 border border-[#9E5C6A]/50 text-[11px] sm:text-xs font-mono text-[#F7EBED]">
+                  <Tag className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#C27A8A]" />
                   <span className="font-bold tracking-wider">PROMOCIÓN EXCLUSIVA WEB</span>
                 </div>
 
                 {/* Title & Description */}
                 <div>
-                  <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight leading-tight">
+                  <h3 className="text-xl sm:text-3xl font-extrabold text-white tracking-tight leading-tight">
                     Reclama un <span className="text-[#C27A8A]">15% de Descuento</span> en tu Auditoría o Setup
                   </h3>
-                  <p className="text-xs sm:text-sm text-zinc-300 mt-2 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-zinc-300 mt-1.5 sm:mt-2 leading-relaxed">
                     Déjanos tu contacto preferido para congelar tu tarifa reducida antes de reservar tu llamada de 30 minutos.
                   </p>
                 </div>

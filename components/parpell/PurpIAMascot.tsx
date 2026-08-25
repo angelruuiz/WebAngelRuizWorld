@@ -153,19 +153,18 @@ export function PurpIAMascot({ isSecretChamberOpen = false }: PurpIAMascotProps)
 
   return (
     <aside
-      className={`fixed bottom-7 sm:bottom-10 right-4 sm:right-8 flex items-end gap-3.5 select-none pointer-events-auto flex-row-reverse transition-all ${
-        isSecretChamberOpen ? "z-[100002]" : "z-50"
+      className={`fixed bottom-4 sm:bottom-10 right-3 sm:right-8 flex items-end gap-2.5 sm:gap-3.5 select-none pointer-events-auto flex-row-reverse transition-all ${
+        isSecretChamberOpen ? "z-[100002]" : "z-40"
       }`}
     >
-      
       {/* Mascot Avatar (Pure Floating Character, No Box / No Card) */}
       <div className="relative flex flex-col items-center">
         {/* Soft Ambient Purple Glow Behind Pure Mascot */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 sm:w-24 h-20 sm:h-24 bg-gradient-to-tr from-[#A855F7]/30 via-[#C084FC]/20 to-transparent rounded-full blur-2xl -z-10 pointer-events-none" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 sm:w-24 h-16 sm:h-24 bg-gradient-to-tr from-[#A855F7]/30 via-[#C084FC]/20 to-transparent rounded-full blur-xl -z-10 pointer-events-none" />
 
-        {/* Pure Levitating Mascot GIF without any bounding box */}
+        {/* Pure Levitating Mascot GIF */}
         <motion.div
-          animate={{ y: [0, -8, 0], rotate: [0, -1.5, 1.5, 0] }}
+          animate={{ y: [0, -6, 0], rotate: [0, -1.5, 1.5, 0] }}
           transition={{
             duration: 3.4,
             repeat: Infinity,
@@ -174,7 +173,7 @@ export function PurpIAMascot({ isSecretChamberOpen = false }: PurpIAMascotProps)
           whileHover={{ scale: 1.15, rotate: 3 }}
           whileTap={{ scale: 0.92 }}
           onClick={handleMascotClick}
-          className="relative w-16 h-16 sm:w-20 sm:h-20 cursor-pointer flex items-center justify-center filter drop-shadow-[0_10px_25px_rgba(168,85,247,0.55)] transition-transform"
+          className="relative w-13 h-13 sm:w-20 sm:h-20 cursor-pointer flex items-center justify-center filter drop-shadow-[0_8px_20px_rgba(168,85,247,0.55)] transition-transform"
           title="Soy Purp.IA, ¡haz clic para interactuar!"
         >
           <Image
@@ -198,11 +197,11 @@ export function PurpIAMascot({ isSecretChamberOpen = false }: PurpIAMascotProps)
             animate={{ opacity: 1, scale: 1, y: 0, x: 0 }}
             exit={{ opacity: 0, scale: 0.85, y: 10, x: 8 }}
             transition={{ type: "spring", stiffness: 380, damping: 26 }}
-            className="relative max-w-[240px] sm:max-w-[280px] p-3.5 sm:p-4 rounded-2xl bg-[#140618]/95 border border-[#C084FC]/40 shadow-[0_12px_40px_rgba(0,0,0,0.9),0_0_25px_rgba(168,85,247,0.25)] backdrop-blur-2xl text-left mb-2 sm:mb-3"
+            className="relative max-w-[190px] xs:max-w-[230px] sm:max-w-[280px] p-3 sm:p-4 rounded-2xl bg-[#140618]/95 border border-[#C084FC]/40 shadow-[0_12px_40px_rgba(0,0,0,0.9),0_0_25px_rgba(168,85,247,0.25)] backdrop-blur-2xl text-left mb-1 sm:mb-3"
           >
             {/* Crisp Triangular Tail pointing directly right towards Mascot */}
             <svg
-              className="absolute -right-3 bottom-5 w-3.5 h-4 text-[#140618] overflow-visible pointer-events-none"
+              className="absolute -right-2.5 bottom-4 w-3 h-3.5 text-[#140618] overflow-visible pointer-events-none"
               viewBox="0 0 14 16"
               fill="none"
             >
@@ -213,15 +212,14 @@ export function PurpIAMascot({ isSecretChamberOpen = false }: PurpIAMascotProps)
                 strokeWidth="1.2"
                 strokeLinejoin="round"
               />
-              {/* Clean seam cover */}
               <rect x="-2" y="1.5" width="4" height="13" fill="#140618" />
             </svg>
 
             {/* Bubble Header */}
-            <div className="flex items-center justify-between gap-2 mb-1.5 pb-1 border-b border-white/[0.08]">
+            <div className="flex items-center justify-between gap-2 mb-1 pb-1 border-b border-white/[0.08]">
               <div className="flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#C084FC] animate-ping" />
-                <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-[#E9D5FF]">
+                <span className="text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider text-[#E9D5FF]">
                   {currentDialogue.tag}
                 </span>
               </div>
@@ -239,7 +237,7 @@ export function PurpIAMascot({ isSecretChamberOpen = false }: PurpIAMascotProps)
             </div>
 
             {/* Message Body */}
-            <p className="text-xs sm:text-[13px] text-zinc-100 font-sans leading-snug font-medium">
+            <p className="text-[11px] sm:text-[13px] text-zinc-100 font-sans leading-snug font-medium">
               {currentDialogue.message}
             </p>
           </motion.div>

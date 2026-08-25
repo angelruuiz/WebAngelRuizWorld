@@ -317,11 +317,11 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
       {/* 3D Interactive Canvas Box */}
       <div
         ref={containerRef}
-        className={`relative w-72 sm:w-80 md:w-96 h-72 sm:h-80 md:h-96 flex items-center justify-center cursor-grab ${
+        className={`relative w-56 sm:w-72 md:w-88 lg:w-96 h-56 sm:h-72 md:h-88 lg:h-96 flex items-center justify-center cursor-grab touch-pan-y ${
           isDragging ? "cursor-grabbing" : ""
         }`}
       >
-        <canvas ref={canvasRef} className="w-full h-full block touch-none" />
+        <canvas ref={canvasRef} className="w-full h-full block" />
       </div>
     </div>
   );
