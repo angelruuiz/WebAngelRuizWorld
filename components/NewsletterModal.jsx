@@ -23,7 +23,12 @@ export default function NewsletterModal() {
             }, 8000);
             return () => clearTimeout(timer);
         }
-    }, []);
+    }, [pathname]);
+
+    // Do not show on /parpell
+    if (pathname?.startsWith('/parpell')) {
+        return null;
+    }
 
     const handleClose = () => {
         setIsOpen(false);

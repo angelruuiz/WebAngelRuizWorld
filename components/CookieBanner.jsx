@@ -1,12 +1,15 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function CookieBanner() {
+    const pathname = usePathname();
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
+        if (pathname?.startsWith('/parpell')) return;
         // Verificar si ya se ha aceptado
         const hasAccepted = localStorage.getItem('cookies_accepted');
         if (!hasAccepted) {
@@ -15,7 +18,12 @@ export default function CookieBanner() {
             }, 2000);
             return () => clearTimeout(timer);
         }
-    }, []);
+    }, [pathname]);
+
+    // Do not show on /parpell
+    if (pathname?.startsWith('/parpell')) {
+        return null;
+    }
 
     const handleAccept = () => {
         setIsVisible(false);
