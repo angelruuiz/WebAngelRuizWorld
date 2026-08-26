@@ -33,38 +33,23 @@ export function VerticalTimelineNav() {
   });
 
   useEffect(() => {
-    let ticking = false;
-    const handleScroll = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        ticking = false;
-        // If user is at or near the bottom of the page, activate the last section
-        const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 150;
-        if (isAtBottom) {
-          setActiveSection(sections[sections.length - 1].id);
-          return;
-        }
-
-        const scrollPos = window.scrollY + window.innerHeight * 0.4;
-
-        for (let i = sections.length - 1; i >= 0; i--) {
-          const sec = document.getElementById(sections[i].id);
-          if (sec) {
-            const top = sec.offsetTop;
-            if (scrollPos >= top) {
-              setActiveSection(sections[i].id);
-              break;
-            }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
           }
-        }
-      });
-    };
+        });
+      },
+      { rootMargin: "-20% 0px -55% 0px", threshold: 0 }
+    );
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
+    sections.forEach((sec) => {
+      const el = document.getElementById(sec.id);
+      if (el) observer.observe(el);
+    });
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => observer.disconnect();
   }, []);
 
   const scrollToSection = (id: string) => {

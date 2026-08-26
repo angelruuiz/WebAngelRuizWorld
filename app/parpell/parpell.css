@@ -7,10 +7,6 @@ body.parpell-active {
   cursor: default !important;
 }
 
-body.parpell-active * {
-  cursor: default;
-}
-
 .parpell-wrapper {
   background-color: #080306;
   color: #F8F4F2;
@@ -19,36 +15,7 @@ body.parpell-active * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  cursor: default !important;
-}
-
-.parpell-wrapper,
-.parpell-wrapper *,
-.parpell-portal,
-.parpell-portal * {
   cursor: default;
-}
-
-.parpell-wrapper a,
-.parpell-wrapper button,
-.parpell-wrapper input[type="submit"],
-.parpell-wrapper input[type="button"],
-.parpell-wrapper [role="button"],
-.parpell-wrapper .cursor-pointer,
-.parpell-portal a,
-.parpell-portal button,
-.parpell-portal input[type="submit"],
-.parpell-portal input[type="button"],
-.parpell-portal [role="button"],
-.parpell-portal .cursor-pointer {
-  cursor: pointer !important;
-}
-
-.parpell-wrapper input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]),
-.parpell-wrapper textarea,
-.parpell-portal input:not([type="submit"]):not([type="button"]):not([type="checkbox"]):not([type="radio"]),
-.parpell-portal textarea {
-  cursor: text !important;
 }
 
 .parpell-wrapper h1,

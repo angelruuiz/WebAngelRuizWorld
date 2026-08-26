@@ -100,7 +100,8 @@ function ConstellationCanvas() {
       ([entry]) => {
         isVisible = entry.isIntersecting;
         if (isVisible) {
-          render();
+          cancelAnimationFrame(animId);
+          render(0);
         } else {
           cancelAnimationFrame(animId);
         }
@@ -110,9 +111,17 @@ function ConstellationCanvas() {
     observer.observe(canvas);
 
     let time = 0;
-    const render = () => {
+    let lastRenderTime = 0;
+    const frameBudget = 33; // 30fps is silky smooth for ambient node orbits
+
+    const render = (timestamp: number = 0) => {
       if (!isVisible) return;
-      time += 0.016;
+      animId = requestAnimationFrame(render);
+
+      if (timestamp - lastRenderTime < frameBudget) return;
+      lastRenderTime = timestamp;
+
+      time += 0.033;
       ctx.clearRect(0, 0, size, size);
 
       const grad = ctx.createRadialGradient(
@@ -130,7 +139,7 @@ function ConstellationCanvas() {
 
       for (let i = 0; i < nodes.length; i++) {
         const node = nodes[i];
-        node.baseAngle += node.speed;
+        node.baseAngle += node.speed * 2;
         const currentR = node.baseRadius + Math.sin(time + node.baseAngle * 2) * 1.2;
         node.x = centerX + Math.cos(node.baseAngle) * currentR;
         node.y = centerY + Math.sin(node.baseAngle) * currentR;
@@ -140,8 +149,6 @@ function ConstellationCanvas() {
         ctx.arc(node.x, node.y, node.size, 0, Math.PI * 2);
         ctx.fill();
       }
-
-      animId = requestAnimationFrame(render);
     };
 
     return () => {

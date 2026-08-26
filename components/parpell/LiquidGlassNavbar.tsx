@@ -28,27 +28,40 @@ export function LiquidGlassNavbar() {
   const [activeSection, setActiveSection] = useState("inicio");
 
   useEffect(() => {
-    let ticking = false;
-    const handleScroll = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        ticking = false;
-        setScrolled(window.scrollY > 20);
-
-        const scrollPos = window.scrollY + window.innerHeight * 0.35;
-        for (let i = navItems.length - 1; i >= 0; i--) {
-          const id = navItems[i].href.replace("#", "");
-          const el = document.getElementById(id);
-          if (el && scrollPos >= el.offsetTop) {
-            setActiveSection(id);
-            break;
+    // 1. IntersectionObserver for active section tracking (zero reflows)
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
           }
-        }
-      });
+        });
+      },
+      { rootMargin: "-20% 0px -60% 0px", threshold: 0 }
+    );
+
+    navItems.forEach((item) => {
+      const el = document.getElementById(item.href.replace("#", ""));
+      if (el) observer.observe(el);
+    });
+
+    // 2. Ultra-lightweight scroll listener only for background blur toggle
+    let lastScrolled = false;
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 20;
+      if (isScrolled !== lastScrolled) {
+        lastScrolled = isScrolled;
+        setScrolled(isScrolled);
+      }
     };
+
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const handleNavClick = (href: string) => {

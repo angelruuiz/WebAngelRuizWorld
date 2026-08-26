@@ -89,48 +89,29 @@ export function PurpIAMascot({ isSecretChamberOpen = false }: PurpIAMascotProps)
     }
   }, [isSecretChamberOpen]);
 
-  // Scroll detection to update active section dialogue
+  // IntersectionObserver to update active section dialogue (zero reflows, silky smooth scroll)
   useEffect(() => {
-    let ticking = false;
-    const handleScroll = () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        ticking = false;
-        const isAtBottom =
-          window.innerHeight + window.scrollY >=
-          document.documentElement.scrollHeight - 150;
-
-        if (isAtBottom) {
-          setActiveSection("contacto");
-          return;
-        }
-
-        const scrollPos = window.scrollY + window.innerHeight * 0.35;
-
-        for (let i = sectionOrder.length - 1; i >= 0; i--) {
-          const secId = sectionOrder[i];
-          const el = document.getElementById(secId);
-          if (el) {
-            const top = el.offsetTop;
-            if (scrollPos >= top) {
-              if (activeSection !== secId) {
-                setActiveSection(secId);
-                setCustomQuoteIdx(null);
-                setIsBubbleVisible(true);
-              }
-              break;
-            }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const secId = entry.target.id;
+            setActiveSection(secId);
+            setCustomQuoteIdx(null);
+            setIsBubbleVisible(true);
           }
-        }
-      });
-    };
+        });
+      },
+      { rootMargin: "-20% 0px -55% 0px", threshold: 0 }
+    );
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
+    sectionOrder.forEach((secId) => {
+      const el = document.getElementById(secId);
+      if (el) observer.observe(el);
+    });
 
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [activeSection]);
+    return () => observer.disconnect();
+  }, []);
 
   const currentDialogue = isSecretChamberOpen
     ? {
