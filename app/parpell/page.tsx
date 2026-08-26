@@ -65,8 +65,6 @@ const LiquidGlassNavbar = dynamic(
 
 export default function ParpellLanding() {
   const [activeTab, setActiveTab] = useState<1 | 2 | 3 | 4>(1);
-  const [hoveredNav, setHoveredNav] = useState<string | null>(null);
-  const [scrolled, setScrolled] = useState(false);
 
   // Parpell Brand Loading Screen State
   const [loadProgress, setLoadProgress] = useState(0);
@@ -179,13 +177,6 @@ export default function ParpellLanding() {
       item.def.toLowerCase().includes(dictSearch.toLowerCase())
   );
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -302,12 +293,8 @@ export default function ParpellLanding() {
       {/* ========================================================================= */}
       {/* 00. HERO (Apple Style + 3D Spinning Parpell Logo) */}
       {/* ========================================================================= */}
-      <motion.section
+      <section
         id="inicio"
-        initial={{ opacity: 0, y: 15 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
         className="relative z-30 w-full max-w-4xl mx-auto px-4 sm:px-8 min-h-[90vh] sm:min-h-screen flex flex-col justify-between items-center text-center pt-20 sm:pt-24 lg:pt-12 pb-8 sm:pb-16"
       >
         <div className="flex-1 flex flex-col justify-center items-center">
@@ -344,7 +331,7 @@ export default function ParpellLanding() {
             </motion.div>
           </div>
         </motion.button>
-      </motion.section>
+      </section>
 
       {/* ========================================================================= */}
       {/* 00.1 HERO DETALLES & PILARES (Aparece tras deslizar) */}

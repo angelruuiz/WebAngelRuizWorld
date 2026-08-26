@@ -13,8 +13,6 @@ interface Parpell3DSpinProps {
 export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const [isLoaded, setIsLoaded] = useState<boolean>(false);
-  const [isDragging, setIsDragging] = useState<boolean>(false);
   const [useFallback, setUseFallback] = useState<boolean>(false);
 
   useEffect(() => {
@@ -139,7 +137,6 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
             });
 
             modelGroup.add(root);
-            setIsLoaded(true);
             onProgress?.(100);
             onLoaded?.();
           },
@@ -152,7 +149,6 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
           (error) => {
             console.warn("Could not load 3D GLB model, using 2D fallback:", error);
             setUseFallback(true);
-            setIsLoaded(true);
             onProgress?.(100);
             onLoaded?.();
           }
@@ -168,11 +164,40 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
         let dragVelocity = { x: 0, y: 0 };
         let mouseNormalized = { x: 0, y: 0 };
 
-        // 7. Animation Loop
+        // Visibility tracking — pause RAF when off-screen or tab hidden
+        let isOnScreen = true;
+        let isTabVisible = true;
+
+        const visObserver = new IntersectionObserver(
+          ([entry]) => {
+            const wasOnScreen = isOnScreen;
+            isOnScreen = entry.isIntersecting;
+            if (isOnScreen && !wasOnScreen && !cancelled) {
+              clock.getDelta(); // consume stale delta
+              cancelAnimationFrame(animationFrameId);
+              animate();
+            }
+          },
+          { threshold: 0.0, rootMargin: "200px" }
+        );
+        visObserver.observe(container);
+
+        const handleVisibility = () => {
+          const wasTabVisible = isTabVisible;
+          isTabVisible = document.visibilityState === "visible";
+          if (isTabVisible && !wasTabVisible && isOnScreen && !cancelled) {
+            clock.getDelta();
+            cancelAnimationFrame(animationFrameId);
+            animate();
+          }
+        };
+        document.addEventListener("visibilitychange", handleVisibility);
+
+        // 7. Animation Loop — only runs when visible
         const clock = new THREE.Clock();
 
         const animate = () => {
-          if (cancelled) return;
+          if (cancelled || !isOnScreen || !isTabVisible) return;
           animationFrameId = requestAnimationFrame(animate);
 
           const elapsedTime = clock.getElapsedTime();
@@ -221,14 +246,15 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
         // 8. Interaction Handlers (Mouse & Touch on Container Only)
         const onPointerDown = (clientX: number, clientY: number) => {
           isInteracting = true;
-          setIsDragging(true);
+          container.style.cursor = "grabbing";
           previousMousePosition = { x: clientX, y: clientY };
           dragVelocity = { x: 0, y: 0 };
         };
 
         const onPointerMove = (clientX: number, clientY: number) => {
+          if (!isOnScreen) return;
+
           const rect = container.getBoundingClientRect();
-          // Only update mouse tracking if container is currently on screen
           if (rect.bottom > 0 && rect.top < window.innerHeight) {
             const rawX = ((clientX - rect.left) / (rect.width || 1) - 0.5) * 2;
             const rawY = -((clientY - rect.top) / (rect.height || 1) - 0.5) * 2;
@@ -236,8 +262,6 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
               x: Math.max(-1, Math.min(1, rawX)),
               y: Math.max(-1, Math.min(1, rawY)),
             };
-          } else {
-            mouseNormalized = { x: 0, y: 0 };
           }
 
           if (!isInteracting) return;
@@ -257,7 +281,7 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
 
         const onPointerUp = () => {
           isInteracting = false;
-          setIsDragging(false);
+          container.style.cursor = "grab";
         };
 
         const handleMouseDown = (e: MouseEvent) => {
@@ -310,6 +334,8 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
 
         cleanup = () => {
           cancelAnimationFrame(animationFrameId);
+          visObserver.disconnect();
+          document.removeEventListener("visibilitychange", handleVisibility);
           window.removeEventListener("resize", handleResize);
           container.removeEventListener("mousedown", handleMouseDown);
           window.removeEventListener("mousemove", handleMouseMove);
@@ -339,7 +365,6 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
       } catch (err) {
         console.warn("WebGL initialization failed, falling back to 2D logo:", err);
         setUseFallback(true);
-        setIsLoaded(true);
         onLoaded?.();
         return undefined;
       }
@@ -397,9 +422,7 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
       {/* 3D Interactive Canvas Box with Touch Pan Support */}
       <div
         ref={containerRef}
-        className={`relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 flex items-center justify-center cursor-grab touch-pan-y ${
-          isDragging ? "cursor-grabbing" : ""
-        }`}
+        className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 flex items-center justify-center cursor-grab touch-pan-y"
         title="Gira el logo 3D interactivo de Parpell"
       >
         <canvas ref={canvasRef} className="w-full h-full block pointer-events-auto" />

@@ -64,13 +64,23 @@ export function BackgroundMesh() {
       isTabVisible = document.visibilityState === "visible";
       if (isTabVisible) {
         cancelAnimationFrame(animationFrameId);
-        render();
+        render(0);
       }
     };
     document.addEventListener("visibilitychange", handleVisibilityChange);
 
-    const render = () => {
+    let lastFrameTime = 0;
+    const frameBudget = 33; // ~30fps is plenty for slow particles
+
+    const render = (timestamp: number = 0) => {
       if (!isTabVisible) return;
+
+      animationFrameId = requestAnimationFrame(render);
+
+      // Throttle to ~30fps
+      if (timestamp - lastFrameTime < frameBudget) return;
+      lastFrameTime = timestamp;
+
       ctx.clearRect(0, 0, width, height);
 
       for (let i = 0; i < particles.length; i++) {
@@ -88,11 +98,9 @@ export function BackgroundMesh() {
         ctx.fillStyle = `rgba(194, 122, 138, ${p.alpha})`;
         ctx.fill();
       }
-
-      animationFrameId = requestAnimationFrame(render);
     };
 
-    render();
+    render(0);
 
     return () => {
       window.removeEventListener("resize", handleResize);
