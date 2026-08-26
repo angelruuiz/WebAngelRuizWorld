@@ -305,21 +305,21 @@ body {
 .header-nav-links {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: clamp(14px, 1.6vw, 24px);
 }
 
 .nav-item {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 7px;
   font-family: var(--font-mono);
-  font-size: 0.76rem;
-  font-weight: 700;
+  font-size: clamp(0.92rem, 1.05vw, 1.06rem);
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   color: var(--text-main);
   text-decoration: none;
-  padding: 6px 12px;
+  padding: 8px 18px;
   border-radius: 9999px;
   position: relative;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
@@ -328,7 +328,8 @@ body {
 
 .nav-num {
   font-family: var(--font-mono);
-  font-weight: 800;
+  font-size: 1.05em;
+  font-weight: 900;
   color: var(--text-muted);
   transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: inline-block;
@@ -336,8 +337,8 @@ body {
 
 .nav-slash {
   color: var(--text-muted);
-  opacity: 0.55;
-  font-size: 0.85em;
+  opacity: 0.6;
+  font-size: 0.9em;
   transition: color 0.2s;
 }
 
