@@ -1111,9 +1111,62 @@ body {
   right: -24px;
 }
 .scroll-nav-btn-flank:hover {
-  transform: translateY(-50%) scale(1.12);
+  transform: translateY(-50%) scale(1.14);
   box-shadow: 9px 9px 0 var(--border-main);
   background: var(--electric);
+}
+
+.scroll-nav-btn-flank:active,
+.scroll-nav-btn-flank.btn-punch {
+  animation: btnPunch 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes btnPunch {
+  0% { transform: translateY(-50%) scale(0.82) rotate(-15deg); background: var(--neon); color: #FFF; }
+  50% { transform: translateY(-50%) scale(1.22) rotate(8deg); background: var(--electric); color: #000; }
+  100% { transform: translateY(-50%) scale(1) rotate(0deg); }
+}
+
+@keyframes cardShiftRight {
+  0% { transform: scale(1) skewX(0deg); }
+  30% { transform: scale(0.95) skewX(-3.5deg) translateY(-8px); }
+  65% { transform: scale(1.02) skewX(1deg) translateY(2px); }
+  100% { transform: scale(1) skewX(0deg) translateY(0); }
+}
+
+@keyframes cardShiftLeft {
+  0% { transform: scale(1) skewX(0deg); }
+  30% { transform: scale(0.95) skewX(3.5deg) translateY(-8px); }
+  65% { transform: scale(1.02) skewX(-1deg) translateY(2px); }
+  100% { transform: scale(1) skewX(0deg) translateY(0); }
+}
+
+@keyframes thumbPop {
+  0% { transform: scale(1.09); filter: brightness(1.22) saturate(1.2); }
+  100% { transform: scale(1); filter: brightness(1) saturate(1); }
+}
+
+@keyframes shadowSpring {
+  0% { transform: translate(12px, 12px); }
+  40% { transform: translate(22px, 22px); }
+  100% { transform: translate(12px, 12px); }
+}
+
+.works-horizontal-scroll.navigating-right .work-card-inner {
+  animation: cardShiftRight 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.works-horizontal-scroll.navigating-left .work-card-inner {
+  animation: cardShiftLeft 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.works-horizontal-scroll.navigating-right .work-card-thumb-img,
+.works-horizontal-scroll.navigating-left .work-card-thumb-img {
+  animation: thumbPop 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.works-horizontal-scroll.navigating-right .work-card-offset-shadow,
+.works-horizontal-scroll.navigating-left .work-card-offset-shadow {
+  animation: shadowSpring 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 @media (max-width: 900px) {
@@ -2590,13 +2643,55 @@ body {
   scrollContainer?.addEventListener('scroll', updateCounter, { passive: true });
 
   btnScrollLeft?.addEventListener('click', () => {
-    const cardWidth = cards[0].offsetWidth + 32;
+    const cardWidth = cards[0]?.offsetWidth ? (cards[0].offsetWidth + 32) : 380;
+    btnScrollLeft.classList.remove('btn-punch');
+    void btnScrollLeft.offsetWidth;
+    btnScrollLeft.classList.add('btn-punch');
+    setTimeout(() => btnScrollLeft.classList.remove('btn-punch'), 450);
+
+    scrollContainer.classList.remove('navigating-right', 'navigating-left');
+    void scrollContainer.offsetWidth; // trigger reflow
+    scrollContainer.classList.add('navigating-left');
     scrollContainer.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+
+    setTimeout(() => {
+      scrollContainer.classList.remove('navigating-left');
+    }, 650);
+
+    if (typeof confetti === 'function') {
+      const rect = btnScrollLeft.getBoundingClientRect();
+      confetti({
+        particleCount: 16,
+        spread: 50,
+        origin: { x: (rect.left + rect.width / 2) / window.innerWidth, y: (rect.top + rect.height / 2) / window.innerHeight }
+      });
+    }
   });
 
   btnScrollRight?.addEventListener('click', () => {
-    const cardWidth = cards[0].offsetWidth + 32;
+    const cardWidth = cards[0]?.offsetWidth ? (cards[0].offsetWidth + 32) : 380;
+    btnScrollRight.classList.remove('btn-punch');
+    void btnScrollRight.offsetWidth;
+    btnScrollRight.classList.add('btn-punch');
+    setTimeout(() => btnScrollRight.classList.remove('btn-punch'), 450);
+
+    scrollContainer.classList.remove('navigating-right', 'navigating-left');
+    void scrollContainer.offsetWidth; // trigger reflow
+    scrollContainer.classList.add('navigating-right');
     scrollContainer.scrollBy({ left: cardWidth, behavior: 'smooth' });
+
+    setTimeout(() => {
+      scrollContainer.classList.remove('navigating-right');
+    }, 650);
+
+    if (typeof confetti === 'function') {
+      const rect = btnScrollRight.getBoundingClientRect();
+      confetti({
+        particleCount: 16,
+        spread: 50,
+        origin: { x: (rect.left + rect.width / 2) / window.innerWidth, y: (rect.top + rect.height / 2) / window.innerHeight }
+      });
+    }
   });
 
   // Mouse drag to scroll
