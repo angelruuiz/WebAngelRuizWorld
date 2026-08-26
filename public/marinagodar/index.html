@@ -1606,28 +1606,12 @@ body {
   transition: color 0.25s ease;
 }
 
-.app-chip-badge {
-  position: absolute;
-  top: 6px;
-  right: 8px;
-  font-family: var(--font-mono);
-  font-size: 0.58rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  padding: 2px 7px;
-  border-radius: 9999px;
-  opacity: 0;
-  transform: translateY(6px) scale(0.85);
-  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  pointer-events: none;
-}
-
 /* 1. Figma */
 .app-chip.app-figma:hover {
   transform: translateY(-6px) scale(1.03);
   border-color: #00F0FF;
   background: rgba(0, 240, 255, 0.14);
-  box-shadow: 0 10px 22px -4px rgba(0, 240, 255, 0.4);
+  box-shadow: 0 10px 24px -4px rgba(0, 240, 255, 0.45);
 }
 .app-chip.app-figma:hover .app-chip-icon {
   transform: rotate(360deg) scale(1.22);
@@ -1636,21 +1620,13 @@ body {
 .app-chip.app-figma:hover .app-chip-name {
   color: #00F0FF;
 }
-.app-chip.app-figma .app-chip-badge {
-  background: #00F0FF;
-  color: #000000;
-}
-.app-chip.app-figma:hover .app-chip-badge {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
 
 /* 2. Photoshop */
 .app-chip.app-ps:hover {
   transform: translateY(-6px) scale(1.03);
   border-color: #31A8FF;
   background: rgba(49, 168, 255, 0.14);
-  box-shadow: 0 10px 22px -4px rgba(49, 168, 255, 0.4);
+  box-shadow: 0 10px 24px -4px rgba(49, 168, 255, 0.45);
 }
 .app-chip.app-ps:hover .app-chip-icon {
   transform: scale(1.22) rotate(-10deg);
@@ -1659,21 +1635,13 @@ body {
 .app-chip.app-ps:hover .app-chip-name {
   color: #31A8FF;
 }
-.app-chip.app-ps .app-chip-badge {
-  background: #31A8FF;
-  color: #000000;
-}
-.app-chip.app-ps:hover .app-chip-badge {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
 
 /* 3. Illustrator */
 .app-chip.app-ai:hover {
   transform: translateY(-6px) scale(1.03);
   border-color: #FF9A00;
   background: rgba(255, 154, 0, 0.14);
-  box-shadow: 0 10px 22px -4px rgba(255, 154, 0, 0.4);
+  box-shadow: 0 10px 24px -4px rgba(255, 154, 0, 0.45);
 }
 .app-chip.app-ai:hover .app-chip-icon {
   transform: scale(1.22) rotate(10deg);
@@ -1682,21 +1650,13 @@ body {
 .app-chip.app-ai:hover .app-chip-name {
   color: #FF9A00;
 }
-.app-chip.app-ai .app-chip-badge {
-  background: #FF9A00;
-  color: #000000;
-}
-.app-chip.app-ai:hover .app-chip-badge {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
 
 /* 4. After Effects */
 .app-chip.app-ae:hover {
   transform: translateY(-6px) scale(1.03);
   border-color: #9999FF;
   background: rgba(153, 153, 255, 0.14);
-  box-shadow: 0 10px 22px -4px rgba(153, 153, 255, 0.4);
+  box-shadow: 0 10px 24px -4px rgba(153, 153, 255, 0.45);
 }
 .app-chip.app-ae:hover .app-chip-icon {
   animation: aeShake 0.4s ease-in-out infinite alternate;
@@ -1709,21 +1669,13 @@ body {
 .app-chip.app-ae:hover .app-chip-name {
   color: #9999FF;
 }
-.app-chip.app-ae .app-chip-badge {
-  background: #9999FF;
-  color: #000000;
-}
-.app-chip.app-ae:hover .app-chip-badge {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
 
 /* 5. InDesign */
 .app-chip.app-id:hover {
   transform: translateY(-6px) scale(1.03);
   border-color: #FF3366;
   background: rgba(255, 51, 102, 0.14);
-  box-shadow: 0 10px 22px -4px rgba(255, 51, 102, 0.4);
+  box-shadow: 0 10px 24px -4px rgba(255, 51, 102, 0.45);
 }
 .app-chip.app-id:hover .app-chip-icon {
   transform: rotateY(32deg) scale(1.22) rotate(-5deg);
@@ -1732,21 +1684,13 @@ body {
 .app-chip.app-id:hover .app-chip-name {
   color: #FF3366;
 }
-.app-chip.app-id .app-chip-badge {
-  background: #FF3366;
-  color: #FFFFFF;
-}
-.app-chip.app-id:hover .app-chip-badge {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
 
 /* 6. Premiere Pro */
 .app-chip.app-pr:hover {
   transform: translateY(-6px) scale(1.03);
   border-color: #EA77FF;
   background: rgba(234, 119, 255, 0.14);
-  box-shadow: 0 10px 22px -4px rgba(234, 119, 255, 0.4);
+  box-shadow: 0 10px 24px -4px rgba(234, 119, 255, 0.45);
 }
 .app-chip.app-pr:hover .app-chip-icon {
   transform: scale(1.25);
@@ -1754,14 +1698,6 @@ body {
 }
 .app-chip.app-pr:hover .app-chip-name {
   color: #EA77FF;
-}
-.app-chip.app-pr .app-chip-badge {
-  background: #EA77FF;
-  color: #000000;
-}
-.app-chip.app-pr:hover .app-chip-badge {
-  opacity: 1;
-  transform: translateY(0) scale(1);
 }
 
 /* Doodles & Hero Stickers Micro-Interactions */
@@ -2482,7 +2418,6 @@ body {
             <span class="app-chip-name">Figma</span>
             <span class="app-chip-role">UI &amp; Systems</span>
           </div>
-          <span class="app-chip-badge">✦ UI Pro</span>
         </div>
 
         <div class="app-chip app-ps" data-hover title="Photoshop: Key Visuals & Retoque">
@@ -2493,7 +2428,6 @@ body {
             <span class="app-chip-name">Photoshop</span>
             <span class="app-chip-role">Retoque &amp; KV</span>
           </div>
-          <span class="app-chip-badge">🪄 Retoque</span>
         </div>
 
         <div class="app-chip app-ai" data-hover title="Illustrator: Vector & Branding">
@@ -2504,7 +2438,6 @@ body {
             <span class="app-chip-name">Illustrator</span>
             <span class="app-chip-role">Vector Branding</span>
           </div>
-          <span class="app-chip-badge">📐 Vector</span>
         </div>
 
         <div class="app-chip app-ae" data-hover title="After Effects: Motion Graphics">
@@ -2515,7 +2448,6 @@ body {
             <span class="app-chip-name">After Effects</span>
             <span class="app-chip-role">Motion Graphics</span>
           </div>
-          <span class="app-chip-badge">🎬 Motion</span>
         </div>
 
         <div class="app-chip app-id" data-hover title="InDesign: Editorial & Fanzines">
@@ -2526,7 +2458,6 @@ body {
             <span class="app-chip-name">InDesign</span>
             <span class="app-chip-role">Editorial &amp; Print</span>
           </div>
-          <span class="app-chip-badge">📖 Editorial</span>
         </div>
 
         <div class="app-chip app-pr" data-hover title="Premiere Pro: Edición Audiovisual">
@@ -2537,7 +2468,6 @@ body {
             <span class="app-chip-name">Premiere Pro</span>
             <span class="app-chip-role">Audiovisual</span>
           </div>
-          <span class="app-chip-badge">✂️ Video</span>
         </div>
 
       </div>
