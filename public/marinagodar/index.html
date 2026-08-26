@@ -305,7 +305,7 @@ body {
 .header-nav-links {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
 }
 
 .nav-item {
@@ -336,7 +336,7 @@ body {
 
 .nav-slash {
   color: var(--text-muted);
-  opacity: 0.6;
+  opacity: 0.55;
   font-size: 0.85em;
   transition: color 0.2s;
 }
@@ -347,153 +347,177 @@ body {
   position: relative;
 }
 
-/* ─────────────────────────────────────────────────────────
-   EFFECT 1: 01 / PORTFOLIO (Dancing Letters Wave)
-   ───────────────────────────────────────────────────────── */
-.nav-item-works .p-char {
+.nav-char {
   display: inline-block;
-  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.25s ease;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.25s ease, font-family 0.25s ease;
   transition-delay: calc(var(--i) * 22ms);
 }
 
-.nav-item-works .nav-icon-star {
+.nav-space {
+  display: inline-block;
+  width: 0.28em;
+}
+
+.nav-icon-star {
   display: inline-block;
   font-size: 0.7em;
-  color: var(--neon);
   opacity: 0;
   transform: scale(0) rotate(-45deg);
   transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   margin-left: 3px;
 }
 
+/* ─────────────────────────────────────────────────────────
+   01 / PORTFOLIO — Dancing Letters (Neon Pink & Cyan Wave)
+   ───────────────────────────────────────────────────────── */
 .nav-item-works:hover {
-  background: rgba(255, 0, 102, 0.1);
+  background: rgba(225, 29, 72, 0.12);
+}
+[data-party="true"] .nav-item-works:hover {
+  background: rgba(255, 0, 102, 0.18);
 }
 .nav-item-works:hover .nav-num {
-  color: var(--neon);
+  color: #E11D48;
   transform: translateY(-2px) scale(1.15) rotate(-6deg);
 }
+[data-party="true"] .nav-item-works:hover .nav-num {
+  color: var(--neon);
+}
 .nav-item-works:hover .nav-slash {
+  color: #E11D48;
+}
+[data-party="true"] .nav-item-works:hover .nav-slash {
   color: var(--neon);
 }
-.nav-item-works:hover .p-char:nth-child(odd) {
+.nav-item-works:hover .nav-char:nth-child(odd) {
   transform: translateY(-4px) rotate(-4deg);
+  color: #E11D48;
+}
+[data-party="true"] .nav-item-works:hover .nav-char:nth-child(odd) {
   color: var(--neon);
 }
-.nav-item-works:hover .p-char:nth-child(even) {
+.nav-item-works:hover .nav-char:nth-child(even) {
   transform: translateY(3px) rotate(4deg);
+  color: #0284C7;
+}
+[data-party="true"] .nav-item-works:hover .nav-char:nth-child(even) {
   color: var(--electric);
 }
-.nav-item-works:hover .p-char:nth-child(3),
-.nav-item-works:hover .p-char:nth-child(7) {
+.nav-item-works:hover .nav-char:nth-child(3),
+.nav-item-works:hover .nav-char:nth-child(7) {
   font-family: var(--font-serif);
   font-style: italic;
 }
 .nav-item-works:hover .nav-icon-star {
   opacity: 1;
   transform: scale(1.3) rotate(180deg);
+  color: #D97706;
+}
+[data-party="true"] .nav-item-works:hover .nav-icon-star {
   color: var(--acid);
 }
 
 /* ─────────────────────────────────────────────────────────
-   EFFECT 2: 02 / SOBRE MÍ (Editorial & Handwritten Morph)
+   02 / SOBRE MÍ — Dancing Letters (Cyan & Emerald/Lime Wave)
    ───────────────────────────────────────────────────────── */
-.nav-item-about .nav-word-sobre {
-  display: inline-block;
-  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.nav-item-about .nav-word-mi {
-  display: inline-block;
-  margin-left: 4px;
-  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.nav-item-about .nav-icon-draw {
-  display: inline-block;
-  font-size: 0.85em;
-  color: var(--electric);
-  opacity: 0;
-  transform: translateX(-4px) rotate(-20deg);
-  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  margin-left: 3px;
-}
-
 .nav-item-about:hover {
-  background: rgba(0, 240, 255, 0.1);
+  background: rgba(2, 132, 199, 0.12);
+}
+[data-party="true"] .nav-item-about:hover {
+  background: rgba(0, 240, 255, 0.18);
 }
 .nav-item-about:hover .nav-num {
-  color: var(--electric);
+  color: #0284C7;
   transform: translateY(-3px) scale(1.15) rotate(6deg);
 }
+[data-party="true"] .nav-item-about:hover .nav-num {
+  color: var(--electric);
+}
 .nav-item-about:hover .nav-slash {
+  color: #0284C7;
+}
+[data-party="true"] .nav-item-about:hover .nav-slash {
   color: var(--electric);
 }
-.nav-item-about:hover .nav-word-sobre {
-  font-family: var(--font-display);
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  color: var(--electric);
-  transform: translateY(-2px) rotate(-2deg);
+.nav-item-about:hover .nav-char:nth-child(odd) {
+  transform: translateY(-4px) rotate(-5deg);
+  color: #0284C7;
 }
-.nav-item-about:hover .nav-word-mi {
-  font-family: var(--font-hand);
-  font-weight: 700;
-  font-size: 1.35em;
+[data-party="true"] .nav-item-about:hover .nav-char:nth-child(odd) {
+  color: var(--electric);
+}
+.nav-item-about:hover .nav-char:nth-child(even) {
+  transform: translateY(3px) rotate(3deg);
+  color: #059669;
+}
+[data-party="true"] .nav-item-about:hover .nav-char:nth-child(even) {
   color: var(--acid);
-  transform: translateY(-3px) rotate(8deg) scale(1.18);
-  text-shadow: 1px 1px 0 var(--border-main);
 }
-.nav-item-about:hover .nav-icon-draw {
+.nav-item-about:hover .nav-char:nth-child(5) {
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+.nav-item-about:hover .nav-char:last-child {
+  font-family: var(--font-hand);
+  font-size: 1.25em;
+}
+.nav-item-about:hover .nav-icon-star {
   opacity: 1;
-  transform: translateX(2px) rotate(12deg) scale(1.2);
+  transform: scale(1.3) rotate(-180deg);
+  color: #E11D48;
+}
+[data-party="true"] .nav-item-about:hover .nav-icon-star {
+  color: var(--neon);
 }
 
 /* ─────────────────────────────────────────────────────────
-   EFFECT 3: 03 / CONTACTO (Electric Action Badge & Arrow)
+   03 / CONTACTO — Dancing Letters (Amber Gold & Violet/Pink Wave)
    ───────────────────────────────────────────────────────── */
-.nav-item-contact {
-  border: 1.5px solid transparent;
-}
-
-.nav-item-contact .nav-word-contact {
-  display: inline-block;
-  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.nav-item-contact .nav-icon-arrow {
-  display: inline-block;
-  font-size: 0.9em;
-  font-weight: 900;
-  color: currentColor;
-  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  margin-left: 2px;
-}
-
 .nav-item-contact:hover {
-  background: var(--acid);
-  color: #000000;
-  border-color: var(--border-main);
-  box-shadow: 3px 3px 0 var(--border-main);
-  transform: translate(-2px, -2px);
+  background: rgba(217, 119, 6, 0.12);
+}
+[data-party="true"] .nav-item-contact:hover {
+  background: rgba(216, 255, 0, 0.18);
 }
 .nav-item-contact:hover .nav-num {
-  color: #000000;
-  font-weight: 900;
-  transform: scale(1.1);
+  color: #D97706;
+  transform: translateY(-2px) scale(1.15) rotate(-5deg);
+}
+[data-party="true"] .nav-item-contact:hover .nav-num {
+  color: var(--acid);
 }
 .nav-item-contact:hover .nav-slash {
-  color: #000000;
+  color: #D97706;
+}
+[data-party="true"] .nav-item-contact:hover .nav-slash {
+  color: var(--acid);
+}
+.nav-item-contact:hover .nav-char:nth-child(odd) {
+  transform: translateY(-4px) rotate(4deg);
+  color: #D97706;
+}
+[data-party="true"] .nav-item-contact:hover .nav-char:nth-child(odd) {
+  color: var(--acid);
+}
+.nav-item-contact:hover .nav-char:nth-child(even) {
+  transform: translateY(3px) rotate(-4deg);
+  color: #7C3AED;
+}
+[data-party="true"] .nav-item-contact:hover .nav-char:nth-child(even) {
+  color: var(--neon);
+}
+.nav-item-contact:hover .nav-char:nth-child(4),
+.nav-item-contact:hover .nav-char:nth-child(7) {
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+.nav-item-contact:hover .nav-icon-star {
   opacity: 1;
+  transform: scale(1.3) rotate(180deg);
+  color: #0284C7;
 }
-.nav-item-contact:hover .nav-word-contact {
-  font-weight: 900;
-  letter-spacing: 0.16em;
-  transform: translateX(1px);
-}
-.nav-item-contact:hover .nav-icon-arrow {
-  transform: translate(3px, -3px) scale(1.2);
-  color: #000000;
+[data-party="true"] .nav-item-contact:hover .nav-icon-star {
+  color: var(--electric);
 }
 
 .party-toggle-btn {
@@ -1801,35 +1825,34 @@ body {
   </a>
 
   <nav class="header-nav-links">
-    <!-- 01 / Portfolio: Dancing Letters & Stagger Wave -->
+    <!-- 01 / Portfolio: Dancing Letters Wave (Pink / Cyan) -->
     <a href="#works" class="nav-item nav-item-works" data-hover title="01 / Portfolio">
       <span class="nav-num">01</span>
       <span class="nav-slash">/</span>
       <span class="nav-label">
-        <span class="p-char" style="--i:1">P</span><span class="p-char" style="--i:2">o</span><span class="p-char" style="--i:3">r</span><span class="p-char" style="--i:4">t</span><span class="p-char" style="--i:5">f</span><span class="p-char" style="--i:6">o</span><span class="p-char" style="--i:7">l</span><span class="p-char" style="--i:8">i</span><span class="p-char" style="--i:9">o</span>
+        <span class="nav-char" style="--i:1">P</span><span class="nav-char" style="--i:2">o</span><span class="nav-char" style="--i:3">r</span><span class="nav-char" style="--i:4">t</span><span class="nav-char" style="--i:5">f</span><span class="nav-char" style="--i:6">o</span><span class="nav-char" style="--i:7">l</span><span class="nav-char" style="--i:8">i</span><span class="nav-char" style="--i:9">o</span>
       </span>
       <span class="nav-icon-star" aria-hidden="true">✦</span>
     </a>
 
-    <!-- 02 / Sobre mí: Editorial Syne + Handwritten Caveat Morph -->
+    <!-- 02 / Sobre mí: Dancing Letters Wave (Cyan / Emerald-Lime) -->
     <a href="#about" class="nav-item nav-item-about" data-hover title="02 / Sobre mí">
       <span class="nav-num">02</span>
       <span class="nav-slash">/</span>
       <span class="nav-label">
-        <span class="nav-word-sobre">Sobre</span>
-        <span class="nav-word-mi">mí</span>
+        <span class="nav-char" style="--i:1">S</span><span class="nav-char" style="--i:2">o</span><span class="nav-char" style="--i:3">b</span><span class="nav-char" style="--i:4">r</span><span class="nav-char" style="--i:5">e</span><span class="nav-space">&nbsp;</span><span class="nav-char" style="--i:6">m</span><span class="nav-char" style="--i:7">í</span>
       </span>
-      <span class="nav-icon-draw" aria-hidden="true">✎</span>
+      <span class="nav-icon-star" aria-hidden="true">✦</span>
     </a>
 
-    <!-- 03 / Contacto: Electric Action Badge & Arrow Kinetic -->
+    <!-- 03 / Contacto: Dancing Letters Wave (Amber / Purple-Pink) -->
     <a href="#contact" class="nav-item nav-item-contact" data-hover title="03 / Contacto">
       <span class="nav-num">03</span>
       <span class="nav-slash">/</span>
       <span class="nav-label">
-        <span class="nav-word-contact">Contacto</span>
+        <span class="nav-char" style="--i:1">C</span><span class="nav-char" style="--i:2">o</span><span class="nav-char" style="--i:3">n</span><span class="nav-char" style="--i:4">t</span><span class="nav-char" style="--i:5">a</span><span class="nav-char" style="--i:6">c</span><span class="nav-char" style="--i:7">t</span><span class="nav-char" style="--i:8">o</span>
       </span>
-      <span class="nav-icon-arrow" aria-hidden="true">↗</span>
+      <span class="nav-icon-star" aria-hidden="true">✦</span>
     </a>
   </nav>
 
