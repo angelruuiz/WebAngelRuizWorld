@@ -885,8 +885,8 @@ body {
   will-change: transform;
 }
 
-/* Dynamic Focus: non-hovered buttons shrink slightly with soft muted tone */
-.hero-social-actions:hover .hero-social-btn {
+/* Dynamic Focus: non-hovered buttons shrink ONLY when a specific button is directly touched/hovered */
+.hero-social-actions:has(.hero-social-btn:hover) .hero-social-btn {
   transform: scale(0.92);
   opacity: 0.72;
   filter: grayscale(0.25);
