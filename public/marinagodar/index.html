@@ -433,8 +433,126 @@ body {
 
 .hero-title-direction {
   font-size: clamp(3.2rem, 9.2vw, 9.8rem);
-  line-height: 0.85;
+  line-height: 0.88;
   text-transform: uppercase;
+}
+
+.hero-direction-mixed {
+  display: inline-flex;
+  align-items: baseline;
+  color: var(--text-main);
+  user-select: none;
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: normal;
+  margin-top: 0.02em;
+  flex-wrap: wrap;
+}
+
+.hero-direction-mixed:hover {
+  transform: scale(1.025);
+}
+
+.hero-direction-mixed .dir-chunk {
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.25s ease, -webkit-text-stroke 0.25s ease;
+}
+
+/* 1. "Di" — Syne Display Bold 900 */
+.hero-direction-mixed .dir-1 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: var(--text-main);
+}
+
+/* 2. "r" — Libre Baskerville Italic Serif */
+.hero-direction-mixed .dir-2 {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 700;
+  color: var(--neon);
+  letter-spacing: -0.01em;
+  margin: 0 1px;
+}
+
+/* 3. "ec" — Caveat Artistic Hand-script */
+.hero-direction-mixed .dir-3 {
+  font-family: var(--font-hand);
+  font-weight: 700;
+  font-size: 1.18em;
+  color: var(--text-main);
+  transform: rotate(-5deg) translateY(-4px);
+  margin: 0 2px;
+}
+
+/* 4. "T" — Space Grotesk Bold Outline */
+.hero-direction-mixed .dir-4 {
+  font-family: var(--font-outline-title);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  color: transparent;
+  -webkit-text-stroke: clamp(2px, 0.25vw, 4px) var(--text-main);
+}
+
+/* 5. "i" — Libre Baskerville Italic Serif with accent pop */
+.hero-direction-mixed .dir-5 {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 700;
+  color: var(--electric);
+  margin: 0 1px;
+}
+
+/* 6. "on" — Syne Display Bold 900 */
+.hero-direction-mixed .dir-6 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+}
+
+/* Sparkle Star */
+.hero-direction-mixed .dir-sparkle {
+  display: inline-block;
+  font-size: 0.45em;
+  color: var(--neon);
+  margin-left: 10px;
+  animation: spinSlow 14s linear infinite;
+  transform-origin: center;
+  vertical-align: middle;
+}
+
+/* Dynamic Interactive Hover States per Chunk */
+.hero-direction-mixed:hover .dir-1 {
+  transform: translateY(-6px) rotate(-2deg);
+  color: var(--electric);
+}
+.hero-direction-mixed:hover .dir-2 {
+  transform: translateY(-5px) scale(1.15);
+  color: var(--neon);
+}
+.hero-direction-mixed:hover .dir-3 {
+  transform: rotate(8deg) scale(1.2) translateY(-8px);
+  color: var(--acid);
+  text-shadow: 3px 3px 0 var(--border-main);
+}
+.hero-direction-mixed:hover .dir-4 {
+  color: var(--electric);
+  -webkit-text-stroke: clamp(2px, 0.25vw, 4px) var(--border-main);
+  transform: translateY(-4px);
+}
+.hero-direction-mixed:hover .dir-5 {
+  transform: translateY(-6px) rotate(4deg) scale(1.15);
+  color: var(--neon);
+}
+.hero-direction-mixed:hover .dir-6 {
+  transform: translateY(-4px) rotate(2deg);
+  color: var(--acid);
+  text-shadow: 3px 3px 0 var(--border-main);
 }
 
 .hero-lead-info {
@@ -1479,8 +1597,9 @@ body {
       <h1 class="hero-title-art">
         ART
       </h1>
-      <div class="hero-title-direction text-outline-clean">
-        DIRECTION
+      <div class="hero-title-direction hero-direction-mixed" data-hover title="Direction">
+        <span class="dir-chunk dir-1">Di</span><span class="dir-chunk dir-2">r</span><span class="dir-chunk dir-3">ec</span><span class="dir-chunk dir-4">T</span><span class="dir-chunk dir-5">i</span><span class="dir-chunk dir-6">on</span>
+        <span class="dir-sparkle" aria-hidden="true">✦</span>
       </div>
 
       <div class="hero-lead-info">
