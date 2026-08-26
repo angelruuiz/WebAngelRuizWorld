@@ -432,9 +432,10 @@ body {
 }
 
 .hero-title-direction {
-  font-size: clamp(3.2rem, 9.2vw, 9.8rem);
-  line-height: 0.88;
+  font-size: clamp(2.2rem, 5.7vw, 6.2rem);
+  line-height: 0.95;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .hero-direction-mixed {
@@ -445,8 +446,9 @@ body {
   cursor: pointer;
   transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   letter-spacing: normal;
-  margin-top: 0.02em;
-  flex-wrap: wrap;
+  margin-top: 0.05em;
+  white-space: nowrap;
+  flex-wrap: nowrap;
 }
 
 .hero-direction-mixed:hover {
@@ -1497,6 +1499,9 @@ body {
   }
   .brand-link {
     font-size: clamp(1.28rem, 4.8vw, 1.65rem);
+  }
+  .hero-direction-mixed {
+    font-size: clamp(1.85rem, 8.2vw, 3.8rem);
   }
 }
 
