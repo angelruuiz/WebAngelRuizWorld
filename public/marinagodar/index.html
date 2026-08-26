@@ -568,25 +568,6 @@ body {
     var(--bg-page);
 }
 
-/* Dynamic Interactive Background Paint Canvas (Home / Hero Only) */
-.hero-paint-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 2;
-  mix-blend-mode: multiply;
-  opacity: 0.92;
-  filter: blur(14px);
-}
-[data-party="true"] .hero-paint-canvas {
-  mix-blend-mode: screen;
-  opacity: 0.85;
-  filter: blur(16px);
-}
-
 .hero-status-pill {
   display: inline-flex;
   align-items: center;
@@ -2054,9 +2035,6 @@ body {
 <!-- ── HERO ────────────────────────────────── -->
 <section id="top" class="hero-section">
   
-  <!-- Interactive Background Paint Canvas (Home / Hero Aura Trail) -->
-  <canvas id="hero-paint-canvas" class="hero-paint-canvas"></canvas>
-  
   <!-- Floating Doodles -->
   <!-- Star -->
   <svg class="animate-spin-slow" style="position:absolute; left:2%; top:15%; width:64px; color:var(--neon);" viewBox="0 0 100 100" fill="currentColor">
@@ -2783,107 +2761,6 @@ body {
       });
     }
   });
-
-  // 6. Interactive Home / Hero Background Paint Trail Aura
-  const heroSection = document.getElementById('top');
-  const heroCanvas = document.getElementById('hero-paint-canvas');
-
-  if (heroSection && heroCanvas) {
-    const ctx = heroCanvas.getContext('2d');
-    let canvasWidth = (heroCanvas.width = heroSection.offsetWidth);
-    let canvasHeight = (heroCanvas.height = heroSection.offsetHeight);
-
-    function resizeHeroCanvas() {
-      if (!heroSection || !heroCanvas) return;
-      canvasWidth = heroCanvas.width = heroSection.offsetWidth;
-      canvasHeight = heroCanvas.height = heroSection.offsetHeight;
-    }
-    window.addEventListener('resize', resizeHeroCanvas, { passive: true });
-
-    const paletteLight = [
-      '216, 255, 0',   // Acid Lime
-      '0, 240, 255',   // Electric Cyan
-      '255, 0, 102',   // Neon Pink
-      '255, 170, 0',   // Warm Orange
-      '168, 85, 247'   // Violet
-    ];
-
-    const paletteDark = [
-      '255, 0, 119',   // Vivid Neon Pink
-      '0, 240, 255',   // Electric Cyan
-      '216, 255, 0',   // Acid Lime
-      '192, 132, 252'  // Lilac Glow
-    ];
-
-    let trail = [];
-    let colorIdx = 0;
-    let lastX = -999, lastY = -999;
-
-    function addAuraBlob(x, y) {
-      const isParty = document.documentElement.getAttribute('data-party') === 'true';
-      const currentPalette = isParty ? paletteDark : paletteLight;
-      colorIdx = (colorIdx + 1) % currentPalette.length;
-
-      const baseRadius = Math.max(90, Math.min(190, canvasWidth * 0.14));
-      
-      trail.push({
-        x: x,
-        y: y,
-        radius: baseRadius + (Math.random() * 30 - 15),
-        rgb: currentPalette[colorIdx],
-        alpha: isParty ? 0.36 : 0.42,
-        decay: 0.009
-      });
-    }
-
-    heroSection.addEventListener('mousemove', (e) => {
-      const rect = heroSection.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      const dist = Math.hypot(x - lastX, y - lastY);
-      if (dist > 18) {
-        addAuraBlob(x, y);
-        lastX = x;
-        lastY = y;
-      }
-    });
-
-    heroSection.addEventListener('touchmove', (e) => {
-      if (e.touches.length > 0) {
-        const rect = heroSection.getBoundingClientRect();
-        const x = e.touches[0].clientX - rect.left;
-        const y = e.touches[0].clientY - rect.top;
-        addAuraBlob(x, y);
-      }
-    }, { passive: true });
-
-    function animateTrail() {
-      ctx.clearRect(0, 0, canvasWidth, canvasHeight);
-
-      for (let i = 0; i < trail.length; i++) {
-        const p = trail[i];
-        p.alpha -= p.decay;
-
-        if (p.alpha > 0) {
-          const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.radius);
-          grad.addColorStop(0, `rgba(${p.rgb}, ${p.alpha})`);
-          grad.addColorStop(0.55, `rgba(${p.rgb}, ${p.alpha * 0.5})`);
-          grad.addColorStop(1, `rgba(${p.rgb}, 0)`);
-
-          ctx.fillStyle = grad;
-          ctx.beginPath();
-          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-          ctx.fill();
-        }
-      }
-
-      trail = trail.filter((p) => p.alpha > 0);
-      requestAnimationFrame(animateTrail);
-    }
-
-    requestAnimationFrame(animateTrail);
-  }
 
 })();
 </script>
