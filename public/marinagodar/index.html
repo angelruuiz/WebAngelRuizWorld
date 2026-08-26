@@ -568,40 +568,6 @@ body {
     var(--bg-page);
 }
 
-/* ─────────────────────────────────────────────────────────
-   HERO PAINT REVEAL BACKGROUND (Efecto itsdeesha.framer.website)
-   ───────────────────────────────────────────────────────── */
-.hero-reveal-bg-layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 30% 25%, #0084FF 0%, transparent 50%),
-    radial-gradient(circle at 75% 30%, #00F0FF 0%, transparent 45%),
-    radial-gradient(circle at 20% 75%, #D8FF00 0%, transparent 45%),
-    radial-gradient(circle at 65% 80%, #FF0066 0%, transparent 48%),
-    linear-gradient(135deg, #0077FF 0%, #00F0FF 35%, #FF0066 70%, #D8FF00 100%);
-  opacity: 0.95;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
-}
-
-[data-party="true"] .hero-reveal-bg-layer {
-  background:
-    radial-gradient(circle at 30% 25%, #0084FF 0%, transparent 50%),
-    radial-gradient(circle at 75% 30%, #FF0077 0%, transparent 45%),
-    radial-gradient(circle at 20% 75%, #00F0FF 0%, transparent 45%),
-    radial-gradient(circle at 65% 80%, #D8FF00 0%, transparent 48%),
-    linear-gradient(135deg, #0055FF 0%, #FF0055 35%, #9900FF 70%, #00F0FF 100%);
-  opacity: 0.98;
-}
-
 .hero-status-pill {
   display: inline-flex;
   align-items: center;
@@ -2069,10 +2035,6 @@ body {
 <!-- ── HERO ────────────────────────────────── -->
 <section id="top" class="hero-section">
   
-  <!-- Paint Reveal Background Layer & Hidden Mask Canvas -->
-  <div class="hero-reveal-bg-layer" id="hero-reveal-bg" aria-hidden="true"></div>
-  <canvas id="hero-reveal-mask-canvas" style="display:none;" aria-hidden="true"></canvas>
-  
   <!-- Floating Doodles -->
   <!-- Star -->
   <svg class="animate-spin-slow" style="position:absolute; left:2%; top:15%; width:64px; color:var(--neon);" viewBox="0 0 100 100" fill="currentColor">
@@ -2799,148 +2761,6 @@ body {
       });
     }
   });
-
-  // 6. Paint Reveal Effect on Home Background (style itsdeesha.framer.website)
-  const heroSec = document.getElementById('top');
-  const revealBgLayer = document.getElementById('hero-reveal-bg');
-  const maskCanvas = document.getElementById('hero-reveal-mask-canvas');
-
-  if (heroSec && revealBgLayer && maskCanvas && window.matchMedia('(pointer: fine)').matches) {
-    const ctx = maskCanvas.getContext('2d', { willReadFrequently: true });
-    let canvasW = 0, canvasH = 0;
-    let lastX = null, lastY = null;
-    const brushRadius = 90; // ~180px generous fluid droplet width
-    const fadeSpeed = 0.055; // Quick snappy dissolve (~400ms)
-
-    function resizeMaskCanvas() {
-      const rect = heroSec.getBoundingClientRect();
-      const w = Math.floor(rect.width);
-      const h = Math.floor(rect.height);
-      if (w !== canvasW || h !== canvasH) {
-        canvasW = maskCanvas.width = w;
-        canvasH = maskCanvas.height = h;
-        ctx.clearRect(0, 0, w, h);
-      }
-    }
-
-    resizeMaskCanvas();
-    window.addEventListener('resize', resizeMaskCanvas, { passive: true });
-
-    function drawSmoothBlob(x, y, r) {
-      ctx.beginPath();
-      const numPoints = 10;
-      const points = [];
-      for (let i = 0; i < numPoints; i++) {
-        const theta = (i / numPoints) * Math.PI * 2;
-        const noise = Math.sin(theta * 3 + 12) * 0.12 + Math.cos(theta * 2 + 5) * 0.08;
-        const rad = r * (1 + noise);
-        points.push({
-          x: x + Math.cos(theta) * rad,
-          y: y + Math.sin(theta) * rad
-        });
-      }
-      ctx.moveTo((points[0].x + points[numPoints - 1].x) / 2, (points[0].y + points[numPoints - 1].y) / 2);
-      for (let i = 0; i < numPoints; i++) {
-        const p1 = points[i];
-        const p2 = points[(i + 1) % numPoints];
-        ctx.quadraticCurveTo(p1.x, p1.y, (p1.x + p2.x) / 2, (p1.y + p2.y) / 2);
-      }
-      ctx.closePath();
-      ctx.fill();
-    }
-
-    function drawLiquidCapsule(x0, y0, r0, x1, y1, r1) {
-      if (!ctx) return;
-      ctx.save();
-      ctx.globalCompositeOperation = 'source-over';
-      ctx.fillStyle = '#ffffff';
-
-      const dx = x1 - x0;
-      const dy = y1 - y0;
-      const dist = Math.hypot(dx, dy);
-
-      if (dist < 3) {
-        drawSmoothBlob(x0, y0, r0);
-        ctx.restore();
-        return;
-      }
-
-      const angle = Math.atan2(dy, dx);
-      const angleP = angle + Math.PI / 2;
-
-      const sin = Math.sin(angleP);
-      const cos = Math.cos(angleP);
-
-      const p1x = x0 + cos * r0;
-      const p1y = y0 + sin * r0;
-      const p2x = x1 + cos * r1;
-      const p2y = y1 + sin * r1;
-
-      const p3x = x1 - cos * r1;
-      const p3y = y1 - sin * r1;
-      const p4x = x0 - cos * r0;
-      const p4y = y0 - sin * r0;
-
-      // Continuous fluid liquid capsule with rounded caps
-      ctx.beginPath();
-      ctx.arc(x0, y0, r0, angleP, angleP + Math.PI);
-      ctx.lineTo(p3x, p3y);
-      ctx.arc(x1, y1, r1, angleP + Math.PI, angleP);
-      ctx.lineTo(p1x, p1y);
-      ctx.closePath();
-      ctx.fill();
-
-      // Additional organic blob at the tip
-      drawSmoothBlob(x1, y1, r1);
-
-      ctx.restore();
-    }
-
-    heroSec.addEventListener('mousemove', (e) => {
-      const rect = heroSec.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-
-      if (lastX !== null && lastY !== null) {
-        drawLiquidCapsule(lastX, lastY, brushRadius * 0.95, x, y, brushRadius);
-      } else {
-        ctx.save();
-        ctx.fillStyle = '#ffffff';
-        drawSmoothBlob(x, y, brushRadius);
-        ctx.restore();
-      }
-
-      lastX = x;
-      lastY = y;
-    }, { passive: true });
-
-    heroSec.addEventListener('mouseleave', () => {
-      lastX = null;
-      lastY = null;
-    });
-
-    function renderMaskLoop() {
-      if (canvasW > 0 && canvasH > 0) {
-        // Fast snappy fluid fade-out (~400ms)
-        ctx.save();
-        ctx.globalCompositeOperation = 'destination-out';
-        ctx.fillStyle = `rgba(0, 0, 0, ${fadeSpeed})`;
-        ctx.fillRect(0, 0, canvasW, canvasH);
-        ctx.restore();
-
-        // Update mask on the revealed layer at 60fps
-        try {
-          const maskData = `url(${maskCanvas.toDataURL('image/png')})`;
-          revealBgLayer.style.webkitMaskImage = maskData;
-          revealBgLayer.style.maskImage = maskData;
-        } catch (err) {}
-      }
-
-      requestAnimationFrame(renderMaskLoop);
-    }
-
-    requestAnimationFrame(renderMaskLoop);
-  }
 
 })();
 </script>
