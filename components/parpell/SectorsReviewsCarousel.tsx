@@ -1,7 +1,4 @@
-"use client";
-
-import React, { useRef, useState, useEffect } from "react";
-import { motion, useAnimationFrame } from "framer-motion";
+import React from "react";
 import { Star } from "lucide-react";
 
 interface GoogleReview {
@@ -161,37 +158,6 @@ const googleReviews: GoogleReview[] = [
 const duplicatedReviews = [...googleReviews, ...googleReviews];
 
 export function SectorsReviewsCarousel() {
-  const trackRef = useRef<HTMLDivElement>(null);
-  const xPosRef = useRef(0);
-  const isHoveredRef = useRef(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const isMobileDevice =
-      typeof window !== "undefined" &&
-      (window.innerWidth < 768 ||
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-          navigator.userAgent
-        ));
-    setIsMobile(isMobileDevice);
-  }, []);
-
-  // VSync-Synchronized Frame Loop (Desktop only)
-  useAnimationFrame((_, delta) => {
-    if (isMobile || !trackRef.current) return;
-    if (isHoveredRef.current) return;
-
-    const speed = 0.038;
-    xPosRef.current += delta * speed;
-
-    const halfWidth = trackRef.current.scrollWidth / 2;
-    if (halfWidth > 0 && xPosRef.current >= halfWidth) {
-      xPosRef.current %= halfWidth;
-    }
-
-    trackRef.current.style.transform = `translate3d(-${xPosRef.current}px, 0, 0)`;
-  });
-
   return (
     <section
       id="sectores"
@@ -228,24 +194,12 @@ export function SectorsReviewsCarousel() {
         </div>
       </div>
 
-      {/* Desktop Perpetual Track (>= md) */}
-      <div
-        className="hidden md:block relative w-full max-w-5xl mx-auto overflow-hidden rounded-3xl group p-1"
-        onMouseEnter={() => {
-          isHoveredRef.current = true;
-        }}
-        onMouseLeave={() => {
-          isHoveredRef.current = false;
-        }}
-      >
+      {/* Desktop Perpetual Track (>= md) with GPU Hardware Compositor Marquee */}
+      <div className="hidden md:block relative w-full max-w-5xl mx-auto overflow-hidden rounded-3xl group p-1">
         <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-[#080306] via-[#080306]/85 to-transparent z-20 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-[#080306] via-[#080306]/85 to-transparent z-20 pointer-events-none" />
 
-        <div
-          ref={trackRef}
-          style={{ willChange: "transform" }}
-          className="flex gap-4 sm:gap-5 w-max py-3"
-        >
+        <div className="flex gap-4 sm:gap-5 animate-marquee hover:[animation-play-state:paused] py-3 will-change-transform">
           {duplicatedReviews.map((review, idx) => (
             <GoogleReviewCard key={`${review.id}-${idx}`} review={review} />
           ))}

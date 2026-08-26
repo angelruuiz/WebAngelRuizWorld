@@ -1,0 +1,1731 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Marina Godar — Dirección de Arte & Diseño Digital</title>
+<meta name="description" content="Portfolio de Marina Godar. Dirección de arte, estrategia creativa y diseño digital. Madrid · Sydney · 2026.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ══ VARIABLES ══ */
+:root {
+  --orange:    #FF5E00;
+  --red:       #E63946;
+  --dark-blue: #0A192F;
+  --bg:        #F5F0EB;
+  --text:      #0A192F;
+  --muted:     #4a5568;
+  --ease:      cubic-bezier(0.23, 1, 0.32, 1);
+}
+[data-theme="dark"] {
+  --bg:   #0A192F;
+  --text: #F5F0EB;
+  --muted:#8a9ab5;
+  --dark-blue: #F5F0EB;
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { font-size:16px; }
+body {
+  font-family: 'Outfit', sans-serif;
+  background: var(--bg); color: var(--text);
+  overflow: hidden; height: 100vh;
+  cursor: none; transition: background .4s, color .4s;
+  user-select: none;
+}
+a, button { color: inherit; text-decoration: none; cursor: none; }
+
+/* ══ OVERLAYS ══ */
+.noise-overlay {
+  position:fixed; inset:0; pointer-events:none; z-index:10000; opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.grid-overlay {
+  position:fixed; inset:0; pointer-events:none; z-index:0;
+  background-image: linear-gradient(rgba(10,25,47,.04) 1px,transparent 1px),
+                    linear-gradient(90deg,rgba(10,25,47,.04) 1px,transparent 1px);
+  background-size:48px 48px;
+}
+[data-theme="dark"] .grid-overlay {
+  background-image: linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
+                    linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+}
+
+/* ══ CURSOR ══ */
+.cursor-dot {
+  position:fixed; width:8px; height:8px; background:var(--orange);
+  border-radius:50%; pointer-events:none; z-index:99999;
+  mix-blend-mode:difference; transform:translate(-50%,-50%);
+  transition:width .25s var(--ease),height .25s var(--ease),background .25s;
+}
+.cursor-ring {
+  position:fixed; width:40px; height:40px; border:1.5px solid var(--orange);
+  border-radius:50%; pointer-events:none; z-index:99998;
+  mix-blend-mode:difference; transform:translate(-50%,-50%);
+  transition:width .35s var(--ease),height .35s var(--ease),opacity .3s,border-color .3s;
+}
+.cursor-ring.big { width:60px; height:60px; opacity:.55; border-color:var(--red); }
+.cursor-dot.big  { width:12px; height:12px; background:var(--red); }
+
+/* ══ NAVBAR ══ */
+.navbar {
+  position:fixed; top:0; left:0; right:0;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:28px 4vw; z-index:900; pointer-events:none;
+}
+.nav-logo {
+  font-family:'Space Grotesk',sans-serif; font-size:1.05rem; font-weight:700;
+  letter-spacing:.04em; pointer-events:auto;
+  opacity:0; transform:translateY(-16px);
+  transition:opacity .8s var(--ease) .9s,transform .8s var(--ease) .9s;
+}
+.nav-logo.in { opacity:1; transform:none; }
+.nav-logo span { font-weight:300; opacity:.45; }
+.nav-beh {
+  font-family:'Space Grotesk',sans-serif; font-size:.88rem; font-weight:500;
+  opacity:0; pointer-events:auto; transition:opacity .8s var(--ease) 1s,color .2s;
+}
+.nav-beh.in { opacity:.65; }
+.nav-beh:hover { opacity:1!important; color:var(--orange); }
+
+.nav-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+.nav-secret {
+  background: transparent;
+  border: 1px solid var(--red);
+  color: var(--red);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: auto;
+  transition: opacity .8s var(--ease) 1.2s, background .2s, color .2s;
+}
+.nav-secret.in { opacity: 0.6; }
+.nav-secret:hover { background: var(--red); color: var(--bg); opacity: 1; }
+
+/* ══ HERO ══ */
+.hero {
+  position:relative; height:100vh; overflow:hidden; z-index:2;
+  display:flex; flex-direction:column; justify-content:center;
+  padding:0 4vw;
+}
+.hero-inner { position:relative; width:55%; display:flex; flex-direction:column; }
+
+.hero-title {
+  font-family:'Anton',sans-serif;
+  font-size:clamp(4.5rem,14vw,15rem);
+  line-height:.86; letter-spacing:.01em; text-transform:uppercase;
+  display:flex; flex-direction:column; margin-bottom:1.2vh; pointer-events:none;
+}
+.title-line {
+  display:flex; align-items:flex-end; overflow:visible;
+  opacity:0; transform:translateY(60px);
+  transition:opacity .9s var(--ease),transform .9s var(--ease);
+}
+.title-line.in { opacity:1; transform:none; }
+.title-marina { color:var(--text); }
+.title-bottom  { position:relative; z-index:2; }
+.word-godar    { color:var(--orange); }
+
+/* ══ HERO BLOB PHOTO ══ */
+.hero-photo-float {
+  position:absolute; right:0; top:0; bottom:0; width:44vw;
+  display:flex; align-items:center; justify-content:center;
+  pointer-events:auto;
+  animation:h-float 5s ease-in-out infinite;
+  z-index:3;
+}
+.hero-blob {
+  width:clamp(260px,34vw,520px);
+  height:clamp(380px,75vh,680px);
+  position:relative; overflow:hidden;
+  border-radius:30% 70% 70% 30% / 30% 30% 70% 70%;
+  animation:blob-morph 9s ease-in-out infinite;
+  box-shadow: 0 24px 70px rgba(255,94,0,.22), -6px -6px 0 var(--orange);
+  transition:border-radius .7s var(--ease), box-shadow .5s;
+}
+.hero-blob::before {
+  content:''; position:absolute; inset:-3px; z-index:4;
+  border-radius:inherit; border:2px solid var(--orange);
+  pointer-events:none; opacity:.55;
+  animation:blob-morph 9s ease-in-out infinite .4s;
+}
+.hero-blob img {
+  width:100%; height:100%; object-fit:cover; object-position:center top;
+  display:block; position:relative; z-index:2;
+  filter:grayscale(45%) contrast(1.08) brightness(1.02);
+  animation:color-breathe 7s ease-in-out infinite;
+  transition:filter .7s var(--ease), transform .7s var(--ease);
+}
+.hero-photo-float:hover .hero-blob {
+  border-radius:6px;
+  box-shadow: 0 36px 90px rgba(255,94,0,.38), -10px -10px 0 var(--orange);
+}
+.hero-photo-float:hover .hero-blob img {
+  filter:grayscale(0%) contrast(1.02) brightness(1.06) saturate(1.1);
+  transform:scale(1.04);
+}
+.hero-photo-float:hover .hero-blob::before { opacity:.9; }
+
+@keyframes blob-morph {
+  0%   { border-radius:30% 70% 70% 30% / 30% 30% 70% 70%; }
+  16%  { border-radius:58% 42% 35% 65% / 52% 44% 56% 48%; }
+  33%  { border-radius:48% 52% 62% 38% / 42% 60% 40% 58%; }
+  50%  { border-radius:36% 64% 44% 56% / 64% 38% 62% 36%; }
+  66%  { border-radius:66% 34% 52% 48% / 38% 52% 48% 62%; }
+  83%  { border-radius:44% 56% 38% 62% / 56% 30% 70% 44%; }
+  100% { border-radius:30% 70% 70% 30% / 30% 30% 70% 70%; }
+}
+@keyframes color-breathe {
+  0%,100% { filter:grayscale(60%) contrast(1.1) brightness(1.0); }
+  50%     { filter:grayscale(5%) contrast(1.04) brightness(1.09) saturate(1.15); }
+}
+@keyframes h-float {
+  0%,100%{transform:translateY(0px)}
+  50%    {transform:translateY(-14px)}
+}
+
+/* ══ HERO SUB + MENU ══ */
+.hero-sub {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(.72rem,1vw,.95rem); color:var(--muted);
+  letter-spacing:.04em; line-height:1.55;
+  margin-bottom:2.2vh;
+  opacity:0; transform:translateY(20px);
+  transition:opacity .9s var(--ease) .35s,transform .9s var(--ease) .35s;
+}
+.hero-sub.in { opacity:1; transform:none; }
+.hero-sub em { color:var(--orange); font-style:normal; }
+
+.menu-bar {
+  position:relative; width:100%;
+  opacity:0; transform:translateY(16px);
+  transition:opacity .9s var(--ease) .6s,transform .9s var(--ease) .6s;
+}
+.menu-bar.in { opacity:1; transform:none; }
+.menu-rule {
+  position:absolute; top:50%; left:0; right:0;
+  height:1px; background:var(--text); opacity:.14; z-index:0;
+}
+.menu-btns {
+  display:flex; justify-content:space-between;
+  position:relative; z-index:10; pointer-events:auto;
+}
+.menu-btn {
+  background:var(--bg); border:1.5px solid var(--text);
+  padding:8px 18px; font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(.6rem,.85vw,.9rem); font-weight:600;
+  letter-spacing:.05em; color:var(--text); border-radius:50px;
+  transition:background .28s var(--ease),color .28s var(--ease),
+             transform .28s var(--ease),border-color .28s;
+}
+.menu-btn:hover { background:var(--text); color:var(--bg); transform:translateY(-3px); }
+.menu-btn.is-active { background:var(--orange); color:#fff; border-color:var(--orange); }
+
+/* ══ OS WINDOWS ══ */
+.os-win {
+  position:fixed; display:flex; flex-direction:column;
+  background:var(--bg); color:var(--text);
+  border:2px solid var(--text); border-radius:14px;
+  box-shadow:10px 10px 0 rgba(10,25,47,.11);
+  overflow:hidden; resize:both;
+  z-index:1000; pointer-events:none;
+  opacity:0; transform:scale(.95) translateY(10px);
+  transition:opacity .32s var(--ease),transform .32s var(--ease);
+  width:46vw; height:57vh;
+  left:10vw; top:10vh;
+}
+.os-win.open { opacity:1; pointer-events:auto; transform:none; }
+.os-win.minimized {
+  opacity:0; pointer-events:none;
+  transform:scale(.4) translateY(80vh);
+  transition:opacity .35s var(--ease),transform .35s var(--ease);
+}
+.os-win.maximized {
+  width:74vw!important; height:76vh!important;
+  left:13vw!important; top:12vh!important;
+}
+#w-portfolio { width:74vw; height:78vh; }
+
+/* ══ MINIMIZE DOCK ══ */
+.min-dock {
+  position:fixed; bottom:68px; left:50%; transform:translateX(-50%);
+  display:flex; gap:8px; z-index:9500;
+  pointer-events:none;
+}
+.min-dock:empty { display:none; }
+.dock-item {
+  pointer-events:auto;
+  background:var(--text); color:var(--bg);
+  font-family:'Space Grotesk',sans-serif;
+  font-size:.72rem; font-weight:600;
+  letter-spacing:.06em; text-transform:uppercase;
+  padding:9px 20px; border-radius:10px;
+  border:1.5px solid rgba(255,94,0,.35);
+  box-shadow:0 6px 24px rgba(0,0,0,.22);
+  opacity:0; transform:translateY(20px) scale(.9);
+  animation:dock-in .35s var(--ease) forwards;
+  transition:background .2s,border-color .2s,transform .2s;
+  white-space:nowrap;
+}
+.dock-item:hover {
+  background:var(--orange); border-color:var(--orange);
+  transform:translateY(-3px) scale(1.04);
+}
+@keyframes dock-in {
+  to { opacity:1; transform:translateY(0) scale(1); }
+}
+#w-contact   { width:52vw; height:54vh; }
+#w-skills    { height:68vh; }
+
+.win-bar {
+  display:flex; align-items:center; flex-shrink:0;
+  background:var(--text); color:var(--bg);
+  padding:10px 16px; cursor:grab; user-select:none;
+}
+.win-bar:active { cursor:grabbing; }
+.win-dots { display:flex; gap:7px; margin-right:14px; }
+.win-dot {
+  width:16px; height:16px; border-radius:50%;
+  border:1px solid rgba(0,0,0,.12);
+  display:flex; align-items:center; justify-content:center;
+  font-size:9px; font-weight:900; color:transparent;
+  transition:filter .18s,color .18s;
+  position:relative;
+}
+.win-dot::before {
+  content:''; position:absolute;
+  top:-12px; bottom:-12px; left:-12px; right:-12px;
+  border-radius:50%;
+}
+.win-dot:hover { filter:brightness(.8); color:rgba(0,0,0,.5); }
+.d-close { background:#FF5F56; }
+.d-close::after { content:'✕'; }
+.d-min   { background:#FFBD2E; }
+.d-min::after   { content:'−'; }
+.d-max   { background:#27C93F; }
+.d-max::after   { content:'＋'; }
+.win-title {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:.78rem; font-weight:600; text-transform:uppercase;
+  letter-spacing:.07em; flex:1; text-align:center; margin-right:60px;
+}
+.win-body {
+  flex:1; overflow-y:auto; padding:4vh 3vw;
+  scrollbar-width:thin; scrollbar-color:rgba(10,25,47,.18) transparent;
+}
+.win-body::-webkit-scrollbar { width:5px; }
+.win-body::-webkit-scrollbar-thumb { background:rgba(10,25,47,.2); border-radius:8px; }
+
+[data-r] { opacity:0; transform:translateY(24px); transition:opacity .8s var(--ease),transform .8s var(--ease); }
+[data-r].in { opacity:1; transform:none; }
+
+.s-label {
+  display:block; font-family:'Space Grotesk',sans-serif;
+  font-size:.72rem; font-weight:600; letter-spacing:.13em;
+  text-transform:uppercase; color:var(--orange); margin-bottom:2rem;
+}
+
+/* ══ MODAL 01 — ROL/VIBE ══ */
+.vibe-row { display:flex; align-items:center; justify-content:center; gap:28px; margin:0 auto 32px auto; width:fit-content; }
+.vibe-photo {
+  width:clamp(65px,9vw,130px); flex-shrink:0;
+  aspect-ratio:4/5; object-fit:cover;
+  border:3px solid var(--text); box-shadow:7px 7px 0 var(--orange);
+  transform:rotate(4deg);
+}
+.vibe-big {
+  font-family:'Anton',sans-serif;
+  font-size:clamp(3.5rem,9.5vw,9.5rem); line-height:.82;
+  text-transform:uppercase; color:var(--text);
+}
+.vibe-cols {
+  column-count:2; column-gap:44px;
+  font-size:1.02rem; line-height:1.78; color:var(--muted);
+  margin-bottom:28px;
+}
+.vibe-cols p { break-inside:avoid; margin-bottom:1.1rem; }
+.vibe-cols em { color:var(--orange); font-style:italic; }
+.vibe-cols strong { color:var(--text); }
+
+.vibe-manifesto {
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:1px; background:var(--text); border:1px solid var(--text);
+  margin:28px 0; overflow:hidden; border-radius:8px;
+}
+.vibe-item {
+  background:var(--bg); padding:20px;
+  transition:background .25s,color .25s;
+}
+.vibe-item:hover { background:var(--orange); color:#fff; }
+.vibe-item-num {
+  font-family:'Anton',sans-serif; font-size:1.6rem;
+  color:var(--orange); display:block; margin-bottom:6px;
+  transition:color .25s;
+}
+.vibe-item:hover .vibe-item-num { color:#fff; }
+.vibe-item-text {
+  font-size:.82rem; font-family:'Space Grotesk',sans-serif;
+  font-weight:600; letter-spacing:.02em; line-height:1.4;
+}
+
+.edu-section { border-top:1px solid rgba(10,25,47,.14); padding-top:24px; }
+[data-theme="dark"] .edu-section { border-top-color:rgba(245,240,235,.12); }
+.edu-label {
+  font-size:.68rem; letter-spacing:.13em; text-transform:uppercase;
+  color:var(--orange); margin-bottom:14px;
+  font-family:'Space Grotesk',sans-serif; font-weight:600;
+}
+.edu-list { display:flex; flex-direction:column; gap:14px; }
+.edu-name { font-size:.98rem; font-weight:600; margin-bottom:2px; }
+.edu-info { font-size:.88rem; color:var(--muted); }
+
+/* ══ MODAL 02 — TOOLKIT ══ */
+.tool-grid {
+  display:flex; flex-wrap:wrap; gap:2vw;
+  justify-content:center; padding-top:2vh;
+}
+.tool-item {
+  display:flex; flex-direction:column; align-items:center; gap:8px;
+  width:clamp(64px,8vw,100px);
+}
+.tool-circle {
+  width:clamp(56px,7.5vw,90px); height:clamp(56px,7.5vw,90px);
+  border-radius:50%; border:1.5px solid var(--text);
+  display:flex; align-items:center; justify-content:center;
+  transition:transform .4s cubic-bezier(.175,.885,.32,1.275),
+             border-radius .4s,box-shadow .4s;
+}
+.tool-icon {
+  width:48%; height:48%; object-fit:contain;
+  filter:grayscale(100%) contrast(1.2); transition:filter .4s;
+}
+[data-theme="dark"] .tool-icon { filter:grayscale(100%) contrast(1.2) invert(1); }
+.tool-item:hover .tool-circle {
+  transform:scale(1.12) rotate(-6deg);
+  border-radius:28%; box-shadow:7px 7px 0 var(--orange);
+}
+.tool-item:hover .tool-icon { filter:none; }
+.tool-name { font-size:.6rem; letter-spacing:.07em; text-transform:uppercase; text-align:center; color:var(--muted); }
+.skill-chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:32px; }
+.skill-chip {
+  padding:6px 16px; border:1.5px solid var(--text);
+  font-size:.78rem; letter-spacing:.05em;
+  border-radius:50px; transition:background .22s,color .22s,border-color .22s;
+}
+.skill-chip:hover { background:var(--orange); border-color:var(--orange); color:#fff; }
+
+/* ══ MODAL 03 — EXPERIENCIA ══ */
+.exp-list { border-top:2px solid var(--text); }
+.exp-row {
+  display:flex; align-items:flex-start;
+  padding:32px 0; border-bottom:2px solid var(--text);
+  position:relative; transition:all .32s var(--ease);
+}
+.exp-row:hover { background:var(--text); padding-left:28px; padding-right:24px; color:var(--bg); }
+.exp-yr {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:1.1rem; font-weight:400; opacity:.35;
+  width:72px; flex-shrink:0; margin-top:6px; transition:opacity .3s;
+}
+.exp-row:hover .exp-yr { opacity:.4; color:var(--bg); }
+.exp-body { flex:1; }
+.exp-role {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(1.3rem,3vw,3rem); font-weight:800;
+  text-transform:uppercase; display:block;
+  transition:color .3s,font-style .3s; line-height:1.1;
+}
+.exp-row:hover .exp-role { color:var(--orange); font-style:italic; }
+.exp-where { font-size:.88rem; color:var(--muted); display:block; margin-top:5px; transition:color .3s; }
+.exp-row:hover .exp-where { color:rgba(245,240,235,.55); }
+.exp-chips { display:flex; flex-wrap:wrap; gap:5px; margin-top:10px; }
+.exp-chip {
+  font-size:.68rem; padding:3px 10px;
+  border:1px solid var(--muted); border-radius:50px; color:var(--muted);
+  transition:border-color .3s,color .3s;
+}
+.exp-row:hover .exp-chip { border-color:rgba(245,240,235,.28); color:rgba(245,240,235,.45); }
+
+/* ══ MODAL 04 — PROYECTOS: INDEX + PREVIEW ══ */
+.proj-layout {
+  display:grid;
+  grid-template-columns:1fr 1.5fr;
+  gap:0;
+  height:100%;
+}
+
+/* Left: index list */
+.proj-index {
+  border-right:1.5px solid var(--text);
+  display:flex; flex-direction:column;
+  overflow-y:auto;
+  scrollbar-width:none;
+}
+.proj-index::-webkit-scrollbar { display:none; }
+
+.proj-entry {
+  display:flex; align-items:baseline; gap:12px;
+  padding:14px 20px 14px 0;
+  border-bottom:1px solid rgba(10,25,47,.1);
+  position:relative; transition:padding-left .25s var(--ease),background .22s;
+}
+[data-theme="dark"] .proj-entry { border-bottom-color:rgba(245,240,235,.1); }
+.proj-entry::before {
+  content:''; position:absolute; left:0; top:0; bottom:0;
+  width:3px; background:var(--orange);
+  transform:scaleY(0); transform-origin:bottom;
+  transition:transform .28s var(--ease);
+}
+.proj-entry.active::before,
+.proj-entry:hover::before { transform:scaleY(1); }
+.proj-entry.active,
+.proj-entry:hover { padding-left:14px; background:rgba(255,94,0,.05); }
+.proj-entry.active .pe-name { color:var(--orange); }
+.pe-num {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:.68rem; color:var(--muted); width:22px; flex-shrink:0;
+}
+.pe-name {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:.92rem; font-weight:600; flex:1; transition:color .22s;
+}
+.pe-cat {
+  font-size:.68rem; color:var(--muted); letter-spacing:.05em;
+  text-transform:uppercase; white-space:nowrap;
+}
+
+/* Right: preview */
+.proj-preview {
+  display:flex; flex-direction:column; padding:0 0 0 24px; gap:16px;
+}
+.proj-imgwrap {
+  position:relative; flex:1; border-radius:10px; overflow:hidden;
+  background:var(--text); min-height:160px;
+}
+.proj-img-layer {
+  position:absolute; inset:0;
+  background-size:cover; background-position:center;
+  transition:opacity .45s var(--ease);
+}
+.proj-img-layer.hidden { opacity:0; }
+
+.proj-meta {
+  display:flex; flex-direction:column; gap:6px;
+  padding-bottom:4px;
+}
+.pm-title {
+  font-family:'Anton',sans-serif;
+  font-size:clamp(1.3rem,2.4vw,2rem); text-transform:uppercase;
+  color:var(--text); line-height:1;
+}
+.pm-row {
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+}
+.pm-cat {
+  font-size:.72rem; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--orange);
+}
+.pm-link {
+  font-family:'Space Grotesk',sans-serif; font-size:.78rem; font-weight:700;
+  color:var(--text); border-bottom:1.5px solid var(--text);
+  padding-bottom:1px; white-space:nowrap;
+  transition:color .2s,border-color .2s;
+}
+.pm-link:hover { color:var(--orange); border-color:var(--orange); }
+
+/* ══ MODAL 05 — CONTACTO ══ */
+.contact-scene {
+  background:#0A192F; color:#F5F0EB;
+  height:100%; display:flex; flex-direction:column;
+  justify-content:center; align-items:center;
+  position:relative; overflow:hidden; padding:8vh 0;
+}
+.marquee-track {
+  position:absolute; top:16%; left:0; right:0; overflow:hidden;
+  transform:rotate(-2.5deg) scaleX(1.06);
+  background:var(--orange); padding:14px 0; z-index:1;
+}
+.marquee-inner {
+  display:inline-block; white-space:nowrap;
+  animation:mscroll 16s linear infinite;
+  font-family:'Anton',sans-serif;
+  font-size:clamp(2rem,4.5vw,4rem); color:#0A192F;
+  text-transform:uppercase;
+}
+.marquee-inner span { padding-right:60px; }
+@keyframes mscroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+.email-btn {
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(1.6rem,3.8vw,3.2rem); font-weight:800;
+  color:#F5F0EB; padding:24px 52px;
+  border:2px solid rgba(255,255,255,.18); border-radius:100px;
+  display:inline-block; position:relative; z-index:2;
+  text-transform:uppercase; margin-top:10vh;
+  transition:all .45s var(--ease);
+}
+.email-btn:hover {
+  border-color:var(--orange); background:var(--orange);
+  color:#0A192F; transform:scale(1.04);
+}
+.contact-row {
+  display:flex; gap:32px; margin-top:24px; z-index:2;
+}
+.contact-lnk {
+  font-size:.82rem; letter-spacing:.1em; text-transform:uppercase;
+  color:rgba(245,240,235,.45); border-bottom:1px solid transparent;
+  transition:color .22s,border-color .22s;
+}
+.contact-lnk:hover { color:var(--orange); border-color:var(--orange); }
+
+/* ══ GUIDE CHARACTER ══ */
+.guide {
+  position:fixed; right:22px; bottom:76px; z-index:8500;
+  display:flex; flex-direction:column; align-items:center; gap:7px;
+  animation:g-idle 3.6s ease-in-out infinite;
+}
+.guide-tip {
+  background:var(--text); color:var(--bg);
+  padding:8px 14px; border-radius:10px;
+  font-family:'Space Grotesk',sans-serif; font-size:.72rem; font-weight:600;
+  white-space:nowrap; pointer-events:none;
+  opacity:0; transform:translateY(8px);
+  transition:opacity .3s var(--ease),transform .3s var(--ease);
+  position:relative; max-width:240px; text-align:center; white-space:normal;
+}
+.guide-tip::after {
+  content:''; position:absolute; bottom:-6px; left:50%;
+  transform:translateX(-50%); border:6px solid transparent;
+  border-top-color:var(--text); border-bottom:none;
+}
+.guide:hover .guide-tip, .guide.show-tip .guide-tip { opacity:1; transform:none; }
+.guide-orb {
+  width:44px; height:44px; border-radius:50%;
+  background:var(--orange); border:none;
+  display:flex; align-items:center; justify-content:center;
+  box-shadow:0 4px 20px rgba(255,94,0,.4);
+  font-size:1.5rem; line-height:1;
+  transition:box-shadow .3s;
+}
+.guide:hover .guide-orb { box-shadow:0 6px 28px rgba(255,94,0,.65); }
+@keyframes g-idle { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+.guide.pop { animation:g-pop .5s var(--ease) forwards; }
+@keyframes g-pop {
+  0%  {transform:scale(1) rotate(0)}
+  30% {transform:scale(1.35) rotate(-12deg)}
+  70% {transform:scale(1.2) rotate(10deg)}
+  100%{transform:scale(1) rotate(0)}
+}
+
+/* ══ THEME TOGGLE ══ */
+.theme-btn {
+  position:fixed; bottom:26px; left:50%; transform:translateX(-50%);
+  z-index:9000; background:var(--text); border:none; color:var(--bg);
+  font-family:'Space Grotesk',sans-serif; font-size:.95rem; font-weight:700;
+  padding:10px 28px; border-radius:50px;
+  box-shadow:0 6px 22px rgba(0,0,0,.22); opacity:.85;
+  transition:opacity .3s,transform .3s;
+}
+.theme-btn:hover { opacity:1; transform:translateX(-50%) scale(1.04); }
+
+/* ══ RESPONSIVE ══ */
+
+/* ── TABLET LANDSCAPE (≤1024px) ── */
+@media (max-width:1024px) {
+  .hero-inner { width:60%; }
+  .hero-photo-float { width:38vw; }
+  .hero-blob { width:clamp(200px,28vw,380px); height:clamp(280px,55vh,480px); }
+  .os-win { width:60vw; height:60vh; }
+  #w-portfolio { width:80vw; height:72vh; }
+  #w-contact { width:60vw; height:52vh; }
+  .vibe-cols { column-gap:28px; }
+}
+
+/* ── TABLET PORTRAIT (≤768px) ── */
+@media (max-width:768px) {
+  body { overflow-y:auto; overflow-x:hidden; height:auto; cursor:auto; }
+  a, button { cursor:auto; }
+
+  /* Hide custom cursor on touch */
+  .cursor-dot, .cursor-ring { display:none !important; }
+
+  /* Navbar */
+  .navbar { padding:18px 5vw; }
+  .nav-logo { opacity:1 !important; transform:none !important; font-size:.95rem; }
+  .nav-beh { opacity:.65 !important; font-size:.82rem; }
+  .nav-links { gap: 12px; }
+
+  /* Hero */
+  .hero {
+    height:auto; min-height:100vh; min-height:100dvh;
+    padding:100px 5vw 40px;
+    align-items:center; text-align:center;
+    flex-wrap:wrap;
+  }
+  .hero-inner { width:100%; align-items:center; order:2; }
+  .hero-title { font-size:clamp(3.2rem,15vw,6rem); align-items:center; }
+  .title-line { justify-content:center; opacity:1 !important; transform:none !important; }
+  .hero-sub { opacity:1 !important; transform:none !important; text-align:center; margin-bottom:3vh; }
+  .hero-photo-float {
+    position:relative; right:auto; top:auto; bottom:auto;
+    width:100%; height:auto;
+    display:flex; justify-content:center;
+    order:-1; margin-bottom:24px;
+    animation:none;
+  }
+  .hero-blob {
+    width:clamp(160px,40vw,240px);
+    height:clamp(200px,50vw,300px);
+    box-shadow: 0 16px 40px rgba(255,94,0,.18), -4px -4px 0 var(--orange);
+  }
+
+  /* Menu */
+  .menu-bar { opacity:1 !important; transform:none !important; }
+  .menu-rule { display:none; }
+  .menu-btns {
+    flex-wrap:wrap; gap:8px; justify-content:center;
+    padding-bottom:8px;
+  }
+  .menu-btn {
+    flex-shrink:0; padding:10px 20px;
+    font-size:.75rem;
+  }
+
+  /* Windows — mobile sheet cards */
+  .os-win {
+    position:fixed !important;
+    width:94vw !important; height:auto !important;
+    max-height:85vh; max-height:85dvh;
+    left:3vw !important; top:auto !important; bottom:3vh !important;
+    border-radius:16px;
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+  }
+  .os-win.maximized {
+    width:100vw !important; height:100vh !important; height:100dvh !important;
+    left:0 !important; top:0 !important;
+    border-radius:0;
+  }
+  .win-body { padding:3vh 5vw; }
+  .win-bar { padding:10px 14px; }
+  .win-title { font-size:.72rem; margin-right:50px; }
+  .d-min, .d-max { display:none; }
+
+  /* Rol / Vibe */
+  .vibe-row { flex-direction:row; align-items:center; justify-content:center; gap:16px; }
+  .vibe-photo { width:clamp(60px,18vw,100px); transform:rotate(2deg); }
+  .vibe-big { font-size:clamp(2.8rem,12vw,5rem); text-align:center; }
+  .vibe-cols { column-count:1; font-size:.95rem; line-height:1.7; }
+  .vibe-manifesto { grid-template-columns:1fr; }
+  .vibe-item { padding:16px 20px; }
+
+  /* Toolkit */
+  .tool-grid { gap:16px; padding-top:1vh; }
+  .tool-item { width:clamp(60px,18vw,85px); }
+  .tool-circle { width:clamp(50px,14vw,72px); height:clamp(50px,14vw,72px); }
+  .skill-chips { gap:6px; margin-top:20px; }
+  .skill-chip { font-size:.72rem; padding:5px 12px; }
+
+  /* Experiencia */
+  .exp-row { flex-direction:column; gap:4px; padding:20px 0; }
+  .exp-yr { width:auto; margin-top:0; font-size:.88rem; }
+  .exp-role { font-size:clamp(1.2rem,5vw,1.8rem); }
+  .exp-row:hover { padding-left:14px; padding-right:14px; }
+
+  /* Proyectos */
+  .proj-layout { grid-template-columns:1fr; height:auto; }
+  .proj-index { border-right:none; max-height:none; }
+  .proj-preview {
+    display:flex; padding:16px;
+    border-top:1.5px solid rgba(10,25,47,.1);
+  }
+  [data-theme="dark"] .proj-preview { border-top-color:rgba(245,240,235,.1); }
+  .proj-imgwrap { min-height:140px; border-radius:8px; }
+  .proj-entry { padding:12px 14px 12px 0; }
+  .pe-cat { display:none; }
+
+  /* Contacto */
+  .email-btn {
+    font-size:clamp(1rem,5vw,1.8rem);
+    padding:18px 32px;
+  }
+  .contact-row { flex-direction:column; align-items:center; gap:16px; }
+  .marquee-inner { font-size:clamp(1.4rem,5vw,2.4rem); }
+
+  /* Guide */
+  .guide {
+    display: none !important;
+  }
+
+  /* Theme toggle */
+  .theme-btn {
+    font-size:.82rem; padding:8px 20px;
+    bottom:18px;
+  }
+
+  /* Dock */
+  .min-dock { bottom:58px; }
+  .dock-item { font-size:.65rem; padding:7px 14px; }
+
+  /* Edu */
+  .edu-section { padding-top:18px; }
+  .edu-name { font-size:.9rem; }
+  .edu-info { font-size:.82rem; }
+}
+
+/* ── SMALL MOBILE (≤480px) ── */
+@media (max-width:480px) {
+  .hero { padding:80px 5vw 32px; }
+  .hero-title { font-size:clamp(2.6rem,16vw,4.5rem); }
+  .hero-blob {
+    width:120px; height:150px;
+    border-radius:50% !important;
+    animation:none !important;
+    box-shadow: 0 10px 30px rgba(255,94,0,.2);
+  }
+  .hero-blob::before { animation:none !important; border-radius:50% !important; }
+  .hero-blob img { object-position:center 20%; }
+
+  .navbar { padding:14px 5vw; }
+  .nav-logo { font-size:.88rem; }
+
+  .menu-btn { padding:8px 14px; font-size:.68rem; }
+
+  .os-win {
+    width:100vw !important; height:auto !important;
+    max-height:90vh; max-height:90dvh;
+    left:0 !important; top:auto !important; bottom:0 !important;
+    border-radius:18px 18px 0 0;
+    border-left:none; border-right:none; border-bottom:none;
+  }
+  .win-body { padding:2.5vh 4.5vw; }
+
+  .vibe-big { font-size:clamp(2.2rem,14vw,3.5rem); }
+  .vibe-photo { width:80px; }
+  .vibe-item-text { font-size:.76rem; }
+  .vibe-item-num { font-size:1.3rem; }
+
+  .tool-item { width:clamp(54px,20vw,70px); }
+  .tool-circle { width:clamp(44px,13vw,58px); height:clamp(44px,13vw,58px); }
+  .tool-name { font-size:.52rem; }
+
+  .exp-role { font-size:clamp(1rem,5.5vw,1.5rem); }
+  .exp-chip { font-size:.62rem; padding:2px 8px; }
+  .exp-where { font-size:.78rem; }
+
+  .proj-entry { padding:10px 10px 10px 0; }
+  .pe-num { font-size:.6rem; width:18px; }
+  .pe-name { font-size:.82rem; }
+  .proj-imgwrap { min-height:120px; }
+
+  .email-btn {
+    font-size:clamp(.9rem,4.5vw,1.4rem);
+    padding:16px 26px; margin-top:8vh;
+  }
+  .marquee-track { top:12%; padding:10px 0; }
+  .marquee-inner { font-size:clamp(1.1rem,4vw,1.8rem); }
+
+  .guide { right:10px; bottom:60px; }
+  .guide-orb { width:34px; height:34px; font-size:1rem; }
+  .guide-tip { font-size:.62rem; max-width:160px; }
+
+  .theme-btn { font-size:.75rem; padding:7px 16px; bottom:14px; }
+  .min-dock { bottom:50px; gap:5px; }
+  .dock-item { font-size:.6rem; padding:6px 10px; border-radius:8px; }
+}
+
+/* ── EXTRA SMALL (≤360px) ── */
+@media (max-width:360px) {
+  .hero-title { font-size:clamp(2.2rem,18vw,3.5rem); }
+  .hero-blob { width:100px; height:120px; }
+  .hero-sub { font-size:.7rem; }
+  .menu-btn { padding:7px 11px; font-size:.62rem; }
+  .vibe-big { font-size:2rem; }
+  .email-btn { font-size:.85rem; padding:14px 22px; }
+}
+
+/* ── Touch-specific improvements ── */
+@media (hover:none) and (pointer:coarse) {
+  .cursor-dot, .cursor-ring { display:none !important; }
+  body { cursor:auto; }
+  a, button { cursor:auto; }
+
+  /* Larger touch targets */
+  .menu-btn { min-height:44px; display:flex; align-items:center; }
+  .win-dot { width:16px; height:16px; }
+  .proj-entry { min-height:48px; display:flex; align-items:center; }
+  .skill-chip { min-height:36px; display:flex; align-items:center; }
+  .exp-chip { min-height:28px; display:flex; align-items:center; }
+  .contact-lnk { min-height:44px; display:flex; align-items:center; }
+  .dock-item { min-height:40px; display:flex; align-items:center; }
+
+  /* Remove hover-only effects that don't work on touch */
+  .exp-row:hover { background:transparent; padding-left:0; padding-right:0; color:var(--text); }
+  .exp-row:hover .exp-yr { color:var(--text); }
+  .exp-row:hover .exp-role { color:var(--text); font-style:normal; }
+  .exp-row:hover .exp-where { color:var(--muted); }
+  .exp-row:hover .exp-chip { border-color:var(--muted); color:var(--muted); }
+
+  /* Active states for touch feedback */
+  .exp-row:active { background:var(--text); padding-left:14px; color:var(--bg); transition:all .15s; }
+  .exp-row:active .exp-role { color:var(--orange); }
+  .menu-btn:active { background:var(--text); color:var(--bg); transform:translateY(-2px); }
+  .proj-entry:active { padding-left:14px; background:rgba(255,94,0,.08); }
+  .skill-chip:active { background:var(--orange); border-color:var(--orange); color:#fff; }
+  .tool-item:active .tool-circle {
+    transform:scale(1.08); box-shadow:5px 5px 0 var(--orange);
+  }
+
+  /* Smooth scroll for mobile */
+  .win-body { -webkit-overflow-scrolling:touch; }
+}
+
+/* ── Safe area for notched devices ── */
+@supports (padding-bottom:env(safe-area-inset-bottom)) {
+  @media (max-width:768px) {
+    .theme-btn { bottom:calc(14px + env(safe-area-inset-bottom)); }
+    .min-dock { bottom:calc(58px + env(safe-area-inset-bottom)); }
+    .guide { bottom:calc(68px + env(safe-area-inset-bottom)); }
+  }
+}
+
+/* ── Landscape mobile ── */
+@media (max-height:500px) and (orientation:landscape) {
+  .hero { min-height:auto; padding:60px 5vw 24px; }
+  .hero-title { font-size:clamp(2rem,8vh,3rem); }
+  .hero-blob { width:80px; height:100px; }
+  .hero-sub { margin-bottom:1.5vh; }
+  .os-win { height:88vh !important; top:6vh !important; }
+  .email-btn { margin-top:4vh; padding:12px 24px; }
+}
+</style>
+</head>
+<body>
+
+<div class="noise-overlay" aria-hidden="true"></div>
+<div class="grid-overlay"  aria-hidden="true"></div>
+<div class="cursor-dot"  id="cdot"  aria-hidden="true"></div>
+<div class="cursor-ring" id="cring" aria-hidden="true"></div>
+
+<!-- GUIDE -->
+<div class="guide" id="guide" aria-hidden="true">
+  <div class="guide-tip" id="guide-tip">¡Bienvenido/a a mi rincón creativo!</div>
+  <div class="guide-orb" id="guide-orb" role="button" tabindex="-1" aria-label="Guía">😊</div>
+</div>
+
+<!-- THEME -->
+<button class="theme-btn" id="theme-btn">[ ☼ Light ]</button>
+
+<!-- NAV -->
+<nav class="navbar">
+  <span class="nav-logo" id="nav-logo">MG.<span>2026</span></span>
+  <div class="nav-right" id="nav-right">
+    <div class="nav-links">
+      <a class="nav-beh" id="nav-beh" href="https://www.behance.net/soymarinagodar" target="_blank" rel="noopener noreferrer">Behance ↗</a>
+      <a class="nav-beh" id="nav-lin" href="https://www.linkedin.com/in/marina-godar-hern%C3%A1ndez/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+    </div>
+    <button class="nav-secret" id="btn-secret">NO TOCAR</button>
+  </div>
+</nav>
+
+<!-- ════ HERO ════ -->
+<main class="hero" id="hero">
+  <div class="hero-inner">
+    <h1 class="hero-title" aria-label="Marina Godar">
+      <div class="title-line title-marina" id="tl1">MARINA</div>
+      <div class="title-line title-bottom" id="tl2">
+        <span class="word-godar">GODAR</span>
+      </div>
+    </h1>
+    <p class="hero-sub" id="hero-sub">
+      Estudiante de <em>Publicidad &amp; Diseño Digital</em> · Madrid
+    </p>
+    <div class="menu-bar" id="menu-bar">
+      <div class="menu-rule"></div>
+      <div class="menu-btns">
+        <button class="menu-btn" data-win="w-about">ROL / VIBE</button>
+        <button class="menu-btn" data-win="w-skills">TOOLKIT</button>
+        <button class="menu-btn" data-win="w-exp">EXPERIENCIA</button>
+        <button class="menu-btn" data-win="w-portfolio">PROYECTOS</button>
+        <button class="menu-btn" data-win="w-contact">CONTACTO</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOB PHOTO — right side -->
+  <div class="hero-photo-float" id="hero-photo-float">
+    <div class="hero-blob" id="hero-blob">
+      <img src="/marinagodar/images/marina seria.jpeg" alt="Marina Godar" draggable="false">
+    </div>
+  </div>
+</main>
+
+<!-- ════ MODAL 01 — ROL / VIBE ════ -->
+<div class="os-win" id="w-about" role="dialog" aria-label="Rol y Vibe">
+  <div class="win-bar">
+    <div class="win-dots">
+      <button class="win-dot d-close" data-action="close" aria-label="Cerrar"></button>
+      <button class="win-dot d-min"   data-action="min"   aria-label="Minimizar"></button>
+      <button class="win-dot d-max"   data-action="max"   aria-label="Maximizar"></button>
+    </div>
+    <div class="win-title">01 — Rol / Vibe</div>
+  </div>
+  <div class="win-body">
+    <span class="s-label" data-r>01 / Perfil</span>
+
+    <div class="vibe-row" data-r>
+      <img src="/marinagodar/images/marina divertida.jpeg" class="vibe-photo" alt="Marina">
+      <h2 class="vibe-big">THE<br>VIBE</h2>
+    </div>
+
+    <div class="vibe-cols">
+      <p data-r>Soy una profesional de la publicidad con un perfil <strong>híbrido</strong> que une la <em>dirección de arte visual</em>, el <strong>pensamiento estratégico</strong> y una mentalidad resolutiva frente a cualquier reto de comunicación.</p>
+      <p data-r>Entiendo la creatividad como un <em>deporte colectivo</em>: el mejor trabajo nace de la suma de perspectivas diversas. Aporto visión fresca, sensibilidad estética y atención al detalle que convierte ideas en piezas <strong>memorables</strong>.</p>
+      <p data-r>Mi trayectoria abarca desde la <strong>dirección creativa de eventos</strong> en Festival Tocados hasta el <strong>marketing B2B</strong> en Denodo Sydney, pasando por la <strong>gestión de activos digitales en Repsol</strong> — siempre con un hilo conductor: que la marca sea reconocible por su esencia.</p>
+      <p data-r>Graduada en el Doble Grado de <em>Publicidad &amp; RRPP + Diseño Digital</em> en Nebrija y enriquecida por un <strong>Study Abroad en UTS Sydney</strong>, he aprendido a liderar equipos multidisciplinares e internacionales con soltura y criterio.</p>
+    </div>
+
+    <div class="vibe-manifesto" data-r>
+      <div class="vibe-item">
+        <span class="vibe-item-num">01</span>
+        <span class="vibe-item-text">Estrategia &amp; Arte, siempre juntos</span>
+      </div>
+      <div class="vibe-item">
+        <span class="vibe-item-num">02</span>
+        <span class="vibe-item-text">Lo bonito que no dice nada, no sirve</span>
+      </div>
+      <div class="vibe-item">
+        <span class="vibe-item-num">03</span>
+        <span class="vibe-item-text">La marca más poderosa es la que se reconoce sin ver el logo</span>
+      </div>
+    </div>
+
+    <div class="edu-section" data-r>
+      <p class="edu-label">Educación</p>
+      <div class="edu-list">
+        <div>
+          <div class="edu-name">Doble Grado — Publicidad &amp; RRPP + Diseño Digital y Multimedia</div>
+          <div class="edu-info">Universidad Antonio de Nebrija · Madrid · En curso</div>
+        </div>
+        <div>
+          <div class="edu-name">Study Abroad</div>
+          <div class="edu-info">University of Technology Sydney (UTS) · Sydney, Australia</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ MODAL 02 — TOOLKIT ════ -->
+<div class="os-win" id="w-skills" role="dialog" aria-label="Toolkit">
+  <div class="win-bar">
+    <div class="win-dots">
+      <button class="win-dot d-close" data-action="close" aria-label="Cerrar"></button>
+      <button class="win-dot d-min"   data-action="min"   aria-label="Minimizar"></button>
+      <button class="win-dot d-max"   data-action="max"   aria-label="Maximizar"></button>
+    </div>
+    <div class="win-title">02 — Toolkit</div>
+  </div>
+  <div class="win-body">
+    <span class="s-label" data-r>02 / Herramientas &amp; Habilidades</span>
+    <div class="tool-grid">
+      <div class="tool-item" data-r>
+        <div class="tool-circle"><img class="tool-icon" src="https://upload.wikimedia.org/wikipedia/commons/a/af/Adobe_Photoshop_CC_icon.svg" alt="Photoshop"></div>
+        <span class="tool-name">Photoshop</span>
+      </div>
+      <div class="tool-item" data-r>
+        <div class="tool-circle"><img class="tool-icon" src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg" alt="Illustrator"></div>
+        <span class="tool-name">Illustrator</span>
+      </div>
+      <div class="tool-item" data-r>
+        <div class="tool-circle"><img class="tool-icon" src="https://upload.wikimedia.org/wikipedia/commons/4/40/Adobe_Premiere_Pro_CC_icon.svg" alt="Premiere"></div>
+        <span class="tool-name">Premiere</span>
+      </div>
+      <div class="tool-item" data-r>
+        <div class="tool-circle"><img class="tool-icon" src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Adobe_After_Effects_CC_icon.svg" alt="After Effects"></div>
+        <span class="tool-name">After Effects</span>
+      </div>
+      <div class="tool-item" data-r>
+        <div class="tool-circle"><img class="tool-icon" src="https://upload.wikimedia.org/wikipedia/commons/4/48/Adobe_InDesign_CC_icon.svg" alt="InDesign"></div>
+        <span class="tool-name">InDesign</span>
+      </div>
+      <div class="tool-item" data-r>
+        <div class="tool-circle"><img class="tool-icon" src="https://cdn.simpleicons.org/figma/000000" alt="Figma"></div>
+        <span class="tool-name">Figma</span>
+      </div>
+      <div class="tool-item" data-r>
+        <div class="tool-circle"><img class="tool-icon" src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Adobe_Creative_Cloud_rainbow_icon.svg" alt="Adobe CC"></div>
+        <span class="tool-name">Adobe CC</span>
+      </div>
+      <div class="tool-item" data-r>
+        <div class="tool-circle" style="font-family:'Anton';font-size:1.3rem;color:var(--text);letter-spacing:0">M3D</div>
+        <span class="tool-name">Maya 3D</span>
+      </div>
+    </div>
+    <div class="skill-chips" data-r>
+      <span class="skill-chip">Conceptualización</span>
+      <span class="skill-chip">Narrativa Human-Centric</span>
+      <span class="skill-chip">Dirección de Arte</span>
+      <span class="skill-chip">Visión 360°</span>
+      <span class="skill-chip">UI / UX</span>
+      <span class="skill-chip">Copywriting</span>
+      <span class="skill-chip">Branding</span>
+      <span class="skill-chip">Estrategia Creativa</span>
+    </div>
+  </div>
+</div>
+
+<!-- ════ MODAL 03 — EXPERIENCIA ════ -->
+<div class="os-win" id="w-exp" role="dialog" aria-label="Experiencia">
+  <div class="win-bar">
+    <div class="win-dots">
+      <button class="win-dot d-close" data-action="close" aria-label="Cerrar"></button>
+      <button class="win-dot d-min"   data-action="min"   aria-label="Minimizar"></button>
+      <button class="win-dot d-max"   data-action="max"   aria-label="Maximizar"></button>
+    </div>
+    <div class="win-title">03 — Experiencia</div>
+  </div>
+  <div class="win-body">
+    <span class="s-label" data-r>03 / Trayectoria — <a href="https://www.linkedin.com/in/marina-godar-hern%C3%A1ndez/" target="_blank" rel="noopener noreferrer" style="color:var(--orange);text-decoration:none">LinkedIn ↗</a></span>
+    <div class="exp-list">
+      <div class="exp-row" data-r>
+        <span class="exp-yr">2026</span>
+        <div class="exp-body">
+          <span class="exp-role">Directora de Creatividad</span>
+          <span class="exp-where">Festival Tocados · Madrid · Oct 2025 – Abr 2026</span>
+          <div class="exp-chips">
+            <span class="exp-chip">Identidad Visual 360°</span>
+            <span class="exp-chip">OOH</span>
+            <span class="exp-chip">Diseño Experiencial</span>
+            <span class="exp-chip">Liderazgo de Equipos</span>
+          </div>
+        </div>
+      </div>
+      <div class="exp-row" data-r>
+        <span class="exp-yr">2025</span>
+        <div class="exp-body">
+          <span class="exp-role">Marketing &amp; Comunicación</span>
+          <span class="exp-where">Denodo · Sydney, Australia · Mar – Jun 2025</span>
+          <div class="exp-chips">
+            <span class="exp-chip">Ecosistema Social</span>
+            <span class="exp-chip">Art Direction B2B</span>
+            <span class="exp-chip">Copywriting</span>
+            <span class="exp-chip">UI/UX</span>
+          </div>
+        </div>
+      </div>
+      <div class="exp-row" data-r>
+        <span class="exp-yr">2024</span>
+        <div class="exp-body">
+          <span class="exp-role">Colaboradora Redes Sociales</span>
+          <span class="exp-where">Repsol · Madrid · Mar – Jun 2024</span>
+          <div class="exp-chips">
+            <span class="exp-chip">Sistemas Visuales</span>
+            <span class="exp-chip">Gestión Activos Digitales</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ MODAL 04 — PROYECTOS: INDEX + PREVIEW ════ -->
+<div class="os-win" id="w-portfolio" role="dialog" aria-label="Proyectos">
+  <div class="win-bar">
+    <div class="win-dots">
+      <button class="win-dot d-close" data-action="close" aria-label="Cerrar"></button>
+      <button class="win-dot d-min"   data-action="min"   aria-label="Minimizar"></button>
+      <button class="win-dot d-max"   data-action="max"   aria-label="Maximizar"></button>
+    </div>
+    <div class="win-title">04 — Proyectos Behance</div>
+  </div>
+  <div class="win-body" style="padding:0; overflow:hidden;">
+    <div class="proj-layout">
+
+      <!-- LEFT: index -->
+      <div class="proj-index" id="proj-index">
+        <!-- generated by JS -->
+      </div>
+
+      <!-- RIGHT: preview -->
+      <div class="proj-preview" style="padding:20px 20px 20px 20px;">
+        <div class="proj-imgwrap">
+          <div class="proj-img-layer" id="ppi-a"></div>
+          <div class="proj-img-layer hidden" id="ppi-b"></div>
+        </div>
+        <div class="proj-meta">
+          <div class="pm-title" id="pm-title">Thyssen-Bornemisza</div>
+          <div class="pm-row">
+            <span class="pm-cat" id="pm-cat">Identidad Visual</span>
+            <a class="pm-link" id="pm-link" href="https://www.behance.net/gallery/239996693/Thyssen-Bornemisza" target="_blank" rel="noopener noreferrer">Ver en Behance ↗</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ════ MODAL 05 — CONTACTO ════ -->
+<div class="os-win" id="w-contact" role="dialog" aria-label="Contacto">
+  <div class="win-bar">
+    <div class="win-dots">
+      <button class="win-dot d-close" data-action="close" aria-label="Cerrar"></button>
+      <button class="win-dot d-min"   data-action="min"   aria-label="Minimizar"></button>
+      <button class="win-dot d-max"   data-action="max"   aria-label="Maximizar"></button>
+    </div>
+    <div class="win-title">05 — Contacto</div>
+  </div>
+  <div class="win-body" style="padding:0;overflow:hidden;">
+    <div class="contact-scene">
+      <div class="marquee-track">
+        <div class="marquee-inner">
+          <span>LET'S TALK — DISPONIBLE PARA COLABORAR —</span>
+          <span>LET'S TALK — DISPONIBLE PARA COLABORAR —</span>
+          <span>LET'S TALK — DISPONIBLE PARA COLABORAR —</span>
+          <span>LET'S TALK — DISPONIBLE PARA COLABORAR —</span>
+        </div>
+      </div>
+      <a href="mailto:soymarinagodar@gmail.com" class="email-btn" data-r>ENVIAR EMAIL</a>
+      <div class="contact-row" data-r>
+        <a href="https://www.behance.net/soymarinagodar" target="_blank" rel="noopener noreferrer" class="contact-lnk">Behance ↗</a>
+        <a href="https://www.linkedin.com/in/marina-godar-hern%C3%A1ndez/" target="_blank" rel="noopener noreferrer" class="contact-lnk">LinkedIn ↗</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════ MODAL 06 — SECRET ════ -->
+<div class="os-win" id="w-secret" role="dialog" aria-label="Secreto">
+  <div class="win-bar">
+    <div class="win-dots">
+      <button class="win-dot d-close" data-action="close" aria-label="Cerrar"></button>
+    </div>
+    <div class="win-title">⚠️ ADVERTENCIA</div>
+  </div>
+  <div class="win-body" style="display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding: 10vh 5vw; background:#111;">
+    <p style="font-family:'Space Grotesk',sans-serif; font-size:clamp(1.2rem, 3.5vw, 1.8rem); line-height:1.5; color:var(--red); max-width:600px; margin-bottom:40px;">
+      La curiosidad mató al gato, pero hizo brillar a la marca. Ya que te gusta saltarte las normas... ¿hablamos de tu próximo proyecto?
+    </p>
+    <a href="mailto:soymarinagodar@gmail.com" class="secret-btn" style="font-family:'Space Grotesk',sans-serif; font-size:0.85rem; font-weight:600; color:var(--bg); background:var(--red); padding:10px 24px; border-radius:100px; text-transform:uppercase; letter-spacing:0.05em; text-decoration:none; transition:transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Hablemos en secreto</a>
+  </div>
+</div>
+
+<!-- MINIMIZE DOCK -->
+<div class="min-dock" id="min-dock"></div>
+
+<!-- ════ JAVASCRIPT ════ -->
+<script>
+(function () {
+  'use strict';
+
+  /* ── PROJECT DATA ── */
+  const PROJECTS = [
+    { img:'/marinagodar/images/project_6.jpg',  title:'Thyssen-Bornemisza',           cat:'Identidad Visual',           url:'https://www.behance.net/gallery/239996693/Thyssen-Bornemisza' },
+    { img:'/marinagodar/images/project_4.jpg',  title:'Filmin — Blue Monday',         cat:'Dirección Creativa / UI',    url:'https://www.behance.net/gallery/241992143/FILMIN-BLUE-MONDAY' },
+    { img:'/marinagodar/images/project_1.png',  title:'Zeta!',                        cat:'Editorial / Arte Urbano',    url:'https://www.behance.net/gallery/238623717/Zeta' },
+    { img:'/marinagodar/images/project_8.png',  title:'Lillo',                        cat:'Campaña',                    url:'https://www.behance.net/gallery/248920909/Lillo' },
+    { img:'/marinagodar/images/project_9.jpg',  title:'Tus palabras tapan el problema', cat:'Cartel Social',             url:'https://www.behance.net/gallery/250072513/Tus-palabras-tapan-el-problema' },
+    { img:'/marinagodar/images/project_2.jpg',  title:'Twister × National Geographic', cat:'Colaboración de Marca',     url:'https://www.behance.net/gallery/250076483/Twister-x-National-Geographic' },
+    { img:'/marinagodar/images/project_7.jpg',  title:'Tocados XXII',                 cat:'Branding de Evento',         url:'https://www.behance.net/gallery/249410953/TOCADOS-XXII' },
+    { img:'/marinagodar/images/project_1.jpg',  title:'Dona antes de irte',           cat:'Campaña Social · Cruz Roja', url:'https://www.behance.net/gallery/250079459/Dona-antes-de-irte' },
+    { img:'/marinagodar/images/project_5.jpg',  title:'¿Y si el Copy fuera Z?',       cat:'Copywriting',                url:'https://www.behance.net/gallery/247778755/Y-si-el-Copy-hubiera-sido-Z' },
+  ];
+
+  /* ── RAINING PROJECTS (MOBILE ONLY) ── */
+  if (window.innerWidth <= 768) {
+    const rainContainer = document.createElement('div');
+    Object.assign(rainContainer.style, {
+      position: 'fixed', inset: '0', overflow: 'hidden', 
+      pointerEvents: 'none', zIndex: '0', opacity: '0.15'
+    });
+    document.body.appendChild(rainContainer);
+
+    let availableProjects = [...PROJECTS].sort(() => Math.random() - 0.5);
+    let projectIndex = 0;
+
+    function spawnRain(startY = -250) {
+      if (projectIndex >= availableProjects.length) {
+        availableProjects = [...PROJECTS].sort(() => Math.random() - 0.5);
+        projectIndex = 0;
+      }
+      const p = availableProjects[projectIndex++];
+
+      const img = document.createElement('img');
+      img.src = p.img;
+      const size = Math.random() * 120 + 80;
+      const left = Math.random() * 80; // keep it somewhat away from edges
+      const duration = 25; // 25 seconds for a very slow, elegant fall
+      
+      Object.assign(img.style, {
+        position: 'absolute', top: `${startY}px`, left: `${left}vw`,
+        width: `${size}px`, height: 'auto', borderRadius: '12px',
+        objectFit: 'cover', transition: `transform ${duration}s linear`,
+        transform: `translateY(0) rotate(${Math.random()*30 - 15}deg)`,
+        filter: 'grayscale(30%)', opacity: Math.random() * 0.4 + 0.3
+      });
+
+      rainContainer.appendChild(img);
+      
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          // Adjust translation distance based on starting position so it keeps same speed visually
+          img.style.transform = `translateY(${window.innerHeight + Math.abs(startY) + 200}px) rotate(${Math.random()*60 - 30}deg)`;
+        });
+      });
+
+      setTimeout(() => img.remove(), duration * 1000);
+    }
+    
+    // Spawn a few initially so it's not crowded but has presence
+    // The very first one starts already inside the screen (e.g. 100px from top) so it's seen immediately
+    setTimeout(() => spawnRain(100), 50);
+    // The second one starts slightly above
+    setTimeout(() => spawnRain(-50), 2000);
+    // The third one starts further up
+    setTimeout(() => spawnRain(-200), 4500);
+    
+    // Spawn a new one every 6 seconds from way above the screen
+    setInterval(() => spawnRain(-250), 6000);
+  }
+
+  /* ── BUILD PROJECT INDEX ── */
+  const indexEl = document.getElementById('proj-index');
+  PROJECTS.forEach((p, i) => {
+    const el = document.createElement('div');
+    el.className = 'proj-entry' + (i === 0 ? ' active' : '');
+    el.innerHTML = `<span class="pe-num">0${i+1}</span><span class="pe-name">${p.title}</span><span class="pe-cat">${p.cat}</span>`;
+    indexEl.appendChild(el);
+  });
+
+  /* ── PREVIEW CROSS-FADE ── */
+  const layerA = document.getElementById('ppi-a');
+  const layerB = document.getElementById('ppi-b');
+  const pmTitle = document.getElementById('pm-title');
+  const pmCat   = document.getElementById('pm-cat');
+  const pmLink  = document.getElementById('pm-link');
+  let current = 'a';
+
+  // preload first image
+  layerA.style.backgroundImage = `url('${PROJECTS[0].img}')`;
+
+  function showProject(idx) {
+    const p = PROJECTS[idx];
+    const next = current === 'a' ? 'b' : 'a';
+    const nextEl = next === 'a' ? layerA : layerB;
+    const currEl = current === 'a' ? layerA : layerB;
+
+    nextEl.style.backgroundImage = `url('${p.img}')`;
+    nextEl.classList.remove('hidden');
+    currEl.classList.add('hidden');
+    current = next;
+
+    pmTitle.textContent = p.title;
+    pmCat.textContent   = p.cat;
+    pmLink.href         = p.url;
+
+    document.querySelectorAll('.proj-entry').forEach((e,i) => {
+      e.classList.toggle('active', i === idx);
+    });
+  }
+
+  document.querySelectorAll('.proj-entry').forEach((el, i) => {
+    el.addEventListener('mouseenter', () => showProject(i));
+    el.addEventListener('click', () => window.open(PROJECTS[i].url, '_blank', 'noopener'));
+  });
+
+  /* ── CURSOR ── */
+  if (window.matchMedia('(pointer:fine)').matches) {
+    const dot  = document.getElementById('cdot');
+    const ring = document.getElementById('cring');
+    let mx=-200,my=-200,dx=-200,dy=-200,rx=-200,ry=-200;
+    document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; }, {passive:true});
+    (function tick() {
+      dx+=(mx-dx)*.2; dy+=(my-dy)*.2;
+      rx+=(mx-rx)*.1; ry+=(my-ry)*.1;
+      dot.style.left=dx+'px'; dot.style.top=dy+'px';
+      ring.style.left=rx+'px'; ring.style.top=ry+'px';
+      requestAnimationFrame(tick);
+    })();
+    document.querySelectorAll('a,button,.menu-btn,.proj-entry,.tool-item,.exp-row,.email-btn,.guide-orb,.hero-photo-float')
+      .forEach(el => {
+        el.addEventListener('mouseenter',()=>{ ring.classList.add('big'); dot.classList.add('big'); });
+        el.addEventListener('mouseleave',()=>{ ring.classList.remove('big'); dot.classList.remove('big'); });
+      });
+  }
+
+  /* ── INTRO ANIMATION ── */
+  setTimeout(()=>{ document.getElementById('tl1')?.classList.add('in'); document.getElementById('nav-logo')?.classList.add('in'); }, 80);
+  setTimeout(()=>{ document.getElementById('tl2')?.classList.add('in'); }, 260);
+  setTimeout(()=>{ document.getElementById('hero-sub')?.classList.add('in'); document.getElementById('nav-beh')?.classList.add('in'); document.getElementById('nav-lin')?.classList.add('in'); document.getElementById('btn-secret')?.classList.add('in'); }, 500);
+  setTimeout(()=>{ document.getElementById('menu-bar')?.classList.add('in'); }, 720);
+
+  /* ── MOBILE BACKDROP OVERLAY ── */
+  const backdrop = document.createElement('div');
+  backdrop.id = 'mobile-backdrop';
+  Object.assign(backdrop.style, {
+    position:'fixed', inset:'0', background:'rgba(0,0,0,.55)',
+    zIndex:'999', display:'none', opacity:'0',
+    transition:'opacity .3s ease',
+    backdropFilter:'blur(4px)', WebkitBackdropFilter:'blur(4px)'
+  });
+  document.body.appendChild(backdrop);
+
+  const isMobile = () => window.innerWidth <= 768;
+
+  function showBackdrop() {
+    if (!isMobile()) return;
+    backdrop.style.display = 'block';
+    requestAnimationFrame(() => { backdrop.style.opacity = '1'; });
+    document.body.style.overflow = 'hidden';
+  }
+  function hideBackdrop() {
+    backdrop.style.opacity = '0';
+    setTimeout(() => { backdrop.style.display = 'none'; }, 300);
+    // Only restore scroll if no windows are open
+    const anyOpen = [...document.querySelectorAll('.os-win.open:not(.minimized)')].length > 0;
+    if (!anyOpen) document.body.style.overflow = '';
+  }
+  backdrop.addEventListener('click', () => {
+    document.querySelectorAll('.os-win.open').forEach(w => {
+      w.classList.remove('open','minimized','maximized');
+      removeDockItem(w.id);
+      document.querySelector(`[data-win="${w.id}"]`)?.classList.remove('is-active');
+    });
+    hideBackdrop();
+  });
+
+  /* ── OS WINDOW ENGINE ── */
+  let topZ = 1000;
+  const wins = document.querySelectorAll('.os-win');
+
+  function bringToFront(win) { win.style.zIndex = ++topZ; }
+
+  wins.forEach(win => {
+    const bar = win.querySelector('.win-bar');
+    let drag=false,sx=0,sy=0,il=0,it=0;
+
+    // Mouse dragging
+    bar.addEventListener('mousedown', e => {
+      if (win.classList.contains('maximized') || isMobile()) return;
+      drag=true; sx=e.clientX; sy=e.clientY;
+      const r=win.getBoundingClientRect(); il=r.left; it=r.top;
+      bringToFront(win);
+    });
+    document.addEventListener('mousemove', e => {
+      if (!drag) return;
+      win.style.left=(il+e.clientX-sx)+'px';
+      win.style.top=(it+e.clientY-sy)+'px';
+    });
+    document.addEventListener('mouseup', ()=>{ drag=false; });
+
+    // Touch dragging (tablet only, not small mobile)
+    bar.addEventListener('touchstart', e => {
+      if (win.classList.contains('maximized') || window.innerWidth <= 480) return;
+      const t = e.touches[0];
+      drag=true; sx=t.clientX; sy=t.clientY;
+      const r=win.getBoundingClientRect(); il=r.left; it=r.top;
+      bringToFront(win);
+    }, {passive:true});
+    document.addEventListener('touchmove', e => {
+      if (!drag) return;
+      const t = e.touches[0];
+      win.style.left=(il+t.clientX-sx)+'px';
+      win.style.top=(it+t.clientY-sy)+'px';
+    }, {passive:true});
+    document.addEventListener('touchend', ()=>{ drag=false; });
+
+    win.addEventListener('mousedown', ()=> bringToFront(win));
+
+    win.querySelectorAll('.win-dot').forEach(btn => {
+      btn.addEventListener('mousedown', e => e.stopPropagation());
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        const a = btn.getAttribute('data-action');
+        if (a==='close') {
+          win.classList.remove('open','minimized','maximized');
+          removeDockItem(win.id);
+          document.querySelector(`[data-win="${win.id}"]`)?.classList.remove('is-active');
+          hideBackdrop();
+        } else if (a==='min') {
+          minimizeWin(win);
+          hideBackdrop();
+        } else if (a==='max') {
+          win.classList.toggle('maximized');
+          if (win.classList.contains('maximized')) {
+            win.classList.remove('minimized');
+            removeDockItem(win.id);
+          }
+        }
+      });
+    });
+  });
+
+  /* ── MINIMIZE / DOCK HELPERS ── */
+  const dock = document.getElementById('min-dock');
+
+  function minimizeWin(win) {
+    win.classList.add('minimized');
+    win.classList.remove('maximized');
+    addDockItem(win);
+  }
+
+  function restoreWin(win) {
+    win.classList.remove('minimized');
+    win.classList.add('open');
+    bringToFront(win);
+    removeDockItem(win.id);
+  }
+
+  function addDockItem(win) {
+    if (dock.querySelector(`[data-dock="${win.id}"]`)) return;
+    const item = document.createElement('button');
+    item.className = 'dock-item';
+    item.setAttribute('data-dock', win.id);
+    const title = win.querySelector('.win-title')?.textContent || win.id;
+    item.textContent = title;
+    item.addEventListener('click', () => restoreWin(win));
+    dock.appendChild(item);
+  }
+
+  function removeDockItem(winId) {
+    dock.querySelector(`[data-dock="${winId}"]`)?.remove();
+  }
+
+  /* ── MENU BUTTONS ── */
+  let openCount = 0;
+  document.querySelectorAll('.menu-btn, .nav-secret').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const id  = btn.getAttribute('data-win');
+      const win = document.getElementById(id);
+      if (!win) return;
+
+      // If minimized → restore
+      if (win.classList.contains('minimized')) {
+        restoreWin(win);
+        btn.classList.add('is-active');
+        showBackdrop();
+        win.querySelectorAll('[data-r]:not(.in)').forEach(el => setTimeout(()=>el.classList.add('in'),120));
+        return;
+      }
+
+      const isOpen = win.classList.contains('open');
+      if (isOpen) {
+        win.classList.remove('open','maximized');
+        btn.classList.remove('is-active');
+        hideBackdrop();
+        return;
+      }
+
+      // On mobile, close other windows first for a cleaner experience
+      if (isMobile()) {
+        document.querySelectorAll('.os-win.open').forEach(w => {
+          w.classList.remove('open','maximized');
+          removeDockItem(w.id);
+          document.querySelector(`[data-win="${w.id}"]`)?.classList.remove('is-active');
+        });
+      }
+
+      win.classList.add('open');
+      btn.classList.add('is-active');
+      bringToFront(win);
+      showBackdrop();
+
+      if (!isMobile() && !win._positioned) {
+        win._positioned = true;
+        const off = (openCount % 5) * 24;
+        win.style.left = 'calc(9vw + '+off+'px)';
+        win.style.top  = 'calc(11vh + '+off+'px)';
+        openCount++;
+      }
+      win.querySelectorAll('[data-r]:not(.in)').forEach(el => setTimeout(()=>el.classList.add('in'),120));
+      const g = document.getElementById('guide');
+      g.classList.remove('pop'); void g.offsetWidth; g.classList.add('pop');
+      setTimeout(()=>g.classList.remove('pop'),600);
+    });
+  });
+
+  /* ── THEME ── */
+  const themeBtn = document.getElementById('theme-btn');
+  themeBtn?.addEventListener('click', () => {
+    const dark = document.documentElement.getAttribute('data-theme')==='dark';
+    document.documentElement.setAttribute('data-theme', dark?'':'dark');
+    themeBtn.textContent = dark ? '[ ☾ Dark ]' : '[ ☼ Light ]';
+  });
+
+  /* ── GUIDE CHARACTER ── */
+  const guide = document.getElementById('guide');
+  const guideTip = document.getElementById('guide-tip');
+  const guideOrb = document.getElementById('guide-orb');
+  const tips = [
+    '¡Bienvenido/a a mi rincón creativo!',
+    isMobile() ? '¡Toca los botones para explorar!' : '¡Haz click en los botones de arriba!',
+    isMobile() ? 'Toca un proyecto para verlo 🎨' : 'Pasa el ratón por los proyectos 🎨',
+    'Prueba el modo oscuro 🌙',
+    isMobile() ? '¡Desliza para ver más!' : '¡Las ventanas se pueden mover!',
+  ];
+  let tipIdx=0, idleTimer;
+  function flashTip() {
+    guideTip.textContent = tips[tipIdx++ % tips.length];
+    guide.classList.add('show-tip');
+    setTimeout(()=>guide.classList.remove('show-tip'),4500);
+  }
+  function resetIdle() {
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(flashTip, 11000);
+  }
+  guideOrb.addEventListener('click', flashTip);
+  document.addEventListener('click', resetIdle, {passive:true});
+  document.addEventListener('mousemove', resetIdle, {passive:true});
+  resetIdle();
+  // First greeting after 3s
+  setTimeout(flashTip, 3000);
+
+  /* ── GRID PARALLAX (desktop only) ── */
+  if (!isMobile()) {
+    const gridEl = document.querySelector('.grid-overlay');
+    document.addEventListener('mousemove', e => {
+      const xp = (e.clientX/window.innerWidth-.5)*18;
+      const yp = (e.clientY/window.innerHeight-.5)*18;
+      gridEl.style.backgroundPosition = xp+'px '+yp+'px';
+    }, {passive:true});
+  }
+
+  /* ── PROJECT TAP ON MOBILE ── */
+  if (isMobile()) {
+    document.querySelectorAll('.proj-entry').forEach((el, i) => {
+      el.addEventListener('click', () => showProject(i));
+    });
+  }
+
+  /* ── OS ERROR SEQUENCE (NO TOCAR) ── */
+  const btnSecret = document.getElementById('btn-secret');
+  let activeJokes = [];
+  let isSecretTriggered = false;
+
+  const jokeMessages = [
+    "¿Por qué tocas?",
+    "%FALLO EN MI SISTEMA CREATIVO%",
+    "&sobrecarga_visual%",
+    "ERROR 404: PACIENCIA NO ENCONTRADA",
+    "¡TE DIJE QUE NO TOCARAS!"
+  ];
+
+  function spawnErrorWindow(msg) {
+    const win = document.createElement('div');
+    win.className = 'os-win open';
+    win.style.width = '340px';
+    win.style.height = '140px';
+    bringToFront(win);
+    
+    const maxLeft = window.innerWidth - 340;
+    const maxTop = window.innerHeight - 140;
+    win.style.left = Math.max(0, Math.random() * maxLeft) + 'px';
+    win.style.top = Math.max(0, Math.random() * maxTop) + 'px';
+    
+    win.innerHTML = `
+      <div class="win-bar" style="background:#FF5F56; color:#fff;">
+        <div class="win-dots">
+          <button class="win-dot d-close" aria-label="Cerrar"></button>
+        </div>
+        <div class="win-title">ERROR CRÍTICO</div>
+      </div>
+      <div class="win-body" style="display:flex; align-items:center; justify-content:center; text-align:center; background:#111; color:#FF5F56; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:1.1rem; border:2px solid #FF5F56; border-top:none;">
+        ${msg}
+      </div>
+    `;
+    
+    document.body.appendChild(win);
+    activeJokes.push(win);
+    
+    requestAnimationFrame(() => {
+      win.style.transition = 'opacity .2s, transform .2s';
+      win.style.opacity = '1';
+      win.style.transform = 'scale(1) translateY(0)';
+    });
+
+    const bar = win.querySelector('.win-bar');
+    let drag=false, sx=0, sy=0, il=0, it=0;
+    bar.addEventListener('mousedown', e => {
+      drag=true; sx=e.clientX; sy=e.clientY;
+      il=parseInt(win.style.left||0); it=parseInt(win.style.top||0);
+      bringToFront(win);
+    });
+    document.addEventListener('mousemove', e => {
+      if(!drag) return;
+      win.style.left = (il+e.clientX-sx)+'px';
+      win.style.top = (it+e.clientY-sy)+'px';
+    });
+    document.addEventListener('mouseup', () => drag=false);
+    
+    win.querySelector('.d-close').addEventListener('click', () => {
+      win.style.opacity = '0';
+      win.style.transform = 'scale(0.9) translateY(10px)';
+      setTimeout(() => win.remove(), 300);
+      activeJokes = activeJokes.filter(w => w !== win);
+    });
+  }
+
+  if (btnSecret) {
+    btnSecret.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (isSecretTriggered) return;
+      isSecretTriggered = true;
+      
+      const wSecret = document.getElementById('w-secret');
+      
+      if (window.innerWidth <= 768) {
+        wSecret.classList.add('open');
+        showBackdrop();
+        bringToFront(wSecret);
+        wSecret.style.left = (window.innerWidth / 2 - wSecret.offsetWidth / 2) + 'px';
+        wSecret.style.top = (window.innerHeight / 2 - wSecret.offsetHeight / 2) + 'px';
+      } else {
+        let delay = 0;
+        jokeMessages.forEach((msg, i) => {
+          setTimeout(() => spawnErrorWindow(msg), delay);
+          delay += 800 + Math.random() * 400; // between 0.8s and 1.2s
+        });
+        
+        setTimeout(() => {
+          wSecret.classList.add('open');
+          showBackdrop();
+          bringToFront(wSecret);
+          wSecret.style.left = (window.innerWidth / 2 - wSecret.offsetWidth / 2) + 'px';
+          wSecret.style.top = (window.innerHeight / 2 - wSecret.offsetHeight / 2) + 'px';
+        }, delay + 600);
+      }
+    });
+  }
+
+  const clearJokes = () => {
+    activeJokes.forEach(w => {
+      w.style.opacity = '0';
+      w.style.transform = 'scale(0.9) translateY(10px)';
+      setTimeout(() => w.remove(), 300);
+    });
+    activeJokes = [];
+    isSecretTriggered = false;
+  };
+
+  const secretCloseBtn = document.querySelector('#w-secret .d-close');
+  if (secretCloseBtn) secretCloseBtn.addEventListener('click', clearJokes);
+  if (backdrop) backdrop.addEventListener('click', clearJokes);
+
+})();
+</script>
+</body>
+</html>

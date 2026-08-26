@@ -80,22 +80,21 @@ export default function ParpellLanding() {
           setIsAppLoaded(true);
           return 100;
         }
-        const delta = prev < 50 ? 16 : prev < 85 ? 10 : 6;
+        const delta = prev < 50 ? 25 : prev < 85 ? 18 : 12;
         const next = Math.min(100, prev + delta);
         if (next === 100) {
           clearInterval(timer);
-          setTimeout(() => setIsAppLoaded(true), 200);
+          setTimeout(() => setIsAppLoaded(true), 120);
         }
         return next;
       });
-    }, 30);
+    }, 20);
 
-    // Guaranteed failsafe: always dismiss loader after max 1.6s
     const failsafe = setTimeout(() => {
       setLoadProgress(100);
       setIsAppLoaded(true);
       clearInterval(timer);
-    }, 1600);
+    }, 500);
 
     return () => {
       clearInterval(timer);
@@ -309,7 +308,7 @@ export default function ParpellLanding() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="relative z-30 w-full max-w-4xl mx-auto px-4 sm:px-8 min-h-[90vh] sm:min-h-screen flex flex-col justify-between items-center text-center pt-20 sm:pt-24 pb-8 sm:pb-16"
+        className="relative z-30 w-full max-w-4xl mx-auto px-4 sm:px-8 min-h-[90vh] sm:min-h-screen flex flex-col justify-between items-center text-center pt-20 sm:pt-24 lg:pt-12 pb-8 sm:pb-16"
       >
         <div className="flex-1 flex flex-col justify-center items-center">
           {/* 3D Spinning Parpell Logo (Top Layer) */}

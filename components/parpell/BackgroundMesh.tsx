@@ -59,7 +59,18 @@ export function BackgroundMesh() {
       });
     }
 
+    let isTabVisible = true;
+    const handleVisibilityChange = () => {
+      isTabVisible = document.visibilityState === "visible";
+      if (isTabVisible) {
+        cancelAnimationFrame(animationFrameId);
+        render();
+      }
+    };
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
     const render = () => {
+      if (!isTabVisible) return;
       ctx.clearRect(0, 0, width, height);
 
       for (let i = 0; i < particles.length; i++) {
@@ -85,6 +96,7 @@ export function BackgroundMesh() {
 
     return () => {
       window.removeEventListener("resize", handleResize);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);

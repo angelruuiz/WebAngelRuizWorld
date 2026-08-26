@@ -48,10 +48,11 @@ function ConstellationCanvas() {
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext("2d", { alpha: true });
     if (!ctx) return;
 
     let animId: number;
+    let isVisible = false;
     const size = 420;
     canvas.width = size;
     canvas.height = size;
@@ -64,7 +65,7 @@ function ConstellationCanvas() {
       "#4ADE80", "#22D3EE", "#F472B6",
     ];
 
-    const nodeCount = 50;
+    const nodeCount = 22;
     const nodes: Array<{
       baseAngle: number;
       baseRadius: number;
@@ -76,20 +77,18 @@ function ConstellationCanvas() {
     }> = [];
 
     for (let i = 0; i < nodeCount; i++) {
-      const isRing = i < 20;
-      const angle =
-        (i / (isRing ? 20 : nodeCount - 20)) * Math.PI * 2 +
-        (Math.random() - 0.5) * 0.1;
+      const isRing = i < 10;
+      const angle = (i / (isRing ? 10 : nodeCount - 10)) * Math.PI * 2;
       const r = isRing
-        ? maxRadius + (Math.random() - 0.5) * 8
+        ? maxRadius + (Math.random() - 0.5) * 6
         : Math.pow(Math.random(), 0.6) * (maxRadius * 0.85);
 
-      const color = baseColors[Math.floor(Math.random() * baseColors.length)];
+      const color = baseColors[i % baseColors.length];
 
       nodes.push({
         baseAngle: angle,
         baseRadius: r,
-        speed: (Math.random() - 0.5) * 0.0018 + 0.0006,
+        speed: (Math.random() - 0.5) * 0.0012 + 0.0004,
         size: Math.random() < 0.3 ? 2 : 1,
         color,
         x: centerX + Math.cos(angle) * r,
@@ -97,21 +96,22 @@ function ConstellationCanvas() {
       });
     }
 
-    const edges: Array<[number, number]> = [];
-    for (let i = 0; i < nodes.length; i++) {
-      for (let j = i + 1; j < nodes.length; j++) {
-        const dx = nodes[i].x - nodes[j].x;
-        const dy = nodes[i].y - nodes[j].y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 44 && edges.length < 60) {
-          edges.push([i, j]);
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        isVisible = entry.isIntersecting;
+        if (isVisible) {
+          render();
+        } else {
+          cancelAnimationFrame(animId);
         }
-      }
-    }
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(canvas);
 
     let time = 0;
-
     const render = () => {
+      if (!isVisible) return;
       time += 0.016;
       ctx.clearRect(0, 0, size, size);
 
@@ -119,8 +119,8 @@ function ConstellationCanvas() {
         centerX, centerY, 10,
         centerX, centerY, maxRadius * 1.05
       );
-      grad.addColorStop(0, "rgba(56, 189, 248, 0.14)");
-      grad.addColorStop(0.5, "rgba(139, 92, 246, 0.06)");
+      grad.addColorStop(0, "rgba(56, 189, 248, 0.12)");
+      grad.addColorStop(0.5, "rgba(139, 92, 246, 0.04)");
       grad.addColorStop(1, "rgba(0, 0, 0, 0)");
 
       ctx.fillStyle = grad;
@@ -131,27 +131,10 @@ function ConstellationCanvas() {
       for (let i = 0; i < nodes.length; i++) {
         const node = nodes[i];
         node.baseAngle += node.speed;
-        const currentR =
-          node.baseRadius + Math.sin(time + node.baseAngle * 2) * 1.5;
+        const currentR = node.baseRadius + Math.sin(time + node.baseAngle * 2) * 1.2;
         node.x = centerX + Math.cos(node.baseAngle) * currentR;
         node.y = centerY + Math.sin(node.baseAngle) * currentR;
-      }
 
-      ctx.lineWidth = 0.6;
-      ctx.strokeStyle = "rgba(56, 189, 248, 0.2)";
-
-      ctx.beginPath();
-      for (let e = 0; e < edges.length; e++) {
-        const [aIdx, bIdx] = edges[e];
-        const a = nodes[aIdx];
-        const b = nodes[bIdx];
-        ctx.moveTo(a.x, a.y);
-        ctx.lineTo(b.x, b.y);
-      }
-      ctx.stroke();
-
-      for (let i = 0; i < nodes.length; i++) {
-        const node = nodes[i];
         ctx.fillStyle = node.color;
         ctx.beginPath();
         ctx.arc(node.x, node.y, node.size, 0, Math.PI * 2);
@@ -161,9 +144,8 @@ function ConstellationCanvas() {
       animId = requestAnimationFrame(render);
     };
 
-    render();
-
     return () => {
+      observer.disconnect();
       cancelAnimationFrame(animId);
     };
   }, []);
@@ -199,10 +181,8 @@ function MeshGlobe({
       </div>
 
       <div className="scale-[0.78] xs:scale-[0.88] sm:scale-100 origin-center my-[-25px] sm:my-0">
-        <motion.div
-          animate={{ rotate: [0, 360] }}
-          transition={{ duration: 140, repeat: Infinity, ease: "linear" }}
-          className="relative w-[380px] h-[380px] md:w-[420px] md:h-[420px] rounded-full flex items-center justify-center bg-[#070A12]/95 border border-cyan-500/25 shadow-[0_0_55px_rgba(56,189,248,0.18)] overflow-visible group"
+        <div
+          className="relative w-[380px] h-[380px] md:w-[420px] md:h-[420px] rounded-full flex items-center justify-center bg-[#070A12]/95 border border-cyan-500/25 shadow-[0_0_55px_rgba(56,189,248,0.18)] overflow-visible group animate-[spin_160s_linear_infinite]"
         >
           <ConstellationCanvas />
 
@@ -211,16 +191,9 @@ function MeshGlobe({
               const size = logo.size || 42;
 
               return (
-                <motion.div
+                <div
                   key={logo.name}
                   title={logo.name}
-                  animate={{
-                    rotate: [0, -360],
-                  }}
-                  transition={{
-                    rotate: { duration: 140, repeat: Infinity, ease: "linear" },
-                  }}
-                  whileHover={{ scale: 1.25, zIndex: 30 }}
                   style={{
                     left: `calc(50% + ${logo.x * 3.6}px - ${size / 2}px)`,
                     top: `calc(50% + ${logo.y * 3.6}px - ${size / 2}px)`,
@@ -228,7 +201,7 @@ function MeshGlobe({
                     height: `${size}px`,
                     boxShadow: `0 0 25px ${logo.glow}`,
                   }}
-                  className="absolute rounded-full bg-[#0D1322] hover:bg-[#152038] border border-cyan-400/30 hover:border-cyan-300 flex items-center justify-center p-2 shadow-xl transition-all cursor-pointer group/node"
+                  className="absolute rounded-full bg-[#0D1322] hover:bg-[#152038] border border-cyan-400/30 hover:border-cyan-300 flex items-center justify-center p-2 shadow-xl transition-all cursor-pointer group/node animate-[spin_160s_linear_infinite_reverse] hover:scale-125 z-20"
                 >
                   <div className="shrink-0 flex items-center justify-center transition-transform group-hover/node:scale-110 w-5 h-5 sm:w-6 sm:h-6 relative">
                     <Image
@@ -243,11 +216,11 @@ function MeshGlobe({
                   <div className="absolute -bottom-7 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-md bg-black/95 text-white text-[10px] font-mono whitespace-nowrap opacity-0 group-hover/node:opacity-100 transition-opacity pointer-events-none border border-cyan-500/20 z-40">
                     {logo.name}
                   </div>
-                </motion.div>
+                </div>
               );
             })}
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

@@ -28,18 +28,24 @@ export function LiquidGlassNavbar() {
   const [activeSection, setActiveSection] = useState("inicio");
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        ticking = false;
+        setScrolled(window.scrollY > 20);
 
-      const scrollPos = window.scrollY + window.innerHeight * 0.35;
-      for (let i = navItems.length - 1; i >= 0; i--) {
-        const id = navItems[i].href.replace("#", "");
-        const el = document.getElementById(id);
-        if (el && scrollPos >= el.offsetTop) {
-          setActiveSection(id);
-          break;
+        const scrollPos = window.scrollY + window.innerHeight * 0.35;
+        for (let i = navItems.length - 1; i >= 0; i--) {
+          const id = navItems[i].href.replace("#", "");
+          const el = document.getElementById(id);
+          if (el && scrollPos >= el.offsetTop) {
+            setActiveSection(id);
+            break;
+          }
         }
-      }
+      });
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
@@ -58,7 +64,7 @@ export function LiquidGlassNavbar() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 flex justify-center px-3 sm:px-6 pt-3 sm:pt-4 pointer-events-none select-none">
+    <header className="fixed top-0 left-0 right-0 z-40 flex lg:hidden justify-center px-3 sm:px-6 pt-3 sm:pt-4 pointer-events-none select-none">
       <motion.nav
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

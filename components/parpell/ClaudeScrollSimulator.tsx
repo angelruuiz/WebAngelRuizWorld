@@ -39,17 +39,20 @@ export function ClaudeScrollSimulator() {
 
   useEffect(() => {
     if (isMobile) {
-      // On mobile, show full legible content cleanly when in viewport
       setCharCount(fullResponseText.length);
       setIsDone(true);
       return;
     }
 
+    let lastCount = 0;
     return smoothProgress.on("change", (latest) => {
       const clamped = Math.max(0, Math.min(1, (latest - 0.05) / 0.9));
       const count = Math.round(clamped * fullResponseText.length);
-      setCharCount(count);
-      setIsDone(count >= fullResponseText.length);
+      if (Math.abs(count - lastCount) >= 2 || count === fullResponseText.length || count === 0) {
+        lastCount = count;
+        setCharCount(count);
+        setIsDone(count >= fullResponseText.length);
+      }
     });
   }, [smoothProgress, fullResponseText.length, isMobile]);
 
