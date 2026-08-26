@@ -1820,6 +1820,181 @@ body {
   color: #000000;
 }
 
+/* ─────────────────────────────────────────────────────────
+   JAM WITH ME — 3D ALBUM CYLINDER CAROUSEL (Orbit / Ring)
+   ───────────────────────────────────────────────────────── */
+.jam-with-me-section {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 60px 0 80px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.jam-3d-stage {
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  height: clamp(480px, 58vw, 680px);
+  perspective: 1300px;
+  perspective-origin: 50% 36%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jam-3d-world {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transform: rotateX(15deg);
+  will-change: transform;
+}
+
+.jam-album-ring {
+  position: absolute;
+  width: clamp(140px, 16vw, 210px);
+  height: clamp(140px, 16vw, 210px);
+  transform-style: preserve-3d;
+  animation: spinAlbumRing 36s linear infinite;
+  cursor: grab;
+  will-change: transform;
+}
+.jam-album-ring:active {
+  cursor: grabbing;
+}
+.jam-album-ring.is-paused {
+  animation-play-state: paused;
+}
+
+@keyframes spinAlbumRing {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(360deg); }
+}
+
+.jam-album-card {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.28), 0 0 0 1.5px rgba(0, 0, 0, 0.08);
+  transform: rotateY(calc(var(--i) * (360deg / 12))) translateZ(clamp(290px, 42vw, 530px));
+  backface-visibility: visible;
+  transition: box-shadow 0.3s ease, filter 0.3s ease;
+  user-select: none;
+  -webkit-user-drag: none;
+  background: #1e1e24;
+}
+.jam-album-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+  background: #2a2a32;
+}
+.jam-album-card:hover {
+  box-shadow: 0 22px 48px rgba(0, 0, 0, 0.42), 0 0 0 2.5px var(--acid);
+}
+
+/* Center Content inside the 3D ring */
+.jam-center-content {
+  position: relative;
+  z-index: 10;
+  max-width: 520px;
+  text-align: center;
+  padding: 0 20px;
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.jam-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 5.8vw, 4.8rem);
+  font-weight: 900;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+  color: var(--text-main);
+  text-transform: lowercase;
+  margin: 0;
+}
+
+.jam-desc {
+  font-family: var(--font-body);
+  font-size: clamp(0.92rem, 1.25vw, 1.12rem);
+  line-height: 1.45;
+  color: var(--text-muted);
+  max-width: 440px;
+  margin: 0;
+}
+
+.jam-ps {
+  font-family: var(--font-body);
+  font-size: clamp(0.85rem, 1.15vw, 1rem);
+  font-weight: 700;
+  color: var(--text-main);
+  margin: 4px 0 12px;
+}
+.jam-ps strong {
+  font-family: var(--font-mono);
+  font-weight: 800;
+}
+
+.jam-spotify-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px;
+  background: #FFCC00;
+  color: #000000;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 900;
+  text-transform: lowercase;
+  text-decoration: none;
+  border: 2px solid #000000;
+  box-shadow: 4px 4px 0 #000000;
+  border-radius: 4px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+  cursor: pointer;
+}
+.jam-spotify-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #000000;
+  background: var(--acid);
+}
+.jam-spotify-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000000;
+}
+
+[data-party="true"] .jam-spotify-btn {
+  background: var(--acid);
+  border-color: #FFFFFF;
+  box-shadow: 4px 4px 0 #FFFFFF;
+  color: #000000;
+}
+[data-party="true"] .jam-spotify-btn:hover {
+  box-shadow: 6px 6px 0 #FFFFFF;
+  background: var(--neon);
+}
+
 .footer-credits-bar {
   margin-top: 5.5rem;
   padding-top: 2rem;
@@ -2551,6 +2726,67 @@ body {
     <span>↗</span>
   </a>
 
+  <!-- ── 3D JAM WITH ME ALBUM CYLINDER CAROUSEL ── -->
+  <div class="jam-with-me-section">
+    <div class="jam-3d-stage" id="jam-3d-stage">
+      <div class="jam-3d-world" id="jam-3d-world">
+        <div class="jam-album-ring" id="jam-album-ring">
+          <!-- 12 3D Albums in a 360° Ring -->
+          <div class="jam-album-card" style="--i: 0;">
+            <img src="https://upload.wikimedia.org/wikipedia/en/4/42/Beatles_-_Abbey_Road.jpg" alt="Abbey Road - The Beatles" loading="lazy" />
+          </div>
+          <div class="jam-album-card" style="--i: 1;">
+            <img src="https://upload.wikimedia.org/wikipedia/en/e/ed/Green_Day_-_American_Idiot_album_cover.png" alt="American Idiot - Green Day" loading="lazy" />
+          </div>
+          <div class="jam-album-card" style="--i: 2;">
+            <img src="https://upload.wikimedia.org/wikipedia/en/9/9b/Tame_Impala_-_Currents.png" alt="Currents - Tame Impala" loading="lazy" />
+          </div>
+          <div class="jam-album-card" style="--i: 3;">
+            <img src="https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png" alt="The Dark Side of the Moon - Pink Floyd" loading="lazy" />
+          </div>
+          <div class="jam-album-card" style="--i: 4;">
+            <img src="https://upload.wikimedia.org/wikipedia/en/7/70/Graduation_%28album%29.jpg" alt="Graduation - Kanye West" loading="lazy" />
+          </div>
+          <div class="jam-album-card" style="--i: 5;">
+            <img src="https://upload.wikimedia.org/wikipedia/en/f/f7/The_Strokes_-_The_New_Abnormal.png" alt="The New Abnormal - The Strokes" loading="lazy" />
+          </div>
+          <div class="jam-album-card" style="--i: 6;">
+            <img src="https://upload.wikimedia.org/wikipedia/en/5/51/Igor_-_Tyler%2C_the_Creator.jpg" alt="IGOR - Tyler, The Creator" loading="lazy" />
+          </div>
+          <div class="jam-album-card" style="--i: 7;">
+            <img src="https://upload.wikimedia.org/wikipedia/en/f/f6/Kendrick_Lamar_-_To_Pimp_a_Butterfly.png" alt="To Pimp a Butterfly - Kendrick Lamar" loading="lazy" />
+          </div>
+          <div class="jam-album-card" style="--i: 8;">
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/a0/Blonde_-_Frank_Ocean.jpeg" alt="Blonde - Frank Ocean" loading="lazy" />
+          </div>
+          <div class="jam-album-card" style="--i: 9;">
+            <img src="https://upload.wikimedia.org/wikipedia/en/a/a7/Random_Access_Memories.jpg" alt="Random Access Memories - Daft Punk" loading="lazy" />
+          </div>
+          <div class="jam-album-card" style="--i: 10;">
+            <img src="https://upload.wikimedia.org/wikipedia/en/0/04/Arctic_Monkeys_-_AM.png" alt="AM - Arctic Monkeys" loading="lazy" />
+          </div>
+          <div class="jam-album-card" style="--i: 11;">
+            <img src="https://upload.wikimedia.org/wikipedia/en/9/91/Rosal%C3%ADa_-_Motomami.png" alt="Motomami - Rosalía" loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Center Content in the Eye of the 3D Ring -->
+      <div class="jam-center-content">
+        <h3 class="jam-title">jam with me</h3>
+        <p class="jam-desc">
+          i put together a banging playlist for you guys because music makes everything better, hope you like it.
+        </p>
+        <p class="jam-ps">
+          P.S I would recommend reading the names of the songs first :)
+        </p>
+        <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" class="jam-spotify-btn" data-hover title="Abrir Playlist en Spotify">
+          <span>spotify</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
   <div class="footer-credits-bar">
     <span>Marina Godar · Art &amp; Marketing Direction</span>
     <span class="font-hand" style="font-size:1.8rem; text-transform:none; color:var(--neon);">
@@ -2761,6 +2997,92 @@ body {
       });
     }
   });
+
+  // 6. Interactive 3D Album Cylinder Carousel ("jam with me")
+  const stage = document.getElementById('jam-3d-stage');
+  const world = document.getElementById('jam-3d-world');
+  const ring = document.getElementById('jam-album-ring');
+
+  if (stage && world && ring) {
+    let currentRotation = 0;
+    let autoSpinSpeed = 0.22; // Continuous smooth rotation
+    let isDragging = false;
+    let lastX = 0;
+    let velocity = 0;
+
+    // Subtle 3D tilt tracking on mouse move
+    stage.addEventListener('mousemove', (e) => {
+      const rect = stage.getBoundingClientRect();
+      const nx = (e.clientX - rect.left) / rect.width - 0.5;
+      const ny = (e.clientY - rect.top) / rect.height - 0.5;
+      world.style.transform = `rotateX(${15 - ny * 10}deg) rotateZ(${nx * 3}deg)`;
+    });
+
+    stage.addEventListener('mouseleave', () => {
+      world.style.transform = 'rotateX(15deg)';
+    });
+
+    // Mouse drag to spin with inertia
+    stage.addEventListener('mousedown', (e) => {
+      if (e.target.closest('a') || e.target.closest('button')) return;
+      isDragging = true;
+      lastX = e.clientX;
+      velocity = 0;
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      const delta = e.clientX - lastX;
+      lastX = e.clientX;
+      currentRotation += delta * 0.35;
+      velocity = delta * 0.35;
+      ring.style.transform = `rotateY(${currentRotation}deg)`;
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (isDragging) isDragging = false;
+    });
+
+    // Touch support for mobile devices
+    stage.addEventListener('touchstart', (e) => {
+      if (e.target.closest('a') || e.target.closest('button')) return;
+      if (e.touches.length > 0) {
+        isDragging = true;
+        lastX = e.touches[0].clientX;
+        velocity = 0;
+      }
+    }, { passive: true });
+
+    window.addEventListener('touchmove', (e) => {
+      if (!isDragging || e.touches.length === 0) return;
+      const delta = e.touches[0].clientX - lastX;
+      lastX = e.touches[0].clientX;
+      currentRotation += delta * 0.35;
+      velocity = delta * 0.35;
+      ring.style.transform = `rotateY(${currentRotation}deg)`;
+    }, { passive: true });
+
+    window.addEventListener('touchend', () => {
+      isDragging = false;
+    });
+
+    // Continuous Animation & Inertia loop
+    function updateRing() {
+      if (!isDragging) {
+        if (Math.abs(velocity) > 0.05) {
+          currentRotation += velocity;
+          velocity *= 0.94; // Decay momentum
+          ring.style.transform = `rotateY(${currentRotation}deg)`;
+        } else {
+          currentRotation = (currentRotation + autoSpinSpeed) % 360;
+          ring.style.transform = `rotateY(${currentRotation}deg)`;
+        }
+      }
+      requestAnimationFrame(updateRing);
+    }
+
+    requestAnimationFrame(updateRing);
+  }
 
 })();
 </script>
