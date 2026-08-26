@@ -1781,9 +1781,12 @@ body {
 /* ══════════════════════════════════════════════════════════
    CONTACT & FOOTER
    ══════════════════════════════════════════════════════════ */
+/* ══════════════════════════════════════════════════════════
+   CONTACT & FOOTER
+   ══════════════════════════════════════════════════════════ */
 .contact-section {
   position: relative;
-  padding: 110px 4vw 60px;
+  padding: 40px 4vw 20px;
   overflow: hidden;
   max-width: 1440px;
   margin: 0 auto;
@@ -1791,18 +1794,18 @@ body {
 
 .contact-eyebrow {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.3em;
-  margin-bottom: 1.5rem;
+  letter-spacing: 0.25em;
+  margin-bottom: 0.5rem;
   color: var(--text-muted);
 }
 
 .contact-huge-title {
   font-family: var(--font-display);
-  font-size: clamp(3.2rem, 11vw, 10.5rem);
-  line-height: 0.9;
+  font-size: clamp(2.4rem, 6.5vw, 4.8rem);
+  line-height: 0.92;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: -0.035em;
@@ -1813,23 +1816,23 @@ body {
 .contact-mail-banner {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
-  margin-top: 2.2rem;
-  padding: 18px 32px;
+  gap: 10px;
+  margin-top: 0.8rem;
+  padding: 10px 22px;
   background: var(--acid);
   color: #000000;
-  border: 2.5px solid var(--border-main);
-  box-shadow: 8px 8px 0 var(--border-main);
+  border: 2px solid var(--border-main);
+  box-shadow: 5px 5px 0 var(--border-main);
   font-family: var(--font-display);
-  font-size: clamp(1.2rem, 3vw, 2.4rem);
+  font-size: clamp(0.95rem, 1.8vw, 1.35rem);
   font-weight: 900;
   text-transform: uppercase;
   text-decoration: none;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .contact-mail-banner:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 12px 12px 0 var(--border-main);
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 var(--border-main);
   background: var(--neon);
   color: #000000;
 }
@@ -1844,20 +1847,20 @@ body {
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  padding: 60px 0 80px;
+  padding: 5px 0 10px;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 4rem;
+  margin-top: 0.8rem;
 }
 
 .jam-3d-stage {
   position: relative;
   width: 100%;
-  max-width: 1400px;
-  height: clamp(540px, 64vw, 760px);
-  perspective: 1200px;
+  max-width: 1200px;
+  height: clamp(250px, 28vw, 320px);
+  perspective: 850px;
   perspective-origin: 50% 28%;
   display: flex;
   justify-content: center;
@@ -1872,13 +1875,13 @@ body {
   justify-content: center;
   align-items: center;
   transform-style: preserve-3d;
-  transform: rotateX(28deg) translateY(35px);
+  transform: rotateX(28deg) translateY(10px);
 }
 
 .jam-album-ring {
   position: absolute;
-  width: clamp(115px, 12.5vw, 165px);
-  height: clamp(115px, 12.5vw, 165px);
+  width: clamp(62px, 6.5vw, 84px);
+  height: clamp(62px, 6.5vw, 84px);
   transform-style: preserve-3d;
   animation: spinAlbumRing 36s linear infinite;
   pointer-events: none; /* Disables any cursor interaction with the rotating ring */
@@ -1894,10 +1897,10 @@ body {
   inset: 0;
   width: 100%;
   height: 100%;
-  border-radius: 12px;
+  border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.32), 0 0 0 1.5px rgba(0, 0, 0, 0.1);
-  transform: rotateY(calc(var(--i) * (360deg / 12))) translateZ(clamp(380px, 48vw, 620px));
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  transform: rotateY(calc(var(--i) * (360deg / 12))) translateZ(clamp(180px, 21vw, 270px));
   backface-visibility: visible;
   user-select: none;
   -webkit-user-drag: none;
@@ -1916,24 +1919,24 @@ body {
 .jam-center-content {
   position: relative;
   z-index: 50;
-  max-width: 480px;
+  max-width: 360px;
   text-align: center;
-  padding: 24px 30px;
+  padding: 8px 16px;
   pointer-events: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  transform: translateZ(120px);
-  background: radial-gradient(circle at center, var(--bg-page) 60%, transparent 100%);
-  border-radius: 24px;
+  gap: 4px;
+  transform: translateZ(80px);
+  background: radial-gradient(circle at center, var(--bg-page) 65%, transparent 100%);
+  border-radius: 16px;
 }
 
 .jam-title {
   font-family: var(--font-display);
-  font-size: clamp(2.4rem, 5.2vw, 4.4rem);
+  font-size: clamp(1.4rem, 2.2vw, 2.1rem);
   font-weight: 900;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.03em;
   line-height: 0.95;
   color: var(--text-main);
   text-transform: lowercase;
@@ -1942,19 +1945,19 @@ body {
 
 .jam-desc {
   font-family: var(--font-body);
-  font-size: clamp(0.88rem, 1.15vw, 1.05rem);
-  line-height: 1.45;
+  font-size: clamp(0.72rem, 0.85vw, 0.82rem);
+  line-height: 1.32;
   color: var(--text-muted);
-  max-width: 400px;
+  max-width: 280px;
   margin: 0;
 }
 
 .jam-ps {
   font-family: var(--font-body);
-  font-size: clamp(0.82rem, 1vw, 0.94rem);
+  font-size: clamp(0.66rem, 0.78vw, 0.74rem);
   font-weight: 700;
   color: var(--text-main);
-  margin: 4px 0 10px;
+  margin: 0 0 4px;
 }
 .jam-ps strong {
   font-family: var(--font-mono);
@@ -1965,44 +1968,44 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 9px 28px;
+  padding: 5px 18px;
   background: #FFCC00;
   color: #000000;
   font-family: var(--font-display);
-  font-size: 1.15rem;
+  font-size: 0.86rem;
   font-weight: 900;
   text-transform: lowercase;
   text-decoration: none;
-  border: 2px solid #000000;
-  box-shadow: 4px 4px 0 #000000;
+  border: 1.5px solid #000000;
+  box-shadow: 3px 3px 0 #000000;
   border-radius: 4px;
   transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
   cursor: pointer;
 }
 .jam-spotify-btn:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 6px 6px 0 #000000;
+  transform: translate(-1.5px, -1.5px);
+  box-shadow: 4px 4px 0 #000000;
   background: var(--acid);
 }
 .jam-spotify-btn:active {
-  transform: translate(2px, 2px);
-  box-shadow: 2px 2px 0 #000000;
+  transform: translate(1px, 1px);
+  box-shadow: 1.5px 1.5px 0 #000000;
 }
 
 [data-party="true"] .jam-spotify-btn {
   background: var(--acid);
   border-color: #FFFFFF;
-  box-shadow: 4px 4px 0 #FFFFFF;
+  box-shadow: 3px 3px 0 #FFFFFF;
   color: #000000;
 }
 [data-party="true"] .jam-spotify-btn:hover {
-  box-shadow: 6px 6px 0 #FFFFFF;
+  box-shadow: 4px 4px 0 #FFFFFF;
   background: var(--neon);
 }
 
 .footer-credits-bar {
-  margin-top: 5.5rem;
-  padding-top: 2rem;
+  margin-top: 1.8rem;
+  padding-top: 1rem;
   border-top: 2px solid var(--border-main);
   display: flex;
   flex-wrap: wrap;
@@ -2010,7 +2013,7 @@ body {
   justify-content: space-between;
   gap: 16px;
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
