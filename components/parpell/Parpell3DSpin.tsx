@@ -178,22 +178,29 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
           const elapsedTime = clock.getElapsedTime();
 
           if (!isInteracting) {
-            // Gentle continuous floating & sway
+            // Gentle continuous floating & sway with strictly clamped angles
             const autoSpin = elapsedTime * 0.45;
-            const tiltX = Math.cos(elapsedTime * 0.85) * 0.12 + mouseNormalized.y * 0.25;
-            const tiltY = Math.sin(autoSpin) * 0.38 + mouseNormalized.x * 0.45;
+            const tiltX = Math.cos(elapsedTime * 0.85) * 0.12 + Math.max(-0.25, Math.min(0.25, mouseNormalized.y * 0.22));
+            const tiltY = Math.sin(autoSpin) * 0.38 + Math.max(-0.35, Math.min(0.35, mouseNormalized.x * 0.35));
 
-            targetRotationY = tiltY;
-            targetRotationX = tiltX;
+            targetRotationY = Math.max(-0.65, Math.min(0.65, tiltY));
+            targetRotationX = Math.max(-0.35, Math.min(0.35, tiltX));
 
             // Harmonic floating breathing on Y axis
             modelGroup.position.y = Math.sin(elapsedTime * 1.5) * 0.08;
+
+            // Smooth decay of mouseNormalized when idle
+            mouseNormalized.x *= 0.95;
+            mouseNormalized.y *= 0.95;
           } else {
             // Drag velocity with inertia damping
             targetRotationY += dragVelocity.x;
             targetRotationX += dragVelocity.y;
             dragVelocity.x *= 0.92;
             dragVelocity.y *= 0.92;
+
+            targetRotationY = Math.max(-1.8, Math.min(1.8, targetRotationY));
+            targetRotationX = Math.max(-0.6, Math.min(0.6, targetRotationX));
           }
 
           // Smooth physics lerping
@@ -211,7 +218,7 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
         };
         animate();
 
-        // 8. Interaction Handlers (Mouse & Touch)
+        // 8. Interaction Handlers (Mouse & Touch on Container Only)
         const onPointerDown = (clientX: number, clientY: number) => {
           isInteracting = true;
           setIsDragging(true);
@@ -221,10 +228,17 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
 
         const onPointerMove = (clientX: number, clientY: number) => {
           const rect = container.getBoundingClientRect();
-          mouseNormalized = {
-            x: ((clientX - rect.left) / rect.width - 0.5) * 2,
-            y: -((clientY - rect.top) / rect.height - 0.5) * 2,
-          };
+          // Only update mouse tracking if container is currently on screen
+          if (rect.bottom > 0 && rect.top < window.innerHeight) {
+            const rawX = ((clientX - rect.left) / (rect.width || 1) - 0.5) * 2;
+            const rawY = -((clientY - rect.top) / (rect.height || 1) - 0.5) * 2;
+            mouseNormalized = {
+              x: Math.max(-1, Math.min(1, rawX)),
+              y: Math.max(-1, Math.min(1, rawY)),
+            };
+          } else {
+            mouseNormalized = { x: 0, y: 0 };
+          }
 
           if (!isInteracting) return;
 
@@ -266,7 +280,7 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
           }
         };
         const handleTouchMove = (e: TouchEvent) => {
-          if (e.touches.length > 0) {
+          if (e.touches.length > 0 && isInteracting) {
             onPointerMove(e.touches[0].clientX, e.touches[0].clientY);
           }
         };
@@ -283,29 +297,28 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
           renderer.setSize(newWidth, newHeight);
         };
 
-        const resizeObserver = new ResizeObserver(() => handleResize());
-        resizeObserver.observe(container);
+        window.addEventListener("resize", handleResize, { passive: true });
 
         container.addEventListener("mousedown", handleMouseDown);
-        window.addEventListener("mousemove", handleMouseMove);
+        window.addEventListener("mousemove", handleMouseMove, { passive: true });
         window.addEventListener("mouseup", handleMouseUp);
         container.addEventListener("mouseleave", handleMouseLeave);
 
         container.addEventListener("touchstart", handleTouchStart, { passive: true });
-        window.addEventListener("touchmove", handleTouchMove, { passive: true });
-        window.addEventListener("touchend", handleTouchEnd, { passive: true });
+        container.addEventListener("touchmove", handleTouchMove, { passive: true });
+        container.addEventListener("touchend", handleTouchEnd, { passive: true });
 
         cleanup = () => {
           cancelAnimationFrame(animationFrameId);
-          resizeObserver.disconnect();
+          window.removeEventListener("resize", handleResize);
           container.removeEventListener("mousedown", handleMouseDown);
           window.removeEventListener("mousemove", handleMouseMove);
           window.removeEventListener("mouseup", handleMouseUp);
           container.removeEventListener("mouseleave", handleMouseLeave);
 
           container.removeEventListener("touchstart", handleTouchStart);
-          window.removeEventListener("touchmove", handleTouchMove);
-          window.removeEventListener("touchend", handleTouchEnd);
+          container.removeEventListener("touchmove", handleTouchMove);
+          container.removeEventListener("touchend", handleTouchEnd);
 
           dracoLoader.dispose();
           scene.traverse((obj) => {

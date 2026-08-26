@@ -25,13 +25,7 @@ export function ClaudeScrollSimulator() {
   // Scroll-Driven Typewriter Effect
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 80%", "center 45%"],
-  });
-
-  const smoothProgress = useSpring(scrollYProgress, {
-    stiffness: 140,
-    damping: 24,
-    restDelta: 0.001,
+    offset: ["start 85%", "center 50%"],
   });
 
   const [charCount, setCharCount] = useState(0);
@@ -45,16 +39,16 @@ export function ClaudeScrollSimulator() {
     }
 
     let lastCount = 0;
-    return smoothProgress.on("change", (latest) => {
-      const clamped = Math.max(0, Math.min(1, (latest - 0.05) / 0.9));
+    return scrollYProgress.on("change", (latest) => {
+      const clamped = Math.max(0, Math.min(1, latest));
       const count = Math.round(clamped * fullResponseText.length);
-      if (Math.abs(count - lastCount) >= 2 || count === fullResponseText.length || count === 0) {
+      if (Math.abs(count - lastCount) >= 4 || count === fullResponseText.length || count === 0) {
         lastCount = count;
         setCharCount(count);
         setIsDone(count >= fullResponseText.length);
       }
     });
-  }, [smoothProgress, fullResponseText.length, isMobile]);
+  }, [scrollYProgress, fullResponseText.length, isMobile]);
 
   const displayedText = isMobile ? fullResponseText : fullResponseText.slice(0, charCount);
 
