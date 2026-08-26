@@ -305,20 +305,195 @@ body {
 .header-nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 18px;
 }
-.header-nav-links a {
+
+.nav-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 0.76rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
   color: var(--text-main);
   text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.nav-num {
+  font-family: var(--font-mono);
+  font-weight: 800;
+  color: var(--text-muted);
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  display: inline-block;
+}
+
+.nav-slash {
+  color: var(--text-muted);
+  opacity: 0.6;
+  font-size: 0.85em;
   transition: color 0.2s;
 }
-.header-nav-links a:hover {
+
+.nav-label {
+  display: inline-flex;
+  align-items: baseline;
+  position: relative;
+}
+
+/* ─────────────────────────────────────────────────────────
+   EFFECT 1: 01 / PORTFOLIO (Dancing Letters Wave)
+   ───────────────────────────────────────────────────────── */
+.nav-item-works .p-char {
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.25s ease;
+  transition-delay: calc(var(--i) * 22ms);
+}
+
+.nav-item-works .nav-icon-star {
+  display: inline-block;
+  font-size: 0.7em;
   color: var(--neon);
+  opacity: 0;
+  transform: scale(0) rotate(-45deg);
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-left: 3px;
+}
+
+.nav-item-works:hover {
+  background: rgba(255, 0, 102, 0.1);
+}
+.nav-item-works:hover .nav-num {
+  color: var(--neon);
+  transform: translateY(-2px) scale(1.15) rotate(-6deg);
+}
+.nav-item-works:hover .nav-slash {
+  color: var(--neon);
+}
+.nav-item-works:hover .p-char:nth-child(odd) {
+  transform: translateY(-4px) rotate(-4deg);
+  color: var(--neon);
+}
+.nav-item-works:hover .p-char:nth-child(even) {
+  transform: translateY(3px) rotate(4deg);
+  color: var(--electric);
+}
+.nav-item-works:hover .p-char:nth-child(3),
+.nav-item-works:hover .p-char:nth-child(7) {
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+.nav-item-works:hover .nav-icon-star {
+  opacity: 1;
+  transform: scale(1.3) rotate(180deg);
+  color: var(--acid);
+}
+
+/* ─────────────────────────────────────────────────────────
+   EFFECT 2: 02 / SOBRE MÍ (Editorial & Handwritten Morph)
+   ───────────────────────────────────────────────────────── */
+.nav-item-about .nav-word-sobre {
+  display: inline-block;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-item-about .nav-word-mi {
+  display: inline-block;
+  margin-left: 4px;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-item-about .nav-icon-draw {
+  display: inline-block;
+  font-size: 0.85em;
+  color: var(--electric);
+  opacity: 0;
+  transform: translateX(-4px) rotate(-20deg);
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-left: 3px;
+}
+
+.nav-item-about:hover {
+  background: rgba(0, 240, 255, 0.1);
+}
+.nav-item-about:hover .nav-num {
+  color: var(--electric);
+  transform: translateY(-3px) scale(1.15) rotate(6deg);
+}
+.nav-item-about:hover .nav-slash {
+  color: var(--electric);
+}
+.nav-item-about:hover .nav-word-sobre {
+  font-family: var(--font-display);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--electric);
+  transform: translateY(-2px) rotate(-2deg);
+}
+.nav-item-about:hover .nav-word-mi {
+  font-family: var(--font-hand);
+  font-weight: 700;
+  font-size: 1.35em;
+  color: var(--acid);
+  transform: translateY(-3px) rotate(8deg) scale(1.18);
+  text-shadow: 1px 1px 0 var(--border-main);
+}
+.nav-item-about:hover .nav-icon-draw {
+  opacity: 1;
+  transform: translateX(2px) rotate(12deg) scale(1.2);
+}
+
+/* ─────────────────────────────────────────────────────────
+   EFFECT 3: 03 / CONTACTO (Electric Action Badge & Arrow)
+   ───────────────────────────────────────────────────────── */
+.nav-item-contact {
+  border: 1.5px solid transparent;
+}
+
+.nav-item-contact .nav-word-contact {
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-item-contact .nav-icon-arrow {
+  display: inline-block;
+  font-size: 0.9em;
+  font-weight: 900;
+  color: currentColor;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  margin-left: 2px;
+}
+
+.nav-item-contact:hover {
+  background: var(--acid);
+  color: #000000;
+  border-color: var(--border-main);
+  box-shadow: 3px 3px 0 var(--border-main);
+  transform: translate(-2px, -2px);
+}
+.nav-item-contact:hover .nav-num {
+  color: #000000;
+  font-weight: 900;
+  transform: scale(1.1);
+}
+.nav-item-contact:hover .nav-slash {
+  color: #000000;
+  opacity: 1;
+}
+.nav-item-contact:hover .nav-word-contact {
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  transform: translateX(1px);
+}
+.nav-item-contact:hover .nav-icon-arrow {
+  transform: translate(3px, -3px) scale(1.2);
+  color: #000000;
 }
 
 .party-toggle-btn {
@@ -1626,9 +1801,36 @@ body {
   </a>
 
   <nav class="header-nav-links">
-    <a href="#works" data-hover>01 / Portfolio</a>
-    <a href="#about" data-hover>02 / Sobre mí</a>
-    <a href="#contact" data-hover>03 / Contacto</a>
+    <!-- 01 / Portfolio: Dancing Letters & Stagger Wave -->
+    <a href="#works" class="nav-item nav-item-works" data-hover title="01 / Portfolio">
+      <span class="nav-num">01</span>
+      <span class="nav-slash">/</span>
+      <span class="nav-label">
+        <span class="p-char" style="--i:1">P</span><span class="p-char" style="--i:2">o</span><span class="p-char" style="--i:3">r</span><span class="p-char" style="--i:4">t</span><span class="p-char" style="--i:5">f</span><span class="p-char" style="--i:6">o</span><span class="p-char" style="--i:7">l</span><span class="p-char" style="--i:8">i</span><span class="p-char" style="--i:9">o</span>
+      </span>
+      <span class="nav-icon-star" aria-hidden="true">✦</span>
+    </a>
+
+    <!-- 02 / Sobre mí: Editorial Syne + Handwritten Caveat Morph -->
+    <a href="#about" class="nav-item nav-item-about" data-hover title="02 / Sobre mí">
+      <span class="nav-num">02</span>
+      <span class="nav-slash">/</span>
+      <span class="nav-label">
+        <span class="nav-word-sobre">Sobre</span>
+        <span class="nav-word-mi">mí</span>
+      </span>
+      <span class="nav-icon-draw" aria-hidden="true">✎</span>
+    </a>
+
+    <!-- 03 / Contacto: Electric Action Badge & Arrow Kinetic -->
+    <a href="#contact" class="nav-item nav-item-contact" data-hover title="03 / Contacto">
+      <span class="nav-num">03</span>
+      <span class="nav-slash">/</span>
+      <span class="nav-label">
+        <span class="nav-word-contact">Contacto</span>
+      </span>
+      <span class="nav-icon-arrow" aria-hidden="true">↗</span>
+    </a>
   </nav>
 
   <button id="btn-party-toggle" class="party-toggle-btn" data-hover>
