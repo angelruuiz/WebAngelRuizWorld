@@ -881,12 +881,26 @@ body {
   background: var(--card-bg);
   color: var(--text-main);
   box-shadow: 4px 4px 0 var(--border-main);
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.28s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.28s ease, box-shadow 0.28s ease, background 0.25s ease, color 0.25s ease, filter 0.28s ease;
+  will-change: transform;
 }
-.hero-social-btn:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 7px 7px 0 var(--border-main);
+
+/* Dynamic Focus: non-hovered buttons shrink slightly with soft muted tone */
+.hero-social-actions:hover .hero-social-btn {
+  transform: scale(0.92);
+  opacity: 0.72;
+  filter: grayscale(0.25);
 }
+
+/* The active hovered button grows, pops out and gains high energy */
+.hero-social-actions .hero-social-btn:hover {
+  transform: scale(1.1) translate(-2px, -3px) !important;
+  opacity: 1 !important;
+  filter: none !important;
+  box-shadow: 8px 8px 0 var(--border-main);
+  z-index: 2;
+}
+
 .hero-social-btn.btn-behance:hover {
   background: var(--electric);
   color: #000000;
