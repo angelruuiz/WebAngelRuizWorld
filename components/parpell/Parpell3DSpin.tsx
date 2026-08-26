@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import * as THREE from "three";
 
 interface Parpell3DSpinProps {
@@ -14,346 +15,359 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
   const [isDragging, setIsDragging] = useState<boolean>(false);
+  const [useFallback, setUseFallback] = useState<boolean>(false);
 
   useEffect(() => {
     let cancelled = false;
     let animationFrameId: number;
     let cleanup: (() => void) | undefined;
 
-    const init = () => {
+    const init = async () => {
       const container = containerRef.current;
       const canvas = canvasRef.current;
       if (!container || !canvas) return;
 
-      const width = container.clientWidth || 360;
-      const height = container.clientHeight || 360;
+      try {
+        const { GLTFLoader } = await import("three/examples/jsm/loaders/GLTFLoader.js");
+        const { DRACOLoader } = await import("three/examples/jsm/loaders/DRACOLoader.js");
 
-      // 1. Scene & Camera Setup
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(40, width / height, 0.1, 100);
-      camera.position.set(0, 0, 4.2);
+        if (cancelled || !containerRef.current || !canvasRef.current) return;
 
-      // 2. WebGL Renderer with High Performance & Alpha
-      const renderer = new THREE.WebGLRenderer({
-        canvas,
-        alpha: true,
-        antialias: true,
-        powerPreference: "high-performance",
-        stencil: false,
-        depth: true,
-      });
-      renderer.setSize(width, height);
-      renderer.setPixelRatio(Math.min(typeof window !== "undefined" ? window.devicePixelRatio : 1, 2));
-      renderer.toneMapping = THREE.ACESFilmicToneMapping;
-      renderer.toneMappingExposure = 1.35;
-      renderer.outputColorSpace = THREE.SRGBColorSpace;
+        const width = container.clientWidth || 360;
+        const height = container.clientHeight || 360;
 
-      // 3. Studio Lighting Rig
-      const ambientLight = new THREE.AmbientLight(0xffffff, 1.4);
-      scene.add(ambientLight);
+        // 1. Scene & Camera Setup
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(38, width / height, 0.1, 1000);
+        camera.position.set(0, 0, 4.0);
 
-      const keyLight = new THREE.DirectionalLight(0xffe4e8, 3.2);
-      keyLight.position.set(3.5, 4.5, 5);
-      scene.add(keyLight);
+        // 2. WebGL Renderer
+        const renderer = new THREE.WebGLRenderer({
+          canvas,
+          alpha: true,
+          antialias: true,
+          powerPreference: "high-performance",
+          stencil: false,
+          depth: true,
+        });
+        renderer.setSize(width, height);
+        renderer.setPixelRatio(Math.min(typeof window !== "undefined" ? window.devicePixelRatio : 1, 2));
+        renderer.toneMapping = THREE.ACESFilmicToneMapping;
+        renderer.toneMappingExposure = 1.35;
+        renderer.outputColorSpace = THREE.SRGBColorSpace;
 
-      const fillLight = new THREE.DirectionalLight(0x9e5c6a, 2.6);
-      fillLight.position.set(-4, -2, 3);
-      scene.add(fillLight);
+        // 3. Studio Lighting Setup
+        const ambientLight = new THREE.AmbientLight(0xffffff, 1.6);
+        scene.add(ambientLight);
 
-      const rimLight = new THREE.DirectionalLight(0xc27a8a, 2.4);
-      rimLight.position.set(0, 4, -4);
-      scene.add(rimLight);
+        // Key Light (Warm Rose)
+        const keyLight = new THREE.DirectionalLight(0xffe4e8, 3.4);
+        keyLight.position.set(3.5, 4.5, 5);
+        scene.add(keyLight);
 
-      // Interactive Dynamic Point Light (follows cursor slightly)
-      const dynamicPointLight = new THREE.PointLight(0xf3b0be, 3.0, 10, 1.2);
-      dynamicPointLight.position.set(0, 1.5, 2.5);
-      scene.add(dynamicPointLight);
+        // Fill Light (Deep Burgundy / Wine)
+        const fillLight = new THREE.DirectionalLight(0x9e5c6a, 2.6);
+        fillLight.position.set(-4, -2, 3);
+        scene.add(fillLight);
 
-      // 4. Model Group Pivot
-      const modelGroup = new THREE.Group();
-      scene.add(modelGroup);
+        // Rim Light for 3D silhouette separation
+        const rimLight = new THREE.DirectionalLight(0xc27a8a, 2.8);
+        rimLight.position.set(0, 4, -4);
+        scene.add(rimLight);
 
-      // 5. Build High-End 3D Luxury Parpell Emblem
-      const textureLoader = new THREE.TextureLoader();
-      const logoTexture = textureLoader.load(
-        "/logo-parpell-transparent.png",
-        () => {
-          if (!cancelled) {
+        // Interactive Point Light (follows mouse/touch)
+        const dynamicPointLight = new THREE.PointLight(0xf3b0be, 3.2, 12, 1.2);
+        dynamicPointLight.position.set(0, 1.5, 2.5);
+        scene.add(dynamicPointLight);
+
+        // 4. Model Pivot Group
+        const modelGroup = new THREE.Group();
+        scene.add(modelGroup);
+
+        // 5. Load User's Exact 3D GLB Render
+        const dracoLoader = new DRACOLoader();
+        dracoLoader.setDecoderPath("https://www.gstatic.com/draco/versioned/decoders/1.5.7/");
+        dracoLoader.preload();
+
+        const gltfLoader = new GLTFLoader();
+        gltfLoader.setDRACOLoader(dracoLoader);
+
+        gltfLoader.load(
+          "/logo-3d.glb",
+          (gltf) => {
+            if (cancelled) return;
+            const root = gltf.scene;
+
+            // Auto-center the 3D model geometry precisely around (0,0,0)
+            const box = new THREE.Box3().setFromObject(root);
+            const center = box.getCenter(new THREE.Vector3());
+            const size = box.getSize(new THREE.Vector3());
+
+            root.position.x = -center.x;
+            root.position.y = -center.y;
+            root.position.z = -center.z;
+
+            // Scale to fit viewport perfectly
+            const maxDim = Math.max(size.x, size.y, size.z);
+            if (maxDim > 0) {
+              const scale = 2.45 / maxDim;
+              root.scale.set(scale, scale, scale);
+            }
+
+            // Enhance double-sided materials and specular response
+            root.traverse((child) => {
+              if ((child as THREE.Mesh).isMesh) {
+                const mesh = child as THREE.Mesh;
+                mesh.castShadow = true;
+                mesh.receiveShadow = true;
+                if (mesh.material) {
+                  if (Array.isArray(mesh.material)) {
+                    mesh.material.forEach((mat) => {
+                      mat.side = THREE.DoubleSide;
+                      if ("roughness" in mat) mat.roughness = 0.25;
+                      if ("metalness" in mat) mat.metalness = 0.85;
+                      mat.needsUpdate = true;
+                    });
+                  } else {
+                    mesh.material.side = THREE.DoubleSide;
+                    if ("roughness" in mesh.material) mesh.material.roughness = 0.25;
+                    if ("metalness" in mesh.material) mesh.material.metalness = 0.85;
+                    mesh.material.needsUpdate = true;
+                  }
+                }
+              }
+            });
+
+            modelGroup.add(root);
+            setIsLoaded(true);
+            onProgress?.(100);
+            onLoaded?.();
+          },
+          (xhr) => {
+            if (xhr.total > 0) {
+              const progress = Math.min(100, Math.round((xhr.loaded / xhr.total) * 100));
+              onProgress?.(progress);
+            }
+          },
+          (error) => {
+            console.warn("Could not load 3D GLB model, using 2D fallback:", error);
+            setUseFallback(true);
             setIsLoaded(true);
             onProgress?.(100);
             onLoaded?.();
           }
-        },
-        undefined,
-        () => {
-          if (!cancelled) {
-            setIsLoaded(true);
-            onProgress?.(100);
-            onLoaded?.();
+        );
+
+        // 6. Physics, Motion & Inertia State
+        let targetRotationY = 0;
+        let targetRotationX = 0;
+        let currentRotationY = 0;
+        let currentRotationX = 0;
+        let isInteracting = false;
+        let previousMousePosition = { x: 0, y: 0 };
+        let dragVelocity = { x: 0, y: 0 };
+        let mouseNormalized = { x: 0, y: 0 };
+
+        // 7. Animation Loop
+        const clock = new THREE.Clock();
+
+        const animate = () => {
+          if (cancelled) return;
+          animationFrameId = requestAnimationFrame(animate);
+
+          const elapsedTime = clock.getElapsedTime();
+
+          if (!isInteracting) {
+            // Gentle continuous floating & sway
+            const autoSpin = elapsedTime * 0.45;
+            const tiltX = Math.cos(elapsedTime * 0.85) * 0.12 + mouseNormalized.y * 0.25;
+            const tiltY = Math.sin(autoSpin) * 0.38 + mouseNormalized.x * 0.45;
+
+            targetRotationY = tiltY;
+            targetRotationX = tiltX;
+
+            // Harmonic floating breathing on Y axis
+            modelGroup.position.y = Math.sin(elapsedTime * 1.5) * 0.08;
+          } else {
+            // Drag velocity with inertia damping
+            targetRotationY += dragVelocity.x;
+            targetRotationX += dragVelocity.y;
+            dragVelocity.x *= 0.92;
+            dragVelocity.y *= 0.92;
           }
-        }
-      );
-      logoTexture.colorSpace = THREE.SRGBColorSpace;
-      logoTexture.generateMipmaps = true;
-      logoTexture.minFilter = THREE.LinearMipmapLinearFilter;
-      logoTexture.magFilter = THREE.LinearFilter;
 
-      // 3D Outer Beveled Chamfer Ring (Rose Gold & Dark Wine Metal)
-      const ringGeometry = new THREE.TorusGeometry(1.22, 0.048, 24, 64);
-      const ringMaterial = new THREE.MeshPhysicalMaterial({
-        color: 0xc27a8a,
-        emissive: 0x2d0c1b,
-        emissiveIntensity: 0.25,
-        metalness: 0.92,
-        roughness: 0.15,
-        clearcoat: 1.0,
-        clearcoatRoughness: 0.08,
-        reflectivity: 0.95,
-      });
-      const outerRing = new THREE.Mesh(ringGeometry, ringMaterial);
-      modelGroup.add(outerRing);
+          // Smooth physics lerping
+          currentRotationY += (targetRotationY - currentRotationY) * 0.08;
+          currentRotationX += (targetRotationX - currentRotationX) * 0.08;
 
-      // Inner Floating Thin Accent Halo
-      const innerRingGeo = new THREE.TorusGeometry(1.08, 0.016, 16, 64);
-      const innerRingMat = new THREE.MeshStandardMaterial({
-        color: 0xffd1dc,
-        metalness: 0.95,
-        roughness: 0.2,
-      });
-      const innerRing = new THREE.Mesh(innerRingGeo, innerRingMat);
-      modelGroup.add(innerRing);
+          modelGroup.rotation.y = currentRotationY;
+          modelGroup.rotation.x = currentRotationX;
 
-      // Central Floating 3D Coin/Pill Sculpture with Dual-Faced Emblem
-      const cylinderGeometry = new THREE.CylinderGeometry(1.12, 1.12, 0.14, 64, 1, false);
+          // Dynamic light follows tilt for gleaming highlights
+          dynamicPointLight.position.x = Math.sin(currentRotationY) * 2.2;
+          dynamicPointLight.position.y = 1.4 + Math.sin(elapsedTime * 2.0) * 0.4;
 
-      // Front & Back Decal Materials with Parpell Logo
-      const logoFaceMaterial = new THREE.MeshPhysicalMaterial({
-        map: logoTexture,
-        transparent: true,
-        alphaTest: 0.02,
-        metalness: 0.75,
-        roughness: 0.18,
-        clearcoat: 1.0,
-        clearcoatRoughness: 0.06,
-        reflectivity: 0.9,
-        side: THREE.FrontSide,
-        depthWrite: true,
-      });
+          renderer.render(scene, camera);
+        };
+        animate();
 
-      // Side Chamfer Metal Edge (Deep Obsidian Velvet Burgundy)
-      const edgeMaterial = new THREE.MeshPhysicalMaterial({
-        color: 0x220718,
-        emissive: 0x14030e,
-        metalness: 0.88,
-        roughness: 0.22,
-        clearcoat: 0.8,
-        reflectivity: 0.8,
-      });
+        // 8. Interaction Handlers (Mouse & Touch)
+        const onPointerDown = (clientX: number, clientY: number) => {
+          isInteracting = true;
+          setIsDragging(true);
+          previousMousePosition = { x: clientX, y: clientY };
+          dragVelocity = { x: 0, y: 0 };
+        };
 
-      // Back Face Material
-      const backFaceMaterial = logoFaceMaterial.clone();
+        const onPointerMove = (clientX: number, clientY: number) => {
+          const rect = container.getBoundingClientRect();
+          mouseNormalized = {
+            x: ((clientX - rect.left) / rect.width - 0.5) * 2,
+            y: -((clientY - rect.top) / rect.height - 0.5) * 2,
+          };
 
-      const materials = [edgeMaterial, logoFaceMaterial, backFaceMaterial];
-      const coinMesh = new THREE.Mesh(cylinderGeometry, materials);
-      coinMesh.rotation.x = Math.PI / 2;
-      modelGroup.add(coinMesh);
+          if (!isInteracting) return;
 
-      // Double-sided Floating 3D Logo Plate for extreme sharpness
-      const planeGeo = new THREE.PlaneGeometry(1.68, 1.68);
-      const frontPlateMat = new THREE.MeshBasicMaterial({
-        map: logoTexture,
-        transparent: true,
-        depthTest: true,
-        depthWrite: false,
-      });
-      const frontPlate = new THREE.Mesh(planeGeo, frontPlateMat);
-      frontPlate.position.z = 0.082;
-      modelGroup.add(frontPlate);
+          const deltaX = clientX - previousMousePosition.x;
+          const deltaY = clientY - previousMousePosition.y;
 
-      const backPlate = new THREE.Mesh(planeGeo, frontPlateMat.clone());
-      backPlate.position.z = -0.082;
-      backPlate.rotation.y = Math.PI;
-      modelGroup.add(backPlate);
+          dragVelocity = {
+            x: deltaX * 0.008,
+            y: deltaY * 0.008,
+          };
 
-      // 6. Physics, Motion & Inertia State
-      let targetRotationY = 0;
-      let targetRotationX = 0;
-      let currentRotationY = 0;
-      let currentRotationX = 0;
-      let isInteracting = false;
-      let previousMousePosition = { x: 0, y: 0 };
-      let dragVelocity = { x: 0, y: 0 };
-      let mouseNormalized = { x: 0, y: 0 };
-
-      // 7. Animation Loop
-      const clock = new THREE.Clock();
-
-      const animate = () => {
-        if (cancelled) return;
-        animationFrameId = requestAnimationFrame(animate);
-
-        const elapsedTime = clock.getElapsedTime();
-
-        if (!isInteracting) {
-          // Autonomous continuous floating & gentle 3D sway
-          const autoSpin = elapsedTime * 0.45;
-          const tiltX = Math.cos(elapsedTime * 0.9) * 0.12 + mouseNormalized.y * 0.28;
-          const tiltY = Math.sin(autoSpin) * 0.35 + mouseNormalized.x * 0.45;
-
-          targetRotationY = tiltY;
-          targetRotationX = tiltX;
-
-          // Harmonic floating breathing on Y axis
-          modelGroup.position.y = Math.sin(elapsedTime * 1.6) * 0.08;
-
-          // Inner ring subtle counter-rotation for depth
-          innerRing.rotation.z = -elapsedTime * 0.3;
-          outerRing.rotation.z = elapsedTime * 0.15;
-        } else {
-          // Drag velocity with inertia damping
           targetRotationY += dragVelocity.x;
           targetRotationX += dragVelocity.y;
-          dragVelocity.x *= 0.92;
-          dragVelocity.y *= 0.92;
-        }
-
-        // Smooth physics lerping
-        currentRotationY += (targetRotationY - currentRotationY) * 0.08;
-        currentRotationX += (targetRotationX - currentRotationX) * 0.08;
-
-        modelGroup.rotation.y = currentRotationY;
-        modelGroup.rotation.x = currentRotationX;
-
-        // Dynamic light follows tilt for gleaming specular highlights
-        dynamicPointLight.position.x = Math.sin(currentRotationY) * 2.2;
-        dynamicPointLight.position.y = 1.4 + Math.sin(elapsedTime * 2.0) * 0.4;
-
-        renderer.render(scene, camera);
-      };
-      animate();
-
-      // 8. Mouse & Touch Interaction Handlers
-      const onPointerDown = (clientX: number, clientY: number) => {
-        isInteracting = true;
-        setIsDragging(true);
-        previousMousePosition = { x: clientX, y: clientY };
-        dragVelocity = { x: 0, y: 0 };
-      };
-
-      const onPointerMove = (clientX: number, clientY: number) => {
-        const rect = container.getBoundingClientRect();
-        mouseNormalized = {
-          x: ((clientX - rect.left) / rect.width - 0.5) * 2,
-          y: -((clientY - rect.top) / rect.height - 0.5) * 2,
+          previousMousePosition = { x: clientX, y: clientY };
         };
 
-        if (!isInteracting) return;
-
-        const deltaX = clientX - previousMousePosition.x;
-        const deltaY = clientY - previousMousePosition.y;
-
-        dragVelocity = {
-          x: deltaX * 0.008,
-          y: deltaY * 0.008,
+        const onPointerUp = () => {
+          isInteracting = false;
+          setIsDragging(false);
         };
 
-        targetRotationY += dragVelocity.x;
-        targetRotationX += dragVelocity.y;
-        previousMousePosition = { x: clientX, y: clientY };
-      };
+        const handleMouseDown = (e: MouseEvent) => {
+          onPointerDown(e.clientX, e.clientY);
+        };
+        const handleMouseMove = (e: MouseEvent) => {
+          onPointerMove(e.clientX, e.clientY);
+        };
+        const handleMouseUp = () => {
+          onPointerUp();
+        };
+        const handleMouseLeave = () => {
+          onPointerUp();
+          mouseNormalized = { x: 0, y: 0 };
+        };
 
-      const onPointerUp = () => {
-        isInteracting = false;
-        setIsDragging(false);
-      };
+        const handleTouchStart = (e: TouchEvent) => {
+          if (e.touches.length > 0) {
+            onPointerDown(e.touches[0].clientX, e.touches[0].clientY);
+          }
+        };
+        const handleTouchMove = (e: TouchEvent) => {
+          if (e.touches.length > 0) {
+            onPointerMove(e.touches[0].clientX, e.touches[0].clientY);
+          }
+        };
+        const handleTouchEnd = () => {
+          onPointerUp();
+        };
 
-      // Mouse events
-      const handleMouseDown = (e: MouseEvent) => {
-        onPointerDown(e.clientX, e.clientY);
-      };
-      const handleMouseMove = (e: MouseEvent) => {
-        onPointerMove(e.clientX, e.clientY);
-      };
-      const handleMouseUp = () => {
-        onPointerUp();
-      };
-      const handleMouseLeave = () => {
-        onPointerUp();
-        mouseNormalized = { x: 0, y: 0 };
-      };
+        const handleResize = () => {
+          if (!container || !renderer || !camera) return;
+          const newWidth = container.clientWidth || 360;
+          const newHeight = container.clientHeight || 360;
+          camera.aspect = newWidth / newHeight;
+          camera.updateProjectionMatrix();
+          renderer.setSize(newWidth, newHeight);
+        };
 
-      // Touch events (Mobile support)
-      const handleTouchStart = (e: TouchEvent) => {
-        if (e.touches.length > 0) {
-          onPointerDown(e.touches[0].clientX, e.touches[0].clientY);
-        }
-      };
-      const handleTouchMove = (e: TouchEvent) => {
-        if (e.touches.length > 0) {
-          onPointerMove(e.touches[0].clientX, e.touches[0].clientY);
-        }
-      };
-      const handleTouchEnd = () => {
-        onPointerUp();
-      };
+        const resizeObserver = new ResizeObserver(() => handleResize());
+        resizeObserver.observe(container);
 
-      // Resize Observer
-      const handleResize = () => {
-        if (!container || !renderer || !camera) return;
-        const newWidth = container.clientWidth || 360;
-        const newHeight = container.clientHeight || 360;
-        camera.aspect = newWidth / newHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(newWidth, newHeight);
-      };
+        container.addEventListener("mousedown", handleMouseDown);
+        window.addEventListener("mousemove", handleMouseMove);
+        window.addEventListener("mouseup", handleMouseUp);
+        container.addEventListener("mouseleave", handleMouseLeave);
 
-      const resizeObserver = new ResizeObserver(() => handleResize());
-      resizeObserver.observe(container);
+        container.addEventListener("touchstart", handleTouchStart, { passive: true });
+        window.addEventListener("touchmove", handleTouchMove, { passive: true });
+        window.addEventListener("touchend", handleTouchEnd, { passive: true });
 
-      container.addEventListener("mousedown", handleMouseDown);
-      window.addEventListener("mousemove", handleMouseMove);
-      window.addEventListener("mouseup", handleMouseUp);
-      container.addEventListener("mouseleave", handleMouseLeave);
+        cleanup = () => {
+          cancelAnimationFrame(animationFrameId);
+          resizeObserver.disconnect();
+          container.removeEventListener("mousedown", handleMouseDown);
+          window.removeEventListener("mousemove", handleMouseMove);
+          window.removeEventListener("mouseup", handleMouseUp);
+          container.removeEventListener("mouseleave", handleMouseLeave);
 
-      container.addEventListener("touchstart", handleTouchStart, { passive: true });
-      window.addEventListener("touchmove", handleTouchMove, { passive: true });
-      window.addEventListener("touchend", handleTouchEnd, { passive: true });
+          container.removeEventListener("touchstart", handleTouchStart);
+          window.removeEventListener("touchmove", handleTouchMove);
+          window.removeEventListener("touchend", handleTouchEnd);
 
-      cleanup = () => {
-        cancelAnimationFrame(animationFrameId);
-        resizeObserver.disconnect();
-        container.removeEventListener("mousedown", handleMouseDown);
-        window.removeEventListener("mousemove", handleMouseMove);
-        window.removeEventListener("mouseup", handleMouseUp);
-        container.removeEventListener("mouseleave", handleMouseLeave);
+          dracoLoader.dispose();
+          scene.traverse((obj) => {
+            if ((obj as THREE.Mesh).isMesh) {
+              const mesh = obj as THREE.Mesh;
+              mesh.geometry?.dispose();
+              if (Array.isArray(mesh.material)) {
+                mesh.material.forEach((m) => m.dispose());
+              } else if (mesh.material) {
+                mesh.material.dispose();
+              }
+            }
+          });
+          renderer.dispose();
+        };
 
-        container.removeEventListener("touchstart", handleTouchStart);
-        window.removeEventListener("touchmove", handleTouchMove);
-        window.removeEventListener("touchend", handleTouchEnd);
-
-        // Memory cleanup
-        ringGeometry.dispose();
-        ringMaterial.dispose();
-        innerRingGeo.dispose();
-        innerRingMat.dispose();
-        cylinderGeometry.dispose();
-        planeGeo.dispose();
-        logoFaceMaterial.dispose();
-        edgeMaterial.dispose();
-        backFaceMaterial.dispose();
-        frontPlateMat.dispose();
-        logoTexture.dispose();
-        renderer.dispose();
-      };
+        return cleanup;
+      } catch (err) {
+        console.warn("WebGL initialization failed, falling back to 2D logo:", err);
+        setUseFallback(true);
+        setIsLoaded(true);
+        onLoaded?.();
+        return undefined;
+      }
     };
 
-    init();
+    init().then((cleanupFn) => {
+      if (cleanupFn) {
+        if (!cancelled) cleanup = cleanupFn;
+        else cleanupFn();
+      }
+    });
 
     return () => {
       cancelled = true;
       cleanup?.();
     };
   }, [onLoaded, onProgress]);
+
+  if (useFallback) {
+    return (
+      <div className="relative flex flex-col items-center justify-center select-none py-2 my-1">
+        <div className="absolute w-56 sm:w-72 h-56 sm:h-72 rounded-full bg-gradient-to-tr from-[#9E5C6A]/30 via-[#C27A8A]/20 to-purple-600/10 blur-2xl -z-10 pointer-events-none" />
+        <motion.div
+          animate={{ y: [0, -6, 0] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          className="relative w-44 sm:w-56 h-44 sm:h-56 flex items-center justify-center"
+        >
+          <div className="relative w-36 sm:w-48 h-36 sm:h-48 rounded-3xl bg-gradient-to-br from-[#2D1220]/90 via-[#180812]/90 to-[#0C0308]/90 border border-[#C27A8A]/30 p-4 shadow-[0_15px_45px_rgba(0,0,0,0.8),0_0_30px_rgba(158,92,106,0.3)] flex items-center justify-center">
+            <Image
+              src="/logo-parpell-transparent.png"
+              alt="Logo Parpell"
+              width={180}
+              height={180}
+              className="w-full h-full object-contain filter drop-shadow-[0_8px_16px_rgba(194,122,138,0.4)]"
+              priority
+            />
+          </div>
+        </motion.div>
+      </div>
+    );
+  }
 
   return (
     <div className="relative flex flex-col items-center justify-center select-none -mb-2 sm:mb-2">
@@ -370,7 +384,7 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
       {/* 3D Interactive Canvas Box with Touch Pan Support */}
       <div
         ref={containerRef}
-        className={`relative w-52 h-52 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 flex items-center justify-center cursor-grab touch-pan-y ${
+        className={`relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 flex items-center justify-center cursor-grab touch-pan-y ${
           isDragging ? "cursor-grabbing" : ""
         }`}
         title="Gira el logo 3D interactivo de Parpell"
