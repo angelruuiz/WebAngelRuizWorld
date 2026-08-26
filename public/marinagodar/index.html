@@ -179,13 +179,127 @@ body {
 }
 
 .brand-link {
-  font-family: var(--font-mono);
-  font-size: 0.84rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.25em;
+  display: inline-flex;
+  align-items: baseline;
+  font-size: clamp(1.45rem, 2.7vw, 2.35rem);
+  line-height: 1;
   color: var(--text-main);
   text-decoration: none;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: normal;
+}
+
+.brand-link:hover {
+  transform: scale(1.04);
+}
+
+.brand-link .logo-chunk {
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.25s ease, -webkit-text-stroke 0.25s ease;
+}
+
+/* 1. "Ma" — Syne Display Bold 900 */
+.brand-link .chunk-1 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: var(--text-main);
+}
+
+/* 2. "ri" — Libre Baskerville Italic Serif */
+.brand-link .chunk-2 {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 700;
+  color: var(--neon);
+  letter-spacing: -0.01em;
+  margin: 0 1px;
+}
+
+/* 3. "na" — Caveat Artistic Hand-script */
+.brand-link .chunk-3 {
+  font-family: var(--font-hand);
+  font-weight: 700;
+  font-size: 1.22em;
+  color: var(--text-main);
+  transform: rotate(-4deg) translateY(-2px);
+  margin-right: 1px;
+}
+
+.brand-link .logo-space {
+  display: inline-block;
+  width: 0.3em;
+}
+
+/* 4. "Go" — Space Grotesk Bold Outline */
+.brand-link .chunk-4 {
+  font-family: var(--font-outline-title);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  color: transparent;
+  -webkit-text-stroke: 1.8px var(--text-main);
+}
+
+/* 5. "d" — Libre Baskerville Italic Serif with accent pop */
+.brand-link .chunk-5 {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 700;
+  color: var(--electric);
+  margin: 0 1px;
+}
+
+/* 6. "ar" — Syne Display Bold 900 */
+.brand-link .chunk-6 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+}
+
+/* Sparkle Star */
+.brand-link .logo-sparkle {
+  display: inline-block;
+  font-size: 0.55em;
+  color: var(--neon);
+  margin-left: 6px;
+  animation: spinSlow 12s linear infinite;
+  transform-origin: center;
+  vertical-align: middle;
+}
+
+/* Dynamic Interactive Hover States per Chunk */
+.brand-link:hover .chunk-1 {
+  transform: translateY(-3px) rotate(-2deg);
+  color: var(--electric);
+}
+.brand-link:hover .chunk-2 {
+  transform: translateY(-2px) scale(1.15);
+  color: var(--neon);
+}
+.brand-link:hover .chunk-3 {
+  transform: rotate(8deg) scale(1.2) translateY(-4px);
+  color: var(--acid);
+  text-shadow: 2px 2px 0 var(--border-main);
+}
+.brand-link:hover .chunk-4 {
+  color: var(--electric);
+  -webkit-text-stroke: 1.8px var(--border-main);
+  transform: translateY(-2px);
+}
+.brand-link:hover .chunk-5 {
+  transform: translateY(-3px) rotate(3deg) scale(1.1);
+  color: var(--neon);
+}
+.brand-link:hover .chunk-6 {
+  transform: translateY(-2px) rotate(2deg);
+  color: var(--acid);
+  text-shadow: 2px 2px 0 var(--border-main);
 }
 
 .header-nav-links {
@@ -1263,6 +1377,19 @@ body {
   .mascot-gif-img {
     width: 72px;
   }
+  .brand-link {
+    font-size: clamp(1.28rem, 4.8vw, 1.65rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .header-bar {
+    padding: 10px 14px;
+  }
+  .party-toggle-btn {
+    padding: 6px 12px;
+    font-size: 0.68rem;
+  }
 }
 
 @media (max-width: 992px) {
@@ -1293,8 +1420,11 @@ body {
 
 <!-- ── TOP BAR ─────────────────────────────── -->
 <header class="header-bar">
-  <a href="#top" class="brand-link" data-hover>
-    Marina Godar
+  <a href="#top" class="brand-link" data-hover title="Marina Godar — Inicio">
+    <span class="logo-chunk chunk-1">Ma</span><span class="logo-chunk chunk-2">ri</span><span class="logo-chunk chunk-3">na</span>
+    <span class="logo-space">&nbsp;</span>
+    <span class="logo-chunk chunk-4">Go</span><span class="logo-chunk chunk-5">d</span><span class="logo-chunk chunk-6">ar</span>
+    <span class="logo-sparkle" aria-hidden="true">✦</span>
   </a>
 
   <nav class="header-nav-links">
