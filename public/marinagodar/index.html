@@ -421,14 +421,89 @@ body {
 }
 
 .hero-title-art {
-  font-family: var(--font-display);
   font-size: clamp(4rem, 11vw, 11.5rem);
   line-height: 0.85;
-  font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: -0.04em;
+  margin-bottom: 0.04em;
+  white-space: nowrap;
+}
+
+.hero-art-mixed {
+  display: inline-flex;
+  align-items: baseline;
   color: var(--text-main);
-  margin-bottom: 0.05em;
+  user-select: none;
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  letter-spacing: normal;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+
+.hero-art-mixed:hover {
+  transform: scale(1.03);
+}
+
+.hero-art-mixed .art-chunk {
+  display: inline-block;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.25s ease, -webkit-text-stroke 0.25s ease;
+}
+
+/* 1. "A" — Space Grotesk Outline */
+.hero-art-mixed .art-1 {
+  font-family: var(--font-outline-title);
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: clamp(3px, 0.4vw, 6px) var(--text-main);
+}
+
+/* 2. "R" — Libre Baskerville Italic Serif in Electric Cyan */
+.hero-art-mixed .art-2 {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 700;
+  color: var(--electric);
+  letter-spacing: -0.02em;
+  margin: 0 clamp(2px, 0.3vw, 6px);
+}
+
+/* 3. "T" — Caveat Expressive Hand-script in Neon Pink */
+.hero-art-mixed .art-3 {
+  font-family: var(--font-hand);
+  font-weight: 700;
+  font-size: 1.16em;
+  color: var(--neon);
+  transform: rotate(-6deg) translateY(-8px);
+  margin-left: 2px;
+}
+
+/* Sparkle Star */
+.hero-art-mixed .art-sparkle {
+  display: inline-block;
+  font-size: 0.4em;
+  color: var(--acid);
+  margin-left: 12px;
+  animation: spinSlow 10s linear infinite reverse;
+  transform-origin: center;
+  vertical-align: middle;
+}
+
+/* Dynamic Interactive Hover States per Chunk for ART */
+.hero-art-mixed:hover .art-1 {
+  transform: translateY(-8px) rotate(-3deg);
+  color: var(--acid);
+  -webkit-text-stroke: clamp(3px, 0.4vw, 6px) var(--border-main);
+}
+.hero-art-mixed:hover .art-2 {
+  transform: translateY(-6px) scale(1.12);
+  color: var(--neon);
+}
+.hero-art-mixed:hover .art-3 {
+  transform: rotate(8deg) scale(1.22) translateY(-12px);
+  color: var(--electric);
+  text-shadow: 4px 4px 0 var(--border-main);
 }
 
 .hero-title-direction {
@@ -1599,8 +1674,9 @@ body {
         <span>Dirección de Arte &amp; Creatividad 360° · Disponible para proyectos</span>
       </div>
 
-      <h1 class="hero-title-art">
-        ART
+      <h1 class="hero-title-art hero-art-mixed" data-hover title="Art">
+        <span class="art-chunk art-1">A</span><span class="art-chunk art-2">R</span><span class="art-chunk art-3">T</span>
+        <span class="art-sparkle" aria-hidden="true">✦</span>
       </h1>
       <div class="hero-title-direction hero-direction-mixed" data-hover title="Direction">
         <span class="dir-chunk dir-1">Di</span><span class="dir-chunk dir-2">r</span><span class="dir-chunk dir-3">ec</span><span class="dir-chunk dir-4">T</span><span class="dir-chunk dir-5">i</span><span class="dir-chunk dir-6">on</span>
