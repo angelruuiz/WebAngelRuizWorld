@@ -1873,7 +1873,6 @@ body {
   align-items: center;
   transform-style: preserve-3d;
   transform: rotateX(28deg) translateY(35px);
-  will-change: transform;
 }
 
 .jam-album-ring {
@@ -1881,15 +1880,8 @@ body {
   width: clamp(115px, 12.5vw, 165px);
   height: clamp(115px, 12.5vw, 165px);
   transform-style: preserve-3d;
-  animation: spinAlbumRing 40s linear infinite;
-  cursor: grab;
-  will-change: transform;
-}
-.jam-album-ring:active {
-  cursor: grabbing;
-}
-.jam-album-ring.is-paused {
-  animation-play-state: paused;
+  animation: spinAlbumRing 36s linear infinite;
+  pointer-events: none; /* Disables any cursor interaction with the rotating ring */
 }
 
 @keyframes spinAlbumRing {
@@ -1907,7 +1899,6 @@ body {
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.32), 0 0 0 1.5px rgba(0, 0, 0, 0.1);
   transform: rotateY(calc(var(--i) * (360deg / 12))) translateZ(clamp(380px, 48vw, 620px));
   backface-visibility: visible;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
   user-select: none;
   -webkit-user-drag: none;
   background: #1e1e24;
@@ -1919,9 +1910,6 @@ body {
   display: block;
   pointer-events: none;
   background: #2a2a32;
-}
-.jam-album-card:hover {
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.45), 0 0 0 2.5px var(--acid);
 }
 
 /* Center Content inside the 3D ring */
@@ -3014,92 +3002,6 @@ body {
       });
     }
   });
-
-  // 6. Interactive 3D Album Cylinder Carousel ("jam with me")
-  const stage = document.getElementById('jam-3d-stage');
-  const world = document.getElementById('jam-3d-world');
-  const ring = document.getElementById('jam-album-ring');
-
-  if (stage && world && ring) {
-    let currentRotation = 0;
-    let autoSpinSpeed = 0.22; // Continuous smooth rotation
-    let isDragging = false;
-    let lastX = 0;
-    let velocity = 0;
-
-    // Subtle 3D tilt tracking on mouse move
-    stage.addEventListener('mousemove', (e) => {
-      const rect = stage.getBoundingClientRect();
-      const nx = (e.clientX - rect.left) / rect.width - 0.5;
-      const ny = (e.clientY - rect.top) / rect.height - 0.5;
-      world.style.transform = `rotateX(${15 - ny * 10}deg) rotateZ(${nx * 3}deg)`;
-    });
-
-    stage.addEventListener('mouseleave', () => {
-      world.style.transform = 'rotateX(15deg)';
-    });
-
-    // Mouse drag to spin with inertia
-    stage.addEventListener('mousedown', (e) => {
-      if (e.target.closest('a') || e.target.closest('button')) return;
-      isDragging = true;
-      lastX = e.clientX;
-      velocity = 0;
-    });
-
-    window.addEventListener('mousemove', (e) => {
-      if (!isDragging) return;
-      const delta = e.clientX - lastX;
-      lastX = e.clientX;
-      currentRotation += delta * 0.35;
-      velocity = delta * 0.35;
-      ring.style.transform = `rotateY(${currentRotation}deg)`;
-    });
-
-    window.addEventListener('mouseup', () => {
-      if (isDragging) isDragging = false;
-    });
-
-    // Touch support for mobile devices
-    stage.addEventListener('touchstart', (e) => {
-      if (e.target.closest('a') || e.target.closest('button')) return;
-      if (e.touches.length > 0) {
-        isDragging = true;
-        lastX = e.touches[0].clientX;
-        velocity = 0;
-      }
-    }, { passive: true });
-
-    window.addEventListener('touchmove', (e) => {
-      if (!isDragging || e.touches.length === 0) return;
-      const delta = e.touches[0].clientX - lastX;
-      lastX = e.touches[0].clientX;
-      currentRotation += delta * 0.35;
-      velocity = delta * 0.35;
-      ring.style.transform = `rotateY(${currentRotation}deg)`;
-    }, { passive: true });
-
-    window.addEventListener('touchend', () => {
-      isDragging = false;
-    });
-
-    // Continuous Animation & Inertia loop
-    function updateRing() {
-      if (!isDragging) {
-        if (Math.abs(velocity) > 0.05) {
-          currentRotation += velocity;
-          velocity *= 0.94; // Decay momentum
-          ring.style.transform = `rotateY(${currentRotation}deg)`;
-        } else {
-          currentRotation = (currentRotation + autoSpinSpeed) % 360;
-          ring.style.transform = `rotateY(${currentRotation}deg)`;
-        }
-      }
-      requestAnimationFrame(updateRing);
-    }
-
-    requestAnimationFrame(updateRing);
-  }
 
 })();
 </script>
