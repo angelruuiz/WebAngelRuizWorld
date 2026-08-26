@@ -24,6 +24,14 @@ const sections: SectionMarker[] = [
 export function VerticalTimelineNav() {
   const [activeSection, setActiveSection] = useState("inicio");
   const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkDesktop = () => setIsDesktop(window.innerWidth >= 1024);
+    checkDesktop();
+    window.addEventListener("resize", checkDesktop, { passive: true });
+    return () => window.removeEventListener("resize", checkDesktop);
+  }, []);
 
   const { scrollYProgress } = useScroll();
   const scaleY = useSpring(scrollYProgress, {
@@ -33,6 +41,8 @@ export function VerticalTimelineNav() {
   });
 
   useEffect(() => {
+    if (!isDesktop) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -50,7 +60,7 @@ export function VerticalTimelineNav() {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [isDesktop]);
 
   const scrollToSection = (id: string) => {
     const lenisInstance = typeof window !== "undefined" ? (window as unknown as { __parpellLenis?: { scrollTo: (target: string, opts?: { offset?: number; duration?: number }) => void } }).__parpellLenis : null;
@@ -64,6 +74,8 @@ export function VerticalTimelineNav() {
       }
     }
   };
+
+  if (!isDesktop) return null;
 
   return (
     <aside className="fixed left-6 sm:left-10 top-1/2 -translate-y-1/2 z-20 hidden lg:flex flex-col items-start select-none pointer-events-auto opacity-80 hover:opacity-100 backdrop-blur-[2px] transition-all duration-400">
