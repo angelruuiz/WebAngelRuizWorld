@@ -1108,166 +1108,17 @@ body {
 .scroll-nav-btn-flank.left {
   left: -24px;
 }
-/* ─────────────────────────────────────────────────────────
-   ICONIC COMIC BADGE & CARD DECK SHUFFLE TRANSITIONS
-   ───────────────────────────────────────────────────────── */
-.slider-comic-badge {
-  position: absolute;
-  top: -24px;
-  left: 50%;
-  transform: translateX(-50%) scale(0) rotate(-15deg);
-  z-index: 90;
-  padding: 8px 22px;
-  border-radius: 9999px;
-  border: 3px solid var(--border-main);
-  box-shadow: 6px 6px 0 var(--border-main);
-  font-family: var(--font-display);
-  font-size: clamp(0.95rem, 2vw, 1.25rem);
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  pointer-events: none;
-  opacity: 0;
-  transition: none;
-  white-space: nowrap;
+.scroll-nav-btn-flank.right {
+  right: -24px;
 }
-
-.slider-comic-badge.pop-show {
-  animation: comicPop 0.95s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-}
-
-@keyframes comicPop {
-  0% {
-    opacity: 0;
-    transform: translateX(-50%) translateY(24px) scale(0.3) rotate(-25deg);
-  }
-  20% {
-    opacity: 1;
-    transform: translateX(-50%) translateY(-12px) scale(1.3) rotate(8deg);
-  }
-  45% {
-    transform: translateX(-50%) translateY(-6px) scale(1.1) rotate(-4deg);
-  }
-  75% {
-    opacity: 1;
-    transform: translateX(-50%) translateY(-8px) scale(1) rotate(0deg);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(-50%) translateY(-28px) scale(0.85) rotate(15deg);
-  }
-}
-
 .scroll-nav-btn-flank:hover {
-  transform: translateY(-50%) scale(1.14);
+  transform: translateY(-50%) scale(1.1);
   box-shadow: 9px 9px 0 var(--border-main);
   background: var(--electric);
 }
-
-.scroll-nav-btn-flank.btn-punch-right {
-  animation: btnPunchRight 0.85s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.scroll-nav-btn-flank.btn-punch-left {
-  animation: btnPunchLeft 0.85s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-@keyframes btnPunchRight {
-  0% { transform: translateY(-50%) scale(1); }
-  25% { transform: translateY(-50%) translateX(-14px) scale(0.78) rotate(-20deg); background: var(--neon); color: #FFF; box-shadow: 0 0 25px var(--neon); }
-  55% { transform: translateY(-50%) translateX(14px) scale(1.25) rotate(12deg); background: var(--acid); color: #000; box-shadow: 0 0 35px var(--acid); }
-  80% { transform: translateY(-50%) translateX(-2px) scale(1.05) rotate(-3deg); }
-  100% { transform: translateY(-50%) translateX(0) scale(1) rotate(0deg); }
-}
-
-@keyframes btnPunchLeft {
-  0% { transform: translateY(-50%) scale(1); }
-  25% { transform: translateY(-50%) translateX(14px) scale(0.78) rotate(20deg); background: var(--electric); color: #000; box-shadow: 0 0 25px var(--electric); }
-  55% { transform: translateY(-50%) translateX(-14px) scale(1.25) rotate(-12deg); background: var(--neon); color: #FFF; box-shadow: 0 0 35px var(--neon); }
-  80% { transform: translateY(-50%) translateX(2px) scale(1.05) rotate(3deg); }
-  100% { transform: translateY(-50%) translateX(0) scale(1) rotate(0deg); }
-}
-
-/* Iconic Deck Squeeze, Wave & Stretch Animations (Duration ~0.95s) */
-@keyframes deckShiftRight {
-  0% {
-    transform: scale(1) rotate(0deg);
-  }
-  20% {
-    transform: scale(0.9) rotate(-6deg) skewX(-5deg) translateY(-14px);
-    filter: drop-shadow(0 15px 30px rgba(0, 240, 255, 0.45));
-  }
-  50% {
-    transform: scale(1.06) rotate(4deg) skewX(2deg) translateY(-4px);
-    filter: drop-shadow(0 20px 40px rgba(255, 0, 102, 0.45));
-  }
-  75% {
-    transform: scale(0.98) rotate(-1.5deg) translateY(2px);
-  }
-  100% {
-    transform: scale(1) rotate(0deg) translateY(0);
-  }
-}
-
-@keyframes deckShiftLeft {
-  0% {
-    transform: scale(1) rotate(0deg);
-  }
-  20% {
-    transform: scale(0.9) rotate(6deg) skewX(5deg) translateY(-14px);
-    filter: drop-shadow(0 15px 30px rgba(255, 0, 102, 0.45));
-  }
-  50% {
-    transform: scale(1.06) rotate(-4deg) skewX(-2deg) translateY(-4px);
-    filter: drop-shadow(0 20px 40px rgba(0, 240, 255, 0.45));
-  }
-  75% {
-    transform: scale(0.98) rotate(1.5deg) translateY(2px);
-  }
-  100% {
-    transform: scale(1) rotate(0deg) translateY(0);
-  }
-}
-
-@keyframes deckThumbAperture {
-  0% { transform: scale(1); filter: brightness(1); }
-  25% { transform: scale(1.18) rotate(-2deg); filter: brightness(1.3) contrast(1.15) saturate(1.3); }
-  60% { transform: scale(1.04) rotate(1deg); filter: brightness(1.1); }
-  100% { transform: scale(1) rotate(0deg); filter: brightness(1); }
-}
-
-@keyframes shadowShockwave {
-  0% { transform: translate(12px, 12px); }
-  35% { transform: translate(26px, 26px) rotate(4deg); }
-  70% { transform: translate(8px, 8px) rotate(-2deg); }
-  100% { transform: translate(12px, 12px); }
-}
-
-@keyframes numBadgeSpin {
-  0% { transform: scale(1) rotate(0deg); }
-  40% { transform: scale(1.6) rotate(360deg); color: var(--acid); background: #000; }
-  100% { transform: scale(1) rotate(0deg); }
-}
-
-.works-horizontal-scroll.navigating-right .work-card-inner {
-  animation: deckShiftRight 0.95s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.works-horizontal-scroll.navigating-left .work-card-inner {
-  animation: deckShiftLeft 0.95s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.works-horizontal-scroll.navigating-right .work-card-thumb-img,
-.works-horizontal-scroll.navigating-left .work-card-thumb-img {
-  animation: deckThumbAperture 0.95s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.works-horizontal-scroll.navigating-right .work-card-offset-shadow,
-.works-horizontal-scroll.navigating-left .work-card-offset-shadow {
-  animation: shadowShockwave 0.95s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.works-horizontal-scroll.navigating-right .work-card-num,
-.works-horizontal-scroll.navigating-left .work-card-num {
-  animation: numBadgeSpin 0.95s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+.scroll-nav-btn-flank:active {
+  transform: translateY(-50%) scale(0.92);
+  box-shadow: 4px 4px 0 var(--border-main);
 }
 
 @media (max-width: 900px) {
@@ -1280,6 +1131,9 @@ body {
   .scroll-nav-btn-flank.right { right: 4px; }
 }
 
+/* ─────────────────────────────────────────────────────────
+   SILKY SMOOTH EDITORIAL SLIDER TRANSITIONS
+   ───────────────────────────────────────────────────────── */
 .works-horizontal-scroll {
   display: flex;
   gap: 32px;
@@ -1311,10 +1165,11 @@ body {
   scroll-snap-align: start;
   text-decoration: none;
   color: var(--text-main);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+  will-change: transform;
 }
 .work-card-wrapper:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px) scale(1.015) !important;
 }
 
 .work-card-offset-shadow {
@@ -1322,10 +1177,19 @@ body {
   inset: 0;
   transform: translate(12px, 12px);
   border: 2px solid var(--border-main);
-  transition: transform 0.3s;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .work-card-wrapper:hover .work-card-offset-shadow {
-  transform: translate(16px, 16px);
+  transform: translate(18px, 18px);
+}
+
+/* Silky gliding state while sliding */
+.works-horizontal-scroll.is-sliding .work-card-wrapper {
+  opacity: 0.94;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.65s ease;
+}
+.works-horizontal-scroll.is-sliding .work-card-thumb-img {
+  transform: scale(1.03);
 }
 
 .work-card-inner {
@@ -2305,7 +2169,6 @@ body {
 
   <!-- Slider Wrapper with Flanking Left & Right Large Action Buttons -->
   <div class="works-slider-outer-wrapper">
-    <div id="slider-comic-badge" class="slider-comic-badge" aria-hidden="true">✦ NEXT LEVEL! ✦</div>
     <button class="scroll-nav-btn-flank left" id="btn-scroll-left" title="Ver anteriores (Izquierda)" data-hover>←</button>
 
     <!-- Horizontal scroll gallery, cards with real image previews -->
@@ -2757,76 +2620,55 @@ body {
     if (counterEl) counterEl.textContent = `0${idx + 1} / 0${cards.length}`;
   }
 
-  scrollContainer?.addEventListener('scroll', updateCounter, { passive: true });
+  // Silky Smooth RAF-based Eased Horizontal Slider Navigation
+  let isAnimatingScroll = false;
 
-  // Comic reaction badge and deck shuffle transitions
-  const comicBadge = document.getElementById('slider-comic-badge');
-  const comicPhrasesRight = [
-    { text: "✦ NEXT LEVEL! ✦", bg: "var(--neon)", color: "#FFF" },
-    { text: "⚡ WHOOSH! ⚡", bg: "var(--acid)", color: "#000" },
-    { text: "👀 CASO TOP! 👀", bg: "var(--electric)", color: "#000" },
-    { text: "🔥 CANELA PURA 🔥", bg: "var(--neon)", color: "#FFF" },
-    { text: "✨ BOMBAZO! ✨", bg: "var(--acid)", color: "#000" },
-    { text: "🎨 FRESH CRAFT 🎨", bg: "var(--electric)", color: "#000" }
-  ];
-  const comicPhrasesLeft = [
-    { text: "✦ REWIND! ✦", bg: "var(--electric)", color: "#000" },
-    { text: "⚡ BACK TO TOP ⚡", bg: "var(--neon)", color: "#FFF" },
-    { text: "👀 MIRA ESTE! 👀", bg: "var(--acid)", color: "#000" },
-    { text: "🔥 ARTE PURO 🔥", bg: "var(--electric)", color: "#000" }
-  ];
+  function smoothScrollTo(element, targetX, duration = 600) {
+    if (!element) return;
+    const startX = element.scrollLeft;
+    const distance = targetX - startX;
+    if (Math.abs(distance) < 2) return;
 
-  let phraseIdx = 0;
-  function triggerComicBadge(isRight) {
-    if (!comicBadge) return;
-    const list = isRight ? comicPhrasesRight : comicPhrasesLeft;
-    const item = list[phraseIdx % list.length];
-    phraseIdx++;
+    const startTime = performance.now();
+    isAnimatingScroll = true;
+    element.classList.add('is-sliding');
 
-    comicBadge.textContent = item.text;
-    comicBadge.style.background = item.bg;
-    comicBadge.style.color = item.color;
-    comicBadge.classList.remove('pop-show');
-    void comicBadge.offsetWidth;
-    comicBadge.classList.add('pop-show');
+    function easeOutQuint(t) {
+      return 1 - Math.pow(1 - t, 5);
+    }
+
+    function step(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeOutQuint(progress);
+
+      element.scrollLeft = startX + distance * eased;
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        isAnimatingScroll = false;
+        element.classList.remove('is-sliding');
+        updateCounter();
+      }
+    }
+
+    requestAnimationFrame(step);
   }
 
   btnScrollLeft?.addEventListener('click', () => {
-    const cardWidth = cards[0]?.offsetWidth ? (cards[0].offsetWidth + 32) : 380;
-    btnScrollLeft.classList.remove('btn-punch-left');
-    void btnScrollLeft.offsetWidth;
-    btnScrollLeft.classList.add('btn-punch-left');
-    setTimeout(() => btnScrollLeft.classList.remove('btn-punch-left'), 850);
-
-    triggerComicBadge(false);
-
-    scrollContainer.classList.remove('navigating-right', 'navigating-left');
-    void scrollContainer.offsetWidth; // trigger reflow
-    scrollContainer.classList.add('navigating-left');
-    scrollContainer.scrollBy({ left: -cardWidth, behavior: 'smooth' });
-
-    setTimeout(() => {
-      scrollContainer.classList.remove('navigating-left');
-    }, 950);
+    if (isAnimatingScroll || !scrollContainer || cards.length === 0) return;
+    const cardWidth = cards[0].offsetWidth + 32;
+    const targetLeft = Math.max(0, scrollContainer.scrollLeft - cardWidth);
+    smoothScrollTo(scrollContainer, targetLeft, 650);
   });
 
   btnScrollRight?.addEventListener('click', () => {
-    const cardWidth = cards[0]?.offsetWidth ? (cards[0].offsetWidth + 32) : 380;
-    btnScrollRight.classList.remove('btn-punch-right');
-    void btnScrollRight.offsetWidth;
-    btnScrollRight.classList.add('btn-punch-right');
-    setTimeout(() => btnScrollRight.classList.remove('btn-punch-right'), 850);
-
-    triggerComicBadge(true);
-
-    scrollContainer.classList.remove('navigating-right', 'navigating-left');
-    void scrollContainer.offsetWidth; // trigger reflow
-    scrollContainer.classList.add('navigating-right');
-    scrollContainer.scrollBy({ left: cardWidth, behavior: 'smooth' });
-
-    setTimeout(() => {
-      scrollContainer.classList.remove('navigating-right');
-    }, 950);
+    if (isAnimatingScroll || !scrollContainer || cards.length === 0) return;
+    const cardWidth = cards[0].offsetWidth + 32;
+    const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+    const targetRight = Math.min(maxScroll, scrollContainer.scrollLeft + cardWidth);
+    smoothScrollTo(scrollContainer, targetRight, 650);
   });
 
   // Mouse drag to scroll
