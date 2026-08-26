@@ -1261,48 +1261,6 @@ body {
   position: relative;
   background-color: var(--about-bg);
   color: var(--about-text);
-  padding: 120px 4vw;
-  overflow: hidden;
-  transition: background-color 0.35s ease;
-}
-
-.about-giant-heading {
-  position: relative;
-  z-index: 10;
-  font-family: var(--font-display);
-  font-size: clamp(3.5rem, 14vw, 11rem);
-  line-height: 0.8;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: -0.04em;
-  max-width: 1440px;
-  margin: 0 auto;
-  color: #FFFFFF;
-}
-.about-giant-heading .hand-accent {
-  font-family: var(--font-hand);
-  color: var(--neon);
-  text-transform: none;
-  font-size: 0.95em;
-}
-
-.about-bio-grid {
-  position: relative;
-  z-index: 20;
-  margin: 3.5rem auto 0;
-  max-width: 1440px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-}
-
-/* ══════════════════════════════════════════════════════════
-   ABOUT SECTION (COMPACT EDITORIAL DASHBOARD)
-   ══════════════════════════════════════════════════════════ */
-.about-section {
-  position: relative;
-  background-color: var(--about-bg);
-  color: var(--about-text);
   padding: 70px 4vw 60px;
   overflow: hidden;
   transition: background-color 0.35s ease;
@@ -1369,25 +1327,35 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 16px;
+  padding: 8px 18px;
   border-radius: 9999px;
   background: rgba(255, 255, 255, 0.05);
   border: 1.5px solid rgba(255, 255, 255, 0.16);
   font-size: 0.82rem;
   font-weight: 700;
   color: #FFFFFF;
-  transition: all 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  user-select: none;
 }
 .pillar-pill-item:hover {
-  transform: translateY(-2px);
+  transform: translateY(-4px) scale(1.04) rotate(-1deg);
   border-color: var(--neon);
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 0, 102, 0.15);
+  box-shadow: 0 8px 20px -4px rgba(255, 0, 102, 0.35);
+  color: #FFFFFF;
 }
-.pillar-pill-num {
+.pillar-pill-item .pillar-pill-num {
   font-family: var(--font-display);
   font-weight: 900;
   color: #FF5500;
   font-size: 0.95rem;
+  transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.25s ease;
+  display: inline-block;
+}
+.pillar-pill-item:hover .pillar-pill-num {
+  transform: scale(1.3) rotate(12deg);
+  color: var(--acid);
 }
 [data-party="true"] .pillar-pill-num {
   color: var(--neon);
@@ -1408,14 +1376,19 @@ body {
   padding: 26px 28px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 14px;
+  justify-content: space-between;
+  gap: 16px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.about-bio-card:hover {
+  border-color: rgba(255, 255, 255, 0.28);
 }
 
 .about-compact-bio-p {
-  font-size: clamp(0.96rem, 1.1vw, 1.1rem);
+  font-size: 1.04rem;
   line-height: 1.6;
   color: var(--about-muted);
+  font-weight: 400;
 }
 .about-compact-bio-p strong {
   color: #FFFFFF;
@@ -1424,19 +1397,19 @@ body {
 .about-compact-bio-p .accent-italic {
   font-family: var(--font-serif);
   font-style: italic;
-  color: var(--acid);
-  font-weight: 700;
+  color: var(--neon);
+  font-size: 1.08em;
 }
 [data-party="true"] .about-compact-bio-p .accent-italic {
   color: var(--neon);
 }
 
 .about-compact-bio-sub {
-  font-size: 0.86rem;
-  line-height: 1.5;
+  font-size: 0.88rem;
+  line-height: 1.55;
   color: var(--about-muted);
-  padding-top: 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 14px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.15);
 }
 .about-compact-bio-sub strong {
   color: #FFFFFF;
@@ -1446,23 +1419,28 @@ body {
   background: rgba(255, 255, 255, 0.04);
   border: 1.5px solid rgba(255, 255, 255, 0.14);
   border-radius: 18px;
-  padding: 26px 28px;
+  padding: 24px 26px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  transition: border-color 0.25s ease;
+}
+.about-timeline-card-box:hover {
+  border-color: rgba(255, 255, 255, 0.28);
 }
 
 .about-box-section-title {
   font-family: var(--font-mono);
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.22em;
-  color: #FF5500;
-  margin-bottom: 20px;
+  letter-spacing: 0.15em;
+  color: var(--electric);
+  margin-bottom: 4px;
 }
 [data-party="true"] .about-box-section-title {
-  color: var(--neon);
+  color: var(--electric);
 }
 
 .about-compact-timeline {
@@ -1477,6 +1455,14 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 14px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: default;
+}
+.compact-timeline-node:hover {
+  background: rgba(255, 255, 255, 0.06);
+  transform: translateX(8px);
 }
 
 .timeline-dot {
@@ -1486,6 +1472,11 @@ body {
   background: var(--electric);
   margin-top: 6px;
   flex-shrink: 0;
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.compact-timeline-node:hover .timeline-dot {
+  transform: scale(1.7);
+  box-shadow: 0 0 12px currentColor;
 }
 
 .compact-node-content {
@@ -1513,6 +1504,10 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  transition: transform 0.2s ease;
+}
+.compact-timeline-node:hover .node-company {
+  transform: scale(1.05);
 }
 .node-desc {
   font-size: 0.88rem;
@@ -1525,7 +1520,7 @@ body {
   background: rgba(0, 0, 0, 0.45);
   border: 1.5px solid rgba(255, 255, 255, 0.14);
   border-radius: 16px;
-  padding: 16px 20px;
+  padding: 18px 22px;
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -1545,47 +1540,61 @@ body {
 
 .arsenal-chip-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+  gap: 14px;
   width: 100%;
 }
 
+/* ══════════════════════════════════════════════════════════
+   DIGITAL CRAFT SOFTWARE ARSENAL (Supercharged App Chips)
+   ══════════════════════════════════════════════════════════ */
 .app-chip {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 10px 14px;
+  padding: 12px 16px;
   background: rgba(255, 255, 255, 0.05);
   border: 1.5px solid rgba(255, 255, 255, 0.14);
-  border-radius: 12px;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 14px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   min-width: 0;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
 }
-.app-chip:hover {
-  transform: translateY(-2px);
-  border-color: var(--acid);
-  background: rgba(255, 255, 255, 0.12);
+
+.app-icon-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .app-chip-icon {
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   border-radius: 6px;
   flex-shrink: 0;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .app-chip-text {
   display: flex;
   flex-direction: column;
   min-width: 0;
+  flex: 1;
+  transition: transform 0.25s ease;
 }
 
 .app-chip-name {
   font-family: var(--font-body);
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   font-weight: 800;
   color: #FFFFFF;
   line-height: 1.2;
+  transition: color 0.25s ease;
 }
 
 .app-chip-role {
@@ -1594,6 +1603,201 @@ body {
   color: var(--about-muted);
   line-height: 1.2;
   margin-top: 2px;
+  transition: color 0.25s ease;
+}
+
+.app-chip-badge {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 2px 7px;
+  border-radius: 9999px;
+  opacity: 0;
+  transform: translateY(6px) scale(0.85);
+  transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  pointer-events: none;
+}
+
+/* 1. Figma */
+.app-chip.app-figma:hover {
+  transform: translateY(-6px) scale(1.03);
+  border-color: #00F0FF;
+  background: rgba(0, 240, 255, 0.14);
+  box-shadow: 0 10px 22px -4px rgba(0, 240, 255, 0.4);
+}
+.app-chip.app-figma:hover .app-chip-icon {
+  transform: rotate(360deg) scale(1.22);
+  filter: drop-shadow(0 0 10px #00F0FF);
+}
+.app-chip.app-figma:hover .app-chip-name {
+  color: #00F0FF;
+}
+.app-chip.app-figma .app-chip-badge {
+  background: #00F0FF;
+  color: #000000;
+}
+.app-chip.app-figma:hover .app-chip-badge {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* 2. Photoshop */
+.app-chip.app-ps:hover {
+  transform: translateY(-6px) scale(1.03);
+  border-color: #31A8FF;
+  background: rgba(49, 168, 255, 0.14);
+  box-shadow: 0 10px 22px -4px rgba(49, 168, 255, 0.4);
+}
+.app-chip.app-ps:hover .app-chip-icon {
+  transform: scale(1.22) rotate(-10deg);
+  filter: drop-shadow(0 0 10px #31A8FF) brightness(1.2);
+}
+.app-chip.app-ps:hover .app-chip-name {
+  color: #31A8FF;
+}
+.app-chip.app-ps .app-chip-badge {
+  background: #31A8FF;
+  color: #000000;
+}
+.app-chip.app-ps:hover .app-chip-badge {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* 3. Illustrator */
+.app-chip.app-ai:hover {
+  transform: translateY(-6px) scale(1.03);
+  border-color: #FF9A00;
+  background: rgba(255, 154, 0, 0.14);
+  box-shadow: 0 10px 22px -4px rgba(255, 154, 0, 0.4);
+}
+.app-chip.app-ai:hover .app-chip-icon {
+  transform: scale(1.22) rotate(10deg);
+  filter: drop-shadow(0 0 10px #FF9A00);
+}
+.app-chip.app-ai:hover .app-chip-name {
+  color: #FF9A00;
+}
+.app-chip.app-ai .app-chip-badge {
+  background: #FF9A00;
+  color: #000000;
+}
+.app-chip.app-ai:hover .app-chip-badge {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* 4. After Effects */
+.app-chip.app-ae:hover {
+  transform: translateY(-6px) scale(1.03);
+  border-color: #9999FF;
+  background: rgba(153, 153, 255, 0.14);
+  box-shadow: 0 10px 22px -4px rgba(153, 153, 255, 0.4);
+}
+.app-chip.app-ae:hover .app-chip-icon {
+  animation: aeShake 0.4s ease-in-out infinite alternate;
+  filter: drop-shadow(0 0 10px #9999FF);
+}
+@keyframes aeShake {
+  0% { transform: scale(1.15) rotate(-8deg); }
+  100% { transform: scale(1.25) rotate(8deg); }
+}
+.app-chip.app-ae:hover .app-chip-name {
+  color: #9999FF;
+}
+.app-chip.app-ae .app-chip-badge {
+  background: #9999FF;
+  color: #000000;
+}
+.app-chip.app-ae:hover .app-chip-badge {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* 5. InDesign */
+.app-chip.app-id:hover {
+  transform: translateY(-6px) scale(1.03);
+  border-color: #FF3366;
+  background: rgba(255, 51, 102, 0.14);
+  box-shadow: 0 10px 22px -4px rgba(255, 51, 102, 0.4);
+}
+.app-chip.app-id:hover .app-chip-icon {
+  transform: rotateY(32deg) scale(1.22) rotate(-5deg);
+  filter: drop-shadow(0 0 10px #FF3366);
+}
+.app-chip.app-id:hover .app-chip-name {
+  color: #FF3366;
+}
+.app-chip.app-id .app-chip-badge {
+  background: #FF3366;
+  color: #FFFFFF;
+}
+.app-chip.app-id:hover .app-chip-badge {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* 6. Premiere Pro */
+.app-chip.app-pr:hover {
+  transform: translateY(-6px) scale(1.03);
+  border-color: #EA77FF;
+  background: rgba(234, 119, 255, 0.14);
+  box-shadow: 0 10px 22px -4px rgba(234, 119, 255, 0.4);
+}
+.app-chip.app-pr:hover .app-chip-icon {
+  transform: scale(1.25);
+  filter: drop-shadow(0 0 10px #EA77FF);
+}
+.app-chip.app-pr:hover .app-chip-name {
+  color: #EA77FF;
+}
+.app-chip.app-pr .app-chip-badge {
+  background: #EA77FF;
+  color: #000000;
+}
+.app-chip.app-pr:hover .app-chip-badge {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Doodles & Hero Stickers Micro-Interactions */
+.hero-section svg {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
+  cursor: pointer;
+}
+.hero-section svg:hover {
+  transform: scale(1.3) rotate(15deg);
+  filter: drop-shadow(0 0 12px currentColor);
+}
+.portrait-floating-container {
+  transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.portrait-floating-container:hover {
+  transform: rotate(0deg) scale(1.04);
+}
+.portrait-floating-container:hover .sticker-badge {
+  transform: rotate(-4deg) scale(1.15);
+  background: var(--neon);
+  color: #000000;
+}
+.contact-mail-banner:hover {
+  transform: translate(-4px, -4px) scale(1.02);
+  background: var(--neon);
+  color: #FFFFFF;
+  box-shadow: 12px 12px 0 var(--border-main);
+}
+.footer-credits-bar .font-hand {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: default;
+}
+.footer-credits-bar:hover .font-hand {
+  transform: scale(1.25) rotate(-6deg);
+  color: var(--acid);
 }
 
 @media (max-width: 1100px) {
@@ -2270,52 +2474,70 @@ body {
       <span class="arsenal-strip-label">Arsenal / Digital Craft:</span>
       <div class="arsenal-chip-row">
         
-        <div class="app-chip" data-hover title="Figma: UI & Design Systems">
-          <img src="/marinagodar/icons/figma.svg" alt="Figma" class="app-chip-icon">
+        <div class="app-chip app-figma" data-hover title="Figma: UI & Design Systems">
+          <div class="app-icon-box">
+            <img src="/marinagodar/icons/figma.svg" alt="Figma" class="app-chip-icon">
+          </div>
           <div class="app-chip-text">
             <span class="app-chip-name">Figma</span>
             <span class="app-chip-role">UI &amp; Systems</span>
           </div>
+          <span class="app-chip-badge">✦ UI Pro</span>
         </div>
 
-        <div class="app-chip" data-hover title="Photoshop: Key Visuals & Retoque">
-          <img src="/marinagodar/icons/photoshop.svg" alt="Photoshop" class="app-chip-icon">
+        <div class="app-chip app-ps" data-hover title="Photoshop: Key Visuals & Retoque">
+          <div class="app-icon-box">
+            <img src="/marinagodar/icons/photoshop.svg" alt="Photoshop" class="app-chip-icon">
+          </div>
           <div class="app-chip-text">
             <span class="app-chip-name">Photoshop</span>
             <span class="app-chip-role">Retoque &amp; KV</span>
           </div>
+          <span class="app-chip-badge">🪄 Retoque</span>
         </div>
 
-        <div class="app-chip" data-hover title="Illustrator: Vector & Branding">
-          <img src="/marinagodar/icons/illustrator.svg" alt="Illustrator" class="app-chip-icon">
+        <div class="app-chip app-ai" data-hover title="Illustrator: Vector & Branding">
+          <div class="app-icon-box">
+            <img src="/marinagodar/icons/illustrator.svg" alt="Illustrator" class="app-chip-icon">
+          </div>
           <div class="app-chip-text">
             <span class="app-chip-name">Illustrator</span>
             <span class="app-chip-role">Vector Branding</span>
           </div>
+          <span class="app-chip-badge">📐 Vector</span>
         </div>
 
-        <div class="app-chip" data-hover title="After Effects: Motion Graphics">
-          <img src="/marinagodar/icons/aftereffects.svg" alt="After Effects" class="app-chip-icon">
+        <div class="app-chip app-ae" data-hover title="After Effects: Motion Graphics">
+          <div class="app-icon-box">
+            <img src="/marinagodar/icons/aftereffects.svg" alt="After Effects" class="app-chip-icon">
+          </div>
           <div class="app-chip-text">
             <span class="app-chip-name">After Effects</span>
             <span class="app-chip-role">Motion Graphics</span>
           </div>
+          <span class="app-chip-badge">🎬 Motion</span>
         </div>
 
-        <div class="app-chip" data-hover title="InDesign: Editorial & Fanzines">
-          <img src="/marinagodar/icons/indesign.svg" alt="InDesign" class="app-chip-icon">
+        <div class="app-chip app-id" data-hover title="InDesign: Editorial & Fanzines">
+          <div class="app-icon-box">
+            <img src="/marinagodar/icons/indesign.svg" alt="InDesign" class="app-chip-icon">
+          </div>
           <div class="app-chip-text">
             <span class="app-chip-name">InDesign</span>
             <span class="app-chip-role">Editorial &amp; Print</span>
           </div>
+          <span class="app-chip-badge">📖 Editorial</span>
         </div>
 
-        <div class="app-chip" data-hover title="Premiere Pro: Edición Audiovisual">
-          <img src="/marinagodar/icons/premiere.svg" alt="Premiere Pro" class="app-chip-icon">
+        <div class="app-chip app-pr" data-hover title="Premiere Pro: Edición Audiovisual">
+          <div class="app-icon-box">
+            <img src="/marinagodar/icons/premiere.svg" alt="Premiere Pro" class="app-chip-icon">
+          </div>
           <div class="app-chip-text">
             <span class="app-chip-name">Premiere Pro</span>
             <span class="app-chip-role">Audiovisual</span>
           </div>
+          <span class="app-chip-badge">✂️ Video</span>
         </div>
 
       </div>
