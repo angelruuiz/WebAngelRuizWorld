@@ -568,6 +568,40 @@ body {
     var(--bg-page);
 }
 
+/* ─────────────────────────────────────────────────────────
+   HERO PAINT REVEAL BACKGROUND (Efecto itsdeesha.framer.website)
+   ───────────────────────────────────────────────────────── */
+.hero-reveal-bg-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 30%, #D8FF00 0%, transparent 45%),
+    radial-gradient(circle at 80% 25%, #00F0FF 0%, transparent 45%),
+    radial-gradient(circle at 50% 80%, #FF0066 0%, transparent 48%),
+    radial-gradient(circle at 75% 75%, #9999FF 0%, transparent 42%),
+    linear-gradient(135deg, #FF9A00 0%, #FF0066 35%, #7928CA 70%, #00F0FF 100%);
+  opacity: 0.9;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  filter: saturate(1.2) contrast(1.05);
+}
+
+[data-party="true"] .hero-reveal-bg-layer {
+  background:
+    radial-gradient(circle at 20% 30%, #FF0077 0%, transparent 45%),
+    radial-gradient(circle at 80% 25%, #00F0FF 0%, transparent 45%),
+    radial-gradient(circle at 50% 80%, #D8FF00 0%, transparent 48%),
+    linear-gradient(135deg, #FF0055 0%, #9900FF 35%, #00F0FF 70%, #D8FF00 100%);
+  opacity: 0.95;
+}
+
 .hero-status-pill {
   display: inline-flex;
   align-items: center;
@@ -2035,6 +2069,10 @@ body {
 <!-- ── HERO ────────────────────────────────── -->
 <section id="top" class="hero-section">
   
+  <!-- Paint Reveal Background Layer & Hidden Mask Canvas -->
+  <div class="hero-reveal-bg-layer" id="hero-reveal-bg" aria-hidden="true"></div>
+  <canvas id="hero-reveal-mask-canvas" style="display:none;" aria-hidden="true"></canvas>
+  
   <!-- Floating Doodles -->
   <!-- Star -->
   <svg class="animate-spin-slow" style="position:absolute; left:2%; top:15%; width:64px; color:var(--neon);" viewBox="0 0 100 100" fill="currentColor">
@@ -2761,6 +2799,105 @@ body {
       });
     }
   });
+
+  // 6. Paint Reveal Effect on Home Background (style itsdeesha.framer.website)
+  const heroSec = document.getElementById('top');
+  const revealBgLayer = document.getElementById('hero-reveal-bg');
+  const maskCanvas = document.getElementById('hero-reveal-mask-canvas');
+
+  if (heroSec && revealBgLayer && maskCanvas && window.matchMedia('(pointer: fine)').matches) {
+    const ctx = maskCanvas.getContext('2d', { willReadFrequently: true });
+    let canvasW = 0, canvasH = 0;
+    let lastX = null, lastY = null;
+    const brushRadius = 75; // ~150px diameter generous watercolor stroke
+    const fadeSpeed = 0.016; // smooth organic watercolor fade-out
+
+    function resizeMaskCanvas() {
+      const rect = heroSec.getBoundingClientRect();
+      const w = Math.floor(rect.width);
+      const h = Math.floor(rect.height);
+      if (w !== canvasW || h !== canvasH) {
+        canvasW = maskCanvas.width = w;
+        canvasH = maskCanvas.height = h;
+        ctx.clearRect(0, 0, w, h);
+      }
+    }
+
+    resizeMaskCanvas();
+    window.addEventListener('resize', resizeMaskCanvas, { passive: true });
+
+    function drawRadialBrush(x, y, radius) {
+      if (!ctx) return;
+      ctx.save();
+      ctx.globalCompositeOperation = 'source-over';
+      const grad = ctx.createRadialGradient(x, y, 0, x, y, radius);
+      grad.addColorStop(0, 'rgba(255, 255, 255, 1)');
+      grad.addColorStop(0.35, 'rgba(255, 255, 255, 0.85)');
+      grad.addColorStop(0.7, 'rgba(255, 255, 255, 0.35)');
+      grad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(x, y, radius, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.restore();
+    }
+
+    function interpolateBrush(startX, startY, endX, endY, radius) {
+      const dist = Math.hypot(endX - startX, endY - startY);
+      const step = Math.max(4, radius * 0.15);
+      const steps = Math.ceil(dist / step);
+
+      for (let i = 0; i <= steps; i++) {
+        const t = steps === 0 ? 1 : i / steps;
+        const x = startX + (endX - startX) * t;
+        const y = startY + (endY - startY) * t;
+        drawRadialBrush(x, y, radius);
+      }
+    }
+
+    heroSec.addEventListener('mousemove', (e) => {
+      const rect = heroSec.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      if (lastX !== null && lastY !== null) {
+        interpolateBrush(lastX, lastY, x, y, brushRadius);
+      } else {
+        drawRadialBrush(x, y, brushRadius);
+      }
+
+      lastX = x;
+      lastY = y;
+    }, { passive: true });
+
+    heroSec.addEventListener('mouseleave', () => {
+      lastX = null;
+      lastY = null;
+    });
+
+    function renderMaskLoop() {
+      if (canvasW > 0 && canvasH > 0) {
+        // Soft watercolor fade-out
+        ctx.save();
+        ctx.globalCompositeOperation = 'destination-out';
+        ctx.fillStyle = `rgba(0, 0, 0, ${fadeSpeed})`;
+        ctx.fillRect(0, 0, canvasW, canvasH);
+        ctx.restore();
+
+        // Update mask on the revealed layer at 60fps
+        try {
+          const maskData = `url(${maskCanvas.toDataURL('image/png')})`;
+          revealBgLayer.style.webkitMaskImage = maskData;
+          revealBgLayer.style.maskImage = maskData;
+        } catch (err) {}
+      }
+
+      requestAnimationFrame(renderMaskLoop);
+    }
+
+    requestAnimationFrame(renderMaskLoop);
+  }
 
 })();
 </script>
