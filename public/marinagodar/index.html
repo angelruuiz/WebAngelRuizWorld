@@ -2003,28 +2003,28 @@ body {
    ══════════════════════════════════════════════════════════ */
 .fixed-mascot-container {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 24px;
+  right: 24px;
   z-index: 990;
   cursor: pointer;
   user-select: none;
   pointer-events: none;
-  width: 80px;
-  height: 80px;
+  width: 108px;
+  height: 108px;
 }
 
 .mascot-speech-bubble {
   position: absolute;
-  bottom: calc(100% + 8px);
+  bottom: calc(100% + 10px);
   right: 0;
   background: var(--card-bg);
   color: var(--text-main);
   border: 2px solid var(--border-main);
   box-shadow: 4px 4px 0 var(--border-main);
-  padding: 6px 14px;
+  padding: 7px 16px;
   border-radius: 9999px;
   font-family: var(--font-mono);
-  font-size: 0.72rem;
+  font-size: 0.78rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -2041,8 +2041,8 @@ body {
 
 .mascot-gif-wrapper {
   position: relative;
-  width: 80px;
-  height: 80px;
+  width: 108px;
+  height: 108px;
   border-radius: 50%;
   pointer-events: auto;
   cursor: pointer;
@@ -2056,28 +2056,28 @@ body {
 }
 
 .mascot-gif-img {
-  width: 80px;
-  height: 80px;
+  width: 108px;
+  height: 108px;
   object-fit: contain;
   display: block;
   pointer-events: none;
-  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.45));
 }
 
 @media (max-width: 768px) {
   .fixed-mascot-container {
-    bottom: 14px;
-    right: 14px;
-    width: 64px;
-    height: 64px;
+    bottom: 16px;
+    right: 16px;
+    width: 82px;
+    height: 82px;
   }
   .mascot-gif-wrapper {
-    width: 64px;
-    height: 64px;
+    width: 82px;
+    height: 82px;
   }
   .mascot-gif-img {
-    width: 64px;
-    height: 64px;
+    width: 82px;
+    height: 82px;
   }
   .brand-link {
     font-size: clamp(1.28rem, 4.8vw, 1.65rem);
