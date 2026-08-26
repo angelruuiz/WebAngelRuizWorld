@@ -153,55 +153,55 @@ export function PurpIAMascot({ isSecretChamberOpen = false }: PurpIAMascotProps)
 
   return (
     <aside
-      className={`fixed bottom-4 sm:bottom-10 right-3 sm:right-8 flex items-end gap-2.5 sm:gap-3.5 select-none pointer-events-auto flex-row-reverse transition-all ${
-        isSecretChamberOpen ? "z-[100002]" : "z-40"
+      className={`fixed bottom-3 sm:bottom-8 right-2.5 sm:right-6 flex items-end gap-2 sm:gap-3 select-none pointer-events-auto flex-row-reverse transition-all ${
+        isSecretChamberOpen ? "z-[100002]" : "z-30"
       }`}
     >
-      {/* Mascot Avatar (Pure Floating Character, No Box / No Card) */}
-      <div className="relative flex flex-col items-center">
-        {/* Soft Ambient Purple Glow Behind Pure Mascot */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 sm:w-24 h-16 sm:h-24 bg-gradient-to-tr from-[#A855F7]/30 via-[#C084FC]/20 to-transparent rounded-full blur-xl -z-10 pointer-events-none" />
+      {/* Mascot Avatar (Pure Floating Character, Compact & Non-intrusive) */}
+      <div className="relative flex flex-col items-center shrink-0">
+        {/* Soft Ambient Purple Glow Behind Mascot */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 sm:w-18 h-10 sm:h-18 bg-gradient-to-tr from-[#A855F7]/30 via-[#C084FC]/20 to-transparent rounded-full blur-lg -z-10 pointer-events-none" />
 
-        {/* Pure Levitating Mascot GIF */}
+        {/* Pure Levitating Mascot GIF - Compact on mobile */}
         <motion.div
-          animate={{ y: [0, -6, 0], rotate: [0, -1.5, 1.5, 0] }}
+          animate={{ y: [0, -4, 0], rotate: [0, -1, 1, 0] }}
           transition={{
-            duration: 3.4,
+            duration: 3.2,
             repeat: Infinity,
             ease: "easeInOut",
           }}
-          whileHover={{ scale: 1.15, rotate: 3 }}
-          whileTap={{ scale: 0.92 }}
+          whileHover={{ scale: 1.12, rotate: 2 }}
+          whileTap={{ scale: 0.9 }}
           onClick={handleMascotClick}
-          className="relative w-13 h-13 sm:w-20 sm:h-20 cursor-pointer flex items-center justify-center filter drop-shadow-[0_8px_20px_rgba(168,85,247,0.55)] transition-transform"
-          title="Soy Purp.IA, ¡haz clic para interactuar!"
+          className="relative w-9 h-9 sm:w-14 sm:h-14 cursor-pointer flex items-center justify-center filter drop-shadow-[0_4px_12px_rgba(168,85,247,0.45)] transition-transform"
+          title="Soy Purp.IA, ¡toca para interactuar!"
         >
           <Image
             src="/bloub-default-cycle.gif"
             alt="Purp.IA Mascot"
-            width={80}
-            height={80}
+            width={56}
+            height={56}
             unoptimized
-            loading="lazy"
+            priority
             className="w-full h-full object-contain pointer-events-none select-none"
           />
         </motion.div>
       </div>
 
-      {/* Dynamic Floating Speech Bubble (Elevated with extra breathing room) */}
+      {/* Dynamic Floating Speech Bubble (Compact & legible) */}
       <AnimatePresence mode="wait">
         {isBubbleVisible && (
           <motion.div
             key={customQuoteIdx !== null ? `quote-${customQuoteIdx}` : activeSection}
-            initial={{ opacity: 0, scale: 0.85, y: 12, x: 8 }}
+            initial={{ opacity: 0, scale: 0.88, y: 8, x: 6 }}
             animate={{ opacity: 1, scale: 1, y: 0, x: 0 }}
-            exit={{ opacity: 0, scale: 0.85, y: 10, x: 8 }}
-            transition={{ type: "spring", stiffness: 380, damping: 26 }}
-            className="relative max-w-[190px] xs:max-w-[230px] sm:max-w-[280px] p-3 sm:p-4 rounded-2xl bg-[#140618]/95 border border-[#C084FC]/40 shadow-[0_12px_40px_rgba(0,0,0,0.9),0_0_25px_rgba(168,85,247,0.25)] backdrop-blur-2xl text-left mb-1 sm:mb-3"
+            exit={{ opacity: 0, scale: 0.88, y: 6, x: 6 }}
+            transition={{ type: "spring", stiffness: 400, damping: 28 }}
+            className="relative max-w-[155px] xs:max-w-[195px] sm:max-w-[240px] p-2 sm:p-3 rounded-xl sm:rounded-2xl bg-[#140618]/95 border border-[#C084FC]/35 shadow-[0_8px_30px_rgba(0,0,0,0.85),0_0_20px_rgba(168,85,247,0.2)] text-left mb-0.5 sm:mb-1"
           >
             {/* Crisp Triangular Tail pointing directly right towards Mascot */}
             <svg
-              className="absolute -right-2.5 bottom-4 w-3 h-3.5 text-[#140618] overflow-visible pointer-events-none"
+              className="absolute -right-2 bottom-2.5 w-2.5 h-3 text-[#140618] overflow-visible pointer-events-none"
               viewBox="0 0 14 16"
               fill="none"
             >
@@ -216,10 +216,10 @@ export function PurpIAMascot({ isSecretChamberOpen = false }: PurpIAMascotProps)
             </svg>
 
             {/* Bubble Header */}
-            <div className="flex items-center justify-between gap-2 mb-1 pb-1 border-b border-white/[0.08]">
-              <div className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#C084FC] animate-ping" />
-                <span className="text-[9px] sm:text-[10px] font-mono font-bold uppercase tracking-wider text-[#E9D5FF]">
+            <div className="flex items-center justify-between gap-1.5 mb-1 pb-0.5 border-b border-white/[0.08]">
+              <div className="flex items-center gap-1">
+                <span className="w-1 h-1 rounded-full bg-[#C084FC] animate-ping" />
+                <span className="text-[8px] sm:text-[9px] font-mono font-bold uppercase tracking-wider text-[#E9D5FF]">
                   {currentDialogue.tag}
                 </span>
               </div>
@@ -229,15 +229,15 @@ export function PurpIAMascot({ isSecretChamberOpen = false }: PurpIAMascotProps)
                   e.stopPropagation();
                   setIsBubbleVisible(false);
                 }}
-                className="w-4 h-4 rounded-full flex items-center justify-center text-zinc-400 hover:text-white transition-colors"
+                className="w-3.5 h-3.5 rounded-full flex items-center justify-center text-zinc-400 hover:text-white transition-colors"
                 title="Ocultar mensaje"
               >
-                <X className="w-3 h-3" />
+                <X className="w-2.5 h-2.5" />
               </button>
             </div>
 
             {/* Message Body */}
-            <p className="text-[11px] sm:text-[13px] text-zinc-100 font-sans leading-snug font-medium">
+            <p className="text-[10px] sm:text-[12px] text-zinc-100 font-sans leading-tight sm:leading-snug font-normal">
               {currentDialogue.message}
             </p>
           </motion.div>

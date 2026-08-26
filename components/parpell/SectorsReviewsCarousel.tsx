@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion, useAnimationFrame } from "framer-motion";
-import { Star, ShieldCheck } from "lucide-react";
+import { Star } from "lucide-react";
 
 interface GoogleReview {
   id: number;
@@ -158,20 +158,29 @@ const googleReviews: GoogleReview[] = [
   },
 ];
 
-// Duplicate for seamless perpetual loop
 const duplicatedReviews = [...googleReviews, ...googleReviews];
 
 export function SectorsReviewsCarousel() {
   const trackRef = useRef<HTMLDivElement>(null);
   const xPosRef = useRef(0);
   const isHoveredRef = useRef(false);
+  const [isMobile, setIsMobile] = useState(false);
 
-  // VSync-Synchronized Frame Loop (Buttery smooth 60fps / 120fps ProMotion)
+  useEffect(() => {
+    const isMobileDevice =
+      typeof window !== "undefined" &&
+      (window.innerWidth < 768 ||
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        ));
+    setIsMobile(isMobileDevice);
+  }, []);
+
+  // VSync-Synchronized Frame Loop (Desktop only)
   useAnimationFrame((_, delta) => {
-    if (!trackRef.current) return;
+    if (isMobile || !trackRef.current) return;
     if (isHoveredRef.current) return;
 
-    // 0.038px per ms = ~38px per second (perfect legible reading speed)
     const speed = 0.038;
     xPosRef.current += delta * speed;
 
@@ -184,19 +193,15 @@ export function SectorsReviewsCarousel() {
   });
 
   return (
-    <motion.section
+    <section
       id="sectores"
-      initial={{ opacity: 0, filter: "blur(6px)", y: 18 }}
-      whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-      viewport={{ once: true, amount: 0.15 }}
-      transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
       className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-8 py-8 sm:py-12 select-none"
     >
       {/* Subtle Background Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[320px] bg-gradient-to-tr from-[#9E5C6A]/15 via-[#C27A8A]/10 to-purple-950/10 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
       {/* Section Header */}
-      <div className="max-w-3xl mx-auto px-4 text-center mb-10 sm:mb-14">
+      <div className="max-w-3xl mx-auto px-4 text-center mb-8 sm:mb-14">
         <span className="text-xs font-mono font-semibold uppercase tracking-widest text-[#9E5C6A] block mb-3">
           Opiniones Reales en Google
         </span>
@@ -208,27 +213,34 @@ export function SectorsReviewsCarousel() {
         </p>
       </div>
 
-      {/* Framed Viewport: 3 Full Cards in Center + Half Cards on Sides */}
+      {/* Mobile Horizontal Touch-Swipe List (< md) */}
+      <div className="flex md:hidden flex-col gap-3">
+        <div className="flex items-center justify-between text-xs text-zinc-400 px-1 font-mono">
+          <span>Desliza para ver más reseñas →</span>
+          <span>{googleReviews.length} Casos</span>
+        </div>
+        <div className="flex gap-3.5 overflow-x-auto snap-x snap-mandatory pb-4 pt-1 px-1 touch-pan-x scrollbar-none">
+          {googleReviews.map((review) => (
+            <div key={review.id} className="snap-center shrink-0">
+              <GoogleReviewCard review={review} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Desktop Perpetual Track (>= md) */}
       <div
-        className="relative w-full max-w-5xl mx-auto overflow-hidden rounded-3xl group p-1"
+        className="hidden md:block relative w-full max-w-5xl mx-auto overflow-hidden rounded-3xl group p-1"
         onMouseEnter={() => {
           isHoveredRef.current = true;
         }}
         onMouseLeave={() => {
           isHoveredRef.current = false;
         }}
-        onTouchStart={() => {
-          isHoveredRef.current = true;
-        }}
-        onTouchEnd={() => {
-          isHoveredRef.current = false;
-        }}
       >
-        {/* Soft Lateral Vignette Fades */}
         <div className="absolute left-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-r from-[#080306] via-[#080306]/85 to-transparent z-20 pointer-events-none" />
         <div className="absolute right-0 top-0 bottom-0 w-12 sm:w-24 bg-gradient-to-l from-[#080306] via-[#080306]/85 to-transparent z-20 pointer-events-none" />
 
-        {/* Perpetual Infinite VSync-Synchronized Track */}
         <div
           ref={trackRef}
           style={{ willChange: "transform" }}
@@ -239,7 +251,7 @@ export function SectorsReviewsCarousel() {
           ))}
         </div>
       </div>
-    </motion.section>
+    </section>
   );
 }
 
@@ -247,12 +259,10 @@ function GoogleReviewCard({ review }: { review: GoogleReview }) {
   const initial = review.author.charAt(0).toUpperCase();
 
   return (
-    <div className="w-[270px] sm:w-[285px] md:w-[295px] shrink-0 p-5 rounded-2xl bg-[#FBF9F5] hover:bg-[#FFFFFF] border border-[#E8E1D5] hover:border-[#9E5C6A]/50 shadow-xl shadow-black/50 transition-all transform-gpu flex flex-col justify-between text-left select-none">
+    <div className="w-[260px] sm:w-[285px] md:w-[295px] shrink-0 p-5 rounded-2xl bg-[#FBF9F5] hover:bg-[#FFFFFF] border border-[#E8E1D5] hover:border-[#9E5C6A]/50 shadow-xl shadow-black/50 transition-all flex flex-col justify-between text-left select-none">
       <div>
-        {/* Google Review Card Header */}
         <div className="flex items-start justify-between gap-3 mb-3">
           <div className="flex items-center gap-3">
-            {/* User Avatar: Photo, Animal, Drawing, or Google Initial */}
             {review.avatarUrl ? (
               <img
                 src={review.avatarUrl}
@@ -268,7 +278,6 @@ function GoogleReviewCard({ review }: { review: GoogleReview }) {
               </div>
             )}
 
-            {/* Author info */}
             <div>
               <div className="flex items-center gap-1.5">
                 <span className="text-xs sm:text-sm font-bold text-zinc-900 leading-tight">
@@ -281,7 +290,6 @@ function GoogleReviewCard({ review }: { review: GoogleReview }) {
             </div>
           </div>
 
-          {/* Official Google G Logo Badge */}
           <div className="w-5 h-5 shrink-0 flex items-center justify-center" title="Reseña verificada de Google">
             <svg viewBox="0 0 24 24" className="w-4 h-4">
               <path
@@ -304,7 +312,6 @@ function GoogleReviewCard({ review }: { review: GoogleReview }) {
           </div>
         </div>
 
-        {/* Rating & Date */}
         <div className="flex items-center gap-2 mb-3">
           <div className="flex items-center gap-0.5">
             {[...Array(5)].map((_, i) => (
@@ -321,13 +328,11 @@ function GoogleReviewCard({ review }: { review: GoogleReview }) {
           <span className="text-[11px] text-zinc-500 font-medium">{review.date}</span>
         </div>
 
-        {/* Review Text */}
         <p className="text-xs sm:text-sm text-zinc-800 leading-relaxed font-normal">
           «{review.text}»
         </p>
       </div>
 
-      {/* Sector Footer (No Location) */}
       <div className="mt-4 pt-3 border-t border-[#EBE3D7] flex items-center justify-between">
         <span className="text-xs font-bold text-[#883C4D] font-mono uppercase tracking-wider">
           {review.sector}

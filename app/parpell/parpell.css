@@ -107,6 +107,26 @@ html.lenis, html.lenis body {
   box-shadow: 0 25px 60px rgba(158, 92, 106, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
+/* Mobile: Disable expensive backdrop-filter compositing layers to prevent
+   GPU memory exhaustion and "page cannot be opened" crashes in iOS Safari,
+   Android Chrome, and in-app browsers (Instagram, TikTok, etc.) */
+@media (max-width: 767px), (hover: none) and (pointer: coarse) {
+  .apple-glass {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(43, 26, 32, 0.85);
+  }
+}
+
+/* Scrollbar-none utility (used in touch-swipe carousels) */
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
 /* Continuous Ambient Gradient Shimmer Text */
 .shimmer-text {
   background: linear-gradient(90deg, #FFFFFF 0%, #C27A8A 25%, #FFFFFF 50%, #9E5C6A 75%, #FFFFFF 100%);

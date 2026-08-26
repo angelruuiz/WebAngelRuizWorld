@@ -58,7 +58,7 @@ export function ParpellComparisonTable() {
       </div>
 
       {/* Comparison Table Container (Parpell Dark Obsidian & Glass Luxury Palette) */}
-      <div className="w-full max-w-3xl mx-auto rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl shadow-black/80 border border-white/[0.10] bg-[#0E0511]/90 backdrop-blur-2xl">
+      <div className="w-full max-w-3xl mx-auto rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl shadow-black/80 border border-white/[0.10] bg-[#0E0511]">
         {/* Dark Obsidian Header */}
         <div className="bg-[#17081A] px-4 sm:px-8 py-3.5 sm:py-5 flex items-center justify-between border-b border-white/[0.08]">
           <div className="w-3/5 sm:w-7/12 text-left">

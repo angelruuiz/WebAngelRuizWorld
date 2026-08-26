@@ -12,6 +12,24 @@ export function SmoothScroll() {
     document.body.style.cursor = "default";
     document.documentElement.style.cursor = "default";
 
+    // Disable smooth scroll interception on mobile / touch devices for native responsiveness
+    const isTouchOrMobile =
+      typeof window !== "undefined" &&
+      (window.innerWidth < 768 ||
+        "ontouchstart" in window ||
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        ));
+
+    if (isTouchOrMobile) {
+      return () => {
+        document.documentElement.classList.remove("parpell-html");
+        document.body.classList.remove("parpell-active");
+        document.body.style.cursor = prevBodyCursor;
+        document.documentElement.style.cursor = prevHtmlCursor;
+      };
+    }
+
     let lenisInstance: any;
     let rafId: number;
 

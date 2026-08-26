@@ -1,11 +1,24 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 export function BackgroundMesh() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const isMobileDevice =
+      typeof window !== "undefined" &&
+      (window.innerWidth < 768 ||
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        ));
+
+    if (isMobileDevice) {
+      setIsMobile(true);
+      return;
+    }
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -24,8 +37,8 @@ export function BackgroundMesh() {
 
     window.addEventListener("resize", handleResize, { passive: true });
 
-    // Ultra-lightweight particle constellation (25 particles, high performance 120fps)
-    const particleCount = 25;
+    // Ultra-lightweight particle constellation for desktop
+    const particleCount = 20;
     const particles: Array<{
       x: number;
       y: number;
@@ -42,7 +55,7 @@ export function BackgroundMesh() {
         vx: (Math.random() - 0.5) * 0.25,
         vy: (Math.random() - 0.5) * 0.25,
         radius: Math.random() * 1.5 + 0.8,
-        alpha: Math.random() * 0.35 + 0.15,
+        alpha: Math.random() * 0.3 + 0.1,
       });
     }
 
@@ -76,6 +89,22 @@ export function BackgroundMesh() {
     };
   }, []);
 
+  if (isMobile) {
+    return (
+      <div
+        className="fixed inset-0 pointer-events-none overflow-hidden z-0 bg-[#080306]"
+        style={{
+          contain: "strict",
+        }}
+      >
+        {/* Clean, zero-CPU CSS ambient glow for mobile */}
+        <div className="absolute -top-20 left-1/4 w-72 h-72 bg-[#9E5C6A]/15 rounded-full blur-2xl pointer-events-none" />
+        <div className="absolute top-1/2 -right-10 w-64 h-64 bg-[#6E3844]/15 rounded-full blur-2xl pointer-events-none" />
+        <div className="absolute bottom-10 left-10 w-72 h-72 bg-[#9E5C6A]/10 rounded-full blur-2xl pointer-events-none" />
+      </div>
+    );
+  }
+
   return (
     <div
       className="fixed inset-0 pointer-events-none overflow-hidden z-0"
@@ -85,10 +114,28 @@ export function BackgroundMesh() {
         willChange: "transform",
       }}
     >
-      {/* GPU Accelerated Ambient Wine Gradients (Zero Heavy Blur Lag) */}
-      <div className="absolute -top-32 left-1/4 w-[600px] h-[600px] bg-radial from-[#9E5C6A]/25 via-[#6E3844]/10 to-transparent rounded-full pointer-events-none opacity-80" />
-      <div className="absolute top-1/3 -right-20 w-[550px] h-[550px] bg-radial from-[#6E3844]/25 via-[#9E5C6A]/10 to-transparent rounded-full pointer-events-none opacity-70" />
-      <div className="absolute -bottom-32 left-1/3 w-[650px] h-[650px] bg-radial from-[#9E5C6A]/20 via-[#4A242E]/15 to-transparent rounded-full pointer-events-none opacity-70" />
+      {/* GPU Accelerated Ambient Wine Gradients */}
+      <div
+        className="absolute -top-32 left-1/4 w-[600px] h-[600px] rounded-full pointer-events-none opacity-80"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(158,92,106,0.25), rgba(110,56,68,0.10), transparent)",
+        }}
+      />
+      <div
+        className="absolute top-1/3 -right-20 w-[550px] h-[550px] rounded-full pointer-events-none opacity-70"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(110,56,68,0.25), rgba(158,92,106,0.10), transparent)",
+        }}
+      />
+      <div
+        className="absolute -bottom-32 left-1/3 w-[650px] h-[650px] rounded-full pointer-events-none opacity-70"
+        style={{
+          background:
+            "radial-gradient(circle, rgba(158,92,106,0.20), rgba(74,36,46,0.15), transparent)",
+        }}
+      />
 
       {/* Lightweight canvas particle constellation */}
       <canvas ref={canvasRef} className="absolute inset-0 opacity-60 pointer-events-none" />

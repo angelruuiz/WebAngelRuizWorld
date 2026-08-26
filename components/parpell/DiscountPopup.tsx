@@ -42,13 +42,17 @@ export function DiscountPopup() {
     e.preventDefault();
     if (!inputValue) return;
 
-    const confetti = (await import("canvas-confetti")).default;
-    confetti({
-      particleCount: 140,
-      spread: 85,
-      origin: { y: 0.6 },
-      colors: ["#9E5C6A", "#C27A8A", "#F8F4F2", "#D4AF37", "#FFFFFF"],
-    });
+    try {
+      const confetti = (await import("canvas-confetti")).default;
+      confetti({
+        particleCount: 140,
+        spread: 85,
+        origin: { y: 0.6 },
+        colors: ["#9E5C6A", "#C27A8A", "#F8F4F2", "#D4AF37", "#FFFFFF"],
+      });
+    } catch {
+      // Graceful fallback if canvas-confetti fails
+    }
 
     setClaimed(true);
     setTimeout(() => {
@@ -69,7 +73,7 @@ export function DiscountPopup() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.35 }}
             onClick={handleClose}
-            className="fixed inset-0 bg-[#060109]/85 backdrop-blur-xl cursor-pointer"
+            className="fixed inset-0 bg-[#060109]/90 cursor-pointer"
             style={{ cursor: "pointer" }}
           />
 

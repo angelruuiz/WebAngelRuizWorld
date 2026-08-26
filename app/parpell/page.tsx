@@ -191,13 +191,17 @@ export default function ParpellLanding() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.correo || !form.web) return;
-    const confetti = (await import("canvas-confetti")).default;
-    confetti({
-      particleCount: 140,
-      spread: 90,
-      origin: { y: 0.7 },
-      colors: ["#9E5C6A", "#C27A8A", "#F8F4F2", "#6E3844"],
-    });
+    try {
+      const confetti = (await import("canvas-confetti")).default;
+      confetti({
+        particleCount: 140,
+        spread: 90,
+        origin: { y: 0.7 },
+        colors: ["#9E5C6A", "#C27A8A", "#F8F4F2", "#6E3844"],
+      });
+    } catch {
+      // Graceful fallback if canvas-confetti fails
+    }
     setSubmitted(true);
   };
 
@@ -278,16 +282,12 @@ export default function ParpellLanding() {
         animate={
           isSecretChamberOpen
             ? {
-                scale: 1.08,
-                filter: "blur(8px)",
-                opacity: 0.3,
-                pointerEvents: "none",
+                opacity: 0.15,
+                pointerEvents: "none" as const,
               }
             : {
-                scale: 1,
-                filter: "blur(0px)",
                 opacity: 1,
-                pointerEvents: "auto",
+                pointerEvents: "auto" as const,
               }
         }
         transition={{
@@ -334,7 +334,7 @@ export default function ParpellLanding() {
           className="flex flex-col items-center gap-2 group cursor-pointer mt-3 mb-2"
           title="Deslizar para descubrir más"
         >
-          <div className="flex items-center gap-2.5 sm:gap-3 px-5 sm:px-6 py-2.5 rounded-full bg-[#1A0A16]/90 hover:bg-[#281022] border border-[#9E5C6A]/60 hover:border-[#C27A8A] text-xs sm:text-sm font-mono tracking-wider text-[#F8F4F2] font-bold backdrop-blur-xl shadow-[0_0_25px_rgba(158,92,106,0.35)] group-hover:shadow-[0_0_35px_rgba(158,92,106,0.6)] transition-all">
+          <div className="flex items-center gap-2.5 sm:gap-3 px-5 sm:px-6 py-2.5 rounded-full bg-[#1A0A16] hover:bg-[#281022] border border-[#9E5C6A]/60 hover:border-[#C27A8A] text-xs sm:text-sm font-mono tracking-wider text-[#F8F4F2] font-bold shadow-[0_0_25px_rgba(158,92,106,0.35)] group-hover:shadow-[0_0_35px_rgba(158,92,106,0.6)] transition-all">
             <span>Desliza para ver más</span>
             <motion.div
               animate={{ y: [0, 4, 0] }}
@@ -369,7 +369,7 @@ export default function ParpellLanding() {
         </div>
 
         {/* FACT: Exclusividad y Trato Directo (Compact & high prestige) */}
-        <div className="w-full max-w-2xl mx-auto p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-[#1D0A16]/90 via-[#14080F]/90 to-[#1D0A16]/90 border border-[#9E5C6A]/40 shadow-[0_0_35px_rgba(158,92,106,0.22)] text-left flex flex-col sm:flex-row sm:items-center gap-4 backdrop-blur-xl">
+        <div className="w-full max-w-2xl mx-auto p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-[#1D0A16] via-[#14080F] to-[#1D0A16] border border-[#9E5C6A]/40 shadow-[0_0_35px_rgba(158,92,106,0.22)] text-left flex flex-col sm:flex-row sm:items-center gap-4">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#9E5C6A] text-white text-[10px] font-mono font-black uppercase tracking-wider shrink-0 self-start sm:self-auto shadow-md shadow-[#9E5C6A]/40">
             <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
             <span>FACT</span>
@@ -716,7 +716,7 @@ export default function ParpellLanding() {
       {/* ========================================================================= */}
       <AnimatePresence>
         {modalType && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-xl">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90">
             <motion.div
               initial={{ opacity: 0, scale: 0.94 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -846,7 +846,7 @@ export default function ParpellLanding() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
               onClick={() => setIsSecretChamberOpen(false)}
-              className="fixed inset-0 bg-[#060109]/95 backdrop-blur-2xl"
+              className="fixed inset-0 bg-[#060109]/97"
             />
 
             {/* Ambient Radial Lighting Expanding Portal in the Secret Chamber */}
@@ -855,7 +855,7 @@ export default function ParpellLanding() {
               animate={{ scale: 1.4, opacity: 0.8 }}
               exit={{ scale: 0.5, opacity: 0 }}
               transition={{ duration: 0.4 }}
-              className="absolute w-[800px] h-[800px] bg-gradient-to-tr from-purple-800/50 via-fuchsia-600/30 to-transparent rounded-full blur-[150px] pointer-events-none"
+              className="absolute w-[400px] h-[400px] sm:w-[800px] sm:h-[800px] bg-gradient-to-tr from-purple-800/50 via-fuchsia-600/30 to-transparent rounded-full blur-3xl pointer-events-none"
             />
 
             {/* The Chamber Interior */}
