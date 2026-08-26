@@ -1908,13 +1908,15 @@ body {
   z-index: 990;
   cursor: pointer;
   user-select: none;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  pointer-events: auto;
+  pointer-events: none;
+  width: 80px;
+  height: 80px;
 }
 
 .mascot-speech-bubble {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  right: 0;
   background: var(--card-bg);
   color: var(--text-main);
   border: 2px solid var(--border-main);
@@ -1926,7 +1928,6 @@ body {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  margin-bottom: 6px;
   opacity: 0;
   transform: translateY(10px) scale(0.9);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
@@ -1940,6 +1941,11 @@ body {
 
 .mascot-gif-wrapper {
   position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  pointer-events: auto;
+  cursor: pointer;
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .fixed-mascot-container:hover .mascot-gif-wrapper {
@@ -1950,9 +1956,11 @@ body {
 }
 
 .mascot-gif-img {
-  width: 96px;
-  height: auto;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
   display: block;
+  pointer-events: none;
   filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.45));
 }
 
@@ -1960,9 +1968,16 @@ body {
   .fixed-mascot-container {
     bottom: 14px;
     right: 14px;
+    width: 64px;
+    height: 64px;
+  }
+  .mascot-gif-wrapper {
+    width: 64px;
+    height: 64px;
   }
   .mascot-gif-img {
-    width: 72px;
+    width: 64px;
+    height: 64px;
   }
   .brand-link {
     font-size: clamp(1.28rem, 4.8vw, 1.65rem);
