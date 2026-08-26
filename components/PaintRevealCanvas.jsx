@@ -52,39 +52,91 @@ export default function PaintRevealCanvas({
     height: 0
   });
 
-  // Dibujar una mancha radial suave en el canvas de máscara
-  const drawBrushPoint = useCallback((ctx, x, y, radius) => {
+  // Dibujar una mancha abstracta, viva e irregular tipo aguada/acuarela
+  const drawOrganicBlob = useCallback((ctx, x, y, baseRadius, angle = 0, speed = 0) => {
     if (!ctx) return;
-    const rad = Math.max(10, radius);
-
     ctx.save();
     ctx.globalCompositeOperation = 'source-over';
-    const gradient = ctx.createRadialGradient(x, y, 0, x, y, rad);
-    gradient.addColorStop(0, 'rgba(255, 255, 255, 1)');
-    gradient.addColorStop(0.35, 'rgba(255, 255, 255, 0.85)');
-    gradient.addColorStop(0.7, 'rgba(255, 255, 255, 0.35)');
-    gradient.addColorStop(1, 'rgba(255, 255, 255, 0)');
+    ctx.translate(x, y);
+    ctx.rotate(angle);
 
-    ctx.fillStyle = gradient;
+    // Deformación elástica según velocidad
+    const stretch = Math.min(1.5, 1 + speed * 0.015);
+    ctx.scale(stretch, 1 / Math.sqrt(stretch));
+
+    // 1. Polígono orgánico multilobulado irregular
+    const numPoints = 12;
+    const points = [];
+    const seed = Math.random() * 100;
+    
+    for (let i = 0; i < numPoints; i++) {
+      const theta = (i / numPoints) * Math.PI * 2;
+      const noise = Math.sin(theta * 3 + seed) * 0.3 + Math.cos(theta * 5 + seed * 1.5) * 0.2 + (Math.random() * 0.16 - 0.08);
+      const r = baseRadius * (1 + noise);
+      points.push({
+        x: Math.cos(theta) * r,
+        y: Math.sin(theta) * r
+      });
+    }
+
+    // Trazo suavizado de curvas irregulares
     ctx.beginPath();
-    ctx.arc(x, y, rad, 0, Math.PI * 2);
+    ctx.moveTo((points[0].x + points[numPoints - 1].x) / 2, (points[0].y + points[numPoints - 1].y) / 2);
+    for (let i = 0; i < numPoints; i++) {
+      const p1 = points[i];
+      const p2 = points[(i + 1) % numPoints];
+      ctx.quadraticCurveTo(p1.x, p1.y, (p1.x + p2.x) / 2, (p1.y + p2.y) / 2);
+    }
+    ctx.closePath();
+
+    // Relleno degradado radial difuminado
+    const grad = ctx.createRadialGradient(0, 0, 0, 0, 0, baseRadius * 1.35);
+    grad.addColorStop(0, 'rgba(255, 255, 255, 1)');
+    grad.addColorStop(0.35, 'rgba(255, 255, 255, 0.9)');
+    grad.addColorStop(0.7, 'rgba(255, 255, 255, 0.4)');
+    grad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+    ctx.fillStyle = grad;
     ctx.fill();
+
+    // 2. Micro-salpicaduras y gotas líquidas satélite
+    const numSatellites = Math.floor(Math.random() * 3) + 1;
+    for (let s = 0; s < numSatellites; s++) {
+      const sAngle = Math.random() * Math.PI * 2;
+      const sDist = baseRadius * (0.75 + Math.random() * 0.55);
+      const sRad = baseRadius * (0.12 + Math.random() * 0.22);
+      const sx = Math.cos(sAngle) * sDist;
+      const sy = Math.sin(sAngle) * sDist;
+
+      const sGrad = ctx.createRadialGradient(sx, sy, 0, sx, sy, sRad);
+      sGrad.addColorStop(0, 'rgba(255, 255, 255, 0.85)');
+      sGrad.addColorStop(0.5, 'rgba(255, 255, 255, 0.35)');
+      sGrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+
+      ctx.fillStyle = sGrad;
+      ctx.beginPath();
+      ctx.arc(sx, sy, sRad, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
     ctx.restore();
   }, []);
 
-  // Interpolación de trazo continuo entre la posición previa y la actual
+  // Interpolación de trazo continuo con rotación y variabilidad orgánica
   const interpolateStroke = useCallback((ctx, startX, startY, endX, endY, radius) => {
     const dist = Math.hypot(endX - startX, endY - startY);
-    const step = Math.max(3, radius * 0.15);
+    const angle = Math.atan2(endY - startY, endX - startX);
+    const step = Math.max(10, radius * 0.25);
     const steps = Math.ceil(dist / step);
 
     for (let i = 0; i <= steps; i++) {
       const t = steps === 0 ? 1 : i / steps;
       const x = startX + (endX - startX) * t;
       const y = startY + (endY - startY) * t;
-      drawBrushPoint(ctx, x, y, radius);
+      const stepAngle = angle + (Math.random() * 0.5 - 0.25);
+      const stepRad = radius * (0.85 + Math.random() * 0.3);
+      drawOrganicBlob(ctx, x, y, stepRad, stepAngle, dist / (steps || 1));
     }
-  }, [drawBrushPoint]);
+  }, [drawOrganicBlob]);
 
   useEffect(() => {
     setIsMounted(true);
@@ -168,7 +220,7 @@ export default function PaintRevealCanvas({
       if (state.lastX !== null && state.lastY !== null) {
         interpolateStroke(ctx, state.lastX, state.lastY, x, y, radius);
       } else {
-        drawBrushPoint(ctx, x, y, radius);
+        drawOrganicBlob(ctx, x, y, radius, Math.random() * Math.PI * 2, 0);
       }
 
       state.lastX = x;
@@ -187,7 +239,7 @@ export default function PaintRevealCanvas({
       const rect = container.getBoundingClientRect();
       state.lastX = e.clientX - rect.left;
       state.lastY = e.clientY - rect.top;
-      drawBrushPoint(ctx, state.lastX, state.lastY, radius);
+      drawOrganicBlob(ctx, state.lastX, state.lastY, radius, Math.random() * Math.PI * 2, 0);
     };
 
     container.addEventListener('mousemove', handleMouseMove, { passive: true });
