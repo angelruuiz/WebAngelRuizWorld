@@ -31,8 +31,15 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
 
         if (cancelled || !containerRef.current || !canvasRef.current) return;
 
-        const width = container.clientWidth || 360;
-        const height = container.clientHeight || 360;
+        const isMobileScreen =
+          typeof window !== "undefined" &&
+          (window.innerWidth < 768 ||
+            /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+              navigator.userAgent
+            ));
+
+        const width = Math.max(container.clientWidth || 0, isMobileScreen ? 224 : 360);
+        const height = Math.max(container.clientHeight || 0, isMobileScreen ? 224 : 360);
 
         // 1. Scene & Camera Setup
         const scene = new THREE.Scene();
@@ -48,9 +55,13 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
           stencil: false,
           depth: true,
         });
-        const isMobileScreen = typeof window !== "undefined" && window.innerWidth < 768;
         renderer.setSize(width, height);
-        renderer.setPixelRatio(Math.min(typeof window !== "undefined" ? window.devicePixelRatio : 1, isMobileScreen ? 1.25 : 1.5));
+        renderer.setPixelRatio(
+          Math.min(
+            typeof window !== "undefined" ? window.devicePixelRatio : 1,
+            isMobileScreen ? 1.25 : 1.5
+          )
+        );
         renderer.toneMapping = THREE.ACESFilmicToneMapping;
         renderer.toneMappingExposure = 1.35;
         renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -83,17 +94,27 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
         const modelGroup = new THREE.Group();
         scene.add(modelGroup);
 
-        // 5. Load User's Exact 3D GLB Render
+        // 5. Load User's Exact 3D GLB Render with local DRACO decoder
         const dracoLoader = new DRACOLoader();
-        dracoLoader.setDecoderPath("https://www.gstatic.com/draco/versioned/decoders/1.5.7/");
+        dracoLoader.setDecoderPath("/draco/gltf/");
         dracoLoader.preload();
 
         const gltfLoader = new GLTFLoader();
         gltfLoader.setDRACOLoader(dracoLoader);
 
+        let modelLoadFailsafe = setTimeout(() => {
+          if (!cancelled) {
+            console.warn("Mobile 3D GLB load exceeded timeout limit, activating high-res 2D fallback");
+            setUseFallback(true);
+            onProgress?.(100);
+            onLoaded?.();
+          }
+        }, 5500);
+
         gltfLoader.load(
           "/logo-3d.glb",
           (gltf) => {
+            clearTimeout(modelLoadFailsafe);
             if (cancelled) return;
             const root = gltf.scene;
 
@@ -148,6 +169,7 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
             }
           },
           (error) => {
+            clearTimeout(modelLoadFailsafe);
             console.warn("Could not load 3D GLB model, using 2D fallback:", error);
             setUseFallback(true);
             onProgress?.(100);
@@ -252,7 +274,7 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
           dragVelocity = { x: 0, y: 0 };
         };
 
-        const onPointerMove = (clientX: number, clientY: number) => {
+        const onPointerMove = (clientX: number, clientY: number, isTouchEvent = false) => {
           if (!isOnScreen) return;
 
           const rect = container.getBoundingClientRect();
@@ -270,9 +292,13 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
           const deltaX = clientX - previousMousePosition.x;
           const deltaY = clientY - previousMousePosition.y;
 
+          // Mobile touch: calibrate sensitivity and dampen vertical tilt to preserve natural page scroll
+          const sensX = isTouchEvent ? 0.0045 : 0.008;
+          const sensY = isTouchEvent ? 0.002 : 0.008;
+
           dragVelocity = {
-            x: deltaX * 0.008,
-            y: deltaY * 0.008,
+            x: deltaX * sensX,
+            y: deltaY * sensY,
           };
 
           targetRotationY += dragVelocity.x;
@@ -289,7 +315,7 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
           onPointerDown(e.clientX, e.clientY);
         };
         const handleMouseMove = (e: MouseEvent) => {
-          onPointerMove(e.clientX, e.clientY);
+          onPointerMove(e.clientX, e.clientY, false);
         };
         const handleMouseUp = () => {
           onPointerUp();
@@ -306,7 +332,7 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
         };
         const handleTouchMove = (e: TouchEvent) => {
           if (e.touches.length > 0 && isInteracting) {
-            onPointerMove(e.touches[0].clientX, e.touches[0].clientY);
+            onPointerMove(e.touches[0].clientX, e.touches[0].clientY, true);
           }
         };
         const handleTouchEnd = () => {
@@ -315,13 +341,28 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
 
         const handleResize = () => {
           if (!container || !renderer || !camera) return;
-          const newWidth = container.clientWidth || 360;
-          const newHeight = container.clientHeight || 360;
+          const isMobile =
+            typeof window !== "undefined" &&
+            (window.innerWidth < 768 ||
+              /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                navigator.userAgent
+              ));
+          const newWidth = Math.max(container.clientWidth || 0, isMobile ? 224 : 360);
+          const newHeight = Math.max(container.clientHeight || 0, isMobile ? 224 : 360);
           camera.aspect = newWidth / newHeight;
           camera.updateProjectionMatrix();
           renderer.setSize(newWidth, newHeight);
         };
 
+        const handleContextLost = (e: Event) => {
+          e.preventDefault();
+          cancelAnimationFrame(animationFrameId);
+          setUseFallback(true);
+          onProgress?.(100);
+          onLoaded?.();
+        };
+
+        canvas.addEventListener("webglcontextlost", handleContextLost, { passive: false });
         window.addEventListener("resize", handleResize, { passive: true });
 
         container.addEventListener("mousedown", handleMouseDown);
@@ -337,6 +378,7 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
           cancelAnimationFrame(animationFrameId);
           visObserver.disconnect();
           document.removeEventListener("visibilitychange", handleVisibility);
+          canvas.removeEventListener("webglcontextlost", handleContextLost);
           window.removeEventListener("resize", handleResize);
           container.removeEventListener("mousedown", handleMouseDown);
           window.removeEventListener("mousemove", handleMouseMove);
@@ -424,9 +466,14 @@ export function Parpell3DSpin({ onLoaded, onProgress }: Parpell3DSpinProps) {
       <div
         ref={containerRef}
         className="relative w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 flex items-center justify-center cursor-grab touch-pan-y"
+        style={{ touchAction: "pan-y" }}
         title="Gira el logo 3D interactivo de Parpell"
       >
-        <canvas ref={canvasRef} className="w-full h-full block pointer-events-auto" />
+        <canvas
+          ref={canvasRef}
+          className="w-full h-full block pointer-events-auto"
+          style={{ touchAction: "pan-y" }}
+        />
       </div>
     </div>
   );

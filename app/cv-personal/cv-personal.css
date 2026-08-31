@@ -1,0 +1,349 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800;900&family=Syne:wght@700;800;900&display=swap');
+
+/* Scope styling under .cv-personal-root */
+.cv-personal-root {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color-scheme: dark;
+}
+
+.cv-personal-root .font-syne {
+  font-family: 'Syne', sans-serif;
+}
+.cv-personal-root .font-space {
+  font-family: 'Space Grotesk', sans-serif;
+}
+.cv-personal-root .font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Cyber Grid Background */
+.cv-personal-root .cyber-grid-bg {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Custom Scrollbar */
+.cv-personal-root ::-webkit-scrollbar {
+  width: 7px;
+}
+.cv-personal-root ::-webkit-scrollbar-track {
+  background: #07080b;
+}
+.cv-personal-root ::-webkit-scrollbar-thumb {
+  background: #1e2230;
+  border: 1px solid #000;
+}
+.cv-personal-root ::-webkit-scrollbar-thumb:hover {
+  background: #CCFF00;
+}
+
+.cv-personal-root .custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.cv-personal-root .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #2b3145;
+  border-radius: 2px;
+}
+
+/* Cyber-Brutalist Core Architecture */
+.cv-personal-root .border-3 {
+  border-width: 3px;
+}
+
+.cv-personal-root .shadow-brutal-sm {
+  box-shadow: 3px 3px 0px #000000;
+}
+.cv-personal-root .shadow-brutal {
+  box-shadow: 5px 5px 0px #000000;
+}
+.cv-personal-root .shadow-brutal-lg {
+  box-shadow: 8px 8px 0px #000000;
+}
+.cv-personal-root .shadow-liquid-glow {
+  box-shadow: 0 12px 40px -8px rgba(0, 240, 255, 0.35), 0 0 25px rgba(204, 255, 0, 0.2);
+}
+
+.cv-personal-root .neo-card {
+  position: relative;
+  transition: transform 0.22s cubic-bezier(0.2, 0.9, 0.3, 1), box-shadow 0.22s cubic-bezier(0.2, 0.9, 0.3, 1), border-color 0.22s ease;
+  will-change: transform, box-shadow;
+  background-image: radial-gradient(circle at var(--mouse-card-x, -500px) var(--mouse-card-y, -500px), rgba(0, 240, 255, 0.08) 0%, rgba(204, 255, 0, 0.03) 45%, transparent 70%);
+}
+
+.cv-personal-root .neo-card:hover {
+  transform: translateY(-4px) translateX(-3px);
+  box-shadow: 8px 8px 0px #000000;
+}
+
+/* Interactive Tech Pills with Neon Glow */
+.cv-personal-root .tech-pill, 
+.cv-personal-root .flex-wrap.gap-1\.5 span {
+  transition: all 0.18s cubic-bezier(0.2, 0.9, 0.3, 1);
+  cursor: default;
+}
+.cv-personal-root .tech-pill:hover, 
+.cv-personal-root .flex-wrap.gap-1\.5 span:hover {
+  transform: translateY(-2px) scale(1.08);
+  border-color: #CCFF00 !important;
+  color: #CCFF00 !important;
+  background: rgba(204, 255, 0, 0.12) !important;
+  box-shadow: 0 0 14px rgba(204, 255, 0, 0.4);
+}
+
+.cv-personal-root .tech-stamp {
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+.cv-personal-root .tech-stamp:hover {
+  transform: rotate(-2deg) scale(1.05);
+}
+
+/* Laser Flare Sweep on Buttons */
+.cv-personal-root .interactive-btn {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+.cv-personal-root .interactive-btn::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -120%;
+  width: 70%;
+  height: 200%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  transform: rotate(25deg);
+  transition: none;
+  pointer-events: none;
+}
+.cv-personal-root .interactive-btn:hover::after {
+  left: 140%;
+  transition: left 0.55s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+.cv-personal-root .interactive-btn:active {
+  transform: translateY(2px) translateX(2px) scale(0.98);
+}
+
+/* Tech Neon Hologram Scan Effect on Titles (Cero desorden, 100% estable) */
+.cv-personal-root h1, 
+.cv-personal-root h2, 
+.cv-personal-root h3 {
+  transition: text-shadow 0.25s ease, color 0.25s ease, transform 0.2s ease;
+  will-change: text-shadow, transform;
+}
+
+.cv-personal-root h2:hover, 
+.cv-personal-root h3:hover {
+  text-shadow: 0 0 16px rgba(0, 240, 255, 0.6), 0 0 32px rgba(204, 255, 0, 0.3);
+}
+
+.cv-personal-root .project-card h3 {
+  transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.2s ease;
+}
+.cv-personal-root .project-card:hover h3 {
+  text-shadow: 0 0 15px rgba(204, 255, 0, 0.55);
+  transform: translateX(3px);
+}
+
+/* Liquid Glass UI Engine */
+.cv-personal-root .liquid-glass {
+  background: rgba(14, 17, 26, 0.72);
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+  position: relative;
+}
+
+.cv-personal-root .liquid-glass::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.4), rgba(255,255,255,0.05) 50%, rgba(204,255,0,0.3) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Floating Liquid Dock Navigation */
+.cv-personal-root #liquid-dock {
+  background: rgba(10, 13, 20, 0.85);
+  backdrop-filter: blur(34px) saturate(210%);
+  -webkit-backdrop-filter: blur(34px) saturate(210%);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.7), 0 0 25px rgba(0, 240, 255, 0.18);
+  transition: transform 0.3s cubic-bezier(0.2, 0.9, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.cv-personal-root #liquid-dock:hover {
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.8), 0 0 35px rgba(204, 255, 0, 0.25);
+}
+
+.cv-personal-root .dock-item {
+  position: relative;
+}
+
+.cv-personal-root .dock-tooltip {
+  position: absolute;
+  top: -38px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.8);
+  opacity: 0;
+  pointer-events: none;
+  background: #000;
+  color: #CCFF00;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(204, 255, 0, 0.4);
+  white-space: nowrap;
+  transition: all 0.2s cubic-bezier(0.2, 0.9, 0.3, 1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.cv-personal-root .dock-item:hover .dock-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-2px) scale(1);
+}
+
+/* 3D Tilt & Specular Glare */
+.cv-personal-root .tilt-card {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.cv-personal-root .card-glare {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0) 60%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 5;
+}
+
+.cv-personal-root .tilt-card:hover .card-glare {
+  opacity: 1;
+}
+
+/* Persona Switcher Tabs */
+.cv-personal-root .persona-tab {
+  color: #64748b;
+  border: 1px solid transparent;
+  transition: all 0.18s ease;
+}
+.cv-personal-root .persona-tab.active {
+  background: #CCFF00;
+  color: #000;
+  font-weight: 800;
+  border-color: #000;
+  box-shadow: 2px 2px 0px #000;
+}
+
+/* Ambient Living Backgrounds */
+.cv-personal-root .ambient-blob {
+  filter: blur(140px);
+  opacity: 0.3;
+  animation: float-blob 20s ease-in-out infinite alternate;
+}
+.cv-personal-root .blob-1 { animation-duration: 22s; }
+.cv-personal-root .blob-2 { animation-duration: 26s; animation-delay: -6s; }
+
+@keyframes float-blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  50% { transform: translate(60px, -40px) scale(1.15); }
+  100% { transform: translate(-40px, 60px) scale(0.9); }
+}
+
+/* Obsidian Magic Card Deck */
+.cv-personal-root #magic-deck {
+  perspective: 800px;
+}
+
+.cv-personal-root .magic-card {
+  transform-origin: bottom center;
+  transition: transform 0.35s cubic-bezier(0.2, 0.9, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease, z-index 0.1s;
+}
+
+.cv-personal-root .magic-card.card-1 {
+  transform: rotate(-16deg) translateX(-42px);
+  z-index: 1;
+}
+.cv-personal-root .magic-card.card-2 {
+  transform: rotate(-5deg) translateX(-14px);
+  z-index: 2;
+}
+.cv-personal-root .magic-card.card-3 {
+  transform: rotate(5deg) translateX(14px);
+  z-index: 3;
+}
+.cv-personal-root .magic-card.card-4 {
+  transform: rotate(16deg) translateX(42px);
+  z-index: 4;
+}
+
+.cv-personal-root .magic-card:hover:not(.is-active) {
+  transform: translateY(-22px) scale(1.1) rotate(0deg);
+  z-index: 15;
+  box-shadow: 6px 6px 0px #000, 0 0 20px rgba(0, 240, 255, 0.4);
+}
+
+.cv-personal-root .magic-card.is-active {
+  transform: translateY(-34px) scale(1.18) rotate(0deg) !important;
+  z-index: 30 !important;
+  box-shadow: 8px 8px 0px #000, 0 0 30px rgba(204, 255, 0, 0.75) !important;
+  border-color: #CCFF00 !important;
+}
+
+.cv-personal-root .magic-deck-shuffling .magic-card {
+  animation: cardShuffle 0.55s ease-in-out infinite alternate;
+}
+@keyframes cardShuffle {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-25px, -15px) rotate(-12deg); }
+  100% { transform: translate(25px, 12px) rotate(12deg); }
+}
+
+/* Project Filter Buttons */
+.cv-personal-root .project-filter-btn.active {
+  background: #CCFF00 !important;
+  color: #000 !important;
+  font-weight: 800 !important;
+  border: 2px solid #000 !important;
+  box-shadow: 3px 3px 0px #000 !important;
+}
+
+/* Image Container in Screenshot Gallery */
+.cv-personal-root #preview-image-container {
+  overflow: hidden;
+  contain: paint;
+  background-color: #07080b;
+}
+
+.cv-personal-root #preview-img {
+  will-change: opacity;
+  backface-visibility: hidden;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .cv-personal-root .neo-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 5px 5px 0px #000;
+  }
+  .cv-personal-root .magic-card.card-1 { transform: rotate(-12deg) translateX(-28px); }
+  .cv-personal-root .magic-card.card-4 { transform: rotate(12deg) translateX(28px); }
+}
