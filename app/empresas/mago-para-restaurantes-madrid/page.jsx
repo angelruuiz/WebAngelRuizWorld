@@ -5,17 +5,17 @@ import FAQItem from '@/components/FAQItem';
 import CorporateInlineForm from '@/components/CorporateInlineForm';
 
 export const metadata = {
-  title: { absolute: 'Mago para Restaurantes en Madrid | Ángel Ruiz (Table Hopping)' },
-  description: 'Fideliza a tus clientes y sube el ticket medio. Magia de cerca de mesa en mesa para restaurantes en Madrid. Ángel Ruiz: Ilusionista profesional.',
-  keywords: 'mago para restaurantes, table hopping madrid, magia en mesas, mago para eventos en madrid, mago para locales de ocio, animacion restaurantes, ilusionista restaurantes',
+  title: { absolute: 'Mago para Restaurantes en Madrid | Magia en Mesas y Eventos Hostelería' },
+  description: '🍽️ Atrae más clientes, sube el ticket medio y fideliza comensales con magia de cerca en mesas en Madrid. Espectáculos adaptados a hostelería. ¡Infórmate sin compromiso!',
+  keywords: ['mago para restaurantes madrid', 'mago para restaurantes', 'magia en restaurantes madrid', 'magia en mesas', 'table hopping madrid', 'animacion restaurantes madrid', 'ilusionista restaurantes', 'mago eventos hosteleria'],
   alternates: {
     canonical: 'https://angelruiz.world/empresas/mago-para-restaurantes-madrid',
   },
   openGraph: {
-    title: 'Mago para Restaurantes en Madrid | Ángel Ruiz (Table Hopping)',
-    description: 'Aumenta el ticket medio y fideliza a tus clientes. Mago para restaurantes y locales en Madrid especialista en Table Hopping (magia de mesa en mesa).',
+    title: 'Mago para Restaurantes en Madrid | Magia en Mesas y Eventos Hostelería',
+    description: 'Aumenta el ticket medio, reduce tiempos de espera percibidos y fideliza a tus clientes con magia de cerca de mesa en mesa en Madrid.',
     url: 'https://angelruiz.world/empresas/mago-para-restaurantes-madrid',
-    siteName: 'Angel Ruiz',
+    siteName: 'Ángel Ruiz | Mago e Ilusionista',
     images: [
       {
         url: 'https://angelruiz.world/images/evento-angel-ruiz-magia.webp',
@@ -29,8 +29,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mago para Restaurantes en Madrid | Table Hopping',
-    description: 'Aumenta el ticket medio y fideliza a tus clientes. Mago para restaurantes y locales en Madrid especialista en Table Hopping (magia de mesa en mesa).',
+    title: 'Mago para Restaurantes en Madrid | Magia en Mesas',
+    description: 'Aumenta el ticket medio y fideliza comensales con magia de cerca de mesa en mesa en restaurantes de Madrid.',
     images: ['https://angelruiz.world/images/evento-angel-ruiz-magia.webp'],
   },
 };

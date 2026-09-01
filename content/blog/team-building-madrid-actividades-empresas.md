@@ -48,9 +48,7 @@ Es una actividad corporativa donde los empleados no solo ven un espectáculo, si
 **¿Qué beneficios aporta la magia al team building?**  
 Fomenta el pensamiento lateral, mejora la comunicación interpersonal, reduce el estrés laboral y rompe las jerarquías tradicionales dentro de la empresa.
 
-### Marca la Diferencia en tu Próxima Jornada
-
-Si tu objetivo es diseñar una sesión de *Team Building* que se perciba como un auténtico premio y no como una obligación corporativa más, la decisión es clara. Como especialista y [mago para empresas en Madrid](/empresas), he desarrollado formatos que equilibran a la perfección el humor inteligente, el asombro y los valores empresariales. 
+Si tu objetivo es diseñar una sesión de *Team Building* que se perciba como un auténtico premio y no como una obligación corporativa más, la decisión es clara. Como especialista y [mago para empresas en Madrid](/empresas), he desarrollado formatos que equilibran a la perfección el humor inteligente, el asombro y los valores empresariales, tanto para jornadas de [team building corporativo](/empresas/mago-team-building-madrid) como para [cenas de empresa en Madrid](/empresas/mago-cenas-empresa-madrid). 
 
 Transforma el estrés de la oficina en energía colaborativa. Lo imposible es solo el punto de partida.
 

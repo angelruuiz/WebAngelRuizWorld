@@ -8,22 +8,22 @@ import FAQItem from '@/components/FAQItem';
 import CorporateInlineForm from '@/components/CorporateInlineForm';
 
 export const metadata = {
-    title: { absolute: 'Mago para Empresas en Madrid | Ángel Ruiz (Eventos B2B)' },
-    description: 'Eleva tu evento corporativo. Ángel Ruiz: mago para empresas en Madrid (cenas, team building y convenciones). Marcas líderes confían en él. Pide dossier y presupuesto.',
-    keywords: ['mago para empresas madrid', 'mago eventos corporativos madrid', 'mago cenas empresa madrid', 'mago team building madrid', 'mago conferenciante madrid', 'contratar mago empresa madrid', 'ilusionista corporativo madrid', 'mejor mago empresas madrid', 'mago para eventos de empresa madrid', 'mago eventos empresariales', 'magia para empresas'],
+    title: { absolute: 'Mago para Empresas en Madrid | Eventos Corporativos, Cenas y Ferias' },
+    description: '🏆 Ilusionismo y magia corporativa para empresas en Madrid: cenas, team building, convenciones y ferias. Trato directo, personalizable con tu marca. ¡Pide dossier y presupuesto!',
+    keywords: ['mago para empresas madrid', 'mago para empresas', 'mago empresas', 'mago eventos corporativos madrid', 'mago cenas empresa madrid', 'mago team building madrid', 'mago conferenciante madrid', 'contratar mago empresa madrid', 'ilusionista corporativo madrid', 'mejor mago empresas madrid', 'mago para eventos de empresa madrid', 'mago eventos empresariales', 'magia para empresas'],
     alternates: {
         canonical: 'https://angelruiz.world/empresas',
     },
     openGraph: {
         url: 'https://angelruiz.world/empresas',
-        title: 'Mago para Empresas en Madrid | Ángel Ruiz (Eventos B2B)',
-        description: 'Especialista en magia para cenas de empresa, team building y congresos en Madrid. +10 años de experiencia y 42 reseñas 5 estrellas. Solicita presupuesto.',
+        title: 'Mago para Empresas en Madrid | Eventos Corporativos, Cenas y Ferias',
+        description: 'Especialista en magia para cenas de empresa, team building y eventos corporativos en Madrid. 42 reseñas 5 estrellas. ¡Pide presupuesto en 2h!',
         images: [{ url: '/images/evento-angel-ruiz-magia.webp', width: 1200, height: 630 }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago para Empresas en Madrid | Ángel Ruiz',
-        description: 'Especialista en magia corporativa para cenas, team building y congresos en Madrid. 42 reseñas 5⭐.',
+        title: 'Mago para Empresas en Madrid | Eventos Corporativos',
+        description: 'Especialista en magia corporativa para cenas, team building y congresos en Madrid. ¡Presupuesto directo!',
         images: ['/images/evento-angel-ruiz-magia.webp'],
     },
 };

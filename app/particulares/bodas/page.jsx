@@ -6,22 +6,22 @@ import { MagicCursor, ParticleBackground, FadeIn } from '@/components/VisualEffe
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: { absolute: 'Mago para Bodas en Madrid 2026 | Precios y Guía | Ángel Ruiz' },
-    description: 'Tu cóctel de boda puede ser el momento más recordado del día. Ángel Ruiz: el mago que eligen las parejas exigentes en Madrid. 42 reseñas 5★, desde 300€. Consulta tu fecha antes de que se reserve.',
-    keywords: ['mago para bodas madrid', 'mago bodas madrid', 'contratar mago boda madrid', 'mago coctel boda madrid', 'ilusionista bodas madrid', 'mago para bodas precio madrid', 'mago boda noroeste madrid', 'entretenimiento bodas madrid', 'mago para mi boda madrid'],
+    title: { absolute: 'Mago para Bodas en Madrid | Magia de Cóctel y Banquetes | Ángel Ruiz' },
+    description: '✨ Haz que el cóctel y banquete de tu boda sean inolvidables con magia de cerca exclusiva. Trato directo sin agencias, desde 300€. ¡Consulta disponibilidad y pide presupuesto!',
+    keywords: ['mago para bodas', 'mago para bodas madrid', 'mago bodas madrid', 'contratar mago boda madrid', 'mago coctel boda madrid', 'ilusionista bodas madrid', 'mago para bodas precio madrid', 'mago boda noroeste madrid', 'entretenimiento bodas madrid', 'mago para mi boda madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/particulares/bodas',
     },
     openGraph: {
         url: 'https://angelruiz.world/particulares/bodas',
-        title: 'Mago para Bodas en Madrid 2026 | Ángel Ruiz | Ilusionista Profesional',
-        description: 'Transforma el cóctel y el banquete de tu boda en Madrid en una experiencia mágica e inolvidable. +10 años, 42 reseñas 5⭐. Solicita disponibilidad.',
+        title: 'Mago para Bodas en Madrid | Magia de Cóctel y Banquetes | Ángel Ruiz',
+        description: 'Transforma el cóctel y el banquete de tu boda en Madrid en una experiencia mágica e inolvidable con magia de cerca exclusiva. Solicita presupuesto directo.',
         images: [{ url: '/images/boda-magia-madrid.webp', width: 1200, height: 630 }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago para Bodas en Madrid 2026 | Ángel Ruiz',
-        description: 'Magia de cerca para bodas en Madrid. Transforma el cóctel en el momento más recordado del día.',
+        title: 'Mago para Bodas en Madrid | Magia de Cóctel y Banquetes | Ángel Ruiz',
+        description: 'Magia de cerca para bodas en Madrid. Transforma el cóctel y banquete en el momento más recordado del día.',
         images: ['/images/boda-magia-madrid.webp'],
     },
 };

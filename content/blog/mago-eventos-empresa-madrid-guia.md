@@ -45,11 +45,11 @@ No todos los artistas están preparados para el protocolo empresarial. Al buscar
 
 ### Por qué confiar tu evento a Angel Ruiz
 
-Con años de experiencia trabajando para marcas de primer nivel y pymes locales, mi propuesta de ilusionismo corporativo se basa en el **branding experiencial**. Entiendo que en un evento de empresa, yo soy un embajador de vuestra marca ante vuestros clientes o empleados. Especializado en **espectáculos para cenas de empresa** y dinamización de stands, mi magia busca resultados tangibles más allá del entretenimiento.
+Con años de experiencia trabajando para marcas de primer nivel y pymes locales, mi propuesta de ilusionismo corporativo se basa en el **branding experiencial**. Entiendo que en un evento de empresa, yo soy un embajador de vuestra marca ante vuestros clientes o empleados. Como [mago para cenas de empresa en Madrid](/empresas/mago-cenas-empresa-madrid) y dinamizador de eventos corporativos, mi magia busca resultados tangibles más allá del entretenimiento.
 
 Si quieres que tu próximo evento corporativo sea recordado no solo como "una cena más", sino como un hito de asombro y conexión, estaré encantado de enviarte mi dossier para empresas.
 
-[Solicita tu presupuesto y dossier personalizado aquí](/empresas) y eleva el nivel de tu marca con el mejor ilusionismo corporativo de Madrid.
+[Solicita tu presupuesto y dossier de mago para empresas aquí](/empresas) o conoce los detalles para [cenas de empresa en Madrid](/empresas/mago-cenas-empresa-madrid) y eleva el nivel de tu marca.
 
 ---
 *Angel Ruiz - Mago e Ilusionista Corporativo. Especialista en Comunicación a través del Asombro.*

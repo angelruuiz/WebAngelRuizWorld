@@ -57,7 +57,7 @@ Para eventos de mucha mayor envergadura en la capital, el ambiente glamuroso y f
 
 ### 4. Evento de empresa de Fin de Año
 
-Aunque es cierto que la gran mayoría de las cenas de empresa suelen hacerse a mediados de diciembre, algunas organizaciones aprovechan los últimos días del mes, o incluso la misma tarde de Nochevieja (tardeo), para celebrar su fiesta de clausura anual y brindar por los éxitos logrados. Como profesional del sector, animo siempre a las directivas a incluir la magia como una potente actividad de cierre espectacular. Ayuda enormemente a liberar el estrés acumulado, refuerza el espíritu de equipo de una manera lúdica y deja a los empleados con el mejor sabor de boca imaginable para empezar el nuevo año con las pilas recargadas.
+Aunque es cierto que la gran mayoría de las cenas de empresa suelen hacerse a mediados de diciembre, algunas organizaciones aprovechan los últimos días del mes, o incluso la misma tarde de Nochevieja (tardeo), para celebrar su fiesta de clausura anual y brindar por los éxitos logrados. Si estás planeando la despedida del año con tus compañeros, nuestro servicio de [mago para cenas de empresa en Madrid](/empresas/mago-cenas-empresa-madrid) está diseñado específicamente para sorprender y dinamizar [eventos corporativos](/empresas). Ayuda enormemente a liberar el estrés acumulado, refuerza el espíritu de equipo y deja a los empleados con el mejor recuerdo posible para empezar el nuevo año con energía.
 
 ## Los momentos ideales para que la magia brille en tu Nochevieja
 

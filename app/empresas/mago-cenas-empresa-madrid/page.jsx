@@ -5,17 +5,23 @@ import FAQItem from '@/components/FAQItem';
 import CorporateInlineForm from '@/components/CorporateInlineForm';
 
 export const metadata = {
-  title: { absolute: 'Mago para Cenas de Empresa en Madrid | Ángel Ruiz' },
-  description: 'La cena de empresa que tu equipo recordará todo el año. Magia de cerca personalizada con la marca de tu empresa en Madrid. 42 reseñas 5★. Solicita presupuesto.',
-  keywords: ['mago cenas empresa madrid', 'mago para cena empresa madrid', 'mago cena navidad empresa madrid', 'contratar mago cena empresa', 'entretenimiento cenas empresa madrid', 'mago corporativo madrid', 'animacion cenas empresa madrid', 'mago para eventos de empresa madrid'],
+  title: { absolute: 'Mago para Cenas de Empresa en Madrid | Magia Corporativa y Navidad 2026' },
+  description: '🎄 Convierte tu cena de empresa o fiesta de Navidad en Madrid en un evento inolvidable y participativo. Magia corporativa personalizada. ¡Pide presupuesto en 2h!',
+  keywords: ['mago para cenas de empresa', 'mago para cenas de empresa en madrid', 'mago cenas empresa madrid', 'mago para cena empresa madrid', 'mago cena navidad empresa madrid', 'contratar mago cena empresa', 'entretenimiento cenas empresa madrid', 'mago corporativo madrid', 'animacion cenas empresa madrid', 'mago para eventos de empresa madrid', 'cenas de empresa originales madrid'],
   alternates: {
     canonical: 'https://angelruiz.world/empresas/mago-cenas-empresa-madrid',
   },
   openGraph: {
     url: 'https://angelruiz.world/empresas/mago-cenas-empresa-madrid',
-    title: 'Mago para Cenas de Empresa en Madrid | Ángel Ruiz',
-    description: 'Transforma la cena de empresa en Madrid en un evento memorable con magia de cerca corporativa. 42 reseñas 5⭐.',
+    title: 'Mago para Cenas de Empresa en Madrid | Magia Corporativa y Navidad 2026',
+    description: 'Transforma la cena de empresa en Madrid en un evento memorable y participativo con magia de cerca corporativa. ¡Pide presupuesto en 2h!',
     images: [{ url: '/images/evento-angel-ruiz-magia.webp', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mago para Cenas de Empresa en Madrid | Magia Corporativa',
+    description: 'Magia de cerca personalizada para cenas de empresa y eventos de Navidad en Madrid. ¡Presupuesto en 2h!',
+    images: ['/images/evento-angel-ruiz-magia.webp'],
   },
 };
 

@@ -17,11 +17,11 @@ category: Empresas
 
 Año tras año, los departamentos de Recursos Humanos y organizadores de eventos en Madrid se enfrentan al mismo desafío: **¿Cómo organizar una cena de empresa que no sea más de lo mismo?** 
 
-La oferta gastronómica y de ocio en Madrid es inmensa. Desde restaurantes de moda en el Barrio de Salamanca hasta hoteles vanguardistas junto a IFEMA. Pero reservar un buen restaurante no garantiza el éxito del evento. Si los empleados acaban hablando solo con sus compañeros habituales de mesa y la velada carece de un ritmo atractivo, la inversión de la empresa no habrá logrado su objetivo.
+La oferta gastronómica y de ocio en Madrid es inmensa. Desde restaurantes de moda en el Barrio de Salamanca (donde la [magia para restaurantes y locales](/empresas/mago-para-restaurantes-madrid) marca la diferencia) hasta hoteles vanguardistas junto a IFEMA. Pero reservar un buen restaurante no garantiza el éxito del evento. Si los empleados acaban hablando solo con sus compañeros habituales de mesa y la velada carece de un ritmo atractivo, la inversión de la empresa no habrá logrado su objetivo.
 
 ### El Ingrediente Secreto: Magia Corporativa de Alta Gama
 
-Para elevar verdaderamente el nivel de un evento corporativo, necesitas un elemento disruptivo. Contratar a un **[mago para empresas en Madrid](/empresas)** es la tendencia al alza entre las compañías que buscan impresionar y fidelizar a su talento. 
+Para elevar verdaderamente el nivel de un evento corporativo, necesitas un elemento disruptivo. Contratar a un [mago para cenas de empresa en Madrid](/empresas/mago-cenas-empresa-madrid) es la tendencia al alza entre las compañías que buscan impresionar y fidelizar a su talento. 
 
 No hablamos del clásico espectáculo infantil, sino de **ilusionismo estratégico diseñado para adultos, directivos y perfiles profesionales**. Un ilusionista corporativo sabe cómo moverse por la sala, aportando sofisticación y momentos de asombro absoluto sin interrumpir el flujo de la cena.
 

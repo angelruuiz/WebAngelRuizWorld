@@ -29,7 +29,7 @@ faq:
 
 El **cóctel de boda** es, paradójicamente, el momento más importante y el más descuidado de toda la celebración. Es la primera impresión real que reciben tus invitados tras la ceremonia. Y si no planificas bien este momento, puedes acabar con 120 personas mirándose los zapatos mientras esperan a que los novios terminen las fotos.
 
-Un **mago para el cóctel de boda en Madrid** resuelve este problema de raíz y transforma lo que podría ser una espera incómoda en el momento más comentado de toda la celebración.
+Contratar un [mago para bodas en Madrid](/particulares/bodas) resuelve este problema de raíz y transforma lo que podría ser una espera incómoda en el momento más comentado de toda la celebración.
 
 ## El Problema del Cóctel de Boda (Que Nadie Te Cuenta)
 
@@ -118,12 +118,15 @@ La magia de cerca funciona en cualquier espacio, pero estos son los lugares dond
 3. **Dejad fluir**: No intentéis controlar por qué grupo pasa el mago ni en qué orden. Los profesionales sabemos leer el ambiente y nos movemos donde la energía lo necesita.
 4. **Reservad con antelación**: Las fechas de bodas en Madrid (mayo-octubre) se cierran con 3-6 meses de antelación para los mejores profesionales.
 
+Para conocer todos los detalles del servicio y consultar disponibilidad de fecha, visita la página principal de [mago para bodas en Madrid](/particulares/bodas) o revisa nuestra [guía de precios y contratación](/contratar-mago-madrid).
+
 ---
 
 ### 💍 Artículos relacionados sobre bodas
 
 Si estás organizando tu boda, estos artículos te ayudarán:
 
+- [Mago para Bodas en Madrid: Servicios y Tarifas](/particulares/bodas)
 - [Ideas Originales de Entretenimiento para Bodas en Madrid](/blog/ideas-originales-entretenimiento-bodas-madrid)
 - [¿Cuánto Cuesta un Mago para una Boda en Madrid?](/blog/cuanto-cuesta-mago-boda-madrid)
 - [Mago para Bodas en Madrid: FAQ Completa](/blog/mago-para-bodas-madrid-faq)

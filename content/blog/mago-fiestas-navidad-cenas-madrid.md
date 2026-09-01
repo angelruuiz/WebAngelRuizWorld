@@ -29,7 +29,7 @@ faq:
 
 La **cena de Navidad de empresa** es, junto con el team building, el evento corporativo más importante del año. Es el momento donde se celebra el trabajo de todo el equipo, se fortalecen vínculos y se cierra el año con una experiencia memorable. Pero seamos honestos: ¿cuántas cenas de Navidad de empresa en Madrid terminan siendo exactamente iguales año tras año?
 
-Un **mago para la fiesta de Navidad de empresa en Madrid** es la pieza que transforma una cena correcta en un evento que tu equipo recordará durante meses. Y no lo digo como frase de marketing: lo he vivido cientos de veces.
+Contratar un [mago para cenas de empresa en Madrid](/empresas/mago-cenas-empresa-madrid) es la pieza que transforma una cena correcta en un evento que tu equipo recordará durante meses. Y no lo digo como frase de marketing: lo he vivido cientos de veces.
 
 ## Por Qué la Magia es el Entretenimiento Perfecto para Navidad
 
@@ -92,7 +92,7 @@ Si quieres ir más allá de la cena tradicional, estas son las combinaciones que
 | Show de salón post-cena | 25-35 min | Desde 500€ |
 | Combo completo (cóctel + mesa + show) | 2-3h | Desde 700€ |
 
-> **Importante**: Las fechas de diciembre se agotan rápido. Si estás leyendo esto antes de octubre, es el momento perfecto para reservar. Si ya estamos en noviembre, contacta cuanto antes porque las últimas fechas vuelan.
+> **Importante**: Las fechas de diciembre se agotan rápido. Si estás buscando [mago para cenas de empresa en Madrid](/empresas/mago-cenas-empresa-madrid) o espectáculos para [eventos corporativos](/empresas), te recomiendo solicitar disponibilidad y presupuesto cuanto antes.
 
 ## Cuándo Reservar el Mago para tu Cena de Navidad
 

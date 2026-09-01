@@ -25,7 +25,7 @@ faq:
       Para eventos corporativos y cenas de Navidad en Madrid: 2-3 meses de antelación. Para bodas en temporada alta (mayo-octubre): 3-6 meses. Para eventos privados y fiestas: 2-4 semanas. Las fechas más populares se reservan rápidamente, especialmente noviembre-diciembre para cenas de empresa.
 ---
 
-Si estás buscando **contratar un mago en Madrid**, esta guía te dará todo lo que necesitas para tomar la mejor decisión. Desde los precios reales del mercado hasta cómo detectar un profesional de verdad, pasando por los errores más comunes que cometen quienes organizan eventos por primera vez.
+Si estás buscando [contratar un mago en Madrid](/contratar-mago-madrid), esta guía te dará todo lo que necesitas para tomar la mejor decisión. Desde los precios reales del mercado hasta cómo detectar un profesional de verdad, pasando por los errores más comunes que cometen quienes organizan eventos por primera vez.
 
 Soy Ángel Ruiz, ilusionista profesional con más de 10 años de experiencia en Madrid, y conozco perfectamente el sector desde dentro. Esta guía es completamente imparcial y está diseñada para que tomes la mejor decisión, seas quien seas quien me contrate o no.
 
@@ -37,8 +37,8 @@ Antes de buscar presupuestos, necesitas saber qué tipo de actuación se adapta 
 
 Es la modalidad más demandada en Madrid. El mago actúa directamente entre los asistentes, realizando efectos imposibles a centímetros de sus ojos: cartas que desaparecen, monedas que atraviesan objetos sólidos, magia de cerca. No necesita escenario ni equipos técnicos. Es perfecta para:
 
-- **Cócteles de boda**: El momento estrella. Rompe el hielo entre invitados mientras los novios hacen fotos.
-- **Cenas de empresa**: Magia de mesa entre plato y plato, o itinerante durante el cóctel.
+- **Cócteles de boda**: El momento estrella. Descubre aquí cómo funciona un [mago para bodas en Madrid](/particulares/bodas).
+- **Cenas de empresa**: Magia de mesa o itinerante. Conoce las opciones de [mago para cenas de empresa en Madrid](/empresas/mago-cenas-empresa-madrid).
 - **Fiestas privadas y cumpleaños**: Entretenimiento cercano para grupos de cualquier tamaño.
 - **Comuniones**: Magia familiar que entretiene por igual a niños, padres y abuelos.
 
@@ -140,4 +140,4 @@ Para bodas, esto significa que tus invitados hablarán de ese momento durante a�
 
 ---
 
-¿Listo para contratar el mejor mago en Madrid para tu evento? Contacta con Ángel Ruiz y recibe un presupuesto personalizado sin compromiso.
+¿Listo para contratar el mejor mago en Madrid para tu evento? Consulta nuestra [guía de precios y reserva](/contratar-mago-madrid) o contacta directamente con Ángel Ruiz para recibir un presupuesto personalizado sin compromiso.
