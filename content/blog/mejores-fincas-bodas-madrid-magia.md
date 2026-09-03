@@ -1,10 +1,7 @@
 ---
-title: Mejores Fincas para Bodas en Madrid donde Sorprender con un Espectáculo (2026)
+title: 'Mejores Fincas para Bodas en Madrid y Magia 2026'
 date: '2026-05-05'
-excerpt: >-
-  Descubre cómo elegir el espacio perfecto en Madrid para tu boda y por qué
-  contar con un mago profesional durante el cóctel transformará por completo la
-  experiencia de tus invitados.
+excerpt: 'Las mejores fincas de bodas en Madrid y la Sierra para incluir magia en el cóctel. Ideas exclusivas y asesoría directa.'
 author: Ángel Ruiz
 image: /images/boda-magia-madrid.webp
 tags:

@@ -1,10 +1,7 @@
 ---
-title: Magia y Tecnología para Eventos de Empresa en España y Madrid
+title: 'Magia y Tecnología para Eventos de Empresa 2026'
 date: '2026-05-25'
-excerpt: >-
-  La combinación de ilusionismo y tecnología es la nueva gran tendencia
-  corporativa. Descubre cómo la magia digital y la magia tecnológica pueden
-  transformar tu próximo evento de empresa en España.
+excerpt: 'Ilusionismo tecnológico y magia con móviles para eventos y ferias en Madrid. Innovación para tu marca. Pide demo en 2h.'
 author: Ángel Ruiz
 image: /images/evento-angel-ruiz-magia.webp
 category: Ilusionismo

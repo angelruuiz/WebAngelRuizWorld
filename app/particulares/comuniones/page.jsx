@@ -7,14 +7,14 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import BusinessSchema from '@/components/BusinessSchema';
 
 export const metadata = {
-    title: { absolute: 'Mago para Comuniones en Madrid | Ángel Ruiz · Fiestas Infantiles' },
-    description: 'Ángel Ruiz, mago para comuniones en Madrid. Magia participativa, familiar y de alto impacto para hacer de su primera comunión un día inolvidable.',
+    title: { absolute: 'Mago para Comuniones en Madrid ⭐ Magia Familiar' },
+    description: 'Magia participativa para comuniones en Madrid. El comulgante es el protagonista del día. Consulta tarifas y fechas.',
     alternates: {
         canonical: 'https://angelruiz.world/particulares/comuniones',
     },
     openGraph: {
-        title: 'Mago para Comuniones en Madrid | Ángel Ruiz',
-        description: 'El mejor mago para comuniones y fiestas infantiles en Madrid. Espectáculos adaptados para toda la familia donde el niño es el gran protagonista.',
+        title: 'Mago para Comuniones en Madrid ⭐ Magia Familiar',
+        description: 'Magia para comuniones y fiestas infantiles en Madrid. Espectáculos adaptados para toda la familia.',
         images: [{ url: '/images/magia-comuniones-madrid.webp' }],
     }
 };

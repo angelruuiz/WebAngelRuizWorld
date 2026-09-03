@@ -6,15 +6,15 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: { absolute: 'Mago en Madrid 2026 | Contratar Mago para Bodas y Empresas | Ángel Ruiz' },
-    description: 'El mago que contratan las bodas y empresas exigentes de Madrid. Ángel Ruiz: magia de cerca a centímetros de tus ojos, sin cajas ni aparatos. 42 reseñas 5★ reales. Desde 300€, presupuesto en 24h.',
+    title: { absolute: 'Mago Profesional en Madrid ⭐ Bodas y Empresas' },
+    description: 'Ilusionismo de autor y magia de cerca en Madrid para bodas y eventos. Alumno de DaOrtiz. 42 reseñas 5★. Presupuesto en 2h.',
     keywords: ['mago madrid', 'mago en madrid', 'contratar mago madrid', 'mago profesional madrid', 'ilusionista madrid', 'mago close-up madrid', 'magia de cerca madrid', 'experto en magia en madrid', 'mejor mago empresas madrid', 'mago para bodas madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/mago-madrid',
     },
     openGraph: {
-        title: 'Mago en Madrid 2026 | Contratar Mago para Bodas y Empresas | Ángel Ruiz',
-        description: 'Ilusionista profesional en Madrid para bodas, eventos corporativos y celebraciones privadas. +10 años de experiencia, 42 reseñas 5⭐. Magia de cerca y de salón.',
+        title: 'Mago Profesional en Madrid ⭐ Bodas y Empresas',
+        description: 'Ilusionista profesional en Madrid para bodas y empresas. 42 reseñas 5★.',
         images: [{ url: '/images/foto-bio.webp', width: 1200, height: 630 }],
     }
 };

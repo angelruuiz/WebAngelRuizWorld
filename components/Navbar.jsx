@@ -60,6 +60,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
             href: '/empresas',
             children: [
                 { name: 'Eventos Corporativos', href: '/empresas' },
+                { name: 'Cenas de Navidad', href: '/empresas/mago-cenas-empresa-madrid' },
                 { name: 'Restaurantes', href: '/empresas/mago-para-restaurantes-madrid' }
             ]
         },
@@ -272,7 +273,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                                 </summary>
                                 <div className="flex flex-col gap-4 pb-4 pl-4 border-l border-white/10 ml-2 mt-2">
                                     <Link href="/empresas/mago-ferias-congresos-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Ferias y Congresos</Link>
-                                    <Link href="/empresas/mago-cenas-empresa-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Cenas de Empresa</Link>
+                                    <Link href="/empresas/mago-cenas-empresa-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Cenas de Empresa y Navidad</Link>
                                     <Link href="/empresas/mago-team-building-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Team Building</Link>
                                     <Link href="/empresas/mago-para-restaurantes-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Restaurantes</Link>
                                 </div>

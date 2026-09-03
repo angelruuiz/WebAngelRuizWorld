@@ -7,16 +7,16 @@ import FAQItem from '@/components/FAQItem';
 import Link from 'next/link';
 
 export const metadata = {
-    title: { absolute: 'Mago para Despedidas de Soltera en Madrid 2026 | Ángel Ruiz' },
-    description: '¿Buscas mago para despedida de soltera en Madrid? Ángel Ruiz ofrece magia de cerca e ilusionismo sorprendente para despedidas de soltera y soltero. Diversión garantizada. ⭐⭐⭐⭐⭐',
+    title: { absolute: 'Mago para Despedidas de Soltera en Madrid 2026' },
+    description: 'Magia de cerca divertida para despedidas de soltera en Madrid. La novia como protagonista. Pide presupuesto express en 2h.',
     keywords: ['mago despedidas soltera madrid', 'mago para despedida de soltera madrid', 'ilusionista despedida soltera', 'entretenimiento despedida soltera madrid', 'mago despedida soltero madrid', 'contratar mago despedida soltera'],
     alternates: {
         canonical: 'https://angelruiz.world/particulares/despedidas-soltera-madrid',
     },
     openGraph: {
         url: 'https://angelruiz.world/particulares/despedidas-soltera-madrid',
-        title: 'Mago para Despedidas de Soltera en Madrid 2026 | Ángel Ruiz',
-        description: 'Sorprende a la futura novia (o novio) con magia de cerca en su despedida. Experiencia única e irrepetible en Madrid.',
+        title: 'Mago para Despedidas de Soltera en Madrid 2026',
+        description: 'Sorprende a la futura novia con magia de cerca en su despedida en Madrid.',
         images: [{ url: '/images/foto-bio.webp', width: 1200, height: 630 }],
     },
 };

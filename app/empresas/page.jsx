@@ -8,22 +8,22 @@ import FAQItem from '@/components/FAQItem';
 import CorporateInlineForm from '@/components/CorporateInlineForm';
 
 export const metadata = {
-    title: { absolute: 'Mago para Empresas en Madrid | Eventos Corporativos, Cenas y Ferias' },
-    description: '🏆 Ilusionismo y magia corporativa para empresas en Madrid: cenas, team building, convenciones y ferias. Trato directo, personalizable con tu marca. ¡Pide dossier y presupuesto!',
+    title: { absolute: 'Mago para Empresas en Madrid ➜ Cenas y Eventos 2026' },
+    description: 'Ilusionismo para cenas de empresa y team building en Madrid. Personalizado con tu marca. Pide dossier y presupuesto en 2h.',
     keywords: ['mago para empresas madrid', 'mago para empresas', 'mago empresas', 'mago eventos corporativos madrid', 'mago cenas empresa madrid', 'mago team building madrid', 'mago conferenciante madrid', 'contratar mago empresa madrid', 'ilusionista corporativo madrid', 'mejor mago empresas madrid', 'mago para eventos de empresa madrid', 'mago eventos empresariales', 'magia para empresas'],
     alternates: {
         canonical: 'https://angelruiz.world/empresas',
     },
     openGraph: {
         url: 'https://angelruiz.world/empresas',
-        title: 'Mago para Empresas en Madrid | Eventos Corporativos, Cenas y Ferias',
-        description: 'Especialista en magia para cenas de empresa, team building y eventos corporativos en Madrid. 42 reseñas 5 estrellas. ¡Pide presupuesto en 2h!',
+        title: 'Mago para Empresas en Madrid ➜ Cenas y Eventos 2026',
+        description: 'Especialista en magia para cenas de empresa y eventos corporativos en Madrid. 42 reseñas 5★. Pide presupuesto en 2h.',
         images: [{ url: '/images/evento-angel-ruiz-magia.webp', width: 1200, height: 630 }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago para Empresas en Madrid | Eventos Corporativos',
-        description: 'Especialista en magia corporativa para cenas, team building y congresos en Madrid. ¡Presupuesto directo!',
+        title: 'Mago para Empresas en Madrid ➜ Cenas y Eventos 2026',
+        description: 'Especialista en magia corporativa para cenas y convenciones en Madrid. Presupuesto directo.',
         images: ['/images/evento-angel-ruiz-magia.webp'],
     },
 };

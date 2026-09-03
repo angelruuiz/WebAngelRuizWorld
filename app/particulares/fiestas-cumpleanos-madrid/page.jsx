@@ -6,19 +6,19 @@ import { MagicCursor, ParticleBackground, FadeIn } from '@/components/VisualEffe
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: { absolute: 'Mago para Cumpleaños y Fiestas de Adultos en Madrid | Ángel Ruiz' },
-    description: 'Sorprende en tu fiesta de 40, 50 o 60 cumpleaños con Ángel Ruiz. Ilusionismo moderno, elegante y muy divertido para celebraciones de adultos en Madrid y a domicilio.',
+    title: { absolute: 'Mago para Cumpleaños de Adultos en Madrid 2026' },
+    description: 'Sorprende en tu fiesta de 40 o 50 cumpleaños con magia de cerca a domicilio en Madrid. Humor y asombro. Presupuesto en 2h.',
     alternates: {
         canonical: 'https://angelruiz.world/particulares/fiestas-cumpleanos-madrid',
     },
     openGraph: {
-        title: 'Mago para Cumpleaños y Fiestas de Adultos en Madrid | Ángel Ruiz',
-        description: 'La magia perfecta para sorprender en tu cumpleaños. Experiencia exclusiva a domicilio o en restaurantes de Madrid.',
+        title: 'Mago para Cumpleaños de Adultos en Madrid 2026',
+        description: 'La magia perfecta para sorprender en tu cumpleaños en Madrid.',
         images: [{ url: '/images/fiesta-eventos-madrid.webp' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago para Fiestas Privadas Madrid',
+        title: 'Mago para Cumpleaños de Adultos en Madrid 2026',
         description: 'Ilusionismo moderno para cumpleaños de 40 y 50 años.',
         images: ['/images/fiesta-eventos-madrid.webp'],
     },

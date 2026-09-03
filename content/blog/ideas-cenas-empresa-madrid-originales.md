@@ -1,10 +1,7 @@
 ---
-title: 'Ideas Originales para Cenas de Empresa en Madrid [Guía 2026]'
+title: 'Ideas Originales para Cenas de Empresa en Madrid'
 date: '2026-04-25'
-excerpt: >-
-  Descubre cómo transformar la clásica (y a veces aburrida) cena de Navidad o de
-  verano de tu empresa en Madrid en un evento legendario gracias a la magia
-  corporativa.
+excerpt: 'Ideas de animación y magia corporativa para sorprender a tu equipo en su cena de empresa en Madrid. Presupuesto express.'
 author: Ángel Ruiz
 image: /images/mago-empresas-madrid-angel-ruiz.svg
 tags:

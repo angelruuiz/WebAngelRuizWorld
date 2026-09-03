@@ -81,11 +81,11 @@ const HeroClient = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                     {/* Left Column: Títulos y CTA Principal */}
                     <div className="lg:col-span-7 flex flex-col items-start text-left">
-                        <h1 className="font-[Cinzel] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 md:mb-6 tracking-wider drop-shadow-lg leading-none pointer-events-none flex flex-col items-start">
-                            <span className="sr-only">Ángel Ruiz | Mago e Ilusionista en Madrid</span>
-                            <span aria-hidden="true" className="text-[#d4a853] block mb-1"><SplitText text="ANGEL" /></span>
-                            <span aria-hidden="true" className="text-white block"><SplitText text="RUIZ" /></span>
-                        </h1>
+                        <h1 className="sr-only">Ángel Ruiz - Mago e Ilusionista en Madrid</h1>
+                        <div className="font-[Cinzel] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 md:mb-6 tracking-wider drop-shadow-lg leading-none pointer-events-none flex flex-col items-start" aria-hidden="true" role="presentation">
+                            <span className="text-[#d4a853] block mb-1"><SplitText text="ANGEL" /></span>
+                            <span className="text-white block"><SplitText text="RUIZ" /></span>
+                        </div>
                         
                         <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1.0, duration: 1 }} className="my-2 md:my-4">
                             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-200 tracking-[0.15em] uppercase border-l-4 border-[#d4a853]/50 py-2.5 md:py-3 px-4 md:px-6 inline-block backdrop-blur-md bg-white/5 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] text-left leading-relaxed font-accent rounded-r-xl">

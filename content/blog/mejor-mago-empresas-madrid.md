@@ -1,10 +1,7 @@
 ---
-title: ¿Cuál es el Mejor Mago para Empresas en Madrid? Claves para Elegir
+title: '¿Cuál es el Mejor Mago para Empresas en Madrid?'
 date: '2026-05-10'
-excerpt: >-
-  Descubre los criterios clave para identificar y contratar al mejor mago
-  corporativo para tu próximo evento en Madrid. No contrates simple
-  entretenimiento, busca Retorno de Inversión.
+excerpt: '¿Buscas un mago corporativo en Madrid? Compara opciones, precios y claves para acertar en tu evento. Dossier directo.'
 category: Empresas
 readTime: 6 MIN
 image: /images/evento-angel-ruiz-magia.webp

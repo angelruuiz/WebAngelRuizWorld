@@ -1,7 +1,7 @@
 ---
-title: 'Mago para Fiestas de Navidad y Cenas de Empresa en Madrid: La Guía Completa (2026)'
+title: 'Mago para Fiestas de Navidad y Cenas de Empresa'
 date: '2026-06-02'
-excerpt: 'Descubre cómo un mago profesional puede transformar tu cena de Navidad o fiesta navideña de empresa en Madrid. Formatos, precios, ideas originales y consejos para organizar el mejor evento navideño corporativo.'
+excerpt: 'Transforma tu cena de Navidad de empresa en Madrid con magia de cerca. Precios y formatos. Reserva fecha antes del cierre.'
 author: Ángel Ruiz
 image: /images/foto-bio.webp
 category: Empresas

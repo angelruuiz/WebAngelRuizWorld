@@ -5,15 +5,15 @@ import FAQItem from '@/components/FAQItem';
 import CorporateInlineForm from '@/components/CorporateInlineForm';
 
 export const metadata = {
-  title: { absolute: 'Mago para Restaurantes en Madrid | Magia en Mesas y Eventos Hostelería' },
-  description: '🍽️ Atrae más clientes, sube el ticket medio y fideliza comensales con magia de cerca en mesas en Madrid. Espectáculos adaptados a hostelería. ¡Infórmate sin compromiso!',
+  title: { absolute: 'Mago para Restaurantes en Madrid ⭐ Magia en Mesas' },
+  description: 'Magia de cerca en mesas para restaurantes en Madrid. Fideliza clientes y sube tu ticket medio. Solicita prueba demo.',
   keywords: ['mago para restaurantes madrid', 'mago para restaurantes', 'magia en restaurantes madrid', 'magia en mesas', 'table hopping madrid', 'animacion restaurantes madrid', 'ilusionista restaurantes', 'mago eventos hosteleria'],
   alternates: {
     canonical: 'https://angelruiz.world/empresas/mago-para-restaurantes-madrid',
   },
   openGraph: {
-    title: 'Mago para Restaurantes en Madrid | Magia en Mesas y Eventos Hostelería',
-    description: 'Aumenta el ticket medio, reduce tiempos de espera percibidos y fideliza a tus clientes con magia de cerca de mesa en mesa en Madrid.',
+    title: 'Mago para Restaurantes en Madrid ⭐ Magia en Mesas',
+    description: 'Aumenta el ticket medio y fideliza clientes con magia de cerca en mesas en Madrid.',
     url: 'https://angelruiz.world/empresas/mago-para-restaurantes-madrid',
     siteName: 'Ángel Ruiz | Mago e Ilusionista',
     images: [

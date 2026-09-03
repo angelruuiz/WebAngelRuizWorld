@@ -5,10 +5,10 @@ import Script from 'next/script';
 export const metadata = {
   metadataBase: new URL('https://angelruiz.world'),
   title: {
-    default: 'Mago en Madrid | Ángel Ruiz | Ilusionista para Bodas y Empresas',
-    template: '%s | Ángel Ruiz | Mago Madrid'
+    default: '【Precios 2026】Mago en Madrid | Bodas y Empresas',
+    template: '%s | Ángel Ruiz'
   },
-  description: '¿Buscas un mago de verdad en Madrid? Ángel Ruiz: 42 reseñas de 5★ reales, +10 años en bodas y empresas. Sin agencias, trato directo. Presupuesto en 24h.',
+  description: 'Mago profesional en Madrid para bodas y empresas. 42 reseñas 5★. Trato directo sin agencias. Presupuesto express en 2h.',
   keywords: ['mago madrid', 'mago en madrid', 'contratar mago madrid', 'mago profesional madrid', 'ilusionista madrid', 'magia de cerca madrid', 'mago cenas empresa madrid', 'mago comuniones madrid', 'mago team building madrid', 'mago close-up madrid', 'Ángel Ruiz mago'],
   authors: [{ name: 'Ángel Ruiz | Mago e Ilusionista' }],
   creator: 'Ángel Ruiz | Mago e Ilusionista',

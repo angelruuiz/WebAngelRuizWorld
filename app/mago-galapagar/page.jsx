@@ -9,10 +9,24 @@ export const metadata = {
   },
   description: location.description,
   alternates: {
-    canonical: `https://angelruiz.world/mago-galapagar`,
+    canonical: 'https://angelruiz.world/mago-galapagar',
   },
   keywords: location.keywords,
+  openGraph: {
+    title: location.meta_title || location.title,
+    description: location.description,
+    url: `https://angelruiz.world/mago-${location.slug}`,
+    siteName: 'Ángel Ruiz | Mago e Ilusionista',
+    locale: 'es_ES',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: location.meta_title || location.title,
+    description: location.description,
+  },
 };
+
 
 export default function Page() {
   return <LocationPageTemplate location={location} allLocations={locations} />;

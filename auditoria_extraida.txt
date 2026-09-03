@@ -1,0 +1,73 @@
+Auditoría SEO
+
+angelruiz.world
+
+Preparada para cerrar más eventos antes de fin de año
+
+Sitio
+
+Páginas analizadas
+
+Puntuación estimada
+
+angelruiz.world
+
+4 (home, /empresas, /mago-torrelodones + estructura general)
+
+74 / 100
+
+🔴 Críticos — arréglalos ya
+
+H1 roto en la home: el texto sale concatenado sin espacio — "Ángel Ruiz | Mago e Ilusionista en MadridANGELRUIZ". Google lee esto como una sola palabra rara; mata la relevancia del H1 principal.
+
+Meta Twitter genérica copiada en páginas locales: /mago-torrelodones usa la descripción de Twitter de la home (bodas/empresas) en lugar de una propia de Torrelodones. Indica que la plantilla no personaliza bien las metaetiquetas sociales por página.
+
+5 páginas locales huérfanas: Alcorcón, Leganés, Móstoles, Getafe y Alcobendas existen (se ven enlazadas desde /mago-torrelodones) pero no están en el menú ni en el footer de la home. Google las rastrea peor y reciben casi cero autoridad interna → impresiones perdidas.
+
+Sin página estacional de fin de año: no hay landing tipo "mago para cena de Navidad de empresa Madrid" o "mago Nochevieja Madrid" — es la keyword de mayor intención ahora mismo (sept-dic) y no se está capturando.
+
+🟡 Advertencias — deberían arreglarse
+
+Sobreoptimización de keywords: "mago para bodas en Madrid", "experto en magia en Madrid" se repiten en negrita muchas veces en la misma página. Riesgo de que Google lo interprete como manipulación (helpful content).
+
+Meta keywords tag: sigue usándose, pero Google la ignora desde hace años — no es un error, pero es esfuerzo desperdiciado si se cree que ayuda.
+
+Dominio .world: para un negocio 100% local en Madrid, un .es o .com genera más confianza y CTR en el snippet que .world (no es factor de ranking directo, pero sí de percepción/clics).
+
+Testimonios sin marcado de datos estructurados: hay reseñas y FAQs en texto plano en /empresas — no se detectó Schema (FAQPage, LocalBusiness) aplicado, así que no se está optando a rich snippets (desplegables FAQ) en el SERP.
+
+No se pudo confirmar robots.txt ni sitemap.xml — verificarlos en Search Console para asegurar que todo se indexa correctamente.
+
+🟢 Oportunidades — impacto directo en cierre de eventos
+
+Contenido estacional urgente: crear ya páginas/posts para "mago cena de Navidad empresa Madrid", "mago fin de año Madrid", "mago para comida de Navidad familiar" — son búsquedas con pico ahora mismo hasta diciembre.
+
+Enlazar las 5 ciudades huérfanas desde el menú/footer principal.
+
+Marcar las FAQ existentes con Schema FAQPage → aparecen desplegables en Google, aumenta CTR sin cambiar contenido.
+
+Añadir Schema LocalBusiness con datos de contacto, zona de cobertura y horario de atención.
+
+CTA de urgencia estacional en home/empresas: "Quedan X fechas libres antes de fin de año" — mejora la conversión de las visitas que ya llegan.
+
+Backlinks locales: darse de alta en directorios de bodas (bodas.net, zankyou) y de eventos corporativos madrileños; cada uno suma autoridad y tráfico referido directo.
+
+Blog: revisar si hay cadencia activa; publicar 2-3 posts long-tail antes de fin de año (ej. "cuánto cuesta un mago para cena de empresa en Madrid 2026") — capturan intención de compra alta.
+
+Testear velocidad en PageSpeed Insights — no se pudo medir Core Web Vitals desde aquí, pero con tantas imágenes es un punto a vigilar.
+
+✅ Lo que ya está bien
+
+Metadatos (title, description, OG, Twitter) presentes y bien escritos en home y /empresas.
+
+Estrategia de páginas locales (14 ciudades) — muy buena táctica de SEO local/programático.
+
+Enlazado interno con anchor text descriptivo entre páginas de servicio.
+
+FAQs completas y orientadas a intención comercial (precios, antelación, cobertura).
+
+Imágenes con alt text descriptivo (no genérico).
+
+Prioridad para cerrar eventos antes de fin de año
+
+Arreglar el H1, publicar la landing de "cenas de Navidad/fin de año", enlazar las páginas huérfanas y marcar las FAQ con Schema. Son cambios rápidos con impacto directo en impresiones y clics en las próximas semanas.

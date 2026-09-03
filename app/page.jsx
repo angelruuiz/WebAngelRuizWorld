@@ -3,15 +3,15 @@ import Image from 'next/image';
 import QuickEventSelector from '@/components/QuickEventSelector';
 
 export const metadata = {
-    title: { absolute: 'Mago en Madrid | Ángel Ruiz | Ilusionista para Bodas y Empresas 2026' },
-    description: 'Ángel Ruiz, mago profesional en Madrid para bodas, cenas de empresa y eventos privados. +10 años de experiencia, alumno de DaOrtiz. 42 reseñas ⭐⭐⭐⭐⭐. Solicita presupuesto sin compromiso.',
+    title: { absolute: '【Precios 2026】Mago en Madrid | Bodas y Empresas' },
+    description: 'Mago profesional en Madrid para bodas y empresas. Alumno de DaOrtiz, 42 reseñas 5★. Pide presupuesto directo sin agencias.',
     alternates: {
         canonical: 'https://angelruiz.world',
     },
     openGraph: {
         url: 'https://angelruiz.world',
-        title: 'Ángel Ruiz | Mago e Ilusionista en Madrid para Eventos y Bodas',
-        description: 'Ilusionista profesional en Madrid. Especialista en magia de cerca para bodas, cenas de empresa y eventos corporativos. +10 años, 42 reseñas 5 estrellas.',
+        title: '【Precios 2026】Mago en Madrid | Bodas y Empresas',
+        description: 'Mago profesional en Madrid para bodas y eventos de empresa. 42 reseñas 5★. Presupuesto directo.',
     },
 };
 
@@ -33,7 +33,7 @@ const SEOContent = () => {
                         <div className="pt-8 border-t border-white/10 space-y-6">
                             <p className="text-xs uppercase tracking-[0.3em] font-bold text-amber-500 mb-2 text-left">Experiencia Certificada y Formación de Élite</p>
                             <p className="text-sm md:text-base leading-relaxed text-gold-50/90">
-                                Ángel Ruiz se ha consolidado como uno de los <strong className="text-amber-400">ilusionistas más modernos de la capital</strong> y como el <strong>mago para bodas en Madrid</strong> más solicitado, formado en la prestigiosa <u>Escuela de Magia de Dani DaOrtiz</u>. Esta formación de élite se traduce en una especialización en <strong>Cartomagia Purista</strong> y un "caos controlado" que lo distancia de los magos genéricos. Como experto <strong>mago para bodas en Madrid</strong> e ilusionista de alto nivel para marcas, su enfoque se centra en la <u>magia de cerca (close-up) de alta calidad</u>, donde el milagro ocurre literalmente a escasos centímetros del espectador.
+                                Ángel Ruiz se ha consolidado como uno de los <strong className="text-amber-400">ilusionistas de referencia en Madrid</strong>, formado en la prestigiosa <u>Escuela de Magia de Dani DaOrtiz</u>. Esta formación de élite se traduce en una especialización en cartomagia de autor y un estilo propio que lo distancia del ilusionismo convencional. Su enfoque se centra en la <u>magia de cerca (close-up) de alta calidad</u>, donde el milagro ocurre literalmente a escasos centímetros del espectador.
                             </p>
                             <p className="text-sm md:text-base leading-relaxed text-gold-50/90">
                                 En un mercado saturado de agencias, mi propuesta ofrece la distinción de un <strong>especialista</strong>. Mi magia no solo ejecuta trucos; se trata de <strong>diseñar atmósferas de asombro inteligente</strong>. Ya sea en un cóctel de bienvenida o en una cena de gala corporativa, mi trabajo bajo el sello de la cartomagia de autor asegura que tu celebración sea recordada por su sofisticación y verdadera imposibilidad.
@@ -61,7 +61,7 @@ const SEOContent = () => {
 
                             <details open className="group border-b border-transparent pb-4 cursor-pointer text-gold-100/80 mt-4">
                                 <summary className="list-none text-gold-50 font-bold flex justify-between items-center group-open:text-amber-500 transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] py-4 uppercase tracking-widest text-xs">
-                                    Cobertura Sierra de Madrid y Zona Noroeste
+                                    Cobertura en Madrid y Zona Noroeste
                                     <span className="text-amber-500 group-open:rotate-180 transition-transform duration-[250ms] ease-[cubic-bezier(0.23,1,0.32,1)]">↓</span>
                                 </summary>
                                 <div className="mt-2 leading-relaxed space-y-4">
@@ -79,6 +79,11 @@ const SEOContent = () => {
                                             <a href="/mago-majadahonda" className="hover:text-amber-400 transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">Majadahonda</a>
                                             <a href="/mago-las-matas" className="hover:text-amber-400 transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">Las Matas</a>
                                             <a href="/mago-el-escorial" className="hover:text-amber-400 transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">El Escorial</a>
+                                            <a href="/mago-alcorcon" className="hover:text-amber-400 transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">Alcorcón</a>
+                                            <a href="/mago-leganes" className="hover:text-amber-400 transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">Leganés</a>
+                                            <a href="/mago-mostoles" className="hover:text-amber-400 transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">Móstoles</a>
+                                            <a href="/mago-getafe" className="hover:text-amber-400 transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">Getafe</a>
+                                            <a href="/mago-alcobendas" className="hover:text-amber-400 transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">Alcobendas</a>
                                         </div>
                                         <p className="mt-6 text-xs opacity-70 leading-relaxed italic border-t border-white/10 pt-6">
                                             Especialista en <strong>fincas para bodas</strong> y eventos residenciales VIP en urbanizaciones como La Finca, Somosaguas y Monterrozas.
@@ -93,7 +98,7 @@ const SEOContent = () => {
                     <PerpetualCard className="md:col-span-12 lg:col-span-4 flex flex-col justify-start">
                         <h2 className="text-white font-[Cinzel] text-xl uppercase tracking-tight mb-4 border-b border-white/10 pb-4">Mago para Bodas en Madrid</h2>
                         <p className="text-sm md:text-base leading-relaxed text-gold-50/80">
-                            El <strong className="text-amber-500">mago para bodas en Madrid</strong> es la figura que asegura que el cóctel de bienvenida no sea "solo una espera". Mi magia de cerca rompe el hielo de forma elegante, uniendo a familias y amigos bajo un mismo sentimiento de asombro y alegría.
+                            La figura del ilusionista durante el cóctel transforma la espera en el momento más memorable de la celebración. Mi magia de cerca rompe el hielo de forma elegante, uniendo a familias y amigos bajo un mismo sentimiento de asombro y alegría.
                         </p>
                         <a href="/particulares/bodas" className="mt-6 inline-flex items-center text-amber-500 text-xs font-bold uppercase tracking-widest hover:text-white transition-all duration-[160ms]">
                             Ver Mago para Bodas en Madrid →
@@ -122,10 +127,10 @@ const SEOContent = () => {
                         <h2 className="text-2xl md:text-3xl font-[Cinzel] text-white mb-8 uppercase tracking-widest text-left">Por qué confiar en un Experto en Magia</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm md:text-base text-gold-50/90 leading-relaxed text-justify">
                             <p>
-                                En el sector de los eventos, la diferencia entre un truco aficionado y una experiencia verdaderamente inolvidable radica en la figura del <strong className="text-amber-400">experto en magia en Madrid</strong>. Mi trayectoria me permite no solo ejecutar ilusiones imposibles, sino leer al público, gestionar el ritmo del evento e interactuar con la máxima elegancia.
+                                En el sector de los eventos, la diferencia entre un entretenimiento genérico y una experiencia verdaderamente inolvidable radica en la profesionalidad del ilusionista. Mi trayectoria me permite no solo ejecutar ilusiones imposibles, sino leer al público, gestionar el ritmo del evento e interactuar con la máxima elegancia.
                             </p>
                             <p>
-                                Ya sea un <a href="/particulares/bodas" className="text-amber-500 hover:underline transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">mago para bodas en Madrid</a> que debe conectar con familias diversas, o un <a href="/empresas" className="text-amber-500 hover:underline transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">mago para empresas en Madrid</a> que representa la imagen de tu marca, la profesionalidad está garantizada. Más de 10 años de experiencia y decenas de valoraciones de 5 estrellas avalan mi compromiso con el asombro de calidad.
+                                Ya sea en una <a href="/particulares/bodas" className="text-amber-500 hover:underline transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">boda donde conectar con familias diversas</a>, o en un <a href="/empresas" className="text-amber-500 hover:underline transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">evento corporativo que representa la imagen de tu marca</a>, la profesionalidad está garantizada. Más de 10 años de experiencia y decenas de valoraciones de 5 estrellas avalan mi compromiso con el asombro de calidad.
                             </p>
                         </div>
                     </PerpetualCard>
@@ -262,13 +267,18 @@ export default function Home() {
                             ...videoSchema
                         },
                         {
-                            "@type": "ProfessionalService",
+                            "@type": ["ProfessionalService", "LocalBusiness"],
                             "@id": "https://angelruiz.world/#organization",
                             "name": "Ángel Ruiz | Mago e Ilusionista",
                             "url": "https://angelruiz.world",
                             "telephone": "+34648055636",
                             "email": "info@angelruiz.world",
+                            "logo": "https://angelruiz.world/images/logo-pequeno.webp",
+                            "image": "https://angelruiz.world/images/foto-bio.webp",
                             "description": "Mago e ilusionista profesional en Madrid. Especialista en magia de cerca para bodas, eventos corporativos y celebraciones privadas.",
+                            "priceRange": "€€€",
+                            "currenciesAccepted": "EUR",
+                            "paymentAccepted": "Transferencia, Bizum, Efectivo",
                             "areaServed": ["Madrid", "Torrelodones", "Las Rozas", "Majadahonda", "Pozuelo de Alarcón", "Boadilla del Monte", "Galapagar", "Collado Villalba", "El Escorial", "Las Matas", "Alcobendas", "Alcorcón", "Leganés", "Getafe", "Móstoles"],
                             "address": {
                                 "@type": "PostalAddress",
@@ -278,12 +288,24 @@ export default function Home() {
                                 "postalCode": "28250",
                                 "addressCountry": "ES"
                             },
+                            "geo": {
+                                "@type": "GeoCoordinates",
+                                "latitude": "40.5765",
+                                "longitude": "-3.9294"
+                            },
+                            "openingHoursSpecification": {
+                                "@type": "OpeningHoursSpecification",
+                                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                                "opens": "09:00",
+                                "closes": "22:00"
+                            },
                             "sameAs": [
                                 "https://instagram.com/angellruuiz",
                                 "https://tiktok.com/@angellruuiz",
                                 "https://youtube.com/@angellruuiz",
                                 "https://facebook.com/angellruuiz"
-                            ]
+                            ],
+                            "founder": { "@id": "https://angelruiz.world/#person" }
                         },
                         {
                             "@type": "Person",
@@ -299,13 +321,30 @@ export default function Home() {
                         },
                         {
                             "@type": "FAQPage",
+                            "@id": "https://angelruiz.world/#faq",
                             "mainEntity": [
                                 {
                                     "@type": "Question",
                                     "name": "¿Por qué contratar un mago profesional para tu evento?",
                                     "acceptedAnswer": {
                                         "@type": "Answer",
-                                        "text": "Contratar un mago profesional con trayectoria no es solo añadir un número de entretenimiento; es transformar radicalmente la percepción de tus invitados sobre el evento. El ilusionismo moderno sirve para: Networking Natural, Eliminar tiempos muertos, y Refuerzo de Marca."
+                                        "text": "Contratar un mago profesional con trayectoria no es solo añadir un número de entretenimiento; es transformar radicalmente la percepción de tus invitados sobre el evento. El ilusionismo moderno sirve para: Networking Natural (facilitar que personas desconocidas interactúen), Eliminar tiempos muertos (cubrir transiciones en banquetes), y Refuerzo de Marca (integrar tu mensaje corporativo en los efectos mágicos)."
+                                    }
+                                },
+                                {
+                                    "@type": "Question",
+                                    "name": "¿Cuánto cuesta contratar un mago en Madrid?",
+                                    "acceptedAnswer": {
+                                        "@type": "Answer",
+                                        "text": "El precio varía según el tipo de evento, número de invitados y duración. Como referencia, un cóctel de magia de cerca para bodas parte desde 350€ y una cena corporativa desde 400€. Contacta directamente para un presupuesto personalizado sin compromiso en menos de 2 horas."
+                                    }
+                                },
+                                {
+                                    "@type": "Question",
+                                    "name": "¿Qué zonas de Madrid cubre Ángel Ruiz?",
+                                    "acceptedAnswer": {
+                                        "@type": "Answer",
+                                        "text": "Con base en Torrelodones, cubro toda la Comunidad de Madrid: zona noroeste (Las Rozas, Majadahonda, Pozuelo, Boadilla, Galapagar, Villalba, El Escorial), zona sur (Alcorcón, Leganés, Getafe, Móstoles), Alcobendas y Madrid capital. Sin sobrecostes de desplazamiento en la zona noroeste."
                                     }
                                 }
                             ]

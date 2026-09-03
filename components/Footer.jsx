@@ -80,6 +80,11 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                                 <a href="/mago-boadilla" className="glass-pill">Mago en Boadilla</a>
                                 <a href="/mago-villalba" className="glass-pill">Mago en Villalba</a>
                                 <a href="/mago-el-escorial" className="glass-pill">Mago en El Escorial</a>
+                                <a href="/mago-alcorcon" className="glass-pill">Mago en Alcorcón</a>
+                                <a href="/mago-leganes" className="glass-pill">Mago en Leganés</a>
+                                <a href="/mago-mostoles" className="glass-pill">Mago en Móstoles</a>
+                                <a href="/mago-getafe" className="glass-pill">Mago en Getafe</a>
+                                <a href="/mago-alcobendas" className="glass-pill">Mago en Alcobendas</a>
                             </div>
                         </div>
                         <div className="pt-8 text-sm text-slate-600"><p>© 2026 Ángel Ruiz | Mago e Ilusionista en Madrid. Marca Oficial Registrada. Todos los derechos reservados.</p></div>

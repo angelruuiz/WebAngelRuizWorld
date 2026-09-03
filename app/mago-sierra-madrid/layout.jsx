@@ -1,6 +1,6 @@
 export const metadata = {
-  title: { absolute: 'Mago en la Sierra de Madrid | Zona Noroeste | Ángel Ruiz | Mago e Ilusionista' },
-  description: 'Mago profesional residente en Torrelodones con servicios en toda la sierra de Madrid y zona noroeste. Ilusionismo exclusivo para bodas y eventos.',
+  title: { absolute: 'Mago en la Sierra de Madrid ⭐ Bodas y Fincas' },
+  description: 'Ilusionismo exclusivo para bodas en fincas y fiestas en la Sierra de Madrid. Residente local sin sobrecostes. Presupuesto en 2h.',
   alternates: {
     canonical: 'https://angelruiz.world/mago-sierra-madrid',
   },

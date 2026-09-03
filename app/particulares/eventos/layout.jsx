@@ -1,7 +1,7 @@
 export const metadata = {
-  title: 'Mago para Eventos y Fiestas Privadas en Madrid',
-  description: 'Sorprende a tus invitados con magia de cerca en fiestas de cumpleaños, comuniones y eventos particulares en Madrid con Angel Ruiz.',
-  keywords: ['mago para cumpleaños madrid', 'magia para celebraciones familiares', 'eventos particulares con mago madrid'],
+  title: { absolute: 'Mago para Fiestas Privadas y Eventos en Madrid' },
+  description: 'Magia de cerca para fiestas privadas y cumpleaños de adultos en Madrid. 42 reseñas 5★. Pide presupuesto express en 2h.',
+  keywords: ['mago para eventos privados madrid', 'mago fiestas privadas madrid', 'mago cumpleaños madrid', 'magia para celebraciones familiares'],
 };
 
 export default function EventosLayout({ children }) {

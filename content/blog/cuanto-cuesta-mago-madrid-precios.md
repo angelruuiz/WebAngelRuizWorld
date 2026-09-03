@@ -1,8 +1,7 @@
 ---
-title: '¿Cuánto Cuesta un Mago en Madrid? Tarifas y Precios Reales 2026'
+title: '¿Cuánto Cuesta un Mago en Madrid? Precios 2026'
 date: '2026-04-13'
-excerpt: >-
-  Descubre CUÁNTO CUESTA exactamente un mago en Madrid en 2026. Lista de precios reales, tarifas ocultas que debes evitar y presupuesto exacto para bodas y eventos.
+excerpt: 'Precios reales desde 300€ para contratar un mago en Madrid. Tarifas para bodas, empresas y fiestas sin comisiones.'
 author: Ángel Ruiz
 image: /images/foto-bio.webp
 tags:

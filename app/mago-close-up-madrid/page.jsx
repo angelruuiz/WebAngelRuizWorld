@@ -8,14 +8,14 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import BusinessSchema from '@/components/BusinessSchema';
 
 export const metadata = {
-    title: { absolute: 'Mago Close-Up Madrid | Magia de Cerca por Ángel Ruiz' },
-    description: 'Especialista en magia de cerca (close-up) en Madrid. Cartomagia purista e ilusionismo de alto impacto a centímetros de tus ojos. Formado por DaOrtiz.',
+    title: { absolute: 'Mago de Cerca en Madrid ⭐ Magia Close-Up 2026' },
+    description: 'Magia de cerca exclusiva para cócteles y cenas en Madrid. Cartomagia pura a centímetros de tus ojos. Disponibilidad en 2h.',
     alternates: {
         canonical: 'https://angelruiz.world/mago-close-up-madrid',
     },
     openGraph: {
-        title: 'Mago Close-Up Madrid | Magia de Cerca',
-        description: 'Especialista en magia de cerca (close-up) en Madrid. Cartomagia purista e ilusionismo de alto impacto a centímetros de tus ojos.',
+        title: 'Mago de Cerca en Madrid ⭐ Magia Close-Up 2026',
+        description: 'Especialista en magia de cerca (close-up) en Madrid. Cartomagia pura e ilusionismo de alto impacto.',
         images: [{ url: '/images/foto-bio.webp' }],
     }
 };

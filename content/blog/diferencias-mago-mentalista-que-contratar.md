@@ -1,8 +1,7 @@
 ---
-title: 'Mago vs Mentalista: ¿Cuál es la Diferencia y Cuál Contratar para tu Evento? [2026]'
+title: 'Mago vs Mentalista: ¿Cuál Contratar? [2026]'
 date: '2026-08-06'
-excerpt: >-
-  Descubre la diferencia entre un mago de cerca y un mentalista, y aprende cuál es la mejor opción para sorprender en tu próximo evento en Madrid.
+excerpt: 'Diferencias clave entre un mago de cerca y un mentalista para bodas y empresas en Madrid. Guía de contratación rápida.'
 category: Guía
 readTime: 7 MIN
 image: /images/foto-bio.webp

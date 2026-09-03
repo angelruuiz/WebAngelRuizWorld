@@ -7,15 +7,15 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: { absolute: 'Precios y Guía para Contratar Mago en Madrid 2026 | Ángel Ruiz' },
-    description: '🎩 ¿Cuánto cuesta contratar un mago en Madrid? Tarifas reales desde 300€ para bodas, eventos y empresas. Sin comisiones de agencias. ¡Consulta precios y disponibilidad!',
+    title: { absolute: '¿Cuánto Cuesta un Mago en Madrid? Tarifas 2026' },
+    description: 'Tarifas reales desde 300€ para contratar un mago en Madrid. Precios para bodas y empresas sin agencias. Respuesta en 2h.',
     keywords: ['contratar mago madrid', 'contratar mago madrid precio', 'precio mago madrid', 'cuanto cuesta un mago en madrid', 'mago profesional madrid', 'ilusionista madrid precios', 'mago para eventos madrid', 'mago para fiestas privadas madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/contratar-mago-madrid',
     },
     openGraph: {
-        title: 'Precios y Guía para Contratar Mago en Madrid 2026 | Ángel Ruiz',
-        description: 'Todo lo que necesitas saber para contratar un ilusionista en Madrid para bodas, empresas o eventos privados. Precios directos sin agencias.',
+        title: '¿Cuánto Cuesta un Mago en Madrid? Tarifas 2026',
+        description: 'Todo lo que necesitas saber para contratar un ilusionista en Madrid para bodas o empresas. Precios directos sin comisiones.',
         images: [{ url: '/images/foto-bio.webp' }],
     }
 };
