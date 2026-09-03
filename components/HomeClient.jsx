@@ -15,9 +15,9 @@ const SplitText = ({ text }) => {
             {text.split("").map((char, index) => (
                 <motion.span 
                     key={index} 
-                    initial={{ opacity: 0, y: 40, filter: 'blur(8px)' }} 
-                    animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }} 
-                    transition={{ duration: 0.9, delay: index * 0.08, ease: [0.23, 1, 0.32, 1] }} 
+                    initial={{ opacity: 0, y: 30 }} 
+                    animate={{ opacity: 1, y: 0 }} 
+                    transition={{ duration: 0.8, delay: index * 0.08, ease: [0.23, 1, 0.32, 1] }} 
                     style={{ display: 'inline-block' }}
                 >
                     {char === " " ? "\u00A0" : char}
@@ -30,36 +30,26 @@ const SplitText = ({ text }) => {
 import LiquidGlassForm from '@/components/LiquidGlassForm';
 
 const HeroClient = () => {
-    const [isDesktop, setIsDesktop] = useState(false);
-
-    useEffect(() => {
-        if (typeof window !== 'undefined' && window.innerWidth >= 768) {
-            setIsDesktop(true);
-        }
-    }, []);
-
     return (
         <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden z-10 pt-24 pb-16 lg:py-0">
             <div className="absolute inset-0 z-0 overflow-hidden" style={{ aspectRatio: '16/9', width: '100%', height: '100%' }}>
-                {/* Desktop: video cargado condicionalmente en cliente para no penalizar móvil */}
-                {isDesktop && (
-                    <div className="hidden md:block absolute inset-0">
-                        <video 
-                            autoPlay 
-                            loop 
-                            muted 
-                            playsInline 
-                            preload="none"
-                            poster="/images/hero-poster.webp"
-                            className="w-full h-full object-cover"
-                        >
-                            <source src="/spring.webm" type="video/webm" />
-                            <source src="/spring.mp4" type="video/mp4" />
-                        </video>
-                    </div>
-                )}
-                {/* Mobile / Fallback Poster */}
-                <div className={`absolute inset-0 ${isDesktop ? 'md:hidden' : 'block'}`}>
+                {/* Desktop: video solo en pantallas medianas/grandes */}
+                <div className="hidden md:block absolute inset-0">
+                    <video 
+                        autoPlay 
+                        loop 
+                        muted 
+                        playsInline 
+                        preload="none"
+                        poster="/images/hero-poster.webp"
+                        className="w-full h-full object-cover"
+                    >
+                        <source src="/spring.webm" type="video/webm" />
+                        <source src="/spring.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                {/* Mobile: poster optimizado de carga rápida */}
+                <div className="block md:hidden absolute inset-0">
                     <picture>
                         <source srcSet="/images/hero-poster.webp" type="image/webp" />
                         <img 

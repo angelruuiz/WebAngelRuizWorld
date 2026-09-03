@@ -7,6 +7,12 @@ export const MagicCursor = ({ isLight = false }) => {
     const [isHovering, setIsHovering] = useState(false);
 
     useEffect(() => {
+        if (typeof window !== 'undefined') {
+            if (window.matchMedia('(pointer: coarse)').matches || window.innerWidth < 768) {
+                return;
+            }
+        }
+
         document.body.classList.add('has-magic-cursor');
         const cursor = cursorRef.current;
         if (!cursor) return;

@@ -4,7 +4,7 @@ import { locations } from '@/lib/locations';
 export default function sitemap() {
   const posts = getSortedPostsData();
   
-  const lastMod = new Date('2026-07-01');
+  const lastMod = new Date();
   
   const blogUrls = posts.map((post) => ({
     url: `https://angelruiz.world/blog/${post.slug}`,
