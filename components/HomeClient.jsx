@@ -8,6 +8,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import dynamic from 'next/dynamic';
 const ContactFormModal = dynamic(() => import('@/components/Modals').then(mod => mod.ContactFormModal), { ssr: false });
+const DesktopHeroVideo = dynamic(() => import('@/components/DesktopHeroVideo'), { ssr: false });
 
 const SplitText = ({ text }) => {
     return (
@@ -33,21 +34,8 @@ const HeroClient = () => {
     return (
         <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden z-10 pt-24 pb-16 lg:py-0">
             <div className="absolute inset-0 z-0 overflow-hidden" style={{ aspectRatio: '16/9', width: '100%', height: '100%' }}>
-                {/* Desktop: video solo en pantallas medianas/grandes */}
-                <div className="hidden md:block absolute inset-0">
-                    <video 
-                        autoPlay 
-                        loop 
-                        muted 
-                        playsInline 
-                        preload="none"
-                        poster="/images/hero-poster.webp"
-                        className="w-full h-full object-cover"
-                    >
-                        <source src="/spring.webm" type="video/webm" />
-                        <source src="/spring.mp4" type="video/mp4" />
-                    </video>
-                </div>
+                {/* Desktop: video cargado exclusivamente en escritorio */}
+                <DesktopHeroVideo />
                 {/* Mobile: poster optimizado de carga rápida */}
                 <div className="block md:hidden absolute inset-0">
                     <picture>
