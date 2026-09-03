@@ -36,18 +36,18 @@ const HeroClient = () => {
             <div className="absolute inset-0 z-0 overflow-hidden" style={{ aspectRatio: '16/9', width: '100%', height: '100%' }}>
                 {/* Desktop: video cargado exclusivamente en escritorio */}
                 <DesktopHeroVideo />
-                {/* Mobile: poster optimizado de carga rápida */}
+                {/* Mobile: poster ultra optimizado (10 KiB) */}
                 <div className="block md:hidden absolute inset-0">
                     <picture>
-                        <source srcSet="/images/hero-poster.webp" type="image/webp" />
+                        <source srcSet="/images/hero-poster-mobile.webp" type="image/webp" />
                         <img 
-                            src="/images/hero-poster.webp" 
+                            src="/images/hero-poster-mobile.webp" 
                             alt="Ángel Ruiz, mago e ilusionista profesional en Madrid" 
                             className="w-full h-full object-cover object-[50%_75%]" 
                             loading="eager"
                             fetchPriority="high"
-                            width={1920}
-                            height={1080}
+                            width={750}
+                            height={422}
                         />
                     </picture>
                 </div>

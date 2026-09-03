@@ -352,6 +352,7 @@ export default function Home() {
                     ]
                 }) }} 
             />
+            <link rel="preload" as="image" href="/images/hero-poster-mobile.webp" type="image/webp" media="(max-width: 767px)" fetchPriority="high" />
             <HomeClient seoContent={<SEOContent />} />
         </>
     );
