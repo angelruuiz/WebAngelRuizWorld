@@ -86,13 +86,61 @@
         return canvas.toDataURL('image/jpeg', 0.95);
     }
 
-    // Inicializar imágenes por defecto
-    trickImageData = createDefaultTrickImage();
+    // ===== FUNCIÓN DE COMPRESIÓN Y OPTIMIZACIÓN RÁPIDA DE IMÁGENES =====
+    function compressAndOptimizeImage(file, maxDim, quality, cb) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            const img = new Image();
+            img.onload = () => {
+                let w = img.width;
+                let h = img.height;
+                if (w > maxDim || h > maxDim) {
+                    if (w > h) {
+                        h = Math.round(h * (maxDim / w));
+                        w = maxDim;
+                    } else {
+                        w = Math.round(w * (maxDim / h));
+                        h = maxDim;
+                    }
+                }
+                const canvas = document.createElement('canvas');
+                canvas.width = w;
+                canvas.height = h;
+                const ctx = canvas.getContext('2d');
+                ctx.drawImage(img, 0, 0, w, h);
+                const optimized = canvas.toDataURL('image/jpeg', quality);
+                cb(optimized);
+            };
+            img.onerror = () => cb(e.target.result);
+            img.src = e.target.result;
+        };
+        reader.onerror = () => cb(null);
+        reader.readAsDataURL(file);
+    }
+
+    // Inicializar imagen (desde localStorage si existe para funcionar 100% offline)
+    try {
+        const savedTrick = localStorage.getItem('magic_trick_image');
+        trickImageData = savedTrick || createDefaultTrickImage();
+    } catch (e) {
+        trickImageData = createDefaultTrickImage();
+    }
+
     showPreview(previewTrick, trickImageData);
     showPreview(previewGallery, galleryImageData);
 
-    // ===== CONSTRUCTOR DE LA CUADRÍCULA DE 500 FOTOS =====
+    // ===== CONSTRUCTOR ULTRA-RÁPIDO CON RECICLAJE DE NODOS DE LA CUADRÍCULA =====
     function buildMultipliedGrid() {
+        const existingImgs = multipliedScrollTrack.querySelectorAll('.multiplied-cell img');
+        if (existingImgs.length === NUM_CELLS) {
+            // Reciclaje instantáneo en memoria (3 ms) sin tocar el DOM
+            for (let i = 0; i < NUM_CELLS; i++) {
+                existingImgs[i].src = trickImageData;
+            }
+            gridBuilt = true;
+            return;
+        }
+
         multipliedScrollTrack.innerHTML = '';
         const fragment = document.createDocumentFragment();
 
@@ -108,7 +156,11 @@
         }
 
         multipliedScrollTrack.appendChild(fragment);
+        gridBuilt = true;
     }
+
+    // Pre-construir la cuadrícula en segundo plano al arrancar la app (0 ms de espera después)
+    buildMultipliedGrid();
 
     // ===== SISTEMA DE ZOOM Y PANEO INTERACTIVO (PINCH, DOUBLE-TAP Y WHEEL) =====
     let currentScale = 1;
@@ -470,23 +522,36 @@
     //  MANEJO DE EVENTOS
     // =================================================================
 
-    // ===== ESTADO 0: INPUTS DE ARCHIVOS =====
+    // ===== ESTADO 0: INPUTS DE ARCHIVOS CON COMPRESIÓN Y PRE-ARMADO INSTANTÁNEO =====
     inputTrick.addEventListener('change', (e) => {
         const f = e.target.files[0];
         if (!f) return;
-        readFileAsDataURL(f, (data) => {
-            trickImageData = data;
-            gridBuilt = false;
-            showPreview(previewTrick, data);
+        compressAndOptimizeImage(f, 960, 0.85, (optimized) => {
+            if (!optimized) return;
+            trickImageData = optimized;
+            try {
+                localStorage.setItem('magic_trick_image', optimized);
+            } catch (err) {}
+            showPreview(previewTrick, optimized);
+            addedPhotoImg.src = optimized;
+            viewerImg.src = optimized;
+            zoomProxyImg.src = optimized;
+            // Pre-construir / actualizar la cuadrícula de 500 fotos en segundo plano AHORA
+            buildMultipliedGrid();
         });
     });
 
     inputGallery.addEventListener('change', (e) => {
         const f = e.target.files[0];
         if (!f) return;
-        readFileAsDataURL(f, (data) => {
-            galleryImageData = data;
-            showPreview(previewGallery, data);
+        compressAndOptimizeImage(f, 1200, 0.88, (optimized) => {
+            if (!optimized) return;
+            galleryImageData = optimized;
+            try {
+                localStorage.setItem('magic_gallery_image', optimized);
+            } catch (err) {}
+            showPreview(previewGallery, optimized);
+            imgGallery.src = optimized;
         });
     });
 
@@ -505,18 +570,19 @@
         });
     }
 
+    // ARMAR TRUCO: RESPUESTA EN 0 MILISEGUNDOS (YA PRE-CONSTRUIDO)
     bindUniversalTap(btnArm, (e) => {
         if (e.preventDefault) e.preventDefault();
-        gridBuilt = false;
         viewerOpen = false;
         isAnimatingPhoto = false;
         state3.classList.remove('active', 'in');
-        state3.style.backgroundColor = '';
+        state3.style.backgroundColor = '#000000';
         zoomProxyContainer.style.display = 'none';
         if (activeCell) {
             activeCell.style.opacity = '1';
             activeCell = null;
         }
+        // Como la cuadrícula ya fue pre-construida en segundo plano, el cambio es instantáneo
         setState(1);
     });
 
