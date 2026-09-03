@@ -44,7 +44,6 @@
     const imgGallery            = document.getElementById('img-gallery');
     const addedPhoto            = document.getElementById('added-photo');
     const addedPhotoImg         = document.getElementById('added-photo-img');
-    const lastPhotoOriginalImg  = document.getElementById('last-photo-original-img');
     const multipliedGrid        = document.getElementById('multiplied-grid');
     const multipliedScrollTrack = document.getElementById('multiplied-scroll-track');
     const floatingHeader        = document.getElementById('floating-header');
@@ -129,13 +128,6 @@
 
     showPreview(previewTrick, trickImageData);
     showPreview(previewGallery, galleryImageData);
-
-    try {
-        const savedCrop = localStorage.getItem('magic_last_photo_crop');
-        if (savedCrop && lastPhotoOriginalImg) {
-            lastPhotoOriginalImg.src = savedCrop;
-        }
-    } catch (e) {}
 
     // ===== CONSTRUCTOR ULTRA-RÁPIDO CON RECICLAJE DE NODOS DE LA CUADRÍCULA =====
     function buildMultipliedGrid() {
@@ -448,10 +440,7 @@
                     activeCell.style.opacity = '1';
                     activeCell = null;
                 }
-                addedPhoto.classList.add('no-transition');
-                addedPhoto.classList.remove('visible', 'transformed');
-                void addedPhoto.offsetWidth;
-                addedPhoto.classList.remove('no-transition');
+                addedPhoto.classList.remove('visible');
                 multipliedGrid.classList.remove('active');
                 floatingHeader.classList.remove('visible');
                 floatingTabbar.classList.remove('visible');
@@ -552,30 +541,6 @@
         });
     });
 
-    function extractAndSetLastPhotoCrop(dataUrl) {
-        if (!dataUrl) return;
-        const img = new Image();
-        img.onload = () => {
-            const canvas = document.createElement('canvas');
-            canvas.width = 330;
-            canvas.height = 330;
-            const ctx = canvas.getContext('2d');
-            const sx = img.width * 0.33434;
-            const sy = img.height * 0.73340;
-            const sWidth = img.width * 0.33133;
-            const sHeight = img.height * 0.16113;
-            ctx.drawImage(img, sx, sy, sWidth, sHeight, 0, 0, 330, 330);
-            try {
-                const cropData = canvas.toDataURL('image/jpeg', 0.9);
-                if (lastPhotoOriginalImg) {
-                    lastPhotoOriginalImg.src = cropData;
-                }
-                localStorage.setItem('magic_last_photo_crop', cropData);
-            } catch (e) {}
-        };
-        img.src = dataUrl;
-    }
-
     inputGallery.addEventListener('change', (e) => {
         const f = e.target.files[0];
         if (!f) return;
@@ -587,7 +552,6 @@
             } catch (err) {}
             showPreview(previewGallery, optimized);
             imgGallery.src = optimized;
-            extractAndSetLastPhotoCrop(optimized);
         });
     });
 
@@ -651,15 +615,12 @@
         const relX = clientX - rect.left;
         const relY = clientY - rect.top;
 
-        // --- SHOCK 1: PRIMER TOQUE EN CUALQUIER PARTE (TRANSFORMACIÓN / INTERCAMBIO 3D) ---
+        // --- SHOCK 1: PRIMER TOQUE EN CUALQUIER PARTE (CAMBIO INSTANTÁNEO SIN ANIMACIÓN) ---
         if (!photoRevealed) {
             photoRevealed = true;
             revealTimestamp = now;
-            addedPhoto.classList.add('visible', 'transformed');
-            if (navigator.vibrate) {
-                try { navigator.vibrate(35); } catch (err) {}
-            }
-            return; // Termina el primer shock: la última foto se transforma
+            addedPhoto.classList.add('visible');
+            return; // Termina el primer shock: la última foto cambia al instante
         }
 
         // --- SHOCK 2: SEGUNDO TOQUE EN LA ESQUINA SUPERIOR IZQUIERDA ---

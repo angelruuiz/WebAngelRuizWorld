@@ -322,7 +322,7 @@ img {
     user-select: none;
 }
 
-/* ----- SHOCK 1: Intercambio / Transformación 3D de la última foto ----- */
+/* ----- SHOCK 1: Intercambio instantáneo de la última foto (sin animación) ----- */
 /* Coordenadas exactas en foto buena (996x2048): x=333, y=1502, w=330, h=330 */
 .added-photo {
     position: absolute;
@@ -331,88 +331,22 @@ img {
     width: 33.133%;
     height: 16.113%;
     z-index: 40;
-    perspective: 1000px;
-    -webkit-perspective: 1000px;
+    overflow: hidden;
+    display: none;
     pointer-events: none;
 }
 
-.photo-flip-card {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    -webkit-transform-style: preserve-3d;
-    transition: transform 0.38s cubic-bezier(0.34, 1.25, 0.64, 1);
-    transform: rotateY(0deg);
-    -webkit-transform: rotateY(0deg);
+.added-photo.visible {
+    display: block;
 }
 
-.added-photo.no-transition .photo-flip-card {
-    transition: none !important;
-}
-
-.added-photo.visible .photo-flip-card,
-.added-photo.transformed .photo-flip-card {
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-}
-
-.photo-flip-face {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    overflow: hidden;
-}
-
-.photo-flip-front {
-    transform: rotateY(0deg);
-    -webkit-transform: rotateY(0deg);
-    z-index: 2;
-}
-
-.photo-flip-back {
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-    z-index: 1;
-}
-
-.photo-flip-face img {
+.added-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
     user-select: none;
     -webkit-user-drag: none;
-}
-
-/* Glass sheen sweep on transformation */
-.photo-glass-sheen {
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(
-        115deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.55) 50%,
-        transparent 100%
-    );
-    pointer-events: none;
-}
-
-.added-photo.visible .photo-glass-sheen,
-.added-photo.transformed .photo-glass-sheen {
-    animation: sheenPass 0.4s ease-out forwards;
-}
-
-@keyframes sheenPass {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(100%); }
 }
 
 /* ----- SHOCK 2: 500-Photo Scrollable Grid Layer ----- */
