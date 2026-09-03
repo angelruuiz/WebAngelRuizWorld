@@ -71,6 +71,11 @@ const HeroClient = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                     {/* Left Column: Títulos y CTA Principal */}
                     <div className="lg:col-span-7 flex flex-col items-start text-left">
+                        {/* Seasonal urgency micro-badge */}
+                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#d4a853]/10 border border-[#d4a853]/30 text-[#d4a853] text-[11px] sm:text-xs font-semibold tracking-wider uppercase mb-5 backdrop-blur-md">
+                            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                            <span>Agenda 2026 Abierta · Reserva Anticipada</span>
+                        </div>
                         <h1 className="sr-only">Ángel Ruiz - Mago e Ilusionista en Madrid</h1>
                         <div className="font-[Cinzel] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 md:mb-6 tracking-wider drop-shadow-lg leading-none pointer-events-none flex flex-col items-start" aria-hidden="true" role="presentation">
                             <span className="text-[#d4a853] block mb-1"><SplitText text="ANGEL" /></span>

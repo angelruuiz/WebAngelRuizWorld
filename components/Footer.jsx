@@ -1,6 +1,26 @@
+"use client";
+import { usePathname } from 'next/navigation';
 import { ArrowRight, Share2, WhatsApp } from './Icons';
 
 const Footer = ({ onOpenContact, isLight = false }) => {
+    const pathname = usePathname() || '';
+    
+    let waMessage = 'Hola Ángel, quisiera consultar disponibilidad y presupuesto para un evento';
+    if (pathname.includes('/bodas')) {
+        waMessage = '¡Hola Ángel! Nos casamos y nos gustaría consultar disponibilidad y presupuesto para nuestra boda';
+    } else if (pathname.includes('/empresas') || pathname.includes('navidad') || pathname.includes('cenas')) {
+        waMessage = 'Hola Ángel, quisiera consultar disponibilidad y tarifas para un evento de empresa / cena corporativa';
+    } else if (pathname.includes('/comuniones')) {
+        waMessage = 'Hola Ángel, me gustaría consultar disponibilidad y presupuesto para una comunión familiar';
+    } else if (pathname.includes('/cumpleanos') || pathname.includes('fiestas')) {
+        waMessage = 'Hola Ángel, me gustaría consultar disponibilidad para una fiesta de cumpleaños privada';
+    } else if (pathname.startsWith('/mago-') && !pathname.includes('close-up') && !pathname.includes('madrid')) {
+        const slug = pathname.replace('/mago-', '').replace(/-/g, ' ');
+        const city = slug.charAt(0).toUpperCase() + slug.slice(1);
+        waMessage = `Hola Ángel, organizamos un evento en ${city} y nos gustaría consultar fechas y tarifas`;
+    }
+    
+    const waUrl = `https://wa.me/34648055636?text=${encodeURIComponent(waMessage)}`;
     return (
         <>
         <div className="divider-animated"></div>
@@ -78,7 +98,7 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                             </p>
                             
                             <a 
-                                href="https://wa.me/34648055636?text=Hola%20%C3%81ngel%2C%20quisiera%20consultar%20disponibilidad%20y%20presupuesto%20para%20un%20evento"
+                                href={waUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="mt-4 flex items-center justify-center gap-2 bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366]/20 transition-colors w-fit px-5 py-2.5 rounded-full font-medium"
@@ -110,7 +130,7 @@ const Footer = ({ onOpenContact, isLight = false }) => {
 
             {/* WhatsApp Floating Action Button - Mobile only */}
             <a
-                href="https://wa.me/34648055636?text=Hola%20%C3%81ngel%2C%20quisiera%20consultar%20disponibilidad%20y%20presupuesto%20para%20un%20evento"
+                href={waUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="fab-whatsapp fixed bottom-24 right-6 z-[100] md:hidden bg-green-500 w-14 h-14 rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 hover:bg-green-600 transition-colors active:scale-95"
