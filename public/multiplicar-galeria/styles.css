@@ -4,6 +4,10 @@
    Smooth Inertial Scrolling • Pixel-Matched Replacement
    ================================================================ */
 
+:root {
+    --gallery-top-offset: max(calc(env(safe-area-inset-top, 40px) - 14px), 30px);
+}
+
 /* ===== RESET & BEHAVIOR LOCKDOWN ===== */
 *, *::before, *::after {
     margin: 0;
@@ -269,6 +273,29 @@ img {
     height: 100%;
     overflow: hidden;
     background: #000000;
+}
+
+/* Base gallery layer: shifted down so the status bar does not cover Fototeca and Seleccionar */
+.base-gallery-layer {
+    position: absolute;
+    top: var(--gallery-top-offset);
+    left: 0;
+    width: 100%;
+    height: calc(100% - var(--gallery-top-offset));
+    overflow: hidden;
+    z-index: 20;
+}
+
+/* Subtle top scrim for seamless iPhone status bar integration */
+.status-bar-scrim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: max(env(safe-area-inset-top, 44px), 34px);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.96) 0%, rgba(0, 0, 0, 0.45) 60%, transparent 100%);
+    pointer-events: none;
+    z-index: 35;
 }
 
 /* Base screenshot: pixel-exact real iPhone interface */

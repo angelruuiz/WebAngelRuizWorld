@@ -66,13 +66,19 @@
             <!-- ==================== STATE 1 & 2: THE REAL GALLERY (SAME FRAME & PROPORTION) ==================== -->
             <div id="state-1" class="state">
                 <div class="gallery-wrapper" id="gallery-wrapper">
-                    <!-- Base gallery screenshot (real header, real tabs, real photos) -->
-                    <img id="img-gallery" class="fullscreen-img" src="/multiplicar-galeria/foto galeria.jpeg" alt="" draggable="false">
+                    <!-- Status bar gradient for seamless mobile blend -->
+                    <div class="status-bar-scrim"></div>
 
-                    <!-- Overlay 1: Trick photo that pops into the empty center spot on first tap -->
-                    <div id="added-photo" class="added-photo">
-                        <img id="added-photo-img" src="" alt="" draggable="false">
-                        <div class="photo-glass-sheen"></div>
+                    <!-- Base gallery layer: shifted down so the status bar does not cover Fototeca and Seleccionar -->
+                    <div class="base-gallery-layer" id="base-gallery-layer">
+                        <!-- Base gallery screenshot (real header, real tabs, real photos) -->
+                        <img id="img-gallery" class="fullscreen-img" src="/multiplicar-galeria/foto galeria.jpeg" alt="" draggable="false">
+
+                        <!-- Overlay 1: Trick photo that pops into the empty center spot on first tap -->
+                        <div id="added-photo" class="added-photo">
+                            <img id="added-photo-img" src="" alt="" draggable="false">
+                            <div class="photo-glass-sheen"></div>
+                        </div>
                     </div>
 
                     <!-- Overlay 2: Multiplied 500-photo scrollable grid -->
