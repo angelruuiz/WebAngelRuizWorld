@@ -31,6 +31,10 @@
 
     // ===== ELEMENTOS DEL DOM =====
     const allStates             = document.querySelectorAll('.state');
+    const deviceFrame           = document.getElementById('device-frame');
+    const state3                = document.getElementById('state-3');
+    const zoomProxyContainer    = document.getElementById('zoom-proxy-container');
+    const zoomProxyImg          = document.getElementById('zoom-proxy-img');
     const inputTrick            = document.getElementById('input-trick');
     const inputGallery          = document.getElementById('input-gallery');
     const previewTrick          = document.getElementById('preview-trick');
@@ -48,6 +52,10 @@
     const triggerZone           = document.getElementById('trigger-zone');
     const viewerBack            = document.getElementById('viewer-back');
     const viewerImg             = document.getElementById('viewer-img');
+
+    let activeCell              = null;
+    let isAnimatingPhoto        = false;
+    let viewerOpen              = false;
 
     // ===== IMAGEN DE MUESTRA POR DEFECTO =====
     function createDefaultTrickImage() {
@@ -100,11 +108,154 @@
         multipliedScrollTrack.appendChild(fragment);
     }
 
+    // ===== ANIMACIÓN DE ZOOM MORPHING ESTILO iOS 18 =====
+    function openPhotoViewer(cell) {
+        if (isAnimatingPhoto || viewerOpen) return;
+        isAnimatingPhoto = true;
+        viewerOpen = true;
+        activeCell = cell;
+
+        // Cargar imagen en visor y proxy
+        zoomProxyImg.src = trickImageData;
+        viewerImg.src = trickImageData;
+
+        // 1. Posición y dimensiones de la celda pulsada en el viewport relativo
+        const frameRect = deviceFrame.getBoundingClientRect();
+        const cellRect = cell.getBoundingClientRect();
+
+        const startX = cellRect.left - frameRect.left;
+        const startY = cellRect.top - frameRect.top;
+        const startW = cellRect.width;
+        const startH = cellRect.height;
+
+        // Ocultar la celda pulsada para que la transición sea limpia
+        cell.style.opacity = '0';
+
+        // 2. Colocar el proxy exactamente en la celda
+        zoomProxyContainer.style.transition = 'none';
+        zoomProxyContainer.style.left = startX + 'px';
+        zoomProxyContainer.style.top = startY + 'px';
+        zoomProxyContainer.style.width = startW + 'px';
+        zoomProxyContainer.style.height = startH + 'px';
+        zoomProxyContainer.style.borderRadius = '0px';
+        zoomProxyContainer.style.display = 'block';
+
+        // 3. Activar el contenedor de pantalla completa pero con la foto invisible
+        viewerImg.style.opacity = '0';
+        viewerImg.style.transform = 'none';
+        state3.classList.add('active');
+        state3.classList.remove('in');
+        state3.style.backgroundColor = 'transparent';
+
+        // 4. Medir dónde queda centrada la foto final en el visor
+        requestAnimationFrame(() => {
+            const finalImgRect = viewerImg.getBoundingClientRect();
+            let finalX = finalImgRect.left - frameRect.left;
+            let finalY = finalImgRect.top - frameRect.top;
+            let finalW = finalImgRect.width;
+            let finalH = finalImgRect.height;
+
+            // Fallback de seguridad si aún no está renderizado
+            if (finalW <= 0 || finalH <= 0) {
+                finalW = frameRect.width;
+                finalH = frameRect.width;
+                finalX = 0;
+                finalY = Math.max(0, (frameRect.height - finalH) / 2);
+            }
+
+            // 5. Iniciar la animación fluida idéntica al iPhone
+            requestAnimationFrame(() => {
+                const easeCurve = 'cubic-bezier(0.32, 0.72, 0, 1)';
+                zoomProxyContainer.style.transition = `left 330ms ${easeCurve}, top 330ms ${easeCurve}, width 330ms ${easeCurve}, height 330ms ${easeCurve}`;
+                zoomProxyContainer.style.left = finalX + 'px';
+                zoomProxyContainer.style.top = finalY + 'px';
+                zoomProxyContainer.style.width = finalW + 'px';
+                zoomProxyContainer.style.height = finalH + 'px';
+
+                // Fade-in de fondo negro y controles del visor
+                state3.classList.add('in');
+
+                setTimeout(() => {
+                    viewerImg.style.opacity = '1';
+                    zoomProxyContainer.style.display = 'none';
+                    isAnimatingPhoto = false;
+                }, 340);
+            });
+        });
+    }
+
+    function closePhotoViewer() {
+        if (isAnimatingPhoto || !viewerOpen) return;
+        isAnimatingPhoto = true;
+
+        const frameRect = deviceFrame.getBoundingClientRect();
+        const currentImgRect = viewerImg.getBoundingClientRect();
+
+        const currX = currentImgRect.left - frameRect.left;
+        const currY = currentImgRect.top - frameRect.top;
+        const currW = currentImgRect.width;
+        const currH = currentImgRect.height;
+
+        let targetX = currX;
+        let targetY = currY;
+        let targetW = currW;
+        let targetH = currH;
+
+        if (activeCell) {
+            const cellRect = activeCell.getBoundingClientRect();
+            targetX = cellRect.left - frameRect.left;
+            targetY = cellRect.top - frameRect.top;
+            targetW = cellRect.width;
+            targetH = cellRect.height;
+        }
+
+        // Colocar el proxy exactamente donde está la foto ampliada
+        zoomProxyContainer.style.transition = 'none';
+        zoomProxyContainer.style.left = currX + 'px';
+        zoomProxyContainer.style.top = currY + 'px';
+        zoomProxyContainer.style.width = currW + 'px';
+        zoomProxyContainer.style.height = currH + 'px';
+        zoomProxyContainer.style.display = 'block';
+
+        // Ocultar foto fija
+        viewerImg.style.opacity = '0';
+        viewerImg.style.transform = 'none';
+
+        // Desvanecer fondo negro y controles
+        state3.classList.remove('in');
+        state3.style.backgroundColor = 'transparent';
+
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                const easeCurve = 'cubic-bezier(0.32, 0.72, 0, 1)';
+                zoomProxyContainer.style.transition = `left 300ms ${easeCurve}, top 300ms ${easeCurve}, width 300ms ${easeCurve}, height 300ms ${easeCurve}`;
+                zoomProxyContainer.style.left = targetX + 'px';
+                zoomProxyContainer.style.top = targetY + 'px';
+                zoomProxyContainer.style.width = targetW + 'px';
+                zoomProxyContainer.style.height = targetH + 'px';
+
+                setTimeout(() => {
+                    zoomProxyContainer.style.display = 'none';
+                    if (activeCell) {
+                        activeCell.style.opacity = '1';
+                        activeCell = null;
+                    }
+                    state3.classList.remove('active');
+                    state3.style.backgroundColor = '';
+                    viewerImg.style.opacity = '1';
+                    viewerOpen = false;
+                    isAnimatingPhoto = false;
+                }, 310);
+            });
+        });
+    }
+
     // ===== DETECCIÓN INTELIGENTE DE TAP VS SCROLL EN 500 FOTOS =====
     let isScrollDragging = false;
     let touchStartX = 0;
     let touchStartY = 0;
     let touchStartTime = 0;
+    let touchHandled = false;
 
     multipliedGrid.addEventListener('touchstart', (e) => {
         isScrollDragging = false;
@@ -130,26 +281,40 @@
         if (!isScrollDragging && tapDuration < 350) {
             const cell = e.target.closest('.multiplied-cell');
             if (cell) {
-                setState(3); // Abre el visor a pantalla completa
+                touchHandled = true;
+                setTimeout(() => { touchHandled = false; }, 400);
+                openPhotoViewer(cell); // Abre con zoom cinematográfico de iOS
             }
         }
     });
 
     // Soporte para clics de ratón en PC
     multipliedGrid.addEventListener('click', (e) => {
+        if (touchHandled) return;
         const cell = e.target.closest('.multiplied-cell');
         if (cell) {
-            setState(3);
+            openPhotoViewer(cell);
         }
     });
 
     // ===== MÁQUINA DE ESTADOS =====
     function setState(n) {
-        allStates.forEach(s => s.classList.remove('active'));
+        if (n !== 3) {
+            allStates.forEach(s => s.classList.remove('active'));
+        }
 
         switch (n) {
             case 0:
                 document.getElementById('state-0').classList.add('active');
+                viewerOpen = false;
+                isAnimatingPhoto = false;
+                state3.classList.remove('active', 'in');
+                state3.style.backgroundColor = '';
+                zoomProxyContainer.style.display = 'none';
+                if (activeCell) {
+                    activeCell.style.opacity = '1';
+                    activeCell = null;
+                }
                 break;
 
             case 1:
@@ -158,6 +323,14 @@
                 photoRevealed = false;
                 gridMultiplied = false;
                 revealTimestamp = 0;
+                viewerOpen = false;
+                isAnimatingPhoto = false;
+                state3.classList.remove('active', 'in');
+                zoomProxyContainer.style.display = 'none';
+                if (activeCell) {
+                    activeCell.style.opacity = '1';
+                    activeCell = null;
+                }
                 addedPhoto.classList.remove('visible');
                 multipliedGrid.classList.remove('active');
                 floatingHeader.classList.remove('visible');
@@ -186,9 +359,10 @@
                 break;
 
             case 3:
-                // Visor a pantalla completa
-                document.getElementById('state-3').classList.add('active');
-                viewerImg.src = trickImageData;
+                // Si se llama directamente a State 3
+                if (multipliedScrollTrack.firstElementChild) {
+                    openPhotoViewer(multipliedScrollTrack.firstElementChild);
+                }
                 break;
         }
     }
@@ -262,6 +436,15 @@
     bindUniversalTap(btnArm, (e) => {
         if (e.preventDefault) e.preventDefault();
         gridBuilt = false;
+        viewerOpen = false;
+        isAnimatingPhoto = false;
+        state3.classList.remove('active', 'in');
+        state3.style.backgroundColor = '';
+        zoomProxyContainer.style.display = 'none';
+        if (activeCell) {
+            activeCell.style.opacity = '1';
+            activeCell = null;
+        }
         setState(1);
     });
 
@@ -316,12 +499,73 @@
     bindUniversalTap(galleryWrapper, handleGalleryTap);
     bindUniversalTap(triggerZone, handleGalleryTap);
 
-    // ===== ESTADO 3: BOTÓN VOLVER =====
+    // ===== ESTADO 3: BOTÓN VOLVER (ANIMACIÓN DE SALIDA TIPO iOS) =====
     bindUniversalTap(viewerBack, (e) => {
         if (e.preventDefault) e.preventDefault();
         if (e.stopPropagation) e.stopPropagation();
-        // Vuelve a la galería de 500 fotos
-        setState(2);
+        closePhotoViewer();
+    });
+
+    // ===== GESTO NATIVO iOS: DESLIZAR HACIA ABAJO PARA CERRAR LA FOTO =====
+    let viewerTouchStartY = 0;
+    let viewerTouchStartX = 0;
+    let viewerIsDragging = false;
+
+    state3.addEventListener('touchstart', (e) => {
+        if (!viewerOpen || isAnimatingPhoto) return;
+        // No interceptar clics en botones de acción
+        if (e.target.closest('#viewer-back') || e.target.closest('.viewer-action-btn') || e.target.closest('.glass-icon-btn')) {
+            return;
+        }
+        if (e.touches && e.touches.length === 1) {
+            viewerTouchStartX = e.touches[0].clientX;
+            viewerTouchStartY = e.touches[0].clientY;
+            viewerIsDragging = false;
+        }
+    }, { passive: true });
+
+    state3.addEventListener('touchmove', (e) => {
+        if (!viewerOpen || isAnimatingPhoto) return;
+        if (!e.touches || e.touches.length !== 1) return;
+
+        const dy = e.touches[0].clientY - viewerTouchStartY;
+        const dx = Math.abs(e.touches[0].clientX - viewerTouchStartX);
+
+        // Deslizar verticalmente hacia abajo
+        if (dy > 8 && dy > dx) {
+            viewerIsDragging = true;
+            const progress = Math.min(dy / 280, 1);
+            const scale = Math.max(1 - progress * 0.22, 0.78);
+            viewerImg.style.transition = 'none';
+            viewerImg.style.transform = `translateY(${dy}px) scale(${scale})`;
+            state3.style.backgroundColor = `rgba(0, 0, 0, ${Math.max(1 - progress * 0.75, 0.2)})`;
+        }
+    }, { passive: true });
+
+    state3.addEventListener('touchend', (e) => {
+        if (!viewerOpen || isAnimatingPhoto || !viewerIsDragging) return;
+        viewerIsDragging = false;
+
+        const dy = e.changedTouches && e.changedTouches.length > 0
+            ? (e.changedTouches[0].clientY - viewerTouchStartY)
+            : 0;
+
+        if (dy > 70) {
+            // Umbral superado: cerrar la foto hacia su celda original
+            viewerImg.style.transition = 'none';
+            closePhotoViewer();
+        } else {
+            // Rebotar a posición original suavemente
+            const snapEase = 'cubic-bezier(0.32, 0.72, 0, 1)';
+            viewerImg.style.transition = `transform 0.24s ${snapEase}`;
+            viewerImg.style.transform = 'none';
+            state3.style.transition = `background-color 0.24s ${snapEase}`;
+            state3.style.backgroundColor = '#000000';
+            setTimeout(() => {
+                viewerImg.style.transition = '';
+                state3.style.transition = '';
+            }, 250);
+        }
     });
 
     // ===== RESET SECRETO: TRIPLE TAP EN LA ESQUINA SUPERIOR DERECHA =====
