@@ -142,12 +142,13 @@
         zoomProxyContainer.style.borderRadius = '0px';
         zoomProxyContainer.style.display = 'block';
 
-        // 3. Activar el contenedor de pantalla completa pero con la foto invisible
+        // 3. Activar inmediatamente el fondo negro sólido para tapar la cuadrícula
         viewerImg.style.opacity = '0';
         viewerImg.style.transform = 'none';
+        state3.style.transition = 'none';
+        state3.style.backgroundColor = '#000000';
         state3.classList.add('active');
         state3.classList.remove('in');
-        state3.style.backgroundColor = 'transparent';
 
         // 4. Medir dónde queda centrada la foto final en el visor
         requestAnimationFrame(() => {
@@ -223,8 +224,9 @@
         viewerImg.style.opacity = '0';
         viewerImg.style.transform = 'none';
 
-        // Desvanecer fondo negro y controles
+        // Desvanecer fondo negro y controles suavemente hacia la cuadricula
         state3.classList.remove('in');
+        state3.style.transition = 'background-color 280ms cubic-bezier(0.32, 0.72, 0, 1)';
         state3.style.backgroundColor = 'transparent';
 
         requestAnimationFrame(() => {
@@ -243,7 +245,8 @@
                         activeCell = null;
                     }
                     state3.classList.remove('active');
-                    state3.style.backgroundColor = '';
+                    state3.style.backgroundColor = '#000000';
+                    state3.style.transition = '';
                     viewerImg.style.opacity = '1';
                     viewerOpen = false;
                     isAnimatingPhoto = false;
