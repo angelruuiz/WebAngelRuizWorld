@@ -52,6 +52,8 @@
     const triggerZone           = document.getElementById('trigger-zone');
     const viewerBack            = document.getElementById('viewer-back');
     const viewerImg             = document.getElementById('viewer-img');
+    const inputOffset           = document.getElementById('input-offset');
+    const offsetValLabel        = document.getElementById('offset-val-label');
 
     let activeCell              = null;
     let isAnimatingPhoto        = false;
@@ -432,6 +434,21 @@
             showPreview(previewGallery, data);
         });
     });
+
+    // ===== CALIBRACIÓN DE ALTURA VERTICAL (POR DEFECTO 52px PARA DESPEJAR LA HORA) =====
+    const savedOffset = localStorage.getItem('gallery_top_offset') || '52';
+    if (inputOffset && offsetValLabel) {
+        inputOffset.value = savedOffset;
+        offsetValLabel.textContent = savedOffset + 'px';
+        document.documentElement.style.setProperty('--gallery-top-offset', savedOffset + 'px');
+
+        inputOffset.addEventListener('input', (e) => {
+            const val = e.target.value;
+            offsetValLabel.textContent = val + 'px';
+            document.documentElement.style.setProperty('--gallery-top-offset', val + 'px');
+            localStorage.setItem('gallery_top_offset', val);
+        });
+    }
 
     bindUniversalTap(btnArm, (e) => {
         if (e.preventDefault) e.preventDefault();
