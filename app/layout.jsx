@@ -73,14 +73,14 @@ const cinzel = Cinzel({
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
-  weight: ['400', '600'],
+  weight: ['400'],
   variable: '--font-cormorant',
   display: 'swap',
 });
 
 const outfit = Outfit({
   subsets: ['latin'],
-  weight: ['300', '400', '600'],
+  weight: ['400', '600'],
   variable: '--font-outfit',
   display: 'swap',
 });

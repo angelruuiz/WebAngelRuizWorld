@@ -16,9 +16,9 @@ const SplitText = ({ text }) => {
             {text.split("").map((char, index) => (
                 <motion.span 
                     key={index} 
-                    initial={{ opacity: 0, y: 30 }} 
+                    initial={{ opacity: 0, y: 15 }} 
                     animate={{ opacity: 1, y: 0 }} 
-                    transition={{ duration: 0.8, delay: index * 0.08, ease: [0.23, 1, 0.32, 1] }} 
+                    transition={{ duration: 0.35, delay: index * 0.03, ease: "easeOut" }} 
                     style={{ display: 'inline-block' }}
                 >
                     {char === " " ? "\u00A0" : char}
@@ -38,18 +38,16 @@ const HeroClient = () => {
                 <DesktopHeroVideo />
                 {/* Mobile: poster ultra optimizado (10 KiB) */}
                 <div className="block md:hidden absolute inset-0">
-                    <picture>
-                        <source srcSet="/images/hero-poster-mobile.webp" type="image/webp" />
-                        <img 
-                            src="/images/hero-poster-mobile.webp" 
-                            alt="Ángel Ruiz, mago e ilusionista profesional en Madrid" 
-                            className="w-full h-full object-cover object-[50%_75%]" 
-                            loading="eager"
-                            fetchPriority="high"
-                            width={750}
-                            height={422}
-                        />
-                    </picture>
+                    <img 
+                        src="/images/hero-poster-mobile.webp" 
+                        alt="Ángel Ruiz, mago e ilusionista profesional en Madrid" 
+                        className="w-full h-full object-cover object-[50%_75%]" 
+                        loading="eager"
+                        fetchPriority="high"
+                        decoding="async"
+                        width={750}
+                        height={422}
+                    />
                 </div>
                 <div className='absolute inset-0 bg-gradient-to-b from-[#030712]/60 via-[#030712]/40 to-[#030712]' />
                 <div className='absolute inset-0 bg-gradient-to-r from-[#030712]/80 via-[#030712]/30 to-transparent' />
@@ -70,22 +68,22 @@ const HeroClient = () => {
                             <span className="text-white block"><SplitText text="RUIZ" /></span>
                         </div>
                         
-                        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1.0, duration: 1 }} className="my-2 md:my-4">
+                        <motion.div initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15, duration: 0.4 }} className="my-2 md:my-4">
                             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-200 tracking-[0.15em] uppercase border-l-4 border-[#d4a853]/50 py-2.5 md:py-3 px-4 md:px-6 inline-block backdrop-blur-md bg-white/5 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] text-left leading-relaxed font-accent rounded-r-xl">
                                 Ilusionista profesional con más de <span className="font-[Cinzel] font-bold text-[#d4a853] text-sm sm:text-lg md:text-xl lg:text-3xl">10</span> años de experiencia
                             </p>
                         </motion.div>
                         
-                        <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.5, duration: 1 }} className="text-slate-400 text-xs sm:text-sm md:text-base font-light italic mt-2 md:mt-4 px-4 font-accent tracking-[0.08em] border-l border-white/20 pl-6">
+                        <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25, duration: 0.4 }} className="text-slate-400 text-xs sm:text-sm md:text-base font-light italic mt-2 md:mt-4 px-4 font-accent tracking-[0.08em] border-l border-white/20 pl-6">
                             "LA MAGIA QUE HACE QUE TU EVENTO SEA INOLVIDABLE."
                         </motion.p>
                     </div>
 
                     {/* Right Column: Formulario Visible Liquid Glass */}
                     <motion.div 
-                        initial={{ opacity: 0, y: 30 }}
+                        initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 1.2, duration: 1 }}
+                        transition={{ delay: 0.2, duration: 0.4 }}
                         className="lg:col-span-5 w-full max-w-lg mx-auto lg:mx-0 z-20"
                     >
                         <LiquidGlassForm />
