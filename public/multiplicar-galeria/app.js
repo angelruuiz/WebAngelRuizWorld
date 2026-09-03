@@ -110,12 +110,62 @@
         multipliedScrollTrack.appendChild(fragment);
     }
 
+    // ===== SISTEMA DE ZOOM Y PANEO INTERACTIVO (PINCH, DOUBLE-TAP Y WHEEL) =====
+    let currentScale = 1;
+    let currentPanX  = 0;
+    let currentPanY  = 0;
+    const MIN_ZOOM   = 1;
+    const MAX_ZOOM   = 3.5;
+
+    function applyViewerTransform(animate = false, duration = 280) {
+        if (animate) {
+            viewerImg.style.transition = `transform ${duration}ms cubic-bezier(0.32, 0.72, 0, 1)`;
+        } else {
+            viewerImg.style.transition = 'none';
+        }
+        viewerImg.style.transform = `translate3d(${currentPanX}px, ${currentPanY}px, 0) scale(${currentScale})`;
+    }
+
+    function clampPan() {
+        if (currentScale <= 1) {
+            currentPanX = 0;
+            currentPanY = 0;
+            return;
+        }
+        const frameRect = deviceFrame.getBoundingClientRect();
+        const maxPanX = Math.max(0, (frameRect.width * (currentScale - 1)) / 2);
+        const maxPanY = Math.max(0, (frameRect.height * (currentScale - 1)) / 2);
+
+        currentPanX = Math.max(-maxPanX, Math.min(maxPanX, currentPanX));
+        currentPanY = Math.max(-maxPanY, Math.min(maxPanY, currentPanY));
+    }
+
+    function resetViewerZoom(animate = true) {
+        currentScale = 1;
+        currentPanX = 0;
+        currentPanY = 0;
+        applyViewerTransform(animate);
+        if (animate) {
+            setTimeout(() => {
+                if (currentScale === 1) {
+                    viewerImg.style.transition = '';
+                    viewerImg.style.transform = 'none';
+                }
+            }, 290);
+        } else {
+            viewerImg.style.transition = '';
+            viewerImg.style.transform = 'none';
+        }
+    }
+
     // ===== ANIMACIÓN DE ZOOM MORPHING ESTILO iOS 18 =====
     function openPhotoViewer(cell) {
         if (isAnimatingPhoto || viewerOpen) return;
         isAnimatingPhoto = true;
         viewerOpen = true;
         activeCell = cell;
+
+        resetViewerZoom(false);
 
         // Cargar imagen en visor y proxy
         zoomProxyImg.src = trickImageData;
@@ -190,6 +240,8 @@
     function closePhotoViewer() {
         if (isAnimatingPhoto || !viewerOpen) return;
         isAnimatingPhoto = true;
+
+        resetViewerZoom(false);
 
         const frameRect = deviceFrame.getBoundingClientRect();
         const currentImgRect = viewerImg.getBoundingClientRect();
@@ -526,67 +578,198 @@
         closePhotoViewer();
     });
 
-    // ===== GESTO NATIVO iOS: DESLIZAR HACIA ABAJO PARA CERRAR LA FOTO =====
-    let viewerTouchStartY = 0;
-    let viewerTouchStartX = 0;
-    let viewerIsDragging = false;
+    // ===== GESTOS EN EL VISOR: PINCH-TO-ZOOM, DOBLE TAP, PANEO Y DRAG TO DISMISS =====
+    let touchMode          = 'none'; // 'pinch', 'pan', 'drag_dismiss', 'maybe_tap'
+    let singleTouchStartX  = 0;
+    let singleTouchStartY  = 0;
+    let panStartOffsetX    = 0;
+    let panStartOffsetY    = 0;
+
+    let pinchStartDist     = 0;
+    let pinchStartScale    = 1;
+
+    let lastTapTime        = 0;
+    let lastTapX           = 0;
+    let lastTapY           = 0;
 
     state3.addEventListener('touchstart', (e) => {
         if (!viewerOpen || isAnimatingPhoto) return;
-        // No interceptar clics en botones de acción
+        // Evitar interceptar clics en botones de acción o volver
         if (e.target.closest('#viewer-back') || e.target.closest('.viewer-action-btn') || e.target.closest('.glass-icon-btn')) {
             return;
         }
-        if (e.touches && e.touches.length === 1) {
-            viewerTouchStartX = e.touches[0].clientX;
-            viewerTouchStartY = e.touches[0].clientY;
-            viewerIsDragging = false;
+
+        if (e.touches.length === 2) {
+            // GESTO DE 2 DEDOS: PELLIZCAR PARA HACER ZOOM (PINCH-TO-ZOOM)
+            touchMode = 'pinch';
+            pinchStartDist = Math.hypot(
+                e.touches[0].clientX - e.touches[1].clientX,
+                e.touches[0].clientY - e.touches[1].clientY
+            );
+            pinchStartScale = currentScale;
+            viewerImg.style.transition = 'none';
+        } else if (e.touches.length === 1) {
+            const touch = e.touches[0];
+            singleTouchStartX = touch.clientX;
+            singleTouchStartY = touch.clientY;
+            panStartOffsetX = currentPanX;
+            panStartOffsetY = currentPanY;
+
+            if (currentScale > 1.05) {
+                touchMode = 'pan';
+                viewerImg.style.transition = 'none';
+            } else {
+                touchMode = 'maybe_tap';
+            }
         }
-    }, { passive: true });
+    }, { passive: false });
 
     state3.addEventListener('touchmove', (e) => {
         if (!viewerOpen || isAnimatingPhoto) return;
-        if (!e.touches || e.touches.length !== 1) return;
 
-        const dy = e.touches[0].clientY - viewerTouchStartY;
-        const dx = Math.abs(e.touches[0].clientX - viewerTouchStartX);
+        if (touchMode === 'pinch' && e.touches.length === 2) {
+            if (e.cancelable) e.preventDefault();
+            const currentDist = Math.hypot(
+                e.touches[0].clientX - e.touches[1].clientX,
+                e.touches[0].clientY - e.touches[1].clientY
+            );
+            if (pinchStartDist > 0) {
+                let scale = pinchStartScale * (currentDist / pinchStartDist);
+                // Resistencia elástica fuera de rango
+                if (scale < 0.85) {
+                    scale = 0.85 + (scale - 0.85) * 0.25;
+                } else if (scale > 4.2) {
+                    scale = 4.2 + (scale - 4.2) * 0.25;
+                }
+                currentScale = scale;
+                applyViewerTransform(false);
+            }
+        } else if (touchMode === 'pan' && e.touches.length === 1) {
+            if (e.cancelable) e.preventDefault();
+            const touch = e.touches[0];
+            const dx = touch.clientX - singleTouchStartX;
+            const dy = touch.clientY - singleTouchStartY;
+            currentPanX = panStartOffsetX + dx;
+            currentPanY = panStartOffsetY + dy;
+            clampPan();
+            applyViewerTransform(false);
+        } else if ((touchMode === 'maybe_tap' || touchMode === 'drag_dismiss') && e.touches.length === 1) {
+            const touch = e.touches[0];
+            const dy = touch.clientY - singleTouchStartY;
+            const dx = Math.abs(touch.clientX - singleTouchStartX);
 
-        // Deslizar verticalmente hacia abajo
-        if (dy > 8 && dy > dx) {
-            viewerIsDragging = true;
-            const progress = Math.min(dy / 280, 1);
-            const scale = Math.max(1 - progress * 0.22, 0.78);
-            viewerImg.style.transition = 'none';
-            viewerImg.style.transform = `translateY(${dy}px) scale(${scale})`;
-            state3.style.backgroundColor = `rgba(0, 0, 0, ${Math.max(1 - progress * 0.75, 0.2)})`;
+            if (dy > 8 && dy > dx) {
+                touchMode = 'drag_dismiss';
+                if (e.cancelable) e.preventDefault();
+                const progress = Math.min(dy / 280, 1);
+                const scale = Math.max(1 - progress * 0.22, 0.78);
+                viewerImg.style.transition = 'none';
+                viewerImg.style.transform = `translate3d(0, ${dy}px, 0) scale(${scale})`;
+                state3.style.backgroundColor = `rgba(0, 0, 0, ${Math.max(1 - progress * 0.75, 0.2)})`;
+            }
         }
-    }, { passive: true });
+    }, { passive: false });
 
     state3.addEventListener('touchend', (e) => {
-        if (!viewerOpen || isAnimatingPhoto || !viewerIsDragging) return;
-        viewerIsDragging = false;
+        if (!viewerOpen || isAnimatingPhoto) return;
 
-        const dy = e.changedTouches && e.changedTouches.length > 0
-            ? (e.changedTouches[0].clientY - viewerTouchStartY)
-            : 0;
+        if (touchMode === 'pinch') {
+            if (e.touches.length < 2) {
+                touchMode = 'none';
+                if (currentScale < 1) {
+                    resetViewerZoom(true);
+                } else if (currentScale > MAX_ZOOM) {
+                    currentScale = MAX_ZOOM;
+                    clampPan();
+                    applyViewerTransform(true, 280);
+                } else {
+                    clampPan();
+                    applyViewerTransform(true, 240);
+                }
+            }
+        } else if (touchMode === 'pan') {
+            touchMode = 'none';
+            clampPan();
+            applyViewerTransform(true, 240);
+        } else if (touchMode === 'drag_dismiss') {
+            touchMode = 'none';
+            const dy = e.changedTouches && e.changedTouches.length > 0
+                ? (e.changedTouches[0].clientY - singleTouchStartY)
+                : 0;
 
-        if (dy > 70) {
-            // Umbral superado: cerrar la foto hacia su celda original
-            viewerImg.style.transition = 'none';
-            closePhotoViewer();
-        } else {
-            // Rebotar a posición original suavemente
-            const snapEase = 'cubic-bezier(0.32, 0.72, 0, 1)';
-            viewerImg.style.transition = `transform 0.24s ${snapEase}`;
-            viewerImg.style.transform = 'none';
-            state3.style.transition = `background-color 0.24s ${snapEase}`;
-            state3.style.backgroundColor = '#000000';
-            setTimeout(() => {
-                viewerImg.style.transition = '';
-                state3.style.transition = '';
-            }, 250);
+            if (dy > 70) {
+                viewerImg.style.transition = 'none';
+                closePhotoViewer();
+            } else {
+                const snapEase = 'cubic-bezier(0.32, 0.72, 0, 1)';
+                viewerImg.style.transition = `transform 0.24s ${snapEase}`;
+                viewerImg.style.transform = 'none';
+                state3.style.transition = `background-color 0.24s ${snapEase}`;
+                state3.style.backgroundColor = '#000000';
+                setTimeout(() => {
+                    viewerImg.style.transition = '';
+                    state3.style.transition = '';
+                }, 250);
+            }
+        } else if (touchMode === 'maybe_tap') {
+            // DETECTAR DOBLE TOQUE (DOUBLE-TAP TO ZOOM)
+            touchMode = 'none';
+            const now = Date.now();
+            const touch = e.changedTouches && e.changedTouches.length > 0 ? e.changedTouches[0] : null;
+
+            if (touch) {
+                const distFromLastTap = Math.hypot(touch.clientX - lastTapX, touch.clientY - lastTapY);
+                if (now - lastTapTime < 320 && distFromLastTap < 35) {
+                    // ¡DOBLE TOQUE RÁPIDO: ZOOM IN / ZOOM OUT!
+                    lastTapTime = 0;
+                    if (currentScale > 1.05) {
+                        resetViewerZoom(true);
+                    } else {
+                        currentScale = 2.2;
+                        const frameRect = deviceFrame.getBoundingClientRect();
+                        const tapRelX = touch.clientX - frameRect.left - frameRect.width / 2;
+                        const tapRelY = touch.clientY - frameRect.top - frameRect.height / 2;
+                        currentPanX = -tapRelX * (currentScale - 1) * 0.6;
+                        currentPanY = -tapRelY * (currentScale - 1) * 0.6;
+                        clampPan();
+                        applyViewerTransform(true, 300);
+                    }
+                    return;
+                }
+                lastTapTime = now;
+                lastTapX = touch.clientX;
+                lastTapY = touch.clientY;
+            }
         }
     });
+
+    // Soporte para zoom con rueda del ratón y doble clic en ordenadores
+    const viewerBody = document.querySelector('.viewer-body');
+    if (viewerBody) {
+        viewerBody.addEventListener('wheel', (e) => {
+            if (!viewerOpen) return;
+            e.preventDefault();
+            const delta = e.deltaY * -0.0025;
+            currentScale = Math.min(MAX_ZOOM, Math.max(1, currentScale + delta));
+            if (currentScale <= 1) {
+                resetViewerZoom(false);
+            } else {
+                clampPan();
+                applyViewerTransform(false);
+            }
+        }, { passive: false });
+
+        viewerBody.addEventListener('dblclick', (e) => {
+            if (!viewerOpen) return;
+            if (currentScale > 1.05) {
+                resetViewerZoom(true);
+            } else {
+                currentScale = 2.2;
+                clampPan();
+                applyViewerTransform(true, 300);
+            }
+        });
+    }
 
     // ===== RESET SECRETO: TRIPLE TAP EN LA ESQUINA SUPERIOR DERECHA =====
     let resetCount = 0;
