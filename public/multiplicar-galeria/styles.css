@@ -1,0 +1,674 @@
+/* ================================================================
+   iOS 18 Photos Clone — 500 Photos Infinite Magic Grid
+   Locked Aspect Ratio (783:1600) • Real-time Liquid Glass Controls
+   Smooth Inertial Scrolling • Pixel-Matched Replacement
+   ================================================================ */
+
+/* ===== RESET & BEHAVIOR LOCKDOWN ===== */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: touch;
+    background: #000000;
+    color: #FFFFFF;
+    font-family: -apple-system, 'SF Pro Text', 'SF Pro Display', 'SF Pro', 'Helvetica Neue', system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.3;
+    -webkit-font-smoothing: antialiased;
+    touch-action: manipulation;
+    -webkit-text-size-adjust: 100%;
+}
+
+button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
+img {
+    -webkit-user-drag: none;
+    user-drag: none;
+    pointer-events: none;
+}
+
+/* ===== APP VIEWPORT & LOCKED DEVICE FRAME ===== */
+.app-viewport {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000000;
+    overflow: hidden;
+}
+
+/* The frame locks strictly to 783/1600 aspect ratio across ALL STATES */
+.device-frame {
+    position: relative;
+    height: 100%;
+    aspect-ratio: 783 / 1600;
+    max-height: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    background: #000000;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 60px rgba(0, 0, 0, 0.95);
+}
+
+/* ===== STATE CONTAINERS ===== */
+.state {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.state.active {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ================================================================
+   STATE 0: SETUP
+   ================================================================ */
+#state-0 {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 24px 18px;
+    padding-top: max(env(safe-area-inset-top, 40px), 28px);
+    background: #000000;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.setup-wrapper {
+    width: 100%;
+    max-width: 340px;
+    padding-bottom: 30px;
+}
+
+.setup-brand {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.setup-emoji {
+    font-size: 44px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.setup-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: -0.3px;
+}
+
+.setup-desc {
+    font-size: 13px;
+    font-weight: 500;
+    color: #2997FF;
+    margin-top: 3px;
+    letter-spacing: 0.2px;
+}
+
+.setup-section {
+    margin-bottom: 18px;
+}
+
+.setup-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #8E8E93;
+    margin-bottom: 7px;
+    letter-spacing: -0.1px;
+}
+
+.hidden-input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.file-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 13px 16px;
+    background: rgba(44, 44, 46, 0.85);
+    backdrop-filter: blur(20px);
+    border: 0.5px solid rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2997FF;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.file-btn:active {
+    background: rgba(60, 60, 65, 0.95);
+}
+
+.preview {
+    margin-top: 8px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #1C1C1E;
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+}
+
+.preview:empty {
+    display: none;
+}
+
+.preview img {
+    width: 100%;
+    height: 68px;
+    object-fit: cover;
+    display: block;
+}
+
+.arm-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px 18px;
+    margin-top: 10px;
+    background: linear-gradient(180deg, #339DFF 0%, #0A84FF 100%);
+    border: none;
+    border-radius: 14px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 600;
+    box-shadow: 0 4px 18px rgba(10, 132, 255, 0.45);
+    transition: transform 0.12s, opacity 0.15s;
+}
+
+.arm-btn:active {
+    transform: scale(0.97);
+    opacity: 0.9;
+}
+
+.setup-instructions {
+    margin-top: 22px;
+    padding: 14px;
+    background: rgba(28, 28, 30, 0.75);
+    backdrop-filter: blur(20px);
+    border-radius: 12px;
+    border: 0.5px solid rgba(255, 255, 255, 0.08);
+}
+
+.setup-instructions p {
+    font-size: 12px;
+    color: #AEAEB2;
+    line-height: 1.5;
+    margin-bottom: 6px;
+}
+
+.setup-instructions p:last-child {
+    margin-bottom: 0;
+}
+
+.setup-instructions strong {
+    color: #FFFFFF;
+}
+
+
+/* ================================================================
+   STATE 1 & 2: THE REAL GALLERY SCREEN (LOCKED 783:1600 PROPORTION)
+   ================================================================ */
+#state-1 {
+    display: none;
+    background: #000000;
+}
+
+#state-1.active {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #000000;
+}
+
+/* Base screenshot: pixel-exact real iPhone interface */
+.fullscreen-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: fill;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* ----- SHOCK 1: Overlay photo in the empty center cell ----- */
+/* Cell coords in 783x1600: x=261, y=1194, w=260, h=260 */
+.added-photo {
+    position: absolute;
+    left: 33.333%;
+    top: 74.625%;
+    width: 33.205%;
+    height: 16.250%;
+    z-index: 40;
+    overflow: hidden;
+    opacity: 0;
+    transform: scale(0.92);
+    pointer-events: none;
+    transition: 
+        opacity 0.2s cubic-bezier(0.2, 0.9, 0.3, 1),
+        transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.added-photo.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.added-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Glass sheen sweep */
+.photo-glass-sheen {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(
+        115deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.45) 50%,
+        transparent 100%
+    );
+    pointer-events: none;
+}
+
+.added-photo.visible .photo-glass-sheen {
+    animation: sheenPass 0.35s ease-out forwards;
+}
+
+@keyframes sheenPass {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(100%); }
+}
+
+/* ----- SHOCK 2: 500-Photo Scrollable Grid Layer ----- */
+.multiplied-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+    touch-action: pan-y;
+    opacity: 0;
+    pointer-events: none;
+    background: #000000;
+    transition: opacity 0.08s ease;
+}
+
+.multiplied-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.multiplied-grid {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.multiplied-grid.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.multiplied-scroll-track {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5px;
+    padding-top: calc(146px * (100vw / 783));
+    padding-bottom: calc(146px * (100vw / 783));
+}
+
+@media (min-width: 480px) {
+    .multiplied-scroll-track {
+        padding-top: 75px;
+        padding-bottom: 85px;
+    }
+}
+
+.multiplied-cell {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    overflow: hidden;
+    background: #000000;
+    cursor: pointer;
+}
+
+.multiplied-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+}
+
+/* Floating Liquid Glass Header on State 2 */
+#floating-header {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+    z-index: 60;
+}
+
+#floating-header.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Floating Liquid Glass Tab Bar on State 2 */
+#floating-tabbar {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+    z-index: 60;
+}
+
+#floating-tabbar.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Invisible secret trigger zone: top-left corner */
+.trigger-zone {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 140px;
+    z-index: 100;
+    background: transparent;
+    cursor: pointer;
+}
+
+
+/* ================================================================
+   LIQUID GLASS COMPONENTS (iOS 18)
+   ================================================================ */
+.liquid-glass-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: max(env(safe-area-inset-top, 40px), 16px);
+    background: linear-gradient(180deg, 
+        rgba(0, 0, 0, 0.88) 0%, 
+        rgba(0, 0, 0, 0.65) 65%, 
+        rgba(0, 0, 0, 0.0) 100%
+    );
+    backdrop-filter: blur(28px) saturate(200%);
+    -webkit-backdrop-filter: blur(28px) saturate(200%);
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+}
+
+.photos-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4px 16px 12px;
+}
+
+.photos-title-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.photos-title {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 0.38px;
+    line-height: 1.1;
+    color: #FFFFFF;
+}
+
+.photos-subtitle {
+    font-size: 15px;
+    font-weight: 400;
+    color: #8E8E93;
+    margin-top: 2px;
+    letter-spacing: -0.24px;
+}
+
+.photos-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.glass-icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(55, 55, 58, 0.72);
+    backdrop-filter: blur(35px) saturate(200%);
+    -webkit-backdrop-filter: blur(35px) saturate(200%);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    border-top: 0.5px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 
+        inset 0 1px 1px 0 rgba(255, 255, 255, 0.22),
+        0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+.glass-pill-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 16px;
+    border-radius: 20px;
+    background: rgba(55, 55, 58, 0.72);
+    backdrop-filter: blur(35px) saturate(200%);
+    -webkit-backdrop-filter: blur(35px) saturate(200%);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    border-top: 0.5px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 
+        inset 0 1px 1px 0 rgba(255, 255, 255, 0.22),
+        0 4px 14px rgba(0, 0, 0, 0.35);
+    font-size: 14px;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+/* Literal Native iOS 18 Tab Bar (from botones galeria) */
+.liquid-glass-tabbar-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4.8%;
+    padding-bottom: max(env(safe-area-inset-bottom, 32px), 16px);
+    pointer-events: none;
+    background: linear-gradient(180deg, 
+        rgba(0, 0, 0, 0) 0%, 
+        rgba(0, 0, 0, 0.5) 30%,
+        rgba(0, 0, 0, 0.95) 100%
+    );
+    z-index: 60;
+}
+
+.real-tab-capsule {
+    height: 52px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 10px 28px rgba(0, 0, 0, 0.75));
+    pointer-events: auto;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.12s ease;
+}
+
+.real-tab-capsule:active {
+    transform: scale(0.96);
+}
+
+.real-tab-search {
+    height: 52px;
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 10px 28px rgba(0, 0, 0, 0.75));
+    pointer-events: auto;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.12s ease;
+}
+
+.real-tab-search:active {
+    transform: scale(0.92);
+}
+
+
+/* ================================================================
+   STATE 3: FULLSCREEN PHOTO VIEWER
+   ================================================================ */
+#state-3 {
+    background: #000000;
+}
+
+.viewer-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-top: max(env(safe-area-inset-top, 40px), 16px);
+    height: calc(max(env(safe-area-inset-top, 40px), 16px) + 48px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 6px;
+    padding-right: 14px;
+    z-index: 70;
+}
+
+.viewer-back {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #2997FF;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 8px 10px;
+    letter-spacing: -0.4px;
+    cursor: pointer;
+    transition: opacity 0.15s;
+}
+
+.viewer-back:active {
+    opacity: 0.65;
+}
+
+.viewer-header-right {
+    display: flex;
+    align-items: center;
+}
+
+.viewer-body {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #000000;
+}
+
+.viewer-body img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.viewer-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 16px;
+    padding-bottom: max(env(safe-area-inset-bottom, 30px), 12px);
+    background: linear-gradient(180deg, 
+        rgba(0, 0, 0, 0.5) 0%, 
+        rgba(0, 0, 0, 0.88) 100%
+    );
+    backdrop-filter: blur(35px) saturate(200%);
+    -webkit-backdrop-filter: blur(35px) saturate(200%);
+    border-top: 0.5px solid rgba(255, 255, 255, 0.12);
+    z-index: 70;
+}
+
+.viewer-action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    color: #2997FF;
+    transition: transform 0.12s, opacity 0.15s;
+}
+
+.viewer-action-btn:active {
+    transform: scale(0.9);
+    opacity: 0.7;
+}

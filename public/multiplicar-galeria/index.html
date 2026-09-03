@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Fotos">
+    <meta name="theme-color" content="#000000">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <base href="/multiplicar-galeria/">
+    <link rel="manifest" href="/multiplicar-galeria/manifest.json">
+    <link rel="apple-touch-icon" href="/multiplicar-galeria/icon-180.png">
+    <title>Fotos</title>
+    <link rel="stylesheet" href="/multiplicar-galeria/styles.css">
+</head>
+<body>
+    <div class="app-viewport">
+        <!-- The device-frame locks to the exact 783:1600 proportion across ALL states -->
+        <div class="device-frame" id="device-frame">
+
+            <!-- ==================== STATE 0: SETUP ==================== -->
+            <div id="state-0" class="state active">
+                <div class="setup-wrapper">
+                    <div class="setup-brand">
+                        <span class="setup-emoji">🪄</span>
+                        <h1 class="setup-title">Galería Mágica</h1>
+                        <p class="setup-desc">Efecto 500 Fotos • iOS 18</p>
+                    </div>
+
+                    <div class="setup-section">
+                        <p class="setup-label">1. Foto que aparecerá y se multiplicará</p>
+                        <label class="file-btn" for="input-trick">
+                            <svg width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="#2997FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="18" height="18" rx="3"/><circle cx="8" cy="8.5" r="2"/><path d="M22 15l-5-5L4 20"/></svg>
+                            <span>Seleccionar imagen del truco</span>
+                        </label>
+                        <input type="file" id="input-trick" accept="image/*" class="hidden-input">
+                        <div class="preview" id="preview-trick"></div>
+                    </div>
+
+                    <div class="setup-section">
+                        <p class="setup-label">2. Captura de la galería real</p>
+                        <label class="file-btn" for="input-gallery">
+                            <svg width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="#2997FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="20" height="16" rx="3"/><path d="M7 3V1"/><path d="M15 3V1"/></svg>
+                            <span id="label-gallery-text">Cambiar captura (por defecto lista)</span>
+                        </label>
+                        <input type="file" id="input-gallery" accept="image/*" class="hidden-input">
+                        <div class="preview" id="preview-gallery"></div>
+                    </div>
+
+                    <button id="btn-arm" class="arm-btn">
+                        <span>Armar Truco</span>
+                    </button>
+
+                    <div class="setup-instructions">
+                        <p><strong>1. Muestra la galería:</strong> Se ve tu captura real de iOS 18.</p>
+                        <p><strong>2. Primer Toque:</strong> La foto que tienes en la mano APARECE en el hueco libre.</p>
+                        <p><strong>3. Segundo Toque (esquina sup izq):</strong> La galería se transforma en 500 fotos con scroll infinito.</p>
+                        <p><strong>4. Desliza hacia arriba:</strong> Demuestra que TODA la galería ahora tiene esa foto.</p>
+                        <p><strong>5. Toca cualquier foto:</strong> Se abre a pantalla completa en el visor.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==================== STATE 1 & 2: THE REAL GALLERY (SAME FRAME & PROPORTION) ==================== -->
+            <div id="state-1" class="state">
+                <div class="gallery-wrapper" id="gallery-wrapper">
+                    <!-- Base gallery screenshot (real header, real tabs, real photos) -->
+                    <img id="img-gallery" class="fullscreen-img" src="/multiplicar-galeria/foto galeria.jpeg" alt="" draggable="false">
+
+                    <!-- Overlay 1: Trick photo that pops into the empty center spot on first tap -->
+                    <div id="added-photo" class="added-photo">
+                        <img id="added-photo-img" src="" alt="" draggable="false">
+                        <div class="photo-glass-sheen"></div>
+                    </div>
+
+                    <!-- Overlay 2: Multiplied 500-photo scrollable grid -->
+                    <div id="multiplied-grid" class="multiplied-grid">
+                        <div class="multiplied-scroll-track" id="multiplied-scroll-track">
+                            <!-- 500 photo cells injected dynamically by JS -->
+                        </div>
+                    </div>
+
+                    <!-- Floating Liquid Glass Header (appears on State 2 multiplication) -->
+                    <header class="photos-header liquid-glass-header" id="floating-header">
+                        <div class="photos-header-row">
+                            <div class="photos-title-group">
+                                <h1 class="photos-title" id="photos-title">Fototeca</h1>
+                                <span class="photos-subtitle" id="photos-subtitle">500 ítems</span>
+                            </div>
+                            <div class="photos-header-actions">
+                                <button class="glass-icon-btn" aria-label="Opciones">
+                                    <svg width="20" height="15" viewBox="0 0 20 15" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round">
+                                        <line x1="1.5" y1="1.5" x2="18.5" y2="1.5"/>
+                                        <line x1="1.5" y1="7.5" x2="18.5" y2="7.5"/>
+                                        <line x1="1.5" y1="13.5" x2="18.5" y2="13.5"/>
+                                    </svg>
+                                </button>
+                                <button class="glass-pill-btn" aria-label="Seleccionar">Seleccionar</button>
+                            </div>
+                        </div>
+                    </header>
+
+                    <!-- Literal Native iOS 18 Tab Bar (extracted directly from botones galeria) -->
+                    <nav class="liquid-glass-tabbar-container" id="floating-tabbar">
+                        <img src="/multiplicar-galeria/tab_capsule.png" class="real-tab-capsule" alt="Fototeca y Colecciones" draggable="false">
+                        <img src="/multiplicar-galeria/tab_search.png" class="real-tab-search" alt="Buscar" draggable="false">
+                    </nav>
+
+                    <!-- Secret trigger corner indicator (invisible) -->
+                    <div id="trigger-zone" class="trigger-zone"></div>
+                </div>
+            </div>
+
+            <!-- ==================== STATE 3: FULLSCREEN PHOTO VIEWER ==================== -->
+            <div id="state-3" class="state">
+                <header class="viewer-header liquid-glass-header">
+                    <div class="viewer-back" id="viewer-back">
+                        <svg width="12" height="20" viewBox="0 0 12 20" fill="none" stroke="#2997FF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10 2L2 10L10 18"/>
+                        </svg>
+                        <span>Fototeca</span>
+                    </div>
+                    <div class="viewer-header-right">
+                        <button class="glass-icon-btn" aria-label="Más opciones">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                                <circle cx="5" cy="12" r="2.2" fill="#2997FF"/>
+                                <circle cx="12" cy="12" r="2.2" fill="#2997FF"/>
+                                <circle cx="19" cy="12" r="2.2" fill="#2997FF"/>
+                            </svg>
+                        </button>
+                    </div>
+                </header>
+
+                <main class="viewer-body">
+                    <img id="viewer-img" src="" alt="" draggable="false">
+                </main>
+
+                <footer class="viewer-footer liquid-glass-footer">
+                    <button class="viewer-action-btn" aria-label="Compartir">
+                        <svg width="22" height="25" viewBox="0 0 22 25" fill="none" stroke="#2997FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11 2v14"/><path d="M7 6l4-4 4 4"/><path d="M3 12v9a2 2 0 002 2h12a2 2 0 002-2v-9"/>
+                        </svg>
+                    </button>
+                    <button class="viewer-action-btn" aria-label="Favorito">
+                        <svg width="25" height="23" viewBox="0 0 24 22" fill="none" stroke="#2997FF" stroke-width="1.8" stroke-linejoin="round">
+                            <path d="M12 20.35l-1.45-1.32C5.4 14.36 2 11.28 2 7.5 2 4.42 4.42 2 7.5 2c1.74 0 3.41.81 4.5 2.09C13.09 2.81 14.76 2 16.5 2 19.58 2 22 4.42 22 7.5c0 3.78-3.4 6.86-8.55 11.54L12 20.35z"/>
+                        </svg>
+                    </button>
+                    <button class="viewer-action-btn" aria-label="Información">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2997FF" stroke-width="1.8">
+                            <circle cx="12" cy="12" r="9.5"/>
+                            <path d="M12 11.5v5" stroke-linecap="round"/>
+                            <circle cx="12" cy="8" r="1.2" fill="#2997FF" stroke="none"/>
+                        </svg>
+                    </button>
+                    <button class="viewer-action-btn" aria-label="Eliminar">
+                        <svg width="21" height="24" viewBox="0 0 22 24" fill="none" stroke="#2997FF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 6h18"/><path d="M8 6V3.5A1.5 1.5 0 019.5 2h3A1.5 1.5 0 0114 3.5V6"/><path d="M4 6l1.2 14.5a2 2 0 002 1.5h7.6a2 2 0 002-1.5L18 6"/><path d="M9 10v7"/><path d="M13 10v7"/>
+                        </svg>
+                    </button>
+                </footer>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/multiplicar-galeria/app.js"></script>
+</body>
+</html>

@@ -19,6 +19,14 @@ const nextConfig = {
                 source: '/marinagodar',
                 destination: '/marinagodar/index.html',
             },
+            {
+                source: '/multiplicar-galeria',
+                destination: '/multiplicar-galeria/index.html',
+            },
+            {
+                source: '/multiplicar-galeria/',
+                destination: '/multiplicar-galeria/index.html',
+            },
         ];
     },
     async redirects() {
