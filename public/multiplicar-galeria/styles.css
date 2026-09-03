@@ -322,37 +322,74 @@ img {
     user-select: none;
 }
 
-/* ----- SHOCK 1: Overlay photo in the empty center cell ----- */
-/* Cell coords in 783x1600: x=261, y=1194, w=260, h=260 */
+/* ----- SHOCK 1: Intercambio / Transformación 3D de la última foto ----- */
+/* Coordenadas exactas en foto buena (996x2048): x=333, y=1502, w=330, h=330 */
 .added-photo {
     position: absolute;
-    left: 33.333%;
-    top: 74.625%;
-    width: 33.205%;
-    height: 16.250%;
+    left: 33.434%;
+    top: 73.340%;
+    width: 33.133%;
+    height: 16.113%;
     z-index: 40;
-    overflow: hidden;
-    opacity: 0;
-    transform: scale(0.92);
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
     pointer-events: none;
-    transition: 
-        opacity 0.2s cubic-bezier(0.2, 0.9, 0.3, 1),
-        transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.added-photo.visible {
-    opacity: 1;
-    transform: scale(1);
+.photo-flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    transition: transform 0.38s cubic-bezier(0.34, 1.25, 0.64, 1);
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
 }
 
-.added-photo img {
+.added-photo.no-transition .photo-flip-card {
+    transition: none !important;
+}
+
+.added-photo.visible .photo-flip-card,
+.added-photo.transformed .photo-flip-card {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+
+.photo-flip-face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.photo-flip-front {
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    z-index: 2;
+}
+
+.photo-flip-back {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    z-index: 1;
+}
+
+.photo-flip-face img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
-/* Glass sheen sweep */
+/* Glass sheen sweep on transformation */
 .photo-glass-sheen {
     position: absolute;
     top: 0;
@@ -362,14 +399,15 @@ img {
     background: linear-gradient(
         115deg,
         transparent 0%,
-        rgba(255, 255, 255, 0.45) 50%,
+        rgba(255, 255, 255, 0.55) 50%,
         transparent 100%
     );
     pointer-events: none;
 }
 
-.added-photo.visible .photo-glass-sheen {
-    animation: sheenPass 0.35s ease-out forwards;
+.added-photo.visible .photo-glass-sheen,
+.added-photo.transformed .photo-glass-sheen {
+    animation: sheenPass 0.4s ease-out forwards;
 }
 
 @keyframes sheenPass {

@@ -30,7 +30,7 @@
                     </div>
 
                     <div class="setup-section">
-                        <p class="setup-label">1. Foto que aparecerá y se multiplicará</p>
+                        <p class="setup-label">1. Foto en la que se transformará y se multiplicará</p>
                         <label class="file-btn" for="input-trick">
                             <svg width="18" height="18" viewBox="0 0 22 22" fill="none" stroke="#2997FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="18" height="18" rx="3"/><circle cx="8" cy="8.5" r="2"/><path d="M22 15l-5-5L4 20"/></svg>
                             <span>Seleccionar imagen del truco</span>
@@ -64,7 +64,7 @@
 
                     <div class="setup-instructions">
                         <p><strong>1. Muestra la galería:</strong> Se ve tu captura real de iOS 18.</p>
-                        <p><strong>2. Primer Toque:</strong> La foto que tienes en la mano APARECE en el hueco libre.</p>
+                        <p><strong>2. Primer Toque:</strong> La última foto se TRANSFORMA / INTERCAMBIA por la foto del truco.</p>
                         <p><strong>3. Segundo Toque (esquina sup izq):</strong> La galería se transforma en 500 fotos con scroll infinito.</p>
                         <p><strong>4. Desliza hacia arriba:</strong> Demuestra que TODA la galería ahora tiene esa foto.</p>
                         <p><strong>5. Toca cualquier foto:</strong> Se abre a pantalla completa en el visor.</p>
@@ -81,12 +81,19 @@
                     <!-- Base gallery layer: shifted down so the status bar does not cover Fototeca and Seleccionar -->
                     <div class="base-gallery-layer" id="base-gallery-layer">
                         <!-- Base gallery screenshot (real header, real tabs, real photos) -->
-                        <img id="img-gallery" class="fullscreen-img" src="/multiplicar-galeria/foto galeria.jpeg" alt="" draggable="false">
+                        <img id="img-gallery" class="fullscreen-img" src="/multiplicar-galeria/foto buena.jpeg" alt="" draggable="false">
 
-                        <!-- Overlay 1: Trick photo that pops into the empty center spot on first tap -->
+                        <!-- Overlay 1: Intercambio / Transformación 3D de la última foto -->
                         <div id="added-photo" class="added-photo">
-                            <img id="added-photo-img" src="" alt="" draggable="false">
-                            <div class="photo-glass-sheen"></div>
+                            <div class="photo-flip-card" id="photo-flip-card">
+                                <div class="photo-flip-face photo-flip-front">
+                                    <img id="last-photo-original-img" src="/multiplicar-galeria/foto_original_ultima.jpeg" alt="" draggable="false">
+                                </div>
+                                <div class="photo-flip-face photo-flip-back">
+                                    <img id="added-photo-img" src="" alt="" draggable="false">
+                                    <div class="photo-glass-sheen"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 

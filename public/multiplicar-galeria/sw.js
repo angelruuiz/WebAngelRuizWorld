@@ -1,4 +1,4 @@
-const CACHE_NAME = 'fotos-magic-v5';
+const CACHE_NAME = 'fotos-magic-v7';
 const APP_SHELL = [
     '/multiplicar-galeria/',
     '/multiplicar-galeria/index.html',
@@ -7,8 +7,11 @@ const APP_SHELL = [
     '/multiplicar-galeria/manifest.json',
     '/multiplicar-galeria/tab_capsule.png',
     '/multiplicar-galeria/tab_search.png',
+    '/multiplicar-galeria/foto buena.jpeg',
+    '/multiplicar-galeria/foto%20buena.jpeg',
     '/multiplicar-galeria/foto galeria.jpeg',
     '/multiplicar-galeria/foto%20galeria.jpeg',
+    '/multiplicar-galeria/foto_original_ultima.jpeg',
     '/multiplicar-galeria/icon-180.png',
     '/multiplicar-galeria/icon-192.png',
     '/multiplicar-galeria/icon-512.png'
