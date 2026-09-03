@@ -5,7 +5,7 @@ import Script from 'next/script';
 export const metadata = {
   metadataBase: new URL('https://angelruiz.world'),
   title: {
-    default: '【Precios 2026】Mago en Madrid | Bodas y Empresas',
+    default: 'Mago en Madrid ⭐ Ángel Ruiz · Bodas y Empresas',
     template: '%s | Ángel Ruiz'
   },
   description: 'Mago profesional en Madrid para bodas y empresas. 42 reseñas 5★. Trato directo sin agencias. Presupuesto express en 2h.',
@@ -60,6 +60,7 @@ import NewsletterForm from '@/components/NewsletterForm';
 import dynamic from 'next/dynamic';
 const NewsletterModal = dynamic(() => import('@/components/NewsletterModal'), { ssr: false });
 const CookieBanner = dynamic(() => import('@/components/CookieBanner'), { ssr: false });
+const AnalyticsLoader = dynamic(() => import('@/components/AnalyticsLoader'), { ssr: false });
 
 import { Cinzel, Cormorant_Garamond, Outfit } from 'next/font/google';
 
@@ -150,15 +151,6 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(globalSchema) }}
         />
         <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
-        <Script strategy="lazyOnload" src="https://www.googletagmanager.com/gtag/js?id=G-NWEPX8BGXB" />
-        <Script id="google-analytics" strategy="lazyOnload" dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-NWEPX8BGXB');
-          `
-        }} />
       </head>
       <body className="antialiased min-h-screen selection:bg-amber-500/30 selection:text-amber-200 font-sans">
 
@@ -166,6 +158,7 @@ export default function RootLayout({ children }) {
         <NewsletterModal />
         <CookieBanner />
         <Analytics />
+        <AnalyticsLoader />
       </body>
     </html>
   );

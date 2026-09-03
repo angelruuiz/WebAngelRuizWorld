@@ -3,14 +3,14 @@ import Image from 'next/image';
 import QuickEventSelector from '@/components/QuickEventSelector';
 
 export const metadata = {
-    title: { absolute: '【Precios 2026】Mago en Madrid | Bodas y Empresas' },
+    title: { absolute: 'Mago en Madrid ⭐ Ángel Ruiz · Bodas y Empresas' },
     description: 'Mago profesional en Madrid para bodas y empresas. Alumno de DaOrtiz, 42 reseñas 5★. Pide presupuesto directo sin agencias.',
     alternates: {
         canonical: 'https://angelruiz.world',
     },
     openGraph: {
         url: 'https://angelruiz.world',
-        title: '【Precios 2026】Mago en Madrid | Bodas y Empresas',
+        title: 'Mago en Madrid ⭐ Ángel Ruiz · Bodas y Empresas',
         description: 'Mago profesional en Madrid para bodas y eventos de empresa. 42 reseñas 5★. Presupuesto directo.',
     },
 };
