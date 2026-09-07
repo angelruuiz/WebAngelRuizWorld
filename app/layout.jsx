@@ -152,6 +152,8 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(globalSchema) }}
         />
         <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
+        <link rel="preload" as="image" href="/images/hero-poster-mobile.webp" media="(max-width: 767px)" type="image/webp" />
+        <link rel="preload" as="image" href="/images/hero-poster.webp" media="(min-width: 768px)" type="image/webp" />
       </head>
       <body className="antialiased min-h-screen selection:bg-amber-500/30 selection:text-amber-200 font-sans">
 

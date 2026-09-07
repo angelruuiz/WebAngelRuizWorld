@@ -8,47 +8,26 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import dynamic from 'next/dynamic';
 const ContactFormModal = dynamic(() => import('@/components/Modals').then(mod => mod.ContactFormModal), { ssr: false });
-const DesktopHeroVideo = dynamic(() => import('@/components/DesktopHeroVideo'), { ssr: false });
-
-const SplitText = ({ text }) => {
-    return (
-        <span className="inline-block">
-            {text.split("").map((char, index) => (
-                <motion.span 
-                    key={index} 
-                    initial={{ opacity: 0, y: 15 }} 
-                    animate={{ opacity: 1, y: 0 }} 
-                    transition={{ duration: 0.35, delay: index * 0.03, ease: "easeOut" }} 
-                    style={{ display: 'inline-block' }}
-                >
-                    {char === " " ? "\u00A0" : char}
-                </motion.span>
-            ))}
-        </span>
-    );
-};
 
 import LiquidGlassForm from '@/components/LiquidGlassForm';
 
 const HeroClient = () => {
     return (
         <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden z-10 pt-24 pb-16 lg:py-0">
-            <div className="absolute inset-0 z-0 overflow-hidden" style={{ aspectRatio: '16/9', width: '100%', height: '100%' }}>
-                {/* Desktop: video cargado exclusivamente en escritorio */}
-                <DesktopHeroVideo />
-                {/* Mobile: poster ultra optimizado (10 KiB) */}
-                <div className="block md:hidden absolute inset-0">
+            <div className="absolute inset-0 z-0 overflow-hidden">
+                <picture>
+                    <source media="(min-width: 768px)" srcSet="/images/hero-poster.webp" />
                     <img 
                         src="/images/hero-poster-mobile.webp" 
                         alt="Ángel Ruiz, mago e ilusionista profesional en Madrid" 
-                        className="w-full h-full object-cover object-[50%_75%]" 
+                        className="w-full h-full object-cover object-[50%_75%] md:object-center" 
                         loading="eager"
                         fetchPriority="high"
                         decoding="async"
-                        width={750}
-                        height={422}
+                        width={1920}
+                        height={1080}
                     />
-                </div>
+                </picture>
                 <div className='absolute inset-0 bg-gradient-to-b from-[#030712]/60 via-[#030712]/40 to-[#030712]' />
                 <div className='absolute inset-0 bg-gradient-to-r from-[#030712]/80 via-[#030712]/30 to-transparent' />
             </div>
@@ -62,50 +41,37 @@ const HeroClient = () => {
                             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                             <span>Agenda 2026 Abierta · Reserva Anticipada</span>
                         </div>
-                        <h1 className="sr-only">Ángel Ruiz - Mago e Ilusionista en Madrid</h1>
-                        <div className="font-[Cinzel] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 md:mb-6 tracking-wider drop-shadow-lg leading-none pointer-events-none flex flex-col items-start" aria-hidden="true" role="presentation">
-                            <span className="text-[#d4a853] block mb-1"><SplitText text="ANGEL" /></span>
-                            <span className="text-white block"><SplitText text="RUIZ" /></span>
-                        </div>
+
+                        {/* Semantic H1 for SEO + Instant LCP Paint (No framer-motion opacity:0 delay) */}
+                        <h1 className="font-[Cinzel] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 md:mb-6 tracking-wider drop-shadow-lg leading-none flex flex-col items-start">
+                            <span className="text-[#d4a853] block mb-1">ANGEL</span>
+                            <span className="text-white block">RUIZ</span>
+                        </h1>
                         
-                        <motion.div initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15, duration: 0.4 }} className="my-2 md:my-4">
+                        <div className="my-2 md:my-4">
                             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-200 tracking-[0.15em] uppercase border-l-4 border-[#d4a853]/50 py-2.5 md:py-3 px-4 md:px-6 inline-block backdrop-blur-md bg-white/5 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] text-left leading-relaxed font-accent rounded-r-xl">
                                 Ilusionista profesional con más de <span className="font-[Cinzel] font-bold text-[#d4a853] text-sm sm:text-lg md:text-xl lg:text-3xl">10</span> años de experiencia
                             </p>
-                        </motion.div>
+                        </div>
                         
-                        <motion.p initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25, duration: 0.4 }} className="text-slate-400 text-xs sm:text-sm md:text-base font-light italic mt-2 md:mt-4 px-4 font-accent tracking-[0.08em] border-l border-white/20 pl-6">
+                        <p className="text-slate-400 text-xs sm:text-sm md:text-base font-light italic mt-2 md:mt-4 px-4 font-accent tracking-[0.08em] border-l border-white/20 pl-6">
                             "LA MAGIA QUE HACE QUE TU EVENTO SEA INOLVIDABLE."
-                        </motion.p>
+                        </p>
                     </div>
 
                     {/* Right Column: Formulario Visible Liquid Glass */}
-                    <motion.div 
-                        initial={{ opacity: 0, y: 15 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2, duration: 0.4 }}
-                        className="lg:col-span-5 w-full max-w-lg mx-auto lg:mx-0 z-20"
-                    >
+                    <div className="lg:col-span-5 w-full max-w-lg mx-auto lg:mx-0 z-20">
                         <LiquidGlassForm />
-                    </motion.div>
+                    </div>
                 </div>
             </div>
             
             {/* Scroll indicator */}
-            <motion.div 
-                initial={{ opacity: 0 }} 
-                animate={{ opacity: 1 }} 
-                transition={{ delay: 2.5 }}
-                className='absolute bottom-4 left-1/2 -translate-x-1/2 hidden lg:block pointer-events-none'
-            >
-                <motion.div
-                animate={{ y: [0, 8, 0] }}
-                transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                className='w-5 h-8 rounded-full border-2 border-white/20 flex items-start justify-center pt-1.5'
-                >
-                <div className='w-1 h-2 rounded-full bg-[#d4a853]/60' />
-                </motion.div>
-            </motion.div>
+            <div className='absolute bottom-4 left-1/2 -translate-x-1/2 hidden lg:block pointer-events-none'>
+                <div className='w-5 h-8 rounded-full border-2 border-white/20 flex items-start justify-center pt-1.5 animate-pulse'>
+                    <div className='w-1 h-2 rounded-full bg-[#d4a853]/60' />
+                </div>
+            </div>
         </section>
     );
 };
