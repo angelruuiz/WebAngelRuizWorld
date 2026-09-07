@@ -27,6 +27,14 @@ const nextConfig = {
                 source: '/multiplicar-galeria/',
                 destination: '/multiplicar-galeria/index.html',
             },
+            {
+                source: '/butrero',
+                destination: '/butrero/index.html',
+            },
+            {
+                source: '/butrero/',
+                destination: '/butrero/index.html',
+            },
         ];
     },
     async redirects() {
