@@ -1,0 +1,599 @@
+/* ═══════════════════════════════════════════════════════════
+   DEFERRED CSS — Non-critical styles loaded after first paint
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Liquid Glass Card 2.0 — Animated Border ── */
+
+@property --border-angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes border-rotate {
+    to { --border-angle: 360deg; }
+}
+
+.liquid-glass-card {
+    --border-angle: 0deg;
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.04) 0%,
+        rgba(255, 255, 255, 0.015) 40%,
+        rgba(212, 168, 83, 0.02) 70%,
+        rgba(255, 255, 255, 0.035) 100%
+    );
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
+    -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(var(--glass-saturation));
+    border-radius: var(--radius-xl);
+    box-shadow:
+        0 20px 50px -12px rgba(0, 0, 0, 0.5),
+        0 8px 20px -8px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.06),
+        inset 0 -1px 0 0 rgba(0, 0, 0, 0.15);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.6s var(--ease-glass);
+}
+
+/* Shimmer sweep */
+.liquid-glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(
+        105deg,
+        transparent 30%,
+        rgba(212, 168, 83, 0.02) 42%,
+        rgba(255, 255, 255, 0.04) 50%,
+        rgba(212, 168, 83, 0.02) 58%,
+        transparent 70%
+    );
+    transition: transform 1s var(--ease-glass);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Hover: animated border + lift */
+.liquid-glass-card:hover {
+    border-color: var(--glass-border-hover);
+    box-shadow:
+        0 35px 70px -15px rgba(0, 0, 0, 0.6),
+        0 0 50px -15px var(--gold-glow),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 0 rgba(0, 0, 0, 0.18);
+    transform: translateY(-3px);
+}
+
+.liquid-glass-card:hover::before {
+    transform: translateX(60%);
+}
+
+/* Variant: glass card with animated gold border */
+.liquid-glass-card--glow {
+    animation: border-rotate 6s linear infinite;
+    border: 1px solid transparent;
+    background:
+        linear-gradient(var(--surface-1), var(--surface-1)) padding-box,
+        conic-gradient(from var(--border-angle), transparent 25%, var(--gold-300) 50%, transparent 75%) border-box;
+}
+
+
+/* ── Auto-apply glass to common Tailwind bg patterns ── */
+.bg-slate-900\/40,
+[class*="bg-white/5"] {
+    backdrop-filter: blur(12px) saturate(1.3);
+    -webkit-backdrop-filter: blur(12px) saturate(1.3);
+}
+
+/* Elevated hover glow for bordered panels */
+[class*="hover:border-amber-500"]:hover,
+[class*="hover:border-gold"] {
+    box-shadow: 0 0 35px -10px var(--gold-glow);
+    transition: all 0.5s var(--ease-glass);
+}
+
+
+/* ── Global Transitions ── */
+.group:hover img {
+    transition: transform 2.5s var(--ease-glass);
+}
+
+[class*="border"] {
+    transition: border-color 0.5s var(--ease-glass);
+}
+
+
+/* ── Animated Blobs ── */
+.bg-blob {
+    @apply absolute rounded-full mix-blend-screen filter blur-[120px] opacity-15;
+    animation: blob-float 14s ease-in-out infinite alternate;
+}
+
+@keyframes blob-float {
+    0%   { transform: translate(0px, 0px) scale(1) rotate(0deg); }
+    20%  { transform: translate(15px, -30px) scale(1.04) rotate(1deg); }
+    40%  { transform: translate(-20px, 20px) scale(0.96) rotate(-2deg); }
+    60%  { transform: translate(25px, -15px) scale(1.06) rotate(2deg); }
+    80%  { transform: translate(-10px, 10px) scale(0.98) rotate(-1deg); }
+    100% { transform: translate(0px, 0px) scale(1) rotate(0deg); }
+}
+
+.animate-blob {
+    animation: blob-float 14s ease-in-out infinite alternate;
+}
+
+.animate-spin-slow {
+    animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+
+/* ── Typography — Premium Refinements ── */
+.urban-title {
+    @apply font-bold tracking-tighter text-white;
+    text-shadow: 0 0 60px rgba(212, 168, 83, 0.06);
+}
+
+/* Gradient text — gold edition */
+.text-gradient-gold {
+    background: linear-gradient(135deg, var(--gold-200), var(--gold-300), var(--gold-400));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+/* ── Form Inputs — Glass Inset Style ── */
+input:focus, textarea:focus, select:focus {
+    border-color: rgba(212, 168, 83, 0.4) !important;
+    box-shadow:
+        0 0 0 3px rgba(212, 168, 83, 0.08),
+        0 0 25px -5px rgba(212, 168, 83, 0.12);
+    outline: none;
+}
+
+input, textarea, select {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background: rgba(0, 0, 0, 0.3);
+    transition: all 0.3s var(--ease-glass);
+}
+
+
+/* ── Buttons — Liquid Hover Effect ── */
+button {
+    position: relative;
+}
+
+button.rounded-full:hover,
+a.rounded-full:hover {
+    box-shadow: 0 0 30px -6px var(--gold-glow);
+}
+
+/* Premium button with glass border animation */
+.btn-glass {
+    position: relative;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.7rem;
+    border: 1px solid rgba(212, 168, 83, 0.3);
+    background: transparent;
+    color: var(--gold-300);
+    overflow: hidden;
+    transition: all 0.5s var(--ease-glass);
+}
+
+.btn-glass::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--gold-300), var(--gold-400));
+    opacity: 0;
+    transition: opacity 0.5s var(--ease-glass);
+    z-index: -1;
+}
+
+.btn-glass:hover {
+    color: var(--surface-0);
+    border-color: var(--gold-300);
+    box-shadow: 0 0 40px -8px var(--gold-glow-strong);
+}
+
+.btn-glass:hover::before {
+    opacity: 1;
+}
+
+
+/* ── Video ── */
+video { object-fit: cover; }
+
+
+/* ── Blog Content — Magazine-grade Typography ── */
+.blog-content {
+    @apply text-[17px] md:text-[19px] leading-[1.85] text-slate-300 font-light max-w-none;
+}
+
+.blog-content p {
+    @apply mb-8 text-justify opacity-90;
+}
+
+.blog-content h2, .blog-content h1 {
+    font-family: var(--font-heading);
+    @apply font-bold text-white mt-16 mb-8;
+    text-shadow: 0 0 40px rgba(212, 168, 83, 0.04);
+}
+
+.blog-content h2 {
+    @apply text-3xl pb-4;
+    border-bottom: 1px solid rgba(212, 168, 83, 0.15);
+}
+
+.blog-content strong {
+    @apply font-bold italic;
+    color: var(--gold-300);
+}
+
+.blog-content h3 {
+    @apply mt-14 mb-8 p-8 not-italic text-2xl text-slate-100;
+    font-family: var(--font-accent);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+    border-left: 3px solid rgba(212, 168, 83, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.blog-content h3 + p {
+    @apply p-8 pt-0 mb-14 text-slate-300 font-normal;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.005));
+    border-left: 3px solid rgba(212, 168, 83, 0.6);
+    border-radius: 0 0 var(--radius-md) 0;
+}
+
+.blog-content h3::before {
+    content: "?";
+    @apply inline-block mr-4 font-bold opacity-70;
+    color: var(--gold-300);
+}
+
+.blog-content blockquote {
+    @apply italic text-slate-400 my-12 text-xl leading-relaxed py-6;
+    font-family: var(--font-accent);
+    border-left: 3px solid rgba(212, 168, 83, 0.5);
+    padding-left: 2rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.02), transparent);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.blog-content ul, .blog-content ol {
+    @apply my-8 space-y-4 ml-6;
+}
+
+.blog-content li {
+    @apply pl-2 text-slate-300;
+    list-style-type: disc;
+}
+
+.blog-content li::marker {
+    color: var(--gold-300);
+}
+
+
+/* ── Blog Tables — Glass Edition ── */
+.blog-content table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 3.5rem 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0.008));
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.blog-content th {
+    background: linear-gradient(135deg, rgba(212, 168, 83, 0.1), rgba(212, 168, 83, 0.04));
+    color: var(--gold-300);
+    font-size: 0.7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    padding: 1.25rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(212, 168, 83, 0.15);
+}
+
+.blog-content td {
+    padding: 1.25rem 1rem;
+    font-size: 0.85rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.025);
+    color: #94a3b8;
+    line-height: 1.6;
+    transition: all 0.4s var(--ease-glass);
+}
+
+.blog-content tr:last-child td {
+    border-bottom: none;
+}
+
+.blog-content tr {
+    transition: background 0.4s var(--ease-glass);
+}
+
+.blog-content tr:hover td {
+    background: rgba(255, 255, 255, 0.03);
+    color: #e2e8f0;
+}
+
+
+/* ── Shimmer Text — Gold Iridescent ── */
+@keyframes shimmer {
+    0%   { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+
+.shimmer-text {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.75) 0%,
+        var(--gold-300) 25%,
+        rgba(255, 255, 255, 0.8) 50%,
+        var(--gold-300) 75%,
+        rgba(255, 255, 255, 0.75) 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 6s linear infinite;
+}
+
+
+/* ── Custom Animations ── */
+
+/* Gentle float for decorative elements */
+@keyframes float-gentle {
+    0%, 100% { transform: translateY(0px); }
+    50%      { transform: translateY(-8px); }
+}
+
+.animate-float {
+    animation: float-gentle 4s ease-in-out infinite;
+}
+
+/* Reveal from below — for scroll-triggered sections */
+@keyframes reveal-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-reveal-up {
+    animation: reveal-up 0.8s var(--ease-glass) forwards;
+}
+
+/* Gold pulse for accents */
+@keyframes pulse-gold {
+    0%, 100% { transform: scale(1); opacity: 0.85; }
+    50%      { transform: scale(1.02); opacity: 1; }
+}
+
+.animate-pulse-gold {
+    animation: pulse-gold 3s ease-in-out infinite;
+    will-change: transform, opacity;
+}
+
+/* Divider gradient animation */
+@keyframes divider-shimmer {
+    0%   { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.divider-animated {
+    height: 1px;
+    position: relative;
+    overflow: hidden;
+    background: rgba(212, 168, 83, 0.2);
+}
+
+.divider-animated::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, transparent, var(--gold-300), transparent);
+    animation: divider-shimmer 4s ease-in-out infinite;
+    will-change: transform;
+}
+
+
+/* ── Mobile UX Enhancements ── */
+@media (max-width: 768px) {
+    /* Ensure tap targets are minimum 44px */
+    a, button {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    /* Smooth momentum scrolling */
+    main, section {
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Cards adapt on mobile */
+    .liquid-glass-card {
+        border-radius: var(--radius-lg);
+    }
+
+    /* Active state feedback for touch */
+    a:active, button:active {
+        opacity: 0.85;
+        transform: scale(0.97);
+        transition: all 0.1s ease;
+    }
+
+    /* Prevent selection & highlight on interactive */
+    button, a, summary {
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .rounded-full {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Safe area insets for notched phones */
+    body {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    nav {
+        padding-top: env(safe-area-inset-top);
+    }
+
+    /* Smoother font rendering on mobile */
+    * {
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+    }
+
+    /* Extra bottom padding for bottom tab bar */
+    .pb-safe-bottom {
+        padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
+    }
+}
+
+
+/* ── Bottom Tab Bar — Mobile Navigation ── */
+.bottom-tab-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: rgba(3, 7, 18, 0.85);
+    backdrop-filter: blur(20px) saturate(1.4);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    border-top: 1px solid var(--glass-border);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.bottom-tab-bar .tab-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 8px 0;
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #64748b;
+    transition: color 0.3s var(--ease-glass);
+    position: relative;
+}
+
+.bottom-tab-bar .tab-item.active {
+    color: var(--gold-300);
+}
+
+.bottom-tab-bar .tab-item.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background: var(--gold-300);
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 8px var(--gold-glow);
+}
+
+
+/* WhatsApp FAB animation */
+@keyframes fab-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.06); }
+}
+
+.fab-whatsapp {
+    animation: fab-pulse 3s ease-in-out infinite;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    will-change: transform;
+}
+
+
+/* Marquee animation for continuous infinite scroll */
+@keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+    display: flex;
+    flex-shrink: 0;
+    animation: marquee 30s linear infinite;
+    will-change: transform;
+}
+
+/* GPU Hardware-accelerated particle floating */
+@keyframes floatParticle {
+    0% {
+        transform: translate3d(0, 0, 0) scale(0.8);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.45;
+    }
+    80% {
+        opacity: 0.35;
+    }
+    100% {
+        transform: translate3d(0, -220px, 0) scale(1.2);
+        opacity: 0;
+    }
+}
+
+
+/* ── Glass Pill — Utility class for small tags/badges ── */
+.glass-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.4rem 1rem;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    transition: all 0.4s var(--ease-glass);
+}
+
+.glass-pill:hover {
+    background: rgba(212, 168, 83, 0.08);
+    border-color: rgba(212, 168, 83, 0.2);
+    color: var(--gold-200);
+}

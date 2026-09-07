@@ -38,8 +38,7 @@ const CARDS_DATA = REVIEWS_DATA.map((review, i) => {
     };
 });
 
-const generateScatter = (index, total) => {
-    const isDesktop = window.innerWidth > 768;
+const generateScatter = (index, total, isDesktop) => {
     const minRadius = isDesktop ? 100 : 20;
     const maxRadius = isDesktop ? 500 : 180;
     const yOffset = isDesktop ? 0 : -30; // Subir un poco las cartas en móvil
@@ -64,7 +63,8 @@ const Card = ({ card, index, total, bringToFront, onSelect }) => {
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            setScatter(generateScatter(index, total));
+            const isDesktop = typeof window !== 'undefined' && window.innerWidth > 768;
+            setScatter(generateScatter(index, total, isDesktop));
         }, 100);
         return () => clearTimeout(timer);
     }, [index, total]);

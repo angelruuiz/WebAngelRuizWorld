@@ -44,7 +44,13 @@
     "typescript": "^5.9.3"
   },
   "browserslist": [
-    "defaults and fully supports es6-module",
+    "chrome >= 92",
+    "edge >= 92",
+    "safari >= 15.4",
+    "firefox >= 104",
+    "opera >= 78",
+    "ios_saf >= 15.4",
+    "samsung >= 17",
     "not dead"
   ]
 }

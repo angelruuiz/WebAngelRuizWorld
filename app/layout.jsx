@@ -61,6 +61,7 @@ import dynamic from 'next/dynamic';
 const NewsletterModal = dynamic(() => import('@/components/NewsletterModal'), { ssr: false });
 const CookieBanner = dynamic(() => import('@/components/CookieBanner'), { ssr: false });
 const AnalyticsLoader = dynamic(() => import('@/components/AnalyticsLoader'), { ssr: false });
+const DeferredStyles = dynamic(() => import('@/components/DeferredStyles'), { ssr: false });
 
 import { Cinzel, Cormorant_Garamond, Outfit } from 'next/font/google';
 
@@ -155,6 +156,7 @@ export default function RootLayout({ children }) {
       <body className="antialiased min-h-screen selection:bg-amber-500/30 selection:text-amber-200 font-sans">
 
         {children}
+        <DeferredStyles />
         <NewsletterModal />
         <CookieBanner />
         <Analytics />
