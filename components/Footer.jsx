@@ -127,17 +127,6 @@ const Footer = ({ onOpenContact, isLight = false }) => {
             {/* Spacer for bottom tab bar on mobile */}
             <div className="h-20 md:h-0 w-full" />
         </footer>
-
-            {/* WhatsApp Floating Action Button - Mobile only */}
-            <a
-                href={waUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="fab-whatsapp fixed bottom-24 right-6 z-[100] md:hidden bg-green-500 w-14 h-14 rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 hover:bg-green-600 transition-colors active:scale-95"
-                aria-label="Contactar por WhatsApp"
-            >
-                <WhatsApp className="w-7 h-7 text-white" />
-            </a>
         </>
     );
 };

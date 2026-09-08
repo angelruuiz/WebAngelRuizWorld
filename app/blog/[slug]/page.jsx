@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import NewsletterForm from '@/components/NewsletterForm';
 import { getPostData, getSortedPostsData } from '@/lib/blog';
 import { ReadingProgress } from '@/components/VisualEffects';
-import { Sparkles, MessageSquare } from '@/components/Icons';
+import { Sparkles, MessageSquare, WhatsApp } from '@/components/Icons';
 
 export async function generateStaticParams() {
   const posts = getSortedPostsData();
@@ -209,19 +209,28 @@ export default async function BlogPost({ params }) {
           <p className="text-slate-400 font-light mb-8 max-w-lg mx-auto text-lg leading-relaxed opacity-70">
             Eleva el nivel de tu celebración con ilusionismo diseñado para impactar.
           </p>
-          <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-4">
             <Link 
               href="/particulares" 
-              className="px-10 py-4 bg-white text-black font-black uppercase tracking-tighter text-sm hover:scale-105 transition-all rounded-full"
+              className="px-8 py-3.5 bg-white text-black font-black uppercase tracking-tighter text-sm hover:scale-105 transition-all rounded-full"
             >
               Particulares
             </Link>
             <Link 
               href="/empresas" 
-              className="px-10 py-4 border-2 border-white text-white font-black uppercase tracking-tighter text-sm hover:bg-white hover:text-black transition-all rounded-full"
+              className="px-8 py-3.5 border-2 border-white text-white font-black uppercase tracking-tighter text-sm hover:bg-white hover:text-black transition-all rounded-full"
             >
               Empresas
             </Link>
+            <a 
+              href="https://wa.me/34648055636?text=Hola%20%C3%81ngel%2C%20he%20le%C3%ADdo%20tu%20blog%20y%20quisiera%20consultar%20disponibilidad%20para%20un%20evento"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3.5 bg-[#25D366] hover:bg-[#20ba5a] text-white font-black uppercase tracking-tighter text-sm hover:scale-105 transition-all rounded-full flex items-center gap-2 shadow-lg shadow-green-500/20"
+            >
+              <WhatsApp className="w-4 h-4" />
+              WhatsApp Directo
+            </a>
           </div>
         </div>
 

@@ -57,6 +57,7 @@ export const viewport = {
 
 
 import NewsletterForm from '@/components/NewsletterForm';
+import WhatsAppButton from '@/components/WhatsAppButton';
 import dynamic from 'next/dynamic';
 const NewsletterModal = dynamic(() => import('@/components/NewsletterModal'), { ssr: false });
 const CookieBanner = dynamic(() => import('@/components/CookieBanner'), { ssr: false });
@@ -158,6 +159,7 @@ export default function RootLayout({ children }) {
       <body className="antialiased min-h-screen selection:bg-amber-500/30 selection:text-amber-200 font-sans">
 
         {children}
+        <WhatsAppButton />
         <DeferredStyles />
         <NewsletterModal />
         <CookieBanner />

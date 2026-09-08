@@ -1,7 +1,5 @@
 import Image from 'next/image';
-import NavFooterClient from '@/components/NavFooterClient';
 import ContactButtonClient from '@/components/ContactButtonClient';
-import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import Link from 'next/link';
 
@@ -58,11 +56,7 @@ export default function MagoConferencianteBlogPage() {
                 type="application/ld+json" 
                 dangerouslySetInnerHTML={{ __html: JSON.stringify([articleSchema, breadcrumbSchema]) }} 
             />
-            <NavFooterClient>
-                <MagicCursor />
-                <ParticleBackground />
-
-                <main className="relative z-10 pt-24 pb-16 px-6 max-w-4xl mx-auto">
+            <div className="relative z-10 pt-8 pb-16 px-6 max-w-4xl mx-auto">
                     <Breadcrumbs />
                     
                     <article className="mt-8 bg-slate-900/60 rounded-2xl border border-white/10 overflow-hidden shadow-2xl">
@@ -138,8 +132,7 @@ export default function MagoConferencianteBlogPage() {
 
                         </div>
                     </article>
-                </main>
-            </NavFooterClient>
+            </div>
         </>
     );
 }

@@ -542,6 +542,10 @@ video { object-fit: cover; }
     will-change: transform;
 }
 
+.fab-whatsapp:hover {
+    animation-play-state: paused;
+}
+
 
 /* Marquee animation for continuous infinite scroll */
 @keyframes marquee {
