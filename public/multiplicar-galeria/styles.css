@@ -6,6 +6,9 @@
 
 :root {
     --gallery-top-offset: max(env(safe-area-inset-top, 52px), 52px);
+    --photo-left: 33.434%;
+    --photo-top: 73.340%;
+    --photo-width: 33.133%;
 }
 
 /* ===== RESET & BEHAVIOR LOCKDOWN ===== */
@@ -84,6 +87,8 @@ img {
 @media (max-width: 540px) {
     .app-viewport {
         align-items: flex-start;
+        height: 100vh;
+        height: 100dvh;
     }
     .device-frame {
         width: 100%;
@@ -218,6 +223,182 @@ img {
     display: block;
 }
 
+/* ===== CALIBRATION SECTION & INTERACTIVE VIEWPORT ===== */
+.calibration-section {
+    background: rgba(28, 28, 30, 0.6);
+    border: 0.5px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    padding: 14px;
+    margin-bottom: 18px;
+}
+
+.calibrate-mini-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(41, 151, 255, 0.16);
+    border: 0.5px solid rgba(41, 151, 255, 0.4);
+    border-radius: 8px;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #2997FF;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.calibrate-mini-btn:active {
+    background: rgba(41, 151, 255, 0.3);
+    transform: scale(0.96);
+}
+
+.device-presets-row {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 12px;
+}
+
+.preset-btn {
+    flex: 1;
+    padding: 7px 4px;
+    background: #1C1C1E;
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 500;
+    color: #8E8E93;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.preset-btn.active {
+    background: rgba(41, 151, 255, 0.2);
+    border-color: #2997FF;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.calibrator-viewport {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    background: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: crosshair;
+    touch-action: none;
+    margin-bottom: 14px;
+}
+
+#calibrator-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+}
+
+.calibrator-target-box {
+    position: absolute;
+    border: 2px solid #2997FF;
+    box-shadow: 0 0 14px rgba(41, 151, 255, 0.7), inset 0 0 10px rgba(41, 151, 255, 0.4);
+    border-radius: 4px;
+    pointer-events: none;
+    aspect-ratio: 1 / 1;
+    transition: left 0.12s ease, top 0.05s ease, width 0.08s ease;
+    overflow: hidden;
+}
+
+#calibrator-target-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+    display: block;
+}
+
+.calibrator-badge {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    font-size: 9px;
+    font-weight: 700;
+    background: #2997FF;
+    color: #FFFFFF;
+    padding: 1px 4px;
+    border-radius: 3px;
+    letter-spacing: 0.2px;
+}
+
+.calibrator-hint {
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.7);
+    pointer-events: none;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.95);
+}
+
+.calibrator-control-group {
+    margin-bottom: 12px;
+}
+
+.control-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.control-label {
+    font-size: 12px;
+    color: #8E8E93;
+    font-weight: 500;
+}
+
+.control-val {
+    font-size: 12px;
+    color: #2997FF;
+    font-weight: 600;
+}
+
+.column-selector {
+    display: flex;
+    gap: 4px;
+}
+
+.col-btn {
+    padding: 4px 8px;
+    background: #2C2C2E;
+    border: 0.5px solid rgba(255, 255, 255, 0.12);
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 500;
+    color: #AEAEB2;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.col-btn.active {
+    background: #2997FF;
+    color: #FFFFFF;
+    font-weight: 600;
+    border-color: #2997FF;
+}
+
+.custom-range {
+    width: 100%;
+    accent-color: #2997FF;
+    cursor: pointer;
+    height: 6px;
+}
+
 .arm-btn {
     display: flex;
     align-items: center;
@@ -323,13 +504,13 @@ img {
 }
 
 /* ----- SHOCK 1: Intercambio instantáneo de la última foto (sin animación) ----- */
-/* Coordenadas exactas en foto buena (996x2048): x=333, y=1502, w=330, h=330 */
 .added-photo {
     position: absolute;
-    left: 33.434%;
-    top: 73.340%;
-    width: 33.133%;
-    height: 16.113%;
+    left: var(--photo-left, 33.434%);
+    top: var(--photo-top, 73.340%);
+    width: var(--photo-width, 33.133%);
+    height: auto;
+    aspect-ratio: 1 / 1;
     z-index: 40;
     overflow: hidden;
     display: none;
@@ -385,8 +566,8 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5px;
-    padding-top: calc(146px * (100vw / 783));
-    padding-bottom: calc(146px * (100vw / 783));
+    padding-top: calc(max(env(safe-area-inset-top, 48px), 48px) + 72px);
+    padding-bottom: calc(max(env(safe-area-inset-bottom, 34px), 34px) + 64px);
 }
 
 @media (min-width: 480px) {

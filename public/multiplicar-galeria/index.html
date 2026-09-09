@@ -49,13 +49,71 @@
                         <div class="preview" id="preview-gallery"></div>
                     </div>
 
-                    <div class="setup-section">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
-                            <p class="setup-label" style="margin-bottom: 0;">Bajar / Subir foto de galería</p>
-                            <span id="offset-val-label" style="font-size: 13px; color: #2997FF; font-weight: 600;">52px</span>
+                    <div class="setup-section calibration-section" id="calibration-section">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                            <p class="setup-label" style="margin-bottom: 0;">3. Calibrar posición (Responsive)</p>
+                            <button type="button" id="btn-auto-calibrate" class="calibrate-mini-btn" title="Detectar y ajustar para este móvil">
+                                <span>⚡ Auto-Ajustar</span>
+                            </button>
                         </div>
-                        <input type="range" id="input-offset" min="30" max="85" value="52" style="width: 100%; accent-color: #2997FF; cursor: pointer;">
-                        <p style="font-size: 11px; color: #8E8E93; margin-top: 5px;">Ajusta la altura para que el reloj y la batería del móvil no tapen "Fototeca".</p>
+
+                        <!-- Presets de dispositivo -->
+                        <div class="device-presets-row">
+                            <button type="button" class="preset-btn active" id="preset-auto" data-preset="auto">📱 Auto</button>
+                            <button type="button" class="preset-btn" id="preset-ip16pro" data-preset="ip16pro">16 Pro</button>
+                            <button type="button" class="preset-btn" id="preset-ip15plus" data-preset="ip15plus">15 Plus</button>
+                            <button type="button" class="preset-btn" id="preset-ip15" data-preset="ip15">15 / 16</button>
+                        </div>
+
+                        <!-- Previsualización interactiva con toque para colocar la foto -->
+                        <div class="calibrator-viewport" id="calibrator-viewport">
+                            <img id="calibrator-bg-img" src="/multiplicar-galeria/foto buena.jpeg" alt="" draggable="false">
+                            <div class="calibrator-target-box" id="calibrator-target-box">
+                                <img id="calibrator-target-img" src="" alt="" draggable="false">
+                                <span class="calibrator-badge">Aquí</span>
+                            </div>
+                            <div class="calibrator-hint">Toca en la captura para situar la foto</div>
+                        </div>
+
+                        <!-- Selector de Columna -->
+                        <div class="calibrator-control-group">
+                            <div class="control-header">
+                                <span class="control-label">Columna</span>
+                                <div class="column-selector" id="col-selector">
+                                    <button type="button" class="col-btn" data-col="0">Izquierda</button>
+                                    <button type="button" class="col-btn active" data-col="1">Centro</button>
+                                    <button type="button" class="col-btn" data-col="2">Derecha</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Posición Vertical (Y) -->
+                        <div class="calibrator-control-group">
+                            <div class="control-header">
+                                <span class="control-label">Posición Vertical (Y)</span>
+                                <span id="pos-y-val-label" class="control-val">73.3%</span>
+                            </div>
+                            <input type="range" id="input-pos-y" min="20.0" max="92.0" step="0.1" value="73.3" class="custom-range">
+                        </div>
+
+                        <!-- Tamaño celda -->
+                        <div class="calibrator-control-group">
+                            <div class="control-header">
+                                <span class="control-label">Tamaño de celda</span>
+                                <span id="pos-size-val-label" class="control-val">33.1%</span>
+                            </div>
+                            <input type="range" id="input-pos-size" min="25.0" max="38.0" step="0.1" value="33.1" class="custom-range">
+                        </div>
+
+                        <!-- Desplazamiento captura (Top Offset) -->
+                        <div class="calibrator-control-group">
+                            <div class="control-header">
+                                <span class="control-label">Desplazamiento captura (Top)</span>
+                                <span id="offset-val-label" class="control-val">52px</span>
+                            </div>
+                            <input type="range" id="input-offset" min="0" max="90" value="52" class="custom-range">
+                            <p style="font-size: 11px; color: #8E8E93; margin-top: 4px;">Ajusta la altura para que el reloj y la batería no tapen "Fototeca".</p>
+                        </div>
                     </div>
 
                     <button id="btn-arm" class="arm-btn">

@@ -54,6 +54,17 @@
     const viewerImg             = document.getElementById('viewer-img');
     const inputOffset           = document.getElementById('input-offset');
     const offsetValLabel        = document.getElementById('offset-val-label');
+    const btnAutoCalibrate      = document.getElementById('btn-auto-calibrate');
+    const presetButtons         = document.querySelectorAll('.preset-btn');
+    const calibratorViewport    = document.getElementById('calibrator-viewport');
+    const calibratorBgImg       = document.getElementById('calibrator-bg-img');
+    const calibratorTargetBox   = document.getElementById('calibrator-target-box');
+    const calibratorTargetImg   = document.getElementById('calibrator-target-img');
+    const colButtons            = document.querySelectorAll('.col-btn');
+    const inputPosY             = document.getElementById('input-pos-y');
+    const posYValLabel          = document.getElementById('pos-y-val-label');
+    const inputPosSize          = document.getElementById('input-pos-size');
+    const posSizeValLabel       = document.getElementById('pos-size-val-label');
 
     let activeCell              = null;
     let isAnimatingPhoto        = false;
@@ -118,7 +129,7 @@
         reader.readAsDataURL(file);
     }
 
-    // Inicializar imagen (desde localStorage si existe para funcionar 100% offline)
+    // Inicializar imágenes (desde localStorage si existe para funcionar 100% offline)
     try {
         const savedTrick = localStorage.getItem('magic_trick_image');
         trickImageData = savedTrick || createDefaultTrickImage();
@@ -126,8 +137,19 @@
         trickImageData = createDefaultTrickImage();
     }
 
+    try {
+        const savedGallery = localStorage.getItem('magic_gallery_image');
+        if (savedGallery) {
+            galleryImageData = savedGallery;
+        }
+    } catch (e) {}
+
     showPreview(previewTrick, trickImageData);
     showPreview(previewGallery, galleryImageData);
+    if (calibratorBgImg) calibratorBgImg.src = galleryImageData;
+    if (calibratorTargetImg) calibratorTargetImg.src = trickImageData;
+    if (addedPhotoImg) addedPhotoImg.src = trickImageData;
+    if (imgGallery) imgGallery.src = galleryImageData;
 
     // ===== CONSTRUCTOR ULTRA-RÁPIDO CON RECICLAJE DE NODOS DE LA CUADRÍCULA =====
     function buildMultipliedGrid() {
@@ -536,6 +558,7 @@
             addedPhotoImg.src = optimized;
             viewerImg.src = optimized;
             zoomProxyImg.src = optimized;
+            if (calibratorTargetImg) calibratorTargetImg.src = optimized;
             // Pre-construir / actualizar la cuadrícula de 500 fotos en segundo plano AHORA
             buildMultipliedGrid();
         });
@@ -552,21 +575,267 @@
             } catch (err) {}
             showPreview(previewGallery, optimized);
             imgGallery.src = optimized;
+            if (calibratorBgImg) calibratorBgImg.src = optimized;
         });
     });
 
-    // ===== CALIBRACIÓN DE ALTURA VERTICAL (POR DEFECTO 52px PARA DESPEJAR LA HORA) =====
-    const savedOffset = localStorage.getItem('gallery_top_offset') || '52';
-    if (inputOffset && offsetValLabel) {
-        inputOffset.value = savedOffset;
-        offsetValLabel.textContent = savedOffset + 'px';
-        document.documentElement.style.setProperty('--gallery-top-offset', savedOffset + 'px');
+    // =================================================================
+    //  SISTEMA DE CALIBRACIÓN Y ADAPTABILIDAD RESPONSIVE (iOS 18)
+    // =================================================================
+    const DEVICE_PRESETS = {
+        ip16pro: {
+            name: 'iPhone 16 Pro',
+            col: 1, // Centro
+            topPercent: 73.3,
+            sizePercent: 33.1,
+            topOffset: 54
+        },
+        ip15plus: {
+            name: 'iPhone 15 Plus',
+            col: 1,
+            topPercent: 73.34,
+            sizePercent: 33.13,
+            topOffset: 52
+        },
+        ip15: {
+            name: 'iPhone 15 / 16 / 14 Pro',
+            col: 1,
+            topPercent: 73.3,
+            sizePercent: 33.1,
+            topOffset: 50
+        }
+    };
 
+    function detectDeviceModel() {
+        const w = window.screen?.width || window.innerWidth;
+        const h = window.screen?.height || window.innerHeight;
+        const minD = Math.min(w, h);
+        const maxD = Math.max(w, h);
+        const ratio = maxD / (minD || 1);
+
+        // iPhone 16 Pro (402 x 874 pt)
+        if (minD >= 398 && minD <= 412 && maxD >= 865 && maxD <= 888) {
+            return 'ip16pro';
+        }
+        // iPhone 15 Plus / 16 Plus / Pro Max (430 x 932 pt / 440 x 956 pt)
+        if (minD >= 420 && maxD >= 920) {
+            return 'ip15plus';
+        }
+        // iPhone 15 / 16 / 14 Pro / 15 Pro (393 x 852 pt)
+        if (minD >= 385 && minD <= 400 && maxD >= 840 && maxD <= 862) {
+            return 'ip15';
+        }
+        // Proporción alargada (iPhone 16 Pro / Pro Max)
+        if (ratio > 2.165) {
+            return 'ip16pro';
+        }
+        return 'ip15plus';
+    }
+
+    let currentCalibration = {
+        preset: 'auto',
+        col: 1,
+        topPercent: 73.34,
+        sizePercent: 33.13,
+        topOffset: 52
+    };
+
+    function getLeftPercentForCol(col, size) {
+        if (col === 0) return 0.2;
+        if (col === 2) return Math.max(0, 100 - size - 0.2);
+        // Columna 1: centro geométrico
+        return (100 - size) / 2;
+    }
+
+    function updatePresetButtonsUI(activePreset) {
+        presetButtons.forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.preset === activePreset);
+        });
+    }
+
+    function applyCalibration(cfg, save = true) {
+        currentCalibration = { ...currentCalibration, ...cfg };
+        const leftVal = getLeftPercentForCol(currentCalibration.col, currentCalibration.sizePercent);
+
+        // Actualizar variables CSS reactivas en el documento
+        document.documentElement.style.setProperty('--photo-left', `${leftVal.toFixed(3)}%`);
+        document.documentElement.style.setProperty('--photo-top', `${currentCalibration.topPercent.toFixed(2)}%`);
+        document.documentElement.style.setProperty('--photo-width', `${currentCalibration.sizePercent.toFixed(2)}%`);
+        document.documentElement.style.setProperty('--gallery-top-offset', `${currentCalibration.topOffset}px`);
+
+        // Sincronizar inputs y etiquetas en State 0
+        if (inputPosY) inputPosY.value = currentCalibration.topPercent;
+        if (posYValLabel) posYValLabel.textContent = `${currentCalibration.topPercent.toFixed(1)}%`;
+
+        if (inputPosSize) inputPosSize.value = currentCalibration.sizePercent;
+        if (posSizeValLabel) posSizeValLabel.textContent = `${currentCalibration.sizePercent.toFixed(1)}%`;
+
+        if (inputOffset) inputOffset.value = currentCalibration.topOffset;
+        if (offsetValLabel) offsetValLabel.textContent = `${currentCalibration.topOffset}px`;
+
+        colButtons.forEach(btn => {
+            btn.classList.toggle('active', parseInt(btn.dataset.col, 10) === currentCalibration.col);
+        });
+
+        if (calibratorTargetBox) {
+            calibratorTargetBox.style.left = `${leftVal.toFixed(2)}%`;
+            calibratorTargetBox.style.top = `${currentCalibration.topPercent.toFixed(2)}%`;
+            calibratorTargetBox.style.width = `${currentCalibration.sizePercent.toFixed(2)}%`;
+        }
+
+        if (save) {
+            try {
+                localStorage.setItem('magic_photo_config', JSON.stringify(currentCalibration));
+                localStorage.setItem('gallery_top_offset', String(currentCalibration.topOffset));
+            } catch (e) {}
+        }
+    }
+
+    function initCalibration() {
+        let loaded = false;
+        try {
+            const saved = localStorage.getItem('magic_photo_config');
+            if (saved) {
+                const parsed = JSON.parse(saved);
+                if (parsed && typeof parsed.topPercent === 'number') {
+                    currentCalibration = { ...currentCalibration, ...parsed };
+                    loaded = true;
+                    updatePresetButtonsUI(currentCalibration.preset || 'custom');
+                }
+            }
+        } catch (e) {}
+
+        if (!loaded) {
+            const detected = detectDeviceModel();
+            const presetData = DEVICE_PRESETS[detected] || DEVICE_PRESETS.ip15plus;
+            currentCalibration = {
+                preset: detected,
+                col: presetData.col,
+                topPercent: presetData.topPercent,
+                sizePercent: presetData.sizePercent,
+                topOffset: presetData.topOffset
+            };
+            updatePresetButtonsUI('auto');
+        }
+
+        applyCalibration(currentCalibration, false);
+    }
+
+    // Inicializar calibración al arrancar
+    initCalibration();
+
+    // Eventos de botones de presets
+    presetButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const p = btn.dataset.preset;
+            let targetPresetKey = p;
+            if (p === 'auto') {
+                targetPresetKey = detectDeviceModel();
+            }
+            const data = DEVICE_PRESETS[targetPresetKey] || DEVICE_PRESETS.ip15plus;
+            applyCalibration({
+                preset: p,
+                col: data.col,
+                topPercent: data.topPercent,
+                sizePercent: data.sizePercent,
+                topOffset: data.topOffset
+            });
+            updatePresetButtonsUI(p);
+        });
+    });
+
+    // Botón de auto-calibración directa
+    if (btnAutoCalibrate) {
+        btnAutoCalibrate.addEventListener('click', () => {
+            const detected = detectDeviceModel();
+            const data = DEVICE_PRESETS[detected] || DEVICE_PRESETS.ip15plus;
+            applyCalibration({
+                preset: detected,
+                col: data.col,
+                topPercent: data.topPercent,
+                sizePercent: data.sizePercent,
+                topOffset: data.topOffset
+            });
+            updatePresetButtonsUI('auto');
+        });
+    }
+
+    // Eventos de selector de columna
+    colButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const col = parseInt(btn.dataset.col, 10);
+            applyCalibration({ col, preset: 'custom' });
+            updatePresetButtonsUI('custom');
+        });
+    });
+
+    // Slider posición vertical (Y)
+    if (inputPosY) {
+        inputPosY.addEventListener('input', (e) => {
+            const val = parseFloat(e.target.value);
+            applyCalibration({ topPercent: val, preset: 'custom' });
+            updatePresetButtonsUI('custom');
+        });
+    }
+
+    // Slider tamaño celda (Size)
+    if (inputPosSize) {
+        inputPosSize.addEventListener('input', (e) => {
+            const val = parseFloat(e.target.value);
+            applyCalibration({ sizePercent: val, preset: 'custom' });
+            updatePresetButtonsUI('custom');
+        });
+    }
+
+    // Slider offset superior de galería
+    if (inputOffset) {
         inputOffset.addEventListener('input', (e) => {
-            const val = e.target.value;
-            offsetValLabel.textContent = val + 'px';
-            document.documentElement.style.setProperty('--gallery-top-offset', val + 'px');
-            localStorage.setItem('gallery_top_offset', val);
+            const val = parseInt(e.target.value, 10);
+            applyCalibration({ topOffset: val });
+        });
+    }
+
+    // Toque interactivo en el calibrador para mover la foto
+    if (calibratorViewport) {
+        function handleCalibratorTap(e) {
+            const rect = calibratorViewport.getBoundingClientRect();
+            if (rect.width <= 0 || rect.height <= 0) return;
+
+            let clientX = e.clientX;
+            let clientY = e.clientY;
+            if (e.touches && e.touches.length > 0) {
+                clientX = e.touches[0].clientX;
+                clientY = e.touches[0].clientY;
+            } else if (e.changedTouches && e.changedTouches.length > 0) {
+                clientX = e.changedTouches[0].clientX;
+                clientY = e.changedTouches[0].clientY;
+            }
+
+            const clickX = clientX - rect.left;
+            const clickY = clientY - rect.top;
+
+            // Determinar columna (0: Izquierda, 1: Centro, 2: Derecha)
+            const colWidth = rect.width / 3;
+            let chosenCol = 1;
+            if (clickX < colWidth) chosenCol = 0;
+            else if (clickX > colWidth * 2) chosenCol = 2;
+
+            // Centrar la caja en la posición tocada
+            const targetSizePx = (currentCalibration.sizePercent / 100) * rect.width;
+            const topPx = clickY - (targetSizePx / 2);
+            let topPercent = (topPx / rect.height) * 100;
+            topPercent = Math.max(10, Math.min(88, topPercent));
+
+            applyCalibration({
+                col: chosenCol,
+                topPercent: parseFloat(topPercent.toFixed(1)),
+                preset: 'custom'
+            });
+            updatePresetButtonsUI('custom');
+        }
+
+        calibratorViewport.addEventListener('pointerdown', (e) => {
+            handleCalibratorTap(e);
         });
     }
 

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'fotos-magic-v8';
+const CACHE_NAME = 'fotos-magic-v10';
 const APP_SHELL = [
     '/multiplicar-galeria/',
     '/multiplicar-galeria/index.html',
