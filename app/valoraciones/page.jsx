@@ -1,19 +1,19 @@
 import ValoracionesClient from '@/components/ValoracionesClient';
 
 export const metadata = {
-    title: { absolute: 'Opiniones 100% 5 Estrellas ⭐⭐⭐⭐⭐ Ángel Ruiz, Mago en Madrid' },
-    description: '¿Por qué clientes y empresas recomiendan a Ángel Ruiz? Lee testimonios reales de bodas y eventos en Madrid. Reacciones auténticas y garantía de éxito.',
+    title: { absolute: 'Opiniones 100% 5★ ⭐ Ángel Ruiz · Mago en Madrid' },
+    description: '¿Por qué novios y empresas dan 5 estrellas a Ángel Ruiz? Testimonios auténticos y reacciones reales en Madrid. ¡Míralos aquí!',
     alternates: {
         canonical: 'https://angelruiz.world/valoraciones',
     },
     openGraph: {
         url: 'https://angelruiz.world/valoraciones',
-        title: 'Opiniones 100% 5 Estrellas ⭐⭐⭐⭐⭐ Ángel Ruiz, Mago en Madrid',
-        description: '¿Por qué clientes y empresas recomiendan a Ángel Ruiz? Lee testimonios reales de bodas y eventos en Madrid.',
+        title: 'Opiniones 100% 5★ ⭐ Ángel Ruiz · Mago en Madrid',
+        description: '¿Por qué novios y empresas dan 5 estrellas a Ángel Ruiz? Testimonios auténticos y reacciones reales en Madrid.',
     },
     twitter: {
         card: 'summary',
-        title: 'Opiniones 100% 5 Estrellas ⭐⭐⭐⭐⭐ Ángel Ruiz, Mago en Madrid',
+        title: 'Opiniones 100% 5★ ⭐ Ángel Ruiz · Mago en Madrid',
         description: 'Descubre por qué novios y empresas dan 5 estrellas a Ángel Ruiz en Madrid.',
     },
 };

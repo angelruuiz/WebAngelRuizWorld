@@ -6,22 +6,22 @@ import { MagicCursor, ParticleBackground, FadeIn } from '@/components/VisualEffe
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: { absolute: 'Mago para Bodas en Madrid ⭐ Haz Tu Cóctel Inolvidable [Desde 300€]' },
-    description: '¿Imaginas a tus invitados alucinando durante el cóctel? Magia de cerca exclusiva a centímetros de sus manos. Fechas limitadas: ¡comprueba la tuya!',
+    title: { absolute: 'Mago para Bodas en Madrid ⭐ Haz Tu Cóctel Inolvidable' },
+    description: '¿Imaginas a tus invitados alucinando en el cóctel? Magia de cerca exclusiva a centímetros de sus ojos. ¡Pide tu fecha hoy!',
     keywords: ['mago para bodas', 'mago para bodas madrid', 'mago bodas madrid', 'contratar mago boda madrid', 'mago coctel boda madrid', 'ilusionista bodas madrid', 'mago para bodas precio madrid', 'mago boda noroeste madrid', 'entretenimiento bodas madrid', 'mago para mi boda madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/particulares/bodas',
     },
     openGraph: {
         url: 'https://angelruiz.world/particulares/bodas',
-        title: 'Mago para Bodas en Madrid ⭐ Haz Tu Cóctel Inolvidable [Desde 300€]',
-        description: '¿Imaginas a tus invitados alucinando durante el cóctel? Magia de cerca exclusiva para bodas en Madrid. ¡Comprueba disponibilidad!',
+        title: 'Mago para Bodas en Madrid ⭐ Haz Tu Cóctel Inolvidable',
+        description: '¿Imaginas a tus invitados alucinando en el cóctel? Magia de cerca exclusiva para bodas en Madrid. ¡Pide tu fecha hoy!',
         images: [{ url: '/images/boda-magia-madrid.webp', width: 1200, height: 630 }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago para Bodas en Madrid ⭐ Haz Tu Cóctel Inolvidable [Desde 300€]',
-        description: '¿Imaginas a tus invitados alucinando durante el cóctel? Magia de cerca exclusiva. ¡Comprueba disponibilidad!',
+        title: 'Mago para Bodas en Madrid ⭐ Haz Tu Cóctel Inolvidable',
+        description: '¿Imaginas a tus invitados alucinando en el cóctel? Magia de cerca exclusiva. ¡Pide tu fecha hoy!',
         images: ['/images/boda-magia-madrid.webp'],
     },
 };

@@ -8,14 +8,14 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import BusinessSchema from '@/components/BusinessSchema';
 
 export const metadata = {
-    title: { absolute: 'Mago de Cerca en Madrid (Close-Up) ⭐ Lo Imposible en Tus Manos' },
-    description: '¿Imaginas ver la magia ocurrir en tus propias manos? Cartomagia pura e ilusionismo a centímetros de tus ojos. Sin trucos de cámara. ¡Pide tu fecha hoy!',
+    title: { absolute: 'Mago de Cerca en Madrid ⭐ Lo Imposible en Tus Manos' },
+    description: '¿Imaginas ver la magia ocurrir en tus manos? Cartomagia pura a centímetros de tus ojos sin trucos de cámara. ¡Pide tu fecha!',
     alternates: {
         canonical: 'https://angelruiz.world/mago-close-up-madrid',
     },
     openGraph: {
-        title: 'Mago de Cerca en Madrid (Close-Up) ⭐ Lo Imposible en Tus Manos',
-        description: '¿Imaginas ver la magia ocurrir en tus propias manos? Cartomagia pura e ilusionismo a centímetros de tus ojos. ¡Pide tu fecha hoy!',
+        title: 'Mago de Cerca en Madrid ⭐ Lo Imposible en Tus Manos',
+        description: '¿Imaginas ver la magia ocurrir en tus manos? Cartomagia pura a centímetros de tus ojos. ¡Pide tu fecha!',
         images: [{ url: '/images/foto-bio.webp' }],
     }
 };
