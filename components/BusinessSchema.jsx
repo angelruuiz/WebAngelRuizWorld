@@ -4,8 +4,8 @@ export default function BusinessSchema() {
   const business = {
     "@type": "ProfessionalService",
     "@id": "https://angelruiz.world/#organization",
-    "name": "Ángel Ruiz | Mago e Ilusionista",
-    "alternateName": "Ángel Ruiz Magia",
+    "name": "Ángel Ruiz | Mago para Bodas y Empresas en Madrid",
+    "alternateName": ["Ángel Ruiz | Mago e Ilusionista", "Ángel Ruiz Magia"],
     "description": "Mago e ilusionista profesional en Madrid. Especialista en magia de cerca exclusiva para eventos corporativos, bodas de lujo y fiestas privadas.",
     "url": "https://angelruiz.world",
     "logo": "https://angelruiz.world/icon.webp",

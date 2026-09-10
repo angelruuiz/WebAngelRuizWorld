@@ -269,7 +269,8 @@ export default function Home() {
                         {
                             "@type": ["ProfessionalService", "LocalBusiness"],
                             "@id": "https://angelruiz.world/#organization",
-                            "name": "Ángel Ruiz | Mago e Ilusionista",
+                            "name": "Ángel Ruiz | Mago para Bodas y Empresas en Madrid",
+                            "alternateName": "Ángel Ruiz | Mago e Ilusionista",
                             "url": "https://angelruiz.world",
                             "telephone": "+34648055636",
                             "email": "info@angelruiz.world",
