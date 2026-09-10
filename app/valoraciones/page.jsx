@@ -1,20 +1,20 @@
 import ValoracionesClient from '@/components/ValoracionesClient';
 
 export const metadata = {
-    title: { absolute: 'Opiniones y Reseñas | Ángel Ruiz, Mago en Madrid' },
-    description: 'Descubre por qué Ángel Ruiz es el mago mejor valorado en Madrid. 42 reseñas verificadas de 5 estrellas en eventos, bodas y empresas. Lee testimonios reales.',
+    title: { absolute: '42 Opiniones Reales ⭐⭐⭐⭐⭐ Mago en Madrid · Ángel Ruiz' },
+    description: 'Lee las 42 opiniones reales de parejas y empresas que contrataron a Ángel Ruiz como mago en Madrid. 5 estrellas en cada reseña. Descubre por qué repiten.',
     alternates: {
         canonical: 'https://angelruiz.world/valoraciones',
     },
     openGraph: {
         url: 'https://angelruiz.world/valoraciones',
-        title: 'Opiniones y Reseñas | Ángel Ruiz, Mago en Madrid',
-        description: '42 reseñas verificadas de 5 estrellas. Lee las opiniones reales de clientes que contrataron a Ángel Ruiz como mago para bodas, empresas y eventos en Madrid.',
+        title: '42 Opiniones Reales ⭐⭐⭐⭐⭐ Mago en Madrid · Ángel Ruiz',
+        description: 'Lee las 42 opiniones reales de parejas y empresas que contrataron a Ángel Ruiz. 5 estrellas en cada reseña.',
     },
     twitter: {
         card: 'summary',
-        title: 'Opiniones y Reseñas | Ángel Ruiz, Mago en Madrid',
-        description: 'Descubre por qué Ángel Ruiz es el mago mejor valorado en Madrid. Lee testimonios reales.',
+        title: '42 Opiniones Reales ⭐⭐⭐⭐⭐ Mago en Madrid · Ángel Ruiz',
+        description: 'Lee las 42 opiniones reales de clientes que contrataron a Ángel Ruiz como mago en Madrid.',
     },
 };
 
@@ -77,7 +77,7 @@ export default function ValoracionesPage() {
             <div className="bg-slate-950 pt-32 pb-8 px-6 text-center relative z-10">
                 <div className="max-w-4xl mx-auto space-y-8 bg-white/5 p-10 rounded-[2.5rem] border border-white/5">
                     <h2 className="text-amber-500 font-bold uppercase tracking-[0.2em] text-xs">Calidad y Confianza Garantizada</h2>
-                    <h3 className="text-white font-[Cinzel] text-3xl md:text-4xl uppercase px-4 leading-relaxed">¿Por qué confiar en la magia de <strong className="text-amber-400">Ángel Ruiz</strong>?</h3>
+                    <h1 className="text-white font-[Cinzel] text-3xl md:text-4xl uppercase px-4 leading-relaxed">Opiniones Reales de <strong className="text-amber-400">Ángel Ruiz</strong>, Mago en Madrid</h1>
                     <div className="text-slate-400 text-sm md:text-base leading-relaxed text-justify space-y-4 font-light italic">
                         <p>
                             Las valoraciones de mis clientes no son solo palabras; son la base de mi <strong>reputación profesional como ilusionista</strong>. En cada evento en Madrid y la zona de la sierra, mi prioridad es la búsqueda de la <u>excelencia técnica y la satisfacción total del cliente</u>. Entiendo que un evento es un hito irrepetible, y por ello mi compromiso es con la puntualidad, la elegancia en el trato y, sobre todo, la entrega de un asombro de primer nivel.

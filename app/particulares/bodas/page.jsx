@@ -6,22 +6,22 @@ import { MagicCursor, ParticleBackground, FadeIn } from '@/components/VisualEffe
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: { absolute: 'Mago para Bodas en Madrid ⭐ Cóctel Exclusivo · Ángel Ruiz' },
-    description: 'Magia de cerca para el cóctel de tu boda en Madrid. 42 reseñas 5★ y desde 300€. Consulta fechas y packs en 2 min.',
+    title: { absolute: 'Mago para Bodas en Madrid [Desde 300€] ⭐ 42 Reseñas 5★' },
+    description: 'Sorprende a tus invitados con el mejor mago para bodas en Madrid. Magia de cerca premium para el cóctel. 42 reseñas 5★. ¡Comprueba disponibilidad!',
     keywords: ['mago para bodas', 'mago para bodas madrid', 'mago bodas madrid', 'contratar mago boda madrid', 'mago coctel boda madrid', 'ilusionista bodas madrid', 'mago para bodas precio madrid', 'mago boda noroeste madrid', 'entretenimiento bodas madrid', 'mago para mi boda madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/particulares/bodas',
     },
     openGraph: {
         url: 'https://angelruiz.world/particulares/bodas',
-        title: 'Mago para Bodas en Madrid ⭐ Cóctel Exclusivo · Ángel Ruiz',
-        description: 'Magia de cerca para el cóctel de tu boda en Madrid. 42 reseñas 5★. Consulta presupuesto directo.',
+        title: 'Mago para Bodas en Madrid [Desde 300€] ⭐ 42 Reseñas 5★',
+        description: 'Sorprende a tus invitados con el mejor mago para bodas en Madrid. Magia de cerca premium para el cóctel. 42 reseñas 5★.',
         images: [{ url: '/images/boda-magia-madrid.webp', width: 1200, height: 630 }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago para Bodas en Madrid ⭐ Cóctel Exclusivo · Ángel Ruiz',
-        description: 'Magia de cerca para bodas en Madrid. Transforma el cóctel en el momento más recordado.',
+        title: 'Mago para Bodas en Madrid [Desde 300€] ⭐ 42 Reseñas 5★',
+        description: 'Sorprende a tus invitados con magia de cerca premium. 42 reseñas 5★. ¡Comprueba disponibilidad!',
         images: ['/images/boda-magia-madrid.webp'],
     },
 };
@@ -127,7 +127,7 @@ export default function BodasDetailPage() {
                                 </span>
                             </div>
                             <h1 className="text-5xl md:text-6xl lg:text-7xl font-[Cinzel] text-white font-bold leading-[1.1] tracking-tight">
-                                El Día Más <br/><span className="text-[#d4a853] italic font-light">Especial</span>
+                                Mago para Bodas <br/><span className="text-[#d4a853] italic font-light">en Madrid</span>
                             </h1>
                             <p className="text-lg text-slate-300 leading-relaxed max-w-xl font-light">
                                 Recuerdos inolvidables construidos en el momento perfecto. La magia de Ángel Ruiz aporta esas emociones de asombro y elegancia que convierten un cóctel de boda en una experiencia legendaria para todos tus invitados. Un día inolvidable merece detalles a la altura.

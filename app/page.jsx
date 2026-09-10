@@ -27,7 +27,7 @@ const SEOContent = () => {
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6 relative">
                     {/* Intro Section - Span 7 */}
                     <PerpetualCard className="md:col-span-7 flex flex-col justify-start">
-                        <h2 className="text-white font-[Cinzel] text-2xl md:text-4xl uppercase tracking-widest text-left mb-4">Angel Ruiz | Mago e Ilusionista en Madrid</h2>
+                        <h1 className="text-white font-[Cinzel] text-2xl md:text-4xl uppercase tracking-widest text-left mb-4">Angel Ruiz | Mago e Ilusionista en Madrid</h1>
                         <p className="text-base md:text-lg opacity-80 italic text-left text-gold-100 mb-8">Referente en magia para bodas y empresas con un estilo exclusivo.</p>
                         
                         <div className="pt-8 border-t border-white/10 space-y-6">

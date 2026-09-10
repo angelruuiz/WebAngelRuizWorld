@@ -137,7 +137,7 @@ export default function ContratarMagoMadridPage() {
                             Protocolo de Contratación
                         </p>
                         <h1 className="text-5xl md:text-7xl font-[Cinzel] text-white font-bold leading-none mb-8 tracking-tight">
-                            CONTRATAR <br/> ILUSIONISTA
+                            CONTRATAR MAGO <br/> EN MADRID
                         </h1>
                         <p className="text-slate-400 max-w-xl mx-auto text-sm md:text-base leading-relaxed mb-12">
                             Asegura la disponibilidad para tu evento en Madrid. Desde Magia de Cerca y Sleight of Hand hasta magia de salón corporativa de alto impacto. Una experiencia de técnica depurada y misdirection profesional.

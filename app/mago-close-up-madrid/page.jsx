@@ -8,13 +8,13 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import BusinessSchema from '@/components/BusinessSchema';
 
 export const metadata = {
-    title: { absolute: 'Mago de Cerca en Madrid ⭐ Magia Close-Up 2026' },
-    description: 'Magia de cerca exclusiva para cócteles y cenas en Madrid. Cartomagia pura a centímetros de tus ojos. Disponibilidad en 2h.',
+    title: { absolute: 'Mago de Cerca en Madrid (Close-Up) ⭐ 42 Reseñas 5★' },
+    description: 'Magia de cerca exclusiva para cócteles y cenas en Madrid. Cartomagia pura a centímetros de tus ojos. 42 reseñas 5★. ¡Consulta disponibilidad!',
     alternates: {
         canonical: 'https://angelruiz.world/mago-close-up-madrid',
     },
     openGraph: {
-        title: 'Mago de Cerca en Madrid ⭐ Magia Close-Up 2026',
+        title: 'Mago de Cerca en Madrid (Close-Up) ⭐ 42 Reseñas 5★',
         description: 'Especialista en magia de cerca (close-up) en Madrid. Cartomagia pura e ilusionismo de alto impacto.',
         images: [{ url: '/images/foto-bio.webp' }],
     }
@@ -118,7 +118,7 @@ export default function MagoCloseUpMadridPage() {
                                     Ilusionismo de Proximidad
                                 </p>
                                 <h1 className="text-5xl md:text-7xl font-[Cinzel] text-white font-bold leading-[1.1] mb-6">
-                                    MAGIA DE <br />CERCA
+                                    MAGIA DE CERCA <br />EN MADRID
                                 </h1>
                             </div>
                             <div className="max-w-md mt-12 md:mt-0">
