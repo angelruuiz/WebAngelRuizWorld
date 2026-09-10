@@ -1,0 +1,21 @@
+# Version control & cache
+.git
+.gitignore
+
+# Antigravity & AI Agent directories
+.agents
+.claude
+.codex
+
+# Documentation, SEO audits & raw files
+*.docx
+*.zip
+*.py
+AUDITORIA-SEO.md
+auditoria_extraida.txt
+CLAUDE.md
+foto buena.jpeg
+skills-lock.json
+
+# Typescript build info
+*.tsbuildinfo
