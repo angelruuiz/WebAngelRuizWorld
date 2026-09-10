@@ -17,7 +17,7 @@ export const metadata = {
     openGraph: {
         url: 'https://angelruiz.world/empresas',
         title: 'Mago para Empresas en Madrid ➜ Cenas y Eventos 2026',
-        description: 'Especialista en magia para cenas de empresa y eventos corporativos en Madrid. 42 reseñas 5★. Pide presupuesto en 2h.',
+        description: '¿Quieres una cena de empresa que rompa el hielo de verdad? Magia corporativa y networking para tu equipo. Pide presupuesto en 2h.',
         images: [{ url: '/images/evento-angel-ruiz-magia.webp', width: 1200, height: 630 }],
     },
     twitter: {
@@ -40,7 +40,7 @@ export default function EmpresasPage() {
             "url": "https://angelruiz.world"
         },
         "areaServed": "Comunidad de Madrid",
-        "description": "Espectáculos de magia close-up para empresas en Madrid. Servicio profesional de ilusionismo corporativo para cenas de empresa, team building, ferias y congresos. Más de 10 años de experiencia y 42 reseñas de 5 estrellas.",
+        "description": "Espectáculos de magia close-up para empresas en Madrid. Servicio profesional de ilusionismo corporativo para cenas de empresa, team building, ferias y congresos. Más de 10 años de experiencia y valoraciones 100% 5 estrellas.",
         "serviceType": "Corporate Entertainment Service",
         "url": "https://angelruiz.world/empresas"
     };

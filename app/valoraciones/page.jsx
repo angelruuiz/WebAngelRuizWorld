@@ -1,20 +1,20 @@
 import ValoracionesClient from '@/components/ValoracionesClient';
 
 export const metadata = {
-    title: { absolute: '42 Opiniones Reales ⭐⭐⭐⭐⭐ Mago en Madrid · Ángel Ruiz' },
-    description: 'Lee las 42 opiniones reales de parejas y empresas que contrataron a Ángel Ruiz como mago en Madrid. 5 estrellas en cada reseña. Descubre por qué repiten.',
+    title: { absolute: 'Opiniones 100% 5 Estrellas ⭐⭐⭐⭐⭐ Ángel Ruiz, Mago en Madrid' },
+    description: '¿Por qué clientes y empresas recomiendan a Ángel Ruiz? Lee testimonios reales de bodas y eventos en Madrid. Reacciones auténticas y garantía de éxito.',
     alternates: {
         canonical: 'https://angelruiz.world/valoraciones',
     },
     openGraph: {
         url: 'https://angelruiz.world/valoraciones',
-        title: '42 Opiniones Reales ⭐⭐⭐⭐⭐ Mago en Madrid · Ángel Ruiz',
-        description: 'Lee las 42 opiniones reales de parejas y empresas que contrataron a Ángel Ruiz. 5 estrellas en cada reseña.',
+        title: 'Opiniones 100% 5 Estrellas ⭐⭐⭐⭐⭐ Ángel Ruiz, Mago en Madrid',
+        description: '¿Por qué clientes y empresas recomiendan a Ángel Ruiz? Lee testimonios reales de bodas y eventos en Madrid.',
     },
     twitter: {
         card: 'summary',
-        title: '42 Opiniones Reales ⭐⭐⭐⭐⭐ Mago en Madrid · Ángel Ruiz',
-        description: 'Lee las 42 opiniones reales de clientes que contrataron a Ángel Ruiz como mago en Madrid.',
+        title: 'Opiniones 100% 5 Estrellas ⭐⭐⭐⭐⭐ Ángel Ruiz, Mago en Madrid',
+        description: 'Descubre por qué novios y empresas dan 5 estrellas a Ángel Ruiz en Madrid.',
     },
 };
 
@@ -83,7 +83,7 @@ export default function ValoracionesPage() {
                             Las valoraciones de mis clientes no son solo palabras; son la base de mi <strong>reputación profesional como ilusionista</strong>. En cada evento en Madrid y la zona de la sierra, mi prioridad es la búsqueda de la <u>excelencia técnica y la satisfacción total del cliente</u>. Entiendo que un evento es un hito irrepetible, y por ello mi compromiso es con la puntualidad, la elegancia en el trato y, sobre todo, la entrega de un asombro de primer nivel.
                         </p>
                         <p>
-                            Contar con más de <strong className="text-white">42 valoraciones de 5 estrellas</strong> en plataformas independientes avala mi trayectoria como <strong>mago para empresas</strong> y bodas. Aquí puedes explorar testimonios detallados que reflejan la autenticidad de mi propuesta y la garantía de éxito para tu próxima celebración privada o corporativa.
+                            Contar con más de <strong className="text-white">45 valoraciones de 5 estrellas</strong> en plataformas independientes avala mi trayectoria como <strong>mago para empresas</strong> y bodas. Aquí puedes explorar testimonios detallados que reflejan la autenticidad de mi propuesta y la garantía de éxito para tu próxima celebración privada o corporativa.
                         </p>
                     </div>
                 </div>

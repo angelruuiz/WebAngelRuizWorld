@@ -5,21 +5,21 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: { absolute: 'Mago para Fiestas Privadas y Eventos en Madrid' },
-    description: 'Magia de cerca para fiestas privadas y cumpleaños de adultos en Madrid. 42 reseñas 5★. Pide presupuesto express en 2h.',
+    title: { absolute: 'Mago para Fiestas Privadas y Cumpleaños en Madrid ⭐ Ángel Ruiz' },
+    description: '¿Quieres una fiesta de la que todos sigan hablando? Magia de cerca y asombro a centímetros para cumpleaños y eventos en Madrid. Presupuesto express en 2h.',
     alternates: {
         canonical: 'https://angelruiz.world/particulares/eventos',
     },
     openGraph: {
-        title: 'Mago para Fiestas Privadas y Eventos en Madrid',
-        description: 'Magia de cerca para celebraciones privadas y cumpleaños en Madrid.',
+        title: 'Mago para Fiestas Privadas y Cumpleaños en Madrid ⭐ Ángel Ruiz',
+        description: '¿Quieres una fiesta de la que todos sigan hablando? Magia de cerca y asombro a centímetros en Madrid.',
         images: [{ url: '/images/foto-bio.webp' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago para Fiestas Privadas y Eventos en Madrid',
-        description: 'Lleva el asombro a tu propia fiesta con Ángel Ruiz.',
-        images: ['/images/foto-bio.webp'],
+        title: 'Mago para Fiestas Privadas y Cumpleaños en Madrid ⭐ Ángel Ruiz',
+        description: 'Lleva el asombro y la diversión a tu propia fiesta con Ángel Ruiz.',
+        images: [{ url: '/images/foto-bio.webp' }],
     },
 };
 

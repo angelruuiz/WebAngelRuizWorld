@@ -6,22 +6,22 @@ import { MagicCursor, ParticleBackground, FadeIn } from '@/components/VisualEffe
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: { absolute: 'Mago para Bodas en Madrid [Desde 300€] ⭐ 42 Reseñas 5★' },
-    description: 'Sorprende a tus invitados con el mejor mago para bodas en Madrid. Magia de cerca premium para el cóctel. 42 reseñas 5★. ¡Comprueba disponibilidad!',
+    title: { absolute: 'Mago para Bodas en Madrid ⭐ Haz Tu Cóctel Inolvidable [Desde 300€]' },
+    description: '¿Imaginas a tus invitados alucinando durante el cóctel? Magia de cerca exclusiva a centímetros de sus manos. Fechas limitadas: ¡comprueba la tuya!',
     keywords: ['mago para bodas', 'mago para bodas madrid', 'mago bodas madrid', 'contratar mago boda madrid', 'mago coctel boda madrid', 'ilusionista bodas madrid', 'mago para bodas precio madrid', 'mago boda noroeste madrid', 'entretenimiento bodas madrid', 'mago para mi boda madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/particulares/bodas',
     },
     openGraph: {
         url: 'https://angelruiz.world/particulares/bodas',
-        title: 'Mago para Bodas en Madrid [Desde 300€] ⭐ 42 Reseñas 5★',
-        description: 'Sorprende a tus invitados con el mejor mago para bodas en Madrid. Magia de cerca premium para el cóctel. 42 reseñas 5★.',
+        title: 'Mago para Bodas en Madrid ⭐ Haz Tu Cóctel Inolvidable [Desde 300€]',
+        description: '¿Imaginas a tus invitados alucinando durante el cóctel? Magia de cerca exclusiva para bodas en Madrid. ¡Comprueba disponibilidad!',
         images: [{ url: '/images/boda-magia-madrid.webp', width: 1200, height: 630 }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago para Bodas en Madrid [Desde 300€] ⭐ 42 Reseñas 5★',
-        description: 'Sorprende a tus invitados con magia de cerca premium. 42 reseñas 5★. ¡Comprueba disponibilidad!',
+        title: 'Mago para Bodas en Madrid ⭐ Haz Tu Cóctel Inolvidable [Desde 300€]',
+        description: '¿Imaginas a tus invitados alucinando durante el cóctel? Magia de cerca exclusiva. ¡Comprueba disponibilidad!',
         images: ['/images/boda-magia-madrid.webp'],
     },
 };
@@ -401,7 +401,7 @@ export default function BodasDetailPage() {
                                     <ul className="space-y-4">
                                         {[
                                             'Más de 10 años especializado en bodas en Madrid y Sierra',
-                                            '42 reseñas de 5 estrellas en Google',
+                                            'Más de 45 reseñas de 5 estrellas en Google',
                                             'Formado en la Escuela de Dani DaOrtiz (cartomagia de autor)',
                                             'Coordinación directa con wedding planners y fincas',
                                             'Magia elegante, familiar y no invasiva',

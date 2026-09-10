@@ -8,7 +8,7 @@ export const metadata = {
     default: 'Mago en Madrid ⭐ Ángel Ruiz · Bodas y Empresas',
     template: '%s | Ángel Ruiz'
   },
-  description: 'Mago profesional en Madrid para bodas y empresas. 42 reseñas 5★. Trato directo sin agencias. Presupuesto express en 2h.',
+  description: '¿Buscas asombro inolvidable? Ilusionismo de autor para bodas, empresas y eventos exclusivos en Madrid. Trato directo sin agencias. Presupuesto express en 2h.',
   keywords: ['mago madrid', 'mago en madrid', 'contratar mago madrid', 'mago profesional madrid', 'ilusionista madrid', 'magia de cerca madrid', 'mago cenas empresa madrid', 'mago comuniones madrid', 'mago team building madrid', 'mago close-up madrid', 'Ángel Ruiz mago'],
   authors: [{ name: 'Ángel Ruiz | Mago e Ilusionista' }],
   creator: 'Ángel Ruiz | Mago e Ilusionista',
@@ -21,7 +21,7 @@ export const metadata = {
     type: 'website',
     locale: 'es_ES',
     title: 'Mago en Madrid | Ángel Ruiz | Ilusionista para Bodas y Empresas',
-    description: 'Mago profesional en Madrid para bodas, cenas de empresa y eventos privados. +10 años de experiencia y 42 reseñas 5 estrellas. Solicita presupuesto.',
+    description: '¿Buscas asombro inolvidable? Magia de cerca y mentalismo de impacto para bodas, empresas y eventos en Madrid. Solicita presupuesto directo.',
     siteName: 'Ángel Ruiz | Mago e Ilusionista',
     images: [{
       url: '/images/foto-bio.webp',
@@ -33,7 +33,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Mago en Madrid | Ángel Ruiz | Ilusionista para Bodas y Empresas',
-    description: 'Mago profesional en Madrid para bodas, cenas de empresa y eventos privados. +10 años de experiencia y 42 reseñas 5 estrellas.',
+    description: '¿Buscas asombro inolvidable? Magia de cerca y mentalismo de impacto para bodas, empresas y eventos en Madrid.',
     images: ['/images/foto-bio.webp'],
     site: '@angellruuizz',
     creator: '@angellruuizz',

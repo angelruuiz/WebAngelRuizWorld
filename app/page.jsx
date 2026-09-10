@@ -4,14 +4,14 @@ import QuickEventSelector from '@/components/QuickEventSelector';
 
 export const metadata = {
     title: { absolute: 'Mago en Madrid ⭐ Ángel Ruiz · Bodas y Empresas' },
-    description: 'Mago profesional en Madrid para bodas y empresas. Alumno de DaOrtiz, 42 reseñas 5★. Pide presupuesto directo sin agencias.',
+    description: '¿Quieres un evento del que todos sigan hablando? Ilusionismo de autor y magia de cerca en Madrid. Trato directo sin agencias. Presupuesto express en 2h.',
     alternates: {
         canonical: 'https://angelruiz.world',
     },
     openGraph: {
         url: 'https://angelruiz.world',
         title: 'Mago en Madrid ⭐ Ángel Ruiz · Bodas y Empresas',
-        description: 'Mago profesional en Madrid para bodas y eventos de empresa. 42 reseñas 5★. Presupuesto directo.',
+        description: '¿Quieres un evento del que todos sigan hablando? Ilusionismo de autor y magia de cerca en Madrid. Trato directo sin agencias.',
     },
 };
 
