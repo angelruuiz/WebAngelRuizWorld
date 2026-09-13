@@ -16,9 +16,9 @@ const HeroClient = () => {
         <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden z-10 pt-24 pb-16 lg:py-0">
             <div className="absolute inset-0 z-0 overflow-hidden">
                 <picture>
-                    <source media="(min-width: 768px)" srcSet="/images/hero-poster.webp" />
+                    <source media="(min-width: 768px)" srcSet="/images/hero-angel-ruiz-2026.webp" />
                     <img 
-                        src="/images/hero-poster-mobile.webp" 
+                        src="/images/hero-angel-ruiz-mobile-2026.webp" 
                         alt="Ángel Ruiz, mago e ilusionista profesional en Madrid" 
                         className="w-full h-full object-cover object-[30%_center] md:object-[center_right] lg:object-right" 
                         loading="eager"
