@@ -20,7 +20,7 @@ const HeroClient = () => {
                     <img 
                         src="/images/hero-poster-mobile.webp" 
                         alt="Ángel Ruiz, mago e ilusionista profesional en Madrid" 
-                        className="w-full h-full object-cover object-[50%_75%] md:object-center" 
+                        className="w-full h-full object-cover object-[30%_center] md:object-[center_right] lg:object-right" 
                         loading="eager"
                         fetchPriority="high"
                         decoding="async"
@@ -29,20 +29,25 @@ const HeroClient = () => {
                     />
                 </picture>
                 <div className='absolute inset-0 bg-gradient-to-b from-[#030712]/60 via-[#030712]/40 to-[#030712]' />
-                <div className='absolute inset-0 bg-gradient-to-r from-[#030712]/80 via-[#030712]/30 to-transparent' />
+                <div className='absolute inset-0 bg-gradient-to-r from-[#030712]/90 via-[#030712]/40 to-transparent' />
             </div>
             
             <div className="px-5 sm:px-8 md:px-12 lg:px-16 relative z-10 w-full max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                    {/* Left Column: Títulos y CTA Principal */}
-                    <div className="lg:col-span-7 flex flex-col items-start text-left">
+                    {/* Formulario: Order 2 en móvil (abajo del título), Order 1 en desktop (izquierda, sobre fondo oscuro teatral) */}
+                    <div className="order-2 lg:order-1 lg:col-span-5 w-full max-w-lg mx-auto lg:mx-0 z-20">
+                        <LiquidGlassForm />
+                    </div>
+
+                    {/* Títulos y Marca Personal: Order 1 en móvil (arriba), Order 2 en desktop (derecha) */}
+                    <div className="order-1 lg:order-2 lg:col-span-7 flex flex-col items-start text-left lg:pl-6">
                         {/* Seasonal urgency micro-badge */}
                         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#d4a853]/10 border border-[#d4a853]/30 text-[#d4a853] text-[11px] sm:text-xs font-semibold tracking-wider uppercase mb-5 backdrop-blur-md">
                             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                             <span>Agenda 2026 Abierta · Reserva Anticipada</span>
                         </div>
 
-                        {/* Semantic H1 for SEO + Instant LCP Paint (No framer-motion opacity:0 delay) */}
+                        {/* Semantic H1 for SEO + Instant LCP Paint */}
                         <h1 className="font-[Cinzel] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 md:mb-6 tracking-wider drop-shadow-lg leading-none flex flex-col items-start">
                             <span className="text-[#d4a853] block mb-1">ANGEL</span>
                             <span className="text-white block">RUIZ</span>
@@ -57,11 +62,6 @@ const HeroClient = () => {
                         <p className="text-slate-400 text-xs sm:text-sm md:text-base font-light italic mt-2 md:mt-4 px-4 font-accent tracking-[0.08em] border-l border-white/20 pl-6">
                             "LA MAGIA QUE HACE QUE TU EVENTO SEA INOLVIDABLE."
                         </p>
-                    </div>
-
-                    {/* Right Column: Formulario Visible Liquid Glass */}
-                    <div className="lg:col-span-5 w-full max-w-lg mx-auto lg:mx-0 z-20">
-                        <LiquidGlassForm />
                     </div>
                 </div>
             </div>
