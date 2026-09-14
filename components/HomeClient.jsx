@@ -67,20 +67,24 @@ const HeroClient = ({ onOpenModal }) => {
                             "LA MAGIA QUE HACE QUE TU EVENTO SEA INOLVIDABLE."
                         </p>
 
-                        {/* Indicador elegante de deslizamiento exclusivo para Móvil (PC intacto) */}
-                        <div className="w-full mt-3.5 sm:mt-5 flex flex-col items-center justify-center lg:hidden">
+                        {/* Indicador de deslizamiento exclusivo para Móvil (PC intacto) */}
+                        <div className="w-full mt-4 flex justify-center lg:hidden">
                             <a
                                 id="hero-scroll-trigger"
                                 href="#presupuesto-mobile"
-                                className="inline-flex flex-col items-center gap-1.5 py-2 px-5 rounded-full bg-white/[0.05] border border-[#d4a853]/35 backdrop-blur-md text-slate-300 hover:text-white transition-all active:scale-95 group shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
+                                className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-slate-950/70 border border-[#d4a853]/30 backdrop-blur-md active:scale-95 transition-transform shadow-[0_4px_20px_rgba(0,0,0,0.6)]"
                             >
-                                <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] text-[#d4a853] flex items-center gap-1.5">
-                                    <span>Desliza para solicitar información</span>
-                                    <span className="text-sm transition-transform duration-300 group-hover:translate-y-0.5">↓</span>
+                                <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.14em] text-[#d4a853]">
+                                    Desliza para solicitar información
                                 </span>
-                                <div className="w-3.5 h-6 rounded-full border border-[#d4a853]/50 flex items-start justify-center pt-0.5">
-                                    <div className="w-1 h-1.5 rounded-full bg-[#d4a853] animate-bounce" />
-                                </div>
+                                <svg 
+                                    className="w-3.5 h-3.5 text-[#d4a853] animate-bounce shrink-0" 
+                                    fill="none" 
+                                    stroke="currentColor" 
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 13l-7 7-7-7m14-8l-7 7-7-7" />
+                                </svg>
                             </a>
                         </div>
                     </div>
