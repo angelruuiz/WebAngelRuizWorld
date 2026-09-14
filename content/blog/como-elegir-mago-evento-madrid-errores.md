@@ -23,11 +23,9 @@ faq:
       Depende del formato. Para cócteles, bodas y cenas, la magia de cerca es la
       opción más versátil y elegante. Para convenciones de más de 100 personas
       donde todos deben ver a la vez, un show de escenario es más adecuado.
-  - question: ¿Con cuánta antelación debo contratar un mago en Madrid?
+  - question: ¿Cuál es el error más frecuente con los tiempos y la antelación al contratar magia en Madrid?
     answer: >-
-      Lo ideal es reservar con 3-4 semanas de antelación. Para temporada alta
-      (bodas de mayo a octubre, Navidad para empresas), recomiendo 6-8 semanas
-      mínimo, ya que los mejores profesionales agotan disponibilidad.
+      El error más grave es esperar al último mes en fechas de alta demanda (bodas de mayo a octubre y cenas de empresa en noviembre-diciembre). Para esas fechas, se recomienda reservar con un mínimo de 6 a 8 semanas de margen para no tener que conformarte con opciones de segunda fila.
 ---
 
 Contratar un **mago en Madrid** debería ser sencillo, pero la realidad es que el sector tiene mucho intrusismo y poca transparencia. Cada semana recibo llamadas de clientes que vienen de una mala experiencia con otro "mago" y no quieren repetir el error en su próximo evento.

@@ -43,7 +43,7 @@ export default function ContratarMagoMadridPage() {
             },
             { 
                 "@type": "Question", 
-                "name": "¿Con cuánta antelación debo reservar?", 
+                "name": "¿Con cuánta antelación debo contratar un mago para bodas o eventos de empresa en Madrid?", 
                 "acceptedAnswer": { 
                     "@type": "Answer", 
                     "text": "Para bodas y eventos corporativos en temporada alta (mayo a septiembre, y diciembre), se recomienda contratar con 3 a 6 meses de antelación para asegurar disponibilidad y poder diseñar la estructura del evento adecuadamente." 
