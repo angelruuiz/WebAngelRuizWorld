@@ -3,7 +3,7 @@ title: 'Cóctel de Fin de Año para Empresas en Madrid: Ideas Originales y Anima
 date: '2026-09-05'
 excerpt: 'Descubre cómo organizar un cóctel de fin de año corporativo en Madrid que supere a la típica cena sentada: claves de catering, dinamización, ruptura del hielo y el impacto de la magia de cerca itinerante.'
 author: Ángel Ruiz
-image: /images/galeria/mago-eventos-corporativos-madrid-angel-ruiz.webp
+image: /images/evento-empresa-mago-angel-ruiz.webp
 category: Empresas
 tags:
   - Cenas Empresa

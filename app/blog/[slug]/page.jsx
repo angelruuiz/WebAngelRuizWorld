@@ -52,21 +52,27 @@ export default async function BlogPost({ params }) {
   const allPosts = getSortedPostsData();
   const relatedPosts = allPosts.filter(p => p.slug !== params.slug).slice(0, 3);
 
-  const blogSchema = {
-    "@context": "https://schema.org",
+  const blogArticle = {
     "@type": "BlogPosting",
+    "@id": `https://angelruiz.world/blog/${params.slug}/#article`,
     "headline": postData.title,
     "description": postData.excerpt,
     "image": postData.image ? `https://angelruiz.world${postData.image}` : `https://angelruiz.world/images/logo-grande.webp`,
     "datePublished": postData.date,
+    "dateModified": postData.dateModified || postData.date,
+    "inLanguage": "es-ES",
     "author": {
       "@type": "Person",
-      "name": "Angel Ruiz",
+      "@id": "https://angelruiz.world/#person",
+      "name": "Ángel Ruiz",
+      "jobTitle": "Mago e Ilusionista Profesional",
       "url": "https://angelruiz.world"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Angel Ruiz Magia",
+      "@id": "https://angelruiz.world/#organization",
+      "name": "Ángel Ruiz | Mago e Ilusionista",
+      "url": "https://angelruiz.world",
       "logo": {
         "@type": "ImageObject",
         "url": "https://angelruiz.world/images/logo-grande.webp"
@@ -79,6 +85,8 @@ export default async function BlogPost({ params }) {
   };
 
   const faqSchema = postData.faq && postData.faq.length > 0 ? {
+    "@type": "FAQPage",
+    "@id": `https://angelruiz.world/blog/${params.slug}/#faq`,
     "mainEntity": postData.faq.map(item => ({
       "@type": "Question",
       "name": item.question,
@@ -90,8 +98,8 @@ export default async function BlogPost({ params }) {
   } : null;
 
   const breadcrumbSchema = {
-    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": `https://angelruiz.world/blog/${params.slug}/#breadcrumb`,
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
       { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://angelruiz.world/blog" },
@@ -118,20 +126,15 @@ export default async function BlogPost({ params }) {
               "@type": "ProfessionalService",
               "@id": "https://angelruiz.world/#organization",
               "name": "Ángel Ruiz | Mago e Ilusionista",
-              "url": "https://angelruiz.world"
+              "url": "https://angelruiz.world",
+              "logo": "https://angelruiz.world/images/logo-grande.webp",
+              "image": "https://angelruiz.world/images/foto-bio.webp",
+              "telephone": "+34648055636",
+              "priceRange": "€€€"
             },
-            {
-              ...blogSchema,
-              "@id": `https://angelruiz.world/blog/${params.slug}/#article`
-            },
-            {
-              "@type": "BreadcrumbList",
-              "itemListElement": breadcrumbSchema.itemListElement
-            },
-            ...(faqSchema ? [{
-              "@type": "FAQPage",
-              "mainEntity": faqSchema.mainEntity
-            }] : [])
+            blogArticle,
+            breadcrumbSchema,
+            ...(faqSchema ? [faqSchema] : [])
           ]
         }) }} 
       />
