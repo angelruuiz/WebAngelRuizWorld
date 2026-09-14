@@ -13,7 +13,7 @@ import LiquidGlassForm from '@/components/LiquidGlassForm';
 
 const HeroClient = ({ onOpenModal }) => {
     return (
-        <section className="relative min-h-[100dvh] flex flex-col justify-end lg:justify-center overflow-hidden z-10 pt-24 pb-8 lg:py-0">
+        <section className="relative min-h-[100dvh] flex flex-col justify-end lg:justify-center overflow-hidden z-10 pt-20 pb-28 sm:pb-32 lg:py-0">
             <div className="absolute inset-0 z-0 overflow-hidden">
                 <picture>
                     <source media="(min-width: 768px)" srcSet="/images/hero-angel-ruiz-2026.webp" />
@@ -68,18 +68,18 @@ const HeroClient = ({ onOpenModal }) => {
                         </p>
 
                         {/* Indicador elegante de deslizamiento exclusivo para Móvil (PC intacto) */}
-                        <div className="w-full mt-6 sm:mt-8 flex flex-col items-center justify-center lg:hidden">
+                        <div className="w-full mt-3.5 sm:mt-5 flex flex-col items-center justify-center lg:hidden">
                             <a
                                 id="hero-scroll-trigger"
                                 href="#presupuesto-mobile"
-                                className="inline-flex flex-col items-center gap-2 py-2.5 px-6 rounded-full bg-white/[0.04] border border-[#d4a853]/30 backdrop-blur-md text-slate-300 hover:text-white transition-all active:scale-95 group"
+                                className="inline-flex flex-col items-center gap-1.5 py-2 px-5 rounded-full bg-white/[0.05] border border-[#d4a853]/35 backdrop-blur-md text-slate-300 hover:text-white transition-all active:scale-95 group shadow-[0_4px_20px_rgba(0,0,0,0.5)]"
                             >
-                                <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-[#d4a853] flex items-center gap-1.5">
+                                <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] text-[#d4a853] flex items-center gap-1.5">
                                     <span>Desliza para solicitar información</span>
                                     <span className="text-sm transition-transform duration-300 group-hover:translate-y-0.5">↓</span>
                                 </span>
-                                <div className="w-4 h-7 rounded-full border border-[#d4a853]/40 flex items-start justify-center pt-1">
-                                    <div className="w-1 h-2 rounded-full bg-[#d4a853] animate-bounce" />
+                                <div className="w-3.5 h-6 rounded-full border border-[#d4a853]/50 flex items-start justify-center pt-0.5">
+                                    <div className="w-1 h-1.5 rounded-full bg-[#d4a853] animate-bounce" />
                                 </div>
                             </a>
                         </div>
