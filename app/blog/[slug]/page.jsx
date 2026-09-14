@@ -17,12 +17,17 @@ export async function generateMetadata({ params }) {
   const postData = await getPostData(params.slug);
   if (!postData) {
     return {
-      title: 'Artículo no encontrado | Ángel Ruiz Mago Madrid',
+      title: { absolute: 'Artículo no encontrado | Ángel Ruiz' },
       description: 'El artículo solicitado no existe.',
     };
   }
+  const baseTitle = postData.meta_title || postData.title;
+  const resolvedTitle = baseTitle.includes('Ángel Ruiz')
+    ? baseTitle
+    : (baseTitle.length <= 48 ? `${baseTitle} | Ángel Ruiz` : baseTitle);
+
   return {
-    title: postData.title,
+    title: { absolute: resolvedTitle },
     description: postData.excerpt,
     keywords: postData.tags,
     openGraph: {

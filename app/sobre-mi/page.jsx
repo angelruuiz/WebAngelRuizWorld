@@ -2,7 +2,7 @@ import SobreMiClient from '@/components/SobreMiClient';
 import Link from 'next/link';
 
 export const metadata = {
-    title: { absolute: 'Ángel Ruiz, Mago Profesional en Madrid | +10 Años de Experiencia' },
+    title: { absolute: 'Ángel Ruiz ⭐ Mago Profesional en Madrid (+10 Años)' },
     description: 'Descubre al mago profesional Ángel Ruiz en Madrid. Magia de cerca de alto impacto para eventos exclusivos. Alumno de DaOrtiz. ¡Contacta para asombrar a tus invitados!',
     alternates: {
         canonical: 'https://angelruiz.world/sobre-mi',

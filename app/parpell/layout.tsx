@@ -3,7 +3,7 @@ import "./parpell.css";
 import { SmoothScroll } from "@/components/parpell/SmoothScroll";
 
 export const metadata: Metadata = {
-  title: "Parpell | Brand & Growth Orchestrator",
+  title: { absolute: "Parpell | Brand & Growth Orchestrator" },
   description:
     "Que la inteligencia artificial te recomiende. Que el contenido te haga elegible. Que tu equipo lo convierta en ventas.",
   robots: {

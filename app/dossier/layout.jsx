@@ -1,5 +1,5 @@
-﻿export const metadata = {
-  title: 'Dossier Corporativo 2026 | Ángel Ruiz Mago Madrid',
+export const metadata = {
+  title: { absolute: 'Dossier Corporativo 2026 ⭐ Ángel Ruiz Mago Madrid' },
   description: 'Dossier profesional de Ángel Ruiz, ilusionista y mago corporativo en Madrid para eventos de empresa, galas y bodas.',
   alternates: {
     canonical: 'https://angelruiz.world/dossier',

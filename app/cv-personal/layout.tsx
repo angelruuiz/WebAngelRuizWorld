@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./cv-personal.css";
 
 export const metadata: Metadata = {
-  title: "Ángel Ruiz García — CV Interactivo | Web, IA & Magia",
+  title: { absolute: "Ángel Ruiz García — CV Interactivo | Web, IA & Magia" },
   description:
     "Portfolio interactivo y CV personal de Ángel Ruiz García. Desarrollador Web, Administrador de Sistemas (ASIR + DAM) y Cartomago Profesional.",
   keywords: [

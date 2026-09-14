@@ -6,7 +6,7 @@ import Link from 'next/link';
 import SierraMadridMap from '@/components/SierraMadridMap';
 
 export const metadata = {
-    title: { absolute: 'Mago en la Sierra de Madrid | Ilusionismo Zona Noroeste · Ángel Ruiz' },
+    title: { absolute: 'Mago en la Sierra de Madrid ⭐ Bodas y Eventos Noroeste' },
     description: 'Mago profesional en la sierra de Madrid y zona noroeste (Collado Villalba, Galapagar, El Escorial). Especialista en magia de cerca para bodas y eventos exclusivos.',
     alternates: {
         canonical: 'https://angelruiz.world/mago-sierra-madrid',
