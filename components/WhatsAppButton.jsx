@@ -18,11 +18,12 @@ export default function WhatsAppButton() {
         // En el Home, mostrar la bola flotante de WhatsApp solo cuando el usuario haga scroll y sobrepase el Hero
         const checkVisibility = () => {
             const trigger = document.getElementById('hero-scroll-trigger');
-            if (trigger) {
+            if (trigger && trigger.offsetHeight > 0) {
                 const rect = trigger.getBoundingClientRect();
-                // Aparece cuando el indicador de deslizar sube o el usuario ya hace scroll
+                // En móvil aparece cuando el indicador de deslizar sube o el usuario ya hace scroll
                 setIsVisible(rect.bottom <= 100 || window.scrollY > 200);
             } else {
+                // En desktop aparece tras hacer scroll para no solaparse con el hero
                 setIsVisible(window.scrollY > 250);
             }
         };

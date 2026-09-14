@@ -36,7 +36,7 @@ const HeroClient = ({ onOpenModal }) => {
                 <div className='lg:hidden absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/85 via-50% to-transparent' />
             </div>
             
-            <div className="px-5 sm:px-8 md:px-12 lg:px-16 relative z-10 w-full max-w-7xl mx-auto">
+            <div className="px-5 sm:px-8 md:px-12 lg:px-16 relative z-10 w-full max-w-7xl mx-auto lg:scale-[0.90] lg:origin-center transition-transform">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                     {/* Desktop: Formulario en Columna Izquierda (en móvil se oculta aquí para no crear scroll forzado) */}
                     <div className="hidden lg:block lg:col-span-5 w-full max-w-lg mx-auto lg:mx-0 z-20">
@@ -92,7 +92,7 @@ const HeroClient = ({ onOpenModal }) => {
             </div>
             
             {/* Scroll indicator (Desktop) */}
-            <div className='absolute bottom-4 left-1/2 -translate-x-1/2 hidden lg:block pointer-events-none'>
+            <div className='absolute bottom-3 xl:bottom-4 left-1/2 -translate-x-1/2 hidden lg:block pointer-events-none scale-90'>
                 <div className='w-5 h-8 rounded-full border-2 border-white/20 flex items-start justify-center pt-1.5 animate-pulse'>
                     <div className='w-1 h-2 rounded-full bg-[#d4a853]/60' />
                 </div>

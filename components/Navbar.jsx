@@ -73,22 +73,22 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
     return (
         <>
             <MagicSpiral isVisible={isTransitioning} />
-            <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 py-3.5 px-4 sm:px-6 lg:px-10 ${isScrolled ? 'bg-[rgba(3,7,18,0.85)] backdrop-blur-2xl border-b border-white/[0.06] shadow-[0_4px_30px_rgba(0,0,0,0.5)]' : 'bg-transparent backdrop-blur-none'}`}>
+            <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 py-3 lg:py-2.5 px-4 sm:px-6 lg:px-8 ${isScrolled ? 'bg-[rgba(3,7,18,0.85)] backdrop-blur-2xl border-b border-white/[0.06] shadow-[0_4px_30px_rgba(0,0,0,0.5)]' : 'bg-transparent backdrop-blur-none'}`}>
                 <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
                     {/* Logo */}
                     <Link href="/" className="flex items-center shrink-0 z-50 transition-transform hover:scale-105">
                         <Image 
                             src="/images/logo-pequeno.webp" 
                             alt="Ángel Ruiz mago ilusionista profesional Madrid - logo" 
-                            width={40} 
-                            height={40} 
+                            width={38} 
+                            height={38} 
                             priority
-                            className="object-contain rounded-full border border-white/10 shadow-[0_0_15px_rgba(212,168,83,0.15)]"
+                            className="w-9 h-9 sm:w-10 sm:h-10 object-contain rounded-full border border-white/10 shadow-[0_0_15px_rgba(212,168,83,0.15)]"
                         />
                     </Link>
                     
                     {/* Desktop Menu - Responsive Flex without Absolute Overlaps */}
-                    <div className="hidden md:flex items-center justify-center gap-2 lg:gap-5 xl:gap-7 2xl:gap-8 text-[9px] lg:text-[10.5px] xl:text-[11px] font-bold uppercase tracking-[0.08em] lg:tracking-[0.18em] xl:tracking-[0.25em]">
+                    <div className="hidden md:flex items-center justify-center gap-2 lg:gap-4 xl:gap-6 2xl:gap-7 text-[9px] lg:text-[10px] xl:text-[10.5px] font-bold uppercase tracking-[0.08em] lg:tracking-[0.16em] xl:tracking-[0.22em]">
                         {navLinks.map((link) => (
                             <div key={link.name} className="relative group py-2">
                                 <Link 
@@ -139,7 +139,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                                 tap: { scale: 0.95, y: 0 }
                             }}
                             transition={{ type: "spring", stiffness: 400, damping: 15 }}
-                            className="relative px-3.5 lg:px-5 py-2 lg:py-2.5 overflow-hidden rounded-full cursor-pointer border border-amber-300/50 shadow-[0_0_15px_rgba(245,158,11,0.3)] z-10 bg-[rgba(3,7,18,0.5)] backdrop-blur-md"
+                            className="relative px-3.5 lg:px-4 py-2 overflow-hidden rounded-full cursor-pointer border border-amber-300/50 shadow-[0_0_15px_rgba(245,158,11,0.3)] z-10 bg-[rgba(3,7,18,0.5)] backdrop-blur-md text-[11px] lg:text-xs"
                         >
                             <div 
                                 className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-90 transition-opacity duration-300 bg-gradient-to-r from-[#d4a853] via-amber-400 to-[#d4a853]"
