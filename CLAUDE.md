@@ -53,3 +53,7 @@
 ## 13. No usar Agent cuando Grep/Read basta
 - Agent duplica todo el contexto en un subproceso. Solo usalo para busquedas amplias o tareas complejas.
 - Para buscar una funcion o archivo especifico, usa Grep o Glob directo.
+
+## 14. PROHIBICIÓN ESTRICTA: No usar `AggregateRating` en Schemas
+- NUNCA incluir la propiedad ni tipo `AggregateRating` (o `ratingValue`, `reviewCount`) en ningún JSON-LD schema del proyecto.
+- Causa errores graves y problemas de indexación en Google Search Console.
