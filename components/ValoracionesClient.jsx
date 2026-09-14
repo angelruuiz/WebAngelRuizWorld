@@ -149,7 +149,7 @@ export default function ValoracionesClient({ reviewsData }) {
                             </div>
                         </div>
                         <h3 className="text-2xl md:text-3xl font-[Cinzel] text-white font-bold uppercase mb-4">Descubre qué dicen de nosotros en Google</h3>
-                        <p className="text-slate-400 mb-8 max-w-2xl">Lee las experiencias reales de más de 42 clientes satisfechos que han confiado en la magia de Ángel Ruiz para sus bodas y eventos corporativos.</p>
+                        <p className="text-slate-400 mb-8 max-w-2xl">Lee las experiencias reales de clientes satisfechos que avalan mi trayectoria con +50 reseñas de 5 estrellas en sus bodas y eventos corporativos.</p>
                         <a 
                             href="https://www.google.com/search?sca_esv=d1946b299fc53e00&sxsrf=ANbL-n42RqyEZw2zYhmhgDRcHZ0D7tucWg:1781705626584&q=%C3%81ngel+Ruiz+%7C+Mago+para+Bodas+y+Empresas+en+Madrid+Rese%C3%B1as&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDAwMzA2MDG2MDA0NLC0sDA2MdjAyPiK0fpwY156ao5CUGlmlUKNgm9ier5CQWJRooJTfkpisUKlgmtuQVFqMZCZmgeUTSnKTFEISi1OPbwxsXgRKyW6AUrBjt6XAAAA&rldimm=10060304380110988340&tbm=lcl&hl=es-ES&sa=X&ved=2ahUKEwiPot3Xuo6VAxWDgP0HHYtWFIIQ9fQKegQIRRAG&biw=1356&bih=611&dpr=1.42#lkt=LocalPoiReviews" 
                             target="_blank" 

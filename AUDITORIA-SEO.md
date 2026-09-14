@@ -33,7 +33,7 @@ Afecta a todas las páginas que no usan `title: { absolute: ... }` (contratar-ma
 ## 🟡 Avisos (deberías arreglar)
 
 4. **Sitemap incompleto**: faltan `/particulares` (página hub), `/dossier` y `/blog/mago-conferenciante-empresas-madrid` (es página hardcodeada, no .md, así que `getSortedPostsData()` no la incluye).
-5. **AggregateRating solo en 1 página**: el schema con 39 reseñas ⭐5 solo se inyecta en `/mago-close-up-madrid`. Añádelo (con las reseñas visibles en página) al menos en home, `/valoraciones`, `/empresas` y `/particulares/bodas` — las estrellas en el SERP suben el CTR mucho.
+5. ~~AggregateRating~~: **Eliminado por completo**. Descartado intencionadamente por causar problemas graves de indexación en Google Search Console. Baneo permanente en schemas JSON-LD.
 6. **OG/Twitter genéricos en home**: "Angel Ruiz | Mago e Ilusionista" sin keyword "Mago en Madrid". La twitter:description heredada aparece en páginas internas.
 7. **Canonicals inconsistentes**: mezcla de absolutos y relativos. Funciona por `metadataBase`, pero unifícalo a relativo.
 8. **Título de `/contratar-mago-madrid` indexado con "2024"** en Google (la página ya dice 2026). Pide reindexación en Search Console tras corregir el punto 3.

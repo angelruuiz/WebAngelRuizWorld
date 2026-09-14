@@ -83,7 +83,7 @@ export default function ValoracionesPage() {
                             Las valoraciones de mis clientes no son solo palabras; son la base de mi <strong>reputación profesional como ilusionista</strong>. En cada evento en Madrid y la zona de la sierra, mi prioridad es la búsqueda de la <u>excelencia técnica y la satisfacción total del cliente</u>. Entiendo que un evento es un hito irrepetible, y por ello mi compromiso es con la puntualidad, la elegancia en el trato y, sobre todo, la entrega de un asombro de primer nivel.
                         </p>
                         <p>
-                            Contar con más de <strong className="text-white">45 valoraciones de 5 estrellas</strong> en plataformas independientes avala mi trayectoria como <strong>mago para empresas</strong> y bodas. Aquí puedes explorar testimonios detallados que reflejan la autenticidad de mi propuesta y la garantía de éxito para tu próxima celebración privada o corporativa.
+                            Contar con <strong className="text-white">+50 reseñas de 5 estrellas</strong> en plataformas independientes avala mi trayectoria como <strong>mago para empresas</strong> y bodas. Aquí puedes explorar testimonios detallados que reflejan la autenticidad de mi propuesta y la garantía de éxito para tu próxima celebración privada o corporativa.
                         </p>
                     </div>
                 </div>

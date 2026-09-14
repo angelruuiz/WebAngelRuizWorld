@@ -43,7 +43,7 @@ Pide siempre **vídeos de actuaciones reales** (no montajes de estudio). Las rea
 
 ## Error 2: No verificar las reseñas
 
-Las reseñas en Google son el termómetro más fiable. Un profesional con **20 o más reseñas de 5 estrellas** tiene un historial demostrable. Desconfía de perfiles sin opiniones o con valoraciones genéricas tipo "muy bien".
+Las reseñas en Google son el termómetro más fiable. Un profesional con **+50 reseñas de 5 estrellas** tiene un historial demostrable. Desconfía de perfiles sin opiniones o con valoraciones genéricas tipo "muy bien".
 
 ### Cómo evitarlo
 Busca su nombre en Google Maps y lee las reseñas. Fíjate en si los clientes mencionan eventos concretos (bodas, empresas, comuniones). Eso indica experiencia real en el tipo de evento que tú estás organizando.

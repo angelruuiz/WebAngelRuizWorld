@@ -401,7 +401,7 @@ export default function BodasDetailPage() {
                                     <ul className="space-y-4">
                                         {[
                                             'Más de 10 años especializado en bodas en Madrid y Sierra',
-                                            'Más de 45 reseñas de 5 estrellas en Google',
+                                            '+50 reseñas de 5 estrellas en Google',
                                             'Formado en la Escuela de Dani DaOrtiz (cartomagia de autor)',
                                             'Coordinación directa con wedding planners y fincas',
                                             'Magia elegante, familiar y no invasiva',

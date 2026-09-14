@@ -137,7 +137,7 @@ export default function MagoMadridPage() {
                                 </p>
 
                                 <p className="bg-white/5 p-4 rounded-lg italic text-slate-300">
-                                    "Más de 45 reseñas de 5 estrellas en Google. Empresas como Movistar Estudiantes y colegios oficiales ya confían en mi magia para sus eventos corporativos."
+                                    "+50 reseñas de 5 estrellas en Google. Empresas como Movistar Estudiantes y colegios oficiales ya confían en mi magia para sus eventos corporativos."
                                 </p>
                             </div>
 
