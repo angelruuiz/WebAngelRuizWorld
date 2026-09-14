@@ -115,6 +115,18 @@ export default function NewsletterModal() {
                                             />
                                             <Mail className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-500" />
                                         </div>
+                                        <div className="flex items-start gap-2 text-left pt-0.5">
+                                            <input 
+                                                id="newsletter-modal-privacy"
+                                                name="privacy" 
+                                                type="checkbox" 
+                                                required 
+                                                className="mt-0.5 w-3.5 h-3.5 rounded border-white/20 bg-black/40 text-amber-500 focus:ring-amber-500/50 cursor-pointer flex-shrink-0"
+                                            />
+                                            <label htmlFor="newsletter-modal-privacy" className="text-[10px] text-slate-400 leading-tight cursor-pointer">
+                                                Acepto la <a href="/privacidad" target="_blank" rel="noopener noreferrer" className="text-amber-400 underline hover:text-amber-300">Política de Privacidad</a> y recibir novedades.
+                                            </label>
+                                        </div>
                                         <button 
                                             disabled={status === "submitting"}
                                             type="submit" 
@@ -122,8 +134,8 @@ export default function NewsletterModal() {
                                         >
                                             {status === "submitting" ? "Enviando..." : "Quiero unirme al círculo"}
                                         </button>
-                                        <p className="text-[9px] text-slate-500 uppercase tracking-widest mt-2">
-                                            Sin spam. Solo magia real. Puedes darte de baja cuando quieras.
+                                        <p className="text-[9px] text-slate-500 text-center leading-tight">
+                                            Responsable: Ángel Ruiz García. Finalidad: Enviar boletín de novedades. Legitimación: Tu consentimiento expreso. Baja con 1 clic.
                                         </p>
                                     </form>
                                 )}

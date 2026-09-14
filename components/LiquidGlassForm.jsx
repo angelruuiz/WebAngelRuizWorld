@@ -205,10 +205,23 @@ export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromi
                         </div>
                     </div>
 
+                    <div className="flex items-start gap-2 pt-1">
+                        <input
+                            id="privacy-consent-liquid"
+                            name="privacy"
+                            type="checkbox"
+                            required
+                            className="mt-0.5 w-3.5 h-3.5 rounded border-white/20 bg-black/40 text-amber-500 focus:ring-amber-500/50 cursor-pointer flex-shrink-0"
+                        />
+                        <label htmlFor="privacy-consent-liquid" className="text-[10px] text-slate-400 leading-tight cursor-pointer">
+                            He leído y acepto la <a href="/privacidad" target="_blank" rel="noopener noreferrer" className="text-amber-400 underline hover:text-amber-300">Política de Privacidad</a> y consiento el tratamiento de mis datos para la solicitud.
+                        </label>
+                    </div>
+
                     <button
                         type="submit"
                         disabled={status === "submitting"}
-                        className="w-full relative overflow-hidden bg-gradient-to-r from-[#d4a853] via-[#f59e0b] to-[#d4a853] bg-[length:200%_auto] hover:bg-right text-slate-950 font-bold py-3.5 sm:py-3 px-6 rounded-xl uppercase tracking-widest text-xs shadow-[0_0_20px_rgba(245,158,11,0.3)] hover:shadow-[0_0_25px_rgba(245,158,11,0.5)] transition-all duration-300 flex items-center justify-center gap-2 mt-2 cursor-pointer"
+                        className="w-full relative overflow-hidden bg-gradient-to-r from-[#d4a853] via-[#f59e0b] to-[#d4a853] bg-[length:200%_auto] hover:bg-right text-slate-950 font-bold py-3.5 sm:py-3 px-6 rounded-xl uppercase tracking-widest text-xs shadow-[0_0_20px_rgba(245,158,11,0.3)] hover:shadow-[0_0_25px_rgba(245,158,11,0.5)] transition-all duration-300 flex items-center justify-center gap-2 mt-1 cursor-pointer"
                     >
                         {status === "submitting" ? (
                             <span>Enviando solicitud...</span>
@@ -219,6 +232,9 @@ export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromi
                             </>
                         )}
                     </button>
+                    <p className="text-[9px] text-slate-500 text-center leading-tight">
+                        Responsable: Ángel Ruiz García. Finalidad: Gestión de presupuesto. Legitimación: Consentimiento. Derechos: info@angelruiz.world.
+                    </p>
 
                     <div className="pt-2 text-center border-t border-white/10 mt-3">
                         <a

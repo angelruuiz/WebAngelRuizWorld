@@ -67,32 +67,50 @@ export default function NewsletterForm({ isCompact = false }) {
                         )}
                     </div>
 
-                    <form onSubmit={handleSubmit} className={`relative flex flex-col sm:flex-row gap-3 ${isCompact ? 'flex-[1.5]' : 'flex-row'}`}>
+                    <form onSubmit={handleSubmit} className={`relative flex flex-col gap-2.5 ${isCompact ? 'flex-[1.5]' : 'w-full'}`}>
                         {/* Campo para identificar la fuente en Formspree */}
                         <input type="hidden" name="_subject" value={`NUEVA SUSCRIPCIÓN NEWSLETTER (${isCompact ? 'BLOG HOME' : 'ARTÍCULO'})`} />
                         
-                        <input 
-                            required 
-                            name="email" 
-                            type="email" 
-                            placeholder="Tu email..." 
-                            className={`flex-1 bg-slate-950/50 border border-white/10 rounded-full ${isCompact ? 'py-3 px-6' : 'py-4 px-8'} text-white focus:outline-none focus:border-amber-500/50 transition-all text-xs`}
-                        />
-                        <button 
-                            disabled={status === "submitting"}
-                            type="submit" 
-                            className={`bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold ${isCompact ? 'py-3 px-8' : 'py-4 px-10'} rounded-full transition-all uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 group/btn shadow-lg shadow-amber-500/10`}
-                        >
-                            {status === "submitting" ? "..." : (
-                                <>
-                                    {isCompact ? "Unirme" : "Suscribirme"} <Sparkles className="w-3 h-3 group-hover/btn:rotate-12 transition-transform" />
-                                </>
-                            )}
-                        </button>
+                        <div className="flex flex-col sm:flex-row gap-2.5">
+                            <input 
+                                required 
+                                name="email" 
+                                type="email" 
+                                placeholder="Tu email..." 
+                                aria-label="Email para newsletter"
+                                className={`flex-1 bg-slate-950/50 border border-white/10 rounded-full ${isCompact ? 'py-3 px-6' : 'py-3.5 px-6'} text-white focus:outline-none focus:border-amber-500/50 transition-all text-xs`}
+                            />
+                            <button 
+                                disabled={status === "submitting"}
+                                type="submit" 
+                                className={`bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold ${isCompact ? 'py-3 px-6' : 'py-3.5 px-8'} rounded-full transition-all uppercase tracking-widest text-[10px] flex items-center justify-center gap-2 group/btn shadow-lg shadow-amber-500/10 cursor-pointer flex-shrink-0`}
+                            >
+                                {status === "submitting" ? "..." : (
+                                    <>
+                                        {isCompact ? "Unirme" : "Suscribirme"} <Sparkles className="w-3 h-3 group-hover/btn:rotate-12 transition-transform" />
+                                    </>
+                                )}
+                            </button>
+                        </div>
+
+                        <div className="flex items-start gap-2 text-left px-2">
+                            <input 
+                                id="newsletter-form-privacy"
+                                name="privacy" 
+                                type="checkbox" 
+                                required 
+                                className="mt-0.5 w-3.5 h-3.5 rounded border-white/20 bg-black/40 text-amber-500 focus:ring-amber-500/50 cursor-pointer flex-shrink-0"
+                            />
+                            <label htmlFor="newsletter-form-privacy" className="text-[10px] text-slate-400 leading-tight cursor-pointer">
+                                Acepto la <a href="/privacidad" target="_blank" rel="noopener noreferrer" className="text-amber-400 underline hover:text-amber-300">Política de Privacidad</a> y consiento el envío de novedades.
+                            </label>
+                        </div>
                     </form>
                 </div>
                 {!isCompact && (
-                    <p className="text-[10px] text-slate-600 mt-6 uppercase tracking-widest text-center">Cero Spam. Solo Magia Real.</p>
+                    <p className="text-[9px] text-slate-500 mt-4 leading-tight text-center">
+                        Responsable: Ángel Ruiz García · Finalidad: Envío de artículos y novedades mágicas · Baja en cualquier momento con un clic.
+                    </p>
                 )}
             </div>
         </div>

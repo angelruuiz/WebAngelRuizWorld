@@ -243,10 +243,11 @@ export default function GaleriaPage() {
                                     src={img.src}
                                     alt={img.alt}
                                     fill
-                                    quality={90}
+                                    quality={82}
                                     className={`object-cover transition-transform duration-1000 group-hover:scale-110 ${img.position || ''}`}
-                                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 50vw, 33vw"
-                                    priority={idx < 6}
+                                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 400px"
+                                    priority={idx < 2}
+                                    loading={idx < 2 ? "eager" : "lazy"}
                                 />
 
                             </div>

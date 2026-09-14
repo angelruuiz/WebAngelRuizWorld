@@ -152,9 +152,26 @@ export const ContactFormModal = ({ isOpen, onClose }) => {
                             <textarea required name="message" rows="4" aria-label="Detalles adicionales del evento que solicitas" placeholder="Cuéntame más detalles sobre lo que buscas..." className="w-full bg-[rgba(0,0,0,0.4)] border border-[rgba(255,255,255,0.08)] rounded-xl py-3 pl-10 pr-4 text-slate-200 focus:outline-none focus:border-[#d4a853]/50 resize-none text-sm"></textarea>
                         </div>
                     </div>
-                    <button type="submit" disabled={status === "submitting"} className="w-full bg-gradient-to-r from-[#d4a853] to-[#b8860b] text-[#030712] font-bold py-3 md:py-4 rounded-xl hover:from-[#e8cc8a] transition-all uppercase tracking-widest text-xs md:text-sm shadow-lg shadow-[#d4a853]/10 flex items-center justify-center gap-2 mt-4 cursor-pointer">
+
+                    <div className="flex items-start gap-2.5 pt-1">
+                        <input 
+                            id="privacy-consent-modal" 
+                            name="privacy" 
+                            type="checkbox" 
+                            required 
+                            className="mt-1 w-4 h-4 rounded border-white/20 bg-black/40 text-amber-500 focus:ring-amber-500/50 cursor-pointer flex-shrink-0" 
+                        />
+                        <label htmlFor="privacy-consent-modal" className="text-[11px] text-slate-400 leading-snug cursor-pointer">
+                            He leído y acepto la <a href="/privacidad" target="_blank" rel="noopener noreferrer" className="text-amber-400 underline hover:text-amber-300">Política de Privacidad</a> y consiento el tratamiento de mis datos para gestionar esta solicitud.
+                        </label>
+                    </div>
+
+                    <button type="submit" disabled={status === "submitting"} className="w-full bg-gradient-to-r from-[#d4a853] to-[#b8860b] text-[#030712] font-bold py-3 md:py-4 rounded-xl hover:from-[#e8cc8a] transition-all uppercase tracking-widest text-xs md:text-sm shadow-lg shadow-[#d4a853]/10 flex items-center justify-center gap-2 mt-2 cursor-pointer">
                         {status === "submitting" ? (<>Enviando...</>) : (<>Enviar Solicitud <Sparkles className="w-4 h-4" /></>)}
                     </button>
+                    <p className="text-[9px] text-slate-500 text-center leading-tight">
+                        Responsable: Ángel Ruiz García. Finalidad: Responder a tu consulta. Legitimación: Tu consentimiento. Derechos: info@angelruiz.world.
+                    </p>
 
                     <div className="pt-2 text-center">
                         <div className="flex items-center gap-3 my-2.5">

@@ -91,20 +91,138 @@ const globalSchema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "ProfessionalService",
+      "@type": ["EntertainmentBusiness", "ProfessionalService"],
       "@id": "https://angelruiz.world/#organization",
-      "name": "Ángel Ruiz | Mago e Ilusionista en Madrid",
+      "name": "Ángel Ruiz | Mago para Bodas y Empresas en Madrid",
+      "alternateName": [
+        "Ángel Ruiz Mago",
+        "Ángel Ruiz Ilusionista",
+        "Angel Ruiz World",
+        "Mago Ángel Ruiz Madrid"
+      ],
       "url": "https://angelruiz.world",
       "logo": "https://angelruiz.world/images/logo-pequeno.webp",
       "image": "https://angelruiz.world/images/foto-bio.webp",
       "telephone": "+34648055636",
-      "priceRange": "€€€",
+      "email": "info@angelruiz.world",
+      "priceRange": "400€ - 900€",
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Cash, Credit Card, Bank Transfer, Bizum",
+      "hasMap": "https://maps.google.com/?q=Torrelodones,+Comunidad+de+Madrid",
       "address": {
         "@type": "PostalAddress",
-        "addressLocality": "Madrid",
+        "streetAddress": "Calle Real",
+        "addressLocality": "Torrelodones",
+        "postalCode": "28250",
         "addressRegion": "Comunidad de Madrid",
         "addressCountry": "ES"
-      }
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.5765,
+        "longitude": -3.9298
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "09:00",
+          "closes": "22:00"
+        }
+      ],
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Madrid",
+          "sameAs": "https://www.wikidata.org/wiki/Q2807"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Comunidad de Madrid",
+          "sameAs": "https://www.wikidata.org/wiki/Q5756"
+        },
+        { "@type": "City", "name": "Torrelodones" },
+        { "@type": "City", "name": "Las Rozas de Madrid" },
+        { "@type": "City", "name": "Majadahonda" },
+        { "@type": "City", "name": "Pozuelo de Alarcón" },
+        { "@type": "City", "name": "Boadilla del Monte" },
+        { "@type": "City", "name": "Alcobendas" },
+        { "@type": "City", "name": "Collado Villalba" },
+        { "@type": "City", "name": "Galapagar" },
+        { "@type": "City", "name": "San Lorenzo de El Escorial" },
+        { "@type": "City", "name": "Alcorcón" },
+        { "@type": "City", "name": "Leganés" },
+        { "@type": "City", "name": "Getafe" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Catálogo de Espectáculos y Servicios de Magia",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Mago para Bodas en Madrid (Cóctel y Banquete)",
+              "url": "https://angelruiz.world/particulares/bodas"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 400,
+              "maxPrice": 900,
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Mago para Eventos de Empresa y Cenas Corporativas",
+              "url": "https://angelruiz.world/empresas"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 600,
+              "priceCurrency": "EUR"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Mago Conferenciante y Keynote Speaker Corporativo",
+              "url": "https://angelruiz.world/empresas/mago-conferenciante-madrid"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Magia para Fiestas Privadas, Cumpleaños y Celebraciones",
+              "url": "https://angelruiz.world/particulares/eventos"
+            },
+            "priceSpecification": {
+              "@type": "PriceSpecification",
+              "minPrice": 400,
+              "maxPrice": 800,
+              "priceCurrency": "EUR"
+            }
+          }
+        ]
+      },
+      "sameAs": [
+        "https://www.instagram.com/angellruuiz",
+        "https://www.tiktok.com/@angellruuiz",
+        "https://www.youtube.com/@angellruuiz",
+        "https://twitter.com/angellruuizz"
+      ]
     },
     {
       "@type": "WebSite",
@@ -123,15 +241,21 @@ const globalSchema = {
       "url": "https://angelruiz.world/sobre-mi",
       "image": "https://angelruiz.world/images/foto-bio.webp",
       "telephone": "+34648055636",
+      "email": "info@angelruiz.world",
       "worksFor": { "@id": "https://angelruiz.world/#organization" },
-      "alumniOf": "Escuela de Magia de Dani DaOrtiz",
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Escuela de Magia de Dani DaOrtiz",
+        "url": "https://gkaps.com"
+      },
       "knowsAbout": [
         "Magia de cerca",
-        "Close-up",
-        "Cartomagia",
-        "Mentalismo",
+        "Close-up Magic",
+        "Cartomagia de autor",
+        "Mentalismo e ilusionismo psicológico",
         "Magia para bodas",
         "Magia corporativa",
+        "Mago conferenciante",
         "Team building con magia"
       ],
       "sameAs": [
