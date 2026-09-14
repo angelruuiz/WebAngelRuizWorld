@@ -1,6 +1,6 @@
 ---
 title: 'Tardevieja y Fiestas Navideñas Privadas en Madrid: Ideas Originales para una Celebración Exclusiva e Inolvidable'
-date: '2026-10-20'
+date: '2026-09-09'
 excerpt: 'Guía para celebrar la Tardevieja o fiestas privadas de Navidad en Madrid: espacios reservados, tardeos con amigos, reuniones familiares VIP y cómo convertir tu velada en un show inolvidable con magia de cerca.'
 author: Ángel Ruiz
 image: /images/galeria/mago-angel-ruiz-evento-privado-madrid.webp

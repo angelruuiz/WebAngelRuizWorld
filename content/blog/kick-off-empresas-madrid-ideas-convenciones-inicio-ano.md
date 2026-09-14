@@ -1,6 +1,6 @@
 ---
 title: 'Kick-Off Anual y Convenciones de Empresa en Madrid: Claves para Motivar al Equipo al Arrancar el Año'
-date: '2026-10-28'
+date: '2026-09-13'
 excerpt: 'Estrategias para organizar un Kick-Off de inicio de año memorable en Madrid: cómo evitar las presentaciones aburridas de diapositivas, alinear objetivos estratégicos y motivar a tu equipo comercial con conferencias dinamizadas con mentalismo.'
 author: Ángel Ruiz
 image: /images/galeria/mago-profesional-madrid-escenario.webp
