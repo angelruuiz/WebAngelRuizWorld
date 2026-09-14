@@ -15,15 +15,15 @@ export default function WhatsAppButton() {
             return;
         }
 
-        // En el Home, comprobar si el usuario ya sobrepasó el renglón de WhatsApp del Hero
+        // En el Home, mostrar la bola flotante de WhatsApp solo cuando el usuario haga scroll y sobrepase el Hero
         const checkVisibility = () => {
-            const trigger = document.getElementById('hero-whatsapp-trigger');
+            const trigger = document.getElementById('hero-scroll-trigger');
             if (trigger) {
                 const rect = trigger.getBoundingClientRect();
-                // Aparece cuando el renglón del hero ya ha subido y salido de la pantalla
-                setIsVisible(rect.bottom <= 80);
+                // Aparece cuando el indicador de deslizar sube o el usuario ya hace scroll
+                setIsVisible(rect.bottom <= 100 || window.scrollY > 200);
             } else {
-                setIsVisible(window.scrollY > 400);
+                setIsVisible(window.scrollY > 250);
             }
         };
 

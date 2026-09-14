@@ -67,31 +67,21 @@ const HeroClient = ({ onOpenModal }) => {
                             "LA MAGIA QUE HACE QUE TU EVENTO SEA INOLVIDABLE."
                         </p>
 
-                        {/* CTAs Exclusivos para Móvil: Cero scroll y máxima conversión */}
-                        <div className="w-full mt-5 sm:mt-6 space-y-2.5 lg:hidden">
-                            <button
-                                onClick={onOpenModal}
-                                className="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#d4a853] via-amber-400 to-[#b88e39] text-slate-950 font-bold text-xs sm:text-sm tracking-wider uppercase shadow-[0_0_25px_rgba(212,168,83,0.4)] flex items-center justify-center gap-2 active:scale-[0.98] transition-transform cursor-pointer"
-                            >
-                                <Sparkles className="w-4 h-4 text-slate-950" />
-                                <span>Pedir Presupuesto Exprés</span>
-                            </button>
-                            
+                        {/* Indicador elegante de deslizamiento exclusivo para Móvil (PC intacto) */}
+                        <div className="w-full mt-6 sm:mt-8 flex flex-col items-center justify-center lg:hidden">
                             <a
-                                id="hero-whatsapp-trigger"
-                                href="https://wa.me/34648055636?text=Hola%20Ángel%2C%20quisiera%20consultar%20disponibilidad%20y%20presupuesto%20para%20un%20evento"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="w-full py-2.5 px-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-wide flex items-center justify-center gap-2 active:scale-[0.98] transition-transform backdrop-blur-md text-center"
+                                id="hero-scroll-trigger"
+                                href="#presupuesto-mobile"
+                                className="inline-flex flex-col items-center gap-2 py-2.5 px-6 rounded-full bg-white/[0.04] border border-[#d4a853]/30 backdrop-blur-md text-slate-300 hover:text-white transition-all active:scale-95 group"
                             >
-                                <WhatsApp className="w-3.5 h-3.5 text-emerald-400" />
-                                <span>¿Prefieres WhatsApp? Escríbeme directo</span>
+                                <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-[#d4a853] flex items-center gap-1.5">
+                                    <span>Desliza para solicitar información</span>
+                                    <span className="text-sm transition-transform duration-300 group-hover:translate-y-0.5">↓</span>
+                                </span>
+                                <div className="w-4 h-7 rounded-full border border-[#d4a853]/40 flex items-start justify-center pt-1">
+                                    <div className="w-1 h-2 rounded-full bg-[#d4a853] animate-bounce" />
+                                </div>
                             </a>
-
-                            <div className="flex items-center justify-center gap-1.5 text-[10px] text-slate-400 uppercase tracking-widest pt-1 opacity-70">
-                                <span>O desliza para ver el formulario completo</span>
-                                <span className="animate-bounce">↓</span>
-                            </div>
                         </div>
                     </div>
                 </div>
