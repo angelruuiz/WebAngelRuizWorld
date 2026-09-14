@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Sparkles } from '@/components/Icons';
+import { Sparkles, WhatsApp } from '@/components/Icons';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -11,16 +11,16 @@ const ContactFormModal = dynamic(() => import('@/components/Modals').then(mod =>
 
 import LiquidGlassForm from '@/components/LiquidGlassForm';
 
-const HeroClient = () => {
+const HeroClient = ({ onOpenModal }) => {
     return (
-        <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden z-10 pt-24 pb-16 lg:py-0">
+        <section className="relative min-h-[100dvh] flex flex-col justify-end lg:justify-center overflow-hidden z-10 pt-24 pb-8 lg:py-0">
             <div className="absolute inset-0 z-0 overflow-hidden">
                 <picture>
                     <source media="(min-width: 768px)" srcSet="/images/hero-angel-ruiz-2026.webp" />
                     <img 
                         src="/images/hero-angel-ruiz-mobile-2026.webp" 
                         alt="Ángel Ruiz, mago e ilusionista profesional en Madrid" 
-                        className="w-full h-full object-cover object-[30%_center] md:object-[center_right] lg:object-right" 
+                        className="w-full h-full object-cover object-[25%_top] md:object-[center_right] lg:object-right" 
                         loading="eager"
                         fetchPriority="high"
                         decoding="async"
@@ -28,45 +28,75 @@ const HeroClient = () => {
                         height={1080}
                     />
                 </picture>
-                <div className='absolute inset-0 bg-gradient-to-b from-[#030712]/60 via-[#030712]/40 to-[#030712]' />
-                <div className='absolute inset-0 bg-gradient-to-r from-[#030712]/90 via-[#030712]/40 to-transparent' />
+                {/* Gradiente superior para proteger el Navbar */}
+                <div className='absolute inset-0 bg-gradient-to-b from-[#030712]/80 via-transparent to-[#030712] lg:via-[#030712]/40' />
+                {/* Gradiente lateral para Desktop */}
+                <div className='hidden lg:block absolute inset-0 bg-gradient-to-r from-[#030712]/90 via-[#030712]/40 to-transparent' />
+                {/* Gradiente inferior para Móvil: deja el tercio superior limpio para la foto y el tercio inferior oscuro para textos y botones */}
+                <div className='lg:hidden absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/85 via-50% to-transparent' />
             </div>
             
             <div className="px-5 sm:px-8 md:px-12 lg:px-16 relative z-10 w-full max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                    {/* Formulario: Order 2 en móvil (abajo del título), Order 1 en desktop (izquierda, sobre fondo oscuro teatral) */}
-                    <div className="order-2 lg:order-1 lg:col-span-5 w-full max-w-lg mx-auto lg:mx-0 z-20">
+                    {/* Desktop: Formulario en Columna Izquierda (en móvil se oculta aquí para no crear scroll forzado) */}
+                    <div className="hidden lg:block lg:col-span-5 w-full max-w-lg mx-auto lg:mx-0 z-20">
                         <LiquidGlassForm />
                     </div>
 
-                    {/* Títulos y Marca Personal: Order 1 en móvil (arriba), Order 2 en desktop (derecha) */}
-                    <div className="order-1 lg:order-2 lg:col-span-7 flex flex-col items-start text-left lg:pl-6">
+                    {/* Títulos y Marca Personal (En Desktop columna derecha, en Móvil centrado/adaptado con CTAs directos) */}
+                    <div className="lg:col-span-7 flex flex-col items-start text-left lg:pl-6">
                         {/* Seasonal urgency micro-badge */}
-                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#d4a853]/10 border border-[#d4a853]/30 text-[#d4a853] text-[11px] sm:text-xs font-semibold tracking-wider uppercase mb-5 backdrop-blur-md">
+                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#d4a853]/10 border border-[#d4a853]/30 text-[#d4a853] text-[11px] sm:text-xs font-semibold tracking-wider uppercase mb-3 sm:mb-5 backdrop-blur-md">
                             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                             <span>Agenda 2026 Abierta · Reserva Anticipada</span>
                         </div>
 
                         {/* Semantic H1 for SEO + Instant LCP Paint */}
-                        <h1 className="font-[Cinzel] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4 md:mb-6 tracking-wider drop-shadow-lg leading-none flex flex-col items-start">
+                        <h1 className="font-[Cinzel] text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-3 sm:mb-4 md:mb-6 tracking-wider drop-shadow-lg leading-none flex flex-col items-start">
                             <span className="text-[#d4a853] block mb-1">ANGEL</span>
                             <span className="text-white block">RUIZ</span>
                         </h1>
                         
-                        <div className="my-2 md:my-4">
-                            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-200 tracking-[0.15em] uppercase border-l-4 border-[#d4a853]/50 py-2.5 md:py-3 px-4 md:px-6 inline-block backdrop-blur-md bg-white/5 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] text-left leading-relaxed font-accent rounded-r-xl">
+                        <div className="my-1.5 sm:my-2 md:my-4">
+                            <p className="text-xs sm:text-base md:text-lg lg:text-xl text-slate-200 tracking-[0.12em] sm:tracking-[0.15em] uppercase border-l-4 border-[#d4a853]/50 py-2 sm:py-2.5 md:py-3 px-3.5 sm:px-4 md:px-6 inline-block backdrop-blur-md bg-white/5 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] text-left leading-relaxed font-accent rounded-r-xl">
                                 Ilusionista profesional con más de <span className="font-[Cinzel] font-bold text-[#d4a853] text-sm sm:text-lg md:text-xl lg:text-3xl">10</span> años de experiencia
                             </p>
                         </div>
                         
-                        <p className="text-slate-400 text-xs sm:text-sm md:text-base font-light italic mt-2 md:mt-4 px-4 font-accent tracking-[0.08em] border-l border-white/20 pl-6">
+                        <p className="hidden sm:block text-slate-400 text-xs sm:text-sm md:text-base font-light italic mt-2 md:mt-4 px-4 font-accent tracking-[0.08em] border-l border-white/20 pl-6">
                             "LA MAGIA QUE HACE QUE TU EVENTO SEA INOLVIDABLE."
                         </p>
+
+                        {/* CTAs Exclusivos para Móvil: Cero scroll y máxima conversión */}
+                        <div className="w-full mt-5 sm:mt-6 space-y-2.5 lg:hidden">
+                            <button
+                                onClick={onOpenModal}
+                                className="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-[#d4a853] via-amber-400 to-[#b88e39] text-slate-950 font-bold text-xs sm:text-sm tracking-wider uppercase shadow-[0_0_25px_rgba(212,168,83,0.4)] flex items-center justify-center gap-2 active:scale-[0.98] transition-transform cursor-pointer"
+                            >
+                                <Sparkles className="w-4 h-4 text-slate-950" />
+                                <span>Pedir Presupuesto Exprés</span>
+                            </button>
+                            
+                            <a
+                                href="https://wa.me/34648055636?text=Hola%20Ángel%2C%20quisiera%20consultar%20disponibilidad%20y%20presupuesto%20para%20un%20evento"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="w-full py-2.5 px-4 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold tracking-wide flex items-center justify-center gap-2 active:scale-[0.98] transition-transform backdrop-blur-md text-center"
+                            >
+                                <WhatsApp className="w-3.5 h-3.5 text-emerald-400" />
+                                <span>¿Prefieres WhatsApp? Escríbeme directo</span>
+                            </a>
+
+                            <div className="flex items-center justify-center gap-1.5 text-[10px] text-slate-400 uppercase tracking-widest pt-1 opacity-70">
+                                <span>O desliza para ver el formulario completo</span>
+                                <span className="animate-bounce">↓</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            {/* Scroll indicator */}
+            {/* Scroll indicator (Desktop) */}
             <div className='absolute bottom-4 left-1/2 -translate-x-1/2 hidden lg:block pointer-events-none'>
                 <div className='w-5 h-8 rounded-full border-2 border-white/20 flex items-start justify-center pt-1.5 animate-pulse'>
                     <div className='w-1 h-2 rounded-full bg-[#d4a853]/60' />
@@ -88,6 +118,13 @@ export default function HomeClient({ seoContent }) {
 
             <main>
                 <HeroClient onOpenModal={() => setIsContactOpen(true)} />
+
+                {/* Formulario visible en Móvil justo al hacer scroll */}
+                <section id="presupuesto-mobile" className="lg:hidden px-4 py-10 bg-gradient-to-b from-[#030712] via-slate-950 to-transparent relative z-20">
+                    <div className="max-w-lg mx-auto">
+                        <LiquidGlassForm />
+                    </div>
+                </section>
                 
                 {/* Scroll Reveal Wrapper para el contenido SEO */}
                 <motion.div
