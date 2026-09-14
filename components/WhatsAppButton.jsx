@@ -1,10 +1,41 @@
 "use client";
 
+import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { WhatsApp } from './Icons';
 
 export default function WhatsAppButton() {
     const pathname = usePathname() || '';
+    const [isVisible, setIsVisible] = useState(pathname !== '/');
+
+    useEffect(() => {
+        // En páginas secundarias siempre está visible
+        if (pathname !== '/') {
+            setIsVisible(true);
+            return;
+        }
+
+        // En el Home, comprobar si el usuario ya sobrepasó el renglón de WhatsApp del Hero
+        const checkVisibility = () => {
+            const trigger = document.getElementById('hero-whatsapp-trigger');
+            if (trigger) {
+                const rect = trigger.getBoundingClientRect();
+                // Aparece cuando el renglón del hero ya ha subido y salido de la pantalla
+                setIsVisible(rect.bottom <= 80);
+            } else {
+                setIsVisible(window.scrollY > 400);
+            }
+        };
+
+        checkVisibility();
+        window.addEventListener('scroll', checkVisibility, { passive: true });
+        window.addEventListener('resize', checkVisibility, { passive: true });
+
+        return () => {
+            window.removeEventListener('scroll', checkVisibility);
+            window.removeEventListener('resize', checkVisibility);
+        };
+    }, [pathname]);
 
     // No mostrar en rutas administrativas o API
     if (pathname.startsWith('/admin') || pathname.startsWith('/api')) {
@@ -40,7 +71,11 @@ export default function WhatsAppButton() {
                 href={waUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="fab-whatsapp group fixed bottom-24 right-5 md:bottom-8 md:right-8 bg-[#25D366] hover:bg-[#20ba5a] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 transition-all duration-300 hover:scale-110 active:scale-95"
+                className={`fab-whatsapp group fixed bottom-24 right-5 md:bottom-8 md:right-8 bg-[#25D366] hover:bg-[#20ba5a] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 transition-all duration-300 hover:scale-110 active:scale-95 ${
+                    isVisible
+                        ? 'opacity-100 translate-y-0 scale-100 pointer-events-auto'
+                        : 'opacity-0 translate-y-8 scale-75 pointer-events-none'
+                }`}
                 aria-label="Contactar por WhatsApp directamente con Ángel Ruiz"
             >
                 <WhatsApp className="w-7 h-7 text-white drop-shadow-sm" />

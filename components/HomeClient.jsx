@@ -78,6 +78,7 @@ const HeroClient = ({ onOpenModal }) => {
                             </button>
                             
                             <a
+                                id="hero-whatsapp-trigger"
                                 href="https://wa.me/34648055636?text=Hola%20Ángel%2C%20quisiera%20consultar%20disponibilidad%20y%20presupuesto%20para%20un%20evento"
                                 target="_blank"
                                 rel="noopener noreferrer"
