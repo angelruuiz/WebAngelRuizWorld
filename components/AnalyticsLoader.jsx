@@ -4,7 +4,16 @@ import { useEffect } from 'react';
 export default function AnalyticsLoader() {
     useEffect(() => {
         const loadGA = () => {
-            if (window.__gaLoaded) return;
+            if (typeof window === 'undefined' || window.__gaLoaded) return;
+            
+            // Verificar consentimiento explícito antes de cargar
+            const consent = localStorage.getItem('cookie_consent');
+            const analyticsConsent = localStorage.getItem('cookie_analytics');
+            const legacyAccepted = localStorage.getItem('cookies_accepted');
+
+            const isAllowed = consent === 'accepted' || analyticsConsent === 'true' || (consent === null && legacyAccepted === 'true');
+            if (!isAllowed) return;
+
             window.__gaLoaded = true;
 
             const script = document.createElement('script');
@@ -15,21 +24,25 @@ export default function AnalyticsLoader() {
             window.dataLayer = window.dataLayer || [];
             function gtag() { window.dataLayer.push(arguments); }
             gtag('js', new Date());
-            gtag('config', 'G-NWEPX8BGXB');
+            gtag('config', 'G-NWEPX8BGXB', {
+                anonymize_ip: true
+            });
         };
 
-        const events = ['scroll', 'touchstart', 'click', 'keydown'];
-        const onInteract = () => {
-            loadGA();
-            events.forEach(e => window.removeEventListener(e, onInteract));
+        // Comprobar si ya tiene consentimiento previo
+        loadGA();
+
+        // Escuchar actualizaciones dinámicas de consentimiento (cuando el usuario pulsa Aceptar)
+        const handleConsentUpdate = (e) => {
+            if (e.detail?.analytics) {
+                loadGA();
+            }
         };
 
-        events.forEach(e => window.addEventListener(e, onInteract, { passive: true, once: true }));
-        const timer = setTimeout(loadGA, 4000);
+        window.addEventListener('cookie_consent_updated', handleConsentUpdate);
 
         return () => {
-            events.forEach(e => window.removeEventListener(e, onInteract));
-            clearTimeout(timer);
+            window.removeEventListener('cookie_consent_updated', handleConsentUpdate);
         };
     }, []);
 

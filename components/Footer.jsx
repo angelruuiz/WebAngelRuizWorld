@@ -116,10 +116,21 @@ const Footer = ({ onOpenContact, isLight = false }) => {
             <div className="border-t border-white/10 w-full">
                 <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
                     <p>© 2026 Ángel Ruiz | Marca Oficial Registrada. Todos los derechos reservados.</p>
-                    <div className="flex gap-6">
+                    <div className="flex flex-wrap gap-4 md:gap-6 items-center">
                         <a href="/aviso-legal" className="hover:text-[#d4a853] transition-colors">Aviso Legal</a>
                         <a href="/privacidad" className="hover:text-[#d4a853] transition-colors">Política de Privacidad</a>
                         <a href="/cookies" className="hover:text-[#d4a853] transition-colors">Política de Cookies</a>
+                        <button
+                            type="button"
+                            onClick={() => {
+                                if (typeof window !== 'undefined') {
+                                    window.dispatchEvent(new CustomEvent('open_cookie_settings'));
+                                }
+                            }}
+                            className="hover:text-[#d4a853] transition-colors underline underline-offset-2"
+                        >
+                            Configurar cookies
+                        </button>
                     </div>
                 </div>
             </div>

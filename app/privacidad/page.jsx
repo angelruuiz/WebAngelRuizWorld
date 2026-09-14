@@ -53,7 +53,7 @@ export default function PrivacidadPage() {
                     <p>Puedes ejercer tus derechos de acceso, rectificación, supresión, portabilidad, limitación y oposición al tratamiento de tus datos enviando un correo electrónico a la dirección de contacto indicada, acompañando copia de tu DNI o documento identificativo.</p>
 
                     <h2 className="text-xl font-[Cinzel] text-white">7. Cookies</h2>
-                    <p>Este sitio web utiliza cookies técnicas y de análisis (Vercel Analytics) para mejorar la experiencia del usuario. Puedes obtener más información y gestionar tus preferencias a través del banner de cookies que aparece al visitar la web por primera vez.</p>
+                    <p>Este sitio web utiliza cookies técnicas indispensables y de análisis (Google Analytics con IP anonimizada y Vercel Analytics) para optimizar la experiencia de navegación. Puedes obtener información detallada o gestionar tus preferencias en cualquier momento en nuestra <a href="/cookies" className="text-amber-400 hover:underline">Política de Cookies</a> o mediante el gestor de preferencias disponible en el pie de página.</p>
 
                     <h2 className="text-xl font-[Cinzel] text-white">8. Seguridad</h2>
                     <p>Se aplican medidas técnicas y organizativas adecuadas para garantizar la seguridad de los datos personales y evitar su alteración, pérdida, tratamiento o acceso no autorizado. La web opera bajo protocolo HTTPS con certificado SSL.</p>

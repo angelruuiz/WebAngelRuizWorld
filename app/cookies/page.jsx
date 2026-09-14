@@ -1,5 +1,6 @@
 import NavFooterClient from '@/components/NavFooterClient';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
+import CookieSettingsTrigger from '@/components/CookieSettingsTrigger';
 
 export const metadata = {
     title: 'Política de Cookies',
@@ -68,7 +69,11 @@ export default function CookiesPage() {
                     </div>
 
                     <h2 className="text-xl font-[Cinzel] text-white">4. ¿Cómo configurar o revocar las cookies?</h2>
-                    <p>Puedes permitir, bloquear o eliminar las cookies instaladas en tu equipo mediante la configuración de las opciones de tu navegador web:</p>
+                    <p>Puedes cambiar o revocar tu consentimiento en cualquier momento mediante nuestro panel de preferencias:</p>
+                    <div className="my-4">
+                        <CookieSettingsTrigger />
+                    </div>
+                    <p>Asimismo, puedes permitir, bloquear o eliminar las cookies instaladas en tu equipo mediante la configuración de las opciones de tu navegador web:</p>
                     <ul className="list-disc pl-6 space-y-1">
                         <li><a href="https://support.google.com/chrome/answer/95647?hl=es" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline">Google Chrome</a></li>
                         <li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline">Mozilla Firefox</a></li>
