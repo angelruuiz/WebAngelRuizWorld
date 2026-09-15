@@ -1,5 +1,5 @@
 ---
-title: 'Regalar una Experiencia de Magia en Madrid: La Alternativa Perfecta a los Regalos Convencionales [2026]'
+title: 'Regalar una Experiencia de Magia en Madrid: La Alternativa Perfecta a los Regalos Convencionales'
 date: '2026-08-06'
 excerpt: >-
   Descubre por qué regalar una experiencia de magia exclusiva en Madrid es la alternativa perfecta a los obsequios materiales. Sorpresa y emoción garantizadas.

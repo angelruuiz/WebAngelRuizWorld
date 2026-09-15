@@ -7,13 +7,13 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import BusinessSchema from '@/components/BusinessSchema';
 
 export const metadata = {
-    title: { absolute: 'Mago para Comuniones en Madrid ⭐ Magia Familiar' },
+    title: { absolute: 'Mago para Comuniones en Madrid | Magia Familiar' },
     description: 'Magia participativa para comuniones en Madrid. El comulgante es el protagonista del día. Consulta tarifas y fechas.',
     alternates: {
         canonical: 'https://angelruiz.world/particulares/comuniones',
     },
     openGraph: {
-        title: 'Mago para Comuniones en Madrid ⭐ Magia Familiar',
+        title: 'Mago para Comuniones en Madrid | Magia Familiar',
         description: 'Magia para comuniones y fiestas infantiles en Madrid. Espectáculos adaptados para toda la familia.',
         images: [{ url: '/images/magia-comuniones-madrid.webp' }],
     }

@@ -6,19 +6,19 @@ import { MagicCursor, ParticleBackground, FadeIn } from '@/components/VisualEffe
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: { absolute: 'Mago para Cumpleaños de Adultos en Madrid 2026' },
+    title: { absolute: 'Mago para Cumpleaños de Adultos en Madrid | Exclusivo' },
     description: 'Sorprende en tu fiesta de 40 o 50 cumpleaños con magia de cerca a domicilio en Madrid. Humor y asombro. Presupuesto en 2h.',
     alternates: {
         canonical: 'https://angelruiz.world/particulares/fiestas-cumpleanos-madrid',
     },
     openGraph: {
-        title: 'Mago para Cumpleaños de Adultos en Madrid 2026',
+        title: 'Mago para Cumpleaños de Adultos en Madrid | Exclusivo',
         description: 'La magia perfecta para sorprender en tu cumpleaños en Madrid.',
         images: [{ url: '/images/fiesta-eventos-madrid.webp' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago para Cumpleaños de Adultos en Madrid 2026',
+        title: 'Mago para Cumpleaños de Adultos en Madrid | Exclusivo',
         description: 'Ilusionismo moderno para cumpleaños de 40 y 50 años.',
         images: ['/images/fiesta-eventos-madrid.webp'],
     },

@@ -1,5 +1,5 @@
 ---
-title: 'Mejores Fincas para Bodas en Madrid y Magia 2026'
+title: 'Mejores Fincas para Bodas en Madrid y Magia'
 date: '2026-05-05'
 excerpt: 'Las mejores fincas de bodas en Madrid y la Sierra para incluir magia en el cóctel. Ideas exclusivas y asesoría directa.'
 author: Ángel Ruiz

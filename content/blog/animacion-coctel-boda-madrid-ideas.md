@@ -1,5 +1,5 @@
 ---
-title: 'Animación para el Cóctel de Boda en Madrid: Ideas Originales que tus Invitados Recordarán (2026)'
+title: 'Animación para el Cóctel de Boda en Madrid: Ideas Originales que tus Invitados Recordarán'
 date: '2026-06-07'
 excerpt: 'El cóctel de boda es el momento más delicado de toda la celebración. Descubre las mejores ideas de entretenimiento para el cóctel en Madrid, por qué la magia de cerca es la opción favorita y cómo evitar que tus invitados se aburran.'
 author: Ángel Ruiz

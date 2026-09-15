@@ -6,21 +6,21 @@ import { MagicCursor, ParticleBackground, FadeIn } from '@/components/VisualEffe
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: { absolute: 'Mago para Bodas en Madrid ⭐ Haz Tu Cóctel Inolvidable' },
-    description: '¿Imaginas a tus invitados alucinando en el cóctel? Magia de cerca exclusiva a centímetros de sus ojos. ¡Pide tu fecha hoy!',
+    title: { absolute: 'Mago para Bodas en Madrid | Haz Tu Cóctel Inolvidable' },
+    description: 'Magia de cerca exclusiva para el cóctel de tu boda en Madrid. Trato directo, sin agencias. +50 reseñas verificadas. Consulta disponibilidad.',
     keywords: ['mago para bodas', 'mago para bodas madrid', 'mago bodas madrid', 'contratar mago boda madrid', 'mago coctel boda madrid', 'ilusionista bodas madrid', 'mago para bodas precio madrid', 'mago boda noroeste madrid', 'entretenimiento bodas madrid', 'mago para mi boda madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/particulares/bodas',
     },
     openGraph: {
         url: 'https://angelruiz.world/particulares/bodas',
-        title: 'Mago para Bodas en Madrid ⭐ Haz Tu Cóctel Inolvidable',
+        title: 'Mago para Bodas en Madrid | Haz Tu Cóctel Inolvidable',
         description: '¿Imaginas a tus invitados alucinando en el cóctel? Magia de cerca exclusiva para bodas en Madrid. ¡Pide tu fecha hoy!',
         images: [{ url: '/images/boda-magia-madrid.webp', width: 1200, height: 630 }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago para Bodas en Madrid ⭐ Haz Tu Cóctel Inolvidable',
+        title: 'Mago para Bodas en Madrid | Haz Tu Cóctel Inolvidable',
         description: '¿Imaginas a tus invitados alucinando en el cóctel? Magia de cerca exclusiva. ¡Pide tu fecha hoy!',
         images: ['/images/boda-magia-madrid.webp'],
     },
@@ -392,6 +392,74 @@ export default function BodasDetailPage() {
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+
+                            {/* GEO: Tabla Comparativa de Entretenimiento para Bodas */}
+                            <div className="space-y-8">
+                                <h3 className="text-2xl md:text-3xl font-[Cinzel] text-white">Magia de Cerca vs. Otros Entretenimientos para Bodas</h3>
+                                <p className="text-slate-400 font-light text-base leading-relaxed">
+                                    Antes de decidir, compara los formatos de entretenimiento más populares para bodas en Madrid según criterios clave:
+                                </p>
+                                <div className="overflow-x-auto">
+                                    <table className="w-full text-sm text-left border border-white/10 rounded-2xl overflow-hidden">
+                                        <thead>
+                                            <tr className="bg-white/5 text-amber-400 uppercase tracking-wider text-xs">
+                                                <th className="px-5 py-4 font-medium">Criterio</th>
+                                                <th className="px-5 py-4 font-medium">Mago de Cerca</th>
+                                                <th className="px-5 py-4 font-medium">DJ / Música</th>
+                                                <th className="px-5 py-4 font-medium">Photocall</th>
+                                                <th className="px-5 py-4 font-medium">Show Escenario</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody className="text-slate-300 font-light">
+                                            <tr className="border-t border-white/5">
+                                                <td className="px-5 py-3 text-white font-medium">Rompe el hielo entre familias</td>
+                                                <td className="px-5 py-3 text-emerald-400">Sí (efecto inmediato)</td>
+                                                <td className="px-5 py-3">No directamente</td>
+                                                <td className="px-5 py-3">Parcial</td>
+                                                <td className="px-5 py-3">No (pasivo)</td>
+                                            </tr>
+                                            <tr className="border-t border-white/5 bg-white/[0.02]">
+                                                <td className="px-5 py-3 text-white font-medium">Funciona durante el cóctel</td>
+                                                <td className="px-5 py-3 text-emerald-400">Perfecto</td>
+                                                <td className="px-5 py-3">Ambiente, no interacción</td>
+                                                <td className="px-5 py-3">Solo si hay cola</td>
+                                                <td className="px-5 py-3">No (necesita escenario)</td>
+                                            </tr>
+                                            <tr className="border-t border-white/5">
+                                                <td className="px-5 py-3 text-white font-medium">Necesita montaje / equipo</td>
+                                                <td className="px-5 py-3 text-emerald-400">Ninguno</td>
+                                                <td className="px-5 py-3">Equipo de sonido</td>
+                                                <td className="px-5 py-3">Estructura + fondo</td>
+                                                <td className="px-5 py-3">Tarima + luces + sonido</td>
+                                            </tr>
+                                            <tr className="border-t border-white/5 bg-white/[0.02]">
+                                                <td className="px-5 py-3 text-white font-medium">Apto para todas las edades</td>
+                                                <td className="px-5 py-3 text-emerald-400">Sí (niños a abuelos)</td>
+                                                <td className="px-5 py-3">Solo si hay variedad</td>
+                                                <td className="px-5 py-3">Sí</td>
+                                                <td className="px-5 py-3">Depende del show</td>
+                                            </tr>
+                                            <tr className="border-t border-white/5">
+                                                <td className="px-5 py-3 text-white font-medium">Precio medio en Madrid</td>
+                                                <td className="px-5 py-3">400€ – 800€</td>
+                                                <td className="px-5 py-3">600€ – 1.500€</td>
+                                                <td className="px-5 py-3">300€ – 600€</td>
+                                                <td className="px-5 py-3">800€ – 2.000€</td>
+                                            </tr>
+                                            <tr className="border-t border-white/5 bg-white/[0.02]">
+                                                <td className="px-5 py-3 text-white font-medium">Recuerdo que genera</td>
+                                                <td className="px-5 py-3 text-emerald-400">Muy alto ("¿cómo lo hizo?")</td>
+                                                <td className="px-5 py-3">Medio (baile)</td>
+                                                <td className="px-5 py-3">Alto (fotos)</td>
+                                                <td className="px-5 py-3">Alto</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p className="text-slate-500 text-xs font-light italic">
+                                    Fuente: elaboración propia basada en +200 eventos realizados en la Comunidad de Madrid.
+                                </p>
                             </div>
 
                             {/* Por Qué Elegir a Ángel Ruiz */}

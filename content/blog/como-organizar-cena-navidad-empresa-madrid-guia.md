@@ -1,5 +1,5 @@
 ---
-title: 'Cómo Organizar la Cena de Navidad de Empresa Perfecta en Madrid (Guía Paso a Paso 2026)'
+title: 'Cómo Organizar la Cena de Navidad de Empresa Perfecta en Madrid (Guía Paso a Paso)'
 date: '2026-09-01'
 excerpt: 'Guía completa para organizar la cena de Navidad corporativa en Madrid: elección de restaurante o espacio, timing, presupuesto, cómo evitar los tiempos muertos y por qué la magia corporativa es la clave del éxito.'
 author: Ángel Ruiz

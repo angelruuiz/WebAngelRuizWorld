@@ -1,5 +1,5 @@
 ---
-title: 'Mago para Inauguraciones y Lanzamientos de Producto en Madrid: Cómo Captar Todas las Miradas (2026)'
+title: 'Mago para Inauguraciones y Lanzamientos de Producto en Madrid: Cómo Captar Todas las Miradas'
 date: '2026-06-09'
 excerpt: 'Descubre cómo un mago profesional puede convertir tu inauguración, apertura de tienda o lanzamiento de producto en Madrid en un evento viral. Formatos, integración con branding y precios para marketing experiencial.'
 author: Ángel Ruiz

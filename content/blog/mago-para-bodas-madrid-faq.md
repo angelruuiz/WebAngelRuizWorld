@@ -1,5 +1,5 @@
 ---
-title: 'Mago para Bodas en Madrid [2026]: Precios, Ideas y Guía Definitiva'
+title: 'Mago para Bodas en Madrid: Precios, Ideas y Guía Definitiva'
 date: '2026-04-10'
 excerpt: >-
   ¿Quieres que tu boda sea inolvidable? Descubre cómo un mago en Madrid puede transformar tu cóctel. Precios exactos, cuándo contratar y los mejores consejos.

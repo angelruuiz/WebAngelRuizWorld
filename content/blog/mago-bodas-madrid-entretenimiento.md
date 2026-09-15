@@ -1,5 +1,5 @@
 ---
-title: 'Mago para Bodas en Madrid [2026]: Magia y Entretenimiento Inolvidable'
+title: 'Mago para Bodas en Madrid: Magia y Entretenimiento Inolvidable'
 date: '2026-05-02'
 excerpt: >-
   Asegura el éxito del día más importante de tu vida. La magia de cerca durante

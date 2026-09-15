@@ -1,5 +1,5 @@
 ﻿---
-title: 'Mago para Fiestas de Jubilación en Madrid: Ideas Emotivas para Despedir una Carrera [2026]'
+title: 'Mago para Fiestas de Jubilación en Madrid: Ideas Emotivas para Despedir una Carrera'
 date: '2026-09-14'
 excerpt: >-
   Descubre cómo organizar una fiesta de jubilación inolvidable en Madrid con magia de cerca y momentos personalizados que homenajearán toda una vida de trabajo.

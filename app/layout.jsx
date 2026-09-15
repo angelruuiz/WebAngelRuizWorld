@@ -5,7 +5,7 @@ import Script from 'next/script';
 export const metadata = {
   metadataBase: new URL('https://angelruiz.world'),
   title: {
-    default: 'Mago en Madrid ⭐ Ángel Ruiz · Bodas y Empresas',
+    default: 'Mago en Madrid | Ángel Ruiz · Bodas y Empresas',
     template: '%s | Ángel Ruiz'
   },
   description: '¿Buscas asombro inolvidable? Ilusionismo de autor para bodas, empresas y eventos exclusivos en Madrid. Trato directo sin agencias. Presupuesto express en 2h.',

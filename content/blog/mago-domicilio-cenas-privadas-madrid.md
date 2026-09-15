@@ -1,5 +1,5 @@
 ﻿---
-title: 'Mago a Domicilio en Madrid: Magia Exclusiva y Close-Up para Cenas Privadas [2026]'
+title: 'Mago a Domicilio en Madrid: Magia Exclusiva y Close-Up para Cenas Privadas'
 date: '2026-09-14'
 excerpt: >-
   Convierte tu salón o jardín en un teatro de magia privado. Descubre cómo contratar un mago a domicilio en Madrid para cenas íntimas y celebraciones exclusivas.

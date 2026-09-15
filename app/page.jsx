@@ -3,14 +3,14 @@ import Image from 'next/image';
 import QuickEventSelector from '@/components/QuickEventSelector';
 
 export const metadata = {
-    title: { absolute: 'Mago en Madrid ⭐ Ángel Ruiz · Bodas y Empresas' },
+    title: { absolute: 'Mago en Madrid | Ángel Ruiz · Bodas y Empresas' },
     description: '¿Quieres un evento del que todos sigan hablando? Ilusionismo de autor y magia de cerca en Madrid. Presupuesto express en 2h.',
     alternates: {
         canonical: 'https://angelruiz.world',
     },
     openGraph: {
         url: 'https://angelruiz.world',
-        title: 'Mago en Madrid ⭐ Ángel Ruiz · Bodas y Empresas',
+        title: 'Mago en Madrid | Ángel Ruiz · Bodas y Empresas',
         description: '¿Quieres un evento del que todos sigan hablando? Ilusionismo de autor y magia de cerca en Madrid. Presupuesto express.',
     },
 };

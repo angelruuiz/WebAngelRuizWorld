@@ -1,5 +1,5 @@
 ---
-title: 'Mago para Eventos de Empresa en Madrid ➜ Guía 2026'
+title: 'Mago para Eventos de Empresa en Madrid ➜ Guía Completa'
 date: '2026-04-14'
 excerpt: 'Descubre por qué contratar un mago para eventos en Madrid potencia el networking corporativo. Solicita dossier express.'
 author: Ángel Ruiz

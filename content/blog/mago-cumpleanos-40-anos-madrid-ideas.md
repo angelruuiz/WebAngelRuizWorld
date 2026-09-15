@@ -1,5 +1,5 @@
 ﻿---
-title: 'Mago para Fiesta de 40 Cumpleaños en Madrid: Cómo Celebrar el Cambio de Década a lo Grande [2026]'
+title: 'Mago para Fiesta de 40 Cumpleaños en Madrid: Cómo Celebrar el Cambio de Década a lo Grande'
 date: '2026-09-14'
 excerpt: >-
   Ideas originales para celebrar tu 40 cumpleaños en Madrid. Descubre por qué la magia de cerca y el ilusionismo moderno son el entretenimiento estrella para adultos.

@@ -1,5 +1,5 @@
 ---
-title: '¿Cuánto Cuesta un Mago para Bodas en Madrid? [Precios 2026]'
+title: '¿Cuánto Cuesta un Mago para Bodas en Madrid? Precios y Tarifas'
 date: '2026-04-14'
 excerpt: >-
   Descubre el presupuesto real para contratar un mago de bodas en Madrid.

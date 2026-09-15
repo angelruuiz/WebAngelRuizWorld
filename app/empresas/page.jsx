@@ -8,21 +8,21 @@ import FAQItem from '@/components/FAQItem';
 import CorporateInlineForm from '@/components/CorporateInlineForm';
 
 export const metadata = {
-    title: { absolute: 'Mago para Empresas en Madrid ➜ Cenas y Eventos 2026' },
-    description: 'Ilusionismo para cenas de empresa y team building en Madrid. Personalizado con tu marca. Pide dossier y presupuesto en 2h.',
+    title: { absolute: 'Mago para Empresas en Madrid ➜ Cenas y Eventos' },
+    description: 'Magia corporativa para cenas, team building y ferias en Madrid. Trato directo, sin intermediarios. Dossier y presupuesto en 2 horas.',
     keywords: ['mago para empresas madrid', 'mago para empresas', 'mago empresas', 'mago eventos corporativos madrid', 'mago cenas empresa madrid', 'mago team building madrid', 'mago conferenciante madrid', 'contratar mago empresa madrid', 'ilusionista corporativo madrid', 'mejor mago empresas madrid', 'mago para eventos de empresa madrid', 'mago eventos empresariales', 'magia para empresas'],
     alternates: {
         canonical: 'https://angelruiz.world/empresas',
     },
     openGraph: {
         url: 'https://angelruiz.world/empresas',
-        title: 'Mago para Empresas en Madrid ➜ Cenas y Eventos 2026',
+        title: 'Mago para Empresas en Madrid ➜ Cenas y Eventos',
         description: '¿Quieres una cena de empresa que rompa el hielo de verdad? Magia corporativa y networking para tu equipo. Pide presupuesto en 2h.',
         images: [{ url: '/images/evento-angel-ruiz-magia.webp', width: 1200, height: 630 }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago para Empresas en Madrid ➜ Cenas y Eventos 2026',
+        title: 'Mago para Empresas en Madrid ➜ Cenas y Eventos',
         description: 'Especialista en magia corporativa para cenas y convenciones en Madrid. Presupuesto directo.',
         images: ['/images/evento-angel-ruiz-magia.webp'],
     },
@@ -403,6 +403,66 @@ export default function EmpresasPage() {
                                         </li>
                                     </ul>
                                 </div>
+                            </div>
+
+                            {/* GEO: Guía Rápida de Formatos Corporativos */}
+                            <div className="mb-12">
+                                <h3 className="text-xl font-[Cinzel] font-bold uppercase tracking-tight text-amber-400 mb-4">
+                                    Guía Rápida: Qué Formato de Magia Elegir para Tu Evento
+                                </h3>
+                                <div className="overflow-x-auto">
+                                    <table className="w-full text-sm text-left border border-white/10 rounded-2xl overflow-hidden">
+                                        <thead>
+                                            <tr className="bg-white/5 text-amber-400 uppercase tracking-wider text-xs">
+                                                <th className="px-5 py-4 font-medium">Tipo de Evento</th>
+                                                <th className="px-5 py-4 font-medium">Formato Recomendado</th>
+                                                <th className="px-5 py-4 font-medium">Duración Ideal</th>
+                                                <th className="px-5 py-4 font-medium">Nº Invitados</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody className="text-slate-300 font-light">
+                                            <tr className="border-t border-white/5">
+                                                <td className="px-5 py-3 text-white font-medium">Cena de empresa</td>
+                                                <td className="px-5 py-3">Close-up itinerante entre mesas</td>
+                                                <td className="px-5 py-3">60–90 min</td>
+                                                <td className="px-5 py-3">20–150</td>
+                                            </tr>
+                                            <tr className="border-t border-white/5 bg-white/[0.02]">
+                                                <td className="px-5 py-3 text-white font-medium">Cóctel de networking</td>
+                                                <td className="px-5 py-3">Magia itinerante en grupos</td>
+                                                <td className="px-5 py-3">45–75 min</td>
+                                                <td className="px-5 py-3">30–300</td>
+                                            </tr>
+                                            <tr className="border-t border-white/5">
+                                                <td className="px-5 py-3 text-white font-medium">Team building</td>
+                                                <td className="px-5 py-3">Taller de magia participativo</td>
+                                                <td className="px-5 py-3">90–120 min</td>
+                                                <td className="px-5 py-3">10–50</td>
+                                            </tr>
+                                            <tr className="border-t border-white/5 bg-white/[0.02]">
+                                                <td className="px-5 py-3 text-white font-medium">Stand en feria (IFEMA)</td>
+                                                <td className="px-5 py-3">Micropases de 5 min en pasillo</td>
+                                                <td className="px-5 py-3">4–8 h (jornada)</td>
+                                                <td className="px-5 py-3">Ilimitado</td>
+                                            </tr>
+                                            <tr className="border-t border-white/5">
+                                                <td className="px-5 py-3 text-white font-medium">Presentación de producto</td>
+                                                <td className="px-5 py-3">Magia integrada en keynote</td>
+                                                <td className="px-5 py-3">15–30 min</td>
+                                                <td className="px-5 py-3">50–500</td>
+                                            </tr>
+                                            <tr className="border-t border-white/5 bg-white/[0.02]">
+                                                <td className="px-5 py-3 text-white font-medium">Convención o kick-off</td>
+                                                <td className="px-5 py-3">Conferencia motivacional + magia</td>
+                                                <td className="px-5 py-3">30–45 min</td>
+                                                <td className="px-5 py-3">100–1.000</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <p className="text-slate-500 text-xs font-light italic mt-3">
+                                    Basado en +200 eventos corporativos realizados en la Comunidad de Madrid.
+                                </p>
                             </div>
 
                             <div className="mb-12">

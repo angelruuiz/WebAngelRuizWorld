@@ -48,11 +48,6 @@ const nextConfig = {
                 permanent: true,
             },
             {
-                source: '/mago-mentalista-madrid',
-                destination: '/',
-                permanent: true,
-            },
-            {
                 source: '/particulares/boda',
                 destination: '/particulares/bodas',
                 permanent: true,

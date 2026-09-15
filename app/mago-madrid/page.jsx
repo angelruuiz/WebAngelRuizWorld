@@ -6,7 +6,7 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: { absolute: 'Mago Profesional en Madrid ⭐ Bodas y Empresas' },
+    title: { absolute: 'Mago Profesional en Madrid | Bodas y Empresas' },
     description: '¿Buscas un espectáculo que rompa esquemas? Ilusionismo de autor y magia de cerca a centímetros de tus ojos en Madrid. Alumno de DaOrtiz. Presupuesto en 2h.',
     keywords: ['mago en madrid', 'mago profesional madrid', 'ilusionista madrid', 'mago para eventos madrid', 'contratar mago madrid', 'mago madrid bodas', 'mago madrid empresas', 'show magia madrid'],
     alternates: {
@@ -14,7 +14,7 @@ export const metadata = {
     },
     openGraph: {
         url: 'https://angelruiz.world/mago-madrid',
-        title: 'Mago Profesional en Madrid ⭐ Bodas y Empresas',
+        title: 'Mago Profesional en Madrid | Bodas y Empresas',
         description: '¿Buscas un espectáculo que rompa esquemas? Ilusionismo de autor y magia de cerca en Madrid. Trato directo sin intermediarios.',
         images: [{ url: '/images/foto-bio.webp', width: 1200, height: 630 }],
     }

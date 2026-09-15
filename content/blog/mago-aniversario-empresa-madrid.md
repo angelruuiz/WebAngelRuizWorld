@@ -1,5 +1,5 @@
 ---
-title: 'Cómo Celebrar el Aniversario de tu Empresa en Madrid con un Toque de Magia [2026]'
+title: 'Cómo Celebrar el Aniversario de tu Empresa en Madrid con un Toque de Magia'
 date: '2026-08-06'
 excerpt: >-
   Descubre cómo celebrar un aniversario de empresa inolvidable en Madrid.

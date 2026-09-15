@@ -4,7 +4,7 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: { absolute: 'Galería de Fotos ⭐ Magia en Eventos y Bodas · Ángel Ruiz' },
+    title: { absolute: 'Galería | Magia en Eventos y Bodas · Ángel Ruiz' },
     description: 'Fotos reales de actuaciones de Ángel Ruiz como mago en Madrid. Eventos corporativos, bodas exclusivas y magia close-up. +10 años de experiencia.',
     keywords: ['fotos mago madrid', 'galeria mago madrid', 'imagenes magia madrid', 'mago eventos madrid fotos'],
     alternates: {

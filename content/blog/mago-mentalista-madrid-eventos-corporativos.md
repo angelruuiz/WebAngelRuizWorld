@@ -1,5 +1,5 @@
 ---
-title: 'Mago Mentalista en Madrid para Eventos y Empresas: El Poder de la Magia Mental [2026]'
+title: 'Mago Mentalista en Madrid para Eventos y Empresas: El Poder de la Magia Mental'
 date: '2026-08-18'
 excerpt: >-
   Descubre el impacto del mentalismo corporativo y de alta gama en Madrid.

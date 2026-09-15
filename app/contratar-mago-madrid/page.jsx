@@ -7,14 +7,14 @@ import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 export const metadata = {
-    title: { absolute: '¿Cuánto Cuesta un Mago en Madrid? Tarifas 2026' },
-    description: 'Tarifas reales desde 300€ para contratar un mago en Madrid. Precios para bodas y empresas sin agencias. Respuesta en 2h.',
+    title: { absolute: '¿Cuánto Cuesta un Mago en Madrid? Tarifas y Precios' },
+    description: 'Precios reales desde 300€ para contratar un mago en Madrid. Sin agencias ni comisiones. Presupuesto personalizado en menos de 2 horas.',
     keywords: ['contratar mago madrid', 'contratar mago madrid precio', 'precio mago madrid', 'cuanto cuesta un mago en madrid', 'mago profesional madrid', 'ilusionista madrid precios', 'mago para eventos madrid', 'mago para fiestas privadas madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/contratar-mago-madrid',
     },
     openGraph: {
-        title: '¿Cuánto Cuesta un Mago en Madrid? Tarifas 2026',
+        title: '¿Cuánto Cuesta un Mago en Madrid? Tarifas y Precios',
         description: 'Todo lo que necesitas saber para contratar un ilusionista en Madrid para bodas o empresas. Precios directos sin comisiones.',
         images: [{ url: '/images/foto-bio.webp' }],
     }
@@ -27,10 +27,10 @@ export default function ContratarMagoMadridPage() {
         "mainEntity": [
             { 
                 "@type": "Question", 
-                "name": "¿Cuánto cuesta contratar un mago en Madrid? (Precios 2026)", 
+                "name": "¿Cuánto cuesta contratar un mago en Madrid?", 
                 "acceptedAnswer": { 
                     "@type": "Answer", 
-                    "text": "El precio mago boda 2026 y fiestas privadas varía entre 300€ y 900€. Si necesitas saber el precio mago cena empresa o evento corporativo, la tarifa base suele partir de 400€ por jornada, dependiendo del formato y requerimientos. El presupuesto se personaliza siempre." 
+                    "text": "El precio de un mago para bodas y fiestas privadas varía entre 300€ y 900€. Si necesitas saber el precio de un mago para cenas de empresa o eventos corporativos, la tarifa base suele partir de 400€ por jornada, dependiendo del formato y requerimientos. El presupuesto se personaliza siempre." 
                 } 
             },
             { 
@@ -205,6 +205,64 @@ export default function ContratarMagoMadridPage() {
                         </div>
                     </section>
 
+                    {/* GEO: Comparativa de Opciones de Contratación */}
+                    <section className="mb-24">
+                        <div className="mb-16">
+                            <h2 className="text-2xl md:text-3xl font-[Cinzel] text-white mb-6">
+                                Contratar Directamente vs. Agencia: ¿Qué te Conviene?
+                            </h2>
+                            <p className="text-slate-300 font-light text-base leading-relaxed mb-6">
+                                Muchos organizadores de eventos en Madrid dudan entre contratar al mago directamente o a través de una agencia. Esta tabla resume las diferencias clave:
+                            </p>
+                            <div className="overflow-x-auto">
+                                <table className="w-full text-sm text-left border border-white/10 rounded-2xl overflow-hidden">
+                                    <thead>
+                                        <tr className="bg-white/5 text-amber-400 uppercase tracking-wider text-xs">
+                                            <th className="px-5 py-4 font-medium">Aspecto</th>
+                                            <th className="px-5 py-4 font-medium">Contratación Directa</th>
+                                            <th className="px-5 py-4 font-medium">A Través de Agencia</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="text-slate-300 font-light">
+                                        <tr className="border-t border-white/5">
+                                            <td className="px-5 py-3 text-white font-medium">Precio</td>
+                                            <td className="px-5 py-3 text-emerald-400">Sin comisiones (20-40% menos)</td>
+                                            <td className="px-5 py-3">Incluye margen de agencia</td>
+                                        </tr>
+                                        <tr className="border-t border-white/5 bg-white/[0.02]">
+                                            <td className="px-5 py-3 text-white font-medium">Comunicación</td>
+                                            <td className="px-5 py-3 text-emerald-400">Directa con el artista</td>
+                                            <td className="px-5 py-3">Intermediario (posibles malentendidos)</td>
+                                        </tr>
+                                        <tr className="border-t border-white/5">
+                                            <td className="px-5 py-3 text-white font-medium">Personalización</td>
+                                            <td className="px-5 py-3 text-emerald-400">Total (efectos a medida)</td>
+                                            <td className="px-5 py-3">Limitada (paquetes estándar)</td>
+                                        </tr>
+                                        <tr className="border-t border-white/5 bg-white/[0.02]">
+                                            <td className="px-5 py-3 text-white font-medium">Velocidad de respuesta</td>
+                                            <td className="px-5 py-3 text-emerald-400">Presupuesto en menos de 2h</td>
+                                            <td className="px-5 py-3">24-72h habitual</td>
+                                        </tr>
+                                        <tr className="border-t border-white/5">
+                                            <td className="px-5 py-3 text-white font-medium">Garantía de profesional</td>
+                                            <td className="px-5 py-3">Ves vídeos y reseñas del artista exacto</td>
+                                            <td className="px-5 py-3">A veces envían sustituto</td>
+                                        </tr>
+                                        <tr className="border-t border-white/5 bg-white/[0.02]">
+                                            <td className="px-5 py-3 text-white font-medium">Facturación</td>
+                                            <td className="px-5 py-3">Factura oficial directa</td>
+                                            <td className="px-5 py-3">Factura de la agencia</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p className="text-slate-500 text-xs font-light italic mt-3">
+                                Ángel Ruiz trabaja sin intermediarios. Trato directo, presupuesto personalizado y sin sorpresas.
+                            </p>
+                        </div>
+                    </section>
+
                     {/* EXTENSIVE FAQS */}
                     <section className="mb-24">
                         <div className="text-center mb-12">
@@ -221,7 +279,7 @@ export default function ContratarMagoMadridPage() {
                     {/* CONTACT BAR */}
                     <div className="bg-gradient-to-r from-emerald-900/20 to-zinc-900/40 backdrop-blur-3xl border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] rounded-[2rem] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
                         <div>
-                            <h2 className="text-2xl font-[Cinzel] text-white font-bold mb-2">Precios Mago Madrid 2026: desde 300€</h2>
+                            <h2 className="text-2xl font-[Cinzel] text-white font-bold mb-2">Precios Mago Madrid: desde 300€</h2>
                             <p className="text-slate-400 text-sm max-w-lg mb-4">
                                 Tarifas base desde 300€ (Particulares) y 400€ (Corporativo). El presupuesto exacto se compila tras evaluar las variables de tu evento. Rellena el formulario o contacta por WhatsApp para un diseño a medida.
                             </p>

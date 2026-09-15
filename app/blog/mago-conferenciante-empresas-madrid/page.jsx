@@ -4,14 +4,14 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import Link from 'next/link';
 
 export const metadata = {
-    title: { absolute: 'Mago Conferenciante en Madrid para Empresas 2026' },
+    title: { absolute: 'Mago Conferenciante en Madrid para Empresas' },
     description: 'Conferencias con magia corporativa de alto impacto en Madrid. Comunica el mensaje de tu empresa. Dossier y demo disponibles.',
     alternates: {
         canonical: 'https://angelruiz.world/blog/mago-conferenciante-empresas-madrid',
     },
     keywords: 'mago conferenciante empresas madrid, mago eventos empresariales con asesoría, mago corporativo presentador profesional, orador motivacional madrid, conferenciante magia',
     openGraph: {
-        title: 'Mago Conferenciante en Madrid para Empresas 2026',
+        title: 'Mago Conferenciante en Madrid para Empresas',
         description: 'La fusión perfecta entre keynote empresarial e ilusionismo de alto impacto.',
         images: [{ url: '/images/evento-angel-ruiz-magia.webp' }],
     }

@@ -1,5 +1,5 @@
 ---
-title: 'Mago para Cumpleaños de Adultos en Madrid: Ideas Exclusivas para 40, 50 y 60 Años [2026]'
+title: 'Mago para Cumpleaños de Adultos en Madrid: Ideas Exclusivas para 40, 50 y 60 Años'
 date: '2026-08-10'
 excerpt: >-
   Celebra un 40, 50 o 60 cumpleaños inolvidable en Madrid. Magia de cerca y mentalismo

@@ -1,5 +1,5 @@
 ---
-title: 'Magia y Tecnología para Eventos de Empresa 2026'
+title: 'Magia y Tecnología para Eventos de Empresa'
 date: '2026-05-25'
 excerpt: 'Ilusionismo tecnológico y magia con móviles para eventos y ferias en Madrid. Innovación para tu marca. Pide demo en 2h.'
 author: Ángel Ruiz
