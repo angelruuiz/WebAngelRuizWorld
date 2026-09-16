@@ -8,10 +8,11 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import dynamic from 'next/dynamic';
 const ContactFormModal = dynamic(() => import('@/components/Modals').then(mod => mod.ContactFormModal), { ssr: false });
+const VideoShowModal = dynamic(() => import('@/components/VideoShowModal'), { ssr: false });
 
 import LiquidGlassForm from '@/components/LiquidGlassForm';
 
-const HeroClient = ({ onOpenModal }) => {
+const HeroClient = ({ onOpenModal, onOpenVideo }) => {
     return (
         <section className="relative min-h-[100dvh] flex flex-col justify-end lg:justify-center overflow-hidden z-10 pt-20 pb-28 sm:pb-32 lg:py-0">
             <div className="absolute inset-0 z-0 overflow-hidden">
@@ -67,6 +68,20 @@ const HeroClient = ({ onOpenModal }) => {
                             "LA MAGIA QUE HACE QUE TU EVENTO SEA INOLVIDABLE."
                         </p>
 
+                        {/* Botón Discreto: Ver Show en Directo */}
+                        <div className="mt-3 sm:mt-5 flex flex-wrap items-center gap-3">
+                            <button
+                                type="button"
+                                onClick={onOpenVideo}
+                                className="group inline-flex items-center gap-2.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-slate-950/80 hover:bg-[#d4a853]/15 border border-[#d4a853]/40 hover:border-[#d4a853] text-[#d4a853] hover:text-white transition-all duration-300 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.5),0_0_15px_rgba(212,168,83,0.1)] active:scale-95 cursor-pointer text-xs sm:text-sm font-semibold tracking-wider uppercase"
+                            >
+                                <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#d4a853] text-slate-950 flex items-center justify-center text-[9px] sm:text-[10px] font-bold group-hover:scale-110 transition-transform shadow-md">
+                                    ▶
+                                </span>
+                                <span>Ver Show en Directo <span className="opacity-70 text-[10px] sm:text-xs font-normal normal-case">(1 min)</span></span>
+                            </button>
+                        </div>
+
                         {/* Indicador de deslizamiento exclusivo para Móvil (PC intacto) */}
                         <div className="w-full mt-4 flex justify-center lg:hidden">
                             <a
@@ -103,6 +118,7 @@ const HeroClient = ({ onOpenModal }) => {
 
 export default function HomeClient({ seoContent }) {
     const [isContactOpen, setIsContactOpen] = useState(false);
+    const [isVideoOpen, setIsVideoOpen] = useState(false);
 
     return (
         <div className="bg-[var(--surface-0)] min-h-screen text-slate-200">
@@ -112,7 +128,10 @@ export default function HomeClient({ seoContent }) {
             <Navbar onOpenContact={() => setIsContactOpen(true)} />
 
             <main>
-                <HeroClient onOpenModal={() => setIsContactOpen(true)} />
+                <HeroClient 
+                    onOpenModal={() => setIsContactOpen(true)} 
+                    onOpenVideo={() => setIsVideoOpen(true)} 
+                />
 
                 {/* Formulario visible en Móvil justo al hacer scroll */}
                 <section id="presupuesto-mobile" className="lg:hidden px-4 py-10 bg-gradient-to-b from-[#030712] via-slate-950 to-transparent relative z-20">
@@ -135,6 +154,7 @@ export default function HomeClient({ seoContent }) {
             <Footer onOpenContact={() => setIsContactOpen(true)} />
 
             <ContactFormModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+            <VideoShowModal isOpen={isVideoOpen} onClose={() => setIsVideoOpen(false)} onOpenContact={() => setIsContactOpen(true)} />
         </div>
     );
 }

@@ -245,12 +245,12 @@ const SEOContent = () => {
 export default function Home() {
     const videoSchema = {
         "@type": "VideoObject",
-        "name": "Ángel Ruiz | Magia de Cerca en Madrid",
-        "description": "Video promocional de ilusionismo profesional y magia de cerca por Ángel Ruiz.",
-        "thumbnailUrl": "https://angelruiz.world/images/foto-bio.webp",
-        "uploadDate": "2026-04-10T10:00:00+02:00",
-        "duration": "PT1M0S",
-        "contentUrl": "https://angelruiz.world/spring.mp4"
+        "name": "Show de Magia en Directo en Madrid | Ángel Ruiz (El Badulaque)",
+        "description": "Resumen en vivo del show de magia de cerca e ilusionismo profesional por Ángel Ruiz en El Badulaque.",
+        "thumbnailUrl": "https://angelruiz.world/videos/show-badulaque-poster.webp",
+        "uploadDate": "2026-09-16T22:00:00+02:00",
+        "duration": "PT1M4S",
+        "contentUrl": "https://angelruiz.world/videos/show-badulaque.mp4"
     };
 
     return (
