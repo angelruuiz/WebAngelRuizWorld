@@ -10,14 +10,15 @@ import { ContactFormModal } from '@/components/Modals';
 
 const MagicalCarousel = () => {
     const images = [
-        "/images/foto-bio.webp"
+        "/images/foto-bio.webp",
+        "/images/foto-bio-2.webp"
     ];
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
         const timer = setInterval(() => { 
             setIndex((prev) => (prev + 1) % images.length); 
-        }, 4000);
+        }, 2000);
         return () => clearInterval(timer);
     }, [images.length]);
 
@@ -28,15 +29,15 @@ const MagicalCarousel = () => {
                     key={index}
                     initial={{ opacity: 0, scale: 1.05 }}
                     animate={{ opacity: 1, scale: 1, filter: "brightness(1)" }}
-                    exit={{ opacity: 0, transition: { duration: 1 } }}
-                    transition={{ duration: 1.5, ease: "easeInOut" }}
+                    exit={{ opacity: 0, transition: { duration: 0.6 } }}
+                    transition={{ duration: 0.8, ease: "easeInOut" }}
                     className="absolute inset-0 w-full h-full"
                 >
                     <Image
                         src={images[index]}
                         alt="Angel Ruiz Mago profesional en plena actuación de ilusionismo"
                         fill
-                        className="object-cover object-[center_10%] rounded-xl shadow-2xl"
+                        className="object-cover object-[center_20%] rounded-xl shadow-2xl"
                         sizes="(max-width: 768px) 100vw, 50vw"
                         priority={index === 0}
                     />

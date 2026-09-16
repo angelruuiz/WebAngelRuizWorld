@@ -4,6 +4,7 @@ import NavFooterClient from '@/components/NavFooterClient';
 import ContactButtonClient from '@/components/ContactButtonClient';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import BioCarousel from '@/components/BioCarousel';
 
 export const metadata = {
     title: { absolute: 'Mago Profesional en Madrid | Bodas y Empresas' },
@@ -84,16 +85,13 @@ export default function MagoMadridPage() {
                     <Breadcrumbs />
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-20">
-                        <div className="relative md:sticky md:top-32 h-auto rounded-2xl overflow-hidden border border-slate-800 shadow-xl order-2 md:order-1 group bg-slate-900/50">
-                            <Image
-                                src="/images/foto-bio.webp"
+                        <div className="relative md:sticky md:top-32 w-full aspect-[4/5] rounded-2xl overflow-hidden border border-slate-800 shadow-xl order-2 md:order-1 group bg-slate-900/50">
+                            <BioCarousel 
+                                aspectRatio="aspect-[4/5]"
                                 alt="Ángel Ruiz mago profesional en Madrid"
-                                width={800}
-                                height={1000}
-                                className="w-full h-auto transition-all duration-700 group-hover:scale-105"
+                                interval={2000}
                                 priority
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 to-transparent" />
                         </div>
 
                         <div className="order-1 md:order-2">

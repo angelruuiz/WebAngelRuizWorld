@@ -70,16 +70,17 @@ export default function MagoComunionesPage() {
                     
                     {/* Hero Section */}
                     <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center mb-24 mt-8">
-                        <FadeIn className="flex-1 relative w-full aspect-[4/5] lg:aspect-square" delay={0.1} scale={0.98}>
-                            <div className="absolute inset-0 rounded-3xl lg:rounded-full overflow-hidden border-4 border-amber-500/20 shadow-2xl bg-slate-950">
+                        <FadeIn className="flex-1 relative w-full aspect-[4/5] lg:aspect-[3/4]" delay={0.1} scale={0.95}>
+                            <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl bg-slate-950">
                                 <Image
                                     src="/images/magia-comuniones-madrid.webp"
                                     alt="Mago para comuniones en Madrid - Ángel Ruiz"
                                     fill
-                                    sizes="(max-width: 768px) 90vw, (max-width: 1200px) 45vw, 520px"
-                                    className="object-cover"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 550px"
+                                    className="object-cover transition-transform duration-[4s] ease-out hover:scale-105"
                                     priority
                                 />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/80 via-transparent to-transparent" />
                             </div>
                         </FadeIn>
                         
