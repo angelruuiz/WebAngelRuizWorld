@@ -62,6 +62,7 @@ import dynamic from 'next/dynamic';
 const NewsletterModal = dynamic(() => import('@/components/NewsletterModal'), { ssr: false });
 const CookieBanner = dynamic(() => import('@/components/CookieBanner'), { ssr: false });
 const AnalyticsLoader = dynamic(() => import('@/components/AnalyticsLoader'), { ssr: false });
+const DeferredStyles = dynamic(() => import('@/components/DeferredStyles'), { ssr: false });
 
 import { Cinzel, Cormorant_Garamond, Outfit } from 'next/font/google';
 
@@ -77,6 +78,7 @@ const cormorant = Cormorant_Garamond({
   weight: ['400'],
   variable: '--font-cormorant',
   display: 'swap',
+  preload: false,
 });
 
 const outfit = Outfit({
@@ -271,18 +273,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`${cinzel.variable} ${cormorant.variable} ${outfit.variable}`}>
       <head>
+        <link rel="preload" as="image" href="/images/hero-angel-ruiz-mobile-2026.webp" media="(max-width: 767px)" type="image/webp" fetchPriority="high" />
+        <link rel="preload" as="image" href="/images/hero-angel-ruiz-2026.webp" media="(min-width: 768px)" type="image/webp" fetchPriority="high" />
+        <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(globalSchema) }}
         />
-        <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
-        <link rel="preload" as="image" href="/images/hero-angel-ruiz-mobile-2026.webp" media="(max-width: 767px)" type="image/webp" fetchPriority="high" />
-        <link rel="preload" as="image" href="/images/hero-angel-ruiz-2026.webp" media="(min-width: 768px)" type="image/webp" fetchPriority="high" />
       </head>
       <body className="antialiased min-h-screen selection:bg-amber-500/30 selection:text-amber-200 font-sans">
 
         {children}
         <WhatsAppButton />
+        <DeferredStyles />
         <NewsletterModal />
         <CookieBanner />
         <Analytics />
