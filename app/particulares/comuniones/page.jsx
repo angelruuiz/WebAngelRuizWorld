@@ -69,18 +69,18 @@ export default function MagoComunionesPage() {
                     <Breadcrumbs />
                     
                     {/* Hero Section */}
-                    <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center mb-24 mt-8">
-                        <FadeIn className="flex-1 relative w-full aspect-[4/5] lg:aspect-[3/4]" delay={0.1} scale={0.95}>
-                            <div className="absolute inset-0 rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl bg-slate-950">
+                    <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center mb-24 mt-8">
+                        <FadeIn className="flex-1 relative w-full max-w-lg lg:max-w-xl aspect-[4/3] sm:aspect-[16/11]" delay={0.1} scale={0.95}>
+                            <div className="absolute inset-0 rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl bg-slate-950">
                                 <Image
                                     src="/images/magia-comuniones-madrid.webp"
                                     alt="Mago para comuniones en Madrid - Ángel Ruiz"
                                     fill
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 550px"
-                                    className="object-cover transition-transform duration-[4s] ease-out hover:scale-105"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 650px"
+                                    className="object-cover object-center transition-transform duration-[4s] ease-out hover:scale-105"
                                     priority
                                 />
-                                <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/80 via-transparent to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/70 via-transparent to-transparent" />
                             </div>
                         </FadeIn>
                         
