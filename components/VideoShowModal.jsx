@@ -80,6 +80,7 @@ export default function VideoShowModal({ isOpen, onClose, onOpenContact }) {
                             src="/videos/show-badulaque.mp4"
                             poster="/videos/show-badulaque-poster.webp"
                             controls
+                            loop
                             playsInline
                             preload="metadata"
                             className="w-full h-full object-cover block"
