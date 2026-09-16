@@ -82,7 +82,6 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                             alt="Ángel Ruiz mago ilusionista profesional Madrid - logo" 
                             width={38} 
                             height={38} 
-                            priority
                             className="w-9 h-9 sm:w-10 sm:h-10 object-contain rounded-full border border-white/10 shadow-[0_0_15px_rgba(212,168,83,0.15)]"
                         />
                     </Link>

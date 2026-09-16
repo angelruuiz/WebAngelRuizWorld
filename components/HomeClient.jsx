@@ -25,8 +25,8 @@ const HeroClient = ({ onOpenModal, onOpenVideo }) => {
                         loading="eager"
                         fetchPriority="high"
                         decoding="sync"
-                        width={900}
-                        height={1350}
+                        width={640}
+                        height={960}
                     />
                 </picture>
                 {/* Gradiente superior para proteger el Navbar */}
@@ -137,15 +137,10 @@ export default function HomeClient({ seoContent }) {
                     </div>
                 </section>
                 
-                {/* Scroll Reveal Wrapper para el contenido SEO */}
-                <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
-                >
+                {/* Contenido SEO directo sin retraso de opacidad */}
+                <div className="w-full">
                     {seoContent}
-                </motion.div>
+                </div>
             </main>
 
             <Footer onOpenContact={() => setIsContactOpen(true)} />
