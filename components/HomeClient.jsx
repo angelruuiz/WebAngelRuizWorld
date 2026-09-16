@@ -73,11 +73,8 @@ const HeroClient = ({ onOpenModal, onOpenVideo }) => {
                             <button
                                 type="button"
                                 onClick={onOpenVideo}
-                                className="group inline-flex items-center gap-2.5 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-slate-950/80 hover:bg-[#d4a853]/15 border border-[#d4a853]/40 hover:border-[#d4a853] text-[#d4a853] hover:text-white transition-all duration-300 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.5),0_0_15px_rgba(212,168,83,0.1)] active:scale-95 cursor-pointer text-xs sm:text-sm font-semibold tracking-wider uppercase"
+                                className="inline-flex items-center px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-slate-950/80 hover:bg-[#d4a853]/15 border border-[#d4a853]/40 hover:border-[#d4a853] text-[#d4a853] hover:text-white transition-all duration-300 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.5),0_0_15px_rgba(212,168,83,0.1)] active:scale-95 cursor-pointer text-xs sm:text-sm font-semibold tracking-wider uppercase"
                             >
-                                <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#d4a853] text-slate-950 flex items-center justify-center text-[9px] sm:text-[10px] font-bold group-hover:scale-110 transition-transform shadow-md">
-                                    ▶
-                                </span>
                                 <span>Ver Show en Directo <span className="opacity-70 text-[10px] sm:text-xs font-normal normal-case">(1 min)</span></span>
                             </button>
                         </div>
