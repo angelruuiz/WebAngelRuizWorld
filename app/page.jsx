@@ -353,7 +353,6 @@ export default function Home() {
                     ]
                 }) }} 
             />
-            <link rel="preload" as="image" href="/images/hero-angel-ruiz-mobile-2026.webp" type="image/webp" media="(max-width: 767px)" fetchPriority="high" />
             <HomeClient seoContent={<SEOContent />} />
         </>
     );

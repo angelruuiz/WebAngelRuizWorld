@@ -17,16 +17,16 @@ const HeroClient = ({ onOpenModal, onOpenVideo }) => {
         <section className="relative min-h-[100dvh] flex flex-col justify-end lg:justify-center overflow-hidden z-10 pt-20 pb-28 sm:pb-32 lg:py-0">
             <div className="absolute inset-0 z-0 overflow-hidden">
                 <picture>
-                    <source media="(min-width: 768px)" srcSet="/images/hero-angel-ruiz-2026.webp" />
+                    <source media="(min-width: 768px)" srcSet="/images/hero-angel-ruiz-2026.webp" width={2560} height={1440} />
                     <img 
                         src="/images/hero-angel-ruiz-mobile-2026.webp" 
                         alt="Ángel Ruiz, mago e ilusionista profesional en Madrid" 
                         className="w-full h-full object-cover object-[25%_top] md:object-[center_right] lg:object-right" 
                         loading="eager"
                         fetchPriority="high"
-                        decoding="async"
-                        width={1920}
-                        height={1080}
+                        decoding="sync"
+                        width={900}
+                        height={1350}
                     />
                 </picture>
                 {/* Gradiente superior para proteger el Navbar */}

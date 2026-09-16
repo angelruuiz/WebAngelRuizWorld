@@ -94,7 +94,7 @@ export default function CookieBanner() {
     return (
         <AnimatePresence>
             {isVisible && (
-                <motion.aside
+                <motion.div
                     role="dialog"
                     aria-modal="false"
                     aria-labelledby="cookie-title"
@@ -249,7 +249,7 @@ export default function CookieBanner() {
                             </div>
                         </div>
                     </div>
-                </motion.aside>
+                </motion.div>
             )}
         </AnimatePresence>
     );
