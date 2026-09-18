@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { getLocalMetrics, trackEvent } from '../../lib/tracker';
+import { calculateMetricsForTimeframe, trackEvent } from '../../lib/tracker';
 
 export default function AnalyticsPanel() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -19,14 +19,14 @@ export default function AnalyticsPanel() {
     const [telegramStatus, setTelegramStatus] = useState({ tested: false, message: '', loading: false });
     const [toast, setToast] = useState(null);
 
+    // Cargar autenticación y métricas del periodo actual
     useEffect(() => {
         const auth = sessionStorage.getItem('ar_panel_auth');
         if (auth === 'true') {
             setIsAuthenticated(true);
         }
-        const data = getLocalMetrics();
-        setMetrics(data);
-    }, []);
+        setMetrics(calculateMetricsForTimeframe(timeframe));
+    }, [timeframe]);
 
     const showToast = (msg, type = 'success') => {
         setToast({ msg, type });
@@ -60,6 +60,13 @@ export default function AnalyticsPanel() {
         sessionStorage.removeItem('ar_panel_auth');
         setPassword("");
         showToast('Sesión cerrada.');
+    };
+
+    const handleTimeframeChange = (newTf) => {
+        setTimeframe(newTf);
+        const updated = calculateMetricsForTimeframe(newTf);
+        setMetrics(updated);
+        showToast(`Cambiado a vista: ${newTf === '7d' ? 'Últimos 7 días' : (newTf === '30d' ? 'Últimos 30 días' : 'Histórico Total')}`);
     };
 
     const handleAuditPSI = async () => {
@@ -105,15 +112,15 @@ export default function AnalyticsPanel() {
 
     const handleSimulateAction = (type, customData = {}) => {
         trackEvent(type, customData);
-        setMetrics(getLocalMetrics());
+        setMetrics(calculateMetricsForTimeframe(timeframe));
         showToast(`Evento registrado: ${type}`);
     };
 
     const handleResetMetrics = () => {
-        if (window.confirm('¿Deseas reiniciar los contadores locales a cero?')) {
-            localStorage.removeItem('ar_analytics_data_v2');
-            setMetrics(getLocalMetrics());
-            showToast('Contadores reiniciados a 0');
+        if (window.confirm('¿Deseas reiniciar el registro de eventos locales a cero?')) {
+            localStorage.removeItem('ar_raw_events_v2');
+            setMetrics(calculateMetricsForTimeframe(timeframe));
+            showToast('Eventos locales reiniciados');
         }
     };
 
@@ -253,12 +260,37 @@ export default function AnalyticsPanel() {
                             <span>Métricas de</span>
                             <span className="text-amber-400 underline decoration-amber-500/50">angelruiz.world</span>
                         </h1>
-                        <p className="text-xs text-slate-400 mt-0.5 font-light">
-                            Medición de conversiones, formularios, llamadas directas y rendimiento técnico.
+                        <p className="text-xs text-slate-400 mt-0.5 font-light flex items-center gap-1.5">
+                            <span>Rango activo:</span>
+                            <strong className="text-amber-300 font-mono">{metrics.rangeLabel}</strong>
+                            <span className="text-slate-600">·</span>
+                            <span>{metrics.totalEventsInPeriod} eventos registrados</span>
                         </p>
                     </div>
 
                     <div className="flex flex-wrap items-center gap-2">
+                        {/* Selector de Periodo Dinámico */}
+                        <div className="flex items-center bg-slate-950 p-1 rounded-xl border border-white/10 text-xs">
+                            <button 
+                                onClick={() => handleTimeframeChange('7d')}
+                                className={`px-3 py-1 rounded-lg transition-all ${timeframe === '7d' ? 'bg-amber-500 text-slate-950 font-bold shadow' : 'text-slate-400 hover:text-white'}`}
+                            >
+                                7 Días
+                            </button>
+                            <button 
+                                onClick={() => handleTimeframeChange('30d')}
+                                className={`px-3 py-1 rounded-lg transition-all ${timeframe === '30d' ? 'bg-amber-500 text-slate-950 font-bold shadow' : 'text-slate-400 hover:text-white'}`}
+                            >
+                                30 Días
+                            </button>
+                            <button 
+                                onClick={() => handleTimeframeChange('all')}
+                                className={`px-3 py-1 rounded-lg transition-all ${timeframe === 'all' ? 'bg-amber-500 text-slate-950 font-bold shadow' : 'text-slate-400 hover:text-white'}`}
+                            >
+                                Todo
+                            </button>
+                        </div>
+
                         {/* Audit PSI Button */}
                         <button
                             onClick={handleAuditPSI}
@@ -269,7 +301,7 @@ export default function AnalyticsPanel() {
                             <span>{isAuditingPSI ? 'Auditando...' : 'Auditar Google en Vivo'}</span>
                         </button>
 
-                        {/* Test Telegram Modal Button */}
+                        {/* Test Telegram Button */}
                         <button
                             onClick={handleTestTelegram}
                             className="px-3.5 py-1.5 rounded-xl bg-sky-500/10 hover:bg-sky-500/20 border border-sky-500/30 text-sky-400 text-xs font-semibold flex items-center gap-1.5 transition-colors"
@@ -282,7 +314,7 @@ export default function AnalyticsPanel() {
                         <button
                             onClick={handleResetMetrics}
                             className="px-2.5 py-1.5 rounded-xl border border-white/10 hover:bg-white/5 text-slate-400 hover:text-white text-xs transition-colors"
-                            title="Reiniciar contadores"
+                            title="Reiniciar eventos locales"
                         >
                             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
                         </button>
@@ -324,7 +356,7 @@ export default function AnalyticsPanel() {
                         {/* Card 1: Formularios de contratación */}
                         <div className="p-5 rounded-2xl bg-slate-900/60 border border-white/10 hover:border-amber-500/30 transition-all backdrop-blur-md relative overflow-hidden group">
                             <div className="absolute top-0 right-0 w-24 h-24 bg-amber-500/5 rounded-full blur-2xl pointer-events-none group-hover:bg-amber-500/10 transition-colors"></div>
-                            <span className="text-xs text-slate-400 font-medium block">Formularios de contratación</span>
+                            <span className="text-xs text-slate-400 font-medium block">Formularios en periodo</span>
                             <div className="text-4xl font-extrabold text-white font-[Cinzel] my-2">
                                 {metrics.contacts.total}
                             </div>
@@ -374,7 +406,7 @@ export default function AnalyticsPanel() {
                             </div>
                             <div className="pt-2 border-t border-white/5">
                                 <span className="text-slate-400 text-xs block">Contactos / Visitas</span>
-                                <span className="text-slate-500 text-[11px] block mt-0.5">Calculado automáticamente</span>
+                                <span className="text-slate-500 text-[11px] block mt-0.5">Calculado en el periodo</span>
                             </div>
                         </div>
                     </div>
@@ -397,7 +429,7 @@ export default function AnalyticsPanel() {
                         {/* Canales de Adquisición */}
                         <div className="lg:col-span-6 p-6 rounded-2xl bg-slate-900/60 border border-white/10 backdrop-blur-md space-y-4">
                             <h3 className="text-xs font-bold uppercase tracking-wider text-slate-300">
-                                Canales de Adquisición
+                                Canales de Adquisición en el Periodo
                             </h3>
                             <div className="space-y-4">
                                 {metrics.acquisitionChannels.map((channel, idx) => (
@@ -539,7 +571,7 @@ export default function AnalyticsPanel() {
                 <section className="p-6 rounded-2xl bg-slate-900/40 border border-white/10 backdrop-blur-md space-y-4">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                         <h3 className="text-sm font-bold uppercase tracking-wider text-slate-200 flex items-center gap-2">
-                            <span>Solicitudes de Contacto Registradas</span>
+                            <span>Solicitudes de Contacto en el Periodo ({metrics.recentLeads.length})</span>
                             <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300">En Vivo</span>
                         </h3>
                     </div>
@@ -561,9 +593,9 @@ export default function AnalyticsPanel() {
                         </div>
                     ) : (
                         <div className="text-center py-8 text-slate-500 text-xs font-light border border-dashed border-white/10 rounded-xl">
-                            <p>No hay solicitudes registradas todavía.</p>
+                            <p>No hay solicitudes registradas en este periodo ({metrics.rangeLabel}).</p>
                             <p className="text-[11px] text-slate-600 mt-1">
-                                Cada vez que un usuario rellene el formulario de tu web, aparecerá aquí en tiempo real.
+                                Las nuevas solicitudes recibidas aparecerán aquí automáticamente asociadas a su fecha.
                             </p>
                         </div>
                     )}
