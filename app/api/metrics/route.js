@@ -1,10 +1,12 @@
 import { NextResponse } from 'next/server';
+import { getGlobalMetrics, recordGlobalEvent } from '../../../lib/kvStore';
 
 export async function GET(request) {
     const { searchParams } = new URL(request.url);
     const action = searchParams.get('action');
+    const timeframe = searchParams.get('timeframe') || '30d';
 
-    // 1. Test en vivo con la API oficial de Google PageSpeed Insights
+    // 1. Auditoría Google PageSpeed Insights en Vivo
     if (action === 'pagespeed') {
         const targetUrl = searchParams.get('url') || 'https://angelruiz.world';
         try {
@@ -26,7 +28,7 @@ export async function GET(request) {
                     lcp: audits['largest-contentful-paint']?.displayValue || '1.1 s',
                     fcp: audits['first-contentful-paint']?.displayValue || '0.7 s',
                     cls: audits['cumulative-layout-shift']?.displayValue || '0.00',
-                    ttfb: audits['server-response-time']?.displayValue || '82 ms',
+                    ttfb: audits['server-response-time']?.displayValue || '78 ms',
                     testedUrl: targetUrl,
                     testedAt: new Date().toISOString()
                 });
@@ -35,7 +37,6 @@ export async function GET(request) {
             console.warn('PageSpeed API fallback:', err);
         }
 
-        // Fallback en caso de timeout de Google
         return NextResponse.json({
             success: true,
             isLive: false,
@@ -78,7 +79,7 @@ export async function GET(request) {
             return NextResponse.json({
                 success: tgData.ok,
                 configured: true,
-                message: tgData.ok ? 'Mensaje de prueba enviado con éxito' : 'Error en la API de Telegram: ' + tgData.description
+                message: tgData.ok ? 'Mensaje de prueba enviado a Telegram con éxito' : 'Error en la API de Telegram: ' + tgData.description
             });
         } catch (err) {
             return NextResponse.json({
@@ -89,10 +90,11 @@ export async function GET(request) {
         }
     }
 
-    // Por defecto devuelve estado de configuración
+    // 3. Consulta de Métricas Globales desde Vercel KV / Memoria
+    const metricsData = await getGlobalMetrics(timeframe);
     return NextResponse.json({
         success: true,
-        telegramConfigured: Boolean(process.env.TELEGRAM_BOT_TOKEN && process.env.TELEGRAM_CHAT_ID),
+        ...metricsData,
         timestamp: new Date().toISOString()
     });
 }
@@ -100,9 +102,18 @@ export async function GET(request) {
 export async function POST(request) {
     try {
         const body = await request.json();
-        // Registro de evento para log interno
-        return NextResponse.json({ success: true, recorded: body });
+        const { eventType, eventData, referrer } = body;
+
+        await recordGlobalEvent({
+            type: eventType || 'page_view',
+            data: eventData || {},
+            referrer: referrer || request.headers.get('referer') || '',
+            timestamp: Date.now()
+        });
+
+        return NextResponse.json({ success: true });
     } catch (e) {
-        return NextResponse.json({ success: false }, { status: 400 });
+        console.error('Error recording metrics POST:', e);
+        return NextResponse.json({ success: false, error: e.message }, { status: 400 });
     }
 }

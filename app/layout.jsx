@@ -1,6 +1,7 @@
 import './globals.css';
 import { Analytics } from '@vercel/analytics/react';
 import Script from 'next/script';
+import PageViewTracker from '../components/PageViewTracker';
 
 export const metadata = {
   metadataBase: new URL('https://angelruiz.world'),
@@ -290,6 +291,7 @@ export default function RootLayout({ children }) {
         <CookieBanner />
         <Analytics />
         <AnalyticsLoader />
+        <PageViewTracker />
       </body>
     </html>
   );
