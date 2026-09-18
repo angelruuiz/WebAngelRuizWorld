@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { getLocalMetrics, trackEvent } from '../../lib/tracker';
 
 export default function AnalyticsPanel() {
@@ -24,7 +24,8 @@ export default function AnalyticsPanel() {
         if (auth === 'true') {
             setIsAuthenticated(true);
         }
-        setMetrics(getLocalMetrics());
+        const data = getLocalMetrics();
+        setMetrics(data);
     }, []);
 
     const showToast = (msg, type = 'success') => {
@@ -40,7 +41,6 @@ export default function AnalyticsPanel() {
         setErrorMessage("");
         setLoginError(false);
 
-        // Clave solicitada: 888888
         if (password.trim() === '888888') {
             setIsAuthenticated(true);
             sessionStorage.setItem('ar_panel_auth', 'true');
@@ -64,16 +64,16 @@ export default function AnalyticsPanel() {
 
     const handleAuditPSI = async () => {
         setIsAuditingPSI(true);
-        showToast('Consultando API oficial de Google PageSpeed Insights...', 'info');
+        showToast('Consultando API de Google PageSpeed en tiempo real...', 'info');
         try {
             const res = await fetch('/api/metrics?action=pagespeed&url=https://angelruiz.world');
             const data = await res.json();
             if (data.success) {
                 setPsiResult(data);
-                showToast('¡Auditoría de Google completada con éxito!');
+                showToast('¡Auditoría de Google completada!');
             }
         } catch (e) {
-            showToast('Error consultando Google PSI, usando última lectura', 'error');
+            showToast('No se pudo completar el test con Google PSI', 'error');
         } finally {
             setIsAuditingPSI(false);
         }
@@ -109,6 +109,14 @@ export default function AnalyticsPanel() {
         showToast(`Evento registrado: ${type}`);
     };
 
+    const handleResetMetrics = () => {
+        if (window.confirm('¿Deseas reiniciar los contadores locales a cero?')) {
+            localStorage.removeItem('ar_analytics_data_v2');
+            setMetrics(getLocalMetrics());
+            showToast('Contadores reiniciados a 0');
+        }
+    };
+
     // =========================================================================
     // VISTA DE ACCESO CON CONTRASEÑA (PIN 888888)
     // =========================================================================
@@ -121,7 +129,6 @@ export default function AnalyticsPanel() {
                     transition={{ duration: 0.4 }}
                     className="w-full max-w-md bg-slate-900/60 backdrop-blur-2xl p-8 sm:p-10 rounded-3xl border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.6),inset_0_1px_0_0_rgba(255,255,255,0.15)] relative overflow-hidden"
                 >
-                    {/* Ambient Glow */}
                     <div className="absolute -top-20 -right-20 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
 
                     <div className="text-center mb-8">
@@ -185,15 +192,12 @@ export default function AnalyticsPanel() {
         );
     }
 
-    // =========================================================================
-    // VISTA PRINCIPAL DEL PANEL AUTENTICADO
-    // =========================================================================
     if (!metrics) {
         return (
             <div className="min-h-screen bg-[#030712] flex items-center justify-center text-amber-400 font-mono text-sm">
                 <div className="flex items-center gap-3">
                     <div className="w-5 h-5 border-2 border-amber-400 border-t-transparent rounded-full animate-spin"></div>
-                    <span>Cargando Métricas de angelruiz.world...</span>
+                    <span>Cargando Métricas Reales...</span>
                 </div>
             </div>
         );
@@ -203,7 +207,7 @@ export default function AnalyticsPanel() {
 
     return (
         <div className="min-h-screen bg-[#030712] text-slate-100 font-sans selection:bg-amber-500/30 selection:text-amber-200 pb-20">
-            {/* Top Navigation & Brand Header */}
+            {/* Header */}
             <header className="border-b border-white/10 bg-slate-950/80 backdrop-blur-xl sticky top-0 z-40">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
                     <div className="flex items-center gap-3">
@@ -216,17 +220,16 @@ export default function AnalyticsPanel() {
                                     ANGEL RUIZ
                                 </span>
                                 <span className="text-[10px] text-slate-400 uppercase font-mono tracking-wider block">
-                                    Panel de Rendimiento & Crecimiento
+                                    Panel de Métricas Reales
                                 </span>
                             </div>
                         </Link>
                     </div>
 
-                    {/* Status & Actions */}
                     <div className="flex items-center gap-3">
                         <div className="hidden sm:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono">
                             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                            <span>SISTEMA ONLINE · MEDICIÓN EN VIVO</span>
+                            <span>MONITORIZACIÓN ACTIVA</span>
                         </div>
                         <button 
                             onClick={handleLogout}
@@ -240,44 +243,22 @@ export default function AnalyticsPanel() {
                 </div>
             </header>
 
-            {/* Main Content Dashboard */}
+            {/* Dashboard Content */}
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 space-y-8">
                 
                 {/* Control Bar */}
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-900/40 p-4 rounded-2xl border border-white/10 backdrop-blur-md">
                     <div>
                         <h1 className="text-xl sm:text-2xl font-bold text-white font-[Cinzel] flex items-center gap-2">
-                            <span>Métricas Clave de</span>
+                            <span>Métricas de</span>
                             <span className="text-amber-400 underline decoration-amber-500/50">angelruiz.world</span>
                         </h1>
                         <p className="text-xs text-slate-400 mt-0.5 font-light">
-                            Datos consolidados de captación, inteligencia SEO, motores de IA y auditoría Core Web Vitals.
+                            Medición de conversiones, formularios, llamadas directas y rendimiento técnico.
                         </p>
                     </div>
 
                     <div className="flex flex-wrap items-center gap-2">
-                        {/* Timeframe Selector */}
-                        <div className="flex items-center bg-slate-950 p-1 rounded-xl border border-white/10 text-xs">
-                            <button 
-                                onClick={() => setTimeframe('7d')}
-                                className={`px-3 py-1 rounded-lg transition-all ${timeframe === '7d' ? 'bg-amber-500 text-slate-950 font-bold' : 'text-slate-400 hover:text-white'}`}
-                            >
-                                7 Días
-                            </button>
-                            <button 
-                                onClick={() => setTimeframe('30d')}
-                                className={`px-3 py-1 rounded-lg transition-all ${timeframe === '30d' ? 'bg-amber-500 text-slate-950 font-bold' : 'text-slate-400 hover:text-white'}`}
-                            >
-                                30 Días
-                            </button>
-                            <button 
-                                onClick={() => setTimeframe('all')}
-                                className={`px-3 py-1 rounded-lg transition-all ${timeframe === 'all' ? 'bg-amber-500 text-slate-950 font-bold' : 'text-slate-400 hover:text-white'}`}
-                            >
-                                Todo
-                            </button>
-                        </div>
-
                         {/* Audit PSI Button */}
                         <button
                             onClick={handleAuditPSI}
@@ -285,7 +266,7 @@ export default function AnalyticsPanel() {
                             className="px-3.5 py-1.5 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-amber-300 text-xs font-semibold flex items-center gap-2 transition-colors disabled:opacity-50"
                         >
                             <svg className={`w-3.5 h-3.5 ${isAuditingPSI ? 'animate-spin' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
-                            <span>{isAuditingPSI ? 'Auditando...' : 'Re-auditar Google en Vivo'}</span>
+                            <span>{isAuditingPSI ? 'Auditando...' : 'Auditar Google en Vivo'}</span>
                         </button>
 
                         {/* Test Telegram Modal Button */}
@@ -296,10 +277,19 @@ export default function AnalyticsPanel() {
                             <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.05-.19-.02-.27 0-.12.03-1.99 1.27-5.62 3.72-.53.36-1.01.54-1.44.53-.47-.01-1.38-.27-2.06-.49-.83-.27-1.49-.42-1.43-.88.03-.24.38-.49 1.04-.75 4.09-1.78 6.82-2.95 8.19-3.52 3.9-1.63 4.71-1.91 5.24-1.92.12 0 .37.03.54.17.14.12.18.28.2.45-.02.07-.02.18-.04.31z"/></svg>
                             <span>Probar Bot Telegram</span>
                         </button>
+
+                        {/* Reset Local Data Button */}
+                        <button
+                            onClick={handleResetMetrics}
+                            className="px-2.5 py-1.5 rounded-xl border border-white/10 hover:bg-white/5 text-slate-400 hover:text-white text-xs transition-colors"
+                            title="Reiniciar contadores"
+                        >
+                            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+                        </button>
                     </div>
                 </div>
 
-                {/* Telegram Config Notice if applicable */}
+                {/* Telegram Config Notice */}
                 {telegramStatus.tested && (
                     <div className={`p-4 rounded-2xl border text-xs flex items-center justify-between gap-4 ${telegramStatus.configured ? 'bg-emerald-950/40 border-emerald-500/30 text-emerald-300' : 'bg-amber-950/40 border-amber-500/30 text-amber-300'}`}>
                         <div className="flex items-center gap-3">
@@ -308,7 +298,7 @@ export default function AnalyticsPanel() {
                                 <p className="font-semibold">{telegramStatus.message}</p>
                                 {!telegramStatus.configured && (
                                     <p className="text-[11px] text-slate-400 mt-0.5">
-                                        Para recibir las alertas en tu Telegram, añade tus credenciales en el archivo <code className="text-amber-400 bg-black/40 px-1.5 py-0.5 rounded">.env.local</code>: <code>TELEGRAM_BOT_TOKEN</code> y <code>TELEGRAM_CHAT_ID</code>.
+                                        Para recibir las alertas en tu Telegram, añade tus credenciales en <code className="text-amber-400 bg-black/40 px-1.5 py-0.5 rounded">.env.local</code>: <code>TELEGRAM_BOT_TOKEN</code> y <code>TELEGRAM_CHAT_ID</code>.
                                     </p>
                                 )}
                             </div>
@@ -328,9 +318,6 @@ export default function AnalyticsPanel() {
                                 1. Captación de Clientes & Contactos Generados
                             </h2>
                         </div>
-                        <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
-                            {metrics.contacts.previousMonthDiff} vs mes previo
-                        </span>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -360,8 +347,8 @@ export default function AnalyticsPanel() {
                                 {metrics.whatsappClicks}
                             </div>
                             <div className="pt-2 border-t border-white/5">
-                                <span className="text-emerald-400 text-xs font-semibold block">Respuesta instantánea</span>
-                                <span className="text-slate-500 text-[11px] block mt-0.5">Automatización activa</span>
+                                <span className="text-emerald-400 text-xs font-semibold block">Medición activa</span>
+                                <span className="text-slate-500 text-[11px] block mt-0.5">Disparado al pulsar enlace</span>
                             </div>
                         </div>
 
@@ -374,20 +361,20 @@ export default function AnalyticsPanel() {
                             </div>
                             <div className="pt-2 border-t border-white/5">
                                 <span className="text-slate-300 text-xs font-semibold block">Marcadas desde móvil</span>
-                                <span className="text-slate-500 text-[11px] block mt-0.5">Horario pico: 18h - 21h</span>
+                                <span className="text-slate-500 text-[11px] block mt-0.5">Disparado con enlace tel:</span>
                             </div>
                         </div>
 
                         {/* Card 4: Tasa de conversión web */}
                         <div className="p-5 rounded-2xl bg-slate-900/60 border border-white/10 hover:border-amber-500/30 transition-all backdrop-blur-md relative overflow-hidden group">
                             <div className="absolute top-0 right-0 w-24 h-24 bg-amber-500/5 rounded-full blur-2xl pointer-events-none group-hover:bg-amber-500/10 transition-colors"></div>
-                            <span className="text-xs text-slate-400 font-medium block">Tasa de conversión web</span>
+                            <span className="text-xs text-slate-400 font-medium block">Tasa de conversión</span>
                             <div className="text-4xl font-extrabold text-amber-400 font-[Cinzel] my-2">
                                 {metrics.conversionRate}
                             </div>
                             <div className="pt-2 border-t border-white/5">
-                                <span className="text-slate-400 text-xs block">Media del sector: <span className="text-slate-200">{metrics.sectorAverage}</span></span>
-                                <span className="text-emerald-400 text-[11px] font-semibold block mt-0.5">Web de alto impacto</span>
+                                <span className="text-slate-400 text-xs block">Contactos / Visitas</span>
+                                <span className="text-slate-500 text-[11px] block mt-0.5">Calculado automáticamente</span>
                             </div>
                         </div>
                     </div>
@@ -404,9 +391,6 @@ export default function AnalyticsPanel() {
                                 2. Procedencia de Visitantes & Motores de IA
                             </h2>
                         </div>
-                        <span className="text-xs font-mono text-slate-400">
-                            Total: <strong className="text-white">{metrics.totalVisits.toLocaleString('es-ES')}</strong> visitas
-                        </span>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
@@ -431,7 +415,7 @@ export default function AnalyticsPanel() {
                                         <div className="h-2 w-full bg-slate-950 rounded-full overflow-hidden border border-white/5">
                                             <div 
                                                 className="h-full rounded-full transition-all duration-700" 
-                                                style={{ width: `${channel.percentage}%`, backgroundColor: channel.color }}
+                                                style={{ width: `${Math.max(channel.percentage, 0)}%`, backgroundColor: channel.color }}
                                             ></div>
                                         </div>
                                     </div>
@@ -439,10 +423,10 @@ export default function AnalyticsPanel() {
                             </div>
                         </div>
 
-                        {/* Términos Clave Posicionados en IA & Google */}
+                        {/* Términos Clave de Posicionamiento */}
                         <div className="lg:col-span-6 p-6 rounded-2xl bg-slate-900/60 border border-white/10 backdrop-blur-md space-y-3">
                             <h3 className="text-xs font-bold uppercase tracking-wider text-slate-300">
-                                Términos Clave Posicionados en IA & Google
+                                Palabras Clave Principales en Seguimiento
                             </h3>
                             <div className="space-y-2.5">
                                 {metrics.keywords.map((kw, idx) => (
@@ -450,8 +434,8 @@ export default function AnalyticsPanel() {
                                         key={idx}
                                         className={`flex items-center justify-between p-3 rounded-xl border transition-all text-xs ${
                                             kw.isAI 
-                                                ? 'bg-purple-950/30 border-purple-500/30 hover:border-purple-500/60' 
-                                                : 'bg-slate-950/60 border-white/5 hover:border-white/15'
+                                                ? 'bg-purple-950/30 border-purple-500/30' 
+                                                : 'bg-slate-950/60 border-white/5'
                                         }`}
                                     >
                                         <div className="flex items-center gap-2.5">
@@ -463,9 +447,9 @@ export default function AnalyticsPanel() {
                                         <span className={`px-2.5 py-1 rounded-lg font-mono text-[11px] font-semibold ${
                                             kw.isAI 
                                                 ? 'bg-purple-500/20 text-purple-300 border border-purple-500/30' 
-                                                : 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20'
+                                                : 'bg-slate-800 text-slate-300 border border-white/10'
                                         }`}>
-                                            {kw.position}
+                                            {kw.status}
                                         </span>
                                     </div>
                                 ))}
@@ -475,19 +459,21 @@ export default function AnalyticsPanel() {
                 </section>
 
                 {/* ========================================================================= */}
-                {/* 3. RENDIMIENTO TÉCNICO & CORE WEB VITALS (MEDICIÓN 24/7) */}
+                {/* 3. RENDIMIENTO TÉCNICO & CORE WEB VITALS */}
                 {/* ========================================================================= */}
                 <section className="space-y-4">
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2.5">
                             <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.6)]"></span>
                             <h2 className="text-base sm:text-lg font-bold uppercase tracking-wider text-slate-200">
-                                3. Rendimiento Técnico & Core Web Vitals (Medición 24/7)
+                                3. Rendimiento Técnico & Core Web Vitals
                             </h2>
                         </div>
-                        <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
-                            100% Verde en Google Lighthouse
-                        </span>
+                        {psiResult && (
+                            <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+                                Auditado en Vivo con Google PSI
+                            </span>
+                        )}
                     </div>
 
                     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
@@ -495,18 +481,18 @@ export default function AnalyticsPanel() {
                         <div className="p-4 rounded-2xl bg-slate-900/60 border border-white/10 text-center">
                             <span className="text-[11px] text-slate-400 uppercase font-mono block mb-1">Rendimiento</span>
                             <div className="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">
-                                {vitals.performanceScore}/100
+                                {vitals.performanceScore !== null ? `${vitals.performanceScore}/100` : '--'}
                             </div>
-                            <span className="text-[10px] text-emerald-400/80 mt-1 block">Google PageSpeed</span>
+                            <span className="text-[10px] text-slate-400 mt-1 block">Google PageSpeed</span>
                         </div>
 
                         {/* SEO Score */}
                         <div className="p-4 rounded-2xl bg-slate-900/60 border border-white/10 text-center">
                             <span className="text-[11px] text-slate-400 uppercase font-mono block mb-1">SEO Técnico</span>
                             <div className="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">
-                                {vitals.seoScore}/100
+                                {vitals.seoScore !== null ? `${vitals.seoScore}/100` : '--'}
                             </div>
-                            <span className="text-[10px] text-emerald-400/80 mt-1 block">Auditoría 100%</span>
+                            <span className="text-[10px] text-slate-400 mt-1 block">Google Lighthouse</span>
                         </div>
 
                         {/* LCP */}
@@ -515,7 +501,7 @@ export default function AnalyticsPanel() {
                             <div className="text-2xl sm:text-3xl font-extrabold text-white font-mono">
                                 {vitals.lcp}
                             </div>
-                            <span className="text-[10px] text-emerald-400 mt-1 block">Excelente (&lt; 2.5s)</span>
+                            <span className="text-[10px] text-slate-400 mt-1 block">Medición móvil</span>
                         </div>
 
                         {/* FCP */}
@@ -524,7 +510,7 @@ export default function AnalyticsPanel() {
                             <div className="text-2xl sm:text-3xl font-extrabold text-white font-mono">
                                 {vitals.fcp}
                             </div>
-                            <span className="text-[10px] text-emerald-400 mt-1 block">Instantáneo</span>
+                            <span className="text-[10px] text-slate-400 mt-1 block">Primer render</span>
                         </div>
 
                         {/* CLS */}
@@ -533,7 +519,7 @@ export default function AnalyticsPanel() {
                             <div className="text-2xl sm:text-3xl font-extrabold text-white font-mono">
                                 {vitals.cls}
                             </div>
-                            <span className="text-[10px] text-emerald-400 mt-1 block">Sin saltos visuales</span>
+                            <span className="text-[10px] text-slate-400 mt-1 block">Desplazamiento visual</span>
                         </div>
 
                         {/* Uptime */}
@@ -542,84 +528,50 @@ export default function AnalyticsPanel() {
                             <div className="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">
                                 {vitals.uptime}
                             </div>
-                            <span className="text-[10px] text-slate-400 mt-1 block">TTFB: {vitals.ttfb}</span>
+                            <span className="text-[10px] text-slate-400 mt-1 block">Servidor Vercel</span>
                         </div>
                     </div>
                 </section>
 
                 {/* ========================================================================= */}
-                {/* 4. SIMULADOR INTERACTIVO & REGISTRO DE LEADS */}
+                {/* 4. SOLICITUDES DE CONTACTO REGISTRADAS */}
                 {/* ========================================================================= */}
                 <section className="p-6 rounded-2xl bg-slate-900/40 border border-white/10 backdrop-blur-md space-y-4">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                        <div>
-                            <h3 className="text-sm font-bold uppercase tracking-wider text-slate-200 flex items-center gap-2">
-                                <span>Simulador de Eventos en Tiempo Real</span>
-                                <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/20 text-amber-300">Modo Demo</span>
-                            </h3>
-                            <p className="text-xs text-slate-400 mt-0.5">
-                                Pulsa para comprobar cómo reaccionan las métricas y los contadores en vivo al interactuar con la web:
-                            </p>
-                        </div>
+                        <h3 className="text-sm font-bold uppercase tracking-wider text-slate-200 flex items-center gap-2">
+                            <span>Solicitudes de Contacto Registradas</span>
+                            <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300">En Vivo</span>
+                        </h3>
                     </div>
 
-                    <div className="flex flex-wrap gap-2.5">
-                        <button
-                            onClick={() => handleSimulateAction('whatsapp_click')}
-                            className="px-4 py-2 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 text-xs font-semibold transition-all flex items-center gap-2 active:scale-95"
-                        >
-                            <span>+1 Clic en WhatsApp</span>
-                        </button>
-
-                        <button
-                            onClick={() => handleSimulateAction('phone_call')}
-                            className="px-4 py-2 rounded-xl bg-sky-500/10 hover:bg-sky-500/20 border border-sky-500/30 text-sky-400 text-xs font-semibold transition-all flex items-center gap-2 active:scale-95"
-                        >
-                            <span>+1 Clic en Llamada</span>
-                        </button>
-
-                        <button
-                            onClick={() => handleSimulateAction('form_submit', { name: 'Cliente Boda Demo', eventType: 'Boda' })}
-                            className="px-4 py-2 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-amber-400 text-xs font-semibold transition-all flex items-center gap-2 active:scale-95"
-                        >
-                            <span>+1 Presupuesto (Boda)</span>
-                        </button>
-
-                        <button
-                            onClick={() => handleSimulateAction('form_submit', { name: 'Empresa Demo Event', eventType: 'Corporativo' })}
-                            className="px-4 py-2 rounded-xl bg-purple-500/10 hover:bg-purple-500/20 border border-purple-500/30 text-purple-400 text-xs font-semibold transition-all flex items-center gap-2 active:scale-95"
-                        >
-                            <span>+1 Presupuesto (Empresas)</span>
-                        </button>
-                    </div>
-
-                    {/* Leads Recientes */}
-                    {metrics.recentLeads && metrics.recentLeads.length > 0 && (
-                        <div className="pt-4 border-t border-white/10">
-                            <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
-                                Historial de Solicitudes Recientes
-                            </h4>
-                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-                                {metrics.recentLeads.map((lead) => (
-                                    <div key={lead.id} className="p-3 rounded-xl bg-slate-950 border border-white/5 text-xs">
-                                        <div className="flex items-center justify-between font-semibold text-slate-200">
-                                            <span>{lead.name}</span>
-                                            <span className="text-[10px] text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded-full">{lead.status}</span>
-                                        </div>
-                                        <div className="flex items-center justify-between text-[11px] text-slate-500 mt-1">
-                                            <span>{lead.type}</span>
-                                            <span>{lead.date}</span>
-                                        </div>
+                    {metrics.recentLeads && metrics.recentLeads.length > 0 ? (
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                            {metrics.recentLeads.map((lead) => (
+                                <div key={lead.id} className="p-3.5 rounded-xl bg-slate-950 border border-white/5 text-xs">
+                                    <div className="flex items-center justify-between font-semibold text-slate-200">
+                                        <span>{lead.name}</span>
+                                        <span className="text-[10px] text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded-full">{lead.status}</span>
                                     </div>
-                                ))}
-                            </div>
+                                    <div className="flex items-center justify-between text-[11px] text-slate-500 mt-1.5">
+                                        <span>{lead.type}</span>
+                                        <span>{lead.date}</span>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    ) : (
+                        <div className="text-center py-8 text-slate-500 text-xs font-light border border-dashed border-white/10 rounded-xl">
+                            <p>No hay solicitudes registradas todavía.</p>
+                            <p className="text-[11px] text-slate-600 mt-1">
+                                Cada vez que un usuario rellene el formulario de tu web, aparecerá aquí en tiempo real.
+                            </p>
                         </div>
                     )}
                 </section>
 
             </main>
 
-            {/* Floating Toast Notification */}
+            {/* Floating Toast */}
             {toast && (
                 <div className="fixed bottom-6 right-6 z-50 px-4 py-3 rounded-xl bg-slate-900 border border-amber-500/40 text-amber-300 text-xs shadow-2xl shadow-black/80 flex items-center gap-2 animate-bounce">
                     <span>✨</span>
