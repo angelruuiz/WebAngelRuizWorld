@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, CheckCircle2, UserIcon, Phone, Mail, Calendar, MessageSquare, WhatsApp } from './Icons';
+import { trackEvent } from '../lib/tracker';
 
 export default function CorporateInlineForm({ title = "Solicitar Propuesta para Empresas", subtitle = "Respuesta y presupuesto personalizado en menos de 24h" }) {
     const [status, setStatus] = useState("idle");
@@ -11,8 +12,6 @@ export default function CorporateInlineForm({ title = "Solicitar Propuesta para 
     useEffect(() => {
         setDateMin(new Date().toISOString().split('T')[0]);
     }, []);
-
-    const FORMSPREE_ENDPOINT = "https://formspree.io/f/xeoydngl";
 
     const handlePhoneInput = (e) => {
         e.target.value = e.target.value.replace(/[^0-9]/g, '');
@@ -23,16 +22,26 @@ export default function CorporateInlineForm({ title = "Solicitar Propuesta para 
         e.preventDefault();
         setStatus("submitting");
         const form = e.target;
-        const data = new FormData(form);
-        data.append("_subject", `B2B Corporativo: ${data.get('company') || 'Empresa'} - ${data.get('name')} (${data.get('eventType') || 'Evento'})`);
+        const formData = new FormData(form);
+        
+        const payload = {
+            name: `${formData.get('name')} (${formData.get('company') || 'Empresa'})`,
+            phone: formData.get('phone'),
+            email: formData.get('email'),
+            eventType: formData.get('eventType') || 'Evento Corporativo',
+            date: formData.get('date'),
+            message: formData.get('message'),
+            source: 'Formulario B2B Empresas'
+        };
 
         try {
-            const response = await fetch(FORMSPREE_ENDPOINT, {
+            const response = await fetch('/api/contact', {
                 method: 'POST',
-                body: data,
-                headers: { 'Accept': 'application/json' }
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
             });
             if (response.ok) {
+                trackEvent('form_submit', { name: payload.name, eventType: 'Corporativo' });
                 setStatus("success");
                 form.reset();
             } else {
@@ -257,6 +266,7 @@ export default function CorporateInlineForm({ title = "Solicitar Propuesta para 
                             href="https://wa.me/34648055636?text=Hola%20Ángel%2C%20quisiera%20consultar%20disponibilidad%20para%20un%20evento%20de%20empresa"
                             target="_blank"
                             rel="noopener noreferrer"
+                            onClick={() => trackEvent('whatsapp_click')}
                             className="inline-flex items-center justify-center gap-2 text-[11px] text-emerald-400 hover:text-emerald-300 transition-colors py-1.5 px-3 rounded-full bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/20 font-medium"
                         >
                             <WhatsApp className="w-3.5 h-3.5 fill-current" />
