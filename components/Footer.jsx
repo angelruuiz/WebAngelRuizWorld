@@ -120,17 +120,6 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                         <a href="/aviso-legal" className="hover:text-[#d4a853] transition-colors">Aviso Legal</a>
                         <a href="/privacidad" className="hover:text-[#d4a853] transition-colors">Política de Privacidad</a>
                         <a href="/cookies" className="hover:text-[#d4a853] transition-colors">Política de Cookies</a>
-                        <button
-                            type="button"
-                            onClick={() => {
-                                if (typeof window !== 'undefined') {
-                                    window.dispatchEvent(new CustomEvent('open_cookie_settings'));
-                                }
-                            }}
-                            className="hover:text-[#d4a853] transition-colors underline underline-offset-2"
-                        >
-                            Configurar cookies
-                        </button>
                     </div>
                 </div>
             </div>

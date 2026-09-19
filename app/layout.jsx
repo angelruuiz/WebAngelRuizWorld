@@ -60,9 +60,6 @@ export const viewport = {
 import NewsletterForm from '@/components/NewsletterForm';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import dynamic from 'next/dynamic';
-const NewsletterModal = dynamic(() => import('@/components/NewsletterModal'), { ssr: false });
-const CookieBanner = dynamic(() => import('@/components/CookieBanner'), { ssr: false });
-const AnalyticsLoader = dynamic(() => import('@/components/AnalyticsLoader'), { ssr: false });
 const DeferredStyles = dynamic(() => import('@/components/DeferredStyles'), { ssr: false });
 
 import { Cinzel, Cormorant_Garamond, Outfit } from 'next/font/google';
@@ -287,10 +284,7 @@ export default function RootLayout({ children }) {
         {children}
         <WhatsAppButton />
         <DeferredStyles />
-        <NewsletterModal />
-        <CookieBanner />
         <Analytics />
-        <AnalyticsLoader />
         <PageViewTracker />
       </body>
     </html>

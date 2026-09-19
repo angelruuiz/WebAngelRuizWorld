@@ -1,6 +1,5 @@
 import NavFooterClient from '@/components/NavFooterClient';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
-import CookieSettingsTrigger from '@/components/CookieSettingsTrigger';
 
 export const metadata = {
     title: 'Política de Cookies',
@@ -27,53 +26,15 @@ export default function CookiesPage() {
                     <h2 className="text-xl font-[Cinzel] text-white">1. ¿Qué son las cookies?</h2>
                     <p>Una cookie es un pequeño fichero de texto que se descarga en tu navegador al acceder a determinadas páginas web. Permite a una web, entre otras cosas, recordar tus preferencias, almacenar información sobre tus hábitos de navegación y garantizar el correcto funcionamiento del sitio.</p>
 
-                    <h2 className="text-xl font-[Cinzel] text-white">2. ¿Qué tipos de cookies utiliza este sitio web?</h2>
-                    <p>En <strong>angelruiz.world</strong> utilizamos las siguientes tipologías de cookies:</p>
-                    <ul className="list-disc pl-6 space-y-2">
-                        <li><strong>Cookies técnicas (necesarias):</strong> Son aquellas indispensables para permitir la navegación a través del sitio web y la utilización de sus diferentes opciones o servicios (por ejemplo, recordar la aceptación del aviso de cookies o la seguridad de la sesión).</li>
-                        <li><strong>Cookies analíticas:</strong> Son aquellas que nos permiten cuantificar el número de usuarios y realizar la medición y análisis estadístico de la utilización que hacen los usuarios de la web (Vercel Analytics y Google Analytics con IP anonimizada). Su finalidad es puramente estadística y de mejora del servicio.</li>
-                    </ul>
+                    <h2 className="text-xl font-[Cinzel] text-white">2. Compromiso de navegación sin rastreo (Cookieless)</h2>
+                    <p>En <strong>angelruiz.world</strong> priorizamos tu privacidad y una experiencia de navegación limpia y rápida. Por ello, este sitio web <strong>no utiliza cookies publicitarias, ni cookies de seguimiento de terceros, ni elabora perfiles de usuario</strong>.</p>
+                    <p>La medición de audiencia y rendimiento se realiza de forma totalmente anónima y agregada (sin almacenar identificadores personales ni rastrear entre sitios web), por lo que no se requiere la instalación de cookies de seguimiento en tu dispositivo conforme a las directrices de la AEPD y el RGPD.</p>
 
-                    <h2 className="text-xl font-[Cinzel] text-white">3. Detalle de cookies utilizadas</h2>
-                    <div className="overflow-x-auto my-4">
-                        <table className="min-w-full text-xs text-left border border-white/10">
-                            <thead className="bg-white/5 text-amber-400 uppercase">
-                                <tr>
-                                    <th className="p-3 border-b border-white/10">Cookie</th>
-                                    <th className="p-3 border-b border-white/10">Tipo</th>
-                                    <th className="p-3 border-b border-white/10">Finalidad</th>
-                                    <th className="p-3 border-b border-white/10">Duración</th>
-                                </tr>
-                            </thead>
-                            <tbody className="divide-y divide-white/5 text-slate-300">
-                                <tr>
-                                    <td className="p-3 font-mono">cookie_consent</td>
-                                    <td className="p-3">Técnica</td>
-                                    <td className="p-3">Recuerda la preferencia del usuario sobre cookies</td>
-                                    <td className="p-3">1 año</td>
-                                </tr>
-                                <tr>
-                                    <td className="p-3 font-mono">_va_*</td>
-                                    <td className="p-3">Analítica</td>
-                                    <td className="p-3">Vercel Analytics: rendimiento anónimo de carga</td>
-                                    <td className="p-3">Sesión</td>
-                                </tr>
-                                <tr>
-                                    <td className="p-3 font-mono">_ga, _ga_*</td>
-                                    <td className="p-3">Analítica</td>
-                                    <td className="p-3">Google Analytics 4: métricas agregadas y anónimas</td>
-                                    <td className="p-3">2 años</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <h2 className="text-xl font-[Cinzel] text-white">3. Cookies técnicas y almacenamiento</h2>
+                    <p>Únicamente se pueden utilizar elementos de almacenamiento local estrictamente necesarios para funciones técnicas esenciales (como recordar si has cerrado una ventana informativa o mantener la seguridad de la navegación).</p>
 
-                    <h2 className="text-xl font-[Cinzel] text-white">4. ¿Cómo configurar o revocar las cookies?</h2>
-                    <p>Puedes cambiar o revocar tu consentimiento en cualquier momento mediante nuestro panel de preferencias:</p>
-                    <div className="my-4">
-                        <CookieSettingsTrigger />
-                    </div>
-                    <p>Asimismo, puedes permitir, bloquear o eliminar las cookies instaladas en tu equipo mediante la configuración de las opciones de tu navegador web:</p>
+                    <h2 className="text-xl font-[Cinzel] text-white">4. Gestión de cookies en tu navegador</h2>
+                    <p>Si deseas restringir o bloquear cualquier cookie o dato local en este o en cualquier otro sitio web, puedes hacerlo directamente desde la configuración de tu navegador:</p>
                     <ul className="list-disc pl-6 space-y-1">
                         <li><a href="https://support.google.com/chrome/answer/95647?hl=es" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline">Google Chrome</a></li>
                         <li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline">Mozilla Firefox</a></li>
