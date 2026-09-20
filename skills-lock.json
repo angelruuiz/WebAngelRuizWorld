@@ -1,6 +1,150 @@
 {
   "version": 1,
   "skills": {
+    "30x-seo-ai-visibility": {
+      "source": "norahe0304-art/30x-seo",
+      "sourceType": "github",
+      "skillPath": "skills/30x-seo-ai-visibility/SKILL.md",
+      "computedHash": "6a177e99a416da620456870edfbb497aa7e3602b798e78d16ec82d18e1408988"
+    },
+    "30x-seo-architecture": {
+      "source": "norahe0304-art/30x-seo",
+      "sourceType": "github",
+      "skillPath": "skills/30x-seo-architecture/SKILL.md",
+      "computedHash": "13407f551c40ea9cfc39a44e5d9369a01175c312c5d1aca233980f3f9d710472"
+    },
+    "30x-seo-backlinks": {
+      "source": "norahe0304-art/30x-seo",
+      "sourceType": "github",
+      "skillPath": "skills/30x-seo-backlinks/SKILL.md",
+      "computedHash": "df25395206e23ee4156861ba1103689f979522d4e9fd03cd4167fadce28949f9"
+    },
+    "30x-seo-cannibalization": {
+      "source": "norahe0304-art/30x-seo",
+      "sourceType": "github",
+      "skillPath": "skills/30x-seo-cannibalization/SKILL.md",
+      "computedHash": "682e2a2f36eda7c5a10de0dbf6a20792015fee4fd7df7dbba4b8ad15460c059e"
+    },
+    "30x-seo-competitor-pages": {
+      "source": "norahe0304-art/30x-seo",
+      "sourceType": "github",
+      "skillPath": "skills/30x-seo-competitor-pages/SKILL.md",
+      "computedHash": "66aa9853c92ec6c2da2086ecc994a6daa709a69cc21a82da2a6d8a022171aee7"
+    },
+    "30x-seo-content-audit": {
+      "source": "norahe0304-art/30x-seo",
+      "sourceType": "github",
+      "skillPath": "skills/30x-seo-content-audit/SKILL.md",
+      "computedHash": "cb3da6f02daca8850ec13bdbd75da96569076a4174f956d55ae77baea315cb36"
+    },
+    "30x-seo-content-brief": {
+      "source": "norahe0304-art/30x-seo",
+      "sourceType": "github",
+      "skillPath": "skills/30x-seo-content-brief/SKILL.md",
+      "computedHash": "b0267cb61eacdc51a41c52efb3c4b6bb529cf52754f26bc31152d165ce4eea08"
+    },
+    "30x-seo-content-decay": {
+      "source": "norahe0304-art/30x-seo",
+      "sourceType": "github",
+      "skillPath": "skills/30x-seo-content-decay/SKILL.md",
+      "computedHash": "e063704f58ed3fc81fae4ccb93ed17f1ba96d592983417733b0928bbd157800d"
+    },
+    "30x-seo-content-writer": {
+      "source": "norahe0304-art/30x-seo",
+      "sourceType": "github",
+      "skillPath": "skills/30x-seo-content-writer/SKILL.md",
+      "computedHash": "5f202b8df947303f87467215359a5b51b339c6e83471b6de807cbfedd281314b"
+    },
+    "30x-seo-geo-technical": {
+      "source": "norahe0304-art/30x-seo",
+      "sourceType": "github",
+      "skillPath": "skills/30x-seo-geo-technical/SKILL.md",
+      "computedHash": "f34e4f80810aa92cd9a34943a7481e456d10aa097a78d4672c8fbc546cb70c46"
+    },
+    "30x-seo-hreflang": {
+      "source": "norahe0304-art/30x-seo",
+      "sourceType": "github",
+      "skillPath": "skills/30x-seo-hreflang/SKILL.md",
+      "computedHash": "3b4ac6c145f0d855342a3c3380545318cfba4a5e83e7ea4996cfccb86e057e9a"
+    },
+    "30x-seo-images": {
+      "source": "norahe0304-art/30x-seo",
+      "sourceType": "github",
+      "skillPath": "skills/30x-seo-images/SKILL.md",
+      "computedHash": "7712428b4decc2bd15e770e7354bcb7fa71e7fd4f910f16d6b1bb01df75267c8"
+    },
+    "30x-seo-internal-links": {
+      "source": "norahe0304-art/30x-seo",
+      "sourceType": "github",
+      "skillPath": "skills/30x-seo-internal-links/SKILL.md",
+      "computedHash": "58e9fe236488bab98f614070d971ffde34d4d0ca9df1a4b94b3b4146709cfa57"
+    },
+    "30x-seo-keywords": {
+      "source": "norahe0304-art/30x-seo",
+      "sourceType": "github",
+      "skillPath": "skills/30x-seo-keywords/SKILL.md",
+      "computedHash": "25997f0be2f96d3b8b14ac9e8f9fc62d34bb8315f480403b0a45bf40dfdcf4ff"
+    },
+    "30x-seo-local": {
+      "source": "norahe0304-art/30x-seo",
+      "sourceType": "github",
+      "skillPath": "skills/30x-seo-local/SKILL.md",
+      "computedHash": "518a4a92f4145827b68ed2a1d8a7d45226fbdbeebe9f296512ce58847ceb7ce3"
+    },
+    "30x-seo-monitor": {
+      "source": "norahe0304-art/30x-seo",
+      "sourceType": "github",
+      "skillPath": "skills/30x-seo-monitor/SKILL.md",
+      "computedHash": "f0c895fd24c0e23ff5b83e57a494f7318920b035db6e7adbcec986e66a9a242b"
+    },
+    "30x-seo-page": {
+      "source": "norahe0304-art/30x-seo",
+      "sourceType": "github",
+      "skillPath": "skills/30x-seo-page/SKILL.md",
+      "computedHash": "438a200ee10125c3148f7ce758382cbbbedb35106ab00fee4e343894c73822a0"
+    },
+    "30x-seo-plan": {
+      "source": "norahe0304-art/30x-seo",
+      "sourceType": "github",
+      "skillPath": "skills/30x-seo-plan/SKILL.md",
+      "computedHash": "6cc368ddf5f639b410ec16ec85959ba1a66484430c5f6887d2147f64ff80ce2f"
+    },
+    "30x-seo-programmatic": {
+      "source": "norahe0304-art/30x-seo",
+      "sourceType": "github",
+      "skillPath": "skills/30x-seo-programmatic/SKILL.md",
+      "computedHash": "bcd8d8e48b8924612596a71ace0a0bc41d44256a6fcab5b316eabcfb88ba0e16"
+    },
+    "30x-seo-redirects": {
+      "source": "norahe0304-art/30x-seo",
+      "sourceType": "github",
+      "skillPath": "skills/30x-seo-redirects/SKILL.md",
+      "computedHash": "bc0c70f4114e50625e0b7eef837cc448adba3b8de54ff52d16f586407f2ca57f"
+    },
+    "30x-seo-schema": {
+      "source": "norahe0304-art/30x-seo",
+      "sourceType": "github",
+      "skillPath": "skills/30x-seo-schema/SKILL.md",
+      "computedHash": "b50b351956b2783b219eb49f47d9b2ae237ce9c759ad3962ff18364e76c62f59"
+    },
+    "30x-seo-serp": {
+      "source": "norahe0304-art/30x-seo",
+      "sourceType": "github",
+      "skillPath": "skills/30x-seo-serp/SKILL.md",
+      "computedHash": "caf397de209553c4480b85bc227af8533cbc0326ca26fc1b51d3fcc9bcd85ef6"
+    },
+    "30x-seo-sitemap": {
+      "source": "norahe0304-art/30x-seo",
+      "sourceType": "github",
+      "skillPath": "skills/30x-seo-sitemap/SKILL.md",
+      "computedHash": "cbb083976b508cd7cc61153e56fb0fb53d3fc29083c8c31cb97bde0533d6347e"
+    },
+    "30x-seo-technical": {
+      "source": "norahe0304-art/30x-seo",
+      "sourceType": "github",
+      "skillPath": "skills/30x-seo-technical/SKILL.md",
+      "computedHash": "59f2ee1083efaac8cb9a1238d91162e5d280f3a490ae128388f9b298ddaa0fee"
+    },
     "analytics-tracking": {
       "source": "kostja94/marketing-skills",
       "sourceType": "github",
@@ -73,6 +217,126 @@
       "skillPath": "skills/frontend-design/SKILL.md",
       "computedHash": "516bd2154eb843a8240e43d5b285229129853114ad7075a5e141e1c08e408c84"
     },
+    "geo": {
+      "source": "zubair-trabzada/geo-seo-claude",
+      "sourceType": "github",
+      "skillPath": "geo/SKILL.md",
+      "computedHash": "bdbb6ae071f24e6880dd5642df35f2b94e53678755c86138577181147a85698d"
+    },
+    "geo-audit": {
+      "source": "zubair-trabzada/geo-seo-claude",
+      "sourceType": "github",
+      "skillPath": "skills/geo-audit/SKILL.md",
+      "computedHash": "0a9c2cd9b39514a0e9993a01c2b403bb1f567bdd5ed7f01d370c68b0d38c5491"
+    },
+    "geo-brand-mentions": {
+      "source": "zubair-trabzada/geo-seo-claude",
+      "sourceType": "github",
+      "skillPath": "skills/geo-brand-mentions/SKILL.md",
+      "computedHash": "76dc1b3f5261ed08dc699b83e3a897096964cdfc447146cc76873adf3916ce5c"
+    },
+    "geo-citability": {
+      "source": "zubair-trabzada/geo-seo-claude",
+      "sourceType": "github",
+      "skillPath": "skills/geo-citability/SKILL.md",
+      "computedHash": "bf9a8b1fc92909a2525ee5d4322c05f9f8a3ccf0ca04a0f37dc8e95faecef2c6"
+    },
+    "geo-compare": {
+      "source": "zubair-trabzada/geo-seo-claude",
+      "sourceType": "github",
+      "skillPath": "skills/geo-compare/SKILL.md",
+      "computedHash": "49cb5d24cb5230140a63da265513822f4425347e1e451d5e9d99e882d78fceaa"
+    },
+    "geo-content": {
+      "source": "zubair-trabzada/geo-seo-claude",
+      "sourceType": "github",
+      "skillPath": "skills/geo-content/SKILL.md",
+      "computedHash": "279fbf313b8f180e4bd2163d2bf7215235f7fae1012af3c04931e98c35d18e59"
+    },
+    "geo-crawlers": {
+      "source": "zubair-trabzada/geo-seo-claude",
+      "sourceType": "github",
+      "skillPath": "skills/geo-crawlers/SKILL.md",
+      "computedHash": "1aa459b9f796560de495f85e840e816bdbff73a04b53305c46da7c115027d29a"
+    },
+    "geo-fix-content": {
+      "source": "Cognitic-Labs/geoskills",
+      "sourceType": "github",
+      "skillPath": "skills/geo-fix-content/SKILL.md",
+      "computedHash": "7219f654695a17753e9941fbbb809c4bf3dfc3549e3e4eccf292bd938fd5f5f0"
+    },
+    "geo-fix-llmstxt": {
+      "source": "Cognitic-Labs/geoskills",
+      "sourceType": "github",
+      "skillPath": "skills/geo-fix-llmstxt/SKILL.md",
+      "computedHash": "1d45eaefbf2f7b0f07cbfc3b473da1737ee78f0f5e017b8c39053b6bbd5a234d"
+    },
+    "geo-fix-schema": {
+      "source": "Cognitic-Labs/geoskills",
+      "sourceType": "github",
+      "skillPath": "skills/geo-fix-schema/SKILL.md",
+      "computedHash": "1fe91378f06332978d8b8cc1cf914052bd9e1d5f59ae336e08f0cb9b3963d74a"
+    },
+    "geo-llmstxt": {
+      "source": "zubair-trabzada/geo-seo-claude",
+      "sourceType": "github",
+      "skillPath": "skills/geo-llmstxt/SKILL.md",
+      "computedHash": "a8c7c70f5eaf791278f4ec5568ccd79cd1f9cb3b7c28b329ef482e06122d4565"
+    },
+    "geo-monitor": {
+      "source": "Cognitic-Labs/geoskills",
+      "sourceType": "github",
+      "skillPath": "skills/geo-monitor/SKILL.md",
+      "computedHash": "f3e2895e281e8dc684ea28134d97e1d22ca4dc05e7dd5e10b0b61b2a9e93ded9"
+    },
+    "geo-platform-optimizer": {
+      "source": "zubair-trabzada/geo-seo-claude",
+      "sourceType": "github",
+      "skillPath": "skills/geo-platform-optimizer/SKILL.md",
+      "computedHash": "4f76f38359ea2d7014216fda309beb237d331ee454ade912d507532cfe10c959"
+    },
+    "geo-proposal": {
+      "source": "zubair-trabzada/geo-seo-claude",
+      "sourceType": "github",
+      "skillPath": "skills/geo-proposal/SKILL.md",
+      "computedHash": "7bea4320c86c251f58aba6514db1bd54104985a760104f7f9541d1bcae65d833"
+    },
+    "geo-prospect": {
+      "source": "zubair-trabzada/geo-seo-claude",
+      "sourceType": "github",
+      "skillPath": "skills/geo-prospect/SKILL.md",
+      "computedHash": "87241854905a18850c0bd2f154779fb14ed4ee4b5bfc05ae52143c3681a8d464"
+    },
+    "geo-report": {
+      "source": "zubair-trabzada/geo-seo-claude",
+      "sourceType": "github",
+      "skillPath": "skills/geo-report/SKILL.md",
+      "computedHash": "1808b57cc2a98019af71124839fab2a3b5c055ff5e4b0779dab7bef77eeab536"
+    },
+    "geo-report-pdf": {
+      "source": "zubair-trabzada/geo-seo-claude",
+      "sourceType": "github",
+      "skillPath": "skills/geo-report-pdf/SKILL.md",
+      "computedHash": "bb42d9977348d15d0a6796587789108ffc79c606623809df7f72101d93d8d424"
+    },
+    "geo-schema": {
+      "source": "zubair-trabzada/geo-seo-claude",
+      "sourceType": "github",
+      "skillPath": "skills/geo-schema/SKILL.md",
+      "computedHash": "39c87d99a198ed420aae804960188da1802c6d0cf9d48b3f4cad6fccde613fa8"
+    },
+    "geo-technical": {
+      "source": "zubair-trabzada/geo-seo-claude",
+      "sourceType": "github",
+      "skillPath": "skills/geo-technical/SKILL.md",
+      "computedHash": "a9e4e8f1004b95736d6183da3fbed3b823c2025b6fe63f9d658fbabe20ed1cdc"
+    },
+    "geo-update": {
+      "source": "zubair-trabzada/geo-seo-claude",
+      "sourceType": "github",
+      "skillPath": "skills/geo-update/SKILL.md",
+      "computedHash": "95cf315cc7196bc6abe4e5bb0c7140937f3ea3af646c2874543a475f72f7f33b"
+    },
     "pagespeed-insights": {
       "source": "enderpuentes/ai-agent-skills",
       "sourceType": "github",
@@ -86,10 +350,10 @@
       "computedHash": "d9457a606202a23c28b4c17b2611c65ecc09311ce46a5d93ffe8493d2e8ea4f3"
     },
     "seo": {
-      "source": "agricidaniel/claude-seo",
+      "source": "norahe0304-art/30x-seo",
       "sourceType": "github",
-      "skillPath": "skills/seo/SKILL.md",
-      "computedHash": "2b585f30164f9a98ae23d36f857ed708bb9f25baec000c33bccb5500df505b43"
+      "skillPath": "seo/SKILL.md",
+      "computedHash": "b115416491c808891e7c3f17bc47da37d098c80c55c1ac62fffe43ec32df1833"
     },
     "seo-audit": {
       "source": "coreyhaines31/marketingskills",
