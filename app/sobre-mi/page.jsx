@@ -45,9 +45,27 @@ export default function SobreMiPage() {
         "alumniOf": "Escuela de Dani DaOrtiz",
         "areaServed": "Comunidad de Madrid"
     };
+
+    const breadcrumbSchema = {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
+            { "@type": "ListItem", "position": 2, "name": "Sobre Mí", "item": "https://angelruiz.world/sobre-mi" }
+        ]
+    };
+
     return (
         <>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
+        <script 
+            type="application/ld+json" 
+            dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@graph": [
+                    personSchema,
+                    breadcrumbSchema
+                ]
+            }) }} 
+        />
         <SobreMiClient>
             <div className="space-y-8 text-white font-medium leading-relaxed text-sm md:text-base">
                 <p className="text-xl md:text-2xl text-amber-400 font-[Cinzel] font-bold italic mb-8 drop-shadow-sm text-left leading-tight border-l-4 border-amber-500 pl-6 py-2 bg-white/5 rounded-r-lg">

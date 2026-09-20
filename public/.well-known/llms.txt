@@ -25,8 +25,17 @@
 
 ## Cobertura Geográfica en Madrid
 
-- [Mago en Sierra de Madrid y Noroeste](https://angelruiz.world/mago-sierra-madrid): Servicio en Torrelodones, Las Rozas, Majadahonda, Pozuelo, Boadilla, Collado Villalba y El Escorial.
-- [Mago en Madrid Capital](https://angelruiz.world/mago-madrid): Actuaciones en Salamanca, Chamberí, Chamartín, Retiro, Centro y toda la Comunidad de Madrid.
+- [Mago en Sierra de Madrid y Noroeste](https://angelruiz.world/mago-sierra-madrid): Cobertura comarcal en la sierra de Guadarrama y zona noroeste.
+- [Mago en Torrelodones](https://angelruiz.world/mago-torrelodones): Base operativa local sin coste de desplazamiento.
+- [Mago en Las Rozas](https://angelruiz.world/mago-las-rozas): Eventos en Európolis, El Cantizal, Monterrozas y Las Matas.
+- [Mago en Majadahonda](https://angelruiz.world/mago-majadahonda): Actuaciones en urbanizaciones, fincas y restaurantes.
+- [Mago en Pozuelo de Alarcón](https://angelruiz.world/mago-pozuelo): Eventos exclusivos en La Finca, Somosaguas y Monteclaro.
+- [Mago en Boadilla del Monte](https://angelruiz.world/mago-boadilla): Magia de cerca en Las Lomas, Bonanza y Valdepastores.
+- [Mago en Collado Villalba](https://angelruiz.world/mago-villalba): Celebraciones familiares, eventos y bodas.
+- [Mago en Galapagar](https://angelruiz.world/mago-galapagar): Eventos en La Navata, Parquelagos y alrededores.
+- [Mago en San Lorenzo de El Escorial](https://angelruiz.world/mago-el-escorial): Magia para bodas y fincas históricas.
+- [Mago en Madrid Capital](https://angelruiz.world/mago-madrid): Salamanca, Chamberí, Chamartín, Retiro, Centro y toda la Comunidad.
+- [Mago en Alcorcón](https://angelruiz.world/mago-alcorcon) | [Mago en Leganés](https://angelruiz.world/mago-leganes) | [Mago en Móstoles](https://angelruiz.world/mago-mostoles) | [Mago en Getafe](https://angelruiz.world/mago-getafe) | [Mago en Alcobendas](https://angelruiz.world/mago-alcobendas)
 
 ## Optional
 

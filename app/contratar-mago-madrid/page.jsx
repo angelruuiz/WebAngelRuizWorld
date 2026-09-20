@@ -122,7 +122,14 @@ export default function ContratarMagoMadridPage() {
                     "name": "Madrid"
                 }
             },
-            faqSchema
+            faqSchema,
+            {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
+                    { "@type": "ListItem", "position": 2, "name": "Contratar Mago Madrid", "item": "https://angelruiz.world/contratar-mago-madrid" }
+                ]
+            }
         ]
     };
 
