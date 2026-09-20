@@ -1,11 +1,14 @@
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import Link from 'next/link';
 import NavFooterClient from '@/components/NavFooterClient';
-import ContactButtonClient from '@/components/ContactButtonClient';
-import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import FAQItem from '@/components/FAQItem';
-import CorporateInlineForm from '@/components/CorporateInlineForm';
+
+const ContactButtonClient = dynamic(() => import('@/components/ContactButtonClient'), { ssr: false });
+const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod => mod.MagicCursor), { ssr: false });
+const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
+const CorporateInlineForm = dynamic(() => import('@/components/CorporateInlineForm'), { ssr: false });
 
 export const metadata = {
     title: { absolute: 'Mago para Empresas en Madrid ➜ Cenas y Eventos' },
@@ -155,6 +158,7 @@ export default function EmpresasPage() {
                                         src="/images/evento-angel-ruiz-magia.webp"
                                         alt="Ángel Ruiz mago para empresas Madrid - Evento Real"
                                         fill
+                                        sizes="(max-width: 1024px) 100vw, 33vw"
                                         className="object-cover object-center"
                                         priority
                                     />
@@ -246,9 +250,9 @@ export default function EmpresasPage() {
                                         { src: '/images/logo-senescal.webp', alt: 'Catering Senescal' },
                                         { src: '/images/logo-alcampo.webp', alt: 'Alcampo' },
                                         { src: '/images/logo-ahorramas.webp', alt: 'Ahorramás' },
-                                        { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
-                                        { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
-                                        { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' }
+                                        { src: '/images/logos/logo-badulaque.webp', alt: 'Badulaque' },
+                                        { src: '/images/logos/logo-zeppelin.webp', alt: 'Zeppelin' },
+                                        { src: '/images/logos/nngg-torrelodones.webp', alt: 'NNGG Torrelodones' }
                                     ].map((logo, idx) => (
                                         <li key={idx} className="relative w-28 h-10 flex items-center justify-center">
                                             <Image src={logo.src} alt={logo.alt} width={120} height={40} className="object-contain h-8 w-auto filter grayscale opacity-50 hover:opacity-100 transition-opacity duration-300" />
@@ -263,9 +267,9 @@ export default function EmpresasPage() {
                                         { src: '/images/logo-senescal.webp', alt: 'Catering Senescal' },
                                         { src: '/images/logo-alcampo.webp', alt: 'Alcampo' },
                                         { src: '/images/logo-ahorramas.webp', alt: 'Ahorramás' },
-                                        { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
-                                        { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
-                                        { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' }
+                                        { src: '/images/logos/logo-badulaque.webp', alt: 'Badulaque' },
+                                        { src: '/images/logos/logo-zeppelin.webp', alt: 'Zeppelin' },
+                                        { src: '/images/logos/nngg-torrelodones.webp', alt: 'NNGG Torrelodones' }
                                     ].map((logo, idx) => (
                                         <li key={`dup-${idx}`} className="relative w-28 h-10 flex items-center justify-center">
                                             <Image src={logo.src} alt={logo.alt} width={120} height={40} className="object-contain h-8 w-auto filter grayscale opacity-50 hover:opacity-100 transition-opacity duration-300" />

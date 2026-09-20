@@ -4,7 +4,9 @@ import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import NewsletterForm from '@/components/NewsletterForm';
+import dynamic from 'next/dynamic';
+
+const NewsletterForm = dynamic(() => import('@/components/NewsletterForm'), { ssr: false });
 
 export default function BlogListingClient({ posts }) {
     const [searchQuery, setSearchQuery] = useState('');

@@ -3,10 +3,10 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, X } from '@/components/Icons';
 import { useRouter } from 'next/navigation';
-import MagicSpiral from '@/components/Transitions/MagicSpiral';
+import dynamic from 'next/dynamic';
+const MagicSpiral = dynamic(() => import('@/components/Transitions/MagicSpiral'), { ssr: false });
 
 const Navbar = ({ onOpenContact, isLight = false }) => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -21,7 +21,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
             setIsTransitioning(true);
             setTimeout(() => {
                 router.push(href);
-            }, 1800); 
+            }, 300); 
         }
     };
 
@@ -126,60 +126,13 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                             className="absolute inset-0 bg-amber-500/30 blur-[15px] rounded-full pointer-events-none group-hover:bg-amber-500/60 transition-all duration-500"
                         />
 
-                        <motion.button 
+                        <button 
                             onClick={onOpenContact} 
-                            initial="rest"
-                            animate="rest"
-                            whileHover="hover" 
-                            whileTap="tap" 
-                            variants={{
-                                rest: { scale: 1 },
-                                hover: { scale: 1.05, y: -2 },
-                                tap: { scale: 0.95, y: 0 }
-                            }}
-                            transition={{ type: "spring", stiffness: 400, damping: 15 }}
-                            className="relative px-3.5 lg:px-4 py-2 overflow-hidden rounded-full cursor-pointer border border-amber-300/50 shadow-[0_0_15px_rgba(245,158,11,0.3)] z-10 bg-[rgba(3,7,18,0.5)] backdrop-blur-md text-[11px] lg:text-xs"
+                            className="relative px-3.5 lg:px-4 py-2 overflow-hidden rounded-full cursor-pointer border border-amber-300/50 shadow-[0_0_15px_rgba(245,158,11,0.3)] z-10 bg-[rgba(3,7,18,0.5)] hover:bg-[#d4a853] backdrop-blur-md text-[11px] lg:text-xs text-slate-100 hover:text-slate-950 font-bold tracking-[0.1em] uppercase transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5 lg:gap-2 group"
                         >
-                            <div 
-                                className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-90 transition-opacity duration-300 bg-gradient-to-r from-[#d4a853] via-amber-400 to-[#d4a853]"
-                            />
-                            
-                            <motion.div
-                                variants={{
-                                    hover: { x: ["-150%", "350%"], transition: { repeat: Infinity, duration: 1.2, ease: "linear" } },
-                                    rest: { x: "-150%" },
-                                    tap: { x: "350%" }
-                                }}
-                                className="absolute inset-0 w-[50%] bg-gradient-to-r from-transparent via-white/80 to-transparent skew-x-[30deg] pointer-events-none"
-                            />
-
-                            <motion.div 
-                                variants={{
-                                    tap: { scale: 2.5, opacity: 0, transition: { duration: 0.6, ease: "easeOut" } },
-                                    hover: { scale: 1, opacity: 0 },
-                                    rest: { scale: 1, opacity: 0 }
-                                }}
-                                className="absolute inset-0 rounded-full border-[2px] border-white pointer-events-none"
-                            />
-                            
-                            <motion.span 
-                                variants={{
-                                    tap: { filter: "blur(2px)", scale: 0.95 },
-                                    hover: { filter: "blur(0px)", scale: 1 },
-                                    rest: { filter: "blur(0px)", scale: 1 }
-                                }}
-                                className="relative z-10 flex items-center justify-center gap-1.5 lg:gap-2 text-slate-100 group-hover:text-slate-950 font-bold tracking-[0.1em] uppercase text-[11px] lg:text-xs transition-colors duration-300"
-                            >
-                                Contacto 
-                                <motion.div variants={{
-                                    hover: { rotate: 180, scale: 1.2, transition: { duration: 0.4 } },
-                                    rest: { rotate: 0, scale: 1 },
-                                    tap: { rotate: -45, scale: 0.8 }
-                                }}>
-                                    <Sparkles className="w-3 h-3" />
-                                </motion.div>
-                            </motion.span>
-                        </motion.button>
+                            <span className="relative z-10">Contacto</span>
+                            <Sparkles className="w-3 h-3 group-hover:rotate-180 transition-transform duration-300 relative z-10" />
+                        </button>
                     </div>
 
                     {/* Mobile Quick Contact Button */}
@@ -227,75 +180,77 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                 </button>
             </div>
 
+            {/* Mobile "Más" Backdrop */}
+            {isMoreMenuOpen && (
+                <div 
+                    onClick={() => setIsMoreMenuOpen(false)} 
+                    className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[109] md:hidden transition-opacity duration-300"
+                />
+            )}
+
             {/* Mobile "Más" Sheet */}
-            <AnimatePresence>
-                {isMoreMenuOpen && (
-                    <motion.div 
-                        initial={{ opacity: 0, y: '100%' }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: '100%' }}
-                        transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-                        className="fixed inset-x-0 bottom-0 z-[110] bg-slate-900/95 backdrop-blur-xl border-t border-white/10 rounded-t-3xl pt-6 pb-safe-bottom max-h-[85vh] overflow-y-auto md:hidden shadow-[0_-10px_40px_rgba(0,0,0,0.5)]"
-                    >
-                        <div className="absolute top-3 left-1/2 -translate-x-1/2 w-12 h-1 bg-white/20 rounded-full" />
-                        <button onClick={() => setIsMoreMenuOpen(false)} className="absolute top-4 right-4 text-slate-400 hover:text-white p-2">
-                            <X className="w-5 h-5" />
-                        </button>
-                        <div className="flex flex-col px-6 mt-6 mb-8">
-                            <details className="group border-b border-white/5">
-                                <summary className="py-4 text-lg font-[Cinzel] font-bold text-amber-400 cursor-pointer list-none flex justify-between items-center outline-none">
-                                    Especialidades y Contratación
-                                    <span className="text-sm opacity-50 group-open:rotate-180 transition-transform">▼</span>
-                                </summary>
-                                <div className="flex flex-col gap-4 pb-4 pl-4 border-l border-amber-500/20 ml-2 mt-2">
-                                    <Link href="/mago-close-up-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Magia Close-Up (De cerca)</Link>
-                                    <Link href="/contratar-mago-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-amber-500 font-bold hover:text-amber-400">Contratar Mago en Madrid</Link>
-                                </div>
-                            </details>
-
-                            <details className="group border-b border-white/5">
-                                <summary className="py-4 text-lg font-[Cinzel] font-bold text-slate-200 cursor-pointer list-none flex justify-between items-center outline-none">
-                                    Particulares
-                                    <span className="text-sm opacity-50 group-open:rotate-180 transition-transform">▼</span>
-                                </summary>
-                                <div className="flex flex-col gap-4 pb-4 pl-4 border-l border-white/10 ml-2 mt-2">
-                                    <Link href="/particulares/bodas" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Bodas</Link>
-                                    <Link href="/particulares/comuniones" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Comuniones</Link>
-                                    <Link href="/particulares/eventos" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Cumpleaños y Fiestas</Link>
-                                </div>
-                            </details>
-
-                            <details className="group border-b border-white/5">
-                                <summary className="py-4 text-lg font-[Cinzel] font-bold text-slate-200 cursor-pointer list-none flex justify-between items-center outline-none">
-                                    Empresas
-                                    <span className="text-sm opacity-50 group-open:rotate-180 transition-transform">▼</span>
-                                </summary>
-                                <div className="flex flex-col gap-4 pb-4 pl-4 border-l border-white/10 ml-2 mt-2">
-                                    <Link href="/empresas/mago-ferias-congresos-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Ferias y Congresos</Link>
-                                    <Link href="/empresas/mago-cenas-empresa-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Cenas de Empresa y Navidad</Link>
-                                    <Link href="/empresas/mago-team-building-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Team Building</Link>
-                                    <Link href="/empresas/mago-para-restaurantes-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Restaurantes</Link>
-                                </div>
-                            </details>
-
-                            <Link href="/sobre-mi" onClick={() => setIsMoreMenuOpen(false)} className="py-4 border-b border-white/5 text-lg font-[Cinzel] font-bold text-slate-200 flex justify-between items-center">
-                                Sobre Mí
-                                <span className="text-amber-500/50">→</span>
-                            </Link>
-
-                            <Link href="/valoraciones" onClick={() => setIsMoreMenuOpen(false)} className="py-4 border-b border-white/5 text-lg font-[Cinzel] font-bold text-slate-200 flex justify-between items-center">
-                                Valoraciones
-                                <span className="text-amber-500/50">→</span>
-                            </Link>
-
-                            <button onClick={() => { setIsMoreMenuOpen(false); onOpenContact(); }} className="py-4 text-left text-lg font-[Cinzel] font-bold text-[#d4a853] mt-2 flex justify-between items-center">
-                                Contacto Directo
-                                <Sparkles className="w-4 h-4" />
-                            </button>
+            <div 
+                className={`fixed inset-x-0 bottom-0 z-[110] bg-slate-900/95 backdrop-blur-xl border-t border-white/10 rounded-t-3xl pt-6 pb-safe-bottom max-h-[85vh] overflow-y-auto md:hidden shadow-[0_-10px_40px_rgba(0,0,0,0.5)] transition-transform duration-300 ease-out will-change-transform ${
+                    isMoreMenuOpen ? 'translate-y-0 opacity-100 pointer-events-auto' : 'translate-y-full opacity-0 pointer-events-none'
+                }`}
+            >
+                <div className="absolute top-3 left-1/2 -translate-x-1/2 w-12 h-1 bg-white/20 rounded-full" />
+                <button onClick={() => setIsMoreMenuOpen(false)} className="absolute top-4 right-4 text-slate-400 hover:text-white p-2">
+                    <X className="w-5 h-5" />
+                </button>
+                <div className="flex flex-col px-6 mt-6 mb-8">
+                    <details className="group border-b border-white/5">
+                        <summary className="py-4 text-lg font-[Cinzel] font-bold text-amber-400 cursor-pointer list-none flex justify-between items-center outline-none">
+                            Especialidades y Contratación
+                            <span className="text-sm opacity-50 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <div className="flex flex-col gap-4 pb-4 pl-4 border-l border-amber-500/20 ml-2 mt-2">
+                            <Link href="/mago-close-up-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Magia Close-Up (De cerca)</Link>
+                            <Link href="/contratar-mago-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-amber-500 font-bold hover:text-amber-400">Contratar Mago en Madrid</Link>
                         </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
+                    </details>
+
+                    <details className="group border-b border-white/5">
+                        <summary className="py-4 text-lg font-[Cinzel] font-bold text-slate-200 cursor-pointer list-none flex justify-between items-center outline-none">
+                            Particulares
+                            <span className="text-sm opacity-50 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <div className="flex flex-col gap-4 pb-4 pl-4 border-l border-white/10 ml-2 mt-2">
+                            <Link href="/particulares/bodas" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Bodas</Link>
+                            <Link href="/particulares/comuniones" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Comuniones</Link>
+                            <Link href="/particulares/eventos" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Cumpleaños y Fiestas</Link>
+                        </div>
+                    </details>
+
+                    <details className="group border-b border-white/5">
+                        <summary className="py-4 text-lg font-[Cinzel] font-bold text-slate-200 cursor-pointer list-none flex justify-between items-center outline-none">
+                            Empresas
+                            <span className="text-sm opacity-50 group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <div className="flex flex-col gap-4 pb-4 pl-4 border-l border-white/10 ml-2 mt-2">
+                            <Link href="/empresas/mago-ferias-congresos-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Ferias y Congresos</Link>
+                            <Link href="/empresas/mago-cenas-empresa-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Cenas de Empresa y Navidad</Link>
+                            <Link href="/empresas/mago-team-building-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Team Building</Link>
+                            <Link href="/empresas/mago-para-restaurantes-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Restaurantes</Link>
+                        </div>
+                    </details>
+
+                    <Link href="/sobre-mi" onClick={() => setIsMoreMenuOpen(false)} className="py-4 border-b border-white/5 text-lg font-[Cinzel] font-bold text-slate-200 flex justify-between items-center">
+                        Sobre Mí
+                        <span className="text-amber-500/50">→</span>
+                    </Link>
+
+                    <Link href="/valoraciones" onClick={() => setIsMoreMenuOpen(false)} className="py-4 border-b border-white/5 text-lg font-[Cinzel] font-bold text-slate-200 flex justify-between items-center">
+                        Valoraciones
+                        <span className="text-amber-500/50">→</span>
+                    </Link>
+
+                    <button onClick={() => { setIsMoreMenuOpen(false); onOpenContact(); }} className="py-4 text-left text-lg font-[Cinzel] font-bold text-[#d4a853] mt-2 flex justify-between items-center">
+                        Contacto Directo
+                        <Sparkles className="w-4 h-4" />
+                    </button>
+                </div>
+            </div>
         </>
     );
 };

@@ -1,5 +1,4 @@
 import HomeClient, { PerpetualCard } from '@/components/HomeClient';
-import Image from 'next/image';
 import QuickEventSelector from '@/components/QuickEventSelector';
 
 export const metadata = {
@@ -69,21 +68,31 @@ const SEOContent = () => {
                                     <div className="bg-surface-1 p-6 rounded-xl border border-white/5">
                                         <p className="mb-3 text-[10px] text-amber-500 uppercase font-bold tracking-widest">Servicio Local en Municipios Clave:</p>
                                         <div className="flex flex-wrap gap-x-6 gap-y-4 text-xs uppercase font-bold text-gold-100/70">
-                                            <a href="/mago-torrelodones" className="text-amber-400 hover:text-white transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block underline decoration-amber-500/30">Torrelodones</a>
-                                            <a href="/mago-sierra-madrid" className="hover:text-amber-400 transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">Sierra de Madrid</a>
-                                            <a href="/mago-las-rozas" className="hover:text-amber-400 transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">Las Rozas</a>
-                                            <a href="/mago-boadilla" className="hover:text-amber-400 transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">Boadilla del Monte</a>
-                                            <a href="/mago-villalba" className="hover:text-amber-400 transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">Collado Villalba</a>
-                                            <a href="/mago-galapagar" className="hover:text-amber-400 transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">Galapagar</a>
-                                            <a href="/mago-pozuelo" className="hover:text-amber-400 transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">Pozuelo de Alarcón</a>
-                                            <a href="/mago-majadahonda" className="hover:text-amber-400 transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">Majadahonda</a>
-                                            <a href="/mago-las-matas" className="hover:text-amber-400 transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">Las Matas</a>
-                                            <a href="/mago-el-escorial" className="hover:text-amber-400 transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">El Escorial</a>
-                                            <a href="/mago-alcorcon" className="hover:text-amber-400 transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">Alcorcón</a>
-                                            <a href="/mago-leganes" className="hover:text-amber-400 transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">Leganés</a>
-                                            <a href="/mago-mostoles" className="hover:text-amber-400 transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">Móstoles</a>
-                                            <a href="/mago-getafe" className="hover:text-amber-400 transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">Getafe</a>
-                                            <a href="/mago-alcobendas" className="hover:text-amber-400 transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">Alcobendas</a>
+                                            {[
+                                                { href: "/mago-torrelodones", name: "Torrelodones", primary: true },
+                                                { href: "/mago-sierra-madrid", name: "Sierra de Madrid" },
+                                                { href: "/mago-las-rozas", name: "Las Rozas" },
+                                                { href: "/mago-boadilla", name: "Boadilla del Monte" },
+                                                { href: "/mago-villalba", name: "Collado Villalba" },
+                                                { href: "/mago-galapagar", name: "Galapagar" },
+                                                { href: "/mago-pozuelo", name: "Pozuelo de Alarcón" },
+                                                { href: "/mago-majadahonda", name: "Majadahonda" },
+                                                { href: "/mago-las-matas", name: "Las Matas" },
+                                                { href: "/mago-el-escorial", name: "El Escorial" },
+                                                { href: "/mago-alcorcon", name: "Alcorcón" },
+                                                { href: "/mago-leganes", name: "Leganés" },
+                                                { href: "/mago-mostoles", name: "Móstoles" },
+                                                { href: "/mago-getafe", name: "Getafe" },
+                                                { href: "/mago-alcobendas", name: "Alcobendas" },
+                                            ].map((city) => (
+                                                <a 
+                                                    key={city.href}
+                                                    href={city.href} 
+                                                    className={`hover:text-amber-400 transition-colors inline-block ${city.primary ? 'text-amber-400 underline decoration-amber-500/30' : ''}`}
+                                                >
+                                                    {city.name}
+                                                </a>
+                                            ))}
                                         </div>
                                         <p className="mt-6 text-xs opacity-70 leading-relaxed italic border-t border-white/10 pt-6">
                                             Especialista en <strong>fincas para bodas</strong> y eventos residenciales VIP en urbanizaciones como La Finca, Somosaguas y Monterrozas.
@@ -193,7 +202,7 @@ const SEOContent = () => {
                         <div className="py-12 overflow-hidden">
                             <p className="text-xs text-center uppercase tracking-[0.2em] font-bold text-gold-200/60 mb-12">Empresas e instituciones que confían en mi ilusionismo corporativo</p>
                             <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-                                <ul className="flex shrink-0 items-center justify-around gap-12 min-w-full [&_img]:max-w-none animate-marquee">
+                                <ul className="flex shrink-0 items-center justify-around gap-12 min-w-full animate-marquee">
                                     {[
                                         { src: '/images/logo-movistar.webp', alt: 'Movistar Estudiantes' },
                                         { src: '/images/logo-escombrera.webp', alt: 'Peña La Escombrera' },
@@ -201,16 +210,16 @@ const SEOContent = () => {
                                         { src: '/images/logo-senescal.webp', alt: 'Catering Senescal' },
                                         { src: '/images/logo-alcampo.webp', alt: 'Alcampo' },
                                         { src: '/images/logo-ahorramas.webp', alt: 'Ahorramás' },
-                                        { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
-                                        { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
-                                        { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' }
+                                        { src: '/images/logos/logo-badulaque.webp', alt: 'Badulaque' },
+                                        { src: '/images/logos/logo-zeppelin.webp', alt: 'Zeppelin' },
+                                        { src: '/images/logos/nngg-torrelodones.webp', alt: 'NNGG Torrelodones' }
                                     ].map((logo, idx) => (
-                                        <li key={idx} className="relative w-32 h-14 shrink-0 flex items-center justify-center">
-                                            <Image src={logo.src} alt={logo.alt} fill sizes="128px" className="object-contain filter brightness-110 grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
+                                        <li key={idx} className="w-32 h-14 shrink-0 flex items-center justify-center">
+                                            <img src={logo.src} alt={logo.alt} width={128} height={56} loading="lazy" className="max-h-12 w-auto object-contain filter brightness-110 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100" />
                                         </li>
                                     ))}
                                 </ul>
-                                <ul className="flex shrink-0 items-center justify-around gap-12 min-w-full [&_img]:max-w-none animate-marquee" aria-hidden="true">
+                                <ul className="flex shrink-0 items-center justify-around gap-12 min-w-full animate-marquee" aria-hidden="true">
                                     {[
                                         { src: '/images/logo-movistar.webp', alt: 'Movistar Estudiantes' },
                                         { src: '/images/logo-escombrera.webp', alt: 'Peña La Escombrera' },
@@ -218,12 +227,12 @@ const SEOContent = () => {
                                         { src: '/images/logo-senescal.webp', alt: 'Catering Senescal' },
                                         { src: '/images/logo-alcampo.webp', alt: 'Alcampo' },
                                         { src: '/images/logo-ahorramas.webp', alt: 'Ahorramás' },
-                                        { src: '/images/logos/logo-badulaque.jpeg', alt: 'Badulaque' },
-                                        { src: '/images/logos/logo-zeppelin.png', alt: 'Zeppelin' },
-                                        { src: '/images/logos/nngg-torrelodones.jpeg', alt: 'NNGG Torrelodones' }
+                                        { src: '/images/logos/logo-badulaque.webp', alt: 'Badulaque' },
+                                        { src: '/images/logos/logo-zeppelin.webp', alt: 'Zeppelin' },
+                                        { src: '/images/logos/nngg-torrelodones.webp', alt: 'NNGG Torrelodones' }
                                     ].map((logo, idx) => (
-                                        <li key={`copy-${idx}`} className="relative w-32 h-14 shrink-0 flex items-center justify-center">
-                                            <Image src={logo.src} alt={logo.alt} fill sizes="128px" className="object-contain filter brightness-110 grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100" />
+                                        <li key={`copy-${idx}`} className="w-32 h-14 shrink-0 flex items-center justify-center">
+                                            <img src={logo.src} alt={logo.alt} width={128} height={56} loading="lazy" className="max-h-12 w-auto object-contain filter brightness-110 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100" />
                                         </li>
                                     ))}
                                 </ul>
@@ -243,117 +252,65 @@ const SEOContent = () => {
 
 
 export default function Home() {
-    const videoSchema = {
-        "@type": "VideoObject",
-        "name": "Show de Magia en Directo en Madrid | Ángel Ruiz (El Badulaque)",
-        "description": "Resumen en vivo del show de magia de cerca e ilusionismo profesional por Ángel Ruiz en El Badulaque.",
-        "thumbnailUrl": "https://angelruiz.world/videos/show-badulaque-poster.webp",
-        "uploadDate": "2026-09-16T22:00:00+02:00",
-        "duration": "PT1M4S",
-        "contentUrl": "https://angelruiz.world/videos/show-badulaque.mp4"
+    const homeSchema = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "VideoObject",
+                "name": "Show de Magia en Directo en Madrid | Ángel Ruiz (El Badulaque)",
+                "description": "Resumen en vivo del show de magia de cerca e ilusionismo profesional por Ángel Ruiz en El Badulaque.",
+                "thumbnailUrl": "https://angelruiz.world/videos/show-badulaque-poster.webp",
+                "uploadDate": "2026-09-16T22:00:00+02:00",
+                "duration": "PT1M4S",
+                "contentUrl": "https://angelruiz.world/videos/show-badulaque.mp4",
+                "publisher": { "@id": "https://angelruiz.world/#organization" }
+            },
+            {
+                "@type": "FAQPage",
+                "@id": "https://angelruiz.world/#faq",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "¿Por qué contratar un mago profesional para tu evento?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Contratar un mago profesional con trayectoria no es solo añadir un número de entretenimiento; es transformar radicalmente la percepción de tus invitados sobre el evento. El ilusionismo moderno sirve para: Networking Natural, Eliminar tiempos muertos, y Refuerzo de Marca."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "¿Cuánto cuesta contratar un mago en Madrid?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "El precio varía según el tipo de evento, número de invitados y duración. Como referencia, un cóctel de magia de cerca para bodas parte desde 350€ y una cena corporativa desde 400€. Contacta directamente para un presupuesto personalizado sin compromiso en menos de 2 horas."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "¿Qué zonas de Madrid cubre Ángel Ruiz?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Con base en Torrelodones, cubro toda la Comunidad de Madrid: zona noroeste (Las Rozas, Majadahonda, Pozuelo, Boadilla, Galapagar, Villalba, El Escorial), zona sur (Alcorcón, Leganés, Getafe, Móstoles), Alcobendas y Madrid capital. Sin sobrecostes de desplazamiento en la zona noroeste."
+                        }
+                    }
+                ]
+            }
+        ]
     };
 
     return (
         <>
-            {/* Unificamos TODO en un solo bloque @graph para que Google no pueda ver duplicados */}
+            <head>
+                <link rel="preload" as="image" href="/images/hero-angel-ruiz-mobile-2026.webp" media="(max-width: 767px)" type="image/webp" fetchPriority="high" />
+                <link rel="preload" as="image" href="/images/hero-angel-ruiz-2026.webp" media="(min-width: 768px)" type="image/webp" fetchPriority="high" />
+            </head>
             <script 
                 type="application/ld+json" 
-                dangerouslySetInnerHTML={{ __html: JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@graph": [
-
-                        {
-                            "@type": "VideoObject",
-                            ...videoSchema
-                        },
-                        {
-                            "@type": ["ProfessionalService", "LocalBusiness"],
-                            "@id": "https://angelruiz.world/#organization",
-                            "name": "Ángel Ruiz | Mago para Bodas y Empresas en Madrid",
-                            "alternateName": "Ángel Ruiz | Mago e Ilusionista",
-                            "url": "https://angelruiz.world",
-                            "telephone": "+34648055636",
-                            "email": "info@angelruiz.world",
-                            "logo": "https://angelruiz.world/images/logo-pequeno.webp",
-                            "image": "https://angelruiz.world/images/foto-bio.webp",
-                            "description": "Mago e ilusionista profesional en Madrid. Especialista en magia de cerca para bodas, eventos corporativos y celebraciones privadas.",
-                            "priceRange": "€€€",
-                            "currenciesAccepted": "EUR",
-                            "paymentAccepted": "Transferencia, Bizum, Efectivo",
-                            "areaServed": ["Madrid", "Torrelodones", "Las Rozas", "Majadahonda", "Pozuelo de Alarcón", "Boadilla del Monte", "Galapagar", "Collado Villalba", "El Escorial", "Las Matas", "Alcobendas", "Alcorcón", "Leganés", "Getafe", "Móstoles"],
-                            "address": {
-                                "@type": "PostalAddress",
-                                "streetAddress": "Zona Noroeste",
-                                "addressLocality": "Torrelodones",
-                                "addressRegion": "Comunidad de Madrid",
-                                "postalCode": "28250",
-                                "addressCountry": "ES"
-                            },
-                            "geo": {
-                                "@type": "GeoCoordinates",
-                                "latitude": "40.5765",
-                                "longitude": "-3.9294"
-                            },
-                            "openingHoursSpecification": {
-                                "@type": "OpeningHoursSpecification",
-                                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-                                "opens": "09:00",
-                                "closes": "22:00"
-                            },
-                            "sameAs": [
-                                "https://instagram.com/angellruuiz",
-                                "https://tiktok.com/@angellruuiz",
-                                "https://youtube.com/@angellruuiz",
-                                "https://facebook.com/angellruuiz"
-                            ],
-                            "founder": { "@id": "https://angelruiz.world/#person" }
-                        },
-                        {
-                            "@type": "Person",
-                            "@id": "https://angelruiz.world/#person",
-                            "name": "Ángel Ruiz",
-                            "jobTitle": "Mago e Ilusionista Profesional",
-                            "description": "Ilusionista profesional en Madrid especializado en magia de cerca, mentalismo y cartomagia de autor. Formado en la Escuela de Dani DaOrtiz.",
-                            "alumniOf": {
-                                "@type": "EducationalOrganization",
-                                "name": "Escuela de Magia Dani DaOrtiz"
-                            },
-                            "worksFor": { "@id": "https://angelruiz.world/#organization" }
-                        },
-                        {
-                            "@type": "FAQPage",
-                            "@id": "https://angelruiz.world/#faq",
-                            "mainEntity": [
-                                {
-                                    "@type": "Question",
-                                    "name": "¿Por qué contratar un mago profesional para tu evento?",
-                                    "acceptedAnswer": {
-                                        "@type": "Answer",
-                                        "text": "Contratar un mago profesional con trayectoria no es solo añadir un número de entretenimiento; es transformar radicalmente la percepción de tus invitados sobre el evento. El ilusionismo moderno sirve para: Networking Natural (facilitar que personas desconocidas interactúen), Eliminar tiempos muertos (cubrir transiciones en banquetes), y Refuerzo de Marca (integrar tu mensaje corporativo en los efectos mágicos)."
-                                    }
-                                },
-                                {
-                                    "@type": "Question",
-                                    "name": "¿Cuánto cuesta contratar un mago en Madrid?",
-                                    "acceptedAnswer": {
-                                        "@type": "Answer",
-                                        "text": "El precio varía según el tipo de evento, número de invitados y duración. Como referencia, un cóctel de magia de cerca para bodas parte desde 350€ y una cena corporativa desde 400€. Contacta directamente para un presupuesto personalizado sin compromiso en menos de 2 horas."
-                                    }
-                                },
-                                {
-                                    "@type": "Question",
-                                    "name": "¿Qué zonas de Madrid cubre Ángel Ruiz?",
-                                    "acceptedAnswer": {
-                                        "@type": "Answer",
-                                        "text": "Con base en Torrelodones, cubro toda la Comunidad de Madrid: zona noroeste (Las Rozas, Majadahonda, Pozuelo, Boadilla, Galapagar, Villalba, El Escorial), zona sur (Alcorcón, Leganés, Getafe, Móstoles), Alcobendas y Madrid capital. Sin sobrecostes de desplazamiento en la zona noroeste."
-                                    }
-                                }
-                            ]
-                        }
-                    ]
-                }) }} 
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }} 
             />
-            <HomeClient seoContent={<SEOContent />} />
+            <HomeClient>
+                <SEOContent />
+            </HomeClient>
         </>
     );
 }

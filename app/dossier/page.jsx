@@ -1,12 +1,13 @@
 "use client";
-
 import { motion } from 'framer-motion';
 import { Phone, Mail, Globe, MapPin, CheckCircle2, Star } from 'lucide-react';
-import { Sparkles } from '@/components/Icons';
-import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
-import { Cinzel, Outfit } from 'next/font/google';
-import Image from 'next/image';
+import dynamic from 'next/dynamic';
 
+const MagicCursor = dynamic(() => import('@/components/VisualEffects').then((mod) => mod.MagicCursor), { ssr: false });
+const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then((mod) => mod.ParticleBackground), { ssr: false });
+import Image from 'next/image';
+import Link from 'next/link';
+import DossierPrintButton from '@/components/DossierPrintButton';
 
 
 const slides = [
@@ -124,12 +125,12 @@ export default function DossierPage() {
                     ))}
                 </div>
                 <div className="flex gap-4">
-                    <button onClick={() => window.print()} className="hidden sm:block text-[10px] font-bold uppercase tracking-widest border border-white/20 px-4 py-2 rounded-full hover:bg-white/10 transition-colors">
+                    <DossierPrintButton className="hidden sm:block text-[10px] font-bold uppercase tracking-widest border border-white/20 px-4 py-2 rounded-full hover:bg-white/10 transition-colors">
                         Descargar PDF
-                    </button>
-                    <a href="/" className="bg-amber-500 text-slate-950 px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-white transition-colors">
+                    </DossierPrintButton>
+                    <Link href="/" className="bg-amber-500 text-slate-950 px-6 py-2 rounded-full text-[10px] font-bold uppercase tracking-widest hover:bg-white transition-colors">
                         Ver Web
-                    </a>
+                    </Link>
                 </div>
             </nav>
 
@@ -224,7 +225,7 @@ function renderSlide(slide) {
                             whileInView={{ opacity: 1 }} 
                             viewport={{ once: true }}
                             transition={{ delay: 0.4 }}
-                            className="text-xl md:text-2xl text-slate-400 font-[Playfair_Display] italic"
+                            className="text-xl md:text-2xl text-slate-400 font-[var(--font-cormorant)] italic"
                         >
                             {slide.subtitle}
                         </motion.p>
@@ -264,6 +265,7 @@ function renderSlide(slide) {
                             alt="Angel Ruiz" 
                             fill 
                             className="object-contain object-bottom filter contrast-125 drop-shadow-[0_0_50px_rgba(245,158,11,0.2)]"
+                            sizes="(max-width: 768px) 100vw, 50vw"
                             priority
                         />
                     </motion.div>
@@ -279,7 +281,7 @@ function renderSlide(slide) {
                         className="relative"
                     >
                         <div className="text-amber-500/20 text-9xl font-[Cinzel] absolute -top-20 -left-10 select-none">“</div>
-                        <p className="font-[Playfair_Display] text-3xl md:text-5xl italic text-slate-200 leading-tight relative z-10">
+                        <p className="font-[var(--font-cormorant)] text-3xl md:text-5xl italic text-slate-200 leading-tight relative z-10">
                             {slide.quote}
                         </p>
                     </motion.div>
@@ -308,7 +310,7 @@ function renderSlide(slide) {
                     <div className="text-center mb-16 space-y-4">
                         <span className="text-amber-500 text-[10px] uppercase tracking-[0.3em] font-bold">{slide.label}</span>
                         <h2 className="font-[Cinzel] text-4xl md:text-6xl font-bold text-white">{slide.title}</h2>
-                        <p className="text-slate-500 font-[Playfair_Display] italic">{slide.subtitle}</p>
+                        <p className="text-slate-500 font-[var(--font-cormorant)] italic">{slide.subtitle}</p>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                         {slide.items.map((item, i) => (
@@ -369,7 +371,7 @@ function renderSlide(slide) {
                     <div className="text-center mb-12">
                         <span className="text-amber-500 text-[10px] uppercase tracking-[0.3em] font-bold">{slide.label}</span>
                         <h2 className="font-[Cinzel] text-4xl md:text-5xl font-bold text-white mt-4">{slide.title}</h2>
-                        <p className="text-slate-500 font-[Playfair_Display] italic mt-2">{slide.subtitle}</p>
+                        <p className="text-slate-500 font-[var(--font-cormorant)] italic mt-2">{slide.subtitle}</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {slide.packs.map((pack, i) => (
@@ -428,7 +430,7 @@ function renderSlide(slide) {
                                         <Star key={star} className="w-4 h-4 fill-amber-500 text-amber-500" />
                                     ))}
                                 </div>
-                                <p className="font-[Playfair_Display] text-2xl italic text-slate-200 leading-relaxed mb-8">
+                                <p className="font-[var(--font-cormorant)] text-2xl italic text-slate-200 leading-relaxed mb-8">
                                     {review.text}
                                 </p>
                                 <div className="space-y-1">
@@ -448,7 +450,7 @@ function renderSlide(slide) {
                         <h2 className="font-[Cinzel] text-6xl md:text-8xl font-bold text-white mt-6 mb-8 leading-tight">
                             Hagamos Algo <span className="text-amber-500">Imposible</span>
                         </h2>
-                        <p className="text-slate-400 font-[Playfair_Display] text-xl md:text-2xl italic mb-16">
+                        <p className="text-slate-400 font-[var(--font-cormorant)] text-xl md:text-2xl italic mb-16">
                             {slide.subtitle}
                         </p>
                     </motion.div>

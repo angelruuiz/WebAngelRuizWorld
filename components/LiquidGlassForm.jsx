@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { UserIcon, Phone, Mail, Calendar, MessageSquare, Sparkles, CheckCircle2, WhatsApp } from './Icons';
 import { trackEvent } from '../lib/tracker';
 
@@ -54,10 +53,8 @@ export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromi
 
     if (status === "success") {
         return (
-            <motion.div 
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="w-full relative overflow-hidden rounded-3xl backdrop-blur-2xl bg-slate-950/60 border border-amber-500/30 p-8 sm:p-10 shadow-[0_8px_32px_0_rgba(0,0,0,0.5),inset_0_1px_0_0_rgba(255,255,255,0.15)] flex flex-col items-center justify-center text-center min-h-[380px]"
+            <div 
+                className="w-full relative overflow-hidden rounded-3xl backdrop-blur-2xl bg-slate-950/60 border border-amber-500/30 p-8 sm:p-10 shadow-[0_8px_32px_0_rgba(0,0,0,0.5),inset_0_1px_0_0_rgba(255,255,255,0.15)] flex flex-col items-center justify-center text-center min-h-[380px] transition-all duration-300"
             >
                 <div className="w-16 h-16 rounded-full bg-amber-500/20 flex items-center justify-center mb-5 border border-amber-500/50 shadow-[0_0_20px_rgba(245,158,11,0.25)]">
                     <CheckCircle2 className="w-8 h-8 text-amber-400" />
@@ -72,7 +69,7 @@ export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromi
                 >
                     Enviar otra consulta
                 </button>
-            </motion.div>
+            </div>
         );
     }
 

@@ -10,6 +10,11 @@ export const metadata = {
   openGraph: {
     url: 'https://angelruiz.world/blog',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog | Ángel Ruiz, Mago e Ilusionista',
+    description: 'Descubre precios, consejos clave y todo lo que necesitas saber sobre el ilusionismo para eventos en Madrid.',
+  },
 };
 
 export default function BlogIndex() {

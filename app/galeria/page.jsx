@@ -1,7 +1,12 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import NavFooterClient from '@/components/NavFooterClient';
-import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import GalleryGrid from '@/components/GalleryGrid';
+
+const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod => mod.MagicCursor), { ssr: false });
+const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
 
 export const metadata = {
     title: { absolute: 'Galería | Magia en Eventos y Bodas · Ángel Ruiz' },
@@ -232,37 +237,16 @@ export default function GaleriaPage() {
                 </div>
 
                 {/* Pinterest-style Mosaic Layout - Always 2 columns on mobile now */}
-                <div className="columns-2 lg:columns-3 gap-3 md:gap-6 space-y-3 md:space-y-6">
-                    {images.map((img, idx) => (
-                        <div 
-                            key={idx} 
-                            className="relative overflow-hidden rounded-xl md:rounded-2xl border border-white/[0.03] group bg-[var(--surface-1)] break-inside-avoid shadow-2xl transition-all duration-500 hover:border-[#d4a853]/30 cursor-pointer"
-                        >
-                            <div className={`relative w-full ${img.aspect}`}>
-                                <Image
-                                    src={img.src}
-                                    alt={img.alt}
-                                    fill
-                                    quality={82}
-                                    className={`object-cover transition-transform duration-1000 group-hover:scale-110 ${img.position || ''}`}
-                                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 400px"
-                                    priority={idx < 2}
-                                    loading={idx < 2 ? "eager" : "lazy"}
-                                />
-
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                <GalleryGrid images={images} />
 
                 <section className="mt-20 md:mt-24 text-center">
                     <h2 className="text-xl md:text-2xl font-[Cinzel] text-white mb-8 uppercase tracking-widest">¿Quieres que tu evento sea el próximo?</h2>
-                    <a 
+                    <Link 
                         href="/#contacto" 
                         className="btn-glass inline-block"
                     >
                         Solicitar Disponibilidad
-                    </a>
+                    </Link>
                 </section>
             </main>
         </NavFooterClient>

@@ -1,10 +1,12 @@
-import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import FAQItem from '@/components/FAQItem';
 import Link from 'next/link';
 import NavFooterClient from '@/components/NavFooterClient';
-import ContactButtonClient from '@/components/ContactButtonClient';
-import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
+
+const ContactButtonClient = dynamic(() => import('@/components/ContactButtonClient'), { ssr: false });
+const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod => mod.MagicCursor), { ssr: false });
+const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
 
 export const metadata = {
     title: { absolute: '¿Cuánto Cuesta un Mago en Madrid? Tarifas y Precios' },
@@ -17,6 +19,12 @@ export const metadata = {
         title: '¿Cuánto Cuesta un Mago en Madrid? Tarifas y Precios',
         description: 'Todo lo que necesitas saber para contratar un ilusionista en Madrid para bodas o empresas. Precios directos sin comisiones.',
         images: [{ url: '/images/foto-bio.webp' }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: '¿Cuánto Cuesta un Mago en Madrid? Tarifas y Precios',
+        description: 'Precios reales desde 300€ para contratar un mago en Madrid. Sin agencias ni comisiones. Presupuesto personalizado en menos de 2 horas.',
+        images: ['/images/foto-bio.webp']
     }
 };
 

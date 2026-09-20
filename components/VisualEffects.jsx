@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect, useRef } from 'react';
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 
 export const MagicCursor = ({ isLight = false }) => {
     const cursorRef = useRef(null);
@@ -68,29 +67,39 @@ export const MagicCursor = ({ isLight = false }) => {
 };
 
 export const ReadingProgress = () => {
-    const { scrollYProgress } = useScroll();
-    const scaleX = useSpring(scrollYProgress, {
-        stiffness: 100,
-        damping: 30,
-        restDelta: 0.001
-    });
+    const progressRef = useRef(null);
+
+    useEffect(() => {
+        let ticking = false;
+        const updateProgress = () => {
+            const scrollTotal = document.documentElement.scrollHeight - window.innerHeight;
+            if (scrollTotal <= 0) return;
+            const progress = Math.min(Math.max(window.scrollY / scrollTotal, 0), 1);
+            if (progressRef.current) {
+                progressRef.current.style.transform = `scaleX(${progress})`;
+            }
+            ticking = false;
+        };
+
+        const onScroll = () => {
+            if (!ticking) {
+                requestAnimationFrame(updateProgress);
+                ticking = true;
+            }
+        };
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        updateProgress();
+        return () => window.removeEventListener('scroll', onScroll);
+    }, []);
 
     return (
-        <div className="fixed bottom-0 left-0 right-0 h-1 bg-white/10 z-[100006]">
-            {/* The Laser Track Background */}
+        <div className="fixed bottom-0 left-0 right-0 h-1 bg-white/10 z-[100006] pointer-events-none">
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
-            
-            <motion.div
-                className="absolute top-0 bottom-0 left-0 bg-gradient-to-r from-[#b8860b] via-[#d4a853] to-[#e8cc8a] origin-left shadow-[0_0_25px_rgba(212,168,83,0.5)]"
-                style={{ scaleX, width: '100%' }}
-            />
-            
-            {/* Moving Sparkle across the bottom edge */}
-            <motion.div 
-                className="absolute top-0 bottom-0 w-32 bg-gradient-to-r from-transparent via-white/90 to-transparent blur-[6px] pointer-events-none"
-                style={{ 
-                    left: useTransform(scaleX, [0, 1], ["-15%", "100%"]),
-                }}
+            <div
+                ref={progressRef}
+                className="absolute top-0 bottom-0 left-0 bg-gradient-to-r from-[#b8860b] via-[#d4a853] to-[#e8cc8a] origin-left shadow-[0_0_25px_rgba(212,168,83,0.5)] w-full will-change-transform"
+                style={{ transform: 'scaleX(0)' }}
             />
         </div>
     );
@@ -141,16 +150,10 @@ export const ParticleBackground = () => {
     );
 };
 
-export const FadeIn = ({ children, delay = 0, y = 20, className = "", scale = 1 }) => {
+export const FadeIn = ({ children, className = "" }) => {
     return (
-        <motion.div
-            initial={{ opacity: 0, y: y, scale: scale }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.6, delay: delay, ease: [0.16, 1, 0.3, 1] }}
-            className={className}
-        >
+        <div className={`transition-all duration-500 ease-out ${className}`}>
             {children}
-        </motion.div>
+        </div>
     );
 };

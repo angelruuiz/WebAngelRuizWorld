@@ -1,6 +1,6 @@
-﻿"use client";
+"use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
@@ -16,16 +16,36 @@ export default function BioCarousel({
         "/images/foto-bio-2.webp"
     ];
     const [index, setIndex] = useState(0);
+    const [isVisible, setIsVisible] = useState(true);
+    const containerRef = useRef(null);
 
     useEffect(() => {
+        const el = containerRef.current;
+        if (!el) return;
+        const observer = new IntersectionObserver(
+            ([entry]) => setIsVisible(entry.isIntersecting),
+            { threshold: 0.1 }
+        );
+        observer.observe(el);
+        return () => observer.disconnect();
+    }, []);
+
+    useEffect(() => {
+        const handler = () => setIsVisible(!document.hidden);
+        document.addEventListener('visibilitychange', handler);
+        return () => document.removeEventListener('visibilitychange', handler);
+    }, []);
+
+    useEffect(() => {
+        if (!isVisible) return;
         const timer = setInterval(() => {
             setIndex((prev) => (prev + 1) % images.length);
         }, interval);
         return () => clearInterval(timer);
-    }, [interval, images.length]);
+    }, [interval, images.length, isVisible]);
 
     return (
-        <div className={`relative w-full h-full ${aspectRatio ? aspectRatio : ""} overflow-hidden ${className}`}>
+        <div ref={containerRef} className={`relative w-full h-full ${aspectRatio ? aspectRatio : ""} overflow-hidden ${className}`}>
             <AnimatePresence mode="popLayout">
                 <motion.div
                     key={index}

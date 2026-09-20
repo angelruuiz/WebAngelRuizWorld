@@ -164,7 +164,7 @@ export default async function BlogPost({ params }) {
         <div 
           className="blog-content prose prose-invert prose-lg max-w-none 
             font-light leading-relaxed text-slate-300
-            prose-headings:font-[Playfair_Display] prose-headings:italic
+            prose-headings:font-[var(--font-cormorant)] prose-headings:italic
             prose-h2:text-4xl prose-h2:mt-16 prose-h2:mb-8
             prose-strong:font-bold
             prose-p:mb-8 prose-p:text-justify"

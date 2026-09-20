@@ -1,8 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Sparkles, WhatsApp } from '@/components/Icons';
+import { useState } from 'react';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -12,9 +10,9 @@ const VideoShowModal = dynamic(() => import('@/components/VideoShowModal'), { ss
 
 import LiquidGlassForm from '@/components/LiquidGlassForm';
 
-const HeroClient = ({ onOpenModal, onOpenVideo }) => {
+const HeroClient = ({ onOpenVideo }) => {
     return (
-        <section className="relative min-h-[100dvh] flex flex-col justify-end lg:justify-center overflow-hidden z-10 pt-20 pb-28 sm:pb-32 lg:py-0">
+        <section className="relative min-h-[100dvh] flex flex-col justify-end lg:justify-center overflow-hidden z-10 pt-20 pb-20 sm:pb-28 lg:py-0">
             <div className="absolute inset-0 z-0 overflow-hidden">
                 <picture>
                     <source media="(min-width: 768px)" srcSet="/images/hero-angel-ruiz-2026.webp" width={2560} height={1440} />
@@ -33,19 +31,19 @@ const HeroClient = ({ onOpenModal, onOpenVideo }) => {
                 <div className='absolute inset-0 bg-gradient-to-b from-[#030712]/80 via-transparent to-[#030712] lg:via-[#030712]/40' />
                 {/* Gradiente lateral para Desktop */}
                 <div className='hidden lg:block absolute inset-0 bg-gradient-to-r from-[#030712]/90 via-[#030712]/40 to-transparent' />
-                {/* Gradiente inferior para Móvil: deja el tercio superior limpio para la foto y el tercio inferior oscuro para textos y botones */}
+                {/* Gradiente inferior para Móvil */}
                 <div className='lg:hidden absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/85 via-50% to-transparent' />
             </div>
             
             <div className="px-5 sm:px-8 md:px-12 lg:px-16 relative z-10 w-full max-w-7xl mx-auto lg:scale-[0.90] lg:origin-center transition-transform">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                    {/* Desktop: Formulario en Columna Izquierda (en móvil se oculta aquí para no crear scroll forzado) */}
-                    <div className="hidden lg:block lg:col-span-5 w-full max-w-lg mx-auto lg:mx-0 z-20">
+                    {/* Formulario Único en el DOM: columna izquierda en Desktop (lg:order-1), abajo en móvil (order-2) */}
+                    <div id="presupuesto-form" className="w-full max-w-lg mx-auto lg:mx-0 z-20 order-2 lg:order-1 lg:col-span-5 pt-4 lg:pt-0">
                         <LiquidGlassForm />
                     </div>
 
-                    {/* Títulos y Marca Personal (En Desktop columna derecha, en Móvil centrado/adaptado con CTAs directos) */}
-                    <div className="lg:col-span-7 flex flex-col items-start text-left lg:pl-6">
+                    {/* Títulos y Marca Personal: columna derecha en Desktop (lg:order-2), arriba en móvil (order-1) */}
+                    <div className="order-1 lg:order-2 lg:col-span-7 flex flex-col items-start text-left lg:pl-6">
                         {/* Seasonal urgency micro-badge */}
                         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#d4a853]/10 border border-[#d4a853]/30 text-[#d4a853] text-[11px] sm:text-xs font-semibold tracking-wider uppercase mb-3 sm:mb-5 backdrop-blur-md">
                             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
@@ -68,7 +66,7 @@ const HeroClient = ({ onOpenModal, onOpenVideo }) => {
                             "LA MAGIA QUE HACE QUE TU EVENTO SEA INOLVIDABLE."
                         </p>
 
-                        {/* Botón Discreto: Ver Show en Directo */}
+                        {/* Botón: Ver Show en Directo */}
                         <div className="mt-3 sm:mt-5 flex flex-wrap items-center gap-3">
                             <button
                                 type="button"
@@ -79,15 +77,15 @@ const HeroClient = ({ onOpenModal, onOpenVideo }) => {
                             </button>
                         </div>
 
-                        {/* Indicador de deslizamiento exclusivo para Móvil (PC intacto) */}
+                        {/* Indicador de scroll para Móvil */}
                         <div className="w-full mt-4 flex justify-center lg:hidden">
                             <a
                                 id="hero-scroll-trigger"
-                                href="#presupuesto-mobile"
+                                href="#presupuesto-form"
                                 className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-slate-950/70 border border-[#d4a853]/30 backdrop-blur-md active:scale-95 transition-transform shadow-[0_4px_20px_rgba(0,0,0,0.6)]"
                             >
                                 <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.14em] text-[#d4a853]">
-                                    Desliza para solicitar información
+                                    Pedir presupuesto abajo
                                 </span>
                                 <svg 
                                     className="w-3.5 h-3.5 text-[#d4a853] animate-bounce shrink-0" 
@@ -113,7 +111,7 @@ const HeroClient = ({ onOpenModal, onOpenVideo }) => {
     );
 };
 
-export default function HomeClient({ seoContent }) {
+export default function HomeClient({ children }) {
     const [isContactOpen, setIsContactOpen] = useState(false);
     const [isVideoOpen, setIsVideoOpen] = useState(false);
 
@@ -126,20 +124,12 @@ export default function HomeClient({ seoContent }) {
 
             <main>
                 <HeroClient 
-                    onOpenModal={() => setIsContactOpen(true)} 
                     onOpenVideo={() => setIsVideoOpen(true)} 
                 />
-
-                {/* Formulario visible en Móvil justo al hacer scroll */}
-                <section id="presupuesto-mobile" className="lg:hidden px-4 py-10 bg-gradient-to-b from-[#030712] via-slate-950 to-transparent relative z-20">
-                    <div className="max-w-lg mx-auto">
-                        <LiquidGlassForm />
-                    </div>
-                </section>
                 
-                {/* Contenido SEO directo sin retraso de opacidad */}
+                {/* Contenido Server-Rendered directo */}
                 <div className="w-full">
-                    {seoContent}
+                    {children}
                 </div>
             </main>
 
@@ -153,16 +143,13 @@ export default function HomeClient({ seoContent }) {
 
 export const PerpetualCard = ({ children, className = "" }) => {
     return (
-        <motion.div 
-            whileHover={{ y: -4, scale: 1.01 }}
-            whileTap={{ scale: 0.97 }}
-            transition={{ type: "spring", duration: 0.5, bounce: 0.2 }}
-            className={`p-10 rounded-[2.5rem] bg-white/5 backdrop-blur-xl border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] relative overflow-hidden group ${className}`}
+        <div 
+            className={`p-6 sm:p-10 rounded-[2rem] sm:rounded-[2.5rem] bg-white/5 backdrop-blur-xl border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] hover:border-amber-500/30 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(212,168,83,0.1)] transition-all duration-300 relative overflow-hidden group ${className}`}
         >
             <div 
                 className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent pointer-events-none opacity-40 group-hover:opacity-75 transition-opacity duration-500 will-change-[opacity]"
             />
             {children}
-        </motion.div>
+        </div>
     );
 };

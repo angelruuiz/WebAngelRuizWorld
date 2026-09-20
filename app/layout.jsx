@@ -59,8 +59,6 @@ export const viewport = {
 
 import NewsletterForm from '@/components/NewsletterForm';
 import WhatsAppButton from '@/components/WhatsAppButton';
-import dynamic from 'next/dynamic';
-const DeferredStyles = dynamic(() => import('@/components/DeferredStyles'), { ssr: false });
 
 import { Cinzel, Cormorant_Garamond, Outfit } from 'next/font/google';
 
@@ -271,8 +269,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`${cinzel.variable} ${cormorant.variable} ${outfit.variable}`}>
       <head>
-        <link rel="preload" as="image" href="/images/hero-angel-ruiz-mobile-2026.webp" media="(max-width: 767px)" type="image/webp" fetchPriority="high" />
-        <link rel="preload" as="image" href="/images/hero-angel-ruiz-2026.webp" media="(min-width: 768px)" type="image/webp" fetchPriority="high" />
         <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
         <script
           type="application/ld+json"
@@ -283,7 +279,6 @@ export default function RootLayout({ children }) {
 
         {children}
         <WhatsAppButton />
-        <DeferredStyles />
         <Analytics />
         <PageViewTracker />
       </body>

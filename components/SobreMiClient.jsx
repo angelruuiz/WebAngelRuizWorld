@@ -1,12 +1,15 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
-import { ContactFormModal } from '@/components/Modals';
+import dynamic from 'next/dynamic';
+
+const ContactFormModal = dynamic(() => import('@/components/Modals').then(mod => mod.ContactFormModal), { ssr: false });
+const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod => mod.MagicCursor), { ssr: false });
+const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
 
 const MagicalCarousel = () => {
     const images = [
@@ -14,16 +17,36 @@ const MagicalCarousel = () => {
         "/images/foto-bio-2.webp"
     ];
     const [index, setIndex] = useState(0);
+    const [isVisible, setIsVisible] = useState(true);
+    const containerRef = useRef(null);
 
     useEffect(() => {
+        const el = containerRef.current;
+        if (!el) return;
+        const observer = new IntersectionObserver(
+            ([entry]) => setIsVisible(entry.isIntersecting),
+            { threshold: 0.1 }
+        );
+        observer.observe(el);
+        return () => observer.disconnect();
+    }, []);
+
+    useEffect(() => {
+        const handler = () => setIsVisible(!document.hidden);
+        document.addEventListener('visibilitychange', handler);
+        return () => document.removeEventListener('visibilitychange', handler);
+    }, []);
+
+    useEffect(() => {
+        if (!isVisible) return;
         const timer = setInterval(() => { 
             setIndex((prev) => (prev + 1) % images.length); 
         }, 2000);
         return () => clearInterval(timer);
-    }, [images.length]);
+    }, [images.length, isVisible]);
 
     return (
-        <div className="relative w-full h-full">
+        <div ref={containerRef} className="relative w-full h-full">
             <AnimatePresence mode="popLayout">
                 <motion.div
                     key={index}

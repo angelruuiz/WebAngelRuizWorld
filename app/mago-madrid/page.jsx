@@ -1,10 +1,12 @@
-import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import NavFooterClient from '@/components/NavFooterClient';
-import ContactButtonClient from '@/components/ContactButtonClient';
-import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import BioCarousel from '@/components/BioCarousel';
+
+const ContactButtonClient = dynamic(() => import('@/components/ContactButtonClient'), { ssr: false });
+const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod => mod.MagicCursor), { ssr: false });
+const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
+const BioCarousel = dynamic(() => import('@/components/BioCarousel'), { ssr: false });
 
 export const metadata = {
     title: { absolute: 'Mago Profesional en Madrid | Bodas y Empresas' },
@@ -18,6 +20,12 @@ export const metadata = {
         title: 'Mago Profesional en Madrid | Bodas y Empresas',
         description: '¿Buscas un espectáculo que rompa esquemas? Ilusionismo de autor y magia de cerca en Madrid. Trato directo sin intermediarios.',
         images: [{ url: '/images/foto-bio.webp', width: 1200, height: 630 }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Mago Profesional en Madrid | Bodas y Empresas',
+        description: '¿Buscas un espectáculo que rompa esquemas? Ilusionismo de autor y magia de cerca a centímetros de tus ojos en Madrid. Alumno de DaOrtiz. Presupuesto en 2h.',
+        images: ['/images/foto-bio.webp']
     }
 };
 

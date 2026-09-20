@@ -6,7 +6,11 @@ import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
-import { MagicModal, ContactFormModal } from '@/components/Modals';
+import dynamic from 'next/dynamic';
+
+const MagicModal = dynamic(() => import('@/components/Modals').then(mod => mod.MagicModal), { ssr: false });
+const ContactFormModal = dynamic(() => import('@/components/Modals').then(mod => mod.ContactFormModal), { ssr: false });
+
 import { Star, Quote, CheckCircle2 } from '@/components/Icons';
 
 const TrustedBrands = () => {
@@ -17,8 +21,8 @@ const TrustedBrands = () => {
         { name: "Catering Senescal Torrelodones", logo: "/images/logo-senescal.webp" },
         { name: "Alcampo", logo: "/images/logo-alcampo.webp" },
         { name: "Ahorramás", logo: "/images/logo-ahorramas.webp" },
-        { name: "Badulaque", logo: "/images/logos/logo-badulaque.jpeg" },
-        { name: "Zeppelin", logo: "/images/logos/logo-zeppelin.png" }
+        { name: "Badulaque", logo: "/images/logos/logo-badulaque.webp" },
+        { name: "Zeppelin", logo: "/images/logos/logo-zeppelin.webp" }
     ];
     return (
         <section className="py-24 bg-slate-950/80 border-y border-white/5 overflow-hidden relative z-10">
@@ -131,7 +135,7 @@ export default function ValoracionesClient({ reviewsData }) {
 
                 <section className="max-w-7xl mx-auto px-6 mb-16 text-center relative z-10">
                     <p className="text-xs md:text-sm font-bold tracking-[0.3em] text-amber-500 uppercase mb-4 flex items-center justify-center gap-3"><span className="w-8 h-[1px] bg-amber-500"></span> TESTIMONIOS REALES <span className="w-8 h-[1px] bg-amber-500"></span></p>
-                    <h1 className="text-4xl md:text-7xl font-[Cinzel] text-white font-bold mb-6 uppercase">Opiniones de Angel Ruiz Ilusionista</h1>
+                    <h2 className="text-4xl md:text-7xl font-[Cinzel] text-white font-bold mb-6 uppercase">Opiniones de Angel Ruiz Ilusionista</h2>
                     <p className="text-slate-400 text-lg max-w-2xl mx-auto font-light">Cientos de clientes han vivido momentos imposibles. Aquí algunas de sus historias de éxito en eventos y bodas.</p>
                 </section>
 

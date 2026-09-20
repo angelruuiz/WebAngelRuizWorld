@@ -1,4 +1,4 @@
-﻿@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -124,7 +124,10 @@ p {
 }
 
 
-/* ÔöÇÔöÇ Critical Transitions ÔöÇÔöÇ */
+/* Critical Transitions */
 a, button, input, textarea, select {
     transition: all 0.35s var(--ease-glass);
 }
+
+/* Deferred Styles - Unified in single CSS bundle */
+@import './deferred.css';

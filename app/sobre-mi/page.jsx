@@ -56,7 +56,7 @@ export default function SobreMiPage() {
                 
                 <div className="space-y-6">
                     <p className="text-justify first-letter:text-5xl first-letter:font-bold first-letter:text-amber-500 first-letter:mr-3 first-letter:float-left">
-                        Como <Link href="/mago-madrid" className="text-amber-400 font-bold font-['Playfair_Display'] underline decoration-amber-500/30">experto en magia en Madrid</Link>, tengo muy claro que mi trabajo es mucho más que hacer trucos: se trata de crear emociones reales. Me dedico por completo a hacer posible lo imposible, ofreciendo <Link href="/particulares/bodas" className="text-amber-400 font-bold hover:underline">magia premium para bodas</Link> y eventos de empresa exclusivos que buscan destacar.
+                        Como <Link href="/mago-madrid" className="text-amber-400 font-bold italic font-serif underline decoration-amber-500/30">experto en magia en Madrid</Link>, tengo muy claro que mi trabajo es mucho más que hacer trucos: se trata de crear emociones reales. Me dedico por completo a hacer posible lo imposible, ofreciendo <Link href="/particulares/bodas" className="text-amber-400 font-bold hover:underline">magia premium para bodas</Link> y eventos de empresa exclusivos que buscan destacar.
                     </p>
                     
                     <p className="text-justify">
