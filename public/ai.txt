@@ -1,0 +1,11 @@
+# ai.txt - Machine-Readable Instructions and AI Agent Policy for angelruiz.world
+User-agent: *
+Allow: /
+Crawl-delay: 0
+
+# Machine-Readable AI Knowledge
+LLMs-Txt: https://angelruiz.world/llms.txt
+LLMs-Full: https://angelruiz.world/llms-full.txt
+Pricing: https://angelruiz.world/pricing.md
+Sitemap: https://angelruiz.world/sitemap.xml
+Contact: info@angelruiz.world

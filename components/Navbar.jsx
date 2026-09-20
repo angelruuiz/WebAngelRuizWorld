@@ -72,12 +72,12 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
 
     return (
         <>
-            <MagicSpiral isVisible={isTransitioning} />
-            <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 py-3 lg:py-2.5 px-4 sm:px-6 lg:px-8 ${isScrolled ? 'bg-[rgba(3,7,18,0.85)] backdrop-blur-2xl border-b border-white/[0.06] shadow-[0_4px_30px_rgba(0,0,0,0.5)]' : 'bg-transparent backdrop-blur-none'}`}>
+            {isTransitioning && <MagicSpiral isVisible={isTransitioning} />}
+            <nav aria-label="Navegación principal" className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 py-3 lg:py-2.5 px-4 sm:px-6 lg:px-8 ${isScrolled ? 'bg-[rgba(3,7,18,0.85)] backdrop-blur-2xl border-b border-white/[0.06] shadow-[0_4px_30px_rgba(0,0,0,0.5)]' : 'bg-transparent backdrop-blur-none'}`}>
                 <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center shrink-0 z-50 transition-transform hover:scale-105">
-                        <Image 
+                    <Link href="/" aria-label="Ángel Ruiz - Inicio" className="flex items-center shrink-0 z-50 transition-transform hover:scale-105">
+                        <img 
                             src="/images/logo-pequeno.webp" 
                             alt="Ángel Ruiz mago ilusionista profesional Madrid - logo" 
                             width={38} 
@@ -127,7 +127,9 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                         />
 
                         <button 
+                            type="button"
                             onClick={onOpenContact} 
+                            aria-label="Abrir formulario de contacto"
                             className="relative px-3.5 lg:px-4 py-2 overflow-hidden rounded-full cursor-pointer border border-amber-300/50 shadow-[0_0_15px_rgba(245,158,11,0.3)] z-10 bg-[rgba(3,7,18,0.5)] hover:bg-[#d4a853] backdrop-blur-md text-[11px] lg:text-xs text-slate-100 hover:text-slate-950 font-bold tracking-[0.1em] uppercase transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5 lg:gap-2 group"
                         >
                             <span className="relative z-10">Contacto</span>
@@ -138,7 +140,9 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                     {/* Mobile Quick Contact Button */}
                     <div className="md:hidden flex items-center gap-3">
                         <button 
+                            type="button"
                             onClick={onOpenContact}
+                            aria-label="Abrir formulario de contacto rápido"
                             className="px-3.5 py-1.5 rounded-full border border-amber-400/40 bg-amber-500/10 text-amber-400 text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 hover:bg-amber-500/20 transition-colors"
                         >
                             <span>Contacto</span>
@@ -149,36 +153,36 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
             </nav>
 
             {/* Mobile Bottom Tab Bar */}
-            <div className="md:hidden bottom-tab-bar flex justify-around items-center">
-                <Link href="/" className={`tab-item flex-1 ${pathname === '/' ? 'active' : ''}`}>
+            <nav aria-label="Navegación inferior móvil" className="md:hidden bottom-tab-bar flex justify-around items-center">
+                <Link href="/" aria-label="Ir a Inicio" className={`tab-item flex-1 ${pathname === '/' ? 'active' : ''}`}>
                     <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth={1.5} stroke='currentColor' className='w-5 h-5'>
                         <path d='M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6' />
                     </svg>
                     <span>Inicio</span>
                 </Link>
-                <button onClick={() => setIsMoreMenuOpen(true)} className={`tab-item flex-1 ${pathname.startsWith('/particulares') || pathname.startsWith('/empresas') ? 'active' : ''}`}>
+                <button type="button" aria-label="Ver lista de servicios" onClick={() => setIsMoreMenuOpen(true)} className={`tab-item flex-1 ${pathname.startsWith('/particulares') || pathname.startsWith('/empresas') ? 'active' : ''}`}>
                     <Sparkles className="w-5 h-5" />
                     <span>Servicios</span>
                 </button>
-                <Link href="/galeria" className={`tab-item flex-1 ${pathname === '/galeria' ? 'active' : ''}`}>
+                <Link href="/galeria" aria-label="Ver galería de fotos" className={`tab-item flex-1 ${pathname === '/galeria' ? 'active' : ''}`}>
                     <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth={1.5} stroke='currentColor' className='w-5 h-5'>
                         <path d='M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6z' /> <path d='M14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6z' /> <path d='M4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2z' /> <path d='M14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z' />
                     </svg>
                     <span>Galería</span>
                 </Link>
-                <Link href="/blog" className={`tab-item flex-1 ${pathname.startsWith('/blog') ? 'active' : ''}`} onClick={(e) => handleMagicTransition(e, '/blog')}>
+                <Link href="/blog" aria-label="Leer artículos del blog" className={`tab-item flex-1 ${pathname.startsWith('/blog') ? 'active' : ''}`} onClick={(e) => handleMagicTransition(e, '/blog')}>
                     <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth={1.5} stroke='currentColor' className='w-5 h-5'>
                         <path d='M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253' />
                     </svg>
                     <span>Blog</span>
                 </Link>
-                <button onClick={() => setIsMoreMenuOpen(true)} className="tab-item flex-1">
+                <button type="button" aria-label="Abrir más opciones de navegación" onClick={() => setIsMoreMenuOpen(true)} className="tab-item flex-1">
                     <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth={1.5} stroke='currentColor' className='w-5 h-5'>
                         <circle cx='12' cy='5' r='1' /> <circle cx='12' cy='12' r='1' /> <circle cx='12' cy='19' r='1' />
                     </svg>
                     <span>Más</span>
                 </button>
-            </div>
+            </nav>
 
             {/* Mobile "Más" Backdrop */}
             {isMoreMenuOpen && (
@@ -195,7 +199,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                 }`}
             >
                 <div className="absolute top-3 left-1/2 -translate-x-1/2 w-12 h-1 bg-white/20 rounded-full" />
-                <button onClick={() => setIsMoreMenuOpen(false)} className="absolute top-4 right-4 text-slate-400 hover:text-white p-2">
+                <button type="button" aria-label="Cerrar panel de opciones" onClick={() => setIsMoreMenuOpen(false)} className="absolute top-4 right-4 text-slate-400 hover:text-white p-2">
                     <X className="w-5 h-5" />
                 </button>
                 <div className="flex flex-col px-6 mt-6 mb-8">

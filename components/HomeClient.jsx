@@ -135,8 +135,8 @@ export default function HomeClient({ children }) {
 
             <Footer onOpenContact={() => setIsContactOpen(true)} />
 
-            <ContactFormModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
-            <VideoShowModal isOpen={isVideoOpen} onClose={() => setIsVideoOpen(false)} onOpenContact={() => setIsContactOpen(true)} />
+            {isContactOpen && <ContactFormModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />}
+            {isVideoOpen && <VideoShowModal isOpen={isVideoOpen} onClose={() => setIsVideoOpen(false)} onOpenContact={() => setIsContactOpen(true)} />}
         </div>
     );
 }

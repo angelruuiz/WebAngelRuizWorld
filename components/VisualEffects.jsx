@@ -114,37 +114,35 @@ export const ParticleBackground = () => {
         }
     }, []);
 
-    const [particles] = useState(() => {
-        const colors = ['bg-[#d4a853]/20', 'bg-[#c9956b]/15', 'bg-[#e8cc8a]/12'];
-        return Array.from({ length: 12 }).map((_, i) => ({ 
-            id: i, 
-            x: Math.random() * 100, 
-            y: Math.random() * 100, 
-            size: Math.random() * 2 + 1, 
-            duration: Math.random() * 14 + 10,
-            delay: Math.random() * 8,
-            color: colors[i % colors.length]
-        }));
-    });
-
     return (
         <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden select-none">
             <div className="absolute inset-0 bg-[#030712] z-0" />
-            {isDesktop && particles.map((p) => (
-                <div 
-                    key={p.id} 
-                    className={`absolute rounded-full ${p.color}`}
-                    style={{ 
-                        left: `${p.x}%`, 
-                        top: `${p.y}%`, 
-                        width: p.size, 
-                        height: p.size, 
-                        animation: `floatParticle ${p.duration}s linear infinite`,
-                        animationDelay: `${p.delay}s`,
-                        willChange: 'transform, opacity' 
-                    }} 
-                />
-            ))}
+            {isDesktop && (
+                <div className="absolute inset-0 overflow-hidden">
+                    {[
+                        { id: 1, x: 15, y: 20, size: 2, duration: 18, delay: 0, color: 'bg-[#d4a853]/20' },
+                        { id: 2, x: 75, y: 35, size: 3, duration: 22, delay: 2, color: 'bg-[#c9956b]/15' },
+                        { id: 3, x: 45, y: 70, size: 2, duration: 16, delay: 4, color: 'bg-[#e8cc8a]/12' },
+                        { id: 4, x: 85, y: 80, size: 2.5, duration: 20, delay: 1, color: 'bg-[#d4a853]/20' },
+                        { id: 5, x: 30, y: 40, size: 1.5, duration: 24, delay: 3, color: 'bg-[#c9956b]/15' },
+                        { id: 6, x: 60, y: 15, size: 2, duration: 19, delay: 5, color: 'bg-[#e8cc8a]/12' }
+                    ].map((p) => (
+                        <div 
+                            key={p.id} 
+                            className={`absolute rounded-full ${p.color}`}
+                            style={{ 
+                                left: `${p.x}%`, 
+                                top: `${p.y}%`, 
+                                width: p.size, 
+                                height: p.size, 
+                                animation: `floatParticle ${p.duration}s linear infinite`,
+                                animationDelay: `${p.delay}s`,
+                                willChange: 'transform, opacity' 
+                            }} 
+                        />
+                    ))}
+                </div>
+            )}
             <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-transparent to-[#030712] z-10" />
         </div>
     );

@@ -102,34 +102,36 @@ export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromi
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <div className="space-y-1">
-                            <label className="text-[11px] sm:text-[10px] uppercase tracking-wider text-amber-400/90 font-medium ml-1 block">
+                            <label htmlFor="form-name-input" className="text-[11px] sm:text-[10px] uppercase tracking-wider text-amber-400 font-medium ml-1 block">
                                 Nombre *
                             </label>
                             <div className="relative">
                                 <UserIcon className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
                                 <input
+                                    id="form-name-input"
                                     required
                                     name="name"
                                     type="text"
                                     placeholder="Tu nombre"
-                                    aria-label="Tu nombre"
+                                    autoComplete="name"
                                     className="w-full bg-slate-900/90 sm:bg-white/[0.04] hover:bg-white/[0.07] focus:bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 pl-10 pr-3 text-slate-100 text-sm sm:text-xs focus:outline-none transition-all placeholder:text-slate-500 shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
                                 />
                             </div>
                         </div>
 
                         <div className="space-y-1">
-                            <label className="text-[11px] sm:text-[10px] uppercase tracking-wider text-amber-400/90 font-medium ml-1 block">
+                            <label htmlFor="form-phone-input" className="text-[11px] sm:text-[10px] uppercase tracking-wider text-amber-400 font-medium ml-1 block">
                                 Teléfono *
                             </label>
                             <div className="relative">
                                 <Phone className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
                                 <input
+                                    id="form-phone-input"
                                     required
                                     name="phone"
                                     type="tel"
                                     placeholder="600123456"
-                                    aria-label="Teléfono de contacto"
+                                    autoComplete="tel"
                                     onInput={handlePhoneInput}
                                     minLength="9"
                                     maxLength="9"
@@ -140,17 +142,18 @@ export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromi
                     </div>
 
                     <div className="space-y-1">
-                        <label className="text-[11px] sm:text-[10px] uppercase tracking-wider text-amber-400/90 font-medium ml-1 block">
+                        <label htmlFor="form-email-input" className="text-[11px] sm:text-[10px] uppercase tracking-wider text-amber-400 font-medium ml-1 block">
                             Email *
                         </label>
                         <div className="relative">
                             <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
                             <input
+                                id="form-email-input"
                                 required
                                 name="email"
                                 type="email"
                                 placeholder="tu@email.com"
-                                aria-label="Correo electrónico"
+                                autoComplete="email"
                                 className="w-full bg-slate-900/90 sm:bg-white/[0.04] hover:bg-white/[0.07] focus:bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 pl-10 pr-3 text-slate-100 text-sm sm:text-xs focus:outline-none transition-all placeholder:text-slate-500 shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
                             />
                         </div>
@@ -158,13 +161,13 @@ export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromi
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         <div className="space-y-1">
-                            <label className="text-[11px] sm:text-[10px] uppercase tracking-wider text-amber-400/90 font-medium ml-1 block">
+                            <label htmlFor="form-event-type-select" className="text-[11px] sm:text-[10px] uppercase tracking-wider text-amber-400 font-medium ml-1 block">
                                 Tipo de Evento
                             </label>
                             <div className="relative">
                                 <select
+                                    id="form-event-type-select"
                                     name="eventType"
-                                    aria-label="Tipo de evento"
                                     className="w-full bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 px-3.5 text-slate-200 text-sm sm:text-xs focus:outline-none transition-all appearance-none cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
                                 >
                                     <option value="Boda">Boda</option>
@@ -179,16 +182,16 @@ export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromi
                         </div>
 
                         <div className="space-y-1">
-                            <label className="text-[11px] sm:text-[10px] uppercase tracking-wider text-amber-400/90 font-medium ml-1 block">
+                            <label htmlFor="form-date-input" className="text-[11px] sm:text-[10px] uppercase tracking-wider text-amber-400 font-medium ml-1 block">
                                 Fecha Estimada
                             </label>
                             <div className="relative">
                                 <Calendar className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none" />
                                 <input
+                                    id="form-date-input"
                                     name="date"
                                     type="date"
                                     min={dateMin}
-                                    aria-label="Fecha estimada del evento"
                                     className="w-full bg-slate-900/90 sm:bg-white/[0.04] hover:bg-white/[0.07] focus:bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 pl-10 pr-3 text-slate-100 text-sm sm:text-xs focus:outline-none transition-all [color-scheme:dark] shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
                                 />
                             </div>
@@ -196,16 +199,16 @@ export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromi
                     </div>
 
                     <div className="space-y-1">
-                        <label className="text-[11px] sm:text-[10px] uppercase tracking-wider text-amber-400/90 font-medium ml-1 block">
+                        <label htmlFor="form-message-input" className="text-[11px] sm:text-[10px] uppercase tracking-wider text-amber-400 font-medium ml-1 block">
                             Detalles del Evento
                         </label>
                         <div className="relative">
                             <MessageSquare className="absolute left-3.5 top-3.5 w-4 h-4 text-slate-400 pointer-events-none" />
                             <textarea
+                                id="form-message-input"
                                 name="message"
                                 rows="2"
                                 placeholder="Lugar, número aprox. de invitados, horario..."
-                                aria-label="Detalles adicionales del evento"
                                 className="w-full bg-slate-900/90 sm:bg-white/[0.04] hover:bg-white/[0.07] focus:bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 pl-10 pr-3 text-slate-100 text-sm sm:text-xs focus:outline-none transition-all placeholder:text-slate-500 resize-none shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
                             ></textarea>
                         </div>
@@ -219,7 +222,7 @@ export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromi
                             required
                             className="mt-0.5 w-3.5 h-3.5 rounded border-white/20 bg-black/40 text-amber-500 focus:ring-amber-500/50 cursor-pointer flex-shrink-0"
                         />
-                        <label htmlFor="privacy-consent-liquid" className="text-[10px] text-slate-400 leading-tight cursor-pointer">
+                        <label htmlFor="privacy-consent-liquid" className="text-[10px] text-slate-300 leading-tight cursor-pointer">
                             He leído y acepto la <a href="/privacidad" target="_blank" rel="noopener noreferrer" className="text-amber-400 underline hover:text-amber-300">Política de Privacidad</a> y consiento el tratamiento de mis datos para la solicitud.
                         </label>
                     </div>
@@ -238,7 +241,7 @@ export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromi
                             </>
                         )}
                     </button>
-                    <p className="text-[9px] text-slate-500 text-center leading-tight">
+                    <p className="text-[9px] text-slate-400 text-center leading-tight">
                         Responsable: Ángel Ruiz García. Finalidad: Gestión de presupuesto. Legitimación: Consentimiento. Derechos: info@angelruiz.world.
                     </p>
 

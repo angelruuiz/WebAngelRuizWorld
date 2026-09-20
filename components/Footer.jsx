@@ -114,12 +114,13 @@ const Footer = ({ onOpenContact, isLight = false }) => {
 
             {/* Subfooter */}
             <div className="border-t border-white/10 w-full">
-                <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+                <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
                     <p>© 2026 Ángel Ruiz | Marca Oficial Registrada. Todos los derechos reservados.</p>
                     <div className="flex flex-wrap gap-4 md:gap-6 items-center">
                         <a href="/aviso-legal" className="hover:text-[#d4a853] transition-colors">Aviso Legal</a>
                         <a href="/privacidad" className="hover:text-[#d4a853] transition-colors">Política de Privacidad</a>
                         <a href="/cookies" className="hover:text-[#d4a853] transition-colors">Política de Cookies</a>
+                        <a href="/llms.txt" className="hover:text-[#d4a853] transition-colors">llms.txt</a>
                     </div>
                 </div>
             </div>

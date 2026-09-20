@@ -270,6 +270,11 @@ export default function RootLayout({ children }) {
     <html lang="es" className={`${cinzel.variable} ${cormorant.variable} ${outfit.variable}`}>
       <head>
         <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
+        <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM Content" />
+        <link rel="help" href="/llms.txt" />
+        <link rel="author" href="/sobre-mi" />
+        <link rel="preload" as="image" href="/images/hero-angel-ruiz-mobile-2026.webp" media="(max-width: 767px)" type="image/webp" fetchPriority="high" />
+        <link rel="preload" as="image" href="/images/hero-angel-ruiz-2026.webp" media="(min-width: 768px)" type="image/webp" fetchPriority="high" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(globalSchema) }}

@@ -300,10 +300,6 @@ export default function Home() {
 
     return (
         <>
-            <head>
-                <link rel="preload" as="image" href="/images/hero-angel-ruiz-mobile-2026.webp" media="(max-width: 767px)" type="image/webp" fetchPriority="high" />
-                <link rel="preload" as="image" href="/images/hero-angel-ruiz-2026.webp" media="(min-width: 768px)" type="image/webp" fetchPriority="high" />
-            </head>
             <script 
                 type="application/ld+json" 
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }} 
