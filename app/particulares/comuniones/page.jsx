@@ -4,7 +4,6 @@ import NavFooterClient from '@/components/NavFooterClient';
 import ContactButtonClient from '@/components/ContactButtonClient';
 import { MagicCursor, ParticleBackground, FadeIn } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import BusinessSchema from '@/components/BusinessSchema';
 
 export const metadata = {
     title: { absolute: 'Mago para Comuniones en Madrid | Magia Familiar' },
@@ -59,7 +58,6 @@ export default function MagoComunionesPage() {
 
     return (
         <>
-            <BusinessSchema />
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
             <NavFooterClient>
                 <MagicCursor />

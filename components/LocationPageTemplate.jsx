@@ -7,7 +7,6 @@ import ContactButtonClient from '@/components/ContactButtonClient';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
-import BusinessSchema from '@/components/BusinessSchema';
 
 const MagicalCarousel = ({ locationName, locationImages }) => {
     const images = locationImages && locationImages.length > 0 
