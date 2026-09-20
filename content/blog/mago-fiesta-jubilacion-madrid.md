@@ -1,25 +1,39 @@
-﻿---
-title: 'Mago para Fiestas de Jubilación en Madrid: Ideas Emotivas para Despedir una Carrera'
+---
+title: >-
+  Mago para Fiestas de Jubilación en Madrid: Ideas Emotivas para Despedir una
+  Carrera
 date: '2026-09-14'
 excerpt: >-
-  Descubre cómo organizar una fiesta de jubilación inolvidable en Madrid con magia de cerca y momentos personalizados que homenajearán toda una vida de trabajo.
+  Descubre cómo organizar una fiesta de jubilación inolvidable en Madrid con
+  magia de cerca y momentos personalizados que homenajearán toda una vida de
+  trabajo.
 category: Particulares
 readTime: 6 MIN
 image: /images/reacciones-magia-empresas.webp
 faq:
   - question: ¿En qué momento de la fiesta de jubilación encaja mejor la magia?
     answer: >-
-      La magia de cerca itinerante funciona de forma sobresaliente durante el cóctel de bienvenida o los aperitivos,
-      rompiendo el hielo entre familiares y compañeros de trabajo. Para el homenaje central, un pase de salón de 25-30 minutos
-      donde el jubilado sea el protagonista absoluto crea el clímax emocional perfecto.
-  - question: ¿Se pueden personalizar los trucos con la profesión o anécdotas del homenajeado?
+      La magia de cerca itinerante funciona de forma sobresaliente durante el
+      cóctel de bienvenida o los aperitivos, rompiendo el hielo entre familiares
+      y compañeros de trabajo. Para el homenaje central, un pase de salón de
+      25-30 minutos donde el jubilado sea el protagonista absoluto crea el
+      clímax emocional perfecto.
+  - question: >-
+      ¿Se pueden personalizar los trucos con la profesión o anécdotas del
+      homenajeado?
     answer: >-
-      Sí, es uno de los mayores valores añadidos. Previamente recopilamos datos clave (años de servicio, profesión,
-      anécdotas divertidas o aficiones futuras) para hilar efectos mágicos exclusivos que emocionen y arranquen carcajadas al homenajeado.
-  - question: ¿Es adecuado si asisten compañeros de trabajo y familiares de distintas edades?
+      Sí, es uno de los mayores valores añadidos. Previamente recopilamos datos
+      clave (años de servicio, profesión, anécdotas divertidas o aficiones
+      futuras) para hilar efectos mágicos exclusivos que emocionen y arranquen
+      carcajadas al homenajeado.
+  - question: >-
+      ¿Es adecuado si asisten compañeros de trabajo y familiares de distintas
+      edades?
     answer: >-
-      Totalmente. La cartomagia de autor y el ilusionismo psicológico conectan por igual con directivos, compañeros de oficina,
-      hijos o nietos, unificando a todos los invitados bajo una misma atmósfera de asombro compartido.
+      Totalmente. La cartomagia de autor y el ilusionismo psicológico conectan
+      por igual con directivos, compañeros de oficina, hijos o nietos,
+      unificando a todos los invitados bajo una misma atmósfera de asombro
+      compartido.
 tags:
   - Particulares
   - Jubilaciones
@@ -81,3 +95,8 @@ En Madrid contamos con rincones extraordinarios para este tipo de homenajes ínt
 ## ¿Estás planeando la jubilación de alguien especial?
 
 La agenda para fines de semana en Madrid suele completarse con semanas de antelación. Si quieres consultar disponibilidad, resolver dudas o diseñar una propuesta a medida para tu celebración, ponte en contacto conmigo y te responderé con un presupuesto personalizado en menos de 2 horas.
+
+
+También te puede interesar descubrir nuestras opciones de [mago para eventos familiares](/particulares/eventos) y [mago para cumpleaños de adultos en Madrid](/blog/mago-para-cumpleanos-adultos-50-anos-madrid).
+
+¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.

@@ -1,7 +1,9 @@
 ---
-title: 'Ideas Originales para Cenas de Empresa en Madrid'
+title: Ideas Originales para Cenas de Empresa en Madrid
 date: '2026-04-25'
-excerpt: 'Ideas de animación y magia corporativa para sorprender a tu equipo en su cena de empresa en Madrid. Presupuesto express.'
+excerpt: >-
+  Ideas de animación y magia corporativa para sorprender a tu equipo en su cena
+  de empresa en Madrid. Presupuesto express.
 author: Ángel Ruiz
 image: /images/mago-empresas-madrid-angel-ruiz.svg
 tags:
@@ -10,6 +12,24 @@ tags:
   - Cenas
   - Ideas
 category: Empresas
+faq:
+  - question: ¿En qué momento de la cena de empresa debe actuar el mago?
+    answer: >-
+      El formato más recomendado es la magia de cóctel inicial para romper el
+      hielo (walk-around) o un espectáculo central de 30-40 minutos de sobremesa
+      tras los postres y discursos.
+  - question: ¿La magia encaja en cenas corporativas formales o con directivos?
+    answer: >-
+      Sí, absolutamente. El ilusionismo corporativo para empresas se caracteriza
+      por su elegancia, psicología y humor inteligente, adaptándose con total
+      naturalidad al protocolo de la compañía.
+  - question: >-
+      ¿Qué tamaño de grupo es el más adecuado para una cena de empresa con
+      magia?
+    answer: >-
+      Desde cenas exclusivas de comité directivo de 10-20 personas hasta grandes
+      convenciones y cenas de navidad de más de 300 empleados con intervenciones
+      itinerantes.
 ---
 
 Año tras año, los departamentos de Recursos Humanos y organizadores de eventos en Madrid se enfrentan al mismo desafío: **¿Cómo organizar una cena de empresa que no sea más de lo mismo?** 
@@ -57,3 +77,6 @@ Si te ha parecido interesante, quizás te interese seguir leyendo estos artícul
 - [Magia y Tecnología para Eventos de Empresa en España y Madrid](/blog/magia-tecnologia-eventos-empresa-espana)
 - [Actividades de Team Building en Madrid: La Magia como Herramienta](/blog/team-building-madrid-actividades-empresas)
 - [Mago para Cenas de Empresa en Madrid (Página Oficial)](/empresas/mago-cenas-empresa-madrid)
+
+
+¿Quieres que tu próxima cena de empresa sea recordada por todo el equipo? [Pide presupuesto corporativo sin compromiso](/contratar-mago-madrid) y descubre cómo personalizar la experiencia para tu marca.

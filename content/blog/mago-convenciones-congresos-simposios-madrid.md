@@ -1,21 +1,35 @@
 ---
-title: 'Mago para Convenciones, Congresos y Simposios en Madrid: Ilusionismo para Grandes Audiencias'
+title: >-
+  Mago para Convenciones, Congresos y Simposios en Madrid: Ilusionismo para
+  Grandes Audiencias
 date: '2026-09-14'
 excerpt: >-
-  Eleva el impacto de convenciones, simposios y congresos corporativos en Madrid con intervenciones de magia de escenario y mentalismo conceptual diseñadas para auditorios de 100 a 1.000 personas.
+  Eleva el impacto de convenciones, simposios y congresos corporativos en Madrid
+  con intervenciones de magia de escenario y mentalismo conceptual diseñadas
+  para auditorios de 100 a 1.000 personas.
 category: Empresas
 readTime: 9 MIN
 image: /images/angel-ruiz-mago-corporativo.webp
 faq:
   - question: ¿En qué momentos de un congreso o convención encaja mejor la magia?
     answer: >-
-      Existen tres momentos estratégicos: como apertura impactante (Keynote Opener) para captar la atención total del auditorio, como energizante intermedio (Wake-up call) tras comidas o bloques densos de ponencias, o como cierre memorable de la jornada plenaria.
+      Existen tres momentos estratégicos: como apertura impactante (Keynote
+      Opener) para captar la atención total del auditorio, como energizante
+      intermedio (Wake-up call) tras comidas o bloques densos de ponencias, o
+      como cierre memorable de la jornada plenaria.
   - question: ¿Se adapta el espectáculo a la temática técnica o científica del simposio?
     answer: >-
-      Absolutamente. Diseñamos metáforas visuales personalizadas que conectan con los conceptos centrales del evento: ciberseguridad, inteligencia artificial, transformación digital, avances médicos o metas comerciales.
-  - question: ¿Qué medios técnicos se necesitan en auditorios de gran capacidad en Madrid?
+      Absolutamente. Diseñamos metáforas visuales personalizadas que conectan
+      con los conceptos centrales del evento: ciberseguridad, inteligencia
+      artificial, transformación digital, avances médicos o metas comerciales.
+  - question: >-
+      ¿Qué medios técnicos se necesitan en auditorios de gran capacidad en
+      Madrid?
     answer: >-
-      Para salas de más de 150 asistentes, nos coordinamos con el equipo audiovisual del espacio para realizar proyección en pantallas LED/proyectores mediante circuito cerrado de cámara (Live Video Feed), garantizando visibilidad perfecta desde la última fila.
+      Para salas de más de 150 asistentes, nos coordinamos con el equipo
+      audiovisual del espacio para realizar proyección en pantallas
+      LED/proyectores mediante circuito cerrado de cámara (Live Video Feed),
+      garantizando visibilidad perfecta desde la última fila.
 tags:
   - Convenciones
   - Congresos
@@ -62,3 +76,6 @@ Adaptamos la puesta en escena a la infraestructura técnica de las principales s
 A diferencia de un orador convencional, el ilusionista utiliza la sorpresa para generar un **pico de dopamina** en el cerebro del espectador. La neurociencia demuestra que los conceptos vinculados a emociones intensas se recuerdan hasta 7 veces más que los datos expuestos de forma plana.
 
 Si estás coordinando la producción de un congreso, simposio o convención directiva en Madrid, explora las opciones de [mago conferenciante para empresas](/empresas/mago-conferenciante-madrid) o solicita una propuesta técnica en [mago para ferias y congresos en Madrid](/empresas/mago-ferias-congresos-madrid).
+
+
+¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.

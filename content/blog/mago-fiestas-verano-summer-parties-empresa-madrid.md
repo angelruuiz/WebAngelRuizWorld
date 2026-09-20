@@ -1,21 +1,40 @@
 ---
-title: 'Magia para Fiestas de Verano y Summer Parties de Empresa en Madrid: Ideas y Dinamización'
+title: >-
+  Magia para Fiestas de Verano y Summer Parties de Empresa en Madrid: Ideas y
+  Dinamización
 date: '2026-09-16'
 excerpt: >-
-  Descubre cómo dinamizar la Summer Party o fiesta de verano de tu empresa en Madrid con magia de cóctel, mentalismo al aire libre y experiencias interactivas que refuerzan el team building.
+  Descubre cómo dinamizar la Summer Party o fiesta de verano de tu empresa en
+  Madrid con magia de cóctel, mentalismo al aire libre y experiencias
+  interactivas que refuerzan el team building.
 category: Empresas
 readTime: 8 MIN
 image: /images/magia-al-aire-libre-eventos-madrid.webp
 faq:
-  - question: ¿Cuál es el formato de magia más adecuado para una Summer Party al aire libre?
+  - question: >-
+      ¿Cuál es el formato de magia más adecuado para una Summer Party al aire
+      libre?
     answer: >-
-      La magia de cerca o cóctel itinerante (close-up) es el formato estrella para exteriores. El ilusionista se desplaza entre los grupos en jardines, terrazas y zonas chill-out sin requerir escenario ni tomas de corriente complejas.
-  - question: ¿Con cuánta antelación se debe reservar para fiestas corporativas de verano en Madrid?
+      La magia de cerca o cóctel itinerante (close-up) es el formato estrella
+      para exteriores. El ilusionista se desplaza entre los grupos en jardines,
+      terrazas y zonas chill-out sin requerir escenario ni tomas de corriente
+      complejas.
+  - question: >-
+      ¿Con cuánta antelación se debe reservar para fiestas corporativas de
+      verano en Madrid?
     answer: >-
-      Los meses de junio, julio y septiembre concentran la mayor demanda de fiestas de verano en Madrid. Se aconseja reservar con al menos 4 a 8 semanas de antelación para asegurar disponibilidad de fechas clave (jueves y viernes).
-  - question: ¿Se puede combinar magia de cóctel con un show final para toda la plantilla?
+      Los meses de junio, julio y septiembre concentran la mayor demanda de
+      fiestas de verano en Madrid. Se aconseja reservar con al menos 4 a 8
+      semanas de antelación para asegurar disponibilidad de fechas clave (jueves
+      y viernes).
+  - question: >-
+      ¿Se puede combinar magia de cóctel con un show final para toda la
+      plantilla?
     answer: >-
-      Sí, una de las fórmulas más contratadas es iniciar con 60-90 minutos de magia de cerca durante la recepción y barra libre, seguido de un pase de mentalismo o magia de impacto de 20-30 minutos para cerrar la velada antes del DJ.
+      Sí, una de las fórmulas más contratadas es iniciar con 60-90 minutos de
+      magia de cerca durante la recepción y barra libre, seguido de un pase de
+      mentalismo o magia de impacto de 20-30 minutos para cerrar la velada antes
+      del DJ.
 tags:
   - Fiestas de Empresa
   - Summer Party
@@ -71,3 +90,6 @@ Tras el cóctel y antes de dar paso al baile o la sesión de DJ, un show central
 * **22:00 en adelante | Barra libre, DJ y fiesta**: Continuación de la velada con el ambiente al máximo.
 
 Si estás planificando el próximo evento estival de tu compañía y quieres asegurar un ambiente dinámico y distinguido, consulta los formatos disponibles en [mago para empresas en Madrid](/empresas) o conoce más sobre nuestras dinámicas de [team building y cohesión de equipos](/empresas/mago-team-building-madrid).
+
+
+¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.

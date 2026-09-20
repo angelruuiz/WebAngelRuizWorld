@@ -1,26 +1,31 @@
 ---
-title: 'Mago para Cumpleaños de Adultos en Madrid: Ideas Exclusivas para 40, 50 y 60 Años'
+title: >-
+  Mago para Cumpleaños de Adultos en Madrid: Ideas Exclusivas para 40, 50 y 60
+  Años
 date: '2026-08-10'
 excerpt: >-
-  Celebra un 40, 50 o 60 cumpleaños inolvidable en Madrid. Magia de cerca y mentalismo
-  para fiestas privadas en chalets, restaurantes y áticos.
+  Celebra un 40, 50 o 60 cumpleaños inolvidable en Madrid. Magia de cerca y
+  mentalismo para fiestas privadas en chalets, restaurantes y áticos.
 category: Particulares
 readTime: 6 MIN
 image: /images/fiesta-eventos-madrid.webp
 faq:
   - question: ¿Es la magia adecuada para un cumpleaños de adultos?
     answer: >-
-      Totalmente. La magia para adultos no tiene nada que ver con la animación infantil:
-      es un espectáculo elegante, inteligente y con altas dosis de humor e ilusionismo de autor
-      a pocos centímetros de los ojos de los invitados.
+      Totalmente. La magia para adultos no tiene nada que ver con la animación
+      infantil: es un espectáculo elegante, inteligente y con altas dosis de
+      humor e ilusionismo de autor a pocos centímetros de los ojos de los
+      invitados.
   - question: ¿Se puede organizar la actuación como una sorpresa para el cumpleañero?
     answer: >-
-      Es una de las opciones más populares. Me integro discretamente como un invitado más o aparezco
-      en el momento del brindis o la sobremesa para sorprender al homenajeado con una experiencia personalizada.
+      Es una de las opciones más populares. Me integro discretamente como un
+      invitado más o aparezco en el momento del brindis o la sobremesa para
+      sorprender al homenajeado con una experiencia personalizada.
   - question: ¿Qué espacio se necesita en un chalet o restaurante privado?
     answer: >-
-      Para magia de cerca no se necesita ningún escenario ni espacio extra: actúo de pie entre los grupos
-      durante el picoteo o directamente en la mesa donde se esté celebrando la comida o cena.
+      Para magia de cerca no se necesita ningún escenario ni espacio extra:
+      actúo de pie entre los grupos durante el picoteo o directamente en la mesa
+      donde se esté celebrando la comida o cena.
 tags:
   - Cumpleaños Adultos
   - Fiestas Privadas
@@ -67,3 +72,6 @@ Si estás organizando el cumpleaños como un regalo sorpresa para tu pareja, pad
 Las tarifas para cumpleaños de adultos en Madrid parten habitualmente **desde 300€ - 350€** según la duración, la localización y el día de la semana. 
 
 Si deseas consultar disponibilidad y solicitar un presupuesto a tu medida para tu próxima fiesta, visita la sección de [eventos particulares](/particulares/eventos) o ponte en contacto directo.
+
+
+¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.

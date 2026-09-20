@@ -1,21 +1,33 @@
 ---
-title: 'Magia en Bodas Íntimas y Pequeñas en Madrid: Cómo Diseñar una Experiencia Exclusiva'
+title: >-
+  Magia en Bodas Íntimas y Pequeñas en Madrid: Cómo Diseñar una Experiencia
+  Exclusiva
 date: '2026-09-12'
 excerpt: >-
-  Las bodas íntimas y micro-weddings en Madrid exigen un entretenimiento cuidado y personal. Descubre cómo la magia de cerca crea una atmósfera cálida, emotiva y exclusiva para celebraciones de 20 a 70 invitados.
+  Las bodas íntimas y micro-weddings en Madrid exigen un entretenimiento cuidado
+  y personal. Descubre cómo la magia de cerca crea una atmósfera cálida, emotiva
+  y exclusiva para celebraciones de 20 a 70 invitados.
 category: Bodas
 readTime: 7 MIN
 image: /images/boda-magia-madrid.webp
 faq:
   - question: ¿Funciona la magia en una boda de solo 30 o 40 invitados?
     answer: >-
-      Funciona extraordinariamente bien. De hecho, en bodas íntimas la experiencia es aún más exclusiva, ya que el ilusionista puede dedicar tiempo de calidad a cada uno de los invitados, logrando que el 100% de los asistentes participe activamente.
+      Funciona extraordinariamente bien. De hecho, en bodas íntimas la
+      experiencia es aún más exclusiva, ya que el ilusionista puede dedicar
+      tiempo de calidad a cada uno de los invitados, logrando que el 100% de los
+      asistentes participe activamente.
   - question: ¿Qué formato es más recomendable para una micro-boda o boda boutique?
     answer: >-
-      La magia de cerca o close-up es el formato idóneo. Puede desarrollarse durante el cóctel de bienvenida de pie, o bien con un pase especial mesa por mesa durante la sobremesa y café.
+      La magia de cerca o close-up es el formato idóneo. Puede desarrollarse
+      durante el cóctel de bienvenida de pie, o bien con un pase especial mesa
+      por mesa durante la sobremesa y café.
   - question: ¿Se puede incluir un efecto personalizado y emotivo para los novios?
     answer: >-
-      Sí, en bodas reducidas diseñamos siempre un momento culminante dedicado en exclusiva a la pareja (con recuerdos, fecha del enlace o alianzas) creando un instante íntimo que suele convertirse en uno de los recuerdos más fotografiados de la celebración.
+      Sí, en bodas reducidas diseñamos siempre un momento culminante dedicado en
+      exclusiva a la pareja (con recuerdos, fecha del enlace o alianzas) creando
+      un instante íntimo que suele convertirse en uno de los recuerdos más
+      fotografiados de la celebración.
 tags:
   - Bodas Íntimas
   - Micro Weddings
@@ -57,3 +69,6 @@ En la Comunidad de Madrid existen rincones con encanto donde la magia de cerca e
 * **Opción B: Sobremesa y Café (60 min)**: Pase relajado mesa por mesa tras el almuerzo o cena, culminando con un efecto especial de cierre para todos los presentes alrededor de la mesa principal de los novios.
 
 Si estás organizando una boda boutique o celebración íntima en Madrid, visita nuestra sección de [mago para bodas en Madrid](/particulares/bodas) o descubre más sobre el arte de la [magia de cerca y close-up](/mago-close-up-madrid).
+
+
+¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.

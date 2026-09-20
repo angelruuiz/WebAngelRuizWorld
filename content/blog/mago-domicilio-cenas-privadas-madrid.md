@@ -1,24 +1,32 @@
-﻿---
+---
 title: 'Mago a Domicilio en Madrid: Magia Exclusiva y Close-Up para Cenas Privadas'
 date: '2026-09-14'
 excerpt: >-
-  Convierte tu salón o jardín en un teatro de magia privado. Descubre cómo contratar un mago a domicilio en Madrid para cenas íntimas y celebraciones exclusivas.
+  Convierte tu salón o jardín en un teatro de magia privado. Descubre cómo
+  contratar un mago a domicilio en Madrid para cenas íntimas y celebraciones
+  exclusivas.
 category: Particulares
 readTime: 6 MIN
 image: /images/cartomagia-de-cerca-angel-ruiz.webp
 faq:
   - question: ¿Qué tipo de magia se realiza en una casa o chalet particular?
     answer: >-
-      Se realiza cartomagia de autor, mentalismo y micromagia de salón. Es un espectáculo diseñado para verse a un metro de distancia,
-      utilizando la propia mesa del salón o el porche del jardín, sin necesidad de focos, telones ni escenarios aparatosos.
+      Se realiza cartomagia de autor, mentalismo y micromagia de salón. Es un
+      espectáculo diseñado para verse a un metro de distancia, utilizando la
+      propia mesa del salón o el porche del jardín, sin necesidad de focos,
+      telones ni escenarios aparatosos.
   - question: ¿Para cuántos invitados está pensado el show a domicilio?
     answer: >-
-      Desde cenas íntimas muy exclusivas de 6 a 12 comensales hasta fiestas privadas en jardín de 30 o 50 invitados.
-      La propuesta se modula según el espacio disponible y el número de asistentes para garantizar que todos disfruten en primera fila.
+      Desde cenas íntimas muy exclusivas de 6 a 12 comensales hasta fiestas
+      privadas en jardín de 30 o 50 invitados. La propuesta se modula según el
+      espacio disponible y el número de asistentes para garantizar que todos
+      disfruten en primera fila.
   - question: ¿Se desplaza el mago a cualquier municipio de la Comunidad de Madrid?
     answer: >-
-      Sí, habitualmente realizo actuaciones a domicilio en Madrid capital (barrio de Salamanca, Chamartín, Chamberí)
-      y en toda la zona residencial norte y noroeste (La Moraleja, Pozuelo de Alarcón, Las Rozas, Majadahonda, Boadilla del Monte, Torrelodones).
+      Sí, habitualmente realizo actuaciones a domicilio en Madrid capital
+      (barrio de Salamanca, Chamartín, Chamberí) y en toda la zona residencial
+      norte y noroeste (La Moraleja, Pozuelo de Alarcón, Las Rozas, Majadahonda,
+      Boadilla del Monte, Torrelodones).
 tags:
   - Particulares
   - A Domicilio
@@ -76,3 +84,6 @@ Realizo actuaciones de magia a domicilio en toda la Comunidad de Madrid y provin
 ## Reserva tu velada mágica privada
 
 Si quieres sorprender a tus invitados con una experiencia que recordarán durante años sin moverte de casa, consulta disponibilidad de fechas para tu cena o velada privada en Madrid. Estaré encantado de diseñar una propuesta exclusiva para tu hogar.
+
+
+Para cenas y veladas exclusivas en chalets, consulta nuestra cobertura de [mago en la Sierra de Madrid](/mago-sierra-madrid), [mago en Majadahonda](/mago-majadahonda), [mago en Boadilla del Monte](/mago-boadilla) y la [guía de precios oficial](/contratar-mago-madrid).

@@ -1,5 +1,5 @@
 ---
-title: '¿Cuánto Cuesta un Mago para Bodas en Madrid? Precios y Tarifas'
+title: ¿Cuánto Cuesta un Mago para Bodas en Madrid? Precios y Tarifas
 date: '2026-04-14'
 excerpt: >-
   Descubre el presupuesto real para contratar un mago de bodas en Madrid.
@@ -12,6 +12,21 @@ tags:
   - Madrid
   - Precios
 category: Bodas
+faq:
+  - question: ¿Cuánto cuesta contratar un mago para una boda en Madrid?
+    answer: >-
+      Las tarifas para bodas parten desde 350€ para intervenciones en el cóctel
+      (1h), 500€ para cóctel más banquete (1,5-2h) y desde 600€ para
+      experiencias completas con efecto personalizado para los novios.
+  - question: ¿Se cobra suplemento de desplazamiento fuera de Madrid capital?
+    answer: >-
+      Para la mayoría de municipios de la Comunidad de Madrid y la Sierra
+      Noroeste (Torrelodones, Las Rozas, Majadahonda, Pozuelo), el
+      desplazamiento suele estar incluido en el presupuesto cerrado.
+  - question: ¿Con cuánta antelación se debe reservar la fecha de la boda?
+    answer: >-
+      Para sábados de temporada alta (mayo a octubre), se aconseja reservar
+      entre 4 y 9 meses antes para garantizar la disponibilidad del ilusionista.
 ---
 
 Si estás planeando tu enlace matrimonial, es probable que ya te hayas hecho la gran pregunta: **¿cuánto cuesta un mago para una boda en Madrid?** La respuesta no es única, pero en esta guía vamos a desglosar las tarifas reales, los factores que influyen en el presupuesto y por qué la honestidad en el precio es fundamental para contratar un servicio de calidad.
@@ -63,3 +78,6 @@ El **precio de un mago para bodas en Madrid** es una de las partidas más rentab
 - [Mago para Bodas en Madrid: La Guía Definitiva para una Celebración Mágica (2026)](/blog/mago-para-bodas-madrid-faq)
 - [Mejores Fincas para Bodas en Madrid donde Sorprender con un Espectáculo (2026)](/blog/mejores-fincas-bodas-madrid-magia)
 - [10 Ideas originales para entretener a tus invitados en la boda (Madrid 2026)](/blog/ideas-originales-entretenimiento-bodas-madrid)
+
+
+¿Quieres consultar la disponibilidad exacta para la fecha de tu enlace? [Solicita presupuesto express para tu boda](/contratar-mago-madrid) o escríbeme por WhatsApp para recibir una propuesta en menos de 2 horas.

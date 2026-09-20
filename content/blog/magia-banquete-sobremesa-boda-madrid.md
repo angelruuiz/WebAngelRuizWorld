@@ -2,20 +2,30 @@
 title: 'Magia en el Banquete y Sobremesa de Boda: ¿Funciona Mejor que en el Cóctel?'
 date: '2026-09-10'
 excerpt: >-
-  Analizamos los pros y contras de situar la magia durante el banquete o sobremesa de boda versus el cóctel de bienvenida en Madrid. Descubre cómo eliminar los tiempos muertos entre platos y café.
+  Analizamos los pros y contras de situar la magia durante el banquete o
+  sobremesa de boda versus el cóctel de bienvenida en Madrid. Descubre cómo
+  eliminar los tiempos muertos entre platos y café.
 category: Bodas
 readTime: 8 MIN
 image: /images/mago-bodas-madrid-eventos.webp
 faq:
   - question: ¿Se puede hacer magia mesa por mesa mientras los invitados están comiendo?
     answer: >-
-      No se interrumpe nunca a los comensales mientras degustan un plato principal caliente. La magia en banquete se ejecuta estratégicamente en las pausas naturales del servicio: entre entrantes y plato fuerte, o durante el postre, café y licores de sobremesa.
+      No se interrumpe nunca a los comensales mientras degustan un plato
+      principal caliente. La magia en banquete se ejecuta estratégicamente en
+      las pausas naturales del servicio: entre entrantes y plato fuerte, o
+      durante el postre, café y licores de sobremesa.
   - question: ¿Qué diferencias hay entre magia de cóctel y magia de sobremesa?
     answer: >-
-      En el cóctel los invitados están de pie en movimiento y los efectos son más visuales y rápidos (5-7 minutos). En la sobremesa los comensales están sentados y relajados, permitiendo pases más elaborados, efectos con cubertería, mentalismo y participación de toda la mesa al unísono.
+      En el cóctel los invitados están de pie en movimiento y los efectos son
+      más visuales y rápidos (5-7 minutos). En la sobremesa los comensales están
+      sentados y relajados, permitiendo pases más elaborados, efectos con
+      cubertería, mentalismo y participación de toda la mesa al unísono.
   - question: ¿Cuál es el mejor momento si queremos show general para toda la boda?
     answer: >-
-      Justo al terminar el café y antes de abrir la barra libre y discoteca. Un pase general de 20-30 minutos conecta a todo el salón y sirve de puente perfecto para subir la energía antes del primer baile de los novios.
+      Justo al terminar el café y antes de abrir la barra libre y discoteca. Un
+      pase general de 20-30 minutos conecta a todo el salón y sirve de puente
+      perfecto para subir la energía antes del primer baile de los novios.
 tags:
   - Banquete de Boda
   - Sobremesa
@@ -69,3 +79,6 @@ Recomendamos situar la actuación en el banquete o sobremesa en los siguientes c
 Una de las opciones más aclamadas consiste en realizar magia mesa por mesa durante la sobremesa y rematar con un **número central de 15 minutos en la mesa presidencial** que involucra a los novios y a los padrinos frente a la mirada de todo el salón, antes de invitar a todos los asistentes a la pista de baile.
 
 Para diseñar el plan de entretenimiento perfecto para vuestro gran día en cualquier finca de Madrid, visita [mago para bodas en Madrid](/particulares/bodas) o consulta las posibilidades del [ilusionismo de cerca y close-up](/mago-close-up-madrid).
+
+
+¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.

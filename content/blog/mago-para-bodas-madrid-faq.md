@@ -2,7 +2,9 @@
 title: 'Mago para Bodas en Madrid: Precios, Ideas y Guía Definitiva'
 date: '2026-04-10'
 excerpt: >-
-  ¿Quieres que tu boda sea inolvidable? Descubre cómo un mago en Madrid puede transformar tu cóctel. Precios exactos, cuándo contratar y los mejores consejos.
+  ¿Quieres que tu boda sea inolvidable? Descubre cómo un mago en Madrid puede
+  transformar tu cóctel. Precios exactos, cuándo contratar y los mejores
+  consejos.
 author: Ángel Ruiz
 image: /images/boda-magia-madrid.webp
 tags:
@@ -13,19 +15,36 @@ tags:
 faq:
   - question: ¿Cuánto cuesta contratar un mago para una boda en Madrid?
     answer: >-
-      En 2026, el precio de un mago profesional para bodas en Madrid oscila entre 400€ y 1.000€. Para el cóctel (1-1,5h), entre 400€ y 700€. Para cóctel + banquete (2-3h), entre 700€ y 1.000€. El precio varía según la experiencia del artista, la duración y la personalización del servicio.
+      En 2026, el precio de un mago profesional para bodas en Madrid oscila
+      entre 400€ y 1.000€. Para el cóctel (1-1,5h), entre 400€ y 700€. Para
+      cóctel + banquete (2-3h), entre 700€ y 1.000€. El precio varía según la
+      experiencia del artista, la duración y la personalización del servicio.
   - question: ¿Es la magia adecuada para todas las edades en una boda?
     answer: >-
-      Efectivamente. La magia de calidad cautiva desde los niños hasta los abuelos. El estilo de Ángel Ruiz está enfocado en una magia adulta y sofisticada, perfecta para el tono de una boda elegante, pero visualmente impactante para que también los niños disfruten al máximo.
+      Efectivamente. La magia de calidad cautiva desde los niños hasta los
+      abuelos. El estilo de Ángel Ruiz está enfocado en una magia adulta y
+      sofisticada, perfecta para el tono de una boda elegante, pero visualmente
+      impactante para que también los niños disfruten al máximo.
   - question: ¿En qué momento es mejor realizar la magia en una boda?
     answer: >-
-      Lo más demandado es el cóctel de bienvenida. Es el momento donde los invitados están de pie, con una copa en la mano y listos para interactuar, mientras los novios hacen fotos. También funciona perfectamente la magia de mesa entre plato y plato durante el banquete.
+      Lo más demandado es el cóctel de bienvenida. Es el momento donde los
+      invitados están de pie, con una copa en la mano y listos para interactuar,
+      mientras los novios hacen fotos. También funciona perfectamente la magia
+      de mesa entre plato y plato durante el banquete.
   - question: ¿Con cuánta antelación debo contratar un mago para mi boda en Madrid?
     answer: >-
-      En Madrid, especialmente en temporada de bodas (mayo a octubre), lo ideal es reservar con mínimo 3 meses de antelación. Para bodas en fincas de la Sierra o en fechas muy concretas, se recomienda hasta 6 meses para asegurar disponibilidad.
+      En Madrid, especialmente en temporada de bodas (mayo a octubre), lo ideal
+      es reservar con mínimo 3 meses de antelación. Para bodas en fincas de la
+      Sierra o en fechas muy concretas, se recomienda hasta 6 meses para
+      asegurar disponibilidad.
   - question: ¿Qué es la magia de cerca y por qué es perfecta para bodas?
     answer: >-
-      La magia de cerca o close-up es un estilo de ilusionismo que sucede a centímetros de los ojos del espectador: cartas, monedas y objetos cotidianos que se transforman o desaparecen ante tus propios ojos. Es perfecta para bodas porque no necesita escenario, se adapta a cualquier espacio y crea momentos de asombro personal e íntimo que las fotografías y vídeos de boda capturan de forma espectacular.
+      La magia de cerca o close-up es un estilo de ilusionismo que sucede a
+      centímetros de los ojos del espectador: cartas, monedas y objetos
+      cotidianos que se transforman o desaparecen ante tus propios ojos. Es
+      perfecta para bodas porque no necesita escenario, se adapta a cualquier
+      espacio y crea momentos de asombro personal e íntimo que las fotografías y
+      vídeos de boda capturan de forma espectacular.
 category: Bodas
 ---
 
@@ -91,3 +110,6 @@ Si te ha parecido interesante, quizás te interese seguir leyendo estos artícul
 - [¿Cuánto cuesta un mago para una boda en Madrid? Guía de precios y tarifas 2026](/blog/cuanto-cuesta-mago-boda-madrid)
 - [Mejores Fincas para Bodas en Madrid donde Sorprender con un Espectáculo (2026)](/blog/mejores-fincas-bodas-madrid-magia)
 - [10 Ideas originales para entretener a tus invitados en la boda (Madrid 2026)](/blog/ideas-originales-entretenimiento-bodas-madrid)
+
+
+¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.

@@ -1,24 +1,33 @@
-﻿---
-title: 'Mago para Fiesta de 40 Cumpleaños en Madrid: Cómo Celebrar el Cambio de Década a lo Grande'
+---
+title: >-
+  Mago para Fiesta de 40 Cumpleaños en Madrid: Cómo Celebrar el Cambio de Década
+  a lo Grande
 date: '2026-09-14'
 excerpt: >-
-  Ideas originales para celebrar tu 40 cumpleaños en Madrid. Descubre por qué la magia de cerca y el ilusionismo moderno son el entretenimiento estrella para adultos.
+  Ideas originales para celebrar tu 40 cumpleaños en Madrid. Descubre por qué la
+  magia de cerca y el ilusionismo moderno son el entretenimiento estrella para
+  adultos.
 category: Particulares
 readTime: 5 MIN
 image: /images/evento-angel-ruiz-magia.webp
 faq:
   - question: ¿La magia para un 40 cumpleaños es adecuada para adultos exigentes?
     answer: >-
-      Por supuesto. No se trata de magia infantil con conejos ni globos, sino de cartomagia psicológica,
-      mentalismo moderno y efectos de alta gama a escasos centímetros, diseñados para cautivar y desconcertar al público adulto más escéptico.
+      Por supuesto. No se trata de magia infantil con conejos ni globos, sino de
+      cartomagia psicológica, mentalismo moderno y efectos de alta gama a
+      escasos centímetros, diseñados para cautivar y desconcertar al público
+      adulto más escéptico.
   - question: ¿Cuánto espacio se necesita en el local o en casa para la actuación?
     answer: >-
-      Para la magia de cóctel no se requiere ningún espacio especial: me integro entre los invitados de pie o en mesas.
-      Si se desea un show de salón para todos a la vez, con un pequeño espacio despejado frente a los invitados es más que suficiente.
+      Para la magia de cóctel no se requiere ningún espacio especial: me integro
+      entre los invitados de pie o en mesas. Si se desea un show de salón para
+      todos a la vez, con un pequeño espacio despejado frente a los invitados es
+      más que suficiente.
   - question: ¿Puedo combinar la magia con música en directo o DJ?
     answer: >-
-      Es la combinación ideal. La magia dinamiza las 2 primeras horas (recepción y cóctel), rompiendo el hielo y preparando
-      el terreno para que, tras el asombro y las risas, la fiesta continúe con la barra libre y la música.
+      Es la combinación ideal. La magia dinamiza las 2 primeras horas (recepción
+      y cóctel), rompiendo el hielo y preparando el terreno para que, tras el
+      asombro y las risas, la fiesta continúe con la barra libre y la música.
 tags:
   - Particulares
   - Cumpleaños
@@ -69,3 +78,6 @@ Si cuentas con jardín o chalet en municipios de la zona norte u oeste de Madrid
 ## ¿Hablamos de tu fiesta de 40 años?
 
 Cada cumpleaños es único. Cuéntame dónde lo celebras, cuántas personas seréis y qué ambiente quieres crear. En menos de 2 horas te enviaré una propuesta adaptada a tus necesidades y presupuesto para que tus 40 se celebren como se merecen.
+
+
+Si estás organizando un evento en la Sierra o la capital, también puedes consultar nuestras opciones de [mago en Torrelodones](/mago-torrelodones), [mago en Las Rozas](/mago-las-rozas), [mago en Pozuelo](/mago-pozuelo) y las [guías de precios para contratar un mago en Madrid](/contratar-mago-madrid).

@@ -1,7 +1,9 @@
 ---
-title: 'Mago para Fiestas de Navidad y Cenas de Empresa'
+title: Mago para Fiestas de Navidad y Cenas de Empresa
 date: '2026-06-02'
-excerpt: 'Transforma tu cena de Navidad de empresa en Madrid con magia de cerca. Precios y formatos. Reserva fecha antes del cierre.'
+excerpt: >-
+  Transforma tu cena de Navidad de empresa en Madrid con magia de cerca. Precios
+  y formatos. Reserva fecha antes del cierre.
 author: Ángel Ruiz
 image: /images/foto-bio.webp
 category: Empresas
@@ -13,18 +15,35 @@ tags:
   - Fiestas Navideñas
 readTime: 7 MIN
 faq:
-  - question: ¿Cuánto cuesta contratar un mago para la cena de Navidad de empresa en Madrid?
+  - question: >-
+      ¿Cuánto cuesta contratar un mago para la cena de Navidad de empresa en
+      Madrid?
     answer: >-
-      El precio de un mago profesional para una cena de Navidad corporativa en Madrid oscila entre 400€ y 900€, dependiendo de la duración y el formato. Una sesión de magia de cerca durante el cóctel y la cena (2 horas) suele costar entre 500€ y 800€. Para espectáculos de escenario post-cena, el presupuesto parte de 600€.
+      El precio de un mago profesional para una cena de Navidad corporativa en
+      Madrid oscila entre 400€ y 900€, dependiendo de la duración y el formato.
+      Una sesión de magia de cerca durante el cóctel y la cena (2 horas) suele
+      costar entre 500€ y 800€. Para espectáculos de escenario post-cena, el
+      presupuesto parte de 600€.
   - question: ¿Con cuánta antelación debo reservar un mago para Navidad en Madrid?
     answer: >-
-      Las fechas navideñas (noviembre y diciembre) son las más demandadas del año. Los magos profesionales con buena reputación en Madrid cierran agenda de Navidad entre septiembre y octubre. Mi recomendación: reserva en septiembre para asegurar la fecha.
+      Las fechas navideñas (noviembre y diciembre) son las más demandadas del
+      año. Los magos profesionales con buena reputación en Madrid cierran agenda
+      de Navidad entre septiembre y octubre. Mi recomendación: reserva en
+      septiembre para asegurar la fecha.
   - question: ¿Qué formato de magia funciona mejor en una cena de Navidad de empresa?
     answer: >-
-      El formato más exitoso es la combinación de magia de cerca itinerante durante el cóctel de bienvenida (30-45 min) seguida de magia de mesa durante la cena (45-60 min). Si el grupo supera las 80 personas, un espectáculo de salón de 30 minutos tras los postres es el cierre perfecto.
-  - question: ¿El mago puede personalizar la actuación con temas navideños o de la empresa?
+      El formato más exitoso es la combinación de magia de cerca itinerante
+      durante el cóctel de bienvenida (30-45 min) seguida de magia de mesa
+      durante la cena (45-60 min). Si el grupo supera las 80 personas, un
+      espectáculo de salón de 30 minutos tras los postres es el cierre perfecto.
+  - question: >-
+      ¿El mago puede personalizar la actuación con temas navideños o de la
+      empresa?
     answer: >-
-      Absolutamente. Puedo integrar el logo corporativo, mensajes de la dirección, premios sorpresa para empleados o elementos navideños en los efectos de magia. La personalización es lo que distingue una actuación profesional de una genérica.
+      Absolutamente. Puedo integrar el logo corporativo, mensajes de la
+      dirección, premios sorpresa para empleados o elementos navideños en los
+      efectos de magia. La personalización es lo que distingue una actuación
+      profesional de una genérica.
 ---
 
 La **cena de Navidad de empresa** es, junto con el team building, el evento corporativo más importante del año. Es el momento donde se celebra el trabajo de todo el equipo, se fortalecen vínculos y se cierra el año con una experiencia memorable. Pero seamos honestos: ¿cuántas cenas de Navidad de empresa en Madrid terminan siendo exactamente iguales año tras año?
@@ -125,3 +144,6 @@ Si estás organizando tu evento navideño, estos artículos te ayudarán a tomar
 - [Ideas Originales para Cenas de Empresa en Madrid](/blog/ideas-cenas-empresa-madrid-originales)
 - [¿Cuánto Cuesta Contratar un Mago en Madrid? Precios Reales](/blog/cuanto-cuesta-mago-madrid-precios)
 - [Mago para Cenas de Empresa en Madrid (Página Oficial)](/empresas/mago-cenas-empresa-madrid)
+
+
+¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.

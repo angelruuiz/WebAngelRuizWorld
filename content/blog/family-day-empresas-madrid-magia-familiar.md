@@ -1,21 +1,32 @@
 ---
-title: 'Family Day de Empresa en Madrid: Cómo Dinamizar la Jornada Familiar con Magia Corporativa'
+title: >-
+  Family Day de Empresa en Madrid: Cómo Dinamizar la Jornada Familiar con Magia
+  Corporativa
 date: '2026-09-15'
 excerpt: >-
-  Guía completa para organizar un Family Day de empresa inolvidable en Madrid. Descubre cómo la magia intergeneracional une a empleados, parejas e hijos con el propósito y la cultura corporativa.
+  Guía completa para organizar un Family Day de empresa inolvidable en Madrid.
+  Descubre cómo la magia intergeneracional une a empleados, parejas e hijos con
+  el propósito y la cultura corporativa.
 category: Empresas
 readTime: 8 MIN
 image: /images/evento-empresa-mago-angel-ruiz.webp
 faq:
   - question: ¿Qué tipo de magia funciona mejor en un Family Day de empresa?
     answer: >-
-      La combinación ideal es un show central de magia familiar e interactiva (donde niños y adultos se divierten juntos al mismo nivel sin caer en lo infantil) complementado con magia de cerca itinerante durante el picnic o comida.
+      La combinación ideal es un show central de magia familiar e interactiva
+      (donde niños y adultos se divierten juntos al mismo nivel sin caer en lo
+      infantil) complementado con magia de cerca itinerante durante el picnic o
+      comida.
   - question: ¿Se pueden integrar valores de la empresa o seguridad en el espectáculo?
     answer: >-
-      Sí, personalizamos los efectos para transmitir de forma lúdica la cultura corporativa, sostenibilidad, hábitos saludables o hitos de la compañía para que los familiares conozcan el valor del trabajo en equipo.
+      Sí, personalizamos los efectos para transmitir de forma lúdica la cultura
+      corporativa, sostenibilidad, hábitos saludables o hitos de la compañía
+      para que los familiares conozcan el valor del trabajo en equipo.
   - question: ¿Qué infraestructura técnica se requiere para un Family Day en exteriores?
     answer: >-
-      Disponemos de equipo autónomo de sonido profesional inalámbrico y microfonía adaptada tanto a interiores como a praderas, carpas o instalaciones de la empresa.
+      Disponemos de equipo autónomo de sonido profesional inalámbrico y
+      microfonía adaptada tanto a interiores como a praderas, carpas o
+      instalaciones de la empresa.
 tags:
   - Family Day
   - Empresas
@@ -64,3 +75,6 @@ Un pase principal de 45 a 60 minutos diseñado para reunir a todos los asistente
 3. **Recuerdo duradero**: Un truco de magia vivido en directo deja una impronta emocional mucho más duradera que cualquier regalo promocional estándar.
 
 Si quieres diseñar una jornada familiar a medida para tu plantilla en Madrid, descubre nuestras opciones en [servicios de magia para empresas](/empresas) o echa un vistazo a la sección de [eventos particulares y celebraciones](/particulares/eventos).
+
+
+¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.

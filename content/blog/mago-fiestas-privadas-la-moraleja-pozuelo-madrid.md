@@ -1,21 +1,38 @@
 ---
-title: 'Mago para Fiestas Privadas y Eventos Exclusivos en La Moraleja y Pozuelo de Alarcón'
+title: >-
+  Mago para Fiestas Privadas y Eventos Exclusivos en La Moraleja y Pozuelo de
+  Alarcón
 date: '2026-09-09'
 excerpt: >-
-  Ilusionismo sofisticado y confidencial para celebraciones privadas, aniversarios y fiestas en chalets y residencias exclusivas de La Moraleja, Pozuelo de Alarcón, Boadilla y Las Rozas.
+  Ilusionismo sofisticado y confidencial para celebraciones privadas,
+  aniversarios y fiestas en chalets y residencias exclusivas de La Moraleja,
+  Pozuelo de Alarcón, Boadilla y Las Rozas.
 category: Particulares
 readTime: 8 MIN
 image: /images/mago-madrid-evento-privado.webp
 faq:
-  - question: ¿Qué tipo de magia se adapta mejor a una fiesta privada en una vivienda o jardín particular?
+  - question: >-
+      ¿Qué tipo de magia se adapta mejor a una fiesta privada en una vivienda o
+      jardín particular?
     answer: >-
-      La magia de cerca o close-up de salón y el mentalismo interactivo. Es una disciplina refinada que no requiere cables ni montajes aparatosos, cuidando al máximo la estética y la privacidad de la residencia.
-  - question: ¿Se garantiza la máxima confidencialidad en eventos privados en zonas residenciales exclusivas?
+      La magia de cerca o close-up de salón y el mentalismo interactivo. Es una
+      disciplina refinada que no requiere cables ni montajes aparatosos,
+      cuidando al máximo la estética y la privacidad de la residencia.
+  - question: >-
+      ¿Se garantiza la máxima confidencialidad en eventos privados en zonas
+      residenciales exclusivas?
     answer: >-
-      Por supuesto. Atendemos con total discreción y rigor profesional eventos en urbanizaciones privadas como La Moraleja, La Finca, Somosaguas o Ciudalcampo, respetando la privacidad de anfitriones y personalidades públicas.
-  - question: ¿Se puede personalizar la magia para el anfitrión o el homenajeado de la fiesta?
+      Por supuesto. Atendemos con total discreción y rigor profesional eventos
+      en urbanizaciones privadas como La Moraleja, La Finca, Somosaguas o
+      Ciudalcampo, respetando la privacidad de anfitriones y personalidades
+      públicas.
+  - question: >-
+      ¿Se puede personalizar la magia para el anfitrión o el homenajeado de la
+      fiesta?
     answer: >-
-      Sí, creamos ilusiones a medida en torno a las aficiones, viajes o fecha señalada del homenajeado, convirtiendo el espectáculo en un regalo de alto valor emocional.
+      Sí, creamos ilusiones a medida en torno a las aficiones, viajes o fecha
+      señalada del homenajeado, convirtiendo el espectáculo en un regalo de alto
+      valor emocional.
 tags:
   - Fiestas Privadas
   - La Moraleja
@@ -60,3 +77,6 @@ Realizamos actuaciones personalizadas en las áreas residenciales más distingui
 * **Madrid Centro**: Áticos y residencias singulares en Barrio de Salamanca, El Viso, Almagro y Chamberí.
 
 Si buscas una experiencia mágica única para tu próxima celebración privada, conoce más detalles en [mago en Pozuelo de Alarcón](/mago-pozuelo), [mago en Alcobendas](/mago-alcobendas), o explora nuestras propuestas para [fiestas de cumpleaños privadas en Madrid](/particulares/fiestas-cumpleanos-madrid).
+
+
+¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.

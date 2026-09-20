@@ -1,7 +1,9 @@
 ---
-title: '¿Cuánto Cuesta un Mago en Madrid? Precios'
+title: ¿Cuánto Cuesta un Mago en Madrid? Precios
 date: '2026-04-13'
-excerpt: 'Precios reales desde 300€ para contratar un mago en Madrid. Tarifas para bodas, empresas y fiestas sin comisiones.'
+excerpt: >-
+  Precios reales desde 300€ para contratar un mago en Madrid. Tarifas para
+  bodas, empresas y fiestas sin comisiones.
 author: Ángel Ruiz
 image: /images/foto-bio.webp
 tags:
@@ -90,3 +92,6 @@ Si te ha parecido interesante, quizás te interese seguir leyendo estos artícul
 - [5 Errores al Contratar un Mago en Madrid [Guía 2026]](/blog/como-elegir-mago-evento-madrid-errores)
 - [Magia de Cerca vs. Magia de Escenario: ¿Cuál es el formato ideal para tu evento?](/blog/magia-de-cerca-vs-escenario)
 - [Magia de Cerca en Madrid: El Secreto para un Evento o Boda Inolvidable (2026)](/blog/magia-de-cerca-madrid-eventos-bodas)
+
+
+¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.

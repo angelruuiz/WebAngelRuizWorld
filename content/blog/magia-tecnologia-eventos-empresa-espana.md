@@ -1,7 +1,9 @@
 ---
-title: 'Magia y Tecnología para Eventos de Empresa'
+title: Magia y Tecnología para Eventos de Empresa
 date: '2026-05-25'
-excerpt: 'Ilusionismo tecnológico y magia con móviles para eventos y ferias en Madrid. Innovación para tu marca. Pide demo en 2h.'
+excerpt: >-
+  Ilusionismo tecnológico y magia con móviles para eventos y ferias en Madrid.
+  Innovación para tu marca. Pide demo en 2h.
 author: Ángel Ruiz
 image: /images/evento-angel-ruiz-magia.webp
 category: Ilusionismo
@@ -89,3 +91,6 @@ Si te ha parecido interesante, quizás te interese seguir leyendo estos artícul
 - [Actividades de Team Building en Madrid: La Magia como Herramienta](/blog/team-building-madrid-actividades-empresas)
 - [Ideas Originales para Cenas de Empresa en Madrid: Rompe con la Rutina (2026)](/blog/ideas-cenas-empresa-madrid-originales)
 - [Ideas Originales para Cenas de Empresa en Madrid: Rompe con la Rutina (2026)](/blog/ideas-cenas-empresa-madrid-originales)
+
+
+¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.
