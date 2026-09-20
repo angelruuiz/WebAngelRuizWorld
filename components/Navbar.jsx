@@ -93,10 +93,10 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                                 <Link 
                                     href={link.href}
                                     onClick={(e) => link.href !== '#' && handleMagicTransition(e, link.href)}
-                                    className={`transition-colors relative inline-block text-slate-300 hover:text-[#c8a265] whitespace-nowrap ${pathname === link.href ? 'text-[#c8a265]' : ''}`}
+                                    className={`transition-colors relative inline-block text-slate-300 hover:text-[#d4a853] whitespace-nowrap ${pathname === link.href ? 'text-[#d4a853]' : ''}`}
                                 >
                                     {link.name}
-                                    <span className={`absolute -bottom-1 left-1/2 -translate-x-1/2 h-[1px] bg-gradient-to-r from-[#c8a265] to-[#e2cca0] transition-all duration-300 ${pathname === link.href ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+                                    <span className={`absolute -bottom-1 left-1/2 -translate-x-1/2 h-[1px] bg-gradient-to-r from-[#d4a853] to-[#c9956b] transition-all duration-300 ${pathname === link.href ? 'w-full' : 'w-0 group-hover:w-full'}`} />
                                 </Link>
                                 
                                 {link.children && (
@@ -107,7 +107,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                                                     key={child.name} 
                                                     href={child.href}
                                                     onClick={(e) => handleMagicTransition(e, child.href)}
-                                                    className="px-5 py-2.5 text-slate-300 hover:text-[#c8a265] hover:bg-white/5 transition-colors whitespace-nowrap flex items-center gap-2 text-xs"
+                                                    className="px-5 py-2.5 text-slate-300 hover:text-[#d4a853] hover:bg-white/5 transition-colors whitespace-nowrap flex items-center gap-2 text-xs"
                                                 >
                                                     <span className="w-1 h-1 bg-amber-500 rounded-full opacity-50"></span>
                                                     {child.name}
@@ -130,7 +130,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                             type="button"
                             onClick={onOpenContact} 
                             aria-label="Abrir formulario de contacto"
-                            className="relative px-3.5 lg:px-4 py-2 overflow-hidden rounded-full cursor-pointer border border-amber-300/50 shadow-[0_0_15px_rgba(200,162,101,0.25)] z-10 bg-[rgba(3,7,18,0.5)] hover:bg-[#c8a265] backdrop-blur-md text-[11px] lg:text-xs text-slate-100 hover:text-slate-950 font-bold tracking-[0.1em] uppercase transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5 lg:gap-2 group"
+                            className="relative px-3.5 lg:px-4 py-2 overflow-hidden rounded-full cursor-pointer border border-amber-300/50 shadow-[0_0_15px_rgba(245,158,11,0.3)] z-10 bg-[rgba(3,7,18,0.5)] hover:bg-[#d4a853] backdrop-blur-md text-[11px] lg:text-xs text-slate-100 hover:text-slate-950 font-bold tracking-[0.1em] uppercase transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5 lg:gap-2 group"
                         >
                             <span className="relative z-10">Contacto</span>
                             <Sparkles className="w-3 h-3 group-hover:rotate-180 transition-transform duration-300 relative z-10" />
@@ -249,7 +249,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                         <span className="text-amber-500/50">→</span>
                     </Link>
 
-                    <button onClick={() => { setIsMoreMenuOpen(false); onOpenContact(); }} className="py-4 text-left text-lg font-[Cinzel] font-bold text-[#c8a265] mt-2 flex justify-between items-center">
+                    <button onClick={() => { setIsMoreMenuOpen(false); onOpenContact(); }} className="py-4 text-left text-lg font-[Cinzel] font-bold text-[#d4a853] mt-2 flex justify-between items-center">
                         Contacto Directo
                         <Sparkles className="w-4 h-4" />
                     </button>

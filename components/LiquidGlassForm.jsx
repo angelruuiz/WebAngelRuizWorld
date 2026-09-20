@@ -230,7 +230,7 @@ export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromi
                     <button
                         type="submit"
                         disabled={status === "submitting"}
-                        className="w-full relative overflow-hidden bg-gradient-to-r from-[#c8a265] via-[#e2cca0] to-[#c8a265] bg-[length:200%_auto] hover:bg-right text-slate-950 font-bold py-3.5 sm:py-3 px-6 rounded-xl uppercase tracking-widest text-xs shadow-[0_0_20px_rgba(200,162,101,0.25)] hover:shadow-[0_0_25px_rgba(200,162,101,0.45)] transition-all duration-300 flex items-center justify-center gap-2 mt-1 cursor-pointer"
+                        className="w-full relative overflow-hidden bg-gradient-to-r from-[#d4a853] via-[#f59e0b] to-[#d4a853] bg-[length:200%_auto] hover:bg-right text-slate-950 font-bold py-3.5 sm:py-3 px-6 rounded-xl uppercase tracking-widest text-xs shadow-[0_0_20px_rgba(245,158,11,0.3)] hover:shadow-[0_0_25px_rgba(245,158,11,0.5)] transition-all duration-300 flex items-center justify-center gap-2 mt-1 cursor-pointer"
                     >
                         {status === "submitting" ? (
                             <span>Enviando solicitud...</span>

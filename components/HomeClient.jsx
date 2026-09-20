@@ -45,20 +45,20 @@ const HeroClient = ({ onOpenVideo }) => {
                     {/* Títulos y Marca Personal: columna derecha en Desktop (lg:order-2), arriba en móvil (order-1) */}
                     <div className="order-1 lg:order-2 lg:col-span-7 flex flex-col items-start text-left lg:pl-6">
                         {/* Seasonal urgency micro-badge */}
-                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#c8a265]/10 border border-[#c8a265]/30 text-[#c8a265] text-[11px] sm:text-xs font-semibold tracking-wider uppercase mb-3 sm:mb-5 backdrop-blur-md">
+                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#d4a853]/10 border border-[#d4a853]/30 text-[#d4a853] text-[11px] sm:text-xs font-semibold tracking-wider uppercase mb-3 sm:mb-5 backdrop-blur-md">
                             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                             <span>Agenda 2026 Abierta · Reserva Anticipada</span>
                         </div>
 
                         {/* Semantic H1 for SEO + Instant LCP Paint */}
                         <h1 className="font-[Cinzel] text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-3 sm:mb-4 md:mb-6 tracking-wider drop-shadow-lg leading-none flex flex-col items-start">
-                            <span className="text-[#c8a265] block mb-1">ANGEL</span>
+                            <span className="text-[#d4a853] block mb-1">ANGEL</span>
                             <span className="text-white block">RUIZ</span>
                         </h1>
                         
                         <div className="my-1.5 sm:my-2 md:my-4">
-                            <p className="text-xs sm:text-base md:text-lg lg:text-xl text-slate-200 tracking-[0.12em] sm:tracking-[0.15em] uppercase border-l-4 border-[#c8a265]/50 py-2 sm:py-2.5 md:py-3 px-3.5 sm:px-4 md:px-6 inline-block backdrop-blur-md bg-white/5 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] text-left leading-relaxed font-accent rounded-r-xl">
-                                Ilusionista profesional con más de <span className="font-[Cinzel] font-bold text-[#c8a265] text-sm sm:text-lg md:text-xl lg:text-3xl">10</span> años de experiencia
+                            <p className="text-xs sm:text-base md:text-lg lg:text-xl text-slate-200 tracking-[0.12em] sm:tracking-[0.15em] uppercase border-l-4 border-[#d4a853]/50 py-2 sm:py-2.5 md:py-3 px-3.5 sm:px-4 md:px-6 inline-block backdrop-blur-md bg-white/5 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] text-left leading-relaxed font-accent rounded-r-xl">
+                                Ilusionista profesional con más de <span className="font-[Cinzel] font-bold text-[#d4a853] text-sm sm:text-lg md:text-xl lg:text-3xl">10</span> años de experiencia
                             </p>
                         </div>
                         
@@ -71,7 +71,7 @@ const HeroClient = ({ onOpenVideo }) => {
                             <button
                                 type="button"
                                 onClick={onOpenVideo}
-                                className="inline-flex items-center px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-slate-950/80 hover:bg-[#c8a265]/15 border border-[#c8a265]/40 hover:border-[#c8a265] text-[#c8a265] hover:text-white transition-all duration-300 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.5),0_0_15px_rgba(200,162,101,0.15)] active:scale-95 cursor-pointer text-xs sm:text-sm font-semibold tracking-wider uppercase"
+                                className="inline-flex items-center px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-slate-950/80 hover:bg-[#d4a853]/15 border border-[#d4a853]/40 hover:border-[#d4a853] text-[#d4a853] hover:text-white transition-all duration-300 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.5),0_0_15px_rgba(212,168,83,0.1)] active:scale-95 cursor-pointer text-xs sm:text-sm font-semibold tracking-wider uppercase"
                             >
                                 <span>Ver Show en Directo <span className="opacity-70 text-[10px] sm:text-xs font-normal normal-case">(1 min)</span></span>
                             </button>
@@ -82,13 +82,13 @@ const HeroClient = ({ onOpenVideo }) => {
                             <a
                                 id="hero-scroll-trigger"
                                 href="#presupuesto-form"
-                                className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-slate-950/70 border border-[#c8a265]/30 backdrop-blur-md active:scale-95 transition-transform shadow-[0_4px_20px_rgba(0,0,0,0.6)]"
+                                className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-slate-950/70 border border-[#d4a853]/30 backdrop-blur-md active:scale-95 transition-transform shadow-[0_4px_20px_rgba(0,0,0,0.6)]"
                             >
-                                <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.14em] text-[#c8a265]">
+                                <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.14em] text-[#d4a853]">
                                     Pedir presupuesto abajo
                                 </span>
                                 <svg 
-                                    className="w-3.5 h-3.5 text-[#c8a265] animate-bounce shrink-0" 
+                                    className="w-3.5 h-3.5 text-[#d4a853] animate-bounce shrink-0" 
                                     fill="none" 
                                     stroke="currentColor" 
                                     viewBox="0 0 24 24"
@@ -104,7 +104,7 @@ const HeroClient = ({ onOpenVideo }) => {
             {/* Scroll indicator (Desktop) */}
             <div className='absolute bottom-3 xl:bottom-4 left-1/2 -translate-x-1/2 hidden lg:block pointer-events-none scale-90'>
                 <div className='w-5 h-8 rounded-full border-2 border-white/20 flex items-start justify-center pt-1.5 animate-pulse'>
-                    <div className='w-1 h-2 rounded-full bg-[#c8a265]/60' />
+                    <div className='w-1 h-2 rounded-full bg-[#d4a853]/60' />
                 </div>
             </div>
         </section>
