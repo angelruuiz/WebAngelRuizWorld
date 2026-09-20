@@ -59,8 +59,8 @@ export const MagicCursor = ({ isLight = false }) => {
             style={{ transform: 'translate3d(-100px, -100px, 0)' }}
         >
             <div className={`relative -translate-x-1/2 -translate-y-1/2 transition-transform duration-200 ${isHovering ? 'scale-150' : 'scale-100'}`}>
-                <div className={`rounded-full blur-md transition-all duration-300 ${isLight ? 'bg-slate-950/20' : 'bg-[#d4a853] opacity-35'} ${isHovering ? 'w-12 h-12' : 'w-6 h-6'}`} />
-                <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#d4a853] shadow-[0_0_15px_rgba(212,168,83,0.5)] transition-all duration-300 ${isHovering ? 'w-8 h-8 border-amber-300' : 'w-3 h-3'}`} />
+                <div className={`rounded-full blur-md transition-all duration-300 ${isLight ? 'bg-slate-950/20' : 'bg-[#c8a265] opacity-35'} ${isHovering ? 'w-12 h-12' : 'w-6 h-6'}`} />
+                <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#c8a265] shadow-[0_0_15px_rgba(200,162,101,0.4)] transition-all duration-300 ${isHovering ? 'w-8 h-8 border-[#e2cca0]' : 'w-3 h-3'}`} />
             </div>
         </div>
     );
@@ -98,7 +98,7 @@ export const ReadingProgress = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
             <div
                 ref={progressRef}
-                className="absolute top-0 bottom-0 left-0 bg-gradient-to-r from-[#b8860b] via-[#d4a853] to-[#e8cc8a] origin-left shadow-[0_0_25px_rgba(212,168,83,0.5)] w-full will-change-transform"
+                className="absolute top-0 bottom-0 left-0 bg-gradient-to-r from-[#8f6532] via-[#c8a265] to-[#e2cca0] origin-left shadow-[0_0_25px_rgba(200,162,101,0.4)] w-full will-change-transform"
                 style={{ transform: 'scaleX(0)' }}
             />
         </div>

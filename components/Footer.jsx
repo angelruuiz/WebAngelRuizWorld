@@ -30,22 +30,22 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                     
                     {/* Column 1: Marca */}
                     <div className="space-y-6">
-                        <h3 className={`text-2xl font-[Cinzel] text-transparent bg-clip-text bg-gradient-to-r from-[#d4a853] to-[#f3e5c8] font-bold`}>
+                        <h3 className={`text-2xl font-[Cinzel] text-transparent bg-clip-text bg-gradient-to-r from-[#c8a265] to-[#f3ebd8] font-bold`}>
                             Ángel Ruiz | Mago e Ilusionista
                         </h3>
                         <p className={`text-slate-400 text-sm leading-relaxed`}>
                             Ilusionista profesional para eventos corporativos exclusivos, celebraciones privadas y bodas en Madrid.
                         </p>
-                        <button onClick={onOpenContact} className="text-[#d4a853] hover:text-[#f3e5c8] transition-colors flex items-center gap-2 text-sm font-semibold tracking-wider uppercase mt-4 group">
+                        <button onClick={onOpenContact} className="text-[#c8a265] hover:text-[#f3ebd8] transition-colors flex items-center gap-2 text-sm font-semibold tracking-wider uppercase mt-4 group">
                             <span>Contratar a Ángel Ruiz</span> <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                         </button>
                         
                         <div className="flex flex-wrap gap-4 pt-2">
-                            <a href="https://instagram.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#d4a853] transition-colors text-sm">Instagram</a>
-                            <a href="https://tiktok.com/@angellruuiz" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#d4a853] transition-colors text-sm">TikTok</a>
-                            <a href="https://youtube.com/@angellruuiz" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#d4a853] transition-colors text-sm">YouTube</a>
-                            <a href="https://x.com/angellruuizz" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#d4a853] transition-colors text-sm">X</a>
-                            <a href="https://facebook.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#d4a853] transition-colors text-sm">Facebook</a>
+                            <a href="https://instagram.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#c8a265] transition-colors text-sm">Instagram</a>
+                            <a href="https://tiktok.com/@angellruuiz" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#c8a265] transition-colors text-sm">TikTok</a>
+                            <a href="https://youtube.com/@angellruuiz" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#c8a265] transition-colors text-sm">YouTube</a>
+                            <a href="https://x.com/angellruuizz" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#c8a265] transition-colors text-sm">X</a>
+                            <a href="https://facebook.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#c8a265] transition-colors text-sm">Facebook</a>
                         </div>
                     </div>
 
@@ -53,14 +53,14 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                     <div className="space-y-6">
                         <h4 className="text-lg font-[Cinzel] text-white tracking-wider">Servicios & Eventos</h4>
                         <div className="flex flex-col gap-3 text-sm text-slate-400">
-                            <a href="/mago-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Mago en Madrid</a>
-                            <a href="/particulares/bodas" className="hover:text-[#d4a853] transition-colors w-fit">Mago para Bodas</a>
-                            <a href="/empresas" className="hover:text-[#d4a853] transition-colors w-fit">Mago para Empresas</a>
-                            <a href="/empresas/mago-cenas-empresa-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Cenas de Navidad</a>
-                            <a href="/mago-close-up-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Magia de Cerca Close-Up</a>
-                            <a href="/particulares/fiestas-cumpleanos-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Fiestas y Cumpleaños</a>
-                            <a href="/particulares/comuniones" className="hover:text-[#d4a853] transition-colors w-fit">Comuniones</a>
-                            <a href="/contratar-mago-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Tarifas y Dossier</a>
+                            <a href="/mago-madrid" className="hover:text-[#c8a265] transition-colors w-fit">Mago en Madrid</a>
+                            <a href="/particulares/bodas" className="hover:text-[#c8a265] transition-colors w-fit">Mago para Bodas</a>
+                            <a href="/empresas" className="hover:text-[#c8a265] transition-colors w-fit">Mago para Empresas</a>
+                            <a href="/empresas/mago-cenas-empresa-madrid" className="hover:text-[#c8a265] transition-colors w-fit">Cenas de Navidad</a>
+                            <a href="/mago-close-up-madrid" className="hover:text-[#c8a265] transition-colors w-fit">Magia de Cerca Close-Up</a>
+                            <a href="/particulares/fiestas-cumpleanos-madrid" className="hover:text-[#c8a265] transition-colors w-fit">Fiestas y Cumpleaños</a>
+                            <a href="/particulares/comuniones" className="hover:text-[#c8a265] transition-colors w-fit">Comuniones</a>
+                            <a href="/contratar-mago-madrid" className="hover:text-[#c8a265] transition-colors w-fit">Tarifas y Dossier</a>
                         </div>
                     </div>
 
@@ -69,13 +69,13 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                         <h4 className="text-lg font-[Cinzel] text-white tracking-wider">Zonas de Madrid</h4>
                         <div className="space-y-4 text-sm text-slate-400">
                             <div>
-                                <h5 className="text-[#d4a853] font-semibold mb-2">Sierra & Noroeste</h5>
+                                <h5 className="text-[#c8a265] font-semibold mb-2">Sierra & Noroeste</h5>
                                 <div className="leading-relaxed">
                                     <a href="/mago-torrelodones" className="hover:text-white transition-colors">Torrelodones</a>, <a href="/mago-las-rozas" className="hover:text-white transition-colors">Las Rozas</a>, <a href="/mago-majadahonda" className="hover:text-white transition-colors">Majadahonda</a>, <a href="/mago-pozuelo" className="hover:text-white transition-colors">Pozuelo</a>, <a href="/mago-boadilla" className="hover:text-white transition-colors">Boadilla</a>, <a href="/mago-villalba" className="hover:text-white transition-colors">Collado Villalba</a>, <a href="/mago-galapagar" className="hover:text-white transition-colors">Galapagar</a>, <a href="/mago-el-escorial" className="hover:text-white transition-colors">El Escorial</a>, <a href="/mago-las-matas" className="hover:text-white transition-colors">Las Matas</a>, <a href="/mago-sierra-madrid" className="hover:text-white transition-colors">Sierra de Madrid</a>.
                                 </div>
                             </div>
                             <div>
-                                <h5 className="text-[#d4a853] font-semibold mb-2 mt-4">Madrid Centro & Sur</h5>
+                                <h5 className="text-[#c8a265] font-semibold mb-2 mt-4">Madrid Centro & Sur</h5>
                                 <div className="leading-relaxed">
                                     <a href="/mago-alcorcon" className="hover:text-white transition-colors">Alcorcón</a>, <a href="/mago-leganes" className="hover:text-white transition-colors">Leganés</a>, <a href="/mago-mostoles" className="hover:text-white transition-colors">Móstoles</a>, <a href="/mago-getafe" className="hover:text-white transition-colors">Getafe</a>, <a href="/mago-alcobendas" className="hover:text-white transition-colors">Alcobendas</a>.
                                 </div>
@@ -87,10 +87,10 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                     <div className="space-y-6">
                         <h4 className="text-lg font-[Cinzel] text-white tracking-wider">Contacto Directo</h4>
                         <div className="flex flex-col gap-4 text-sm text-slate-400">
-                            <a href="tel:+34648055636" className="hover:text-[#d4a853] transition-colors flex items-center gap-2 w-fit">
+                            <a href="tel:+34648055636" className="hover:text-[#c8a265] transition-colors flex items-center gap-2 w-fit">
                                 +34 648 05 56 36
                             </a>
-                            <a href="mailto:info@angelruiz.world" className="hover:text-[#d4a853] transition-colors flex items-center gap-2 w-fit">
+                            <a href="mailto:info@angelruiz.world" className="hover:text-[#c8a265] transition-colors flex items-center gap-2 w-fit">
                                 info@angelruiz.world
                             </a>
                             <p className="flex items-start gap-2">
