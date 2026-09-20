@@ -11,7 +11,7 @@ export default function manifest() {
       {
         src: '/icon.webp',
         sizes: 'any',
-        type: 'image/jpeg',
+        type: 'image/webp',
       },
     ],
   }
