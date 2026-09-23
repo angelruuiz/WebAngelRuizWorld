@@ -102,11 +102,6 @@ const images = [
         aspect: 'aspect-[3/2]'
     },
     {
-        src: '/images/magia-comuniones-madrid.webp',
-        alt: 'El mago Ángel Ruiz realizando trucos de magia infantil y familiar en una comunión en Madrid',
-        aspect: 'aspect-[3/2]'
-    },
-    {
         src: '/images/magia-cocktail-empresa-madrid.webp',
         alt: 'El ilusionista Ángel Ruiz realizando magia de cóctel entre los invitados de una empresa en Madrid',
         aspect: 'aspect-[3/2]'
