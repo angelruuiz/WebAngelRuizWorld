@@ -10,7 +10,24 @@ export const metadata = {
     openGraph: {
         url: 'https://angelruiz.world',
         title: 'Mago en Madrid | Ángel Ruiz · Bodas y Empresas',
-        description: '¿Quieres un evento del que todos sigan hablando? Ilusionismo de autor y magia de cerca en Madrid. Presupuesto express.',
+        description: '¿Quieres un evento del que todos sigan hablando? Ilusionismo de autor y magia de cerca en Madrid. Presupuesto express en 2h.',
+        siteName: 'Ángel Ruiz | Mago e Ilusionista',
+        locale: 'es_ES',
+        type: 'website',
+        images: [{
+            url: '/images/foto-bio.webp',
+            width: 1200,
+            height: 630,
+            alt: 'Ángel Ruiz - Mago e Ilusionista en Madrid'
+        }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Mago en Madrid | Ángel Ruiz · Bodas y Empresas',
+        description: '¿Quieres un evento del que todos sigan hablando? Ilusionismo de autor y magia de cerca en Madrid. Presupuesto express en 2h.',
+        images: ['/images/foto-bio.webp'],
+        site: '@angellruuizz',
+        creator: '@angellruuizz',
     },
 };
 
