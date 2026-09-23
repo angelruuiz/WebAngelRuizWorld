@@ -41,11 +41,6 @@ const images = [
         aspect: 'aspect-[3/2]'
     },
     {
-        src: '/images/foto-spring-cartas.webp',
-        alt: 'Técnica de cartomagia y spring de cartas por el mago e ilusionista Ángel Ruiz',
-        aspect: 'aspect-[4/5]'
-    },
-    {
         src: '/images/angel-ruiz-mago-corporativo.webp',
         alt: 'El mago Ángel Ruiz interactuando de cerca con asistentes en un evento corporativo',
         aspect: 'aspect-[3/2]'
