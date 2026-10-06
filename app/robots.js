@@ -16,11 +16,23 @@ const AI_BOTS = [
   'DuckAssistBot',
 ];
 
+const SEARCH_IMAGE_BOTS = [
+  'Googlebot-Image',   // Google Imágenes
+  'Bingbot',           // Microsoft Bing y Copilot
+  'msnbot-media',      // Bing Multimedia
+];
+
 export default function robots() {
   return {
     rules: [
       // Crawlers de IA: acceso total al contenido público
       ...AI_BOTS.map((bot) => ({
+        userAgent: bot,
+        allow: '/',
+        disallow: ['/admin', '/api'],
+      })),
+      // Bots de imágenes y búsqueda
+      ...SEARCH_IMAGE_BOTS.map((bot) => ({
         userAgent: bot,
         allow: '/',
         disallow: ['/admin', '/api'],
@@ -31,6 +43,9 @@ export default function robots() {
         disallow: ['/admin', '/api'],
       },
     ],
-    sitemap: 'https://angelruiz.world/sitemap.xml',
+    sitemap: [
+      'https://angelruiz.world/sitemap.xml',
+    ],
+    host: 'https://angelruiz.world',
   };
 }

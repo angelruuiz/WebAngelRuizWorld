@@ -55,7 +55,10 @@ export default async function BlogPost({ params }) {
     notFound();
   }
   const allPosts = getSortedPostsData();
-  const relatedPosts = allPosts.filter(p => p.slug !== params.slug).slice(0, 3);
+  // Topic Cluster Semántico: priorizar artículos de la misma categoría temática para consolidar autoridad interna
+  const sameCategoryPosts = allPosts.filter(p => p.slug !== params.slug && p.category === postData.category);
+  const otherPosts = allPosts.filter(p => p.slug !== params.slug && p.category !== postData.category);
+  const relatedPosts = [...sameCategoryPosts, ...otherPosts].slice(0, 3);
 
   const plainText = (postData.contentHtml || '').replace(/<[^>]+>/g, ' ');
   const words = plainText.trim().split(/\s+/).filter(Boolean);

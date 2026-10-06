@@ -25,7 +25,7 @@ export const metadata = {
     description: '¿Buscas asombro inolvidable? Magia de cerca y mentalismo de impacto para bodas, empresas y eventos en Madrid. Solicita presupuesto directo.',
     siteName: 'Ángel Ruiz | Mago e Ilusionista',
     images: [{
-      url: '/images/foto-bio.webp',
+      url: 'https://angelruiz.world/images/foto-bio.webp',
       width: 1200,
       height: 630,
       alt: 'Ángel Ruiz Ilusionista Profesional en plena actuación'
@@ -35,7 +35,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Mago en Madrid | Ángel Ruiz | Ilusionista para Bodas y Empresas',
     description: '¿Buscas asombro inolvidable? Magia de cerca y mentalismo de impacto para bodas, empresas y eventos en Madrid.',
-    images: ['/images/foto-bio.webp'],
+    images: ['https://angelruiz.world/images/foto-bio.webp'],
     site: '@angellruuizz',
     creator: '@angellruuizz',
   },
