@@ -330,9 +330,14 @@ export default function BodasDetailPage() {
                                         <strong className="text-slate-300 font-normal">Nota:</strong> Los precios incluyen desplazamiento a cualquier punto de la Comunidad de Madrid, reunión previa de coordinación y seguro de responsabilidad civil. Para consultar disponibilidad y recibir un presupuesto personalizado, <a href="/#contacto" className="text-[#d4a853] hover:underline">contacta directamente</a>.
                                     </p>
                                 </div>
-                                <a href="/blog/cuanto-cuesta-mago-boda-madrid" className="inline-flex items-center text-[#d4a853] hover:underline text-sm font-light gap-2">
-                                    Leer guía completa de precios →
-                                </a>
+                                <div className="flex flex-wrap gap-4 pt-2">
+                                    <a href="/blog/cuanto-cuesta-mago-boda-madrid" className="inline-flex items-center text-[#d4a853] hover:underline text-sm font-light gap-2">
+                                        Leer guía completa de precios →
+                                    </a>
+                                    <a href="/blog/mago-bodas-2027-madrid-reserva-fechas" className="inline-flex items-center text-[#d4a853] hover:underline text-sm font-light gap-2">
+                                        ¿Te casas en 2027? Guía de fechas y tendencias →
+                                    </a>
+                                </div>
                             </div>
 
                             {/* Mejores Fincas */}

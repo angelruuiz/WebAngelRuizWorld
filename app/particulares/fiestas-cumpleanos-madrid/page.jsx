@@ -274,6 +274,11 @@ export default function CumpleanosAdultosPage() {
                                     </span>
                                 ))}
                             </div>
+                            <div className="mt-8 pt-6 border-t border-white/10 text-center relative z-10">
+                                <a href="/blog/magia-restaurante-cumpleanos-adultos-madrid" className="inline-flex items-center text-[#d4a853] hover:underline text-sm font-light gap-2">
+                                    ¿Celebras en un restaurante? Lee nuestra guía para magia en mesa y reservados →
+                                </a>
+                            </div>
                         </div>
                     </FadeIn>
 

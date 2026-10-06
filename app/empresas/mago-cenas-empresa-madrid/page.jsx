@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import NavFooterClient from '@/components/NavFooterClient';
 import FAQItem from '@/components/FAQItem';
@@ -235,6 +236,27 @@ export default function Page() {
             {faqs.map((faq, index) => (
               <FAQItem key={index} faq={faq} />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* GUIAS Y RECURSOS RELACIONADOS */}
+      <section className="py-12 border-t border-white/5 bg-slate-950/20">
+        <div className="max-w-4xl mx-auto px-6">
+          <h3 className="text-xl font-[Cinzel] font-bold text-white mb-6 uppercase tracking-wider text-center">
+            Guías y Consejos para tu Cena de Empresa en Madrid
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Link href="/blog/espectaculo-animacion-cenas-navidad-empresas-madrid" className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-400/50 transition-colors block">
+              <span className="text-amber-400 text-xs font-mono block mb-1">Especial 2026</span>
+              <strong className="text-white text-sm block">Espectáculo para Cenas de Navidad en Madrid</strong>
+              <span className="text-slate-400 text-xs">Comparativa de formatos y animación para empresas →</span>
+            </Link>
+            <Link href="/blog/cenas-empresa-pequenas-madrid-animacion-magia" className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-400/50 transition-colors block">
+              <span className="text-amber-400 text-xs font-mono block mb-1">Equipos 10 a 30 pax</span>
+              <strong className="text-white text-sm block">Cenas de Empresa Pequeñas y Departamentos</strong>
+              <span className="text-slate-400 text-xs">Magia íntima en mesa sin montajes complejos →</span>
+            </Link>
           </div>
         </div>
       </section>

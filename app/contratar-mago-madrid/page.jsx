@@ -291,6 +291,36 @@ export default function ContratarMagoMadridPage() {
                         </div>
                     </section>
 
+                    {/* EVENT GUIDES */}
+                    <section className="mb-20">
+                        <div className="text-center mb-8">
+                            <h3 className="text-2xl font-[Cinzel] text-white font-bold mb-2">Guías y Consejos según tu Evento</h3>
+                            <p className="text-slate-400 text-sm">Resuelve dudas sobre formatos, timing y reserva para tu fecha en Madrid.</p>
+                        </div>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+                            <a href="/blog/espectaculo-animacion-cenas-navidad-empresas-madrid" className="p-5 rounded-2xl bg-zinc-950/60 border border-white/10 hover:border-amber-400/50 transition-colors block">
+                                <span className="text-amber-400 text-[10px] font-mono uppercase tracking-wider block mb-1">Cenas Empresa</span>
+                                <strong className="text-white text-sm block mb-1">Animación para Cenas de Navidad</strong>
+                                <span className="text-slate-400 text-xs">Comparativa de espectáculos y timing →</span>
+                            </a>
+                            <a href="/blog/magia-restaurante-cumpleanos-adultos-madrid" className="p-5 rounded-2xl bg-zinc-950/60 border border-white/10 hover:border-amber-400/50 transition-colors block">
+                                <span className="text-amber-400 text-[10px] font-mono uppercase tracking-wider block mb-1">Particulares</span>
+                                <strong className="text-white text-sm block mb-1">Cumpleaños en Restaurantes</strong>
+                                <span className="text-slate-400 text-xs">Magia de cerca en mesa y reservados →</span>
+                            </a>
+                            <a href="/blog/mago-bodas-2027-madrid-reserva-fechas" className="p-5 rounded-2xl bg-zinc-950/60 border border-white/10 hover:border-amber-400/50 transition-colors block">
+                                <span className="text-amber-400 text-[10px] font-mono uppercase tracking-wider block mb-1">Bodas 2027</span>
+                                <strong className="text-white text-sm block mb-1">Reserva Anticipada de Bodas</strong>
+                                <span className="text-slate-400 text-xs">Fechas clave y tarifas congeladas →</span>
+                            </a>
+                            <a href="/blog/cenas-empresa-pequenas-madrid-animacion-magia" className="p-5 rounded-2xl bg-zinc-950/60 border border-white/10 hover:border-amber-400/50 transition-colors block">
+                                <span className="text-amber-400 text-[10px] font-mono uppercase tracking-wider block mb-1">Equipos 10-30 pax</span>
+                                <strong className="text-white text-sm block mb-1">Cenas de Empresa Pequeñas</strong>
+                                <span className="text-slate-400 text-xs">Formato íntimo para departamentos →</span>
+                            </a>
+                        </div>
+                    </section>
+
                     {/* CONTACT BAR */}
                     <div className="bg-gradient-to-r from-emerald-900/20 to-zinc-900/40 backdrop-blur-3xl border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] rounded-[2rem] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
                         <div>
