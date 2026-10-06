@@ -122,6 +122,62 @@ export default function ContratarMagoMadridPage() {
                     "name": "Madrid"
                 }
             },
+            {
+                "@type": "Service",
+                "@id": "https://angelruiz.world/contratar-mago-madrid/#service",
+                "name": "Contratación de Mago en Madrid — Ángel Ruiz",
+                "serviceType": "Entertainment Services",
+                "provider": { "@id": "https://angelruiz.world/#organization" },
+                "areaServed": {
+                    "@type": "AdministrativeArea",
+                    "name": "Comunidad de Madrid"
+                },
+                "description": "Servicio profesional de ilusionismo de autor para bodas, empresas y celebraciones privadas en Madrid. Trato directo sin agencias intermediarias.",
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Tarifas de Contratación de Magia en Madrid 2026",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Magia para Celebraciones Privadas y Fiestas de Adultos"
+                            },
+                            "priceSpecification": {
+                                "@type": "PriceSpecification",
+                                "price": 300,
+                                "priceCurrency": "EUR"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Mago para Bodas (Cóctel y Banquete)"
+                            },
+                            "priceSpecification": {
+                                "@type": "PriceSpecification",
+                                "minPrice": 450,
+                                "maxPrice": 650,
+                                "priceCurrency": "EUR"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Mago para Eventos Corporativos y Cenas de Empresa"
+                            },
+                            "priceSpecification": {
+                                "@type": "PriceSpecification",
+                                "minPrice": 500,
+                                "maxPrice": 750,
+                                "priceCurrency": "EUR"
+                            }
+                        }
+                    ]
+                }
+            },
             faqSchema,
             {
                 "@type": "BreadcrumbList",
@@ -146,17 +202,50 @@ export default function ContratarMagoMadridPage() {
                     <Breadcrumbs />
                     
                     {/* HERO BENTO */}
-                    <div className="mt-16 flex flex-col items-center text-center mb-24">
+                    <div className="mt-16 flex flex-col items-center text-center mb-16">
                         <p className="font-mono text-emerald-400 text-xs tracking-[0.2em] uppercase mb-4 flex items-center justify-center gap-2">
                             <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-                            Protocolo de Contratación
+                            Protocolo de Contratación Directa
                         </p>
                         <h1 className="text-5xl md:text-7xl font-[Cinzel] text-white font-bold leading-none mb-8 tracking-tight">
                             CONTRATAR MAGO <br/> EN MADRID
                         </h1>
-                        <p className="text-slate-400 max-w-xl mx-auto text-sm md:text-base leading-relaxed mb-12">
+                        <p className="text-slate-400 max-w-xl mx-auto text-sm md:text-base leading-relaxed mb-8">
                             Asegura la disponibilidad para tu evento en Madrid. Desde Magia de Cerca y Sleight of Hand hasta magia de salón corporativa de alto impacto. Una experiencia de técnica depurada y misdirection profesional.
                         </p>
+
+                        {/* Ficha Técnica GEO Extractable (Optimización para IA y Lectura Rápida) */}
+                        <div className="w-full max-w-3xl rounded-2xl bg-white/[0.03] border border-emerald-500/30 p-5 md:p-6 backdrop-blur-xl text-left shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+                            <div className="flex items-center justify-between mb-4 pb-3 border-b border-white/10">
+                                <span className="text-[11px] font-mono uppercase tracking-wider text-emerald-400 font-bold flex items-center gap-2">
+                                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                                    Ficha Técnica de Contratación 2026
+                                </span>
+                                <span className="text-[11px] text-slate-400">Trato directo con Ángel Ruiz</span>
+                            </div>
+                            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
+                                <div>
+                                    <span className="text-slate-400 block mb-0.5">Tarifas Oficiales</span>
+                                    <span className="text-white font-bold text-sm">300€ - 750€</span>
+                                    <span className="text-[10px] text-emerald-400 block">Sin comisiones de agencia</span>
+                                </div>
+                                <div>
+                                    <span className="text-slate-400 block mb-0.5">Tiempo de Respuesta</span>
+                                    <span className="text-white font-bold text-sm">&lt; 2 Horas</span>
+                                    <span className="text-[10px] text-slate-400 block">Presupuesto garantizado</span>
+                                </div>
+                                <div>
+                                    <span className="text-slate-400 block mb-0.5">Especialización</span>
+                                    <span className="text-white font-bold text-sm">Escuela DaOrtiz</span>
+                                    <span className="text-[10px] text-slate-400 block">+10 años de experiencia</span>
+                                </div>
+                                <div>
+                                    <span className="text-slate-400 block mb-0.5">Cobertura</span>
+                                    <span className="text-white font-bold text-sm">Comunidad de Madrid</span>
+                                    <span className="text-[10px] text-slate-400 block">Desplazamiento incluido</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     {/* METODOLOGIA DE TRABAJO (PROCESS CARDS) */}

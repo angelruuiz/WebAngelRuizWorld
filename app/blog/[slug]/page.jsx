@@ -100,6 +100,12 @@ export default async function BlogPost({ params }) {
         "url": "https://angelruiz.world/images/logo-grande.webp"
       }
     },
+    "isPartOf": {
+      "@type": "Blog",
+      "@id": "https://angelruiz.world/blog/#blog",
+      "name": "Blog de Ángel Ruiz | Magia y Eventos en Madrid",
+      "url": "https://angelruiz.world/blog"
+    },
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": `https://angelruiz.world/blog/${params.slug}`

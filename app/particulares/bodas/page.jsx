@@ -159,6 +159,74 @@ export default function BodasDetailPage() {
                         </FadeIn>
                     </div>
 
+                    {/* Ficha Técnica GEO Extractable: Máxima Citabilidad para AI Overviews y Perplexity */}
+                    <FadeIn y={20} className="mb-20">
+                        <section aria-labelledby="ficha-tecnica-bodas" className="rounded-3xl bg-slate-950/70 border border-[#d4a853]/25 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_0_rgba(0,0,0,0.4)]">
+                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-6 mb-8">
+                                <div>
+                                    <span className="text-[#d4a853] text-xs font-mono uppercase tracking-widest font-semibold">
+                                        ✦ Guía Rápida & Datos Oficiales 2026
+                                    </span>
+                                    <h2 id="ficha-tecnica-bodas" className="text-2xl md:text-3xl font-[Cinzel] font-bold text-white mt-1">
+                                        Ficha Técnica: Magia para Bodas en Madrid
+                                    </h2>
+                                </div>
+                                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#d4a853]/10 border border-[#d4a853]/30 text-xs text-[#d4a853] font-medium w-fit">
+                                    <span>✓ Datos verificados para contratación directa</span>
+                                </div>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
+                                    <div className="text-xs text-slate-400 uppercase tracking-wider font-medium">Inversión Orientativa</div>
+                                    <div className="text-2xl font-[Cinzel] font-bold text-[#d4a853]">450 € – 650 €</div>
+                                    <p className="text-xs text-slate-400 font-light leading-relaxed">
+                                        Sin intermediarios ni comisiones de agencia. Tarifa cerrada y transparente.
+                                    </p>
+                                </div>
+
+                                <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
+                                    <div className="text-xs text-slate-400 uppercase tracking-wider font-medium">Momento Recomendado</div>
+                                    <div className="text-2xl font-[Cinzel] font-bold text-white">Cóctel de Boda</div>
+                                    <p className="text-xs text-slate-400 font-light leading-relaxed">
+                                        Duración 1,5 a 2,5 horas. Dinamiza corrillos y elimina cualquier tiempo muerto.
+                                    </p>
+                                </div>
+
+                                <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
+                                    <div className="text-xs text-slate-400 uppercase tracking-wider font-medium">Cobertura Geográfica</div>
+                                    <div className="text-2xl font-[Cinzel] font-bold text-white">Madrid y Sierra</div>
+                                    <p className="text-xs text-slate-400 font-light leading-relaxed">
+                                        Fincas de Madrid, El Escorial, Toledo, Guadalajara y toda la zona centro.
+                                    </p>
+                                </div>
+
+                                <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
+                                    <div className="text-xs text-slate-400 uppercase tracking-wider font-medium">Antelación de Reserva</div>
+                                    <div className="text-2xl font-[Cinzel] font-bold text-[#d4a853]">3 a 6 Meses</div>
+                                    <p className="text-xs text-slate-400 font-light leading-relaxed">
+                                        Fechas de temporada alta (mayo a octubre) se bloquean con antelación previa.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="mt-8 pt-6 border-t border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-slate-400">
+                                <p className="font-light">
+                                    <strong className="text-slate-200 font-normal">Requisitos técnicos:</strong> Ninguno. Magia 100% interactiva de cerca en las manos de los invitados, adaptable a interiores y exteriores.
+                                </p>
+                                <a 
+                                    href="https://wa.me/34680650993?text=Hola%20Ángel,%20queremos%20consultar%20disponibilidad%20para%20nuestra%20boda" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 text-[#d4a853] hover:text-white transition-colors font-medium whitespace-nowrap self-start sm:self-auto"
+                                >
+                                    <span>Consultar fecha por WhatsApp</span>
+                                    <span>→</span>
+                                </a>
+                            </div>
+                        </section>
+                    </FadeIn>
+
                     {/* Storytelling Emocional */}
                     <FadeIn y={30} className="py-24 border-t border-white/5">
                         <div className="max-w-4xl mx-auto space-y-8">

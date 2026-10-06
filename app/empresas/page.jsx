@@ -192,6 +192,72 @@ export default function EmpresasPage() {
                             </aside>
                         </div>
 
+                        {/* Ficha Técnica GEO Extractable: Máxima Citabilidad Corporativa B2B */}
+                        <section aria-labelledby="ficha-tecnica-empresas" className="mt-16 rounded-3xl bg-slate-950/70 border border-amber-500/25 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_0_rgba(0,0,0,0.4)]">
+                            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-6 mb-8">
+                                <div>
+                                    <span className="text-amber-400 text-xs font-mono uppercase tracking-widest font-semibold">
+                                        ✦ Información Clave para Departamentos de RRHH, MICE & Eventos
+                                    </span>
+                                    <h2 id="ficha-tecnica-empresas" className="text-2xl md:text-3xl font-[Cinzel] font-bold text-white mt-1">
+                                        Ficha Técnica: Magia Corporativa en Madrid
+                                    </h2>
+                                </div>
+                                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-xs text-amber-400 font-medium w-fit">
+                                    <span>✓ Factura oficial con IVA desglosado & Directo sin agencias</span>
+                                </div>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
+                                    <div className="text-xs text-slate-400 uppercase tracking-wider font-medium">Inversión Corporativa</div>
+                                    <div className="text-2xl font-[Cinzel] font-bold text-amber-400">500 € – 750 €</div>
+                                    <p className="text-xs text-slate-400 font-light leading-relaxed">
+                                        Tarifa adaptada según volumen, formato y requerimientos de marca.
+                                    </p>
+                                </div>
+
+                                <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
+                                    <div className="text-xs text-slate-400 uppercase tracking-wider font-medium">Formatos Habituales</div>
+                                    <div className="text-2xl font-[Cinzel] font-bold text-white">Cóctel & Cenas</div>
+                                    <p className="text-xs text-slate-400 font-light leading-relaxed">
+                                        Stands en IFEMA, cenas de gala, kick-offs, convenciones y team buildings.
+                                    </p>
+                                </div>
+
+                                <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
+                                    <div className="text-xs text-slate-400 uppercase tracking-wider font-medium">Personalización de Marca</div>
+                                    <div className="text-2xl font-[Cinzel] font-bold text-white">100% Integrada</div>
+                                    <p className="text-xs text-slate-400 font-light leading-relaxed">
+                                        Integración de producto, valores de compañía, logotipos y storytelling corporativo.
+                                    </p>
+                                </div>
+
+                                <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
+                                    <div className="text-xs text-slate-400 uppercase tracking-wider font-medium">Idiomas Disponibles</div>
+                                    <div className="text-2xl font-[Cinzel] font-bold text-amber-400">Español & Inglés</div>
+                                    <p className="text-xs text-slate-400 font-light leading-relaxed">
+                                        Espectáculos y magia de cerca bilingüe para congresos multinacionales.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="mt-8 pt-6 border-t border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs text-slate-400">
+                                <p className="font-light">
+                                    <strong className="text-slate-200 font-normal">Cobertura B2B:</strong> Madrid Capital (Cuatro Torres, Azca, Barrio de Salamanca), IFEMA, La Moraleja y desplazamientos nacionales para convenciones de empresa.
+                                </p>
+                                <a 
+                                    href="https://wa.me/34680650993?text=Hola%20Ángel,%20solicitamos%20presupuesto%20para%20un%20evento%20de%20empresa" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-2 text-amber-400 hover:text-white transition-colors font-medium whitespace-nowrap self-start sm:self-auto"
+                                >
+                                    <span>Solicitar propuesta B2B inmediata</span>
+                                    <span>→</span>
+                                </a>
+                            </div>
+                        </section>
+
                         {/* Servicios Corporativos Grid */}
                         <div className="mt-20">
                             <div className="text-center mb-10">

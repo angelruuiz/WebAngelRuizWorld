@@ -295,12 +295,16 @@ export default function Home() {
             },
             {
                 "@type": "VideoObject",
+                "@id": "https://angelruiz.world/#video-show",
                 "name": "Show de Magia en Directo en Madrid | Ángel Ruiz (El Badulaque)",
                 "description": "Resumen en vivo del show de magia de cerca e ilusionismo profesional por Ángel Ruiz en El Badulaque.",
                 "thumbnailUrl": "https://angelruiz.world/videos/show-badulaque-poster.webp",
                 "uploadDate": "2026-09-16T22:00:00+02:00",
                 "duration": "PT1M4S",
                 "contentUrl": "https://angelruiz.world/videos/show-badulaque.mp4",
+                "embedUrl": "https://angelruiz.world/#video-show",
+                "inLanguage": "es-ES",
+                "author": { "@id": "https://angelruiz.world/#person" },
                 "publisher": { "@id": "https://angelruiz.world/#organization" }
             },
             {

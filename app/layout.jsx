@@ -50,6 +50,12 @@ export const metadata = {
       'max-snippet': -1,
     },
   },
+  other: {
+    'geo.region': 'ES-MD',
+    'geo.placename': 'Madrid',
+    'geo.position': '40.5765;-3.9298',
+    'ICBM': '40.5765, -3.9298',
+  },
 };
 
 export const viewport = {
@@ -102,6 +108,15 @@ const globalSchema = {
       "image": "https://angelruiz.world/images/foto-bio.webp",
       "telephone": "+34648055636",
       "email": "info@angelruiz.world",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+34648055636",
+          "contactType": "customer service",
+          "areaServed": "ES",
+          "availableLanguage": ["Spanish", "English"]
+        }
+      ],
       "priceRange": "300€ - 750€",
       "currenciesAccepted": "EUR",
       "paymentAccepted": "Cash, Credit Card, Bank Transfer, Bizum",
