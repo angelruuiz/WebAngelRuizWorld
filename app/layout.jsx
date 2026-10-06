@@ -261,6 +261,55 @@ const globalSchema = {
         "https://www.youtube.com/@angellruuiz",
         "https://twitter.com/angellruuizz"
       ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://angelruiz.world/#site-navigation",
+      "name": "Navegación Principal de Ángel Ruiz World",
+      "itemListElement": [
+        {
+          "@type": "SiteNavigationElement",
+          "position": 1,
+          "name": "Mago para Bodas en Madrid",
+          "description": "Magia de cerca en cóctel y banquete para bodas y fincas en Madrid",
+          "url": "https://angelruiz.world/particulares/bodas"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 2,
+          "name": "Mago para Empresas y Cenas Corporativas",
+          "description": "Ilusionismo corporativo para cenas de empresa, team building y eventos",
+          "url": "https://angelruiz.world/empresas"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 3,
+          "name": "Tarifas y Formatos 2026",
+          "description": "Precios directos sin agencias intermediarias para contratar mago en Madrid",
+          "url": "https://angelruiz.world/contratar-mago-madrid"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 4,
+          "name": "Magia de Cerca Close-Up",
+          "description": "Especialización en cartomagia de autor a escasos centímetros del espectador",
+          "url": "https://angelruiz.world/mago-close-up-madrid"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 5,
+          "name": "Sobre Ángel Ruiz",
+          "description": "Biografía, trayectoria de +10 años y formación en la Escuela DaOrtiz",
+          "url": "https://angelruiz.world/sobre-mi"
+        },
+        {
+          "@type": "SiteNavigationElement",
+          "position": 6,
+          "name": "Blog y Guías de Magia",
+          "description": "Artículos y consejos para organizar eventos con magia en Madrid",
+          "url": "https://angelruiz.world/blog"
+        }
+      ]
     }
   ]
 };

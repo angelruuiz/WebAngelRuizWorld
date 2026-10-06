@@ -75,6 +75,13 @@ export default async function BlogPost({ params }) {
     "inLanguage": "es-ES",
     "wordCount": wordCount,
     "articleSection": postData.category || "Magia y Eventos",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [
+        "h1",
+        ".blog-content > p:first-of-type"
+      ]
+    },
     ...(postData.tags && postData.tags.length > 0 ? { "keywords": postData.tags.join(', ') } : {}),
     "author": {
       "@type": "Person",

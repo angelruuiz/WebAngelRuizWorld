@@ -40,3 +40,4 @@
 ## Optional
 
 - [Documento Completo para LLMs](https://angelruiz.world/llms-full.txt): Base de conocimiento extendida para asistentes de Inteligencia Artificial con preguntas frecuentes y detalles de contratación.
+- [Especificación para Agentes Autónomos](https://angelruiz.world/AGENTS.md): Directrices machine-readable para agentes de evaluación y contratación (OpenAI Operator, Claude, Perplexity).

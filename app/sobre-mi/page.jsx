@@ -23,8 +23,8 @@ export const metadata = {
 
 export default function SobreMiPage() {
     const personSchema = {
-        "@context": "https://schema.org",
         "@type": "Person",
+        "@id": "https://angelruiz.world/#person",
         "name": "Ángel Ruiz",
         "jobTitle": "Mago e Ilusionista Profesional",
         "url": "https://angelruiz.world/sobre-mi",
@@ -46,6 +46,18 @@ export default function SobreMiPage() {
         "areaServed": "Comunidad de Madrid"
     };
 
+    const aboutPageSchema = {
+        "@type": "AboutPage",
+        "@id": "https://angelruiz.world/sobre-mi/#aboutpage",
+        "url": "https://angelruiz.world/sobre-mi",
+        "name": "Sobre Ángel Ruiz | Mago Profesional en Madrid",
+        "description": "Biografía oficial, formación en la Escuela DaOrtiz y trayectoria de +10 años de Ángel Ruiz como ilusionista en Madrid.",
+        "inLanguage": "es-ES",
+        "mainEntity": {
+            "@id": "https://angelruiz.world/#person"
+        }
+    };
+
     const breadcrumbSchema = {
         "@type": "BreadcrumbList",
         "itemListElement": [
@@ -61,6 +73,7 @@ export default function SobreMiPage() {
             dangerouslySetInnerHTML={{ __html: JSON.stringify({
                 "@context": "https://schema.org",
                 "@graph": [
+                    aboutPageSchema,
                     personSchema,
                     breadcrumbSchema
                 ]

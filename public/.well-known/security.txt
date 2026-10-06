@@ -1,0 +1,5 @@
+Contact: mailto:info@angelruiz.world
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: es, en
+Canonical: https://angelruiz.world/.well-known/security.txt
+Policy: https://angelruiz.world/privacidad
