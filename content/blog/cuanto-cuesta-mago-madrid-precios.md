@@ -1,97 +1,75 @@
 ---
-title: ¿Cuánto Cuesta un Mago en Madrid? Precios
-date: '2026-04-13'
-excerpt: >-
-  Precios reales desde 300€ para contratar un mago en Madrid. Tarifas para
-  bodas, empresas y fiestas sin comisiones.
+title: '¿Cuánto Cuesta un Mago en Madrid? Precios y Tarifas Oficiales (2026)'
+date: '2026-10-06'
+excerpt: 'Guía oficial y transparente de precios para contratar un mago en Madrid (2026): particulares (300€), bodas (450€ - 650€) y empresas (500€ - 750€) sin comisiones.'
 author: Ángel Ruiz
 image: /images/foto-bio.webp
 tags:
-  - Precios
+  - Precios Mago Madrid
+  - Tarifas
   - Madrid
   - Contratación
   - Guía
+category: Guía
+readTime: 7 MIN
 faq:
-  - question: ¿Por qué los precios varían tanto entre un mago y otro?
+  - question: ¿Cuánto cuesta contratar un mago profesional en Madrid?
     answer: >-
-      El precio refleja principalmente la experiencia, la especialización y la
-      calidad del material. Un profesional con más de 10 años garantiza el éxito
-      del evento, mientras que una opción 'barata' puede resultar arriesgada
-      para momentos críticos como una boda.
+      Las tarifas oficiales de Ángel Ruiz en Madrid son: eventos privados y cumpleaños familiares a 300€; bodas desde 450€ (solo cóctel) hasta 650€ (experiencia completa cóctel + banquete); y eventos de empresa y cenas corporativas desde 500€ hasta 750€. Precios directos sin intermediarios de agencia.
+  - question: ¿Por qué los precios varían tanto entre un mago y otro en Madrid?
+    answer: >-
+      El precio refleja principalmente la experiencia, la especialización en eventos adultos y la calidad del material. Un profesional con más de 10 años garantiza el éxito del evento, mientras que una opción 'low-cost' suele carecer de tablas de control social, seguro de responsabilidad civil o repertorio adecuado para público exigente.
   - question: ¿El desplazamiento influye en el precio final?
     answer: >-
-      Sí. Sin embargo, para eventos en Madrid capital, Torrelodones, Las Rozas y
-      Majadahonda, mis tarifas suelen incluir el desplazamiento, ofreciendo un
-      servicio local más competitivo.
-  - question: ¿Es más caro contratar un mago para una boda que para un cumpleaños?
+      Con base en Torrelodones, todas las tarifas de Ángel Ruiz incluyen el desplazamiento a Madrid capital, toda la zona noroeste (Las Rozas, Majadahonda, Pozuelo, Boadilla) y los municipios del sur y este de la Comunidad de Madrid.
+  - question: ¿Hay que pagar señal para reservar la fecha?
     answer: >-
-      Generalmente sí, debido a la responsabilidad, el protocolo, la duración y
-      la necesidad de una magia mucho más sofisticada y elegante que se adapte
-      al tono del enlace.
-category: Guía
+      Sí, se realiza un pago de señal para bloquear la fecha en exclusiva en la agenda, abonándose el resto el día de la actuación.
 ---
 
-Una de las preguntas más frecuentes al organizar una celebración es: **¿cuánto cuesta contratar un mago en Madrid?** La respuesta corta es que depende, pero en este artículo vamos a ser totalmente transparentes. Queremos que entiendas qué estás pagando cuando contratas ilusión para tu evento y cómo diferenciar un presupuesto profesional de uno que podría arruinar tu día especial.
+Una de las preguntas más frecuentes al organizar una celebración o evento en Madrid es: **¿cuánto cuesta contratar a un mago profesional?** 
 
-### Los factores que determinan el precio de un mago en Madrid
-
-No existe una tarifa plana universal, ya que cada evento tiene necesidades únicas. Aquí te detallo los pilares que mueven la aguja del presupuesto:
-
-#### 1. Experiencia y Trayectoria Profesional
-Un mago profesional de primer nivel no solo vende "trucos". Vende seguridad, manejo de grupos complicados, elegancia y la garantía de que nada saldrá mal. La veteranía en el **ilusionismo profesional** se paga porque asegura el éxito de tu inversión.
-
-#### 2. El Tipo de Magia (Formato)
-*   **Magia de Cerca (Cóctel/Cena):** Es el formato más versátil. El mago se desplaza entre los invitados. Requiere mucha habilidad técnica pero menos logística de sonido o escenario.
-*   **Show de Escenario o Magia de Salón:** Ideal para grupos grandes donde todos miran a la vez. Suele ser más costoso debido a la necesidad de equipo de audio, iluminación y una estructura de guion más compleja.
-
-#### 3. Tipo de Evento y Responsabilidad
-Contratar un **[mago para bodas en Madrid](/particulares/bodas)** suele tener un coste superior a una fiesta infantil. ¿Por qué? Por el nivel de sofisticación, el vestuario, el protocolo y la presión de que no hay "segundas tomas" en el día más importante de tu vida. Lo mismo ocurre con los **eventos corporativos**, donde el mago representa la imagen de una marca.
-
-### Rangos de precios aproximados en Madrid (2026)
-
-Para que tengas una referencia real del mercado de **magos profesionales en Madrid**:
-
-*   **Eventos Privados / Cumpleaños:** Suelen oscilar entre los **300€ y 450€**, dependiendo de la duración y el formato.
-*   **Bodas (Cóctel o Banquete):** Tarifas desde **350€** (solo cóctel), **500€** (cóctel + banquete) y **600€** (experiencia completa con efecto especial para novios).
-*   **Empresas y Corporativo:** Formatos de cóctel networking desde **350€**, espectáculos de sobremesa desde **400€**, team building desde **500€** y dinamización en feria desde **600€**.
-
-### La Ventaja de Contratar un Mago Local en la Sierra y Noroeste
-
-Si tu evento es en **Torrelodones, Las Rozas, Majadahonda o Pozuelo**, contratar a un ilusionista con base en esta zona es una decisión inteligente. 
-
-Como **mago en Torrelodones**, puedo ofrecer presupuestos más ajustados para mis vecinos de la Sierra de Madrid al eliminar o reducir drásticamente los costes de desplazamiento y logística. Además, la cercanía facilita una reunión previa si fuera necesario para coordinar los detalles del show.
-
-### ¿Por qué lo "barato" sale caro en la magia?
-
-En nuestro sector, existe mucho intrusismo. Un presupuesto de 80€ o 100€ suele esconder a alguien sin seguro de responsabilidad civil, con materiales de baja calidad o, lo que es peor, sin la habilidad social necesaria para tratar con tus invitados VIP o tus familiares.
-
-**La magia es una experiencia emocional**. Si el mago no conecta, no es divertido o revela los secretos, el recuerdo del evento se verá empañado. Contratar **ilusionismo profesional** es comprar tranquilidad.
-
-### Consejos para elegir el mejor presupuesto
-
-1.  **Pide Vídeos:** No te fíes solo de las fotos. La magia se ve en movimiento y en la reacción de la gente.
-2.  **Verifica Opiniones:** Entra en su perfil de Google o en su sección de **valoraciones**.
-3.  **Huye de las Tarifas Estándar:** Un buen mago te hará preguntas sobre tu evento antes de darte un número. Cada cliente merece un presupuesto a medida.
-
-### Conclusión
-
-Invertir en un mago es invertir en que tus invitados sigan hablando de tu fiesta meses después. Ya sea una boda íntima en **Galapagar** o un gran congreso en el centro de Madrid, el valor que aporta el asombro profesional siempre es superior al coste económico.
+En el sector del entretenimiento abunda la falta de claridad en las tarifas o los presupuestos inflados por comisiones de intermediarios. En [Ángel Ruiz World](/contratar-mago-madrid) apostamos por la **transparencia total**: precios claros, servicio de primer nivel y trato directo con el artista.
 
 ---
 
-*¿Estás organizando un evento y quieres un presupuesto cerrado y profesional? Contacta conmigo hoy mismo. Estaré encantado de explicarte cómo podemos hacer que tu celebración sea inolvidable.*
+## Tabla Oficial de Precios y Tarifas en Madrid (2026)
 
+Para que planifiques tu evento con total certidumbre, aquí tienes el desglose exacto de nuestras tarifas:
 
+| Tipo de Evento | Formato / Duración | Qué Incluye | Tarifa Cerrada |
+|---|---|---|---|
+| **Eventos Privados / Cumpleaños** | 1h – 1,5h | Magia de cerca en mesa o de pie para fiestas particulares, aniversarios o cenas a domicilio. | **300€** |
+| **Bodas: Solo Cóctel** | 1h – 1,5h | Magia itinerante durante la recepción y fotos de novios para romper el hielo entre invitados. | **450€** |
+| **Bodas: Cóctel + Banquete** ⭐ | 1,5h – 2h | Cobertura del cóctel más pases de mesa entre platos durante el banquete. | **550€** |
+| **Bodas: Experiencia Completa** | 2h+ | Cóctel, mesas y efecto especial exclusivo e irrepetible para los recién casados. | **650€** |
+| **Empresas: Magia Cóctel Networking** | 1 hora | Ilusionismo dinámico para romper el hielo en recepciones corporativas y cócteles. | **500€** |
+| **Empresas: Show Central de Sobremesa** | 35 – 45 min | Espectáculo de salón participativo y refinado tras los postres para todo el equipo. | **600€** |
+| **Empresas: Pack Gala Completo** ⭐ | 2 horas | Cóctel de bienvenida + pases de mesa + cierre centralizado de impacto. | **750€** |
+
+*Todas las tarifas incluyen factura oficial, seguro de responsabilidad civil y desplazamiento en toda la Comunidad de Madrid.*
 
 ---
 
-### 🔮 Sigue leyendo sobre precios
+## Los 4 Factores que Determinan el Presupuesto
 
-Si te ha parecido interesante, quizás te interese seguir leyendo estos artículos relacionados:
+1. **El Tipo de Magia**: La magia de cerca (*close-up*) requiere una técnica depurada y psicología social milimétrica para actuar a centímetros del espectador.
+2. **La Responsabilidad del Evento**: Una boda o una gala corporativa con clientes VIP exige un protocolo, presencia escénica y vestuario impecable.
+3. **La Duración del Show**: Las sesiones se adaptan a la estructura del evento, desde intervenciones de 1 hora hasta coberturas completas de 2 o 3 horas.
+4. **Trato Directo vs. Agencia**: Al contratar directamente con Ángel Ruiz te ahorras entre un **25% y un 40%** en comisiones de agencias intermediarias.
 
-- [5 Errores al Contratar un Mago en Madrid [Guía 2026]](/blog/como-elegir-mago-evento-madrid-errores)
-- [Magia de Cerca vs. Magia de Escenario: ¿Cuál es el formato ideal para tu evento?](/blog/magia-de-cerca-vs-escenario)
-- [Magia de Cerca en Madrid: El Secreto para un Evento o Boda Inolvidable (2026)](/blog/magia-de-cerca-madrid-eventos-bodas)
+---
 
+## ¿Por Qué lo "Barato" Suele Salir Muy Caro en Magia?
 
-¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.
+Un presupuesto de 100€ suele esconder a aficionados sin experiencia que pueden cometer errores críticos frente a tus invitados más importantes: trucos fallidos, bromas fuera de lugar o falta de puntualidad. La magia es una experiencia emocional: **contratar a un profesional avalado con más de una década de trayectoria es comprar tranquilidad absoluta**.
+
+---
+
+## Guías Específicas de Precios por Categoría
+
+- Para cenas de empresa y Navidad: consulta [¿cuánto cuesta un mago para una cena de empresa en Madrid?](/blog/presupuesto-mago-cena-de-empresa-madrid-cuanto-cuesta).
+- Para bodas y enlaces nupciales: lee nuestra [comparativa de precios de animación para bodas en Madrid](/blog/cuanto-cuesta-animacion-boda-madrid-comparativa) y la [guía de tarifas de mago para bodas](/blog/cuanto-cuesta-mago-boda-madrid).
+- Para cumpleaños y celebraciones privadas: visita nuestra guía sobre [magia en restaurante para cumpleaños de adultos en Madrid](/blog/magia-restaurante-cumpleanos-adultos-madrid).
+
+¿Quieres asegurar tu fecha con presupuesto cerrado hoy mismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contáctanos por WhatsApp para recibir respuesta en menos de 2 horas.
