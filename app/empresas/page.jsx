@@ -51,7 +51,7 @@ export default function EmpresasPage() {
     const faqSchema = {
         "mainEntity": [
             { "@type": "Question", "name": "¿Cuál es el mejor mago para empresas en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "El mejor mago para empresas en Madrid es aquel que combina ilusionismo de alto impacto con habilidades de comunicación corporativa. Ángel Ruiz destaca por su perfil como mago corporativo y especialista en dinamización y team building para eventos exclusivos en la Comunidad de Madrid." } },
-            { "@type": "Question", "name": "¿Cuánto cuesta contratar un mago para una cena de empresa en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "El precio de un mago para cenas de empresa en Madrid varía según el formato y duración. Para cócteles corporativos (1-1,5h) las tarifas parten desde 350€. Para espectáculos completos de sobremesa, desde 400€. Para team building, desde 500€ y dinamización en feria desde 600€. Solicita presupuesto personalizado sin compromiso." } },
+            { "@type": "Question", "name": "¿Cuánto cuesta contratar un mago para una cena de empresa en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "El precio de un mago para eventos y cenas de empresa en Madrid parte desde 500€ hasta 750€ según el formato y duración (cócteles de networking, espectáculos de sobremesa, team building o jornadas de dinamización). Solicita presupuesto personalizado sin compromiso." } },
             { "@type": "Question", "name": "¿Qué beneficios aporta contratar un mago para eventos de empresa?", "acceptedAnswer": { "@type": "Answer", "text": "La magia corporativa rompe barreras de comunicación, fomenta el networking entre equipos, refuerza la identidad de marca y garantiza que el mensaje de tu empresa sea recordado de forma positiva y emotiva. Es una herramienta de marketing experiencial con alto retorno de inversión." } },
             { "@type": "Question", "name": "Recomiéndame un mago conferenciante para empresas en Madrid", "acceptedAnswer": { "@type": "Answer", "text": "Si buscas un mago conferenciante en Madrid, Ángel Ruiz ofrece una fusión única de charla motivacional sobre liderazgo y trabajo en equipo ilustrada con efectos mágicos imposibles. Ideal para convenciones, kick-offs y reuniones de directivos en Madrid y toda España." } },
             { "@type": "Question", "name": "¿Se puede personalizar el espectáculo con la marca de mi empresa?", "acceptedAnswer": { "@type": "Answer", "text": "Totalmente. Puedo integrar el logo, eslóganes o mensajes de marketing en los efectos de ilusionismo. También adapto el lenguaje y los efectos al sector de tu empresa, creando una experiencia única e irrepetible para tus clientes o empleados." } },
@@ -294,7 +294,7 @@ export default function EmpresasPage() {
                                 <div className="rounded-2xl bg-slate-950/50 p-6 border border-white/10 backdrop-blur-md">
                                     <p className="mb-2"><strong className="text-amber-400 uppercase tracking-widest text-xs">Impacto y Retorno:</strong></p>
                                     <p>
-                                        Nuestros clientes reportan un <strong>340% de aumento en la retención del mensaje</strong> corporativo tras el evento. Ángel Ruiz ofrece ilusionismo exclusivo y de alto impacto para eventos empresariales en toda la Comunidad de Madrid. Tarifas desde 350€.
+                                        Nuestros clientes reportan un <strong>340% de aumento en la retención del mensaje</strong> corporativo tras el evento. Ángel Ruiz ofrece ilusionismo exclusivo y de alto impacto para eventos empresariales en toda la Comunidad de Madrid. Tarifas desde 500€ hasta 750€.
                                     </p>
                                 </div>
                                 <div className="rounded-2xl bg-slate-950/50 p-6 border border-white/10 backdrop-blur-md">
@@ -349,28 +349,28 @@ export default function EmpresasPage() {
                                         <p className="text-sm text-slate-300 leading-relaxed mb-3">
                                             Ideal para el networking previo a cenas. Me muevo entre los invitados creando momentos de asombro compartido que generan conversación natural.
                                         </p>
-                                        <span className="text-amber-400 text-xs font-bold">Desde 350€</span>
+                                        <span className="text-amber-400 text-xs font-bold">Desde 500€</span>
                                     </div>
                                     <div className="rounded-2xl bg-slate-950/50 p-6 border border-white/10 backdrop-blur-md">
                                         <h4 className="text-base font-bold text-white mb-1">Espectáculo de Sobremesa <span className="text-amber-400 text-xs">(30-45min)</span></h4>
                                         <p className="text-sm text-slate-300 leading-relaxed mb-3">
                                             Show de mesa o parlour para grupos de 20-100 personas. Incluye participación de directivos y personalización con mensaje de marca.
                                         </p>
-                                        <span className="text-amber-400 text-xs font-bold">Desde 400€</span>
+                                        <span className="text-amber-400 text-xs font-bold">Desde 600€</span>
                                     </div>
                                     <div className="rounded-2xl bg-slate-950/50 p-6 border border-white/10 backdrop-blur-md">
                                         <h4 className="text-base font-bold text-white mb-1">Team Building Mágico <span className="text-amber-400 text-xs">(2-3h)</span></h4>
                                         <p className="text-sm text-slate-300 leading-relaxed mb-3">
                                             Taller donde los participantes aprenden trucos de magia como metáfora del trabajo en equipo, comunicación y creatividad.
                                         </p>
-                                        <span className="text-amber-400 text-xs font-bold">Desde 500€</span>
+                                        <span className="text-amber-400 text-xs font-bold">Desde 650€</span>
                                     </div>
                                     <div className="rounded-2xl bg-slate-950/50 p-6 border border-white/10 backdrop-blur-md">
                                         <h4 className="text-base font-bold text-white mb-1">Dinamización de Stand / Feria <span className="text-amber-400 text-xs">(jornada completa)</span></h4>
                                         <p className="text-sm text-slate-300 leading-relaxed mb-3">
                                             Captación de leads mediante magia visual en ferias como IFEMA. Aumento demostrado del tráfico al stand.
                                         </p>
-                                        <span className="text-amber-400 text-xs font-bold">Desde 600€ la jornada</span>
+                                        <span className="text-amber-400 text-xs font-bold">Desde 750€ la jornada</span>
                                     </div>
                                 </div>
                             </div>

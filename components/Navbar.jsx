@@ -60,7 +60,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
             href: '/empresas',
             children: [
                 { name: 'Eventos Corporativos', href: '/empresas' },
-                { name: 'Cenas de Navidad', href: '/empresas/mago-cenas-empresa-madrid' },
+                { name: 'Cenas de Empresa & Navidad', href: '/empresas/mago-cenas-empresa-madrid' },
                 { name: 'Restaurantes', href: '/empresas/mago-para-restaurantes-madrid' }
             ]
         },

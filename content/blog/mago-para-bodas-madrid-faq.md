@@ -16,9 +16,10 @@ faq:
   - question: ¿Cuánto cuesta contratar un mago para una boda en Madrid?
     answer: >-
       En 2026, el precio de un mago profesional para bodas en Madrid oscila
-      entre 400€ y 1.000€. Para el cóctel (1-1,5h), entre 400€ y 700€. Para
-      cóctel + banquete (2-3h), entre 700€ y 1.000€. El precio varía según la
-      experiencia del artista, la duración y la personalización del servicio.
+      entre 450€ y 650€. Para el cóctel (1-1,5h), las tarifas parten desde 450€.
+      Para cóctel + banquete o formato completo con efecto especial para novios,
+      el presupuesto se sitúa entre 550€ y 650€. El servicio incluye desplazamiento
+      y coordinación con el catering o wedding planner.
   - question: ¿Es la magia adecuada para todas las edades en una boda?
     answer: >-
       Efectivamente. La magia de calidad cautiva desde los niños hasta los

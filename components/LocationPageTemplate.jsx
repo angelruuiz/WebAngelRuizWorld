@@ -1,12 +1,14 @@
 "use client";
 import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import NavFooterClient from '@/components/NavFooterClient';
 import ContactButtonClient from '@/components/ContactButtonClient';
-import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Link from 'next/link';
 import Breadcrumbs from '@/components/Breadcrumbs';
+
+const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod => mod.MagicCursor), { ssr: false });
+const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
 
 const MagicalCarousel = ({ locationName, locationImages }) => {
     const images = locationImages && locationImages.length > 0 
@@ -16,6 +18,7 @@ const MagicalCarousel = ({ locationName, locationImages }) => {
     const [index, setIndex] = useState(0);
 
     useEffect(() => {
+        if (images.length <= 1) return;
         const timer = setInterval(() => { 
             setIndex((prev) => (prev + 1) % images.length); 
         }, 4000);
@@ -24,26 +27,24 @@ const MagicalCarousel = ({ locationName, locationImages }) => {
 
     return (
         <div className="relative w-full h-full">
-            <AnimatePresence mode="popLayout">
-                <motion.div
-                    key={index}
-                    initial={{ opacity: 0, scale: 1.05 }}
-                    animate={{ opacity: 1, scale: 1, filter: "brightness(1.1)" }}
-                    exit={{ opacity: 0, transition: { duration: 1 } }}
-                    transition={{ duration: 1.5, ease: "easeInOut" }}
-                    className="absolute inset-0 w-full h-full"
+            {images.map((imgSrc, i) => (
+                <div
+                    key={i}
+                    className={`absolute inset-0 w-full h-full transition-all duration-1000 ease-in-out ${
+                        i === index ? 'opacity-100 scale-100' : 'opacity-0 scale-105 pointer-events-none'
+                    }`}
                 >
                     <Image
-                        src={images[index]}
+                        src={imgSrc}
                         alt={`Ángel Ruiz | Mago e Ilusionista profesional en ${locationName}`}
                         fill
                         className="object-cover object-[center_10%] rounded-3xl"
                         sizes="(max-width: 768px) 100vw, 50vw"
-                        priority={index === 0}
+                        priority={i === 0}
                     />
-                </motion.div>
-            </AnimatePresence>
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 property-60 to-transparent pointer-events-none rounded-3xl" />
+                </div>
+            ))}
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent pointer-events-none rounded-3xl" />
         </div>
     );
 };

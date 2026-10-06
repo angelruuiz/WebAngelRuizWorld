@@ -1,27 +1,34 @@
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import FAQItem from '@/components/FAQItem';
 import NavFooterClient from '@/components/NavFooterClient';
-import ContactButtonClient from '@/components/ContactButtonClient';
-import { MagicCursor, ParticleBackground, FadeIn } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
+const ContactButtonClient = dynamic(() => import('@/components/ContactButtonClient'), { ssr: false });
+const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod => mod.MagicCursor), { ssr: false });
+const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
+
+const FadeIn = ({ children, className = "" }) => (
+    <div className={`transition-all duration-500 ease-out ${className}`}>{children}</div>
+);
+
 export const metadata = {
-    title: { absolute: 'Mago para Bodas en Madrid | Haz Tu Cóctel Inolvidable' },
-    description: 'Magia de cerca exclusiva para el cóctel de tu boda en Madrid. Trato directo, sin agencias. +50 reseñas verificadas. Consulta disponibilidad.',
+    title: { absolute: 'Mago para Bodas en Madrid | Magia de Cerca para el Cóctel' },
+    description: 'Haz el cóctel de tu boda inolvidable con magia de cerca exclusiva en Madrid. Trato de autor directo, sin agencias. Consulta disponibilidad y fecha en 2h.',
     keywords: ['mago para bodas', 'mago para bodas madrid', 'mago bodas madrid', 'contratar mago boda madrid', 'mago coctel boda madrid', 'ilusionista bodas madrid', 'mago para bodas precio madrid', 'mago boda noroeste madrid', 'entretenimiento bodas madrid', 'mago para mi boda madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/particulares/bodas',
     },
     openGraph: {
         url: 'https://angelruiz.world/particulares/bodas',
-        title: 'Mago para Bodas en Madrid | Haz Tu Cóctel Inolvidable',
+        title: 'Mago para Bodas en Madrid | Magia de Cerca para el Cóctel',
         description: '¿Imaginas a tus invitados alucinando en el cóctel? Magia de cerca exclusiva para bodas en Madrid. ¡Pide tu fecha hoy!',
         images: [{ url: '/images/boda-magia-madrid.webp', width: 1200, height: 630 }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago para Bodas en Madrid | Haz Tu Cóctel Inolvidable',
-        description: '¿Imaginas a tus invitados alucinando en el cóctel? Magia de cerca exclusiva. ¡Pide tu fecha hoy!',
+        title: 'Mago para Bodas en Madrid | Magia de Cerca para el Cóctel',
+        description: 'Magia de cerca exclusiva para bodas en Madrid. Transforma el cóctel en el momento más recordado.',
         images: ['/images/boda-magia-madrid.webp'],
     },
 };
@@ -95,8 +102,8 @@ export default function BodasDetailPage() {
                             "@id": "https://angelruiz.world/particulares/bodas/#service",
                             "offers": {
                                 "@type": "AggregateOffer",
-                                "lowPrice": "350",
-                                "highPrice": "900",
+                                "lowPrice": "450",
+                                "highPrice": "650",
                                 "priceCurrency": "EUR"
                             }
                         },
@@ -303,18 +310,18 @@ export default function BodasDetailPage() {
                                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                                     <div className="bg-[#111111]/80 rounded-[2rem] p-8 border border-white/5 text-center space-y-4">
                                         <span className="text-[#d4a853] font-[Cinzel] text-sm uppercase tracking-widest block">Solo Cóctel</span>
-                                        <span className="text-white text-3xl font-[Cinzel] block">desde 350€</span>
-                                        <p className="text-slate-400 text-sm font-light">Duración: 1 hora</p>
+                                        <span className="text-white text-3xl font-[Cinzel] block">desde 450€</span>
+                                        <p className="text-slate-400 text-sm font-light">Duración: 1 – 1,5 horas</p>
                                     </div>
                                     <div className="bg-[#111111]/80 rounded-[2rem] p-8 border border-[#d4a853]/30 text-center space-y-4 relative">
                                         <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#d4a853] text-black text-[10px] font-bold uppercase tracking-widest px-4 py-1 rounded-full">Popular</span>
                                         <span className="text-[#d4a853] font-[Cinzel] text-sm uppercase tracking-widest block">Cóctel + Banquete</span>
-                                        <span className="text-white text-3xl font-[Cinzel] block">desde 500€</span>
+                                        <span className="text-white text-3xl font-[Cinzel] block">desde 550€</span>
                                         <p className="text-slate-400 text-sm font-light">Duración: 1,5 – 2 horas</p>
                                     </div>
                                     <div className="bg-[#111111]/80 rounded-[2rem] p-8 border border-white/5 text-center space-y-4">
                                         <span className="text-[#d4a853] font-[Cinzel] text-sm uppercase tracking-widest block">Experiencia Completa</span>
-                                        <span className="text-white text-3xl font-[Cinzel] block">desde 600€</span>
+                                        <span className="text-white text-3xl font-[Cinzel] block">desde 650€</span>
                                         <p className="text-slate-400 text-sm font-light">Efecto especial para novios (2h+)</p>
                                     </div>
                                 </div>
@@ -442,7 +449,7 @@ export default function BodasDetailPage() {
                                             </tr>
                                             <tr className="border-t border-white/5">
                                                 <td className="px-5 py-3 text-white font-medium">Precio medio en Madrid</td>
-                                                <td className="px-5 py-3">400€ – 800€</td>
+                                                <td className="px-5 py-3">450€ – 650€</td>
                                                 <td className="px-5 py-3">600€ – 1.500€</td>
                                                 <td className="px-5 py-3">300€ – 600€</td>
                                                 <td className="px-5 py-3">800€ – 2.000€</td>

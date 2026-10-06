@@ -1,9 +1,9 @@
 ---
-title: Mago para Fiestas de Navidad y Cenas de Empresa
-date: '2026-06-02'
+title: Mago para Fiestas de Navidad y Cenas de Empresa en Madrid
+date: '2026-10-01'
 excerpt: >-
-  Transforma tu cena de Navidad de empresa en Madrid con magia de cerca. Precios
-  y formatos. Reserva fecha antes del cierre.
+  ¿Buscas mago para tu cena de Navidad de empresa en Madrid? Magia de cerca
+  corporativa para cóctel y banquete. Fechas limitadas nov-dic. Pide presupuesto.
 author: Ángel Ruiz
 image: /images/foto-bio.webp
 category: Empresas
@@ -20,10 +20,10 @@ faq:
       Madrid?
     answer: >-
       El precio de un mago profesional para una cena de Navidad corporativa en
-      Madrid oscila entre 400€ y 900€, dependiendo de la duración y el formato.
-      Una sesión de magia de cerca durante el cóctel y la cena (2 horas) suele
-      costar entre 500€ y 800€. Para espectáculos de escenario post-cena, el
-      presupuesto parte de 600€.
+      Madrid oscila entre 500€ y 750€, dependiendo de la duración y el formato.
+      Una sesión de magia de cerca durante el cóctel o durante la cena suele
+      costar entre 500€ y 650€. Para espectáculos completos combinados post-cena,
+      el presupuesto se sitúa en torno a 750€.
   - question: ¿Con cuánta antelación debo reservar un mago para Navidad en Madrid?
     answer: >-
       Las fechas navideñas (noviembre y diciembre) son las más demandadas del
@@ -91,7 +91,7 @@ Tras los postres, un espectáculo de 25-35 minutos donde todo el grupo comparte 
 La combinación más solicitada: magia itinerante en cóctel + magia de mesa + micro-show de cierre. Cubre toda la velada y garantiza que no haya un solo momento muerto. Es el formato que repiten año tras año las empresas que ya lo han probado.
 
 **Duración total**: 2-3 horas  
-**Precio orientativo**: 600€ - 900€
+**Precio orientativo**: 650€ - 750€
 
 ## Ideas Originales para tu Cena de Navidad con Magia
 
@@ -106,10 +106,10 @@ Si quieres ir más allá de la cena tradicional, estas son las combinaciones que
 
 | Formato | Duración | Precio Orientativo |
 |---|---|---|
-| Magia cóctel itinerante | 30-45 min | Desde 350€ |
-| Magia de mesa durante cena | 45-75 min | Desde 450€ |
-| Show de salón post-cena | 25-35 min | Desde 500€ |
-| Combo completo (cóctel + mesa + show) | 2-3h | Desde 700€ |
+| Magia cóctel itinerante | 45-60 min | Desde 500€ |
+| Magia de mesa durante cena | 45-75 min | Desde 600€ |
+| Show de salón post-cena | 30-45 min | Desde 650€ |
+| Combo completo (cóctel + mesa + show) | 2-3h | Desde 750€ |
 
 > **Importante**: Las fechas de diciembre se agotan rápido. Si estás buscando [mago para cenas de empresa en Madrid](/empresas/mago-cenas-empresa-madrid) o espectáculos para [eventos corporativos](/empresas), te recomiendo solicitar disponibilidad y presupuesto cuanto antes.
 

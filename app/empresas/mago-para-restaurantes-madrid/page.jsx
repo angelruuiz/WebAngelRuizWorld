@@ -1,19 +1,22 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import NavFooterClient from '@/components/NavFooterClient';
-import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import FAQItem from '@/components/FAQItem';
-import CorporateInlineForm from '@/components/CorporateInlineForm';
+
+const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod => mod.MagicCursor), { ssr: false });
+const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
+const CorporateInlineForm = dynamic(() => import('@/components/CorporateInlineForm'), { ssr: false });
 
 export const metadata = {
-  title: { absolute: 'Mago para Restaurantes en Madrid | Magia en Mesas' },
-  description: 'Magia de cerca en mesas para restaurantes en Madrid. Fideliza clientes y sube tu ticket medio. Solicita prueba demo.',
+  title: { absolute: 'Mago para Restaurantes en Madrid | Magia en Mesas y Cenas' },
+  description: 'Atrae comensales y fideliza a tus clientes con magia de cerca en mesas en Madrid. Sube tu ticket medio y diferénciate. Solicita demostración gratuita.',
   keywords: ['mago para restaurantes madrid', 'mago para restaurantes', 'magia en restaurantes madrid', 'magia en mesas', 'table hopping madrid', 'animacion restaurantes madrid', 'ilusionista restaurantes', 'mago eventos hosteleria'],
   alternates: {
     canonical: 'https://angelruiz.world/empresas/mago-para-restaurantes-madrid',
   },
   openGraph: {
-    title: 'Mago para Restaurantes en Madrid | Magia en Mesas',
-    description: 'Aumenta el ticket medio y fideliza clientes con magia de cerca en mesas en Madrid.',
+    title: 'Mago para Restaurantes en Madrid | Magia en Mesas y Cenas',
+    description: 'Atrae comensales y fideliza clientes con magia de cerca en mesas en Madrid. Incrementa el ticket medio y las reseñas positivas.',
     url: 'https://angelruiz.world/empresas/mago-para-restaurantes-madrid',
     siteName: 'Ángel Ruiz | Mago e Ilusionista',
     images: [
@@ -29,8 +32,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mago para Restaurantes en Madrid | Magia en Mesas',
-    description: 'Aumenta el ticket medio y fideliza comensales con magia de cerca de mesa en mesa en restaurantes de Madrid.',
+    title: 'Mago para Restaurantes en Madrid | Magia en Mesas y Cenas',
+    description: 'Atrae comensales y fideliza comensales con magia de cerca de mesa en mesa en restaurantes de Madrid. Solicita prueba demo.',
     images: ['https://angelruiz.world/images/evento-angel-ruiz-magia.webp'],
   },
 };

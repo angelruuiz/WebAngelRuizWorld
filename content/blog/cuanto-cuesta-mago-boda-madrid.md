@@ -15,8 +15,8 @@ category: Bodas
 faq:
   - question: ¿Cuánto cuesta contratar un mago para una boda en Madrid?
     answer: >-
-      Las tarifas para bodas parten desde 350€ para intervenciones en el cóctel
-      (1h), 500€ para cóctel más banquete (1,5-2h) y desde 600€ para
+      Las tarifas para bodas parten desde 450€ para intervenciones en el cóctel
+      (1h), 550€ para cóctel más banquete (1,5-2h) y desde 650€ para
       experiencias completas con efecto personalizado para los novios.
   - question: ¿Se cobra suplemento de desplazamiento fuera de Madrid capital?
     answer: >-
@@ -35,13 +35,13 @@ Contratar un **[mago para bodas en Madrid](/particulares/bodas)** es una decisi�
 
 ### Rango de Precios: ¿Qué esperar en Madrid?
 
-Para un servicio profesional de ilusionismo en bodas en la Comunidad de Madrid, el rango de tarifas habitual parte desde los **350€**:
+Para un servicio profesional de ilusionismo en bodas en la Comunidad de Madrid, el rango de tarifas habitual parte desde los **450€ hasta 650€**:
 
 | Formato de Servicio | Tarifa de Referencia | Ideal para... |
 | :--- | :--- | :--- |
-| **Solo Cóctel (1h)** | **Desde 350€** | Recepción, romper el hielo, dinamización inicial. |
-| **Cóctel + Banquete (1,5 - 2h)** | **Desde 500€** | Entretenimiento entre platos y cóctel completo. |
-| **Experiencia Completa (2h+)** | **Desde 600€** | Cóctel, banquete y efecto especial exclusivo para novios. |
+| **Solo Cóctel (1h)** | **Desde 450€** | Recepción, romper el hielo, dinamización inicial. |
+| **Cóctel + Banquete (1,5 - 2h)** | **Desde 550€** | Entretenimiento entre platos y cóctel completo. |
+| **Experiencia Completa (2h+)** | **Desde 650€** | Cóctel, banquete y efecto especial exclusivo para novios. |
 
 Google y los novios premian la transparencia. Estos precios son orientativos para un **mago profesional para bodas en Madrid** con seguro de responsabilidad civil, coordinación previa con fincas y técnica depurada.
 

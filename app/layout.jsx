@@ -102,7 +102,7 @@ const globalSchema = {
       "image": "https://angelruiz.world/images/foto-bio.webp",
       "telephone": "+34648055636",
       "email": "info@angelruiz.world",
-      "priceRange": "400€ - 900€",
+      "priceRange": "300€ - 750€",
       "currenciesAccepted": "EUR",
       "paymentAccepted": "Cash, Credit Card, Bank Transfer, Bizum",
       "hasMap": "https://maps.google.com/?q=Torrelodones,+Comunidad+de+Madrid",
@@ -172,8 +172,8 @@ const globalSchema = {
             },
             "priceSpecification": {
               "@type": "PriceSpecification",
-              "minPrice": 400,
-              "maxPrice": 900,
+              "minPrice": 450,
+              "maxPrice": 650,
               "priceCurrency": "EUR"
             }
           },
@@ -186,7 +186,8 @@ const globalSchema = {
             },
             "priceSpecification": {
               "@type": "PriceSpecification",
-              "minPrice": 600,
+              "minPrice": 500,
+              "maxPrice": 750,
               "priceCurrency": "EUR"
             }
           },
@@ -207,8 +208,7 @@ const globalSchema = {
             },
             "priceSpecification": {
               "@type": "PriceSpecification",
-              "minPrice": 400,
-              "maxPrice": 800,
+              "minPrice": 300,
               "priceCurrency": "EUR"
             }
           }
@@ -273,8 +273,6 @@ export default function RootLayout({ children }) {
         <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM Content" />
         <link rel="help" href="/llms.txt" />
         <link rel="author" href="/sobre-mi" />
-        <link rel="preload" as="image" href="/images/hero-angel-ruiz-mobile-2026.webp" media="(max-width: 767px)" type="image/webp" fetchPriority="high" />
-        <link rel="preload" as="image" href="/images/hero-angel-ruiz-2026.webp" media="(min-width: 768px)" type="image/webp" fetchPriority="high" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(globalSchema) }}

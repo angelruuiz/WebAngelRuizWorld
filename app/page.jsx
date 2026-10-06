@@ -299,7 +299,7 @@ export default function Home() {
                         "name": "¿Cuánto cuesta contratar un mago en Madrid?",
                         "acceptedAnswer": {
                             "@type": "Answer",
-                            "text": "El precio varía según el tipo de evento, número de invitados y duración. Como referencia, un cóctel de magia de cerca para bodas parte desde 350€ y una cena corporativa desde 400€. Contacta directamente para un presupuesto personalizado sin compromiso en menos de 2 horas."
+                            "text": "El precio varía según el tipo de evento, número de invitados y formato. Como referencia, las celebraciones privadas y aniversarios parten desde 300€, los cócteles y bodas van de 450€ a 650€, y los eventos corporativos y cenas de empresa parten desde 500€ hasta 750€. Contacta directamente para un presupuesto personalizado sin compromiso en menos de 2 horas."
                         }
                     },
                     {
@@ -317,6 +317,8 @@ export default function Home() {
 
     return (
         <>
+            <link rel="preload" as="image" href="/images/hero-angel-ruiz-mobile-2026.webp" media="(max-width: 767px)" type="image/webp" fetchPriority="high" />
+            <link rel="preload" as="image" href="/images/hero-angel-ruiz-2026.webp" media="(min-width: 768px)" type="image/webp" fetchPriority="high" />
             <script 
                 type="application/ld+json" 
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(homeSchema) }} 

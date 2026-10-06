@@ -12,12 +12,12 @@ export default function QuickEventSelector() {
             cta: "Ver Magia para Bodas"
         },
         {
-            title: "Empresas & Cenas B2B",
-            badge: "Corporativo",
-            description: "Ilusionismo de alto impacto para cenas de gala, stands en IFEMA y team building.",
-            href: "/empresas",
+            title: "Cenas de Empresa & Navidad",
+            badge: "Temporada Alta",
+            description: "Ilusionismo corporativo para cenas de empresa, galas de fin de año y team building en Madrid.",
+            href: "/empresas/mago-cenas-empresa-madrid",
             icon: "🏢",
-            cta: "Ver Magia Corporativa"
+            cta: "Ver Cenas de Empresa"
         },
         {
             title: "Fiestas & Particulares",

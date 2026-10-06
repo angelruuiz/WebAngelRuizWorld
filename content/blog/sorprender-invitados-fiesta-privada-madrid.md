@@ -21,11 +21,10 @@ readTime: 8 MIN
 faq:
   - question: ¿Cuánto cuesta un mago para una fiesta privada en Madrid?
     answer: >-
-      El precio de un mago profesional para fiestas privadas en Madrid varía
-      entre 200€ y 450€ según la duración y el formato. Para reuniones de 15-40
-      personas con magia de cerca itinerante (1 hora), el presupuesto habitual
-      es de 250€-350€. Para formatos más largos o combinados con show de
-      sobremesa, desde 400€.
+      El precio de un mago profesional para fiestas privadas en Madrid es
+      de 300€ para eventos particulares habituales (cumpleaños, aniversarios,
+      reuniones familiares de 1-1,5 horas). Para formatos extendidos o combos con
+      espectáculo central, solicita presupuesto personalizado.
   - question: ¿Qué tipo de magia funciona mejor en una fiesta privada con adultos?
     answer: >-
       La magia de cerca (close-up) es la opción ideal para fiestas privadas de
@@ -65,7 +64,7 @@ Un **mago profesional** que se mueve entre los invitados realizando efectos impo
 
 **Por qué funciona**: Es personal, es íntima, entretiene a todas las edades y genera el tipo de momento que la gente fotografía, comparte y recuerda. Es el único entretenimiento que transforma espectadores pasivos en protagonistas activos.
 
-**Precio**: Desde 250€  
+**Precio**: 300€  
 **Ideal para**: Cualquier fiesta de 8 a 80 personas
 
 ### 2. 🍷 Cata de Vinos con Sommelier
@@ -167,8 +166,8 @@ Después de más de 10 años actuando en fiestas privadas en Madrid, puedo afirm
 
 | Opción | Duración típica | Precio Orientativo |
 |---|---|---|
-| Magia de cerca itinerante | 1 hora | Desde 250€ |
-| Magia cena + cóctel | 1,5-2 horas | Desde 350€ |
+| Magia de cerca itinerante | 1 hora | 300€ |
+| Magia cena + cóctel | 1,5-2 horas | Desde 450€ |
 | Magia + efecto especial homenajeado | 1-1,5 horas | Desde 300€ |
 | Combo magia + música en vivo | 2-3 horas | Desde 700€ (combinado) |
 

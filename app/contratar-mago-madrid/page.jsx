@@ -9,21 +9,21 @@ const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod 
 const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
 
 export const metadata = {
-    title: { absolute: '¿Cuánto Cuesta un Mago en Madrid? Tarifas y Precios' },
-    description: 'Precios reales desde 300€ para contratar un mago en Madrid. Sin agencias ni comisiones. Presupuesto personalizado en menos de 2 horas.',
+    title: { absolute: 'Contratar Mago en Madrid | Precios Directos y Tarifas 2026' },
+    description: '¿Buscas contratar un mago en Madrid? Tarifas reales desde 300€ sin agencias ni comisiones para bodas, empresas y eventos. Presupuesto express en 2h.',
     keywords: ['contratar mago madrid', 'contratar mago madrid precio', 'precio mago madrid', 'cuanto cuesta un mago en madrid', 'mago profesional madrid', 'ilusionista madrid precios', 'mago para eventos madrid', 'mago para fiestas privadas madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/contratar-mago-madrid',
     },
     openGraph: {
-        title: '¿Cuánto Cuesta un Mago en Madrid? Tarifas y Precios',
+        title: 'Contratar Mago en Madrid | Precios Directos y Tarifas 2026',
         description: 'Todo lo que necesitas saber para contratar un ilusionista en Madrid para bodas o empresas. Precios directos sin comisiones.',
         images: [{ url: '/images/foto-bio.webp' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: '¿Cuánto Cuesta un Mago en Madrid? Tarifas y Precios',
-        description: 'Precios reales desde 300€ para contratar un mago en Madrid. Sin agencias ni comisiones. Presupuesto personalizado en menos de 2 horas.',
+        title: 'Contratar Mago en Madrid | Precios Directos y Tarifas 2026',
+        description: '¿Buscas contratar un mago en Madrid? Tarifas reales desde 300€ sin comisiones para bodas, empresas y eventos. Presupuesto express en 2h.',
         images: ['/images/foto-bio.webp']
     }
 };
@@ -38,7 +38,7 @@ export default function ContratarMagoMadridPage() {
                 "name": "¿Cuánto cuesta contratar un mago en Madrid?", 
                 "acceptedAnswer": { 
                     "@type": "Answer", 
-                    "text": "El precio de un mago para bodas y fiestas privadas varía entre 300€ y 900€. Si necesitas saber el precio de un mago para cenas de empresa o eventos corporativos, la tarifa base suele partir de 400€ por jornada, dependiendo del formato y requerimientos. El presupuesto se personaliza siempre." 
+                    "text": "El precio de un mago profesional en Madrid depende del tipo de evento: eventos privados y celebraciones particulares (comuniones, fiestas, aniversarios) desde 300€, bodas entre 450€ y 650€, y eventos de empresa o cenas corporativas desde 500€ hasta 750€. El presupuesto se personaliza sin intermediarios." 
                 } 
             },
             { 
@@ -110,7 +110,7 @@ export default function ContratarMagoMadridPage() {
                 "url": "https://angelruiz.world",
                 "image": "https://angelruiz.world/images/foto-bio.webp",
                 "telephone": "+34648055636",
-                "priceRange": "300€ - 900€",
+                "priceRange": "300€ - 750€",
                 "address": {
                     "@type": "PostalAddress",
                     "addressLocality": "Madrid",
@@ -296,7 +296,7 @@ export default function ContratarMagoMadridPage() {
                         <div>
                             <h2 className="text-2xl font-[Cinzel] text-white font-bold mb-2">Precios Mago Madrid: desde 300€</h2>
                             <p className="text-slate-400 text-sm max-w-lg mb-4">
-                                Tarifas base desde 300€ (Particulares) y 400€ (Corporativo). El presupuesto exacto se compila tras evaluar las variables de tu evento. Rellena el formulario o contacta por WhatsApp para un diseño a medida.
+                                Tarifas transparentes sin intermediarios: 300€ (particulares y comuniones), desde 450€ hasta 650€ (bodas) y desde 500€ hasta 750€ (empresas y cenas corporativas). Presupuesto cerrado a medida en menos de 2 horas.
                             </p>
                             <p className="text-amber-500 text-xs font-bold uppercase tracking-widest animate-pulse">
                                 Temporada alta: disponibilidad limitada

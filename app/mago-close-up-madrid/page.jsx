@@ -112,7 +112,7 @@ export default function MagoCloseUpMadridPage() {
         "url": "https://angelruiz.world",
         "logo": "https://angelruiz.world/icon.webp",
         "image": "https://angelruiz.world/images/foto-bio.webp",
-        "priceRange": "400€ - 900€",
+        "priceRange": "300€ - 750€",
         "telephone": "+34648055636",
         "founder": { "@id": "https://angelruiz.world/#person" },
         "slogan": "Magia de cerca de alto impacto para eventos en Madrid",

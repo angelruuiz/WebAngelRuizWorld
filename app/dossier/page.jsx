@@ -67,9 +67,9 @@ const slides = [
         title: 'Tarifas & Packs',
         subtitle: 'Transparencia total · Sin letra pequeña',
         packs: [
-            { name: 'Cóctel', sub: 'Magia de Cerca', price: '300 – 400€', duration: '1 – 1,5 horas', items: ['Close-Up itinerante', 'Coordinación previa'], ideal: 'Bodas · Comuniones · Recepciones' },
-            { name: 'Show Central', sub: 'Magia de Escenario', price: '400 – 550€', duration: '50 min / 1h 15 min', items: ['Show de escenario completo', 'Coordinación técnica'], ideal: 'Galas · Aniversarios', featured: true },
-            { name: 'Pack Evento', sub: 'Cóctel + Show', price: '600 – 750€', duration: '40 min Close-Up + 40 min Show', items: ['Close-Up itinerante', 'Show central de gala', 'Descuento pack incluido'], ideal: 'Bodas Premium · Galas' }
+            { name: 'Cóctel', sub: 'Magia de Cerca', price: '300 – 450€', duration: '1 – 1,5 horas', items: ['Close-Up itinerante', 'Coordinación previa'], ideal: 'Bodas · Comuniones · Recepciones' },
+            { name: 'Show Central', sub: 'Magia de Escenario', price: '500 – 650€', duration: '50 min / 1h 15 min', items: ['Show de escenario completo', 'Coordinación técnica'], ideal: 'Galas · Empresas · Aniversarios', featured: true },
+            { name: 'Pack Evento', sub: 'Cóctel + Show', price: '650 – 750€', duration: '40 min Close-Up + 40 min Show', items: ['Close-Up itinerante', 'Show central de gala', 'Descuento pack incluido'], ideal: 'Bodas Premium · Cenas de Empresa' }
         ]
     },
     {

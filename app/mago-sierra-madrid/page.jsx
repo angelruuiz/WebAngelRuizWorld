@@ -1,9 +1,12 @@
+import dynamic from 'next/dynamic';
 import { locations } from '@/lib/locations';
 import NavFooterClient from '@/components/NavFooterClient';
-import ContactButtonClient from '@/components/ContactButtonClient';
-import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import Link from 'next/link';
-import SierraMadridMap from '@/components/SierraMadridMap';
+
+const ContactButtonClient = dynamic(() => import('@/components/ContactButtonClient'), { ssr: false });
+const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod => mod.MagicCursor), { ssr: false });
+const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
+const SierraMadridMap = dynamic(() => import('@/components/SierraMadridMap'), { ssr: false });
 
 export const metadata = {
     title: { absolute: 'Mago en la Sierra de Madrid | Bodas y Eventos Noroeste' },

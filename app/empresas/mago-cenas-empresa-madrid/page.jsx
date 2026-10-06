@@ -1,32 +1,35 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import NavFooterClient from '@/components/NavFooterClient';
-import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import FAQItem from '@/components/FAQItem';
-import CorporateInlineForm from '@/components/CorporateInlineForm';
+
+const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod => mod.MagicCursor), { ssr: false });
+const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
+const CorporateInlineForm = dynamic(() => import('@/components/CorporateInlineForm'), { ssr: false });
 
 export const metadata = {
-  title: { absolute: 'Mago para Cenas de Empresa en Madrid | Show Exclusivo' },
-  description: 'Magia corporativa para cenas de empresa y Navidad en Madrid. Rompe el hielo con tu equipo. Presupuesto express en 2h.',
+  title: { absolute: 'Mago para Cenas de Empresa en Madrid | Fiestas y Navidad' },
+  description: 'Convierte tu cena de empresa o fiesta de Navidad en Madrid en un evento inolvidable con magia de cerca corporativa. Trato directo. Presupuesto express en 2h.',
   keywords: ['mago para cenas de empresa', 'mago para cenas de empresa en madrid', 'mago cenas empresa madrid', 'mago para cena empresa madrid', 'mago cena navidad empresa madrid', 'contratar mago cena empresa', 'entretenimiento cenas empresa madrid', 'mago corporativo madrid', 'animacion cenas empresa madrid', 'mago para eventos de empresa madrid', 'cenas de empresa originales madrid'],
   alternates: {
     canonical: 'https://angelruiz.world/empresas/mago-cenas-empresa-madrid',
   },
   openGraph: {
     url: 'https://angelruiz.world/empresas/mago-cenas-empresa-madrid',
-    title: 'Mago para Cenas de Empresa en Madrid | Show Exclusivo',
-    description: 'Transforma la cena de empresa en Madrid en un evento memorable con magia de cerca. Pide presupuesto en 2h.',
+    title: 'Mago para Cenas de Empresa en Madrid | Fiestas y Navidad',
+    description: 'Transforma la cena de empresa o fiesta de Navidad en Madrid en un evento memorable con magia de cerca. Pide presupuesto en 2h.',
     images: [{ url: '/images/evento-angel-ruiz-magia.webp', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mago para Cenas de Empresa en Madrid | Show Exclusivo',
-    description: 'Magia de cerca personalizada para cenas de empresa en Madrid. Presupuesto en 2h.',
+    title: 'Mago para Cenas de Empresa en Madrid | Fiestas y Navidad',
+    description: 'Magia de cerca personalizada para cenas de empresa y eventos de Navidad en Madrid. Presupuesto en 2h.',
     images: ['/images/evento-angel-ruiz-magia.webp'],
   },
 };
 
 const faqs = [
-  { name: '¿Cuánto cuesta contratar un mago para una cena de empresa en Madrid?', acceptedAnswer: { text: 'Para cenas de empresa en Madrid, las tarifas parten desde 350€ para magia de cóctel y desde 400€ para espectáculos de sobremesa. Para formatos combinados o grandes grupos (+50 personas), solicita presupuesto personalizado.' } },
+  { name: '¿Cuánto cuesta contratar un mago para una cena de empresa en Madrid?', acceptedAnswer: { text: 'Para cenas de empresa y eventos corporativos en Madrid, las tarifas se sitúan entre 500€ y 750€ según el formato (cóctel de networking, magia por mesas o espectáculo de sobremesa) y número de asistentes. Para eventos de gran envergadura o jornadas completas, solicita presupuesto personalizado.' } },
   { name: '¿Qué diferencia hay entre magia para cena de empresa y un animador de eventos?', acceptedAnswer: { text: 'Un mago corporativo como Ángel Ruiz no solo entretiene: integra el mensaje de tu empresa en los efectos mágicos, fomentando el networking y dejando una impresión duradera de tu marca. Un animador genérico no puede ofrecer esa personalización ni ese nivel de impacto.' } },
   { name: '¿Cómo se integra el mago en la agenda de la cena de empresa?', acceptedAnswer: { text: 'Diseñamos la intervención según tu agenda: magia de cerca durante el cóctel (perfecto para romper el hielo), pases de mesa durante la cena, o un espectáculo central de 20-35 min durante la sobremesa. También podemos combinar formatos para máximo impacto.' } },
   { name: '¿Se puede personalizar el espectáculo con la marca de la empresa?', acceptedAnswer: { text: 'Totalmente. Integramos el logo, eslóganes, productos o mensajes clave de tu empresa en los efectos de ilusionismo. Los asistentes vivirán la magia de la marca de forma literal y memorable.' } },

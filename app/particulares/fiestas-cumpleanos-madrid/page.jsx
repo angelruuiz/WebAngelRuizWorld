@@ -1,9 +1,16 @@
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import FAQItem from '@/components/FAQItem';
 import NavFooterClient from '@/components/NavFooterClient';
-import ContactButtonClient from '@/components/ContactButtonClient';
-import { MagicCursor, ParticleBackground, FadeIn } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
+
+const ContactButtonClient = dynamic(() => import('@/components/ContactButtonClient'), { ssr: false });
+const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod => mod.MagicCursor), { ssr: false });
+const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
+
+const FadeIn = ({ children, className = "" }) => (
+    <div className={`transition-all duration-500 ease-out ${className}`}>{children}</div>
+);
 
 export const metadata = {
     title: { absolute: 'Mago para Cumpleaños de Adultos en Madrid | Exclusivo' },

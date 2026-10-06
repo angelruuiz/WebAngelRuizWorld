@@ -1,8 +1,11 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import NavFooterClient from '@/components/NavFooterClient';
-import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import FAQItem from '@/components/FAQItem';
-import CorporateInlineForm from '@/components/CorporateInlineForm';
+
+const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod => mod.MagicCursor), { ssr: false });
+const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
+const CorporateInlineForm = dynamic(() => import('@/components/CorporateInlineForm'), { ssr: false });
 
 export const metadata = {
   title: { absolute: 'Mago para Team Building en Madrid | Dinámicas · Ángel Ruiz' },

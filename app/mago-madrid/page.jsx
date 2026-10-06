@@ -72,7 +72,7 @@ export default function MagoMadridPage() {
             {
                 "@type": "FAQPage",
                 "mainEntity": [
-                    { "@type": "Question", "name": "¿Cuáles son las tarifas para contratar un show de magia en Madrid capital y provincia?", "acceptedAnswer": { "@type": "Answer", "text": "El precio varía según el tipo de evento. Para eventos privados y bodas en Madrid, el rango habitual de un mago profesional premium es de 400€ a 900€. Para eventos corporativos y ferias, se presupuesta por jornada desde 600€." } },
+                    { "@type": "Question", "name": "¿Cuáles son las tarifas para contratar un show de magia en Madrid capital y provincia?", "acceptedAnswer": { "@type": "Answer", "text": "El precio de un mago profesional en Madrid depende del tipo de evento: eventos privados y fiestas particulares desde 300€, bodas entre 450€ y 650€, y eventos corporativos o cenas de empresa desde 500€ hasta 750€. Presupuesto directo a medida sin intermediarios." } },
                     { "@type": "Question", "name": "¿Qué tipo de magia es mejor para un evento en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "La magia de cerca (close-up) es la más demandada en Madrid para cócteles, bodas y cenas de empresa. Se realiza a centímetros del espectador sin necesidad de escenario." } },
                     { "@type": "Question", "name": "¿Te desplazas a cualquier zona de Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Cubro Madrid capital, la zona noroeste (Las Rozas, Pozuelo, Majadahonda), la Sierra de Madrid y los centros de convenciones como IFEMA." } },
                     { "@type": "Question", "name": "¿Puedo personalizar el espectáculo?", "acceptedAnswer": { "@type": "Answer", "text": "Cada actuación es diseñada a medida. Puedo integrar mensajes corporativos, adaptar el tono al protocolo de tu empresa o crear momentos especiales para los novios en una boda." } }
@@ -215,7 +215,7 @@ export default function MagoMadridPage() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             <div className="bg-white/5 p-6 rounded-xl border border-white/10">
                                 <h3 className="text-amber-400 font-bold mb-3 text-sm">¿Cuánto cuesta contratar un mago en Madrid?</h3>
-                                <p className="text-slate-400 text-xs leading-relaxed text-justify">El precio varía según el tipo de evento. Para eventos privados y bodas en Madrid, el rango habitual de un mago profesional premium es de 400€ a 900€. Para eventos corporativos y ferias, se presupuesta por jornada desde 600€.</p>
+                                <p className="text-slate-400 text-xs leading-relaxed text-justify">El precio de un mago profesional en Madrid depende del tipo de evento: eventos privados y particulares desde 300€, bodas entre 450€ y 650€, y eventos corporativos o cenas de empresa desde 500€ hasta 750€. Presupuesto cerrado sin comisiones de agencia.</p>
                             </div>
                             <div className="bg-white/5 p-6 rounded-xl border border-white/10">
                                 <h3 className="text-amber-400 font-bold mb-3 text-sm">¿Qué tipo de magia es mejor para un evento en Madrid?</h3>

@@ -1,10 +1,17 @@
+import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import NavFooterClient from '@/components/NavFooterClient';
-import ContactButtonClient from '@/components/ContactButtonClient';
-import { MagicCursor, ParticleBackground, FadeIn } from '@/components/VisualEffects';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import FAQItem from '@/components/FAQItem';
 import Link from 'next/link';
+
+const ContactButtonClient = dynamic(() => import('@/components/ContactButtonClient'), { ssr: false });
+const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod => mod.MagicCursor), { ssr: false });
+const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
+
+const FadeIn = ({ children, className = "" }) => (
+    <div className={`transition-all duration-500 ease-out ${className}`}>{children}</div>
+);
 
 export const metadata = {
     title: { absolute: 'Mago para Despedidas de Soltera en Madrid | Sorpresa Única' },

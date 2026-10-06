@@ -53,14 +53,14 @@ Ideal para **cócteles de networking, recepciones de bienvenida y cenas VIP**. M
 
 - **Ventajas**: Rompe el hielo al instante, genera corrillos de conversación entusiasta y permite una interacción 100% personalizada.
 - **Duración recomendada**: Entre 1 y 2 horas.
-- **Tarifas habituales**: Desde 350€.
+- **Tarifas habituales**: Desde 500€.
 
 ### 2. Espectáculo de Mentalismo de Salón o Sobremesa
 Diseñado para **cenas de gala, convenciones anuales o reuniones de directivos** donde todos los asistentes miran al mismo tiempo.
 
 - **Ventajas**: Convierte a directivos y empleados en las estrellas del show, manteniendo a toda la sala en vilo con una narrativa cautivadora y momentos de tensión cómica y asombro.
 - **Duración recomendada**: De 30 a 45 minutos.
-- **Tarifas habituales**: Desde 400€.
+- **Tarifas habituales**: Desde 600€ hasta 750€.
 
 ## El Mentalismo como Herramienta Estratégica en Eventos Corporativos
 

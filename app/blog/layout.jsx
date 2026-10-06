@@ -1,9 +1,11 @@
 "use client";
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import { MagicCursor } from '@/components/VisualEffects';
-import { ContactFormModal } from '@/components/Modals';
+
+const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod => mod.MagicCursor), { ssr: false });
+const ContactFormModal = dynamic(() => import('@/components/Modals').then(mod => mod.ContactFormModal), { ssr: false });
 
 export default function BlogLayout({ children }) {
   const [isContactOpen, setIsContactOpen] = useState(false);
