@@ -37,6 +37,10 @@ yarn-error.log*
 resultados-console-*/
 angelruiz.world-Performance-on-Search-*/
 
+# seo pipeline
+.seo-pipeline/backups/
+.seo-pipeline/reports/seo-geo-report-*.md
+
 # typescript
 *.tsbuildinfo
 

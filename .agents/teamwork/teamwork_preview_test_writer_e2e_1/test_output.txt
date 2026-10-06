@@ -1,0 +1,765 @@
+🚨 [Validator] ¡Validación fallida! Activando mecanismo de rollback automático...
+🔄 [Validator] Rollback completado con éxito: archivos restaurados a su estado original.
+🚨 [Validator] ¡Validación fallida! Activando mecanismo de rollback automático...
+🔄 [Validator] Rollback completado con éxito: archivos restaurados a su estado original.
+🚨 [Validator] ¡Validación fallida! Activando mecanismo de rollback automático...
+🔄 [Validator] Rollback completado con éxito: archivos restaurados a su estado original.
+▶ Tier 1: Feature Coverage
+  ▶ F1: CLI Entrypoint & Flag Parsing
+    ✔ F1.1: --help flag returns exit code 0 and displays usage documentation (295.3782ms)
+    ✔ F1.2: -h alias flag behaves identically to --help (146.8635ms)
+    ✖ F1.3: --dry-run flag executes Scout and Auditor without modifying source files (282.4002ms)
+    ✔ F1.4: --check flag verifies business rules and exits 0 on healthy codebase (235.1765ms)
+    ✔ F1.5: --verbose flag emits detailed diagnostic output (292.7075ms)
+    ✔ F1.6: package.json script seo:pipeline points to scripts/seo-geo-pipeline.js (0.72ms)
+  ✖ F1: CLI Entrypoint & Flag Parsing (1254.993ms)
+  ▶ F2: Modular Engine Architecture
+    ✔ F2.1: scout.js exports all 6 detector functions and scoutOpportunities (0.2834ms)
+    ✔ F2.2: auditor.js exports checkHardVetoes, scoreOpportunity, auditOpportunity, auditAllOpportunities (0.1471ms)
+    ✔ F2.3: executor.js exports createSnapshot, rollback, applyOpportunity, executeApproved (0.1284ms)
+    ✔ F2.4: reporter.js exports generateReport (0.1419ms)
+    ✔ F2.5: validator.js exports validateAggregateRating, validateNoTrackers, validateBuild, runPostValidation (0.0929ms)
+  ✔ F2: Modular Engine Architecture (1.1232ms)
+  ▶ F3: Opportunity Scout (6 Detectors)
+    ✔ F3.1: detectMetadataOpportunities detects brand redundancy in post titles (15.5017ms)
+    ✔ F3.2: detectMetadataOpportunities detects title length > 68 causing SERP truncation (11.6804ms)
+    ✖ F3.3: detectSchemaOpportunities flags any AggregateRating violation (8.2241ms)
+    ✔ F3.4: detectGeoLlmsOpportunities compares public routes with llms.txt (7.7676ms)
+    ✔ F3.5: detectFaqOpportunities identifies posts missing FAQ schema expansion (8.0852ms)
+    ✖ F3.6: detectMadridGeoOpportunities detects Madrid geographic anchor enrichment gaps (7.886ms)
+    ✔ F3.7: detectInterlinkingOpportunities detects missing topic cluster interlinks (8.7094ms)
+    ✔ F3.8: scoutOpportunities runs all detectors and returns aggregated summary (156.2035ms)
+  ✖ F3: Opportunity Scout (6 Detectors) (224.5363ms)
+  ▶ F4: Business Auditor & Conversion Filter
+    ✖ F4.1: Hard Veto VETO_AGGREGATE_RATING instantly rejects any AggregateRating candidate (2.3747ms)
+    ✔ F4.2: Hard Veto VETO_TRACKER_COOKIE instantly rejects any tracking/cookie proposal (0.7501ms)
+    ✔ F4.3: Hard Veto VETO_PERFORMANCE_DEGRADATION rejects excessively large payloads (>30KB) (2.3949ms)
+    ✔ F4.4: Hard Veto VETO_ZERO_COMMERCIAL_INTENT rejects free hobbyist tutorials (0.3976ms)
+    ✔ F4.5: Hard Veto VETO_NON_MADRID_GEOGRAPHY rejects non-Madrid locations (Barcelona, Valencia) (0.5808ms)
+    ✔ F4.6: Rubric evaluates high-commercial Madrid wedding candidate and approves with >= 70 pts (1.0336ms)
+    ✔ F4.7: auditAllOpportunities returns approved and rejected lists with counts (0.7695ms)
+  ✖ F4: Business Auditor & Conversion Filter (8.7177ms)
+  ▶ F5: Safe Applicator & Snapshot Engine
+    ✔ F5.1: createSnapshot creates timestamped backup with manifest.json (16.8873ms)
+    ✔ F5.2: applyOpportunity updates markdown frontmatter cleanly (13.6137ms)
+    ✔ F5.3: generateDiff produces readable unified diff (0.3547ms)
+    ✔ F5.4: rollback restores all modified files to exact pre-execution state (18.7066ms)
+    ✔ F5.5: executeApproved conforms to ExecutionResult interface (14.185ms)
+  ✔ F5: Safe Applicator & Snapshot Engine (64.2334ms)
+  ▶ F6: Structured Markdown Report Generator
+    ✔ F6.1: generateReport creates timestamped file and updates latest.md (10.1721ms)
+    ✔ F6.2: Report includes Executive Summary section with metric table (10.3933ms)
+    ✖ F6.3: Report includes Auditor Decision Matrix with rubric table (11.9304ms)
+    ✖ F6.4: Report includes Executor Change Log detailing mutations (10.6036ms)
+    ✖ F6.5: Report includes Post-Execution Validation Certificate (10.7814ms)
+  ✖ F6: Structured Markdown Report Generator (54.3731ms)
+  ▶ F7: Post-Execution Validation Harness
+    ✔ F7.1: validateAggregateRating passes on clean codebase with 0 violations (75.3169ms)
+    ✔ F7.2: validateAggregateRating flags simulated AggregateRating violation in content (10.7748ms)
+    ✔ F7.3: validateNoTrackers passes on clean codebase with 0 external tracking pixels (28.0156ms)
+    ✖ F7.4: validateNoTrackers flags injected Google Tag Manager or tracking scripts (7.3528ms)
+    ✔ F7.5: runPostValidation triggers rollback when validation fails (22.7527ms)
+  ✖ F7: Post-Execution Validation Harness (144.6814ms)
+  ▶ F8: Guardrails & Zero-Regression Compliance
+    ✔ F8.1: Zero occurrences of AggregateRating across all active project source code (82.5059ms)
+    ✔ F8.2: Zero third-party intrusive cookies or trackers in app, components, and public (31.1752ms)
+    ✔ F8.3: Blog posts contain valid YAML frontmatter structure (0.5219ms)
+    ✔ F8.4: Root layout embeds valid structured schema without ratings (0.469ms)
+    ✔ F8.5: Backup snapshots and rollback leave zero corrupted temporary files (19.5377ms)
+  ✔ F8: Guardrails & Zero-Regression Compliance (134.5769ms)
+✖ Tier 1: Feature Coverage (1889.2462ms)
+▶ Tier 2: Boundary & Corner Cases
+  ▶ F1.B: CLI Parsing Boundaries
+    ✔ F1.B1: Default mode with zero args executes dry-run safely (304.7077ms)
+    ✖ F1.B2: --limit flag parses custom limit integer (270.3013ms)
+    ✖ F1.B3: --limit with invalid non-numeric argument defaults safely to 5 (267.5406ms)
+    ✔ F1.B4: Duplicate flags (--verbose --verbose) handled gracefully without failure (272.1221ms)
+    ✔ F1.B5: Combining --dry-run --verbose --skip-build runs all phases safely (301.4863ms)
+  ✖ F1.B: CLI Parsing Boundaries (1416.6676ms)
+  ▶ F2.B: Modular Engine Boundaries
+    ✔ F2.B1: Scout handles non-existent directory path without crashing (0.9193ms)
+    ✔ F2.B2: Auditor handles empty opportunities array and returns 0 evaluations (0.199ms)
+    ✔ F2.B3: Executor handles empty approved opportunities list without creating snapshot (7.8677ms)
+    ✖ F2.B4: Reporter handles empty opportunities dataset generating valid report (8.3118ms)
+    ✔ F2.B5: Validator handles missing directory in validateAggregateRating gracefully (0.5097ms)
+  ✖ F2.B: Modular Engine Boundaries (18.1055ms)
+  ▶ F3.B: Scout Corner Cases
+    ✔ F3.B1: Empty markdown file (0 bytes) is handled safely without syntax error (8.2166ms)
+    ✔ F3.B2: Markdown file without frontmatter (plain text) is handled without crashing (7.2294ms)
+    ✔ F3.B3: Non-markdown files in blog directory (.DS_Store, .txt) are ignored (8.0203ms)
+    ✔ F3.B4: Title length exactly at 68 characters is NOT flagged as oversized (7.8026ms)
+    ✔ F3.B5: Post with exactly 1 FAQ is correctly identified as candidate (< 2 threshold) (9.0394ms)
+  ✔ F3.B: Scout Corner Cases (40.6515ms)
+  ▶ F4.B: Auditor Corner Cases
+    ✔ F4.B1: Candidate with boundary score exactly 69 is REJECTED (< 70 threshold) (0.2888ms)
+    ✔ F4.B2: Candidate with boundary score >= 70 is APPROVED (0.3619ms)
+    ✖ F4.B3: Score 100 with Hard Veto triggered is strictly REJECTED (Veto overrides score) (0.3668ms)
+    ✔ F4.B4: Opportunity with empty proposedChange handled safely without crashing (0.1699ms)
+    ✔ F4.B5: Candidate with score 0 (zero commercial intent) is REJECTED with clear justification (0.1082ms)
+  ✖ F4.B: Auditor Corner Cases (1.4721ms)
+  ▶ F5.B: Executor Corner Cases
+    ✔ F5.B1: Backup directory auto-created when .seo-pipeline/backups/ does not exist (12.4606ms)
+    ✖ F5.B2: Target file with non-existent path handled gracefully returning SKIPPED status (5.8151ms)
+    ✔ F5.B3: Repeated application of same patch produces zero diff on subsequent runs (idempotence) (12.3408ms)
+    ✔ F5.B4: Rollback with missing snapshot directory fails safely without deleting source files (8.7337ms)
+    ✔ F5.B5: Applying empty approved list returns appliedCount 0 and null backupPath (5.683ms)
+  ✖ F5.B: Executor Corner Cases (45.2753ms)
+  ▶ F6.B: Reporter Corner Cases
+    ✔ F6.B1: Report directory .seo-pipeline/reports/ is auto-created if missing (7.7018ms)
+    ✔ F6.B2: Special characters in opportunity descriptions are escaped in markdown tables (9.4776ms)
+    ✔ F6.B3: Report generation with 0 opportunities creates valid document (8.1684ms)
+    ✔ F6.B4: Writing report when latest.md already exists overwrites latest.md cleanly (8.8797ms)
+    ✔ F6.B5: Report handles execution diffs gracefully without corrupting markdown format (7.8505ms)
+  ✔ F6.B: Reporter Corner Cases (42.3376ms)
+  ▶ F7.B: Validator Corner Cases
+    ✔ F7.B1: Case variations (aggregaterating, AggregateRating, AGGREGATERATING) all caught (7.1622ms)
+    ✔ F7.B2: ratingValue alone in JSON-LD is caught by validator (9.3444ms)
+    ✔ F7.B3: reviewCount alone in JSON-LD is caught by validator (10.0017ms)
+    ✔ F7.B4: Non-existent directory in scan is handled safely without throwing error (0.5651ms)
+    ✔ F7.B5: Simulated validation failure triggers automatic rollback when backupPath is provided (17.4524ms)
+  ✔ F7.B: Validator Corner Cases (44.7997ms)
+  ▶ F8.B: Guardrails Corner Cases
+    ✔ F8.B1: Proposal injecting <script> tag of any kind is vetoed by VETO_TRACKER_COOKIE (0.3816ms)
+    ✔ F8.B2: Proposal targeting non-Madrid regions (Barcelona, Bilbao, Sevilla) is vetoed (0.1479ms)
+    ✔ F8.B3: Proposal targeting free tutorial/hobbyist keywords is vetoed by VETO_ZERO_COMMERCIAL_INTENT (0.1242ms)
+    ✔ F8.B4: Multiple veto conditions triggered simultaneously reports the first critical veto (0.0977ms)
+    ✔ F8.B5: Proposed change with excessive payload size (>30KB) is vetoed by VETO_PERFORMANCE_DEGRADATION (1.2123ms)
+  ✔ F8.B: Guardrails Corner Cases (2.158ms)
+✖ Tier 2: Boundary & Corner Cases (1612.2242ms)
+▶ Tier 3: Cross-Feature Combinations
+  ✔ T3.1: Scout discovery -> Auditor veto (VETO_AGGREGATE_RATING) -> Executor skips mutation (7.21ms)
+  ✔ T3.2: Scout discovery -> Auditor veto (VETO_NON_MADRID_GEOGRAPHY) -> Executor skips candidate (0.1842ms)
+  ✔ T3.3: Scout discovery -> Auditor veto (VETO_ZERO_COMMERCIAL_INTENT) -> Executor skips candidate (0.098ms)
+  ✔ T3.4: Scout discovery -> Auditor veto (VETO_TRACKER_COOKIE) -> Executor skips candidate (0.0757ms)
+  ✔ T3.5: Scout discovery -> Auditor approval -> Executor --dry-run guarantees zero files modified on disk (8.3414ms)
+  ✔ T3.6: Scout discovery -> Auditor approval -> Snapshot created -> Simulated validator failure -> Automatic rollback verified (21.1483ms)
+  ✔ T3.7: Scout discovery -> Auditor approval -> Executor apply -> Post-validation pass -> Reporter outputs complete markdown report (20.0522ms)
+  ✔ T3.8: Multi-candidate batch with mixed approved and rejected candidates verifies correct counters (0.3707ms)
+✔ Tier 3: Cross-Feature Combinations (57.7827ms)
+▶ Tier 4: Real-World Application Scenarios
+  ✔ S1: Autonomous Run (--dry-run) on codebase executes Scout + Auditor, writes latest.md and exits 0 (285.2197ms)
+  ✔ S2: Site-Wide Zero AggregateRating Inviolable Guarantee holds across active source files (174.5133ms)
+  ✖ S3: Generated report markdown structure strictly conforms to required sections and metrics (2.334ms)
+  ✖ S4: Fast CI Health Check (--check) exits code 0 when codebase is healthy (217.4222ms)
+  ✔ S5: package.json integrates all required seo:pipeline scripts (0.4422ms)
+✖ Tier 4: Real-World Application Scenarios (680.1989ms)
+ℹ tests 99
+ℹ suites 20
+ℹ pass 84
+ℹ fail 15
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4271.7733
+
+✖ failing tests:
+
+test at tests\e2e-pipeline.test.mjs:100:5
+✖ F1.3: --dry-run flag executes Scout and Auditor without modifying source files (282.4002ms)
+  AssertionError [ERR_ASSERTION]: Expected dry-run mode notice
+      at TestContext.<anonymous> (file:///C:/Users/angel/Desktop/ANGEL%20RUIZ%20WORLD/AngelRuizWorld-main/tests/e2e-pipeline.test.mjs:103:14)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '\n\x1B[33m╔══════════════════════════════════════════════════════════════════════════════════╗\n║           Autonomous 3-Agent SEO/GEO Optimization CLI Pipeline                   ║\n║                     Ángel Ruiz World — Madrid Event Magic                        ║\n╚══════════════════════════════════════════════════════════════════════════════════╝\x1B[0m\n\n\x1B[34mℹ️  Modo de ejecución activo: --dry-run (Límite de lote: 2)\x1B[0m\n\n\x1B[35m🔍 [Agente 1: Opportunity Scout] Escaneando 74 artículos, landing pages y activos GEO/AI...\x1B[0m\n   └─ Oportunidades detectadas: \x1B[33m162\x1B[0m\n...',
+    expected: /Modo: --dry-run/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\e2e-pipeline.test.mjs:201:5
+✖ F3.3: detectSchemaOpportunities flags any AggregateRating violation (8.2241ms)
+  AssertionError [ERR_ASSERTION]: Should flag AggregateRating violation
+      at TestContext.<anonymous> (file:///C:/Users/angel/Desktop/ANGEL%20RUIZ%20WORLD/AngelRuizWorld-main/tests/e2e-pipeline.test.mjs:208:16)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\e2e-pipeline.test.mjs:241:5
+✖ F3.6: detectMadridGeoOpportunities detects Madrid geographic anchor enrichment gaps (7.886ms)
+  AssertionError [ERR_ASSERTION]: Should detect opportunity for Madrid geo anchoring
+      at TestContext.<anonymous> (file:///C:/Users/angel/Desktop/ANGEL%20RUIZ%20WORLD/AngelRuizWorld-main/tests/e2e-pipeline.test.mjs:247:16)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\e2e-pipeline.test.mjs:284:5
+✖ F4.1: Hard Veto VETO_AGGREGATE_RATING instantly rejects any AggregateRating candidate (2.3747ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'VETO_AGGREGATERATING'
+  - 'VETO_AGGREGATE_RATING'
+                   ^
+  
+      at TestContext.<anonymous> (file:///C:/Users/angel/Desktop/ANGEL%20RUIZ%20WORLD/AngelRuizWorld-main/tests/e2e-pipeline.test.mjs:294:14)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Test.start (node:internal/test_runner/test:1015:17)
+      at node:internal/test_runner/test:1531:71
+      at node:internal/per_context/primordials:466:82
+      at new Promise (<anonymous>)
+      at new SafePromise (node:internal/per_context/primordials:435:3)
+      at node:internal/per_context/primordials:466:9
+      at Array.map (<anonymous>) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'VETO_AGGREGATERATING',
+    expected: 'VETO_AGGREGATE_RATING',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\e2e-pipeline.test.mjs:514:5
+✖ F6.3: Report includes Auditor Decision Matrix with rubric table (11.9304ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /APPROVED/. Input:
+  
+  '# Informe de Optimización SEO & GEO — Ángel Ruiz World\n' +
+    '\n' +
+    '> Pipeline Autónomo de 3 Agentes: Opportunity Scout → Business Auditor → Automated Executor & Reporter\n' +
+    '\n' +
+    '### 📋 Metadatos de Ejecución\n' +
+    '- **Fecha y Hora**: 2026-10-06 23:22:38 UTC\n' +
+    '- **Modo de Ejecución**: `--dry-run`\n' +
+    '- **Duración Total**: 0.00s\n' +
+    '- **Entorno**: Node.js (win32) en Next.js App Router\n' +
+    '- **Estado del Pipeline**: 🟢 COMPLETADO CON ÉXITO\n' +
+    '\n' +
+    '---\n' +
+    '\n' +
+    '## 1. Resumen Ejecutivo (Executive Summary)\n' +
+    '\n' +
+    'Este informe documenta el ciclo completo de descubrimiento, filtrado crítico comercial y aplicación de mejoras SEO/GEO para el negocio de ilusionismo de **Ángel Ruiz** en la Comunidad de Madrid (bodas, empresas y eventos VIP).\n' +
+    '\n' +
+    '| Métrica de Negocio | Valor | Descripción |\n' +
+    '|---|---|---|\n' +
+    '| **Oportunidades Detectadas** | **1** | Candidatas identificadas por los 6 detectores del Scout |\n' +
+    '| **Aprobadas por Auditor** | **1** | Superaron la rúbrica (≥70 pts) y los 5 Hard Vetoes |\n' +
+    '| **Descartadas por Auditor** | **0** | Rechazadas por bajo ROI comercial o veto de seguridad |\n' +
+    '| **Modificaciones Aplicadas** | **0** | Ficheros modificados con snapshot y diff verificado |\n' +
+    '| **Modificaciones Omitidas** | **0** | Omitidas por límite de lote o modo simulación |\n' +
+    '| **Garantía AggregateRating** | **0 ocurrencias** | Cumplimiento 100% de la prohibición estricta |\n' +
+    '| **Estado de Compilación** | **Exit Code 0** | Build verificado limpiamente |\n' +
+    '\n' +
+    '## 2. Catálogo de Detección del Agente 1 (Opportunity Scout)\n' +
+    '\n' +
+    'El Agente Scout ha analizado los 74 artículos de blog, páginas de aterrizaje, esquemas estructurados y ficheros de asistentes de IA:\n' +
+    '\n' +
+    '\n' +
+    '## 3. Matriz de Decisión del Agente 2 (Business Auditor)\n' +
+    '\n' +
+    'Evaluación de cada propuesta bajo los 5 Hard Vetoes y la Rúbrica de 100 puntos (Comercial 35, Madrid 25, Marca 20, Seguridad 20):\n' +
+    '\n' +
+    '| ID | Archivo Objetivo | Tipo | Score | Desglose (C/M/P/S) | Veredicto | Justificación Comercial |\n' +
+    '|---|---|---|:---:|:---:|:---:|---|\n' +
+    '| `TEST-01` | `-` | - | **85** | 30/25/15/15 | ✅ **APROBADO** | Excelente conversión en bodas Madrid. |\n' +
+    '\n' +
+    '## 4. Registro de Ejecución y Diffs del Agente 3 (Automated Executor)\n' +
+    '\n' +
+    '*(Ejecución en modo simulación `--dry-run` o sin cambios seleccionados. Ningún fichero fue modificado en el disco.)*\n' +
+    '\n' +
+    '## 5. Certificado de Validación Post-Ejecución (Validator Certificate)\n' +
+    '\n' +
+    '```\n' +
+    '======================================================================\n' +
+    '               CERTIFICADO DE CONFORMIDAD SEO & GEO                   \n' +
+    '                  PROYECTO: ANGELRUIZ.WORLD                          \n' +
+    '======================================================================\n' +
+    '1. Regla Inviolable AggregateRating: [PASADA] (0 ocurrencias en código)\n' +
+    '2. Política de Privacidad & Cookies: [PASADA] (0 trackers introducidos)\n' +
+    '3. Compilación Next.js: [OMITIDA EN DRY-RUN]\n' +
+    '4. Integridad de Rollback: [NO REQUERIDO]\n' +
+    '----------------------------------------------------------------------\n' +
+    'VEREDICTO FINAL: LIBERADO PARA PRODUCCIÓN\n' +
+    '======================================================================\n' +
+    '```\n'
+  
+      at TestContext.<anonymous> (file:///C:/Users/angel/Desktop/ANGEL%20RUIZ%20WORLD/AngelRuizWorld-main/tests/e2e-pipeline.test.mjs:536:16)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '# Informe de Optimización SEO & GEO — Ángel Ruiz World\n\n> Pipeline Autónomo de 3 Agentes: Opportunity Scout → Business Auditor → Automated Executor & Reporter\n\n### 📋 Metadatos de Ejecución\n- **Fecha y Hora**: 2026-10-06 23:22:38 UTC\n- **Modo de Ejecución**: `--dry-run`\n- **Duración Total**: 0.00s\n- **Entorno**: Node.js (win32) en Next.js App Router\n- **Estado del Pipeline**: 🟢 COMPLETADO CON ÉXITO\n...',
+    expected: /APPROVED/,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\e2e-pipeline.test.mjs:543:5
+✖ F6.4: Report includes Executor Change Log detailing mutations (10.6036ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /## 4\. Registro de Modificaciones del Agente 3/i. Input:
+  
+  '# Informe de Optimización SEO & GEO — Ángel Ruiz World\n' +
+    '\n' +
+    '> Pipeline Autónomo de 3 Agentes: Opportunity Scout → Business Auditor → Automated Executor & Reporter\n' +
+    '\n' +
+    '### 📋 Metadatos de Ejecución\n' +
+    '- **Fecha y Hora**: 2026-10-06 23:22:38 UTC\n' +
+    '- **Modo de Ejecución**: `--auto-apply`\n' +
+    '- **Duración Total**: 0.00s\n' +
+    '- **Entorno**: Node.js (win32) en Next.js App Router\n' +
+    '- **Estado del Pipeline**: 🔴 FALLIDO O REVERTIDO\n' +
+    '\n' +
+    '---\n' +
+    '\n' +
+    '## 1. Resumen Ejecutivo (Executive Summary)\n' +
+    '\n' +
+    'Este informe documenta el ciclo completo de descubrimiento, filtrado crítico comercial y aplicación de mejoras SEO/GEO para el negocio de ilusionismo de **Ángel Ruiz** en la Comunidad de Madrid (bodas, empresas y eventos VIP).\n' +
+    '\n' +
+    '| Métrica de Negocio | Valor | Descripción |\n' +
+    '|---|---|---|\n' +
+    '| **Oportunidades Detectadas** | **0** | Candidatas identificadas por los 6 detectores del Scout |\n' +
+    '| **Aprobadas por Auditor** | **0** | Superaron la rúbrica (≥70 pts) y los 5 Hard Vetoes |\n' +
+    '| **Descartadas por Auditor** | **0** | Rechazadas por bajo ROI comercial o veto de seguridad |\n' +
+    '| **Modificaciones Aplicadas** | **1** | Ficheros modificados con snapshot y diff verificado |\n' +
+    '| **Modificaciones Omitidas** | **0** | Omitidas por límite de lote o modo simulación |\n' +
+    '| **Garantía AggregateRating** | **0 ocurrencias** | Cumplimiento 100% de la prohibición estricta |\n' +
+    '| **Estado de Compilación** | **Exit Code 0** | Build verificado limpiamente |\n' +
+    '\n' +
+    '## 2. Catálogo de Detección del Agente 1 (Opportunity Scout)\n' +
+    '\n' +
+    'El Agente Scout ha analizado los 74 artículos de blog, páginas de aterrizaje, esquemas estructurados y ficheros de asistentes de IA:\n' +
+    '\n' +
+    '\n' +
+    '## 3. Matriz de Decisión del Agente 2 (Business Auditor)\n' +
+    '\n' +
+    'Evaluación de cada propuesta bajo los 5 Hard Vetoes y la Rúbrica de 100 puntos (Comercial 35, Madrid 25, Marca 20, Seguridad 20):\n' +
+    '\n' +
+    '| ID | Archivo Objetivo | Tipo | Score | Desglose (C/M/P/S) | Veredicto | Justificación Comercial |\n' +
+    '|---|---|---|:---:|:---:|:---:|---|\n' +
+    '\n' +
+    '## 4. Registro de Ejecución y Diffs del Agente 3 (Automated Executor)\n' +
+    '\n' +
+    '- **Snapshot de Seguridad**: `undefined`\n' +
+    '- **Total Modificaciones Aplicadas**: 1\n' +
+    '\n' +
+    '### Modificación [MUT-01] en `content/blog/test.md`\n' +
+    '- **Estado**: `APPLIED`\n' +
+    '\n' +
+    '```diff\n' +
+    '- old title\n' +
+    '+ new title\n' +
+    '```\n' +
+    '\n' +
+    '## 5. Certificado de Validación Post-Ejecución (Validator Certificate)\n' +
+    '\n' +
+    '```\n' +
+    '======================================================================\n' +
+    '               CERTIFICADO DE CONFORMIDAD SEO & GEO                   \n' +
+    '                  PROYECTO: ANGELRUIZ.WORLD                          \n' +
+    '======================================================================\n' +
+    '1. Regla Inviolable AggregateRating: [PASADA] (0 ocurrencias en código)\n' +
+    '2. Política de Privacidad & Cookies: [PASADA] (0 trackers introducidos)\n' +
+    '3. Compilación Next.js: [OMITIDA EN DRY-RUN]\n' +
+    '4. Integridad de Rollback: [NO REQUERIDO]\n' +
+    '----------------------------------------------------------------------\n' +
+    'VEREDICTO FINAL: DETENIDO POR INFRACCIÓN\n' +
+    '======================================================================\n' +
+    '```\n'
+  
+      at TestContext.<anonymous> (file:///C:/Users/angel/Desktop/ANGEL%20RUIZ%20WORLD/AngelRuizWorld-main/tests/e2e-pipeline.test.mjs:561:16)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '# Informe de Optimización SEO & GEO — Ángel Ruiz World\n\n> Pipeline Autónomo de 3 Agentes: Opportunity Scout → Business Auditor → Automated Executor & Reporter\n\n### 📋 Metadatos de Ejecución\n- **Fecha y Hora**: 2026-10-06 23:22:38 UTC\n- **Modo de Ejecución**: `--auto-apply`\n- **Duración Total**: 0.00s\n- **Entorno**: Node.js (win32) en Next.js App Router\n- **Estado del Pipeline**: 🔴 FALLIDO O REVERTIDO\n...',
+    expected: /## 4\. Registro de Modificaciones del Agente 3/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\e2e-pipeline.test.mjs:569:5
+✖ F6.5: Report includes Post-Execution Validation Certificate (10.7814ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Cero AggregateRating/i. Input:
+  
+  '# Informe de Optimización SEO & GEO — Ángel Ruiz World\n' +
+    '\n' +
+    '> Pipeline Autónomo de 3 Agentes: Opportunity Scout → Business Auditor → Automated Executor & Reporter\n' +
+    '\n' +
+    '### 📋 Metadatos de Ejecución\n' +
+    '- **Fecha y Hora**: 2026-10-06 23:22:38 UTC\n' +
+    '- **Modo de Ejecución**: `--dry-run`\n' +
+    '- **Duración Total**: 0.00s\n' +
+    '- **Entorno**: Node.js (win32) en Next.js App Router\n' +
+    '- **Estado del Pipeline**: 🟢 COMPLETADO CON ÉXITO\n' +
+    '\n' +
+    '---\n' +
+    '\n' +
+    '## 1. Resumen Ejecutivo (Executive Summary)\n' +
+    '\n' +
+    'Este informe documenta el ciclo completo de descubrimiento, filtrado crítico comercial y aplicación de mejoras SEO/GEO para el negocio de ilusionismo de **Ángel Ruiz** en la Comunidad de Madrid (bodas, empresas y eventos VIP).\n' +
+    '\n' +
+    '| Métrica de Negocio | Valor | Descripción |\n' +
+    '|---|---|---|\n' +
+    '| **Oportunidades Detectadas** | **0** | Candidatas identificadas por los 6 detectores del Scout |\n' +
+    '| **Aprobadas por Auditor** | **0** | Superaron la rúbrica (≥70 pts) y los 5 Hard Vetoes |\n' +
+    '| **Descartadas por Auditor** | **0** | Rechazadas por bajo ROI comercial o veto de seguridad |\n' +
+    '| **Modificaciones Aplicadas** | **0** | Ficheros modificados con snapshot y diff verificado |\n' +
+    '| **Modificaciones Omitidas** | **0** | Omitidas por límite de lote o modo simulación |\n' +
+    '| **Garantía AggregateRating** | **0 ocurrencias** | Cumplimiento 100% de la prohibición estricta |\n' +
+    '| **Estado de Compilación** | **Exit Code 0** | Build verificado limpiamente |\n' +
+    '\n' +
+    '## 2. Catálogo de Detección del Agente 1 (Opportunity Scout)\n' +
+    '\n' +
+    'El Agente Scout ha analizado los 74 artículos de blog, páginas de aterrizaje, esquemas estructurados y ficheros de asistentes de IA:\n' +
+    '\n' +
+    '\n' +
+    '## 3. Matriz de Decisión del Agente 2 (Business Auditor)\n' +
+    '\n' +
+    'Evaluación de cada propuesta bajo los 5 Hard Vetoes y la Rúbrica de 100 puntos (Comercial 35, Madrid 25, Marca 20, Seguridad 20):\n' +
+    '\n' +
+    '| ID | Archivo Objetivo | Tipo | Score | Desglose (C/M/P/S) | Veredicto | Justificación Comercial |\n' +
+    '|---|---|---|:---:|:---:|:---:|---|\n' +
+    '\n' +
+    '## 4. Registro de Ejecución y Diffs del Agente 3 (Automated Executor)\n' +
+    '\n' +
+    '*(Ejecución en modo simulación `--dry-run` o sin cambios seleccionados. Ningún fichero fue modificado en el disco.)*\n' +
+    '\n' +
+    '## 5. Certificado de Validación Post-Ejecución (Validator Certificate)\n' +
+    '\n' +
+    '```\n' +
+    '======================================================================\n' +
+    '               CERTIFICADO DE CONFORMIDAD SEO & GEO                   \n' +
+    '                  PROYECTO: ANGELRUIZ.WORLD                          \n' +
+    '======================================================================\n' +
+    '1. Regla Inviolable AggregateRating: [PASADA] (0 ocurrencias en código)\n' +
+    '2. Política de Privacidad & Cookies: [PASADA] (0 trackers introducidos)\n' +
+    '3. Compilación Next.js (npm run build): [PASADA] (Exit code 0)\n' +
+    '4. Integridad de Rollback: [NO REQUERIDO]\n' +
+    '----------------------------------------------------------------------\n' +
+    'VEREDICTO FINAL: LIBERADO PARA PRODUCCIÓN\n' +
+    '======================================================================\n' +
+    '```\n'
+  
+      at TestContext.<anonymous> (file:///C:/Users/angel/Desktop/ANGEL%20RUIZ%20WORLD/AngelRuizWorld-main/tests/e2e-pipeline.test.mjs:586:16)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '# Informe de Optimización SEO & GEO — Ángel Ruiz World\n\n> Pipeline Autónomo de 3 Agentes: Opportunity Scout → Business Auditor → Automated Executor & Reporter\n\n### 📋 Metadatos de Ejecución\n- **Fecha y Hora**: 2026-10-06 23:22:38 UTC\n- **Modo de Ejecución**: `--dry-run`\n- **Duración Total**: 0.00s\n- **Entorno**: Node.js (win32) en Next.js App Router\n- **Estado del Pipeline**: 🟢 COMPLETADO CON ÉXITO\n...',
+    expected: /Cero AggregateRating/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\e2e-pipeline.test.mjs:623:5
+✖ F7.4: validateNoTrackers flags injected Google Tag Manager or tracking scripts (7.3528ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  true !== false
+  
+      at TestContext.<anonymous> (file:///C:/Users/angel/Desktop/ANGEL%20RUIZ%20WORLD/AngelRuizWorld-main/tests/e2e-pipeline.test.mjs:629:16)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: true,
+    expected: false,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\e2e-pipeline.test.mjs:722:5
+✖ F1.B2: --limit flag parses custom limit integer (270.3013ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /límite: 3/i. Input:
+  
+  '\n' +
+    '\x1B[33m╔══════════════════════════════════════════════════════════════════════════════════╗\n' +
+    '║           Autonomous 3-Agent SEO/GEO Optimization CLI Pipeline                   ║\n' +
+    '║                     Ángel Ruiz World — Madrid Event Magic                        ║\n' +
+    '╚══════════════════════════════════════════════════════════════════════════════════╝\x1B[0m\n' +
+    '\n' +
+    '\x1B[34mℹ️  Modo de ejecución activo: --dry-run (Límite de lote: 3)\x1B[0m\n' +
+    '\n' +
+    '\x1B[35m🔍 [Agente 1: Opportunity Scout] Escaneando 74 artículos, landing pages y activos GEO/AI...\x1B[0m\n' +
+    '   └─ Oportunidades detectadas: \x1B[33m162\x1B[0m\n' +
+    '\n' +
+    '\x1B[35m⚖️  [Agente 2: Business Auditor] Aplicando rúbrica de conversión comercial y 5 Hard Vetoes...\x1B[0m\n' +
+    '   ├─ Aprobadas (≥70 pts y 0 vetoes): \x1B[32m144\x1B[0m\n' +
+    '   └─ Descartadas (Bajo ROI o Veto):  \x1B[31m18\x1B[0m\n' +
+    '\n' +
+    '\x1B[35m📊 [Agente 3: Reporter] Generando informe Markdown de auditoría y ejecución...\x1B[0m\n' +
+    '   ├─ Informe fechado: \x1B[32mC:\\Users\\angel\\Desktop\\ANGEL RUIZ WORLD\\AngelRuizWorld-main\\.seo-pipeline\\reports\\seo-geo-report-2026-10-06T23-22-39-611Z.md\x1B[0m\n' +
+    '   └─ Enlace directo:  \x1B[32mC:\\Users\\angel\\Desktop\\ANGEL RUIZ WORLD\\AngelRuizWorld-main\\.seo-pipeline\\reports\\latest.md\x1B[0m\n' +
+    '\n' +
+    '\x1B[32m══════════════════════════════════════════════════════════════════════════════════\x1B[0m\n' +
+    '\x1B[32m🎉 Pipeline completado con éxito en 0.14s.\x1B[0m\n' +
+    '\x1B[32m══════════════════════════════════════════════════════════════════════════════════\x1B[0m\n' +
+    '\n'
+  
+      at TestContext.<anonymous> (file:///C:/Users/angel/Desktop/ANGEL%20RUIZ%20WORLD/AngelRuizWorld-main/tests/e2e-pipeline.test.mjs:725:14)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Promise.all (index 0)
+      at async Suite.run (node:internal/test_runner/test:1533:7)
+      at async Promise.all (index 0)
+      at async Suite.run (node:internal/test_runner/test:1533:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '\n\x1B[33m╔══════════════════════════════════════════════════════════════════════════════════╗\n║           Autonomous 3-Agent SEO/GEO Optimization CLI Pipeline                   ║\n║                     Ángel Ruiz World — Madrid Event Magic                        ║\n╚══════════════════════════════════════════════════════════════════════════════════╝\x1B[0m\n\n\x1B[34mℹ️  Modo de ejecución activo: --dry-run (Límite de lote: 3)\x1B[0m\n\n\x1B[35m🔍 [Agente 1: Opportunity Scout] Escaneando 74 artículos, landing pages y activos GEO/AI...\x1B[0m\n   └─ Oportunidades detectadas: \x1B[33m162\x1B[0m\n...',
+    expected: /límite: 3/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\e2e-pipeline.test.mjs:728:5
+✖ F1.B3: --limit with invalid non-numeric argument defaults safely to 5 (267.5406ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /límite: 5/i. Input:
+  
+  '\n' +
+    '\x1B[33m╔══════════════════════════════════════════════════════════════════════════════════╗\n' +
+    '║           Autonomous 3-Agent SEO/GEO Optimization CLI Pipeline                   ║\n' +
+    '║                     Ángel Ruiz World — Madrid Event Magic                        ║\n' +
+    '╚══════════════════════════════════════════════════════════════════════════════════╝\x1B[0m\n' +
+    '\n' +
+    '\x1B[34mℹ️  Modo de ejecución activo: --dry-run (Límite de lote: 5)\x1B[0m\n' +
+    '\n' +
+    '\x1B[35m🔍 [Agente 1: Opportunity Scout] Escaneando 74 artículos, landing pages y activos GEO/AI...\x1B[0m\n' +
+    '   └─ Oportunidades detectadas: \x1B[33m162\x1B[0m\n' +
+    '\n' +
+    '\x1B[35m⚖️  [Agente 2: Business Auditor] Aplicando rúbrica de conversión comercial y 5 Hard Vetoes...\x1B[0m\n' +
+    '   ├─ Aprobadas (≥70 pts y 0 vetoes): \x1B[32m144\x1B[0m\n' +
+    '   └─ Descartadas (Bajo ROI o Veto):  \x1B[31m18\x1B[0m\n' +
+    '\n' +
+    '\x1B[35m📊 [Agente 3: Reporter] Generando informe Markdown de auditoría y ejecución...\x1B[0m\n' +
+    '   ├─ Informe fechado: \x1B[32mC:\\Users\\angel\\Desktop\\ANGEL RUIZ WORLD\\AngelRuizWorld-main\\.seo-pipeline\\reports\\seo-geo-report-2026-10-06T23-22-39-881Z.md\x1B[0m\n' +
+    '   └─ Enlace directo:  \x1B[32mC:\\Users\\angel\\Desktop\\ANGEL RUIZ WORLD\\AngelRuizWorld-main\\.seo-pipeline\\reports\\latest.md\x1B[0m\n' +
+    '\n' +
+    '\x1B[32m══════════════════════════════════════════════════════════════════════════════════\x1B[0m\n' +
+    '\x1B[32m🎉 Pipeline completado con éxito en 0.14s.\x1B[0m\n' +
+    '\x1B[32m══════════════════════════════════════════════════════════════════════════════════\x1B[0m\n' +
+    '\n'
+  
+      at TestContext.<anonymous> (file:///C:/Users/angel/Desktop/ANGEL%20RUIZ%20WORLD/AngelRuizWorld-main/tests/e2e-pipeline.test.mjs:731:14)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '\n\x1B[33m╔══════════════════════════════════════════════════════════════════════════════════╗\n║           Autonomous 3-Agent SEO/GEO Optimization CLI Pipeline                   ║\n║                     Ángel Ruiz World — Madrid Event Magic                        ║\n╚══════════════════════════════════════════════════════════════════════════════════╝\x1B[0m\n\n\x1B[34mℹ️  Modo de ejecución activo: --dry-run (Límite de lote: 5)\x1B[0m\n\n\x1B[35m🔍 [Agente 1: Opportunity Scout] Escaneando 74 artículos, landing pages y activos GEO/AI...\x1B[0m\n   └─ Oportunidades detectadas: \x1B[33m162\x1B[0m\n...',
+    expected: /límite: 5/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\e2e-pipeline.test.mjs:774:5
+✖ F2.B4: Reporter handles empty opportunities dataset generating valid report (8.3118ms)
+  TypeError: Cannot read properties of undefined (reading 'length')
+      at Object.generateReport (C:\Users\angel\Desktop\ANGEL RUIZ WORLD\AngelRuizWorld-main\scripts\pipeline\reporter.js:92:81)
+      at TestContext.<anonymous> (file:///C:/Users/angel/Desktop/ANGEL%20RUIZ%20WORLD/AngelRuizWorld-main/tests/e2e-pipeline.test.mjs:777:36)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:787:7)
+
+test at tests\e2e-pipeline.test.mjs:893:5
+✖ F4.B3: Score 100 with Hard Veto triggered is strictly REJECTED (Veto overrides score) (0.3668ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'VETO_AGGREGATERATING'
+  - 'VETO_AGGREGATE_RATING'
+                   ^
+  
+      at TestContext.<anonymous> (file:///C:/Users/angel/Desktop/ANGEL%20RUIZ%20WORLD/AngelRuizWorld-main/tests/e2e-pipeline.test.mjs:903:14)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'VETO_AGGREGATERATING',
+    expected: 'VETO_AGGREGATE_RATING',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\e2e-pipeline.test.mjs:946:5
+✖ F5.B2: Target file with non-existent path handled gracefully returning SKIPPED status (5.8151ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'FAILED'
+  - 'SKIPPED'
+  
+      at TestContext.<anonymous> (file:///C:/Users/angel/Desktop/ANGEL%20RUIZ%20WORLD/AngelRuizWorld-main/tests/e2e-pipeline.test.mjs:955:16)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Promise.all (index 0)
+      at async Suite.run (node:internal/test_runner/test:1533:7)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'FAILED',
+    expected: 'SKIPPED',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\e2e-pipeline.test.mjs:1442:3
+✖ S3: Generated report markdown structure strictly conforms to required sections and metrics (2.334ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /## 4\. Registro de Modificaciones del Agente 3/i. Input:
+  
+  '# Informe de Optimización SEO & GEO — Ángel Ruiz World\n' +
+    '\n' +
+    '> Pipeline Autónomo de 3 Agentes: Opportunity Scout → Business Auditor → Automated Executor & Reporter\n' +
+    '\n' +
+    '### 📋 Metadatos de Ejecución\n' +
+    '- **Fecha y Hora**: 2026-10-06 23:22:40 UTC\n' +
+    '- **Modo de Ejecución**: `--dry-run`\n' +
+    '- **Duración Total**: 0.15s\n' +
+    '- **Entorno**: Node.js (win32) en Next.js App Router\n' +
+    '- **Estado del Pipeline**: 🟢 COMPLETADO CON ÉXITO\n' +
+    '\n' +
+    '---\n' +
+    '\n' +
+    '## 1. Resumen Ejecutivo (Executive Summary)\n' +
+    '\n' +
+    'Este informe documenta el ciclo completo de descubrimiento, filtrado crítico comercial y aplicación de mejoras SEO/GEO para el negocio de ilusionismo de **Ángel Ruiz** en la Comunidad de Madrid (bodas, empresas y eventos VIP).\n' +
+    '\n' +
+    '| Métrica de Negocio | Valor | Descripción |\n' +
+    '|---|---|---|\n' +
+    '| **Oportunidades Detectadas** | **162** | Candidatas identificadas por los 6 detectores del Scout |\n' +
+    '| **Aprobadas por Auditor** | **144** | Superaron la rúbrica (≥70 pts) y los 5 Hard Vetoes |\n' +
+    '| **Descartadas por Auditor** | **18** | Rechazadas por bajo ROI comercial o veto de seguridad |\n' +
+    '| **Modificaciones Aplicadas** | **0** | Ficheros modificados con snapshot y diff verificado |\n' +
+    '| **Modificaciones Omitidas** | **0** | Omitidas por límite de lote o modo simulación |\n' +
+    '| **Garantía AggregateRating** | **0 ocurrencias** | Cumplimiento 100% de la prohibición estricta |\n' +
+    '| **Estado de Compilación** | **Exit Code 0** | Build verificado limpiamente |\n' +
+    '\n' +
+    '## 2. Catálogo de Detección del Agente 1 (Opportunity Scout)\n' +
+    '\n' +
+    'El Agente Scout ha analizado los 74 artículos de blog, páginas de aterrizaje, esquemas estructurados y ficheros de asistentes de IA:\n' +
+    '\n' +
+    '- **1. Metadatos & Títulos**: 97 oportunidades (truncamiento SERP, duplicidad de marca).\n' +
+    '- **2. Salud de Schemas**: 1 oportunidades (ausencia de ratings ilegales, speakable).\n' +
+    '- **3. GEO & llms.txt**: 1 oportunidades (sincronización con motores de IA).\n' +
+    '- **4. Expansión de FAQ Gaps**: 1 oportunidades (resolución de objeciones comerciales).\n' +
+    '- **5. Anclaje Local Madrid**: 1 oportunidades (entidades Pozuelo, Las Rozas, IFEMA, fincas).\n' +
+    '- **6. Interlinking de Clusters**: 61 oportunidades (recirculación hacia bodas/empresas/tarifas).\n' +
+    '\n' +
+    '## 3. Matriz de Decisión del Agente 2 (Business Auditor)\n' +
+    '\n' +
+    'Evaluación de cada propuesta bajo los 5 Hard Vetoes y la Rúbrica de 100 puntos (Comercial 35, Madrid 25, Marca 20, Seguridad 20):\n' +
+    '\n' +
+    '| ID | Archivo Objetivo | Tipo | Score | Desglose (C/M/P/S) | Veredicto | Justificación Comercial |\n' +
+    '|---|---|---|:---:|:---:|:---:|---|\n' +
+    '| `META-TITLE-001` | `content/blog/animacion-cena-gala-entrega-premios-madrid.md` | metadata | **57** | 8/18/12/19 | ❌ **RECHAZADO** | RECHAZADO [57/100 pts]: Puntuación inferior al umbral mínimo exigido (70 pts). Intención comercial (8/35) o anclaje local en Madrid (18/25) insuficiente para justificar retorno directo en reservas. |\n' +
+    '| `META-DESC-002` | `content/blog/animacion-cena-gala-entrega-premios-madrid.md` | metadata | **88** | 35/18/16/19 | ✅ **APROBADO** | APROBADO [88/100 pts]: Oportunidad comercial de alto impacto para Ángel Ruiz en Madrid. Factores clave: alta intención de reserva comercial (bodas/empresas/precios), fuerte anclaje geográfico en Madrid, alineación con ilusionismo de autor, riesgo técnico nulo (mutación estática controlada). |\n' +
+    '| `META-TITLE-003` | `content/blog/animacion-coctel-boda-madrid-ideas.md` | metadata | **87** | 34/18/16/19 | ✅ **APROBADO** | APROBADO [87/100 pts]: Oportunidad comercial de alto impacto para Ángel Ruiz en Madrid. Factores clave: alta intención de reserva comercial (bodas/empresas/precios), fuerte anclaje geográfico en Madrid, alineación con ilusionismo de autor, riesgo técnico nulo (mutación estática controlada). |\n' +
+    '| `META-DESC-004` | `content/blog/animacion-coctel-boda-madrid-ideas.md` | metadata | **87** | 34/18/16/19 | ✅ **APROBADO** | APROBADO [87/100 pts]: Oportunidad comercial de alto impacto para Ángel Ruiz en Madrid. Factores clave: alta intención de reserva comercial (bodas/empresas/precios), fuerte anclaje geográfico en Madrid, alineación con ilusionismo de autor, riesgo técnico nulo (mutación estática controlada). |\n' +
+    '| `META-TITLE-005` | `content/blog/animacion-comuniones-madrid-2027-guia-precios.md` | metadata | **84** | 35/18/12/19 | ✅ **APROBADO** | APROBADO [84/100 pts]: Oportunidad comercial de alto impacto para Ángel Ruiz en Madrid. Factores clave: alta intención de reserva comercial (bodas/empresas/precios), fuerte anclaje geográfico en Madrid, riesgo técnico nulo (mutación estática controlada). |\n' +
+    '| `META-TITLE-006` | `content/blog/celebrar-cumpleanos-diferente-madrid-adultos-ideas.md` | metadata | **73** | 24/18/12/19 | ✅ **APROBADO** | APROBADO [73/100 pts]: Oportunidad comercial de alto impacto para Ángel Ruiz en Madrid. Factores clave: fuerte anclaje geográfico en Madrid, riesgo técnico nulo (mutación estática controlada). |\n' +
+    '| `META-TITLE-007` | `content/blog/cenas-empresa-pequenas-madrid-animacion-magia.md` | metadata | **88** | 35/18/16/19 | ✅ **APROBADO** | APROBADO [88/100 pts]: Oportunidad comercial de alto impacto para Ángel Ruiz en Madrid. Factores clave: alta intención de reserva comercial (bodas/empresas/precios), fuerte anclaje geográfico en Madrid, alineación con ilusionismo de autor, riesgo técnico nulo (mutación estática controlada). |\n' +
+    '| `META-TITLE-008` | `content/blog/coctel-fin-de-ano-empresa-madrid-ideas-animacion.md` | metadata | **87** | 34/18/16/19 | ✅ **APROBADO** | APROBADO [87/100 pts]: Oportunidad comercial de alto impacto para Ángel Ruiz en Madrid. Factores clave: alta intención de reserva comercial (bodas/empresas/precios), fuerte anclaje geográfico en Madrid, alineación con ilusionismo de autor, riesgo técnico nulo (mutación estática controlada). |\n' +
+    '| `META-DESC-009` | `content/blog/coctel-fin-de-ano-empresa-madrid-ideas-animacion.md` | metadata | **87** | 34/18/16/19 | ✅ **APROBADO** | APROBADO [87/100 pts]: Oportunidad comercial de alto impacto para Ángel Ruiz en Madrid. Factores clave: alta intención de reserva comercial (bodas/empresas/precios), fuerte anclaje geográfico en Madrid, alineación con ilusionismo de autor, riesgo técnico nulo (mutación estática controlada). |\n' +
+    '| `META-TITLE-010` | `content/blog/como-organizar-cena-navidad-empresa-madrid-guia.md` | metadata | **88** | 35/18/16/19 | ✅ **APROBADO** | APROBADO [88/100 pts]: Oportunidad comercial de alto impacto para Ángel Ruiz en Madrid. Factores clave: alta intención de reserva comercial (bodas/empresas/precios), fuerte anclaje geográfico en Madrid, alineación con ilusionismo de autor, riesgo técnico nulo (mutación estática controlada). |\n' +
+    '| `META-DESC-011` | `content/blog/como-organizar-cena-navidad-empresa-madrid-guia.md` | metadata | **88** | 35/18/16/19 | ✅ **APROBADO** | APROBADO [88/100 pts]: Oportunidad comercial de alto impacto para Ángel Ruiz en Madrid. Factores clave: alta intención de reserva comercial (bodas/empresas/precios), fuerte anclaje geográfico en Madrid, alineación con ilusionismo de autor, riesgo técnico nulo (mutación estática controlada). |\n' +
+    '| `META-TITLE-012` | `content/blog/como-sorprender-invitados-boda-coctel.md` | metadata | **87** | 34/18/16/19 | ✅ **APROBADO** | APROBADO [87/100 pts]: Oportunidad comercial de alto impacto para Ángel Ruiz en Madrid. Factores clave: alta intención de reserva comercial (bodas/empresas/precios), fuerte anclaje geográfico en Madrid, alineación con ilusionismo de autor, riesgo técnico nulo (mutación estática controlada). |\n' +
+    '| `META-TITLE-013` | `content/blog/cuanto-cuesta-animacion-boda-madrid-comparativa.md` | metadata | **87** | 34/18/16/19 | ✅ **APROBADO** | APROBADO [87/100 pts]: Oportunidad comercial de alto impacto para Ángel Ruiz en Madrid. Factores clave: alta intención de reserva comercial (bodas/empresas/precios), fuerte anclaje geográfico en Madrid, alineación con ilusionismo de autor, riesgo técnico nulo (mutación estática controlada). |\n' +
+    '| `META-DESC-014` | `content/blog/cuanto-cuesta-mago-boda-madrid.md` | metadata | **87** | 34/18/16/19 | ✅ **APROBADO** | APROBADO [87/100 pts]: Oportunidad comercial de alto impacto para Ángel Ruiz en Madrid. Factores clave: alta intención de reserva comercial (bodas/empresas/precios), fuerte anclaje geográfico en Madrid, alineación con ilusionismo de autor, riesgo técnico nulo (mutación estática controlada). |\n' +
+    '| `META-TITLE-015` | `content/blog/cuanto-dura-show-magia-evento-timing-madrid.md` | metadata | **57** | 8/18/12/19 | ❌ **RECHAZADO** | RECHAZADO [57/100 pts]: Puntuación inferior al umbral mínimo exigido (70 pts). Intención comercial (8/35) o anclaje local en Madrid (18/25) insuficiente para justificar retorno directo en reservas. |\n' +
+    '| `META-DESC-016` | `content/blog/cuanto-dura-show-magia-evento-timing-madrid.md` | metadata | **87** | 34/18/16/19 | ✅ **APROBADO** | APROBADO [87/100 pts]: Oportunidad comercial de alto impacto para Ángel Ruiz en Madrid. Factores clave: alta intención de reserva comercial (bodas/empresas/precios), fuerte anclaje geográfico en Madrid, alineación con ilusionismo de autor, riesgo técnico nulo (mutación estática controlada). |\n' +
+    '| `META-TITLE-017` | `content/blog/dinamizacion-coctel-copa-navidad-oficina-madrid.md` | metadata | **83** | 34/18/12/19 | ✅ **APROBADO** | APROBADO [83/100 pts]: Oportunidad comercial de alto impacto para Ángel Ruiz en Madrid. Factores clave: alta intención de reserva comercial (bodas/empresas/precios), fuerte anclaje geográfico en Madrid, riesgo técnico nulo (mutación estática controlada). |\n' +
+    '| `META-DESC-018` | `content/blog/dinamizacion-coctel-copa-navidad-oficina-madrid.md` | metadata | **87** | 34/18/16/19 | ✅ **APROBADO** | APROBADO [87/100 pts]: Oportunidad comercial de alto impacto para Ángel Ruiz en Madrid. Factores clave: alta intención de reserva comercial (bodas/empresas/precios), fuerte anclaje geográfico en Madrid, alineación con ilusionismo de autor, riesgo técnico nulo (mutación estática controlada). |\n' +
+    '| `META-TITLE-019` | `content/blog/espectaculo-animacion-cenas-navidad-empresas-madrid.md` | metadata | **88** | 35/18/16/19 | ✅ **APROBADO** | APROBADO [88/100 pts]: Oportunida'... 13672 more characters
+  
+      at TestContext.<anonymous> (file:///C:/Users/angel/Desktop/ANGEL%20RUIZ%20WORLD/AngelRuizWorld-main/tests/e2e-pipeline.test.mjs:1457:12)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '# Informe de Optimización SEO & GEO — Ángel Ruiz World\n\n> Pipeline Autónomo de 3 Agentes: Opportunity Scout → Business Auditor → Automated Executor & Reporter\n\n### 📋 Metadatos de Ejecución\n- **Fecha y Hora**: 2026-10-06 23:22:40 UTC\n- **Modo de Ejecución**: `--dry-run`\n- **Duración Total**: 0.15s\n- **Entorno**: Node.js (win32) en Next.js App Router\n- **Estado del Pipeline**: 🟢 COMPLETADO CON ÉXITO\n...',
+    expected: /## 4\. Registro de Modificaciones del Agente 3/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\e2e-pipeline.test.mjs:1463:3
+✖ S4: Fast CI Health Check (--check) exits code 0 when codebase is healthy (217.4222ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /✅ Verificación completada con éxito/i. Input:
+  
+  '\n' +
+    '\x1B[33m╔══════════════════════════════════════════════════════════════════════════════════╗\n' +
+    '║           Autonomous 3-Agent SEO/GEO Optimization CLI Pipeline                   ║\n' +
+    '║                     Ángel Ruiz World — Madrid Event Magic                        ║\n' +
+    '╚══════════════════════════════════════════════════════════════════════════════════╝\x1B[0m\n' +
+    '\n' +
+    '\x1B[36m🛡️ [Pipeline] Modo --check: Verificando reglas de negocio inmutables y salud de schemas...\x1B[0m\n' +
+    '- Regla Inviolable de Rating (AggregateRating): \x1B[32m✅ CERO OCURRENCIAS (PASÓ)\x1B[0m\n' +
+    '- Política de Privacidad y Trackers: \x1B[32m✅ CERO TRACKERS (PASÓ)\x1B[0m\n' +
+    '\x1B[32m✨ Comprobación de salud SATISFACTORIA: El proyecto cumple con el 100% de las políticas.\x1B[0m\n' +
+    '\n'
+  
+      at TestContext.<anonymous> (file:///C:/Users/angel/Desktop/ANGEL%20RUIZ%20WORLD/AngelRuizWorld-main/tests/e2e-pipeline.test.mjs:1466:12)
+      at Test.runInAsyncScope (node:async_hooks:228:14)
+      at Test.run (node:internal/test_runner/test:1118:25)
+      at Suite.processPendingSubtests (node:internal/test_runner/test:787:18)
+      at Test.postRun (node:internal/test_runner/test:1247:19)
+      at Test.run (node:internal/test_runner/test:1175:12)
+      at async Suite.processPendingSubtests (node:internal/test_runner/test:787:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '\n\x1B[33m╔══════════════════════════════════════════════════════════════════════════════════╗\n║           Autonomous 3-Agent SEO/GEO Optimization CLI Pipeline                   ║\n║                     Ángel Ruiz World — Madrid Event Magic                        ║\n╚══════════════════════════════════════════════════════════════════════════════════╝\x1B[0m\n\n\x1B[36m🛡️ [Pipeline] Modo --check: Verificando reglas de negocio inmutables y salud de schemas...\x1B[0m\n- Regla Inviolable de Rating (AggregateRating): \x1B[32m✅ CERO OCURRENCIAS (PASÓ)\x1B[0m\n- Política de Privacidad y Trackers: \x1B[32m✅ CERO TRACKERS (PASÓ)\x1B[0m\n\x1B[32m✨ Comprobación de salud SATISFACTORIA: El proyecto cumple con el 100% de las políticas.\x1B[0m\n...',
+    expected: /✅ Verificación completada con éxito/i,
+    operator: 'match',
+    diff: 'simple'
+  }

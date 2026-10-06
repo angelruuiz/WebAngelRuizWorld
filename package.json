@@ -7,7 +7,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "indexnow": "node scripts/submit-indexnow.mjs"
+    "indexnow": "node scripts/submit-indexnow.mjs",
+    "seo:pipeline": "node scripts/seo-geo-pipeline.js",
+    "seo:pipeline:dry": "node scripts/seo-geo-pipeline.js --dry-run",
+    "seo:pipeline:check": "node scripts/seo-geo-pipeline.js --check"
   },
   "keywords": [],
   "author": "",
