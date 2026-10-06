@@ -51,17 +51,20 @@ const MagicalCarousel = ({ locationName, locationImages }) => {
 
 export default function LocationPageTemplate({ location, allLocations }) {
     const pageSchema = {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
+        "@type": ["EntertainmentBusiness", "ProfessionalService"],
+        "@id": `https://angelruiz.world/mago-${location.slug}/#localbusiness`,
         "name": `Ángel Ruiz | Mago e Ilusionista en ${location.name}`,
         "image": "https://angelruiz.world/images/foto-bio.webp",
         "url": `https://angelruiz.world/mago-${location.slug}`,
         "telephone": "+34648055636",
+        "priceRange": "300€ - 750€",
+        "currenciesAccepted": "EUR",
+        "parentOrganization": { "@id": "https://angelruiz.world/#organization" },
         "address": {
             "@type": "PostalAddress",
             "streetAddress": location.name,
             "addressLocality": location.name,
-            "addressRegion": "Madrid",
+            "addressRegion": "Comunidad de Madrid",
             "postalCode": location.zip,
             "addressCountry": "ES"
         },
@@ -70,7 +73,54 @@ export default function LocationPageTemplate({ location, allLocations }) {
             "latitude": location.lat,
             "longitude": location.lng
         },
-        "description": location.description
+        "description": location.description,
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": `Tarifas de Magia en ${location.name}`,
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": `Mago para Bodas en ${location.name}`,
+                        "url": "https://angelruiz.world/particulares/bodas"
+                    },
+                    "priceSpecification": {
+                        "@type": "PriceSpecification",
+                        "minPrice": 450,
+                        "maxPrice": 650,
+                        "priceCurrency": "EUR"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": `Mago para Eventos de Empresa en ${location.name}`,
+                        "url": "https://angelruiz.world/empresas"
+                    },
+                    "priceSpecification": {
+                        "@type": "PriceSpecification",
+                        "minPrice": 500,
+                        "maxPrice": 750,
+                        "priceCurrency": "EUR"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": `Magia para Fiestas y Celebraciones en ${location.name}`,
+                        "url": "https://angelruiz.world/particulares/eventos"
+                    },
+                    "priceSpecification": {
+                        "@type": "PriceSpecification",
+                        "minPrice": 300,
+                        "priceCurrency": "EUR"
+                    }
+                }
+            ]
+        }
     };
 
     const faqSchema = {
@@ -110,13 +160,13 @@ export default function LocationPageTemplate({ location, allLocations }) {
                     "@context": "https://schema.org",
                     "@graph": [
                         {
-                            "@type": "ProfessionalService",
+                            "@type": ["EntertainmentBusiness", "ProfessionalService"],
                             "@id": "https://angelruiz.world/#organization",
                             "name": "Ángel Ruiz | Mago e Ilusionista",
                             "url": "https://angelruiz.world",
                             "image": "https://angelruiz.world/images/foto-bio.webp",
                             "telephone": "+34648055636",
-                            "priceRange": "€€€",
+                            "priceRange": "300€ - 750€",
                             "address": {
                                 "@type": "PostalAddress",
                                 "streetAddress": "Zona Noroeste",
@@ -126,11 +176,7 @@ export default function LocationPageTemplate({ location, allLocations }) {
                                 "addressCountry": "ES"
                             }
                         },
-                        {
-                            ...pageSchema,
-                            "@type": "LocalBusiness",
-                            "@id": `https://angelruiz.world/mago-${location.slug}/#localbusiness`
-                        },
+                        pageSchema,
                         {
                             "@type": "FAQPage",
                             "mainEntity": faqSchema.mainEntity
@@ -205,6 +251,48 @@ export default function LocationPageTemplate({ location, allLocations }) {
                                 <span className="text-[10px] text-amber-500 font-bold uppercase tracking-widest flex items-center gap-2">
                                     Ver eventos privados <span className="group-hover:translate-x-1 transition-transform">→</span>
                                 </span>
+                            </Link>
+                        </div>
+                    </section>
+
+                    {/* Topic Clusters & Cross-Linking: Guías y Consejos Clave */}
+                    <section className="mb-16 p-7 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-md">
+                        <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 gap-2">
+                            <div>
+                                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#d4a853] block mb-1">Recursos y Consejos de Experto</span>
+                                <h2 className="text-2xl font-[Cinzel] text-white font-bold">Guías para Organizar tu Evento en {location.name}</h2>
+                            </div>
+                            <Link href="/blog" className="text-xs text-amber-400 hover:text-amber-300 font-semibold underline whitespace-nowrap">
+                                Ver todos los artículos del blog →
+                            </Link>
+                        </div>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <Link href="/blog/timing-animacion-boda-madrid-coctel-banquete" className="p-4 rounded-xl bg-white/[0.04] border border-white/5 hover:border-amber-400/40 hover:bg-white/[0.07] transition-all group">
+                                <span className="text-base mb-2 block">💍</span>
+                                <h3 className="text-sm font-bold text-white group-hover:text-amber-300 transition-colors mb-1.5 leading-snug">
+                                    El Timing Perfecto en Bodas: Cóctel sin Tiempos Muertos
+                                </h3>
+                                <p className="text-[11px] text-slate-400 leading-relaxed">
+                                    Cómo coordinar fotos de novios, cóctel y banquete para evitar vacíos y mantener la energía.
+                                </p>
+                            </Link>
+                            <Link href="/blog/restaurantes-para-cenas-de-empresa-madrid-con-espectaculo" className="p-4 rounded-xl bg-white/[0.04] border border-white/5 hover:border-amber-400/40 hover:bg-white/[0.07] transition-all group">
+                                <span className="text-base mb-2 block">🏢</span>
+                                <h3 className="text-sm font-bold text-white group-hover:text-amber-300 transition-colors mb-1.5 leading-snug">
+                                    Restaurantes en Madrid con Espectáculo de Magia
+                                </h3>
+                                <p className="text-[11px] text-slate-400 leading-relaxed">
+                                    Espacios privados recomendados y cómo integrar magia de sobremesa corporativa.
+                                </p>
+                            </Link>
+                            <Link href="/contratar-mago-madrid" className="p-4 rounded-xl bg-white/[0.04] border border-white/5 hover:border-amber-400/40 hover:bg-white/[0.07] transition-all group">
+                                <span className="text-base mb-2 block">⚡</span>
+                                <h3 className="text-sm font-bold text-white group-hover:text-amber-300 transition-colors mb-1.5 leading-snug">
+                                    Tarifas y Precios Oficiales 2026 sin Comisiones
+                                </h3>
+                                <p className="text-[11px] text-slate-400 leading-relaxed">
+                                    Guía de precios directos sin agencias intermediarias: presupuestos desde 300€ en 2h.
+                                </p>
                             </Link>
                         </div>
                     </section>

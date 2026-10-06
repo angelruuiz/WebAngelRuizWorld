@@ -13,7 +13,7 @@ tags:
 faq:
   - question: ¿Cuánto cuesta contratar un mago en Madrid en 2026?
     answer: >-
-      En 2026, contratar un mago profesional en Madrid tiene un coste que varía entre 200€ y 1.200€ según el tipo de evento, duración y nivel del artista. Para eventos privados y fiestas: 200€-450€. Para bodas (cóctel o banquete): 400€-800€. Para eventos corporativos: 500€-1.200€. Siempre solicita presupuesto personalizado y evita contratar solo por precio.
+      En 2026, contratar un mago profesional en Madrid tiene un coste que varía entre 200€ y 1.200€ según el tipo de evento, duración y nivel del artista. Para eventos privados y fiestas: desde 300€. Para bodas (cóctel o banquete): 450€-650€. Para eventos corporativos: 500€-750€. Siempre solicita presupuesto personalizado y evita contratar solo por precio.
   - question: ¿Qué diferencia hay entre un mago de cerca y un mago de escenario en Madrid?
     answer: >-
       El mago de cerca o close-up actúa a centímetros del espectador, creando efectos imposibles con cartas, monedas u objetos cotidianos. No necesita escenario y es perfecto para cócteles, bodas y cenas de empresa. El mago de escenario requiere espacio y equipación técnica, y es más adecuado para convenciones y grandes galas. Para la mayoría de eventos en Madrid, el mago de cerca ofrece el mayor impacto.
@@ -78,12 +78,12 @@ Una de las preguntas más frecuentes al buscar un mago en Madrid es: **¿cuánto
 
 | Tipo de Evento | Duración | Precio Orientativo |
 |---|---|---|
-| Cumpleaños adultos | 1-1,5h | 200€ - 400€ |
+| Cumpleaños adultos | 1-1,5h | Desde 300€ |
 | Comunión | 1-1,5h | 300€ - 500€ |
-| Boda (cóctel) | 1-1,5h | 400€ - 700€ |
-| Boda (cóctel + banquete) | 2-3h | 700€ - 1.000€ |
-| Cena de empresa (magia de mesa) | 1,5-2h | 500€ - 800€ |
-| Evento corporativo (espectáculo central) | 30-45 min | 600€ - 1.000€ |
+| Boda (cóctel) | 1-1,5h | 450€ - 650€ |
+| Boda (cóctel + banquete) | 2-3h | 550€ - 650€ |
+| Cena de empresa (magia de mesa) | 1,5-2h | 500€ - 750€ |
+| Evento corporativo (espectáculo central) | 30-45 min | 600€ - 750€ |
 | Feria / IFEMA (jornada completa) | 6-8h | 900€ - 1.500€ |
 
 > **Advertencia**: Desconfía de presupuestos muy por debajo de estos rangos. Un mago profesional tiene costes de preparación, material, formación continua y seguro de responsabilidad civil que no permiten precios de 80-150€. En ese rango, el riesgo de que arruinen tu evento es real.

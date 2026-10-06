@@ -71,8 +71,8 @@ A lo largo de los años, he participado en cenas de gala en los espacios más pr
 ## Tarifas y Presupuestos para Galas en Madrid
 
 El coste de contratación para galas y entregas de premios corporativas depende del formato escogido:
-- **Magia de Cóctel (1-2 horas)**: Desde 350€.
-- **Show de Sobremesa / Gala (30-45 min)**: Desde 400€.
+- **Magia de Cóctel (1-2 horas)**: Desde 500€.
+- **Show de Sobremesa / Gala (30-45 min)**: Desde 600€.
 - **Formato Combinado Cóctel + Show de Gala**: Presupuesto personalizado adaptado al aforo y programa.
 
 Puedes consultar todos los detalles en la página de [magia para empresas en Madrid](/empresas) o contactar directamente para planificar la agenda de tu evento.

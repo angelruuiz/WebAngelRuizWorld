@@ -271,6 +271,7 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
         <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM Content" />
+        <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="Full LLM Knowledge Base" />
         <link rel="help" href="/llms.txt" />
         <link rel="author" href="/sobre-mi" />
         <script

@@ -273,6 +273,27 @@ export default function Home() {
         "@context": "https://schema.org",
         "@graph": [
             {
+                "@type": "WebPage",
+                "@id": "https://angelruiz.world/#webpage",
+                "url": "https://angelruiz.world",
+                "name": "Mago en Madrid | Ángel Ruiz · Bodas y Empresas",
+                "isPartOf": { "@id": "https://angelruiz.world/#website" },
+                "about": { "@id": "https://angelruiz.world/#organization" },
+                "description": "Ilusionismo de autor y magia de cerca para bodas, empresas y eventos exclusivos en Madrid. Trato directo sin agencias."
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": "https://angelruiz.world/#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Inicio",
+                        "item": "https://angelruiz.world"
+                    }
+                ]
+            },
+            {
                 "@type": "VideoObject",
                 "name": "Show de Magia en Directo en Madrid | Ángel Ruiz (El Badulaque)",
                 "description": "Resumen en vivo del show de magia de cerca e ilusionismo profesional por Ángel Ruiz en El Badulaque.",

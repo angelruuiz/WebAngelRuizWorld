@@ -73,7 +73,7 @@ Realizamos servicios de dinamización y networking en los principales centros de
 
 ## Tarifas de Dinamización en Ferias y Networking en Madrid
 
-- **Cóctel de Networking (1 a 2 horas)**: Desde 350€.
+- **Cóctel de Networking (1 a 2 horas)**: Desde 500€.
 - **Dinamización en Stand / Feria (Jornada Completa)**: Desde 600€ la jornada.
 
 Para consultar disponibilidad en el calendario de ferias de IFEMA o solicitar una propuesta detallada, visita la sección de [mago para ferias y congresos en Madrid](/empresas/mago-ferias-congresos-madrid) o solicita presupuesto.
