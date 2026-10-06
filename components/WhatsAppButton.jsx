@@ -79,7 +79,7 @@ export default function WhatsAppButton() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleClick}
-                className={`fab-whatsapp group fixed bottom-24 right-4 md:bottom-8 md:right-8 bg-[#25D366] hover:bg-[#20ba5a] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl shadow-green-500/40 transition-all duration-300 hover:scale-110 active:scale-95 ${
+                className={`fab-whatsapp group fixed hidden md:flex md:bottom-8 md:right-8 bg-[#25D366] hover:bg-[#20ba5a] text-white w-14 h-14 rounded-full items-center justify-center shadow-2xl shadow-green-500/40 transition-all duration-300 hover:scale-110 active:scale-95 ${
                     isVisible
                         ? 'opacity-100 translate-y-0 scale-100 pointer-events-auto'
                         : 'opacity-0 translate-y-8 scale-75 pointer-events-none'

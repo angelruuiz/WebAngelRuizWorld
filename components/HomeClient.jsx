@@ -10,7 +10,7 @@ const VideoShowModal = dynamic(() => import('@/components/VideoShowModal'), { ss
 
 import LiquidGlassForm from '@/components/LiquidGlassForm';
 
-const HeroClient = ({ onOpenVideo }) => {
+const HeroClient = ({ onOpenVideo, onOpenContact }) => {
     return (
         <section className="relative min-h-[100dvh] flex flex-col justify-end lg:justify-center overflow-hidden z-10 pt-20 pb-20 sm:pb-28 lg:py-0">
             <div className="absolute inset-0 z-0 overflow-hidden">
@@ -37,9 +37,68 @@ const HeroClient = ({ onOpenVideo }) => {
             
             <div className="px-5 sm:px-8 md:px-12 lg:px-16 relative z-10 w-full max-w-7xl mx-auto lg:scale-[0.90] lg:origin-center transition-transform">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                    {/* Formulario Único en el DOM: columna izquierda en Desktop (lg:order-1), abajo en móvil (order-2) */}
-                    <div id="presupuesto-form" className="w-full max-w-lg mx-auto lg:mx-0 z-20 order-2 lg:order-1 lg:col-span-5 pt-4 lg:pt-0">
-                        <LiquidGlassForm />
+                    {/* Desktop: Formulario Completo en la columna izquierda | Móvil: Liquid Glass Fast Card */}
+                    <div id="presupuesto-form" className="w-full max-w-lg mx-auto lg:mx-0 z-20 order-2 lg:order-1 lg:col-span-5 pt-2 lg:pt-0">
+                        {/* Desktop (lg:block): Formulario completo tradicional */}
+                        <div className="hidden lg:block">
+                            <LiquidGlassForm />
+                        </div>
+
+                        {/* Móvil (lg:hidden): Apple Liquid UI Action Card — Conversión en 1 toque */}
+                        <div className="lg:hidden p-5 rounded-3xl bg-slate-950/70 backdrop-blur-2xl border border-amber-400/30 shadow-[0_12px_40px_rgba(0,0,0,0.8),inset_0_1px_0_rgba(255,255,255,0.15)] relative overflow-hidden">
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl pointer-events-none" />
+                            
+                            <div className="flex items-center justify-between mb-3">
+                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 text-[10px] font-bold uppercase tracking-wider">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                                    Tarifas & Fechas 2026/2027
+                                </span>
+                                <span className="text-[10px] text-slate-400 font-medium">Trato directo</span>
+                            </div>
+
+                            <h2 className="font-[Cinzel] text-lg font-bold text-white mb-1.5">
+                                Reserva tu Fecha sin Compromiso
+                            </h2>
+                            <p className="text-xs text-slate-300 mb-4 leading-relaxed">
+                                Bodas, empresas y celebraciones privadas en Madrid. Respuesta garantizada en &lt;2 horas.
+                            </p>
+
+                            {/* Selector rápido táctil que abre el drawer */}
+                            <div className="grid grid-cols-2 gap-2 mb-3.5">
+                                <button
+                                    type="button"
+                                    onClick={onOpenContact}
+                                    className="p-2.5 rounded-xl bg-white/[0.05] border border-white/10 hover:border-amber-400/50 flex items-center gap-2 text-left active:scale-95 transition-all"
+                                >
+                                    <span className="text-base">💍</span>
+                                    <div>
+                                        <span className="text-[11px] font-bold text-white block">Bodas</span>
+                                        <span className="text-[9px] text-amber-300">450€ - 650€</span>
+                                    </div>
+                                </button>
+                                <button
+                                    type="button"
+                                    onClick={onOpenContact}
+                                    className="p-2.5 rounded-xl bg-white/[0.05] border border-white/10 hover:border-amber-400/50 flex items-center gap-2 text-left active:scale-95 transition-all"
+                                >
+                                    <span className="text-base">🏢</span>
+                                    <div>
+                                        <span className="text-[11px] font-bold text-white block">Empresas</span>
+                                        <span className="text-[9px] text-amber-300">500€ - 750€</span>
+                                    </div>
+                                </button>
+                            </div>
+
+                            {/* Botón Primario Móvil */}
+                            <button
+                                type="button"
+                                onClick={onOpenContact}
+                                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#d4a853] via-[#f7e7c4] to-[#b8860b] text-[#030712] font-black text-xs uppercase tracking-widest shadow-[0_4px_20px_rgba(212,168,83,0.35)] flex items-center justify-center gap-2 active:scale-95 transition-transform cursor-pointer"
+                            >
+                                <span>Verificar Disponibilidad</span>
+                                <span className="text-base leading-none">⚡</span>
+                            </button>
+                        </div>
                     </div>
 
                     {/* Títulos y Marca Personal: columna derecha en Desktop (lg:order-2), arriba en móvil (order-1) */}
@@ -76,27 +135,6 @@ const HeroClient = ({ onOpenVideo }) => {
                                 <span>Ver Show en Directo <span className="opacity-70 text-[10px] sm:text-xs font-normal normal-case">(1 min)</span></span>
                             </button>
                         </div>
-
-                        {/* Indicador de scroll para Móvil */}
-                        <div className="w-full mt-4 flex justify-center lg:hidden">
-                            <a
-                                id="hero-scroll-trigger"
-                                href="#presupuesto-form"
-                                className="inline-flex items-center gap-2 py-2 px-4 rounded-full bg-slate-950/70 border border-[#d4a853]/30 backdrop-blur-md active:scale-95 transition-transform shadow-[0_4px_20px_rgba(0,0,0,0.6)]"
-                            >
-                                <span className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.14em] text-[#d4a853]">
-                                    Pedir presupuesto abajo
-                                </span>
-                                <svg 
-                                    className="w-3.5 h-3.5 text-[#d4a853] animate-bounce shrink-0" 
-                                    fill="none" 
-                                    stroke="currentColor" 
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 13l-7 7-7-7m14-8l-7 7-7-7" />
-                                </svg>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -125,6 +163,7 @@ export default function HomeClient({ children }) {
             <main>
                 <HeroClient 
                     onOpenVideo={() => setIsVideoOpen(true)} 
+                    onOpenContact={() => setIsContactOpen(true)}
                 />
                 
                 {/* Contenido Server-Rendered directo */}

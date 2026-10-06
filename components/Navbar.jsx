@@ -7,11 +7,13 @@ import { Sparkles, X } from '@/components/Icons';
 import { useRouter } from 'next/navigation';
 import dynamic from 'next/dynamic';
 const MagicSpiral = dynamic(() => import('@/components/Transitions/MagicSpiral'), { ssr: false });
+const MobileBookingDrawer = dynamic(() => import('@/components/MobileBookingDrawer'), { ssr: false });
 
 const Navbar = ({ onOpenContact, isLight = false }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isTransitioning, setIsTransitioning] = useState(false);
     const [isMoreMenuOpen, setIsMoreMenuOpen] = useState(false);
+    const [isBookingDrawerOpen, setIsBookingDrawerOpen] = useState(false);
     const pathname = usePathname();
     const router = useRouter();
 
@@ -152,37 +154,72 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                 </div>
             </nav>
 
-            {/* Mobile Bottom Tab Bar */}
-            <nav aria-label="Navegación inferior móvil" className="md:hidden bottom-tab-bar flex justify-around items-center">
-                <Link href="/" aria-label="Ir a Inicio" className={`tab-item flex-1 ${pathname === '/' ? 'active' : ''}`}>
-                    <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth={1.5} stroke='currentColor' className='w-5 h-5'>
-                        <path d='M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6' />
-                    </svg>
-                    <span>Inicio</span>
-                </Link>
-                <button type="button" aria-label="Ver lista de servicios" onClick={() => setIsMoreMenuOpen(true)} className={`tab-item flex-1 ${pathname.startsWith('/particulares') || pathname.startsWith('/empresas') ? 'active' : ''}`}>
-                    <Sparkles className="w-5 h-5" />
-                    <span>Servicios</span>
-                </button>
-                <Link href="/galeria" aria-label="Ver galería de fotos" className={`tab-item flex-1 ${pathname === '/galeria' ? 'active' : ''}`}>
-                    <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth={1.5} stroke='currentColor' className='w-5 h-5'>
-                        <path d='M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6z' /> <path d='M14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6z' /> <path d='M4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2z' /> <path d='M14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z' />
-                    </svg>
-                    <span>Galería</span>
-                </Link>
-                <Link href="/blog" aria-label="Leer artículos del blog" className={`tab-item flex-1 ${pathname.startsWith('/blog') ? 'active' : ''}`} onClick={(e) => handleMagicTransition(e, '/blog')}>
-                    <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth={1.5} stroke='currentColor' className='w-5 h-5'>
-                        <path d='M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253' />
-                    </svg>
-                    <span>Blog</span>
-                </Link>
-                <button type="button" aria-label="Abrir más opciones de navegación" onClick={() => setIsMoreMenuOpen(true)} className="tab-item flex-1">
-                    <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth={1.5} stroke='currentColor' className='w-5 h-5'>
-                        <circle cx='12' cy='5' r='1' /> <circle cx='12' cy='12' r='1' /> <circle cx='12' cy='19' r='1' />
-                    </svg>
-                    <span>Más</span>
-                </button>
-            </nav>
+            {/* Apple Liquid Glass Floating Dock — Mobile Thumb Navigation */}
+            <div className="md:hidden">
+                <nav 
+                    aria-label="Dock de navegación móvil Liquid UI" 
+                    className="bottom-tab-bar flex items-center justify-between gap-1 shadow-2xl"
+                >
+                    {/* Botón Menú / Explorar */}
+                    <button 
+                        type="button" 
+                        aria-label="Abrir menú de navegación" 
+                        onClick={() => setIsMoreMenuOpen(true)} 
+                        className={`tab-item flex-1 py-1.5 px-2 rounded-full transition-all text-slate-300 hover:text-white ${isMoreMenuOpen ? 'text-amber-300 bg-white/[0.08]' : ''}`}
+                    >
+                        <div className="w-8 h-8 rounded-full bg-white/[0.06] border border-white/10 flex items-center justify-center">
+                            <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' strokeWidth={1.8} stroke='currentColor' className='w-4 h-4'>
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            </svg>
+                        </div>
+                        <span className="text-[9px] font-semibold tracking-wider uppercase mt-0.5">Explorar</span>
+                    </button>
+
+                    {/* Botón Central de Alta Conversión — Dynamic Glowing Capsule */}
+                    <button 
+                        type="button"
+                        aria-label="Pedir presupuesto inmediato"
+                        onClick={() => setIsBookingDrawerOpen(true)}
+                        className="flex-[1.5] relative group active:scale-95 transition-transform"
+                    >
+                        {/* Brillo aura ambiental */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-amber-500 via-amber-300 to-amber-600 rounded-full blur-md opacity-75 group-hover:opacity-100 animate-pulse" />
+                        
+                        {/* Cápsula líquida dorada */}
+                        <div className="relative py-2.5 px-3 rounded-full bg-gradient-to-r from-[#d4a853] via-[#f7e7c4] to-[#b8860b] text-[#030712] font-black text-[11px] uppercase tracking-wider flex items-center justify-center gap-1.5 shadow-[inset_0_1px_1px_rgba(255,255,255,0.8),0_4px_16px_rgba(212,168,83,0.5)] border border-amber-200/50">
+                            <Sparkles className="w-3.5 h-3.5 text-[#030712]" />
+                            <span className="whitespace-nowrap font-black">Reservar</span>
+                        </div>
+                    </button>
+
+                    {/* Botón WhatsApp Directo con Estado Online */}
+                    <a 
+                        href="https://wa.me/34648055636?text=Hola%20Ángel,%20quisiera%20consultar%20disponibilidad%20y%20tarifas%20para%20un%20evento%20en%20Madrid" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        aria-label="Contactar por WhatsApp directamente con Ángel Ruiz" 
+                        className="tab-item flex-1 py-1.5 px-2 rounded-full transition-all text-emerald-400 hover:text-emerald-300"
+                    >
+                        <div className="relative w-8 h-8 rounded-full bg-emerald-500/15 border border-emerald-400/30 flex items-center justify-center shadow-[0_0_12px_rgba(16,185,129,0.2)]">
+                            {/* Ping dot en línea */}
+                            <span className="absolute -top-0.5 -right-0.5 flex h-2.5 w-2.5">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500 border border-slate-950" />
+                            </span>
+                            <svg className="w-4 h-4 fill-emerald-400" viewBox="0 0 448 512">
+                                <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+                            </svg>
+                        </div>
+                        <span className="text-[9px] font-semibold tracking-wider uppercase mt-0.5 text-emerald-400">WhatsApp</span>
+                    </a>
+                </nav>
+
+                {/* Mobile Booking Drawer (Apple Liquid Sheet) */}
+                <MobileBookingDrawer 
+                    isOpen={isBookingDrawerOpen} 
+                    onClose={() => setIsBookingDrawerOpen(false)} 
+                />
+            </div>
 
             {/* Mobile "Más" Backdrop */}
             {isMoreMenuOpen && (
