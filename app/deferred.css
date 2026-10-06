@@ -480,6 +480,15 @@ video { object-fit: cover; }
     .pb-safe-bottom {
         padding-bottom: calc(5rem + env(safe-area-inset-bottom, 0px));
     }
+
+    /* Date and input normalization on mobile */
+    input[type="date"] {
+        -webkit-appearance: none;
+        appearance: none;
+        min-height: 46px;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
 }
 
 
@@ -487,15 +496,17 @@ video { object-fit: cover; }
 .bottom-tab-bar {
     position: fixed;
     bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
-    left: 0.85rem;
-    right: 0.85rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 1.5rem);
+    max-width: 380px;
     z-index: 100;
-    background: rgba(8, 12, 22, 0.78);
+    background: rgba(8, 12, 22, 0.82);
     backdrop-filter: blur(28px) saturate(1.8);
     -webkit-backdrop-filter: blur(28px) saturate(1.8);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 9999px;
-    padding: 6px 10px;
+    padding: 6px 8px;
     box-shadow: 
         0 16px 40px -10px rgba(0, 0, 0, 0.75),
         0 0 0 1px rgba(255, 255, 255, 0.05),

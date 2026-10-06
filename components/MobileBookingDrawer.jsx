@@ -313,20 +313,22 @@ export default function MobileBookingDrawer({ isOpen, onClose }) {
                                     </div>
 
                                     {/* Campo Fecha (Opcional) */}
-                                    <div className="space-y-1.5">
-                                        <label className="text-[11px] font-bold uppercase tracking-wider text-slate-300 ml-1 flex justify-between">
-                                            <span>Fecha aproximada</span>
-                                            <span className="text-[10px] text-slate-500 font-normal normal-case">Opcional</span>
-                                        </label>
-                                        <div className="relative">
-                                            <Calendar className="absolute left-3.5 top-3.5 w-4 h-4 text-slate-500" />
+                                    <div className="space-y-1.5 w-full">
+                                        <div className="flex items-center justify-between px-1">
+                                            <label className="text-[11px] font-bold uppercase tracking-wider text-slate-300">
+                                                Fecha aproximada
+                                            </label>
+                                            <span className="text-[10px] text-slate-500 font-normal">Opcional</span>
+                                        </div>
+                                        <div className="relative w-full">
+                                            <Calendar className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none z-10" />
                                             <input
                                                 type="date"
                                                 min={minDate}
                                                 value={date}
                                                 onChange={(e) => setDate(e.target.value)}
                                                 style={{ fontSize: '16px' }}
-                                                className="w-full bg-white/[0.05] border border-white/[0.12] focus:border-amber-400 rounded-xl py-3 pl-10 pr-4 text-white [color-scheme:dark] outline-none transition-colors"
+                                                className="w-full box-border block max-w-full bg-white/[0.05] border border-white/[0.12] focus:border-amber-400 rounded-xl py-3 pl-10 pr-3 text-white [color-scheme:dark] outline-none transition-colors min-h-[46px]"
                                             />
                                         </div>
                                     </div>
