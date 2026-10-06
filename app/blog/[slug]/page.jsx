@@ -57,6 +57,10 @@ export default async function BlogPost({ params }) {
   const allPosts = getSortedPostsData();
   const relatedPosts = allPosts.filter(p => p.slug !== params.slug).slice(0, 3);
 
+  const plainText = (postData.contentHtml || '').replace(/<[^>]+>/g, ' ');
+  const words = plainText.trim().split(/\s+/).filter(Boolean);
+  const wordCount = words.length;
+
   const blogArticle = {
     "@type": "BlogPosting",
     "@id": `https://angelruiz.world/blog/${params.slug}/#article`,
@@ -66,6 +70,9 @@ export default async function BlogPost({ params }) {
     "datePublished": postData.date,
     "dateModified": postData.dateModified || postData.date,
     "inLanguage": "es-ES",
+    "wordCount": wordCount,
+    "articleSection": postData.category || "Magia y Eventos",
+    ...(postData.tags && postData.tags.length > 0 ? { "keywords": postData.tags.join(', ') } : {}),
     "author": {
       "@type": "Person",
       "@id": "https://angelruiz.world/#person",

@@ -269,7 +269,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es" className={`${cinzel.variable} ${cormorant.variable} ${outfit.variable}`}>
       <head>
+        <link rel="preconnect" href="https://va.vercel-scripts.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
+        <link rel="alternate" type="application/rss+xml" title="Ángel Ruiz | Blog de Magia y Eventos" href="/feed.xml" />
         <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM Content" />
         <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="Full LLM Knowledge Base" />
         <link rel="help" href="/llms.txt" />
