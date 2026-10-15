@@ -32,10 +32,7 @@ App.renderComponents = function () {
   if (document.getElementById('mvp-container')) {
     window.Components.renderMVP('mvp-container');
   }
-  // Cuenta atrás del próximo evento
-  if (document.getElementById('next-event-section')) {
-    window.Components.renderNextEvent();
-  }
+
 };
 
 /* ---------------------------------------------------------------
@@ -113,7 +110,7 @@ App.switchView = function (viewId) {
   });
 
   // Actualizar estado activo en bottom bar
-  const subViews = ['nosotros', 'news', 'sedes', 'contacto'];
+  const subViews = ['nosotros', 'news', 'sedes', 'contacto', 'jabali-run'];
   document.querySelectorAll('.bottom-bar .bar-item').forEach(function (item) {
     item.classList.remove('active');
     if (item.getAttribute('data-view') === viewId) {

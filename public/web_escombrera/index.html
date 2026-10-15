@@ -35,7 +35,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=24">
 </head>
 <body>
 
@@ -60,22 +60,33 @@
       var splash = document.getElementById('splash-screen');
       var duration = 2000;
       var start = Date.now();
+      var finished = false;
+
+      function dismiss() {
+        if (finished) return;
+        finished = true;
+        splash.classList.add('hidden');
+        var app = document.getElementById('app-layout');
+        if (app) app.style.display = '';
+        setTimeout(function() { if (splash && splash.parentNode) splash.remove(); }, 500);
+      }
+
+      if (splash) {
+        splash.addEventListener('click', dismiss);
+        splash.addEventListener('touchstart', dismiss, { passive: true });
+      }
 
       function tick() {
+        if (finished) return;
         var elapsed = Date.now() - start;
         var p = Math.min(elapsed / duration, 1);
         var eased = 1 - Math.pow(1 - p, 3);
-        bar.style.width = (eased * 100) + '%';
+        if (bar) bar.style.width = (eased * 100) + '%';
 
         if (p < 1) {
           requestAnimationFrame(tick);
         } else {
-          setTimeout(function() {
-            splash.classList.add('hidden');
-            var app = document.getElementById('app-layout');
-            if (app) app.style.display = '';
-            setTimeout(function() { splash.remove(); }, 600);
-          }, 300);
+          setTimeout(dismiss, 300);
         }
       }
       requestAnimationFrame(tick);
@@ -131,6 +142,10 @@
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
                     <span>Únete</span>
                 </button>
+                <button class="nav-item" data-view="jabali-run" aria-label="Jabalí Run (Juego)">
+                    <span class="nav-icon" style="font-size:1.15rem;display:inline-flex;align-items:center;justify-content:center;">🎮</span>
+                    <span class="nav-text">Jabalí Run</span>
+                </button>
             </nav>
 
             <div class="sidebar-footer">
@@ -168,42 +183,6 @@
                         </a>
                     </div>
                 </div>
-
-                <!-- Sección de Cuenta Atrás del Próximo Evento -->
-                <section class="next-event-section hidden" id="next-event-section" aria-label="Próximo Evento">
-                    <p class="next-event-label">Próximo Evento</p>
-                    <div class="countdown-card">
-                        <h3 class="countdown-event-name" id="countdown-event-name"></h3>
-                        <p class="countdown-event-date" id="countdown-event-date"></p>
-                        
-                        <div class="countdown-digits">
-                            <div class="countdown-unit">
-                                <span class="countdown-value" id="cd-days">00</span>
-                                <span class="countdown-unit-label">Días</span>
-                            </div>
-                            <span class="countdown-sep">:</span>
-                            <div class="countdown-unit">
-                                <span class="countdown-value" id="cd-hours">00</span>
-                                <span class="countdown-unit-label">Horas</span>
-                            </div>
-                            <span class="countdown-sep">:</span>
-                            <div class="countdown-unit">
-                                <span class="countdown-value" id="cd-mins">00</span>
-                                <span class="countdown-unit-label">Minutos</span>
-                            </div>
-                            <span class="countdown-sep">:</span>
-                            <div class="countdown-unit">
-                                <span class="countdown-value" id="cd-secs">00</span>
-                                <span class="countdown-unit-label">Segundos</span>
-                            </div>
-                        </div>
-                        
-                        <button class="countdown-add-cal" id="countdown-add-cal" aria-label="Añadir a mi calendario">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
-                            Añadir al Calendario (.ics)
-                        </button>
-                    </div>
-                </section>
             </div>
 
             <!-- ====== VIEW: NOSOTROS ====== -->
@@ -288,22 +267,6 @@
                             <div class="news-badge">La Voz de la A6</div>
                             <h3 class="news-title">‘La Escombrera’ prende la mecha de las primeras fallas en Torrelodones</h3>
                             <p class="news-desc">Haciendo historia: trajimos el espíritu fallero a la sierra y la liamos pardísima.</p>
-                            <span class="news-link-text">Leer noticia →</span>
-                        </a>
-
-                        <!-- News Item 4 -->
-                        <a href="https://www.torrelodones.es/noticias/11038-concursos-navidad-de-torrelodones-ya-tienen-ganadores" target="_blank" rel="noopener noreferrer" class="news-card neo-card">
-                            <div class="news-badge">Ayto. Torrelodones</div>
-                            <h3 class="news-title">Concursos Navidad de Torrelodones ya tienen ganadores</h3>
-                            <p class="news-desc">Nuestro talento navideño reconocido en los certámenes municipales. ¡Alegría y jolgorio!</p>
-                            <span class="news-link-text">Leer noticia →</span>
-                        </a>
-
-                        <!-- News Item 5 -->
-                        <a href="https://www.torrelodones.es/noticias/11047-entregados-los-premios-a-los-ganadores-de-los-concursos-de-navidad" target="_blank" rel="noopener noreferrer" class="news-card neo-card">
-                            <div class="news-badge">Ayto. Torrelodones</div>
-                            <h3 class="news-title">Entregados los premios a los ganadores de los concursos de Navidad</h3>
-                            <p class="news-desc">La gala de entrega donde la peña recogió sus galardones con el espíritu escombrero por todo lo alto.</p>
                             <span class="news-link-text">Leer noticia →</span>
                         </a>
                     </div>
@@ -483,6 +446,10 @@
                         <span class="drawer-icon">✉️</span>
                         <span>Únete</span>
                     </button>
+                    <button class="drawer-item" data-view="jabali-run" aria-label="Jabalí Run (Minijuego)">
+                        <span class="drawer-icon">🎮</span>
+                        <span>Jabalí Run</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -494,19 +461,20 @@
         <div class="event-modal" id="event-modal"></div>
     </div>
 
-    <!-- Lightbox de fotos -->
+    <!-- Lightbox de fotos y vídeos -->
     <div class="lightbox-overlay" id="lightbox-overlay" aria-hidden="true">
-        <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar foto">&times;</button>
+        <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar">&times;</button>
         <img src="" alt="Vista ampliada" id="lightbox-img" class="lightbox-img">
+        <video id="lightbox-video" class="lightbox-video" controls playsinline preload="auto" style="display:none;"></video>
     </div>
 
     <!-- Scripts -->
-    <script src="js/events.js"></script>
-    <script src="js/mvp.js"></script>
-    <script src="js/components.js"></script>
-    <script src="js/easter.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/game.js"></script>
+    <script src="js/events.js?v=24"></script>
+    <script src="js/mvp.js?v=24"></script>
+    <script src="js/components.js?v=24"></script>
+    <script src="js/easter.js?v=24"></script>
+    <script src="js/app.js?v=24"></script>
+    <script src="js/game.js?v=24"></script>
 
     <!-- Service Worker Registry -->
     <script>

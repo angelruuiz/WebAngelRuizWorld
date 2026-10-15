@@ -7,16 +7,44 @@
  */
 
 const MVP_WINNERS = [
-  // Para añadir un ganador, copia esta estructura y rellena:
-  // {
-  //   eventId: 'fallas-torre',          // ID del evento (de events.js)
-  //   eventTitle: 'Las Fallas',          // Nombre del evento
-  //   date: '21 de marzo de 2026',       // Fecha del evento
-  //   winner: 'Nombre del Ganador',      // Nombre del MVP
-  //   photo: 'assets/mvp/fallas.jpg',    // Foto del MVP (null si no hay)
-  //   reason: 'Por ser el alma de la fiesta'  // Motivo del premio
-  // }
+  {
+    eventId: 'hoces-duraton',
+    eventTitle: 'Viaje a las Hoces del Duratón',
+    date: 'Octubre de 2026',
+    sortDate: '2026-10',
+    winner: 'Jaime',
+    photo: 'assets/mvp/jaime.png',
+    reason: 'Por estar a tope durante todo el viaje, con el ánimo por las nubes y contagiando sus ganas imparables de fiesta a toda la manada.'
+  },
+  {
+    eventId: 'carmen-asuncion',
+    eventTitle: 'Fiestas de la Asunción',
+    date: 'Agosto de 2026',
+    sortDate: '2026-08',
+    winner: 'Gallego',
+    photo: 'assets/mvp/gallego.png',
+    reason: 'Por darlo absolutamente todo en la calle y el chiringuito, defendiendo el espíritu escombrero.'
+  },
+  {
+    eventId: 'carmen-asuncion',
+    eventTitle: 'Fiestas del Carmen',
+    date: 'Julio de 2026',
+    sortDate: '2026-07-2',
+    winner: 'El Mago',
+    photo: 'assets/mvp/el-mago.png',
+    reason: 'Por poner la magia dentro y fuera de la barra y ser el alma parrandera de las fiestas del Carmen.'
+  },
+  {
+    eventId: 'carmen-asuncion',
+    eventTitle: 'Fiestas del Carmen',
+    date: 'Julio de 2026',
+    sortDate: '2026-07-1',
+    winner: 'Paula',
+    photo: 'assets/mvp/paula.png',
+    reason: 'Por su energía inagotable, liderar los cánticos en la barra y mantener a toda la manada arriba.'
+  }
 ];
 
 // Hacer el array accesible globalmente
 window.MVP_WINNERS = MVP_WINNERS;
+

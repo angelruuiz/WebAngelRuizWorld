@@ -578,17 +578,23 @@ button {
   transform: translateY(-6px) scale(1.02);
 }
 
+.event-card.span-1,
 .event-card.normal {
   grid-column: span 1;
 }
 
+.event-card.span-2,
 .event-card.wide {
   grid-column: span 2;
 }
 
+.event-card.span-full {
+  grid-column: 1 / -1;
+}
+
 .event-card.tall {
   grid-column: span 1;
-  grid-row: span 2;
+  /* Eliminado grid-row: span 2 para evitar tracks vacíos y huecos blancos */
 }
 
 .event-cover {
@@ -597,17 +603,19 @@ button {
   border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
+.event-card.span-1 .event-cover,
 .event-card.normal .event-cover {
   aspect-ratio: 4 / 3;
 }
 
+.event-card.span-2 .event-cover,
+.event-card.span-full .event-cover,
 .event-card.wide .event-cover {
   aspect-ratio: 16 / 9;
 }
 
 .event-card.tall .event-cover {
-  aspect-ratio: 3 / 4.2;
-  flex-grow: 1;
+  aspect-ratio: 3 / 4;
 }
 
 .event-cover-placeholder {
@@ -749,8 +757,7 @@ button {
   gap: var(--space-sm);
 }
 
-.event-gallery img,
-.event-gallery video {
+.event-gallery img {
   border-radius: var(--radius-sm);
   cursor: pointer;
   transition: transform 0.3s var(--transition-smooth);
@@ -761,6 +768,66 @@ button {
 
 .event-gallery img:hover {
   transform: scale(1.05);
+}
+
+.gallery-video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 140px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  cursor: pointer;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s var(--transition-smooth), box-shadow 0.3s ease;
+}
+
+.gallery-video-wrapper:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-video-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  border-radius: var(--radius-sm);
+  filter: brightness(0.85);
+  transition: filter 0.3s ease;
+}
+
+.gallery-video-wrapper:hover video {
+  filter: brightness(1);
+}
+
+.gallery-video-badge {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.65);
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.gallery-video-badge svg {
+  margin-left: 3px;
+}
+
+.gallery-video-wrapper:hover .gallery-video-badge {
+  transform: scale(1.15);
+  background: var(--color-yellow, #F5B800);
+  border-color: #fff;
+  color: #1a1a1a;
 }
 
 /* --------------------------------------------------------------------------
@@ -994,6 +1061,18 @@ button {
   .bento-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .event-card.span-2,
+  .event-card.span-full,
+  .event-card.wide {
+    grid-column: span 2;
+  }
+
+  .event-card.span-1,
+  .event-card.normal,
+  .event-card.tall {
+    grid-column: span 1;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -1011,7 +1090,7 @@ button {
     bottom: 0;
     left: 0;
     right: 0;
-    height: var(--bottom-bar-height);
+    height: calc(var(--bottom-bar-height) + env(safe-area-inset-bottom, 0px));
     background: var(--color-sand);
     background-color: rgba(237, 230, 216, 0.92);
     backdrop-filter: blur(24px) saturate(1.8);
@@ -1072,6 +1151,7 @@ button {
     align-items: center;
     gap: var(--space-sm);
     padding: var(--space-sm) var(--space-md);
+    padding-top: max(var(--space-sm), env(safe-area-inset-top, var(--space-sm)));
     background: var(--color-sand);
     background-color: rgba(237, 230, 216, 0.92);
     backdrop-filter: blur(20px);
@@ -1155,8 +1235,13 @@ button {
     gap: var(--space-sm);
   }
 
-  .event-card.wide {
-    grid-column: span 1;
+  .event-card,
+  .event-card.span-1,
+  .event-card.span-2,
+  .event-card.span-full,
+  .event-card.wide,
+  .event-card.tall {
+    grid-column: span 1 !important;
   }
 
   .event-card.tall .event-cover {
@@ -1304,6 +1389,24 @@ button {
 }
 
 .lightbox-overlay.active .lightbox-img {
+  transform: scale(1);
+}
+
+.lightbox-video {
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 14px;
+  transform: scale(0.95);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.12);
+  background: #000;
+  outline: none;
+}
+
+.lightbox-overlay.active .lightbox-video {
   transform: scale(1);
 }
 
@@ -1737,23 +1840,34 @@ button {
 /* --------------------------------------------------------------------------
    29. BENTO GRID FIXES PARA POCOS ITEMS (FILTROS)
    -------------------------------------------------------------------------- */
-/* Cuando hay 3 o menos elementos, el CSS Multi-column suele desbalancearse y dejar huecos a la derecha.
-   Por eso, para <= 3 elementos pasamos a usar CSS Grid normal, para que rellenen de izquierda a derecha sin huecos vacíos de columna. */
-.bento-grid[data-count="1"],
-.bento-grid[data-count="2"],
-.bento-grid[data-count="3"] {
-  display: grid;
-  columns: auto; /* Desactivar multi-column */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  align-items: start;
+.bento-grid[data-count="1"] {
+  grid-template-columns: 1fr;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Restablecer margin-bottom porque en CSS Grid usamos gap */
-.bento-grid[data-count="1"] .bento-item,
-.bento-grid[data-count="2"] .bento-item,
-.bento-grid[data-count="3"] .bento-item {
-  margin-bottom: 0; 
-  width: 100%;
+.bento-grid[data-count="2"] {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.bento-grid[data-count="3"] {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .bento-grid[data-count="3"] {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .bento-grid[data-count="1"],
+  .bento-grid[data-count="2"],
+  .bento-grid[data-count="3"] {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
 }
 
 /* --------------------------------------------------------------------------

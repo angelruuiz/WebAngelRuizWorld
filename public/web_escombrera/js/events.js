@@ -84,6 +84,28 @@ const EVENTS = [
     size: 'wide'
   },
   {
+    id: 'carmen-asuncion',
+    title: 'Fiestas del Carmen y la Asunción',
+    date: 'Julio y Agosto de 2026',
+    sortDate: '2026-08-16',
+    summary: 'Las fiestas grandes de Torrelodones: la Virgen del Carmen en La Colonia y la Asunción y San Roque en el Pueblo. Con nuestro chiringuito oficial a pleno rendimiento, guerra de pistolas de agua con Toñín y la peña dándolo todo en la barra y en la calle.',
+    coverImage: 'assets/eventos/carmen-asuncion/foto_1.jpg',
+    galleryImages: Array.from({ length: 9 }, (_, index) => `assets/eventos/carmen-asuncion/foto_${index + 1}.jpg`),
+    icon: '🍻',
+    size: 'normal'
+  },
+  {
+    id: 'hoces-duraton',
+    title: 'Viaje a las Hoces del Duratón',
+    date: '10 y 11 de octubre de 2026',
+    sortDate: '2026-10-10',
+    summary: 'Inolvidable viaje de la manada al Parque Natural de las Hoces del Río Duratón. Travesía en piragua por las hoces, playa fluvial ondeando la pancarta oficial de La Escombrera, atardecer bajo la luna y una noche de fiesta y risas.',
+    coverImage: 'assets/eventos/hoces-duraton/foto_1.jpg',
+    galleryImages: Array.from({ length: 10 }, (_, index) => `assets/eventos/hoces-duraton/foto_${index + 1}.jpg`),
+    icon: '🛶',
+    size: 'wide'
+  },
+  {
     id: 'feria-abril',
     title: 'Feria de Abril',
     date: '18 de abril de 2026',
@@ -158,7 +180,13 @@ const EVENTS = [
     sortDate: '2025-12-25',
     summary: 'Los peñistas reunimos y donamos recursos a la Residencia Los Ángeles a través de este evento solidario. Porque compartir también es construir comunidad.',
     coverImage: 'assets/eventos/solidario-residencia/foto_1.jpeg',
-    galleryImages: ['assets/eventos/solidario-residencia/foto_1.jpeg'],
+    galleryImages: [
+      'assets/eventos/solidario-residencia/foto_1.jpeg',
+      'assets/eventos/solidario-residencia/foto_2.jpg',
+      'assets/eventos/solidario-residencia/foto_3.jpg',
+      'assets/eventos/solidario-residencia/foto_4.jpg',
+      'assets/eventos/solidario-residencia/foto_5.jpg'
+    ],
     icon: '🎄',
     size: 'wide'
   },

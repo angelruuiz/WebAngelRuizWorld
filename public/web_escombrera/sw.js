@@ -1,4 +1,4 @@
-const CACHE_NAME = 'escombrera-v18';
+const CACHE_NAME = 'escombrera-v24';
 
 const ASSETS_TO_CACHE = [
   './index.html',
@@ -13,6 +13,9 @@ const ASSETS_TO_CACHE = [
   './assets/logo-hd.png',
   './assets/tonin.png',
   './assets/tonina.png',
+  './assets/mvp/paula.png',
+  './assets/mvp/el-mago.png',
+  './assets/mvp/gallego.png',
   './assets/estatutos-la-escombrera.pdf'
 ];
 

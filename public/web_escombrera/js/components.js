@@ -55,10 +55,114 @@ Components.renderEventCards = function (containerId) {
 
   // Renderizar la lista inicial
   Components.renderEventCardsList(container, publishedEvents);
+
+  // Escuchar redimensionamiento para recalcular spans si cambia el número de columnas
+  if (!Components._resizeBound) {
+    Components._resizeBound = true;
+    let resizeTimer = null;
+    let lastCols = Components.getGridColumnCount();
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        const currentCols = Components.getGridColumnCount();
+        if (currentCols !== lastCols) {
+          lastCols = currentCols;
+          const c = document.getElementById(containerId);
+          if (c) Components.renderEventCardsList(c, publishedEvents);
+        }
+      }, 100);
+    });
+  }
 };
 
 /* ---------------------------------------------------------------
-   Renderiza la lista de eventos filtrada
+   Cálculo dinámico de anchos para la cuadrícula Bento (CERO HUECOS)
+   Garantiza que la suma de columnas en cada fila sea exacta:
+   - 3 columnas en Desktop ([2,1], [1,2], [1,1,1])
+   - 2 columnas en Tablet ([1,1] o [2])
+   - 1 columna en Móvil ([1])
+   --------------------------------------------------------------- */
+Components.getGridColumnCount = function () {
+  const w = window.innerWidth;
+  if (w <= 768) return 1;
+  if (w <= 1024) return 2;
+  return 3;
+};
+
+Components.calculateCardSpans = function (n, cols) {
+  if (n <= 0) return [];
+  if (cols === undefined) cols = Components.getGridColumnCount();
+
+  if (cols === 1) return Array(n).fill('span-1');
+
+  if (cols === 2) {
+    const result = [];
+    if (n % 2 === 1) {
+      // Si n es impar: el primer elemento es span-2 (fila 1 completa), el resto van a pares de span-1
+      result.push('span-2');
+      for (let i = 1; i < n; i++) result.push('span-1');
+    } else {
+      // Si n es par: si n >= 6 destacamos 2 tarjetas (en filas independientes y cerradas)
+      if (n >= 6) {
+        result.push('span-2');             // fila 1: 1 tarjeta de 2 cols
+        result.push('span-1', 'span-1');   // fila 2: 2 tarjetas de 1 col
+        result.push('span-2');             // fila 3: 1 tarjeta de 2 cols
+        for (let i = 4; i < n; i++) result.push('span-1'); // filas restantes: pares de 1 col
+      } else {
+        for (let i = 0; i < n; i++) result.push('span-1');
+      }
+    }
+    return result;
+  }
+
+  // cols === 3 (Desktop)
+  if (n === 1) return ['span-full'];
+  if (n === 2) return ['span-2', 'span-1'];
+  if (n === 3) return ['span-1', 'span-1', 'span-1'];
+  if (n === 4) return ['span-2', 'span-1', 'span-1', 'span-2'];
+  if (n === 5) return ['span-2', 'span-1', 'span-1', 'span-1', 'span-1'];
+
+  // Para n >= 6, descomponer n en filas de 2 ítems ([2, 1] o [1, 2]) y de 3 ítems ([1, 1, 1])
+  // 2*P + 3*T = n
+  let pairs = 0;
+  let triplets = 0;
+  let bestScore = -1;
+
+  for (let p = Math.floor(n / 2); p >= 0; p--) {
+    const rem = n - 2 * p;
+    if (rem % 3 === 0) {
+      const t = rem / 3;
+      const score = (p > 0 ? 10 : 0) + (t > 0 ? 10 : 0) - Math.abs(2 * p - 3 * t);
+      if (score > bestScore) {
+        bestScore = score;
+        pairs = p;
+        triplets = t;
+      }
+    }
+  }
+
+  const result = [];
+  let pCount = 0;
+  let tCount = 0;
+
+  while (pCount < pairs || tCount < triplets) {
+    if (pCount < pairs && (tCount >= triplets || pCount <= tCount)) {
+      if (pCount % 2 === 0) {
+        result.push('span-2', 'span-1');
+      } else {
+        result.push('span-1', 'span-2');
+      }
+      pCount++;
+    } else if (tCount < triplets) {
+      result.push('span-1', 'span-1', 'span-1');
+      tCount++;
+    }
+  }
+  return result;
+};
+
+/* ---------------------------------------------------------------
+   Renderiza la lista de eventos filtrada (sin huecos vacíos)
    --------------------------------------------------------------- */
 Components.renderEventCardsList = function (container, publishedEvents) {
   container.innerHTML = '';
@@ -69,22 +173,25 @@ Components.renderEventCardsList = function (container, publishedEvents) {
     return event.sortDate && event.sortDate.startsWith(filter);
   });
 
-  container.setAttribute('data-count', filteredEvents.length);
+  const total = filteredEvents.length;
+  container.setAttribute('data-count', total);
+
+  // Spans armónicos calculados dinámicamente
+  const spans = Components.calculateCardSpans(total);
 
   filteredEvents.forEach((event, index) => {
     const card = document.createElement('div');
-    card.className = 'bento-item event-card neo-card reveal';
-    card.classList.add(`reveal-delay-${(index % 4) + 1}`);
-    if (event.size) {
-      card.classList.add(event.size);
-    }
+    const spanClass = spans[index] || 'span-1';
+    const tallClass = event.size === 'tall' ? 'tall' : '';
+    card.className = `bento-item event-card neo-card reveal reveal-delay-${(index % 4) + 1} ${spanClass} ${tallClass}`.trim();
+
     card.setAttribute('data-event-id', event.id);
     card.setAttribute('role', 'listitem');
     card.setAttribute('tabindex', '0');
     card.setAttribute('aria-label', `Evento: ${event.title}`);
 
     const coverHTML = event.coverImage
-      ? `<img class="event-cover" src="${event.coverImage}" alt="${event.title}">`
+      ? `<img class="event-cover" src="${event.coverImage}" alt="${event.title}" loading="lazy">`
       : `<div class="event-cover-placeholder">${event.icon}</div>`;
 
     card.innerHTML = `
@@ -139,7 +246,16 @@ Components.openEventDetail = function (eventId) {
       <h4 style="margin-bottom:var(--space-sm);font-weight:600;">Galería</h4>
       <div class="event-gallery">
         ${hasImages ? event.galleryImages.map((img, i) => `<img src="${img}" alt="${event.title} — foto ${i + 1}">`).join('') : ''}
-        ${hasVideos ? event.galleryVideos.map((video, i) => `<video controls preload="metadata" aria-label="${event.title} — vídeo ${i + 1}"><source src="${video}" type="video/mp4">Tu navegador no puede reproducir este vídeo.</video>`).join('') : ''}
+        ${hasVideos ? event.galleryVideos.map((video, i) => `
+          <div class="gallery-video-wrapper" data-video-src="${video}" role="button" tabindex="0" aria-label="Reproducir vídeo ${i + 1} de ${event.title}">
+            <video preload="metadata" muted playsinline>
+              <source src="${video}" type="video/mp4">
+            </video>
+            <div class="gallery-video-badge" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>
+            </div>
+          </div>
+        `).join('') : ''}
       </div>
     `;
   }
@@ -158,6 +274,7 @@ Components.openEventDetail = function (eventId) {
   `;
 
   document.body.style.overflow = 'hidden';
+  document.documentElement.style.overflow = 'hidden';
 
   requestAnimationFrame(() => {
     overlay.classList.add('active');
@@ -188,27 +305,79 @@ Components.openEventDetail = function (eventId) {
   };
   document.addEventListener('keydown', escHandler);
 
-  // Click en galería para lightbox
+  // Click en galería para lightbox fotos
   const galleryImages = modal.querySelectorAll('.event-gallery img');
   galleryImages.forEach(img => {
     img.addEventListener('click', () => {
       Components.openLightbox(img.src);
     });
   });
+
+  // Click en galería para pop up / lightbox vídeos
+  const galleryVideos = modal.querySelectorAll('.event-gallery .gallery-video-wrapper');
+  galleryVideos.forEach(wrapper => {
+    const videoSrc = wrapper.getAttribute('data-video-src');
+    const handleOpen = () => Components.openLightboxVideo(videoSrc);
+    wrapper.addEventListener('click', handleOpen);
+    wrapper.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        handleOpen();
+      }
+    });
+  });
 };
 
 /* ---------------------------------------------------------------
-   Lightbox — vista ampliada de fotos
+   Lightbox — vista ampliada de fotos y vídeos
    --------------------------------------------------------------- */
 Components.openLightbox = function (src) {
   const overlay = document.getElementById('lightbox-overlay');
   const img = document.getElementById('lightbox-img');
+  const video = document.getElementById('lightbox-video');
   if (!overlay || !img) return;
 
-  img.src = src;
+  if (video) {
+    video.pause();
+    video.removeAttribute('src');
+    video.load();
+    video.style.display = 'none';
+  }
 
-  requestAnimationFrame(() => {
-    overlay.classList.add('active');
+  img.src = src;
+  img.style.display = 'block';
+  document.body.style.overflow = 'hidden';
+  document.documentElement.style.overflow = 'hidden';
+  overlay.classList.add('active');
+
+  document.getElementById('lightbox-close').onclick = Components.closeLightbox;
+
+  overlay.onclick = function (e) {
+    if (e.target === overlay) Components.closeLightbox();
+  };
+};
+
+Components.openLightboxVideo = function (videoSrc) {
+  const overlay = document.getElementById('lightbox-overlay');
+  const img = document.getElementById('lightbox-img');
+  const video = document.getElementById('lightbox-video');
+  if (!overlay || !video) return;
+
+  if (img) {
+    img.src = '';
+    img.style.display = 'none';
+  }
+
+  video.src = videoSrc;
+  video.style.display = 'block';
+  video.muted = false;
+  video.volume = 1.0;
+  document.body.style.overflow = 'hidden';
+  document.documentElement.style.overflow = 'hidden';
+  overlay.classList.add('active');
+  video.play().catch(() => {
+    // Si la directiva de reproducción automática del navegador bloquea el audio sin interacción previa,
+    // se mantiene listo con los controles nativos para que el usuario pueda reproducirlo
   });
 
   document.getElementById('lightbox-close').onclick = Components.closeLightbox;
@@ -220,7 +389,28 @@ Components.openLightbox = function (src) {
 
 Components.closeLightbox = function () {
   const overlay = document.getElementById('lightbox-overlay');
-  if (overlay) overlay.classList.remove('active');
+  if (!overlay) return;
+
+  const video = document.getElementById('lightbox-video');
+  if (video) {
+    video.pause();
+    video.removeAttribute('src');
+    video.load();
+    video.style.display = 'none';
+  }
+
+  const img = document.getElementById('lightbox-img');
+  if (img) {
+    img.style.display = 'none';
+    img.src = '';
+  }
+
+  overlay.classList.remove('active');
+  const eventModal = document.getElementById('event-modal-overlay');
+  if (!eventModal || !eventModal.classList.contains('active')) {
+    document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
+  }
 };
 
 /* ---------------------------------------------------------------
@@ -232,6 +422,7 @@ Components.closeEventDetail = function () {
 
   overlay.classList.remove('active');
   document.body.style.overflow = '';
+  document.documentElement.style.overflow = '';
 };
 
 /* ---------------------------------------------------------------
@@ -377,118 +568,6 @@ Components._animateCounters = function () {
 
     requestAnimationFrame(tick);
   });
-};
-
-/* ---------------------------------------------------------------
-   Renderiza el countdown del próximo evento
-   --------------------------------------------------------------- */
-Components.renderNextEvent = function () {
-  if (!window.EVENTS) return;
-
-  var section = document.getElementById('next-event-section');
-  if (!section) return;
-
-  // Buscar el próximo evento futuro
-  var now = new Date();
-  var futureEvents = window.EVENTS
-    .filter(function (e) {
-      if (!e.sortDate) return false;
-      var eventDate = new Date(e.sortDate + 'T00:00:00');
-      return eventDate > now;
-    })
-    .sort(function (a, b) {
-      return a.sortDate.localeCompare(b.sortDate);
-    });
-
-  if (futureEvents.length === 0) {
-    section.classList.add('hidden');
-    return;
-  }
-
-  var nextEvent = futureEvents[0];
-  var eventDate = new Date(nextEvent.sortDate + 'T00:00:00');
-
-  // Mostrar la sección
-  section.classList.remove('hidden');
-
-  // Rellenar datos del evento
-  var nameEl = document.getElementById('countdown-event-name');
-  var dateEl = document.getElementById('countdown-event-date');
-  if (nameEl) nameEl.textContent = nextEvent.title;
-  if (dateEl) dateEl.textContent = '📅 ' + nextEvent.date;
-
-  // Countdown tick cada segundo
-  function updateCountdown() {
-    var now = new Date();
-    var diff = eventDate.getTime() - now.getTime();
-
-    if (diff <= 0) {
-      // El evento ya llegó
-      document.getElementById('cd-days').textContent = '🎉';
-      document.getElementById('cd-hours').textContent = '';
-      document.getElementById('cd-mins').textContent = '';
-      document.getElementById('cd-secs').textContent = '';
-      return;
-    }
-
-    var days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    var secs = Math.floor((diff % (1000 * 60)) / 1000);
-
-    var daysEl = document.getElementById('cd-days');
-    var hoursEl = document.getElementById('cd-hours');
-    var minsEl = document.getElementById('cd-mins');
-    var secsEl = document.getElementById('cd-secs');
-
-    // Tick animation cuando cambia un valor
-    function updateDigit(el, value) {
-      var formatted = value < 10 ? '0' + value : '' + value;
-      if (el && el.textContent !== formatted) {
-        el.textContent = formatted;
-        el.classList.add('tick');
-        setTimeout(function () { el.classList.remove('tick'); }, 300);
-      }
-    }
-
-    updateDigit(daysEl, days);
-    updateDigit(hoursEl, hours);
-    updateDigit(minsEl, mins);
-    updateDigit(secsEl, secs);
-  }
-
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-
-  // Botón de añadir al calendario (.ics)
-  var calBtn = document.getElementById('countdown-add-cal');
-  if (calBtn) {
-    calBtn.addEventListener('click', function () {
-      var icsDate = nextEvent.sortDate.replace(/-/g, '');
-      var endDate = icsDate; // Evento de día completo
-      var ics = [
-        'BEGIN:VCALENDAR',
-        'VERSION:2.0',
-        'PRODID:-//Peña La Escombrera//ES',
-        'BEGIN:VEVENT',
-        'DTSTART;VALUE=DATE:' + icsDate,
-        'DTEND;VALUE=DATE:' + endDate,
-        'SUMMARY:' + nextEvent.title + ' — Peña La Escombrera',
-        'DESCRIPTION:' + (nextEvent.summary || ''),
-        'LOCATION:Torrelodones, Madrid',
-        'END:VEVENT',
-        'END:VCALENDAR'
-      ].join('\r\n');
-
-      var blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
-      var url = URL.createObjectURL(blob);
-      var a = document.createElement('a');
-      a.href = url;
-      a.download = nextEvent.id + '.ics';
-      a.click();
-      URL.revokeObjectURL(url);
-    });
-  }
 };
 
 /* ---------------------------------------------------------------

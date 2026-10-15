@@ -281,9 +281,14 @@
     updateBest();
     canvas.style.bottom = `${groundHeight}px`;
 
+    let lastActionTime = 0;
     function handleAction(e) {
       if (e && e.target.closest('#game-message')) return;
-      if (e) {
+      const now = performance.now();
+      if (now - lastActionTime < 150) return; // Previene doble salto por touchstart + click sintético
+      lastActionTime = now;
+
+      if (e && e.cancelable) {
         e.preventDefault();
       }
       if (state.running) {
