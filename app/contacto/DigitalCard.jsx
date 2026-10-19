@@ -19,26 +19,25 @@ export default function DigitalCard() {
   const cardRef = useRef(null);
   const [copied, setCopied] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-  const [isDragging, setIsDragging] = useState(false);
 
-  // Motion values for smooth 3D tilt & glare
+  // Motion values for smooth 3D tilt & glare (subtle and stable)
   const mouseX = useMotionValue(0.5);
   const mouseY = useMotionValue(0.5);
 
-  const springConfig = { damping: 20, stiffness: 260 };
+  const springConfig = { damping: 25, stiffness: 200 };
   const smoothMouseX = useSpring(mouseX, springConfig);
   const smoothMouseY = useSpring(mouseY, springConfig);
 
-  // Tilt transformation (-14 deg to 14 deg)
-  const rotateX = useTransform(smoothMouseY, [0, 1], [14, -14]);
-  const rotateY = useTransform(smoothMouseX, [0, 1], [-14, 14]);
+  // Subtle tilt transformation (-7 deg to 7 deg)
+  const rotateX = useTransform(smoothMouseY, [0, 1], [7, -7]);
+  const rotateY = useTransform(smoothMouseX, [0, 1], [-7, 7]);
 
   // Glare position (percentage)
   const glareX = useTransform(smoothMouseX, [0, 1], [0, 100]);
   const glareY = useTransform(smoothMouseY, [0, 1], [0, 100]);
 
   const handlePointerMove = (e) => {
-    if (!cardRef.current || isDragging) return;
+    if (!cardRef.current) return;
     const rect = cardRef.current.getBoundingClientRect();
     const x = (e.clientX - rect.left) / rect.width;
     const y = (e.clientY - rect.top) / rect.height;
@@ -79,19 +78,9 @@ export default function DigitalCard() {
         }}
       />
 
-      {/* DRAGGABLE & TILT 3D CARD */}
+      {/* STABLE 3D TILT & SATIN CARD (NO DRAG) */}
       <motion.div
         ref={cardRef}
-        drag
-        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-        dragElastic={0.28}
-        dragTransition={{ bounceStiffness: 500, bounceDamping: 22 }}
-        onDragStart={() => setIsDragging(true)}
-        onDragEnd={() => {
-          setIsDragging(false);
-          mouseX.set(0.5);
-          mouseY.set(0.5);
-        }}
         onPointerMove={handlePointerMove}
         onPointerEnter={handlePointerEnter}
         onPointerLeave={handlePointerLeave}
@@ -100,20 +89,18 @@ export default function DigitalCard() {
           rotateY,
           transformStyle: 'preserve-3d',
         }}
-        className={`relative w-full max-w-[350px] sm:max-w-[370px] rounded-[32px] p-6 sm:p-7 
+        className="relative w-full max-w-[350px] sm:max-w-[370px] rounded-[32px] p-6 sm:p-7 
           bg-gradient-to-b from-[#181a24] via-[#0d0f16] to-[#06070a]
           border border-amber-400/25
           shadow-[0_25px_60px_-15px_rgba(0,0,0,0.95),0_0_35px_rgba(212,168,83,0.12),inset_0_1px_1px_rgba(255,255,255,0.15)]
-          transition-shadow duration-300
-          ${isDragging ? 'cursor-grabbing scale-[1.02]' : 'cursor-grab'}
-        `}
+          transition-shadow duration-300"
       >
 
         {/* METALLIC / HOLOGRAPHIC GLARE OVERLAY */}
         <motion.div
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 rounded-[32px] overflow-hidden mix-blend-color-dodge transition-opacity duration-300"
-          style={{ opacity: isHovered || isDragging ? 0.65 : 0.25 }}
+          style={{ opacity: isHovered ? 0.65 : 0.28 }}
         >
           <motion.div 
             className="w-full h-full"
@@ -290,12 +277,6 @@ export default function DigitalCard() {
 
         </div>
       </motion.div>
-
-      {/* SUBTLE INTERACTION HINT */}
-      <div className="mt-4 flex items-center gap-2 text-slate-500 text-xs font-medium">
-        <Sparkles className="w-3.5 h-3.5 text-amber-400/80 animate-spin" style={{ animationDuration: '6s' }} />
-        <span>Arrastra la tarjeta para moverla e interactuar</span>
-      </div>
 
     </div>
   );
