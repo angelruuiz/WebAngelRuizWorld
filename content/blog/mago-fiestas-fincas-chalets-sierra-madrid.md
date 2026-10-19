@@ -1,6 +1,6 @@
 ---
 title: 'Mago para Fiestas en Fincas y Chalets en la Sierra de Madrid | Jardines y Piscinas'
-date: '2026-05-20'
+date: '2026-04-22'
 excerpt: 'La mejor animación para eventos privados en fincas, jardines y chalets de la Sierra de Madrid: magia de cóctel itinerante y shows de mentalismo.'
 author: Ángel Ruiz
 image: /images/foto-bio.webp

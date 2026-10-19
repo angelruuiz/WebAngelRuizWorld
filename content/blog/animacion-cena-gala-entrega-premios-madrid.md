@@ -2,7 +2,7 @@
 title: >-
   Animación para Cenas de Gala y Entrega de Premios en Madrid: Cómo Garantizar
   el Éxito
-date: '2026-08-14'
+date: '2026-06-15'
 excerpt: >-
   Aprende a dinamizar una cena de gala o entrega de premios corporativa en
   Madrid. Magia de sobremesa, ritmo escénico y fórmulas para evitar el

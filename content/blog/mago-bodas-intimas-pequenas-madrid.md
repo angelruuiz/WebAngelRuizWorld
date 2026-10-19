@@ -1,7 +1,7 @@
 ---
 title: >-
   Magia en Bodas Íntimas y Pequeñas en Madrid: Experiencia Exclusiva y Precios
-date: '2026-10-06'
+date: '2026-09-08'
 excerpt: >-
   Las bodas íntimas y micro-weddings en Madrid exigen entretenimiento personalizado. Descubre cómo la magia de cerca crea un ambiente inolvidable para 20 a 70 invitados (450€ - 650€).
 category: Bodas

@@ -1,6 +1,6 @@
 ---
 title: 'Guía Definitiva para Contratar un Mago en Madrid: Todo lo que Necesitas Saber'
-date: '2026-06-05'
+date: '2026-05-07'
 excerpt: 'Guía completa para contratar el mejor mago en Madrid en 2026. Precios, tipos de magia, cómo evaluar profesionales y los errores más comunes. Escrita por un ilusionista profesional.'
 author: Ángel Ruiz
 image: /images/foto-bio.webp

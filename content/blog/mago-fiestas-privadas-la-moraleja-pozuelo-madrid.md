@@ -2,7 +2,7 @@
 title: >-
   Mago para Fiestas Privadas y Eventos Exclusivos en La Moraleja y Pozuelo de
   Alarcón
-date: '2026-09-09'
+date: '2026-07-05'
 excerpt: >-
   Ilusionismo sofisticado y confidencial para celebraciones privadas,
   aniversarios y fiestas en chalets y residencias exclusivas de La Moraleja,

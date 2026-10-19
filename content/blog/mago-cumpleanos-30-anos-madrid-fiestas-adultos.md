@@ -1,6 +1,6 @@
 ---
 title: 'Mago para Cumpleaños de 30 Años en Madrid | Ideas Originales, Precios y Magia de Cerca'
-date: '2026-10-06'
+date: '2026-09-11'
 excerpt: >-
   Descubre cómo celebrar tu fiesta de 30 cumpleaños en Madrid con magia de cerca y mentalismo participativo. Planes originales en locales, terrazas o casa, con tarifa transparente de 300€.
 author: Ángel Ruiz

@@ -2,7 +2,7 @@
 title: >-
   Magia de Cóctel y Networking en Madrid: Cómo Atraer Clientes y Destacar en
   IFEMA
-date: '2026-08-04'
+date: '2026-05-29'
 excerpt: >-
   Multiplica la captación de leads en ferias de IFEMA y eventos de networking en
   Madrid. El ilusionismo corporativo como gancho comercial de alta conversión y

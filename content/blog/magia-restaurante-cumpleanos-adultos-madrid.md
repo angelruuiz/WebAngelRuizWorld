@@ -1,6 +1,6 @@
 ---
 title: 'Magia en Restaurante para Cumpleaños de Adultos en Madrid: La Sorpresa Inolvidable'
-date: '2026-10-06'
+date: '2026-09-03'
 excerpt: 'Descubre cómo contratar un mago en un restaurante de Madrid para celebrar un 30, 40 o 50 cumpleaños: timing perfecto, cómo coordinar con el local y tarifa fija de 300€.'
 author: Ángel Ruiz
 image: /images/mago-madrid-evento-privado.webp

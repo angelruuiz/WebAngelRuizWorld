@@ -1,6 +1,6 @@
 ---
 title: 'Mago a Domicilio para Cenas Privadas en Madrid: Ilusionismo Exclusivo en tu Salón'
-date: '2026-10-06'
+date: '2026-09-17'
 excerpt: 'Descubre cómo contratar un mago a domicilio en Madrid para cenas privadas, aniversarios o reuniones de amigos en casa: formato de club secreto y tarifa de 300€.'
 author: Ángel Ruiz
 image: /images/cartomagia-de-cerca-angel-ruiz.webp

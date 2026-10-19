@@ -1,6 +1,6 @@
 ---
 title: Mago para Fiestas de Navidad y Cenas de Empresa en Madrid
-date: '2026-10-01'
+date: '2026-08-05'
 excerpt: >-
   ¿Buscas mago para tu cena de Navidad de empresa en Madrid? Magia de cerca
   corporativa para cóctel y banquete. Fechas limitadas nov-dic. Pide presupuesto.

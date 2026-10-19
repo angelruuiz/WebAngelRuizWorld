@@ -1,6 +1,6 @@
 ---
 title: Magia de Cerca en Madrid para Eventos y Bodas Inolvidables
-date: '2026-05-26'
+date: '2026-05-01'
 excerpt: >-
   Descubre por qué la magia de cerca (close-up) es el entretenimiento de
   etiqueta más demandado para bodas, cócteles y eventos corporativos en Madrid.

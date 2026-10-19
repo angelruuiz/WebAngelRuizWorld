@@ -1,6 +1,6 @@
 ---
 title: 'Cómo Celebrar un Cumpleaños Diferente para Adultos en Madrid: Ideas Originales (2026)'
-date: '2026-10-06'
+date: '2026-08-11'
 excerpt: 'Descubre las mejores ideas para celebrar un cumpleaños de adultos original en Madrid (30, 40, 50 años): planes exclusivos, magia en directo y tarifa fija de 300€.'
 author: Ángel Ruiz
 image: /images/fiesta-eventos-madrid.webp

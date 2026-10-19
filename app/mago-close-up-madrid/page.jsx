@@ -10,20 +10,21 @@ const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod 
 const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
 
 export const metadata = {
-    title: { absolute: 'Mago de Cerca en Madrid | Lo Imposible en Tus Manos' },
-    description: '¿Imaginas ver la magia ocurrir en tus manos? Cartomagia pura a centímetros de tus ojos sin trucos de cámara. ¡Pide tu fecha!',
+    title: { absolute: 'Mago Close-Up en Madrid | Magia de Cerca de Autor · Ángel Ruiz' },
+    description: 'Experto en magia de cerca (Close-Up) y cartomagia de autor en Madrid. Formado con Dani DaOrtiz. Ilusionismo puro a centímetros de tus ojos. ¡Pide tu fecha!',
+    keywords: ['mago close up madrid', 'mago de cerca madrid', 'experto en magia en madrid', 'cartomagia madrid', 'ilusionismo de cerca madrid', 'mago close up bodas madrid', 'mago close up empresas madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/mago-close-up-madrid',
     },
     openGraph: {
-        title: 'Mago de Cerca en Madrid | Lo Imposible en Tus Manos',
-        description: '¿Imaginas ver la magia ocurrir en tus manos? Cartomagia pura a centímetros de tus ojos. ¡Pide tu fecha!',
+        title: 'Mago Close-Up en Madrid | Magia de Cerca de Autor · Ángel Ruiz',
+        description: 'Experto en magia de cerca (Close-Up) y cartomagia de autor en Madrid. Formado con Dani DaOrtiz. Ilusionismo puro a centímetros de tus ojos. ¡Pide tu fecha!',
         images: [{ url: '/images/foto-bio.webp' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago de Cerca en Madrid | Lo Imposible en Tus Manos',
-        description: '¿Imaginas ver la magia ocurrir en tus manos? Cartomagia pura a centímetros de tus ojos sin trucos de cámara. ¡Pide tu fecha!',
+        title: 'Mago Close-Up en Madrid | Magia de Cerca de Autor · Ángel Ruiz',
+        description: 'Experto en magia de cerca (Close-Up) y cartomagia de autor en Madrid. Ilusionismo puro a centímetros de tus ojos.',
         images: ['/images/foto-bio.webp']
     }
 };
@@ -106,14 +107,15 @@ export default function MagoCloseUpMadridPage() {
     const business = {
         "@type": ["EntertainmentBusiness", "ProfessionalService"],
         "@id": "https://angelruiz.world/#organization",
-        "name": "Ángel Ruiz | Mago para Bodas y Empresas en Madrid",
-        "alternateName": ["Ángel Ruiz | Mago e Ilusionista", "Ángel Ruiz Magia", "Angel Ruiz World"],
+        "name": "Ángel Ruiz Mago e Ilusionista",
+        "alternateName": ["Ángel Ruiz | Mago para Bodas y Empresas en Madrid", "Ángel Ruiz | Mago e Ilusionista", "Ángel Ruiz Magia", "Angel Ruiz World"],
         "description": "Mago e ilusionista profesional en Madrid. Especialista en magia de cerca exclusiva para eventos corporativos, bodas de lujo y fiestas privadas.",
         "url": "https://angelruiz.world",
         "logo": "https://angelruiz.world/icon.webp",
         "image": "https://angelruiz.world/images/foto-bio.webp",
         "priceRange": "300€ - 750€",
         "telephone": "+34648055636",
+        "hasMap": "https://www.google.com/search?sca_esv=8001b418ab72b965&sxsrf=APpeQnttxDfKRtR6fpA2h7bYkWycKzmRVQ:1792418000314&q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=APenkKmVGdgpMPDQZoEWS8RIAhsqXAKlNLP0B8DNkkiU9KPI0V2U8InyxO1tqoaWpGS1_Q7QhAgSRC07fbiiZx9SpnZjJDB5UXzd7BX6d41IdchYfOedo3rQx0et86krTkaw35SJ_yeQYQ3kpruL6sC1m1bAx0aXbA%3D%3D&sa=X&sqi=2&ved=2ahUKEwjJ6smxncaXAxWUXUEAHQovEbYQ_coHegQIKxAB&biw=1658&bih=797&dpr=1.16",
         "founder": { "@id": "https://angelruiz.world/#person" },
         "slogan": "Magia de cerca de alto impacto para eventos en Madrid",
         "address": {
@@ -150,16 +152,17 @@ export default function MagoCloseUpMadridPage() {
             "@type": "OfferCatalog",
             "name": "Espectáculos de magia en Madrid",
             "itemListElement": [
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mago para bodas en Madrid", "url": "https://angelruiz.world/particulares/bodas" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 400, "maxPrice": 900, "priceCurrency": "EUR" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mago para eventos de empresa en Madrid", "url": "https://angelruiz.world/empresas" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 600, "priceCurrency": "EUR" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mago para bodas en Madrid", "url": "https://angelruiz.world/particulares/bodas" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 450, "maxPrice": 650, "priceCurrency": "EUR" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mago para eventos de empresa en Madrid", "url": "https://angelruiz.world/empresas" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 500, "maxPrice": 750, "priceCurrency": "EUR" } },
                 { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mago Conferenciante para Empresas en Madrid", "url": "https://angelruiz.world/empresas/mago-conferenciante-madrid" } },
                 { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Magia para team building", "url": "https://angelruiz.world/empresas/mago-team-building-madrid" } },
                 { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mago para ferias y congresos (IFEMA)", "url": "https://angelruiz.world/empresas/mago-ferias-congresos-madrid" } },
                 { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Magia para restaurantes (table hopping)", "url": "https://angelruiz.world/empresas/mago-para-restaurantes-madrid" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mago para comuniones, cumpleaños y fiestas privadas", "url": "https://angelruiz.world/particulares" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 400, "maxPrice": 900, "priceCurrency": "EUR" } }
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mago para comuniones, cumpleaños y fiestas privadas", "url": "https://angelruiz.world/particulares" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 300, "priceCurrency": "EUR" } }
             ]
         },
         "sameAs": [
+            "https://www.google.com/search?sca_esv=8001b418ab72b965&sxsrf=APpeQnttxDfKRtR6fpA2h7bYkWycKzmRVQ:1792418000314&q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=APenkKmVGdgpMPDQZoEWS8RIAhsqXAKlNLP0B8DNkkiU9KPI0V2U8InyxO1tqoaWpGS1_Q7QhAgSRC07fbiiZx9SpnZjJDB5UXzd7BX6d41IdchYfOedo3rQx0et86krTkaw35SJ_yeQYQ3kpruL6sC1m1bAx0aXbA%3D%3D&sa=X&sqi=2&ved=2ahUKEwjJ6smxncaXAxWUXUEAHQovEbYQ_coHegQIKxAB&biw=1658&bih=797&dpr=1.16",
             "https://www.instagram.com/angellruuiz",
             "https://www.tiktok.com/@angellruuiz",
             "https://www.youtube.com/@angellruuiz",
@@ -181,6 +184,7 @@ export default function MagoCloseUpMadridPage() {
         "knowsAbout": ["Mago conferenciante", "Conferencias motivacionales", "Magia de cerca", "Close-up Magic", "Cartomagia", "Mentalismo", "Magia para bodas", "Magia corporativa", "Team building con magia", "Ilusionismo profesional"],
         "homeLocation": { "@type": "Place", "name": "Torrelodones, Madrid, España" },
         "sameAs": [
+            "https://www.google.com/search?sca_esv=8001b418ab72b965&sxsrf=APpeQnttxDfKRtR6fpA2h7bYkWycKzmRVQ:1792418000314&q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=APenkKmVGdgpMPDQZoEWS8RIAhsqXAKlNLP0B8DNkkiU9KPI0V2U8InyxO1tqoaWpGS1_Q7QhAgSRC07fbiiZx9SpnZjJDB5UXzd7BX6d41IdchYfOedo3rQx0et86krTkaw35SJ_yeQYQ3kpruL6sC1m1bAx0aXbA%3D%3D&sa=X&sqi=2&ved=2ahUKEwjJ6smxncaXAxWUXUEAHQovEbYQ_coHegQIKxAB&biw=1658&bih=797&dpr=1.16",
             "https://www.instagram.com/angellruuiz",
             "https://www.tiktok.com/@angellruuiz",
             "https://www.youtube.com/@angellruuiz",

@@ -1,6 +1,6 @@
 ---
 title: 'Espectáculo para Cenas de Navidad en Madrid: Animación Original para Empresas (2026)'
-date: '2026-10-06'
+date: '2026-08-28'
 excerpt: 'Guía de espectáculos y animación para cenas de Navidad corporativas en Madrid: formatos de cóctel y sobremesa, tarifas desde 500€ a 750€ y cómo reservar a tiempo.'
 author: Ángel Ruiz
 image: /images/evento-empresa-mago-angel-ruiz.webp

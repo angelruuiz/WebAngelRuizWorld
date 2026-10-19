@@ -2,7 +2,7 @@
 title: >-
   Mago para Convenciones, Congresos y Simposios en Madrid: Ilusionismo para
   Grandes Audiencias
-date: '2026-09-14'
+date: '2026-07-22'
 excerpt: >-
   Eleva el impacto de convenciones, simposios y congresos corporativos en Madrid
   con intervenciones de magia de escenario y mentalismo conceptual diseñadas

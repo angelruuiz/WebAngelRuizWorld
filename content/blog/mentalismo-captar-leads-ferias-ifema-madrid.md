@@ -2,7 +2,7 @@
 title: >-
   Mentalismo para Captar Leads y Clientes en Ferias Comerciales: Guía para
   Expositores en IFEMA
-date: '2026-09-13'
+date: '2026-07-19'
 excerpt: >-
   Multiplica el retorno de inversión (ROI) de tu stand en IFEMA Madrid. Descubre
   cómo el mentalismo comercial y la psicología aplicada atraen directivos y

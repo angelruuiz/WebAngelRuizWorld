@@ -13,20 +13,21 @@ const FadeIn = ({ children, className = "" }) => (
 );
 
 export const metadata = {
-    title: { absolute: 'Mago para Cumpleaños de Adultos en Madrid | Exclusivo' },
-    description: 'Sorprende en tu fiesta de 40 o 50 cumpleaños con magia de cerca a domicilio en Madrid. Humor y asombro. Presupuesto en 2h.',
+    title: { absolute: 'Mago para Cumpleaños en Madrid | Fiestas de Adultos Originales · Ángel Ruiz' },
+    description: '¿Buscas ideas de cumpleaños originales en Madrid? Magia de cerca y mentalismo en restaurantes o a domicilio para fiestas de adultos (40, 50 y 60 años). ¡Pide presupuesto express!',
+    keywords: ['cumpleaños originales madrid', 'mago para cumpleaños madrid', 'magia cumpleaños adultos madrid', 'magia en restaurante madrid cumpleaños adultos', 'mago fiestas privadas madrid', 'cumpleaños 40 años madrid', 'cumpleaños 50 años madrid', 'animacion cumpleaños adultos'],
     alternates: {
         canonical: 'https://angelruiz.world/particulares/fiestas-cumpleanos-madrid',
     },
     openGraph: {
-        title: 'Mago para Cumpleaños de Adultos en Madrid | Exclusivo',
-        description: 'La magia perfecta para sorprender en tu cumpleaños en Madrid.',
+        title: 'Mago para Cumpleaños en Madrid | Fiestas de Adultos Originales · Ángel Ruiz',
+        description: '¿Buscas ideas de cumpleaños originales en Madrid? Magia de cerca y mentalismo en restaurantes o a domicilio para fiestas de adultos. ¡Pide tu fecha!',
         images: [{ url: '/images/fiesta-eventos-madrid.webp' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago para Cumpleaños de Adultos en Madrid | Exclusivo',
-        description: 'Ilusionismo moderno para cumpleaños de 40 y 50 años.',
+        title: 'Mago para Cumpleaños en Madrid | Fiestas de Adultos Originales · Ángel Ruiz',
+        description: 'Ilusionismo moderno y magia de cerca para cumpleaños de 40 y 50 años en Madrid.',
         images: ['/images/fiesta-eventos-madrid.webp'],
     },
 };

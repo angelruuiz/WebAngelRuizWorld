@@ -1,6 +1,6 @@
 ---
 title: 'Mago para Bodas en Madrid: Magia y Entretenimiento Inolvidable'
-date: '2026-05-02'
+date: '2026-04-08'
 excerpt: >-
   Asegura el éxito del día más importante de tu vida. La magia de cerca durante
   el cóctel o el banquete es la clave para un entretenimiento de bodas

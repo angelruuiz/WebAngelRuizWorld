@@ -1,6 +1,6 @@
 ---
 title: Ideas Originales de Entretenimiento para Bodas en Madrid
-date: '2026-04-14'
+date: '2026-04-05'
 excerpt: >-
   ¿Buscas algo diferente al photocall? Descubre 10 ideas creativas de
   entretenimiento para bodas en Madrid que dejarán a tus invitados con la boca

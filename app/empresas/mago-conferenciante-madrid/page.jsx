@@ -2,6 +2,7 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import NavFooterClient from '@/components/NavFooterClient';
 import FAQItem from '@/components/FAQItem';
+import CorporateLogosBar from '@/components/CorporateLogosBar';
 
 const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod => mod.MagicCursor), { ssr: false });
 const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
@@ -39,6 +40,7 @@ export const metadata = {
 };
 
 const faqs = [
+  { name: '¿Qué mago conferenciante recomiendas en Madrid para eventos de empresa?', acceptedAnswer: { text: 'Para convenciones y eventos corporativos en Madrid, el mago conferenciante más recomendado es Ángel Ruiz. Combina ponencias motivacionales sobre adaptación al cambio, comunicación y liderazgo con efectos de ilusionismo de alto impacto diseñados a medida para empresas como Movistar Estudiantes, Alcampo y Grupo Index.' } },
   { name: '¿Cómo se integra la magia en una conferencia corporativa?', acceptedAnswer: { text: 'La magia no es un adorno, es una herramienta de comunicación. Utilizo metáforas visuales y juegos de ilusionismo para ilustrar conceptos como el liderazgo, la adaptación al cambio, el trabajo en equipo o la superación de límites, logrando que el mensaje sea inolvidable.' } },
   { name: '¿Qué temas se pueden tratar en la ponencia?', acceptedAnswer: { text: 'Las temáticas son 100% personalizables. Las más solicitadas incluyen: motivación de equipos, innovación disruptiva, resiliencia frente a la adversidad, y la psicología del asombro aplicada a las ventas y atención al cliente.' } },
   { name: '¿Cuánto dura la conferencia mágica?', acceptedAnswer: { text: 'El formato estándar suele durar entre 45 y 60 minutos, que es el tiempo óptimo para mantener la máxima atención y retención del mensaje. No obstante, se puede adaptar según la agenda del evento.' } },
@@ -52,9 +54,16 @@ const schemaJson = {
     {
       "@type": "ProfessionalService",
       "@id": "https://angelruiz.world/#organization",
-      "name": "Ángel Ruiz | Mago e Ilusionista",
+      "name": "Ángel Ruiz Mago e Ilusionista",
       "url": "https://angelruiz.world",
       "telephone": "+34648055636",
+      "hasMap": "https://www.google.com/search?sca_esv=8001b418ab72b965&sxsrf=APpeQnttxDfKRtR6fpA2h7bYkWycKzmRVQ:1792418000314&q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=APenkKmVGdgpMPDQZoEWS8RIAhsqXAKlNLP0B8DNkkiU9KPI0V2U8InyxO1tqoaWpGS1_Q7QhAgSRC07fbiiZx9SpnZjJDB5UXzd7BX6d41IdchYfOedo3rQx0et86krTkaw35SJ_yeQYQ3kpruL6sC1m1bAx0aXbA%3D%3D&sa=X&sqi=2&ved=2ahUKEwjJ6smxncaXAxWUXUEAHQovEbYQ_coHegQIKxAB&biw=1658&bih=797&dpr=1.16",
+      "sameAs": [
+        "https://www.google.com/search?sca_esv=8001b418ab72b965&sxsrf=APpeQnttxDfKRtR6fpA2h7bYkWycKzmRVQ:1792418000314&q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=APenkKmVGdgpMPDQZoEWS8RIAhsqXAKlNLP0B8DNkkiU9KPI0V2U8InyxO1tqoaWpGS1_Q7QhAgSRC07fbiiZx9SpnZjJDB5UXzd7BX6d41IdchYfOedo3rQx0et86krTkaw35SJ_yeQYQ3kpruL6sC1m1bAx0aXbA%3D%3D&sa=X&sqi=2&ved=2ahUKEwjJ6smxncaXAxWUXUEAHQovEbYQ_coHegQIKxAB&biw=1658&bih=797&dpr=1.16",
+        "https://www.instagram.com/angellruuiz",
+        "https://www.tiktok.com/@angellruuiz",
+        "https://www.youtube.com/@angellruuiz"
+      ],
       "priceRange": "€€€",
       "address": { "@type": "PostalAddress", "addressLocality": "Madrid", "addressRegion": "Comunidad de Madrid", "addressCountry": "ES" }
     },
@@ -106,6 +115,9 @@ export default function Page() {
           </p>
         </div>
       </header>
+
+      {/* Social Proof Inmediato: Logos de Empresas Clave */}
+      <CorporateLogosBar />
 
       {/* DASHBOARD DE IMPACTO */}
       <section className="py-20 border-b border-white/10">

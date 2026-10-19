@@ -1,6 +1,6 @@
 ---
 title: '¿Cuánto Cuesta la Animación de una Boda en Madrid? Comparativa de Proveedores (2026/2027)'
-date: '2026-10-06'
+date: '2026-08-19'
 excerpt: 'Comparativa real de costes de entretenimiento para bodas en Madrid: magos, fotomatones, música en vivo y DJs. Análisis de retorno emocional y tarifas de 450€ a 650€.'
 author: Ángel Ruiz
 image: /images/mago-bodas-cocktail-exterior-madrid.webp

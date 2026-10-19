@@ -1,6 +1,6 @@
 ---
 title: 'Mago para Bodas de Oro y Bodas de Plata en Madrid: Ilusionismo Emotivo para Aniversarios'
-date: '2026-09-08'
+date: '2026-07-02'
 excerpt: >-
   Celebra 25 o 50 años de matrimonio con un espectáculo de magia elegante y emotivo en Madrid. Ilusionismo adaptado para todas las edades que homenajea la historia de amor de la pareja.
 category: Particulares

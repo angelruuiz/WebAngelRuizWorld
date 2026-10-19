@@ -1,6 +1,6 @@
 ---
 title: '7 Formas de Sorprender a tus Invitados Durante el Cóctel de Boda en Madrid'
-date: '2026-08-06'
+date: '2026-06-01'
 excerpt: >-
   Descubre 7 ideas originales para sorprender a tus invitados durante el cóctel de tu boda en Madrid. Desde magia de cerca hasta estaciones de comida temáticas.
 category: Bodas

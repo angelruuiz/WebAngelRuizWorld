@@ -1,6 +1,6 @@
 ---
 title: 'Requisitos Técnicos y de Espacio para Contratar un Mago en tu Boda o Evento en Madrid'
-date: '2026-09-11'
+date: '2026-07-14'
 excerpt: >-
   Todo lo que organizadores de eventos, fincas y novios deben saber sobre sonido, iluminación, espacio y requisitos logísticos para contar con un espectáculo de magia profesional sin complicaciones.
 category: Consejos

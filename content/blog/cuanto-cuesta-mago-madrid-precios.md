@@ -1,6 +1,6 @@
 ---
 title: '¿Cuánto Cuesta un Mago en Madrid? Precios y Tarifas Oficiales (2026)'
-date: '2026-10-06'
+date: '2026-08-22'
 excerpt: 'Guía oficial y transparente de precios para contratar un mago en Madrid (2026): particulares (300€), bodas (450€ - 650€) y empresas (500€ - 750€) sin comisiones.'
 author: Ángel Ruiz
 image: /images/foto-bio.webp

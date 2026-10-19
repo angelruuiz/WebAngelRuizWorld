@@ -8,20 +8,21 @@ const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod 
 const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
 
 export const metadata = {
-    title: { absolute: 'Mago para Fiestas y Cumpleaños en Madrid | Ángel Ruiz' },
-    description: '¿Quieres una fiesta de la que todos sigan hablando? Magia de cerca y asombro a centímetros en Madrid. Presupuesto express en 2h.',
+    title: { absolute: 'Mago para Eventos en Madrid | Celebraciones Privadas y Fiestas · Ángel Ruiz' },
+    description: 'Contrata un mago profesional para eventos privados en Madrid. Magia de cerca y animación de alto impacto para fiestas familiares y aniversarios. ¡Presupuesto en 2h!',
+    keywords: ['mago para eventos madrid', 'mago eventos madrid', 'magia en eventos', 'mago fiestas privadas madrid', 'contratar mago eventos madrid', 'ilusionista eventos madrid', 'animacion eventos privados madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/particulares/eventos',
     },
     openGraph: {
-        title: 'Mago para Fiestas y Cumpleaños en Madrid | Ángel Ruiz',
-        description: '¿Quieres una fiesta de la que todos sigan hablando? Magia de cerca y asombro a centímetros en Madrid.',
+        title: 'Mago para Eventos en Madrid | Celebraciones Privadas y Fiestas · Ángel Ruiz',
+        description: 'Contrata un mago profesional para eventos privados en Madrid. Magia de cerca y animación de alto impacto. ¡Pide tu fecha!',
         images: [{ url: '/images/foto-bio.webp' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago para Fiestas y Cumpleaños en Madrid | Ángel Ruiz',
-        description: 'Lleva el asombro y la diversión a tu propia fiesta con Ángel Ruiz.',
+        title: 'Mago para Eventos en Madrid | Celebraciones Privadas y Fiestas · Ángel Ruiz',
+        description: 'Lleva el asombro y la diversión a tu evento privado en Madrid con Ángel Ruiz.',
         images: [{ url: '/images/foto-bio.webp' }],
     },
 };

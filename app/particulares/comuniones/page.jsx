@@ -13,16 +13,23 @@ const FadeIn = ({ children, className = "" }) => (
 );
 
 export const metadata = {
-    title: { absolute: 'Mago para Comuniones en Madrid | Magia Familiar' },
-    description: 'Magia participativa para comuniones en Madrid. El comulgante es el protagonista del día. Consulta tarifas y fechas.',
+    title: { absolute: 'Mago para Comuniones en Madrid | Magia Familiar de Autor · Ángel Ruiz' },
+    description: 'El mejor espectáculo de magia para comuniones en Madrid. Ilusionismo participativo donde el comulgante es el gran protagonista. ¡Consulta disponibilidad!',
+    keywords: ['mago para comuniones madrid', 'mago comuniones madrid', 'magia comuniones madrid', 'contratar mago comunion madrid', 'mago para comunion precio madrid', 'animacion comuniones madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/particulares/comuniones',
     },
     openGraph: {
-        title: 'Mago para Comuniones en Madrid | Magia Familiar',
-        description: 'Magia para comuniones y fiestas infantiles en Madrid. Espectáculos adaptados para toda la familia.',
+        title: 'Mago para Comuniones en Madrid | Magia Familiar de Autor · Ángel Ruiz',
+        description: 'Magia participativa y divertida para comuniones en Madrid. Asombro para niños y adultos. ¡Pide tu fecha!',
         images: [{ url: '/images/magia-comuniones-madrid.webp' }],
-    }
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Mago para Comuniones en Madrid | Magia Familiar de Autor · Ángel Ruiz',
+        description: 'Magia participativa para comuniones en Madrid. El comulgante es el protagonista.',
+        images: ['/images/magia-comuniones-madrid.webp'],
+    },
 };
 
 export default function MagoComunionesPage() {

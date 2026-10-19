@@ -9,21 +9,21 @@ const ParticleBackground = dynamic(() => import('@/components/VisualEffects').th
 const BioCarousel = dynamic(() => import('@/components/BioCarousel'), { ssr: false });
 
 export const metadata = {
-    title: { absolute: 'Mago Profesional en Madrid | Bodas y Empresas' },
-    description: '¿Buscas un espectáculo que rompa esquemas? Ilusionismo de autor y magia de cerca a centímetros de tus ojos en Madrid. Alumno de DaOrtiz. Presupuesto en 2h.',
-    keywords: ['mago en madrid', 'mago profesional madrid', 'ilusionista madrid', 'mago para eventos madrid', 'contratar mago madrid', 'mago madrid bodas', 'mago madrid empresas', 'show magia madrid'],
+    title: { absolute: 'Mago en Madrid | Mago Profesional para Bodas y Empresas · Ángel Ruiz' },
+    description: '¿Buscas contratar un mago en Madrid? Ilusionismo de autor y magia de cerca a centímetros de tus ojos para bodas y empresas. Alumno de DaOrtiz. Presupuesto en 2h.',
+    keywords: ['mago en madrid', 'mago profesional madrid', 'ilusionista madrid', 'mago para eventos madrid', 'contratar mago madrid', 'mago madrid bodas', 'mago madrid empresas', 'show magia madrid', 'mago profesional en madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/mago-madrid',
     },
     openGraph: {
         url: 'https://angelruiz.world/mago-madrid',
-        title: 'Mago Profesional en Madrid | Bodas y Empresas',
+        title: 'Mago en Madrid | Mago Profesional para Bodas y Empresas · Ángel Ruiz',
         description: '¿Buscas un espectáculo que rompa esquemas? Ilusionismo de autor y magia de cerca en Madrid. Trato directo sin intermediarios.',
         images: [{ url: '/images/foto-bio.webp', width: 1200, height: 630 }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago Profesional en Madrid | Bodas y Empresas',
+        title: 'Mago en Madrid | Mago Profesional para Bodas y Empresas · Ángel Ruiz',
         description: '¿Buscas un espectáculo que rompa esquemas? Ilusionismo de autor y magia de cerca a centímetros de tus ojos en Madrid. Alumno de DaOrtiz. Presupuesto en 2h.',
         images: ['/images/foto-bio.webp']
     }

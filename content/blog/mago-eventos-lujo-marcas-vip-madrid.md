@@ -1,6 +1,6 @@
 ---
 title: 'Mago para Eventos de Lujo y Marcas VIP en Madrid | Ilusionismo Exclusivo'
-date: '2026-05-10'
+date: '2026-04-14'
 excerpt: 'Ilusionismo sofisticado de alta gama para presentaciones de producto, marcas de lujo, galerías y eventos VIP en el Barrio de Salamanca y Madrid.'
 author: Ángel Ruiz
 image: /images/foto-bio.webp

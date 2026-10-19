@@ -1,6 +1,6 @@
 ---
 title: 'El Timing Perfecto para una Boda en Madrid: Cómo Integrar la Magia sin Tiempos Muertos'
-date: '2026-10-06'
+date: '2026-10-18'
 excerpt: 'Guía práctica para novios y wedding planners en Madrid: cómo estructurar el cronograma del día, evitar tiempos muertos y ubicar la animación en cóctel o banquete.'
 author: Ángel Ruiz
 image: /images/mago-para-bodas-en-madrid.webp

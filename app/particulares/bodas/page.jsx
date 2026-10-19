@@ -13,21 +13,21 @@ const FadeIn = ({ children, className = "" }) => (
 );
 
 export const metadata = {
-    title: { absolute: 'Mago para Bodas en Madrid | Magia de Cerca para el Cóctel' },
-    description: 'Haz el cóctel de tu boda inolvidable con magia de cerca exclusiva en Madrid. Trato de autor directo, sin agencias. Consulta disponibilidad y fecha en 2h.',
+    title: { absolute: 'Mago para Bodas | Magia de Cerca en Madrid · Ángel Ruiz' },
+    description: 'Contrata el mejor mago para bodas en Madrid. Magia de cerca y cóctel de autor que fascina a tus invitados. Respuesta en <2h. ¡Reserva tu fecha!',
     keywords: ['mago para bodas', 'mago para bodas madrid', 'mago bodas madrid', 'contratar mago boda madrid', 'mago coctel boda madrid', 'ilusionista bodas madrid', 'mago para bodas precio madrid', 'mago boda noroeste madrid', 'entretenimiento bodas madrid', 'mago para mi boda madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/particulares/bodas',
     },
     openGraph: {
         url: 'https://angelruiz.world/particulares/bodas',
-        title: 'Mago para Bodas en Madrid | Magia de Cerca para el Cóctel',
+        title: 'Mago para Bodas | Magia de Cerca en Madrid · Ángel Ruiz',
         description: '¿Imaginas a tus invitados alucinando en el cóctel? Magia de cerca exclusiva para bodas en Madrid. ¡Pide tu fecha hoy!',
         images: [{ url: '/images/boda-magia-madrid.webp', width: 1200, height: 630 }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago para Bodas en Madrid | Magia de Cerca para el Cóctel',
+        title: 'Mago para Bodas | Magia de Cerca en Madrid · Ángel Ruiz',
         description: 'Magia de cerca exclusiva para bodas en Madrid. Transforma el cóctel en el momento más recordado.',
         images: ['/images/boda-magia-madrid.webp'],
     },
@@ -82,10 +82,17 @@ export default function BodasDetailPage() {
                         {
                             "@type": "ProfessionalService",
                             "@id": "https://angelruiz.world/#organization",
-                            "name": "Ángel Ruiz | Mago e Ilusionista",
+                            "name": "Ángel Ruiz Mago e Ilusionista",
                             "url": "https://angelruiz.world",
                             "image": "https://angelruiz.world/images/foto-bio.webp",
                             "telephone": "+34648055636",
+                            "hasMap": "https://www.google.com/search?sca_esv=8001b418ab72b965&sxsrf=APpeQnttxDfKRtR6fpA2h7bYkWycKzmRVQ:1792418000314&q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=APenkKmVGdgpMPDQZoEWS8RIAhsqXAKlNLP0B8DNkkiU9KPI0V2U8InyxO1tqoaWpGS1_Q7QhAgSRC07fbiiZx9SpnZjJDB5UXzd7BX6d41IdchYfOedo3rQx0et86krTkaw35SJ_yeQYQ3kpruL6sC1m1bAx0aXbA%3D%3D&sa=X&sqi=2&ved=2ahUKEwjJ6smxncaXAxWUXUEAHQovEbYQ_coHegQIKxAB&biw=1658&bih=797&dpr=1.16",
+                            "sameAs": [
+                                "https://www.google.com/search?sca_esv=8001b418ab72b965&sxsrf=APpeQnttxDfKRtR6fpA2h7bYkWycKzmRVQ:1792418000314&q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=APenkKmVGdgpMPDQZoEWS8RIAhsqXAKlNLP0B8DNkkiU9KPI0V2U8InyxO1tqoaWpGS1_Q7QhAgSRC07fbiiZx9SpnZjJDB5UXzd7BX6d41IdchYfOedo3rQx0et86krTkaw35SJ_yeQYQ3kpruL6sC1m1bAx0aXbA%3D%3D&sa=X&sqi=2&ved=2ahUKEwjJ6smxncaXAxWUXUEAHQovEbYQ_coHegQIKxAB&biw=1658&bih=797&dpr=1.16",
+                                "https://www.instagram.com/angellruuiz",
+                                "https://www.tiktok.com/@angellruuiz",
+                                "https://www.youtube.com/@angellruuiz"
+                            ],
                             "priceRange": "€€€",
                             "address": {
                                 "@type": "PostalAddress",

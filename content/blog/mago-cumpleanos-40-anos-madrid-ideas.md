@@ -1,7 +1,7 @@
 ---
 title: >-
   Mago para Fiesta de 40 Cumpleaños en Madrid: Ideas Originales, Formatos y Precios
-date: '2026-10-06'
+date: '2026-09-14'
 excerpt: >-
   Celebra tu 40 cumpleaños en Madrid con magia de cerca de alta gama y mentalismo participativo. Planes exclusivos, tarifa transparente (300€) y presupuesto express.
 category: Particulares

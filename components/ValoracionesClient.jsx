@@ -13,49 +13,12 @@ const ContactFormModal = dynamic(() => import('@/components/Modals').then(mod =>
 
 import { Star, Quote, CheckCircle2 } from '@/components/Icons';
 
+import CorporateLogosBar from '@/components/CorporateLogosBar';
+
 const TrustedBrands = () => {
-    const brands = [
-        { name: "Movistar Estudiantes", logo: "/images/logo-movistar.webp" },
-        { name: "Peña La Escombrera Torrelodones", logo: "/images/logo-escombrera.webp" },
-        { name: "Colegio Gondomar Galapagar", logo: "/images/logo-gondomar.webp" },
-        { name: "Catering Senescal Torrelodones", logo: "/images/logo-senescal.webp" },
-        { name: "Alcampo", logo: "/images/logo-alcampo.webp" },
-        { name: "Ahorramás", logo: "/images/logo-ahorramas.webp" },
-        { name: "Badulaque", logo: "/images/logos/logo-badulaque.webp" },
-        { name: "Zeppelin", logo: "/images/logos/logo-zeppelin.webp" }
-    ];
     return (
-        <section className="py-24 bg-slate-950/80 border-y border-white/5 overflow-hidden relative z-10">
-            <div className="max-w-7xl mx-auto px-6">
-                <div className="text-center mb-16">
-                    <p className="text-xs md:text-sm font-bold tracking-[0.3em] text-amber-500 uppercase mb-4 flex items-center justify-center gap-3">
-                        <span className="w-8 h-[1px] bg-amber-500"></span> 
-                        CLIENTES CORPORATIVOS 
-                        <span className="w-8 h-[1px] bg-amber-500"></span>
-                    </p>
-                    <h2 className="text-3xl md:text-5xl font-[Cinzel] text-white uppercase">Empresas que confían en la magia</h2>
-                </div>
-                <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24">
-                    {brands.map((brand, index) => (
-                        <motion.div 
-                            key={index} 
-                            initial={{ opacity: 0, scale: 0.8 }} 
-                            whileInView={{ opacity: 1, scale: 1 }} 
-                            viewport={{ once: true }} 
-                            transition={{ delay: index * 0.1 }} 
-                            className="grayscale hover:grayscale-0 opacity-40 hover:opacity-100 transition-all duration-700 flex flex-col items-center"
-                        >
-                            <Image 
-                                src={brand.logo} 
-                                alt={`Logo de ${brand.name} cliente de Angel Ruiz Mago`} 
-                                width={150} 
-                                height={60} 
-                                className="h-16 md:h-20 w-auto object-contain drop-shadow-2xl filter brightness-110" 
-                            />
-                        </motion.div>
-                    ))}
-                </div>
-            </div>
+        <section className="py-12 bg-slate-950/80 border-y border-white/5 relative z-10">
+            <CorporateLogosBar title="Marcas y organizaciones que avalan la profesionalidad de Ángel Ruiz" />
         </section>
     );
 };
@@ -155,7 +118,7 @@ export default function ValoracionesClient({ reviewsData }) {
                         <h3 className="text-2xl md:text-3xl font-[Cinzel] text-white font-bold uppercase mb-4">Descubre qué dicen de nosotros en Google</h3>
                         <p className="text-slate-400 mb-8 max-w-2xl">Lee las experiencias reales de clientes satisfechos que avalan mi trayectoria con +50 reseñas de 5 estrellas en sus bodas y eventos corporativos.</p>
                         <a 
-                            href="https://www.google.com/search?sca_esv=d1946b299fc53e00&sxsrf=ANbL-n42RqyEZw2zYhmhgDRcHZ0D7tucWg:1781705626584&q=%C3%81ngel+Ruiz+%7C+Mago+para+Bodas+y+Empresas+en+Madrid+Rese%C3%B1as&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDAwMzA2MDG2MDA0NLC0sDA2MdjAyPiK0fpwY156ao5CUGlmlUKNgm9ier5CQWJRooJTfkpisUKlgmtuQVFqMZCZmgeUTSnKTFEISi1OPbwxsXgRKyW6AUrBjt6XAAAA&rldimm=10060304380110988340&tbm=lcl&hl=es-ES&sa=X&ved=2ahUKEwiPot3Xuo6VAxWDgP0HHYtWFIIQ9fQKegQIRRAG&biw=1356&bih=611&dpr=1.42#lkt=LocalPoiReviews" 
+                            href="https://www.google.com/search?sca_esv=8001b418ab72b965&sxsrf=APpeQnttxDfKRtR6fpA2h7bYkWycKzmRVQ:1792418000314&q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=APenkKmVGdgpMPDQZoEWS8RIAhsqXAKlNLP0B8DNkkiU9KPI0V2U8InyxO1tqoaWpGS1_Q7QhAgSRC07fbiiZx9SpnZjJDB5UXzd7BX6d41IdchYfOedo3rQx0et86krTkaw35SJ_yeQYQ3kpruL6sC1m1bAx0aXbA%3D%3D&sa=X&sqi=2&ved=2ahUKEwjJ6smxncaXAxWUXUEAHQovEbYQ_coHegQIKxAB&biw=1658&bih=797&dpr=1.16" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-3 px-8 py-4 bg-white text-slate-900 font-bold rounded-full hover:bg-slate-200 transition-colors"

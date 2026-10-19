@@ -1,6 +1,6 @@
 ---
 title: 'Mago para Eventos de Empresa en Madrid: Guía Completa de Contratación (2026)'
-date: '2026-10-06'
+date: '2026-09-20'
 excerpt: 'Descubre cómo contratar un mago para eventos de empresa en Madrid: formatos de cóctel y sobremesa, tarifas desde 500€ a 750€ y ROI demostrado en networking.'
 author: Ángel Ruiz
 image: /images/mago-empresas-madrid-angel-ruiz.svg

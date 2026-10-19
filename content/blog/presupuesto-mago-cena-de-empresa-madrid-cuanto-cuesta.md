@@ -1,6 +1,6 @@
 ---
 title: '¿Cuánto Cuesta un Mago para una Cena de Empresa en Madrid? Tarifas y Presupuestos Reales'
-date: '2026-10-06'
+date: '2026-10-09'
 excerpt: 'Desglose oficial de precios y tarifas para contratar un mago en una cena de empresa en Madrid (2026): formatos de cóctel, sobremesa y packs completos desde 500€ hasta 750€.'
 author: Ángel Ruiz
 image: /images/reacciones-magia-empresas.webp

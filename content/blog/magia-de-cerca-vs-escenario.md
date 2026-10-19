@@ -1,6 +1,6 @@
 ---
 title: 'Magia de Cerca vs Magia de Escenario: ¿Qué formato elegir para tu evento?'
-date: '2026-04-13'
+date: '2026-03-31'
 excerpt: >-
   Elegir el formato adecuado de ilusionismo es clave para el éxito de tu
   celebración. Analizamos las diferencias entre la magia de cerca y de escenario

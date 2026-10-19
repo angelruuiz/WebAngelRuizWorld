@@ -1,6 +1,6 @@
 ---
 title: '¿Cuánto Dura un Show de Magia para Eventos? Guía para Encajarlo en el Timing de tu Fiesta'
-date: '2026-09-07'
+date: '2026-06-29'
 excerpt: >-
   Descubre la duración óptima de una actuación de magia según el tipo de evento (bodas, empresas, cumpleaños o cenas privadas en Madrid) y aprende a sincronizarla con el catering y la música.
 category: Consejos

@@ -1,6 +1,6 @@
 ---
 title: 'Mago para Cumpleaños de 60 Años en Madrid: Una Celebración Familiar Inolvidable'
-date: '2026-10-06'
+date: '2026-09-25'
 excerpt: 'Descubre cómo celebrar un 60 cumpleaños en Madrid con un espectáculo de magia familiar y de cerca: entretenimiento intergeneracional, homenaje emotivo y tarifa de 300€.'
 author: Ángel Ruiz
 image: /images/experiencia-magica-interactiva-publico.webp

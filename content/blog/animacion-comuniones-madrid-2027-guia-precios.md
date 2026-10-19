@@ -1,6 +1,6 @@
 ---
 title: 'Mago para Comuniones en Madrid 2027: Cuándo Reservar y Guía de Precios'
-date: '2026-10-06'
+date: '2026-08-08'
 excerpt: 'Guía para familias que celebran comunión en Madrid en 2027: por qué reservar en otoño, formatos de magia familiar interactiva y tarifa fija de 300€.'
 author: Ángel Ruiz
 image: /images/magia-comuniones-madrid.webp

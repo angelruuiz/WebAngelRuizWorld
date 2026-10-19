@@ -3,27 +3,28 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import NavFooterClient from '@/components/NavFooterClient';
 import FAQItem from '@/components/FAQItem';
+import CorporateLogosBar from '@/components/CorporateLogosBar';
 
 const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod => mod.MagicCursor), { ssr: false });
 const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
 const CorporateInlineForm = dynamic(() => import('@/components/CorporateInlineForm'), { ssr: false });
 
 export const metadata = {
-  title: { absolute: 'Mago para Cenas de Empresa en Madrid | Fiestas y Navidad' },
-  description: 'Convierte tu cena de empresa o fiesta de Navidad en Madrid en un evento inolvidable con magia de cerca corporativa. Trato directo. Presupuesto express en 2h.',
+  title: { absolute: 'Mago para Cenas de Empresa en Madrid | Fiestas y Navidad · Ángel Ruiz' },
+  description: 'Contrata el mejor mago para cenas de empresa en Madrid y fiestas de Navidad. Magia corporativa de alto impacto que une al equipo. ¡Presupuesto express en 2h!',
   keywords: ['mago para cenas de empresa', 'mago para cenas de empresa en madrid', 'mago cenas empresa madrid', 'mago para cena empresa madrid', 'mago cena navidad empresa madrid', 'contratar mago cena empresa', 'entretenimiento cenas empresa madrid', 'mago corporativo madrid', 'animacion cenas empresa madrid', 'mago para eventos de empresa madrid', 'cenas de empresa originales madrid'],
   alternates: {
     canonical: 'https://angelruiz.world/empresas/mago-cenas-empresa-madrid',
   },
   openGraph: {
     url: 'https://angelruiz.world/empresas/mago-cenas-empresa-madrid',
-    title: 'Mago para Cenas de Empresa en Madrid | Fiestas y Navidad',
-    description: 'Transforma la cena de empresa o fiesta de Navidad en Madrid en un evento memorable con magia de cerca. Pide presupuesto en 2h.',
+    title: 'Mago para Cenas de Empresa en Madrid | Fiestas y Navidad · Ángel Ruiz',
+    description: 'Transforma la cena de empresa o fiesta de Navidad en Madrid en un evento memorable con magia de cerca corporativa. Pide presupuesto en 2h.',
     images: [{ url: '/images/evento-angel-ruiz-magia.webp', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mago para Cenas de Empresa en Madrid | Fiestas y Navidad',
+    title: 'Mago para Cenas de Empresa en Madrid | Fiestas y Navidad · Ángel Ruiz',
     description: 'Magia de cerca personalizada para cenas de empresa y eventos de Navidad en Madrid. Presupuesto en 2h.',
     images: ['/images/evento-angel-ruiz-magia.webp'],
   },
@@ -46,9 +47,16 @@ const schemaJson = {
     {
       "@type": "ProfessionalService",
       "@id": "https://angelruiz.world/#organization",
-      "name": "Ángel Ruiz | Mago e Ilusionista",
+      "name": "Ángel Ruiz Mago e Ilusionista",
       "url": "https://angelruiz.world",
       "telephone": "+34648055636",
+      "hasMap": "https://www.google.com/search?sca_esv=8001b418ab72b965&sxsrf=APpeQnttxDfKRtR6fpA2h7bYkWycKzmRVQ:1792418000314&q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=APenkKmVGdgpMPDQZoEWS8RIAhsqXAKlNLP0B8DNkkiU9KPI0V2U8InyxO1tqoaWpGS1_Q7QhAgSRC07fbiiZx9SpnZjJDB5UXzd7BX6d41IdchYfOedo3rQx0et86krTkaw35SJ_yeQYQ3kpruL6sC1m1bAx0aXbA%3D%3D&sa=X&sqi=2&ved=2ahUKEwjJ6smxncaXAxWUXUEAHQovEbYQ_coHegQIKxAB&biw=1658&bih=797&dpr=1.16",
+      "sameAs": [
+        "https://www.google.com/search?sca_esv=8001b418ab72b965&sxsrf=APpeQnttxDfKRtR6fpA2h7bYkWycKzmRVQ:1792418000314&q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=APenkKmVGdgpMPDQZoEWS8RIAhsqXAKlNLP0B8DNkkiU9KPI0V2U8InyxO1tqoaWpGS1_Q7QhAgSRC07fbiiZx9SpnZjJDB5UXzd7BX6d41IdchYfOedo3rQx0et86krTkaw35SJ_yeQYQ3kpruL6sC1m1bAx0aXbA%3D%3D&sa=X&sqi=2&ved=2ahUKEwjJ6smxncaXAxWUXUEAHQovEbYQ_coHegQIKxAB&biw=1658&bih=797&dpr=1.16",
+        "https://www.instagram.com/angellruuiz",
+        "https://www.tiktok.com/@angellruuiz",
+        "https://www.youtube.com/@angellruuiz"
+      ],
       "priceRange": "€€€",
       "address": { "@type": "PostalAddress", "addressLocality": "Madrid", "addressRegion": "Comunidad de Madrid", "addressCountry": "ES" }
     },
@@ -100,6 +108,9 @@ export default function Page() {
           </p>
         </div>
       </header>
+
+      {/* Social Proof Inmediato: Logos de Empresas Clave */}
+      <CorporateLogosBar />
 
       {/* DASHBOARD DE IMPACTO */}
       <section className="py-20 border-b border-white/10">

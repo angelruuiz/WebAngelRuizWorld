@@ -2,7 +2,7 @@
 title: >-
   Mago para Fiestas Infantiles y Cumpleaños de Niños en Madrid: Ideas que
   Funcionan
-date: '2026-06-05'
+date: '2026-05-15'
 excerpt: >-
   Todo lo que necesitas saber para contratar un mago para fiestas infantiles en
   Madrid. Diferencias con animadores, edades recomendadas, precios, formatos y

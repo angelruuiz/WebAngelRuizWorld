@@ -2,7 +2,7 @@
 title: >-
   Family Day de Empresa en Madrid: Cómo Dinamizar la Jornada Familiar con Magia
   Corporativa
-date: '2026-09-15'
+date: '2026-07-31'
 excerpt: >-
   Guía completa para organizar un Family Day de empresa inolvidable en Madrid.
   Descubre cómo la magia intergeneracional une a empleados, parejas e hijos con

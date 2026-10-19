@@ -2,7 +2,7 @@
 title: >-
   Ideas de Entretenimiento para Fiestas Privadas en Madrid: Guía de Espectáculos
   y Experiencias
-date: '2026-07-28'
+date: '2026-05-26'
 excerpt: >-
   Comparativa y guía de las mejores ideas de entretenimiento para fiestas
   privadas en Madrid: magia de cerca, música en directo, monólogos y

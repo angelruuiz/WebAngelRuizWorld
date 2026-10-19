@@ -1,6 +1,6 @@
 ---
 title: 'Cómo Organizar la Cena de Navidad de Empresa Perfecta en Madrid (Guía Paso a Paso 2026-2027)'
-date: '2026-10-06'
+date: '2026-08-17'
 excerpt: 'Guía completa para organizar la cena de Navidad corporativa en Madrid: espacios, timing, presupuesto transparente (500€ - 750€), checklist para RRHH y claves para dinamizar con magia.'
 author: Ángel Ruiz
 image: /images/evento-angel-ruiz-magia.webp

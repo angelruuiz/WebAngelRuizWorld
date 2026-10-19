@@ -1,6 +1,6 @@
 ---
 title: 'Magia en el Banquete y Sobremesa de Boda: ¿Funciona Mejor que en el Cóctel?'
-date: '2026-09-10'
+date: '2026-07-11'
 excerpt: >-
   Analizamos los pros y contras de situar la magia durante el banquete o
   sobremesa de boda versus el cóctel de bienvenida en Madrid. Descubre cómo

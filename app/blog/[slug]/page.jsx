@@ -26,6 +26,10 @@ export async function generateMetadata({ params }) {
     ? baseTitle
     : (baseTitle.length <= 48 ? `${baseTitle} | Ángel Ruiz` : baseTitle);
 
+  const postImage = postData.image 
+    ? (postData.image.startsWith('http') ? postData.image : `https://angelruiz.world${postData.image}`)
+    : 'https://angelruiz.world/images/foto-bio.webp';
+
   return {
     title: { absolute: resolvedTitle },
     description: postData.excerpt,
@@ -35,13 +39,13 @@ export async function generateMetadata({ params }) {
       description: postData.excerpt,
       type: 'article',
       url: `https://angelruiz.world/blog/${params.slug}`,
-      images: postData.image ? [{ url: postData.image }] : [],
+      images: [{ url: postImage, width: 1200, height: 630, alt: postData.title }],
     },
     twitter: {
       card: 'summary_large_image',
       title: postData.title,
       description: postData.excerpt,
-      images: postData.image ? [postData.image] : [],
+      images: [postImage],
     },
     alternates: {
       canonical: `https://angelruiz.world/blog/${params.slug}`,
@@ -64,12 +68,16 @@ export default async function BlogPost({ params }) {
   const words = plainText.trim().split(/\s+/).filter(Boolean);
   const wordCount = words.length;
 
+  const blogImageUrl = postData.image 
+    ? (postData.image.startsWith('http') ? postData.image : `https://angelruiz.world${postData.image}`)
+    : 'https://angelruiz.world/images/foto-bio.webp';
+
   const blogArticle = {
     "@type": "BlogPosting",
     "@id": `https://angelruiz.world/blog/${params.slug}/#article`,
     "headline": postData.title,
     "description": postData.excerpt,
-    "image": postData.image ? `https://angelruiz.world${postData.image}` : `https://angelruiz.world/images/logo-grande.webp`,
+    "image": blogImageUrl,
     "datePublished": postData.date,
     "dateModified": postData.dateModified || postData.date,
     "inLanguage": "es-ES",
@@ -88,7 +96,12 @@ export default async function BlogPost({ params }) {
       "@id": "https://angelruiz.world/#person",
       "name": "Ángel Ruiz",
       "jobTitle": "Mago e Ilusionista Profesional",
-      "url": "https://angelruiz.world"
+      "url": "https://angelruiz.world/sobre-mi",
+      "sameAs": [
+        "https://www.instagram.com/angellruuiz",
+        "https://www.tiktok.com/@angellruuiz",
+        "https://www.youtube.com/@angellruuiz"
+      ]
     },
     "publisher": {
       "@type": "Organization",

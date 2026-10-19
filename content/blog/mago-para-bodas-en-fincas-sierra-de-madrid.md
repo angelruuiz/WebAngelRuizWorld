@@ -1,6 +1,6 @@
 ---
 title: 'Mago para Bodas en la Sierra de Madrid: Ilusionismo en Fincas de Torrelodones y Guadarrama'
-date: '2026-10-06'
+date: '2026-09-22'
 excerpt: 'Guía de bodas con magia en fincas de la Sierra de Madrid (Torrelodones, El Escorial, Las Rozas, Guadarrama): cócteles al aire libre y tarifas desde 450€ a 650€.'
 author: Ángel Ruiz
 image: /images/magia-al-aire-libre-eventos-madrid.webp

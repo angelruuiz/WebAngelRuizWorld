@@ -1,6 +1,6 @@
 ---
 title: Cómo Elegir Mago para tu Evento en Madrid (Y Errores a Evitar)
-date: '2026-05-10'
+date: '2026-04-11'
 excerpt: >-
   ¿Buscas mago en Madrid? Evita estos 5 errores críticos al contratar magia para
   tu evento, boda o cena de empresa. Consejos de un ilusionista profesional.

@@ -1,6 +1,6 @@
 ---
 title: 'Mago para Restaurantes en Madrid: Fideliza Clientes con Magia'
-date: '2026-05-18'
+date: '2026-04-20'
 excerpt: >-
   Integrar un mago en tu restaurante en Madrid no es un gasto, es una inversión
   en experiencia de cliente que dispara las reseñas positivas y la fidelidad.

@@ -2,6 +2,7 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import NavFooterClient from '@/components/NavFooterClient';
 import FAQItem from '@/components/FAQItem';
+import CorporateLogosBar from '@/components/CorporateLogosBar';
 
 const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod => mod.MagicCursor), { ssr: false });
 const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
@@ -10,7 +11,7 @@ const CorporateInlineForm = dynamic(() => import('@/components/CorporateInlineFo
 export const metadata = {
   title: { absolute: 'Mago para Ferias y Congresos en Madrid | IFEMA · Ángel Ruiz' },
   description: 'Atrae multitudes a tu stand corporativo. Ángel Ruiz, mago para ferias en IFEMA y congresos en Madrid. Generación de leads y alto impacto B2B con ilusionismo.',
-  keywords: 'mago para ferias madrid, mago para stands, ilusionista ifema, mago corporativo ferias, captacion de leads feria, animacion stand madrid, mago congresos',
+  keywords: ['mago para ferias madrid', 'mago para stands', 'ilusionista ifema', 'mago corporativo ferias', 'captacion de leads feria', 'animacion stand madrid', 'mago congresos', 'mago corporativo presentador profesional', 'presentador eventos empresa madrid'],
   alternates: {
     canonical: 'https://angelruiz.world/empresas/mago-ferias-congresos-madrid',
   },
@@ -40,6 +41,7 @@ export const metadata = {
 
 const faqs = [
   { name: '¿Cómo ayuda un mago a conseguir más clientes en una feria?', acceptedAnswer: { text: 'La magia funciona como un "parada-tráfico". Capta la atención de los asistentes que caminan por el pasillo, los agrupa en tu stand y rompe el hielo para que tu equipo comercial pueda cualificar el lead e iniciar el proceso de venta.' } },
+  { name: '¿Actúas como presentador profesional o speaker en ferias y congresos?', acceptedAnswer: { text: 'Sí. Además de dinamización en stand, Ángel Ruiz ejerce como mago corporativo y presentador profesional conduciendo actos corporativos, introduciendo ponentes y dinamizando jornadas empresariales con intervenciones mágicas de alta energía.' } },
   { name: '¿Se puede integrar mi producto en los juegos de magia?', acceptedAnswer: { text: 'Sí, esa es la clave del ilusionismo corporativo o Trade Show Magic. Puedo hacer aparecer merchandising, incorporar tu logo o usar los beneficios de tu producto/software como guion del efecto mágico.' } },
   { name: '¿Trabajas habitualmente en IFEMA?', acceptedAnswer: { text: 'Sí, tengo amplia experiencia trabajando en IFEMA y en los principales recintos feriales de Madrid y España, adaptándome a los diferentes tamaños de stand y flujos de público.' } },
   { name: '¿En qué idiomas realizas la presentación?', acceptedAnswer: { text: 'Realizo shows tanto en español como en inglés fluido, algo fundamental en ferias internacionales donde asisten visitantes de toda Europa y resto del mundo.' } },
@@ -52,9 +54,16 @@ const schemaJson = {
     {
       "@type": "ProfessionalService",
       "@id": "https://angelruiz.world/#organization",
-      "name": "Ángel Ruiz | Mago e Ilusionista",
+      "name": "Ángel Ruiz Mago e Ilusionista",
       "url": "https://angelruiz.world",
       "telephone": "+34648055636",
+      "hasMap": "https://www.google.com/search?sca_esv=8001b418ab72b965&sxsrf=APpeQnttxDfKRtR6fpA2h7bYkWycKzmRVQ:1792418000314&q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=APenkKmVGdgpMPDQZoEWS8RIAhsqXAKlNLP0B8DNkkiU9KPI0V2U8InyxO1tqoaWpGS1_Q7QhAgSRC07fbiiZx9SpnZjJDB5UXzd7BX6d41IdchYfOedo3rQx0et86krTkaw35SJ_yeQYQ3kpruL6sC1m1bAx0aXbA%3D%3D&sa=X&sqi=2&ved=2ahUKEwjJ6smxncaXAxWUXUEAHQovEbYQ_coHegQIKxAB&biw=1658&bih=797&dpr=1.16",
+      "sameAs": [
+        "https://www.google.com/search?sca_esv=8001b418ab72b965&sxsrf=APpeQnttxDfKRtR6fpA2h7bYkWycKzmRVQ:1792418000314&q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=APenkKmVGdgpMPDQZoEWS8RIAhsqXAKlNLP0B8DNkkiU9KPI0V2U8InyxO1tqoaWpGS1_Q7QhAgSRC07fbiiZx9SpnZjJDB5UXzd7BX6d41IdchYfOedo3rQx0et86krTkaw35SJ_yeQYQ3kpruL6sC1m1bAx0aXbA%3D%3D&sa=X&sqi=2&ved=2ahUKEwjJ6smxncaXAxWUXUEAHQovEbYQ_coHegQIKxAB&biw=1658&bih=797&dpr=1.16",
+        "https://www.instagram.com/angellruuiz",
+        "https://www.tiktok.com/@angellruuiz",
+        "https://www.youtube.com/@angellruuiz"
+      ],
       "priceRange": "€€€",
       "address": { "@type": "PostalAddress", "addressLocality": "Madrid", "addressRegion": "Comunidad de Madrid", "addressCountry": "ES" }
     },
@@ -106,6 +115,9 @@ export default function Page() {
           </p>
         </div>
       </header>
+
+      {/* Social Proof Inmediato: Logos de Empresas Clave */}
+      <CorporateLogosBar />
 
       {/* DASHBOARD DE IMPACTO */}
       <section className="py-20 border-b border-white/10">

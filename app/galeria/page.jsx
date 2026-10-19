@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic';
 import NavFooterClient from '@/components/NavFooterClient';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import GalleryGrid from '@/components/GalleryGrid';
+import galleryBlurs from '@/public/images/gallery-blurs.json';
 
 const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod => mod.MagicCursor), { ssr: false });
 const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
@@ -41,6 +42,11 @@ const images = [
         aspect: 'aspect-[3/2]'
     },
     {
+        src: '/images/mago-rooftop-eventos-privados-madrid.webp',
+        alt: 'Ángel Ruiz realizando magia de cerca con baraja de cartas para invitados en un evento exclusivo en rooftop con vistas en Madrid',
+        aspect: 'aspect-[3/2]'
+    },
+    {
         src: '/images/angel-ruiz-mago-corporativo.webp',
         alt: 'El mago Ángel Ruiz interactuando de cerca con asistentes en un evento corporativo',
         aspect: 'aspect-[3/2]'
@@ -66,6 +72,11 @@ const images = [
         aspect: 'aspect-[2/3]'
     },
     {
+        src: '/images/risas-reacciones-magia-restaurante-madrid.webp',
+        alt: 'Risas y reacciones espontáneas de comensales durante un espectáculo de magia de mesa en un restaurante en Madrid',
+        aspect: 'aspect-[4/3]'
+    },
+    {
         src: '/images/reacciones-magia-empresas.webp',
         alt: 'Caras de asombro y aplausos durante un espectáculo de magia para empresas',
         aspect: 'aspect-[3/2]'
@@ -84,6 +95,11 @@ const images = [
     {
         src: '/images/mago-para-eventos-empresa-madrid.webp',
         alt: 'Presentación impactante del mago Ángel Ruiz en un evento de empresa en Madrid',
+        aspect: 'aspect-[3/2]'
+    },
+    {
+        src: '/images/ilusionismo-coctel-elegante-madrid-angel-ruiz.webp',
+        alt: 'Ilusionismo y magia de cerca itinerante durante un cóctel exclusivo en Madrid con Ángel Ruiz',
         aspect: 'aspect-[3/2]'
     },
     {
@@ -107,6 +123,11 @@ const images = [
         aspect: 'aspect-[3/2]'
     },
     {
+        src: '/images/mago-cartomagia-interactiva-publico-madrid.webp',
+        alt: 'Ángel Ruiz extendiendo la baraja de cartas a los asistentes durante una sesión interactiva de magia de cerca en Madrid',
+        aspect: 'aspect-[4/3]'
+    },
+    {
         src: '/images/angel-ruiz-evento.webp',
         alt: 'Mesa rodeada de espectadores durante una demostración de magia de salón por Ángel Ruiz',
         aspect: 'aspect-[3/2]'
@@ -125,6 +146,11 @@ const images = [
         src: '/images/mejor-mago-eventos-corporativos.webp',
         alt: 'Momentos de participación del público en un show de magia para eventos corporativos',
         aspect: 'aspect-[3/2]'
+    },
+    {
+        src: '/images/mago-eventos-corporativos-risas-madrid.webp',
+        alt: 'Complicidad y carcajadas de un asistente ante un juego de magia de cartas con Ángel Ruiz en un evento en Madrid',
+        aspect: 'aspect-[4/3]'
     },
     {
         src: '/images/mago-para-bodas-en-madrid.webp',
@@ -154,6 +180,11 @@ const images = [
 ];
 
 export default function GaleriaPage() {
+    const imagesWithBlurs = images.map(img => ({
+        ...img,
+        blurDataURL: galleryBlurs[img.src] || undefined
+    }));
+
     return (
         <>
             <script 
@@ -187,7 +218,7 @@ export default function GaleriaPage() {
                 </div>
 
                 {/* Pinterest-style Mosaic Layout - Always 2 columns on mobile now */}
-                <GalleryGrid images={images} />
+                <GalleryGrid images={imagesWithBlurs} />
 
                 <section className="mt-20 md:mt-24 text-center">
                     <h2 className="text-xl md:text-2xl font-[Cinzel] text-white mb-8 uppercase tracking-widest">¿Quieres que tu evento sea el próximo?</h2>

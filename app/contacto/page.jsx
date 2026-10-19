@@ -78,7 +78,7 @@ export default function ContactoPage() {
   return (
     <main className="relative min-h-screen w-full bg-[#030508] text-slate-100 flex flex-col justify-between items-center px-4 overflow-x-hidden selection:bg-amber-500/30 selection:text-amber-200">
       
-      {/* STRUCTURED DATA (STRICT NO AggregateRating) */}
+      {/* STRUCTURED DATA JSON-LD */}
       <Script
         id="contacto-schema"
         type="application/ld+json"

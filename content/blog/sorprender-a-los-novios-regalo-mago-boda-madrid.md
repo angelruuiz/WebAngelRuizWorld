@@ -1,6 +1,6 @@
 ---
 title: 'Regalar un Mago a los Novios en su Boda en Madrid: La Sorpresa de los Amigos y Testigos'
-date: '2026-10-06'
+date: '2026-10-15'
 excerpt: 'Descubre cómo regalar la actuación de un mago a los novios el día de su boda en Madrid: coordinación secreta con la finca, efecto sorpresa y tarifas desde 450€.'
 author: Ángel Ruiz
 image: /images/boda-magia-madrid.webp

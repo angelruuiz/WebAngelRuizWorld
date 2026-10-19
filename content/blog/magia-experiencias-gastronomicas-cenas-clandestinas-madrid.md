@@ -1,6 +1,6 @@
 ---
 title: 'Magia y Experiencias Gastronómicas en Madrid | Cenas Maridaje y Chef Privado'
-date: '2026-06-05'
+date: '2026-05-09'
 excerpt: 'La fusión perfecta entre alta gastronomía e ilusionismo: cómo enriquecer cenas privadas con chef a domicilio, maridajes y cenas clandestinas en Madrid.'
 author: Ángel Ruiz
 image: /images/foto-bio.webp

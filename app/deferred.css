@@ -577,7 +577,7 @@ video { object-fit: cover; }
 .animate-marquee {
     display: flex;
     flex-shrink: 0;
-    animation: marquee 30s linear infinite;
+    animation: marquee 45s linear infinite;
     will-change: transform;
 }
 

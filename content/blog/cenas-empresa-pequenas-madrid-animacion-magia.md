@@ -1,6 +1,6 @@
 ---
 title: 'Cenas de Empresa Pequeñas en Madrid: Ideas de Animación para Grupos de 10 a 30 Personas'
-date: '2026-10-06'
+date: '2026-08-14'
 excerpt: 'Descubre cómo dinamizar una cena de empresa pequeña o de departamento en Madrid (10 a 30 personas): animación cercana, sin montajes complejos y tarifa desde 500€.'
 author: Ángel Ruiz
 image: /images/evento-angel-ruiz-magia.webp

@@ -1,6 +1,6 @@
 ---
 title: 'Mago para Hoteles y Rooftops en Madrid | Animación para Terrazas y Afterworks'
-date: '2026-06-01'
+date: '2026-05-04'
 excerpt: 'Eleva la experiencia en terrazas, hoteles 5 estrellas y rooftops de Madrid con magia de cerca y mentalismo interactivo para cócteles y afterworks.'
 author: Ángel Ruiz
 image: /images/foto-bio.webp

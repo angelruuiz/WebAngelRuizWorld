@@ -1,6 +1,6 @@
 ---
 title: 'Mago para Comuniones en Madrid: El Espectáculo que Triunfa'
-date: '2026-05-15'
+date: '2026-04-17'
 excerpt: >-
   ¿Buscas un mago para comuniones en Madrid? Sorprende a niños y adultos con la
   mejor magia de cerca. Descubre opciones, precios y cómo asegurar el éxito de

@@ -1,6 +1,6 @@
 ---
 title: 'Copa de Navidad en la Oficina en Madrid: Cómo Dinamizar un Cóctel Corporativo en tu Sede'
-date: '2026-10-06'
+date: '2026-08-25'
 excerpt: 'Ideas para organizar una copa de Navidad o afterwork navideño en las oficinas de tu empresa en Madrid: catering, timing y dinamización con magia itinerante desde 500€.'
 author: Ángel Ruiz
 image: /images/magia-cocktail-empresa-madrid.webp

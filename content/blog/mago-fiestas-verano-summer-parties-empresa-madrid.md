@@ -2,7 +2,7 @@
 title: >-
   Magia para Fiestas de Verano y Summer Parties de Empresa en Madrid: Ideas y
   Dinamización
-date: '2026-09-16'
+date: '2026-08-02'
 excerpt: >-
   Descubre cómo dinamizar la Summer Party o fiesta de verano de tu empresa en
   Madrid con magia de cóctel, mentalismo al aire libre y experiencias

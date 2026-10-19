@@ -1,6 +1,6 @@
 ---
 title: 'Mago vs Mentalista: ¿Cuál Contratar?'
-date: '2026-08-06'
+date: '2026-06-04'
 excerpt: 'Diferencias clave entre un mago de cerca y un mentalista para bodas y empresas en Madrid. Guía de contratación rápida.'
 category: Guía
 readTime: 7 MIN

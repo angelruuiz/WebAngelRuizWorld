@@ -1,6 +1,6 @@
 ---
 title: 'Mago para Stands en Ferias de IFEMA Madrid: Estrategia para Atraer Clientes y Captar Leads'
-date: '2026-08-28'
+date: '2026-06-24'
 excerpt: 'Descubre cómo un mago corporativo en IFEMA Madrid puede multiplicar el tráfico a tu stand comercial, retener a clientes cualificados y transformar el asombro en ventas reales.'
 author: Ángel Ruiz
 image: /images/evento-angel-ruiz-magia.webp

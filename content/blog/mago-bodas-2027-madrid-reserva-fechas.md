@@ -1,6 +1,6 @@
 ---
 title: 'Contratar Mago para Bodas 2027 en Madrid: Fechas Clave, Tendencias y Cuándo Reservar'
-date: '2026-10-06'
+date: '2026-09-05'
 excerpt: 'Guía para parejas que se casan en 2027 en Madrid: tendencias de entretenimiento en el cóctel, por qué reservar con antelación y tarifas desde 450€ a 650€.'
 author: Ángel Ruiz
 image: /images/mago-bodas-madrid-eventos.webp

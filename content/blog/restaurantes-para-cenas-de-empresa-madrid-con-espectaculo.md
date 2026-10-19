@@ -1,6 +1,6 @@
 ---
 title: 'Restaurantes para Cenas de Empresa en Madrid con Espectáculo de Magia (2026)'
-date: '2026-10-06'
+date: '2026-10-12'
 excerpt: 'Guía de restaurantes con salones privados para cenas de Navidad corporativas en Madrid: cómo coordinar un espectáculo de magia de sobremesa y tarifas desde 500€.'
 author: Ángel Ruiz
 image: /images/evento-empresa-mago-angel-ruiz.webp

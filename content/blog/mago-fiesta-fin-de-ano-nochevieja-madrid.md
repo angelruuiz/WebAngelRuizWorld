@@ -1,6 +1,6 @@
 ---
 title: 'Mago para Fiestas de Fin de Año y Nochevieja en Madrid: La Sorpresa que Todos Recordarán'
-date: '2026-08-06'
+date: '2026-06-10'
 excerpt: >-
   Descubre cómo un mago en Madrid puede transformar tu fiesta de Fin de Año o Nochevieja en una celebración mágica e inolvidable. ¡Reserva tu fecha antes de las campanadas!
 category: Particulares

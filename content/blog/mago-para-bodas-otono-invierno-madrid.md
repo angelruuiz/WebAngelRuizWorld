@@ -1,6 +1,6 @@
 ---
 title: 'Mago para Bodas de Otoño e Invierno en Madrid: Ideas de Magia y Entretenimiento'
-date: '2026-08-26'
+date: '2026-06-21'
 excerpt: 'Las bodas de otoño e invierno en Madrid tienen una atmósfera íntima y elegante. Descubre cómo la magia de cerca en espacios interiores, cócteles cubiertos y banquetes resguardados crea un ambiente cálido e inolvidable.'
 author: Ángel Ruiz
 image: /images/mago-bodas-madrid-eventos.webp

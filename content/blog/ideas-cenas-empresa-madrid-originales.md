@@ -1,6 +1,6 @@
 ---
 title: Ideas Originales para Cenas de Empresa en Madrid (Temporada 2026-2027)
-date: '2026-10-06'
+date: '2026-08-31'
 excerpt: >-
   Descubre ideas originales y dinamización con magia corporativa de alta gama para tu cena de empresa en Madrid. Precios transparentes (500€ - 750€) y presupuesto express.
 author: Ángel Ruiz

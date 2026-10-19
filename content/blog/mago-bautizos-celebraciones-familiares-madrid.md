@@ -1,6 +1,6 @@
 ---
 title: 'Mago para Bautizos y Comidas Familiares en Madrid | Magia para Todas las Edades'
-date: '2026-05-25'
+date: '2026-04-28'
 excerpt: 'Entretenimiento elegante e inteligente para bautizos y grandes comidas familiares en Madrid: magia de cerca que asombra por igual a abuelos, padres y niños.'
 author: Ángel Ruiz
 image: /images/foto-bio.webp

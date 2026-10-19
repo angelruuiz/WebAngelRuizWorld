@@ -1,6 +1,6 @@
 ---
 title: 'Mago para Cumpleaños de Adultos en Madrid: Ideas Exclusivas para 40, 50 y 60 Años'
-date: '2026-10-06'
+date: '2026-09-28'
 excerpt: 'Celebra un 40, 50 o 60 cumpleaños inolvidable en Madrid. Magia de cerca y mentalismo para fiestas privadas en chalets, restaurantes y domicilios con tarifa plana de 300€.'
 category: Particulares
 readTime: 6 MIN

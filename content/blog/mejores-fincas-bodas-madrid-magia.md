@@ -1,6 +1,6 @@
 ---
 title: 'Mejores Fincas para Bodas en Madrid: Guía de Animación y Magia en el Cóctel (Temporada 2026-2027)'
-date: '2026-10-06'
+date: '2026-10-07'
 excerpt: >-
   Descubre cómo integrar animación de alta gama con magia de cerca en las mejores fincas de bodas en Madrid y la Sierra. Comparativa de espacios y tarifas (450€ - 650€).
 author: Ángel Ruiz

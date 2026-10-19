@@ -1,6 +1,6 @@
 ---
 title: 'Mago para Fiestas de Empresa en Fincas de Madrid: Ilusionismo para Grandes Celebraciones'
-date: '2026-10-06'
+date: '2026-10-01'
 excerpt: 'Cómo organizar una fiesta o gala corporativa en fincas exclusivas de Madrid: dinamización de cóctel en jardines, show central y tarifas de 650€ a 750€.'
 author: Ángel Ruiz
 image: /images/ilusionista-cocktail-jardin-madrid.webp
