@@ -15,10 +15,6 @@ const nextConfig = {
     async rewrites() {
         return [
             {
-                source: '/web_escombrera',
-                destination: '/web_escombrera/index.html',
-            },
-            {
                 source: '/marinagodar',
                 destination: '/marinagodar/index.html',
             },
