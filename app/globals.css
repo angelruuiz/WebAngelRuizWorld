@@ -122,6 +122,15 @@ p {
     border-radius: 10px;
 }
 
+/* Hide scrollbar for clean horizontal snap carousels */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 
 /* ÔöÇÔöÇ Glass Surface (critical for navbar/hero) ÔöÇÔöÇ */
 .glass-surface {

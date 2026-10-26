@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
+import { Sparkles } from '@/components/Icons';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import dynamic from 'next/dynamic';
@@ -18,7 +19,7 @@ const HeroClient = ({ onOpenVideo, onOpenContact }) => {
     };
 
     return (
-        <section className="relative min-h-[100dvh] flex flex-col justify-end lg:justify-center overflow-hidden z-10 pt-20 pb-20 sm:pb-28 lg:py-0">
+        <section className="relative min-h-[100dvh] flex flex-col justify-end lg:justify-center overflow-hidden z-10 pt-20 pb-16 sm:pb-28 lg:py-0">
             <div className="absolute inset-0 z-0 overflow-hidden">
                 <picture>
                     <source media="(min-width: 768px)" srcSet="/images/hero-angel-ruiz-2026.webp" width={2560} height={1440} />
@@ -41,88 +42,29 @@ const HeroClient = ({ onOpenVideo, onOpenContact }) => {
                 <div className='lg:hidden absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/85 via-50% to-transparent' />
             </div>
             
-            <div className="px-5 sm:px-8 md:px-12 lg:px-16 relative z-10 w-full max-w-7xl mx-auto lg:scale-[0.90] lg:origin-center transition-transform">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                    {/* Desktop: Formulario Completo en la columna izquierda | Móvil: Liquid Glass Fast Card */}
-                    <div id="presupuesto-form" className="w-full max-w-lg mx-auto lg:mx-0 z-20 order-2 lg:order-1 lg:col-span-5 pt-2 lg:pt-0">
-                        {/* Desktop (lg:block): Formulario completo tradicional */}
-                        <div className="hidden lg:block">
-                            <LiquidGlassForm />
-                        </div>
-
-                        {/* Móvil (lg:hidden): Apple Liquid UI Action Card — Conversión en 1 toque */}
-                        <div className="lg:hidden p-5 rounded-3xl bg-slate-950/70 backdrop-blur-2xl border border-amber-400/30 shadow-[0_12px_40px_rgba(0,0,0,0.8),inset_0_1px_0_rgba(255,255,255,0.15)] relative overflow-hidden">
-                            <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 rounded-full blur-2xl pointer-events-none" />
-                            
-                            <div className="flex items-center justify-between mb-3">
-                                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 text-[10px] font-bold uppercase tracking-wider">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                                    Tarifas & Fechas 2026/2027
-                                </span>
-                                <span className="text-[10px] text-slate-400 font-medium">Trato directo</span>
-                            </div>
-
-                            <h2 className="font-[Cinzel] text-lg font-bold text-white mb-1.5">
-                                Reserva tu Fecha sin Compromiso
-                            </h2>
-                            <p className="text-xs text-slate-300 mb-4 leading-relaxed">
-                                Bodas, empresas y celebraciones privadas en Madrid. Respuesta garantizada en &lt;2 horas.
-                            </p>
-
-                            {/* Selector rápido táctil que abre el drawer */}
-                            <div className="grid grid-cols-2 gap-2 mb-3.5">
-                                <button
-                                    type="button"
-                                    onClick={() => triggerBookingDrawer('boda')}
-                                    className="p-2.5 rounded-xl bg-white/[0.05] border border-white/10 hover:border-amber-400/50 flex items-center gap-2 text-left active:scale-95 transition-all"
-                                >
-                                    <span className="text-base">💍</span>
-                                    <div>
-                                        <span className="text-[11px] font-bold text-white block">Bodas</span>
-                                        <span className="text-[9px] text-amber-300">450€ - 650€</span>
-                                    </div>
-                                </button>
-                                <button
-                                    type="button"
-                                    onClick={() => triggerBookingDrawer('empresa')}
-                                    className="p-2.5 rounded-xl bg-white/[0.05] border border-white/10 hover:border-amber-400/50 flex items-center gap-2 text-left active:scale-95 transition-all"
-                                >
-                                    <span className="text-base">🏢</span>
-                                    <div>
-                                        <span className="text-[11px] font-bold text-white block">Empresas</span>
-                                        <span className="text-[9px] text-amber-300">500€ - 750€</span>
-                                    </div>
-                                </button>
-                            </div>
-
-                            {/* Botón Primario Móvil */}
-                            <button
-                                type="button"
-                                onClick={() => triggerBookingDrawer('empresa')}
-                                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#d4a853] via-[#f7e7c4] to-[#b8860b] text-[#030712] font-black text-xs uppercase tracking-widest shadow-[0_4px_20px_rgba(212,168,83,0.35)] flex items-center justify-center gap-2 active:scale-95 transition-transform cursor-pointer"
-                            >
-                                <span>Verificar Disponibilidad</span>
-                                <span className="text-base leading-none">⚡</span>
-                            </button>
-                        </div>
+            <div className="px-4 sm:px-8 md:px-12 lg:px-16 relative z-10 w-full max-w-7xl mx-auto lg:scale-[0.90] lg:origin-center transition-transform">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-center">
+                    {/* Desktop: Formulario Completo tradicional en columna izquierda */}
+                    <div id="presupuesto-form" className="hidden lg:block w-full max-w-lg mx-auto lg:mx-0 z-20 order-2 lg:order-1 lg:col-span-5 pt-2 lg:pt-0">
+                        <LiquidGlassForm />
                     </div>
 
-                    {/* Títulos y Marca Personal: columna derecha en Desktop (lg:order-2), arriba en móvil (order-1) */}
-                    <div className="order-1 lg:order-2 lg:col-span-7 flex flex-col items-start text-left lg:pl-6">
-                        {/* Seasonal urgency micro-badge */}
-                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-300 text-[11px] sm:text-xs font-semibold tracking-wider uppercase mb-3 sm:mb-5 backdrop-blur-md">
-                            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                            <span>Campaña Cenas de Empresa & Navidad · Últimas Fechas Q4</span>
+                    {/* Títulos y Marca Personal: limpio y visualmente ligero en móvil */}
+                    <div className="w-full order-1 lg:order-2 lg:col-span-7 flex flex-col items-start text-left lg:pl-6">
+                        {/* Micro-badge de autoridad */}
+                        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 text-[10px] sm:text-xs font-semibold tracking-wider uppercase mb-2 sm:mb-4 backdrop-blur-md">
+                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                            <span>Ilusionista en Madrid · Bodas & Empresas</span>
                         </div>
 
                         {/* Semantic H1 for SEO + Instant LCP Paint */}
-                        <h1 className="font-[Cinzel] text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-3 sm:mb-4 md:mb-6 tracking-wider drop-shadow-lg leading-none flex flex-col items-start">
-                            <span className="text-[#d4a853] block mb-1">ANGEL</span>
+                        <h1 className="font-[Cinzel] text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-2 sm:mb-4 md:mb-6 tracking-wider drop-shadow-lg leading-none flex flex-col items-start">
+                            <span className="text-[#d4a853] block mb-0.5 sm:mb-1">ANGEL</span>
                             <span className="text-white block">RUIZ</span>
                         </h1>
                         
-                        <div className="my-1.5 sm:my-2 md:my-4">
-                            <p className="text-xs sm:text-base md:text-lg lg:text-xl text-slate-200 tracking-[0.12em] sm:tracking-[0.15em] uppercase border-l-4 border-[#d4a853]/50 py-2 sm:py-2.5 md:py-3 px-3.5 sm:px-4 md:px-6 inline-block backdrop-blur-md bg-white/5 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] text-left leading-relaxed font-accent rounded-r-xl">
+                        <div className="my-1 sm:my-2 md:my-4 max-w-lg">
+                            <p className="text-xs sm:text-base md:text-lg lg:text-xl text-slate-200 tracking-[0.08em] sm:tracking-[0.15em] border-l-3 sm:border-l-4 border-[#d4a853]/60 py-1.5 sm:py-2.5 md:py-3 px-3 sm:px-4 md:px-6 inline-block backdrop-blur-md bg-white/5 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] text-left leading-relaxed font-accent rounded-r-xl">
                                 Ilusionista profesional con más de <span className="font-[Cinzel] font-bold text-[#d4a853] text-sm sm:text-lg md:text-xl lg:text-3xl">10</span> años de experiencia
                             </p>
                         </div>
@@ -131,14 +73,43 @@ const HeroClient = ({ onOpenVideo, onOpenContact }) => {
                             "LA MAGIA QUE HACE QUE TU EVENTO SEA INOLVIDABLE."
                         </p>
 
-                        {/* Botón: Ver Show en Directo */}
-                        <div className="mt-3 sm:mt-5 flex flex-wrap items-center gap-3">
+                        {/* Acciones directas en Móvil: 2 botones concisos sin saturar la pantalla */}
+                        <div className="lg:hidden flex items-center gap-2.5 w-full max-w-sm mt-3">
+                            <button
+                                type="button"
+                                onClick={() => triggerBookingDrawer('empresa')}
+                                className="flex-1 py-3 px-3 rounded-xl bg-gradient-to-r from-[#d4a853] via-[#f7e7c4] to-[#b8860b] text-[#030712] font-black text-xs uppercase tracking-wider shadow-[0_4px_20px_rgba(212,168,83,0.35)] flex items-center justify-center gap-1.5 active:scale-95 transition-transform cursor-pointer"
+                            >
+                                <span>Pedir Fecha</span>
+                                <Sparkles className="w-3.5 h-3.5 text-[#030712]" />
+                            </button>
+
                             <button
                                 type="button"
                                 onClick={onOpenVideo}
-                                className="inline-flex items-center px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-slate-950/80 hover:bg-[#d4a853]/15 border border-[#d4a853]/40 hover:border-[#d4a853] text-[#d4a853] hover:text-white transition-all duration-300 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.5),0_0_15px_rgba(212,168,83,0.1)] active:scale-95 cursor-pointer text-xs sm:text-sm font-semibold tracking-wider uppercase"
+                                className="flex-1 py-3 px-3 rounded-xl bg-slate-950/75 border border-white/20 hover:border-amber-400/50 text-slate-200 font-bold text-xs uppercase tracking-wider backdrop-blur-md flex items-center justify-center gap-1.5 active:scale-95 transition-all cursor-pointer"
                             >
-                                <span>Ver Show en Directo <span className="opacity-70 text-[10px] sm:text-xs font-normal normal-case">(1 min)</span></span>
+                                <span>Ver Show</span>
+                                <span className="text-[10px] text-amber-300 opacity-80">(1 min)</span>
+                            </button>
+                        </div>
+
+                        {/* Micro-prueba social en Móvil */}
+                        <div className="lg:hidden flex items-center gap-2 mt-2.5 text-[10px] text-slate-400">
+                            <span className="text-amber-400 font-bold">★★★★★</span>
+                            <span>Trato directo sin agencias</span>
+                            <span className="text-white/20">•</span>
+                            <span>Escuela DaOrtiz</span>
+                        </div>
+
+                        {/* Botón Desktop: Ver Show en Directo */}
+                        <div className="hidden lg:flex mt-5 items-center gap-3">
+                            <button
+                                type="button"
+                                onClick={onOpenVideo}
+                                className="inline-flex items-center px-5 py-2.5 rounded-full bg-slate-950/80 hover:bg-[#d4a853]/15 border border-[#d4a853]/40 hover:border-[#d4a853] text-[#d4a853] hover:text-white transition-all duration-300 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.5),0_0_15px_rgba(212,168,83,0.1)] active:scale-95 cursor-pointer text-xs sm:text-sm font-semibold tracking-wider uppercase"
+                            >
+                                <span>Ver Show en Directo <span className="opacity-70 text-xs font-normal normal-case">(1 min)</span></span>
                             </button>
                         </div>
                     </div>
@@ -189,7 +160,7 @@ export default function HomeClient({ children }) {
 export const PerpetualCard = ({ children, className = "" }) => {
     return (
         <div 
-            className={`p-6 sm:p-10 rounded-[2rem] sm:rounded-[2.5rem] bg-white/5 backdrop-blur-xl border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] hover:border-amber-500/30 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(212,168,83,0.1)] transition-all duration-300 relative overflow-hidden group ${className}`}
+            className={`p-5 sm:p-10 rounded-2xl sm:rounded-[2.5rem] bg-white/5 backdrop-blur-xl border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] hover:border-amber-500/30 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(212,168,83,0.1)] transition-all duration-300 relative overflow-hidden group ${className}`}
         >
             <div 
                 className="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-transparent pointer-events-none opacity-40 group-hover:opacity-75 transition-opacity duration-500 will-change-[opacity]"
