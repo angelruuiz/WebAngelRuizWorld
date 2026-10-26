@@ -58,11 +58,11 @@ export default function sitemap() {
       images: ['https://angelruiz.world/images/foto-bio.webp'],
     },
     {
-      url: 'https://angelruiz.world/particulares',
+      url: 'https://angelruiz.world/contacto',
       lastModified: lastMod,
-      changeFrequency: 'weekly',
-      priority: 0.9,
-      images: ['https://angelruiz.world/images/mago-madrid-evento-privado.webp'],
+      changeFrequency: 'monthly',
+      priority: 0.75,
+      images: ['https://angelruiz.world/images/foto-bio.webp'],
     },
     {
       url: 'https://angelruiz.world/dossier',

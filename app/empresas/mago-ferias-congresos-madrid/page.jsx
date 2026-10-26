@@ -70,7 +70,12 @@ const schemaJson = {
     {
       "@type": "Service",
       "name": "Mago para Ferias y Congresos en Madrid",
-      "provider": { "@type": "Person", "name": "Ángel Ruiz" },
+      "provider": {
+        "@type": "Person",
+        "@id": "https://angelruiz.world/#person",
+        "name": "Ángel Ruiz",
+        "url": "https://angelruiz.world/sobre-mi"
+      },
       "areaServed": "Comunidad de Madrid",
       "description": "Magia promocional para stands y ferias en IFEMA y recintos feriales de Madrid. Captación y cualificación de leads B2B.",
       "serviceType": "Trade Show Magic Entertainment",

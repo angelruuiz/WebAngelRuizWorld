@@ -13,8 +13,7 @@ export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromi
     }, []);
 
     const handlePhoneInput = (e) => {
-        e.target.value = e.target.value.replace(/[^0-9]/g, '');
-        if (e.target.value.length > 9) e.target.value = e.target.value.slice(0, 9);
+        e.target.value = e.target.value.replace(/[^0-9+ ]/g, '').slice(0, 16);
     };
 
     const handleSubmit = async (e) => {
@@ -130,11 +129,11 @@ export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromi
                                     required
                                     name="phone"
                                     type="tel"
-                                    placeholder="600123456"
+                                    placeholder="+34 600 12 34 56"
                                     autoComplete="tel"
                                     onInput={handlePhoneInput}
                                     minLength="9"
-                                    maxLength="9"
+                                    maxLength="16"
                                     className="w-full bg-slate-900/90 sm:bg-white/[0.04] hover:bg-white/[0.07] focus:bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 pl-10 pr-3 text-slate-100 text-sm sm:text-xs focus:outline-none transition-all placeholder:text-slate-500 shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
                                 />
                             </div>

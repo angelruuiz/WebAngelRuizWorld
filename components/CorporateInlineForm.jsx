@@ -14,8 +14,7 @@ export default function CorporateInlineForm({ title = "Solicitar Propuesta para 
     }, []);
 
     const handlePhoneInput = (e) => {
-        e.target.value = e.target.value.replace(/[^0-9]/g, '');
-        if (e.target.value.length > 9) e.target.value = e.target.value.slice(0, 9);
+        e.target.value = e.target.value.replace(/[^0-9+ ]/g, '').slice(0, 16);
     };
 
     const handleSubmit = async (e) => {
@@ -113,7 +112,7 @@ export default function CorporateInlineForm({ title = "Solicitar Propuesta para 
                                     type="text"
                                     placeholder="Ej. Laura Gómez (Event Manager)"
                                     aria-label="Nombre y Cargo"
-                                    className="w-full bg-slate-900/90 sm:bg-white/[0.04] hover:bg-white/[0.07] focus:bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 pl-10 pr-3 text-slate-100 text-sm sm:text-xs focus:outline-none transition-all placeholder:text-slate-500 shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
+                                    className="w-full bg-slate-900/90 sm:bg-white/[0.04] hover:bg-white/[0.07] focus:bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 pl-10 pr-3 text-slate-100 text-base sm:text-sm focus:outline-none transition-all placeholder:text-slate-500 shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
                                 />
                             </div>
                         </div>
@@ -129,7 +128,7 @@ export default function CorporateInlineForm({ title = "Solicitar Propuesta para 
                                     type="text"
                                     placeholder="Nombre de tu empresa"
                                     aria-label="Empresa o Marca"
-                                    className="w-full bg-slate-900/90 sm:bg-white/[0.04] hover:bg-white/[0.07] focus:bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 px-4 text-slate-100 text-sm sm:text-xs focus:outline-none transition-all placeholder:text-slate-500 shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
+                                    className="w-full bg-slate-900/90 sm:bg-white/[0.04] hover:bg-white/[0.07] focus:bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 px-4 text-slate-100 text-base sm:text-sm focus:outline-none transition-all placeholder:text-slate-500 shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
                                 />
                             </div>
                         </div>
@@ -146,12 +145,12 @@ export default function CorporateInlineForm({ title = "Solicitar Propuesta para 
                                     required
                                     name="phone"
                                     type="tel"
-                                    placeholder="600123456"
+                                    placeholder="+34 600 12 34 56"
                                     aria-label="Teléfono corporativo"
                                     onInput={handlePhoneInput}
                                     minLength="9"
-                                    maxLength="9"
-                                    className="w-full bg-slate-900/90 sm:bg-white/[0.04] hover:bg-white/[0.07] focus:bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 pl-10 pr-3 text-slate-100 text-sm sm:text-xs focus:outline-none transition-all placeholder:text-slate-500 shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
+                                    maxLength="16"
+                                    className="w-full bg-slate-900/90 sm:bg-white/[0.04] hover:bg-white/[0.07] focus:bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 pl-10 pr-3 text-slate-100 text-base sm:text-sm focus:outline-none transition-all placeholder:text-slate-500 shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
                                 />
                             </div>
                         </div>
@@ -168,7 +167,7 @@ export default function CorporateInlineForm({ title = "Solicitar Propuesta para 
                                     type="email"
                                     placeholder="contacto@empresa.com"
                                     aria-label="Email corporativo"
-                                    className="w-full bg-slate-900/90 sm:bg-white/[0.04] hover:bg-white/[0.07] focus:bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 pl-10 pr-3 text-slate-100 text-sm sm:text-xs focus:outline-none transition-all placeholder:text-slate-500 shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
+                                    className="w-full bg-slate-900/90 sm:bg-white/[0.04] hover:bg-white/[0.07] focus:bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 pl-10 pr-3 text-slate-100 text-base sm:text-sm focus:outline-none transition-all placeholder:text-slate-500 shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
                                 />
                             </div>
                         </div>
@@ -183,7 +182,7 @@ export default function CorporateInlineForm({ title = "Solicitar Propuesta para 
                                 <select
                                     name="eventType"
                                     aria-label="Formato de evento corporativo"
-                                    className="w-full bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 px-3.5 text-slate-200 text-sm sm:text-xs focus:outline-none transition-all appearance-none cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
+                                    className="w-full bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 px-3.5 text-slate-200 text-base sm:text-sm focus:outline-none transition-all appearance-none cursor-pointer shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
                                 >
                                     <option value="Cena de Empresa / Gala">Cena de Empresa / Gala</option>
                                     <option value="Feria / Congreso (IFEMA)">Feria / Congreso (IFEMA)</option>
@@ -208,7 +207,7 @@ export default function CorporateInlineForm({ title = "Solicitar Propuesta para 
                                     type="date"
                                     min={dateMin}
                                     aria-label="Fecha prevista del evento"
-                                    className="w-full bg-slate-900/90 sm:bg-white/[0.04] hover:bg-white/[0.07] focus:bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 pl-10 pr-3 text-slate-100 text-sm sm:text-xs focus:outline-none transition-all [color-scheme:dark] shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
+                                    className="w-full bg-slate-900/90 sm:bg-white/[0.04] hover:bg-white/[0.07] focus:bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 pl-10 pr-3 text-slate-100 text-base sm:text-sm focus:outline-none transition-all [color-scheme:dark] shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
                                 />
                             </div>
                         </div>
@@ -225,7 +224,7 @@ export default function CorporateInlineForm({ title = "Solicitar Propuesta para 
                                 rows="2"
                                 placeholder="Nº aproximado de asistentes, ubicación, mensaje o producto a destacar..."
                                 aria-label="Detalles u objetivos del evento"
-                                className="w-full bg-slate-900/90 sm:bg-white/[0.04] hover:bg-white/[0.07] focus:bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 pl-10 pr-3 text-slate-100 text-sm sm:text-xs focus:outline-none transition-all placeholder:text-slate-500 resize-none shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
+                                className="w-full bg-slate-900/90 sm:bg-white/[0.04] hover:bg-white/[0.07] focus:bg-slate-900 border border-white/15 focus:border-amber-400 rounded-xl py-3 sm:py-2.5 pl-10 pr-3 text-slate-100 text-base sm:text-sm focus:outline-none transition-all placeholder:text-slate-500 resize-none shadow-[inset_0_1px_2px_rgba(0,0,0,0.3)]"
                             ></textarea>
                         </div>
                     </div>

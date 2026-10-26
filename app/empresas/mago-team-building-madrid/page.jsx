@@ -69,7 +69,12 @@ const schemaJson = {
     {
       "@type": "Service",
       "name": "Mago para Team Building en Madrid",
-      "provider": { "@type": "Person", "name": "Ángel Ruiz" },
+      "provider": {
+        "@type": "Person",
+        "@id": "https://angelruiz.world/#person",
+        "name": "Ángel Ruiz",
+        "url": "https://angelruiz.world/sobre-mi"
+      },
       "areaServed": "Comunidad de Madrid",
       "description": "Actividades y talleres de magia corporativa para team building, liderazgo y cohesión de equipos de trabajo en Madrid.",
       "serviceType": "Corporate Team Building Entertainment",

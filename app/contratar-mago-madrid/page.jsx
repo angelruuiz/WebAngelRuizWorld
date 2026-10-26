@@ -423,7 +423,7 @@ export default function ContratarMagoMadridPage() {
                         </div>
                         <div className="flex flex-col gap-4 items-end active:scale-[0.97] transition-transform duration-200 shrink-0">
                             <ContactButtonClient label="INICIAR CONTACTO" />
-                            <a href="https://wa.me/34648055636" target="_blank" rel="noopener noreferrer" className="text-sm text-emerald-400 hover:text-emerald-300 font-bold flex items-center gap-2 transition-colors">
+                            <a href="https://wa.me/34648055636?text=Hola%20%C3%81ngel,%20he%20visto%20las%20tarifas%20en%20la%20web%20y%20quiero%20consultar%20disponibilidad." target="_blank" rel="noopener noreferrer" className="text-sm text-emerald-400 hover:text-emerald-300 font-bold flex items-center gap-2 transition-colors">
                                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                                 Consultar disponibilidad ahora
                             </a>

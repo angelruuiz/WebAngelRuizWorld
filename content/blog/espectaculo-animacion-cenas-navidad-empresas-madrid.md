@@ -76,4 +76,4 @@ En [Ángel Ruiz World](/empresas) creemos en la transparencia total de precios p
 
 Las fechas clave de diciembre (especialmente los jueves 3, 10 y 17, y los viernes 4, 11 y 18 de diciembre) suelen bloquearse con meses de antelación. 
 
-Si tu empresa ya ha seleccionado restaurante o espacio en Madrid, [solicita presupuesto inmediato sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para confirmar disponibilidad en menos de 2 horas.
+Si tu empresa ya ha seleccionado restaurante o espacio en Madrid, visita nuestra página de **[mago para cenas de empresa en Madrid](/empresas/mago-cenas-empresa-madrid)** para ver todas las opciones o [solicita presupuesto inmediato sin compromiso](/contratar-mago-madrid) para confirmar disponibilidad en menos de 2 horas.

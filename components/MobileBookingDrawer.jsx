@@ -32,6 +32,21 @@ export default function MobileBookingDrawer({ isOpen, onClose }) {
     }, []);
 
     useEffect(() => {
+        const handleCustomOpen = (e) => {
+            const type = e.detail?.eventType;
+            if (type) {
+                const preset = EVENT_PRESETS.find(p => p.id === type);
+                if (preset) {
+                    setSelectedEvent(preset);
+                    setStep(2);
+                }
+            }
+        };
+        window.addEventListener('open-booking-drawer', handleCustomOpen);
+        return () => window.removeEventListener('open-booking-drawer', handleCustomOpen);
+    }, []);
+
+    useEffect(() => {
         if (isOpen) {
             document.body.style.overflow = 'hidden';
             trackEvent('mobile_drawer_open', { source: 'liquid_bottom_bar' });

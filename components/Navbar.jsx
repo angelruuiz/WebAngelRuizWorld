@@ -34,6 +34,12 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
     }, []);
 
     useEffect(() => {
+        const handleOpenBookingDrawer = () => setIsBookingDrawerOpen(true);
+        window.addEventListener('open-booking-drawer', handleOpenBookingDrawer);
+        return () => window.removeEventListener('open-booking-drawer', handleOpenBookingDrawer);
+    }, []);
+
+    useEffect(() => {
         setIsTransitioning(false);
         setIsMoreMenuOpen(false);
     }, [pathname]);

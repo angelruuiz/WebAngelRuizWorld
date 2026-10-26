@@ -13,8 +13,8 @@ const FadeIn = ({ children, className = "" }) => (
 );
 
 export const metadata = {
-    title: { absolute: 'Mago para Bodas | Magia de Cerca en Madrid · Ángel Ruiz' },
-    description: 'Contrata el mejor mago para bodas en Madrid. Magia de cerca y cóctel de autor que fascina a tus invitados. Respuesta en <2h. ¡Reserva tu fecha!',
+    title: { absolute: 'Mago para Bodas en Madrid | Magia de Cóctel Exclusiva · Ángel Ruiz' },
+    description: 'Mago para bodas en Madrid. Magia de cerca y cóctel interactivo de autor que fascina a los invitados. Reserva anticipada sin comisiones. ¡Consulta fechas!',
     keywords: ['mago para bodas', 'mago para bodas madrid', 'mago bodas madrid', 'contratar mago boda madrid', 'mago coctel boda madrid', 'ilusionista bodas madrid', 'mago para bodas precio madrid', 'mago boda noroeste madrid', 'entretenimiento bodas madrid', 'mago para mi boda madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/particulares/bodas',
@@ -222,7 +222,7 @@ export default function BodasDetailPage() {
                                     <strong className="text-slate-200 font-normal">Requisitos técnicos:</strong> Ninguno. Magia 100% interactiva de cerca en las manos de los invitados, adaptable a interiores y exteriores.
                                 </p>
                                 <a 
-                                    href="https://wa.me/34680650993?text=Hola%20Ángel,%20queremos%20consultar%20disponibilidad%20para%20nuestra%20boda" 
+                                    href="https://wa.me/34648055636?text=Hola%20Ángel,%20queremos%20consultar%20disponibilidad%20para%20nuestra%20boda" 
                                     target="_blank" 
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 text-[#d4a853] hover:text-white transition-colors font-medium whitespace-nowrap self-start sm:self-auto"

@@ -4,14 +4,15 @@ import dynamic from 'next/dynamic';
 import NavFooterClient from '@/components/NavFooterClient';
 import FAQItem from '@/components/FAQItem';
 import CorporateLogosBar from '@/components/CorporateLogosBar';
+import ChristmasUrgencyBanner from '@/components/ChristmasUrgencyBanner';
 
 const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod => mod.MagicCursor), { ssr: false });
 const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
 const CorporateInlineForm = dynamic(() => import('@/components/CorporateInlineForm'), { ssr: false });
 
 export const metadata = {
-  title: { absolute: 'Mago para Cenas de Empresa en Madrid | Fiestas y Navidad · Ángel Ruiz' },
-  description: 'Contrata el mejor mago para cenas de empresa en Madrid y fiestas de Navidad. Magia corporativa de alto impacto que une al equipo. ¡Presupuesto express en 2h!',
+  title: { absolute: 'Mago para Cenas de Empresa en Madrid | Cenas y Navidad' },
+  description: 'Mago profesional para cenas de empresa en Madrid y fiestas de Navidad. Magia de cerca cóctel y sobremesa. Fechas limitadas Q4. ¡Presupuesto express en 2h!',
   keywords: ['mago para cenas de empresa', 'mago para cenas de empresa en madrid', 'mago cenas empresa madrid', 'mago para cena empresa madrid', 'mago cena navidad empresa madrid', 'contratar mago cena empresa', 'entretenimiento cenas empresa madrid', 'mago corporativo madrid', 'animacion cenas empresa madrid', 'mago para eventos de empresa madrid', 'cenas de empresa originales madrid'],
   alternates: {
     canonical: 'https://angelruiz.world/empresas/mago-cenas-empresa-madrid',
@@ -63,7 +64,12 @@ const schemaJson = {
     {
       "@type": "Service",
       "name": "Mago para Cenas de Empresa en Madrid",
-      "provider": { "@type": "Person", "name": "Ángel Ruiz" },
+      "provider": {
+        "@type": "Person",
+        "@id": "https://angelruiz.world/#person",
+        "name": "Ángel Ruiz",
+        "url": "https://angelruiz.world/sobre-mi"
+      },
       "areaServed": "Comunidad de Madrid",
       "description": "Espectáculo de magia corporativa para cenas de empresa en Madrid. Personalizable con marca, logotipos y mensajes de empresa.",
       "serviceType": "Corporate Entertainment",
@@ -106,11 +112,34 @@ export default function Page() {
           <p className="text-lg md:text-xl text-slate-300 max-w-3xl font-light leading-relaxed">
             Convierte la cena de empresa en un evento memorable. Ilusionismo corporativo de alta gama que fomenta el <span className="text-amber-400 font-medium">networking natural, rompe el hielo y refuerza el orgullo de marca</span>.
           </p>
+          {/* Bloque CTA Above-the-fold */}
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <a 
+              href="https://wa.me/34648055636?text=Hola%20Ángel,%20quisiera%20consultar%20disponibilidad%20y%20tarifas%20para%20nuestra%20cena%20de%20empresa%20en%20Madrid"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3.5 rounded-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-emerald-500/25 active:scale-95 transition-all"
+            >
+              <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
+              <span>Consultar Disponibilidad WhatsApp (&lt;15 min)</span>
+            </a>
+            <a
+              href="#presupuesto-empresa"
+              className="px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/15 border border-amber-400/40 text-amber-300 font-bold text-xs uppercase tracking-wider transition-all"
+            >
+              <span>Ver Tarifas y Presupuesto Online</span>
+            </a>
+          </div>
         </div>
       </header>
 
       {/* Social Proof Inmediato: Logos de Empresas Clave */}
       <CorporateLogosBar />
+
+      {/* Banner de Urgencia Campaña de Navidad Q4 */}
+      <div className="max-w-6xl mx-auto px-6">
+        <ChristmasUrgencyBanner />
+      </div>
 
       {/* DASHBOARD DE IMPACTO */}
       <section className="py-20 border-b border-white/10">
@@ -234,6 +263,101 @@ export default function Page() {
         </div>
       </section>
 
+      {/* FICHA TÉCNICA GEO EXTRACTABLE Y FORMATOS */}
+      <section aria-label="Ficha Técnica y Formatos de Cenas de Empresa en Madrid" className="py-12 border-b border-white/10 bg-slate-950/50">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="p-6 md:p-8 rounded-2xl bg-amber-500/10 border border-amber-400/30">
+            <h3 className="text-amber-400 font-bold text-sm uppercase tracking-wider mb-4 flex items-center gap-2">
+              <span>⚡ Ficha Técnica: Ilusionismo para Cenas de Empresa y Navidad</span>
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm text-neutral-300">
+              <div><strong className="text-white">Artista:</strong> Ángel Ruiz (Discípulo de Dani DaOrtiz, +10 años exp.).</div>
+              <div><strong className="text-white">Tarifas Oficiales:</strong> 500€ – 750€ (Directo de artista, sin comisión).</div>
+              <div><strong className="text-white">Formatos:</strong> Cóctel Networking, Pases por Mesa y Show de Sobremesa.</div>
+              <div><strong className="text-white">Duración:</strong> 60 a 90 minutos adaptables al ritmo del banquete.</div>
+              <div><strong className="text-white">Zona de Cobertura:</strong> Madrid Capital y municipios (Las Rozas, Pozuelo, Alcobendas).</div>
+              <div><strong className="text-white">Presupuesto Express:</strong> Respuesta formal por WhatsApp en &lt;15 min o email en &lt;2h.</div>
+            </div>
+
+            {/* Tabla Comparativa de Formatos para Cenas */}
+            <div className="mt-8 pt-6 border-t border-amber-400/20">
+              <h4 className="text-xs font-mono uppercase tracking-wider text-amber-300 mb-3 font-semibold">
+                ✦ Formatos de Ilusionismo para Cenas Corporativas
+              </h4>
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs text-left border border-white/10 rounded-xl overflow-hidden">
+                  <thead>
+                    <tr className="bg-white/5 text-amber-400 uppercase tracking-wider text-[11px]">
+                      <th className="px-4 py-3 font-medium">Formato</th>
+                      <th className="px-4 py-3 font-medium">Momento Óptimo</th>
+                      <th className="px-4 py-3 font-medium">Duración</th>
+                      <th className="px-4 py-3 font-medium">Impacto en Asistentes</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-slate-300 font-light divide-y divide-white/5">
+                    <tr>
+                      <td className="px-4 py-3 text-white font-medium">Cóctel de Bienvenida</td>
+                      <td className="px-4 py-3">Recepción y copa inicial</td>
+                      <td className="px-4 py-3">45–60 min</td>
+                      <td className="px-4 py-3">Rompe el hielo y conecta grupos</td>
+                    </tr>
+                    <tr className="bg-white/[0.02]">
+                      <td className="px-4 py-3 text-white font-medium">Magia en Mesas (Close-Up)</td>
+                      <td className="px-4 py-3">Entre platos o sobremesa</td>
+                      <td className="px-4 py-3">60–90 min</td>
+                      <td className="px-4 py-3">Asombro interactivo a centímetros</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-3 text-white font-medium">Show de Sobremesa</td>
+                      <td className="px-4 py-3">Café / brindis final</td>
+                      <td className="px-4 py-3">30–45 min</td>
+                      <td className="px-4 py-3">Cierre unificado y mentalismo corporativo</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIOS Y REPUTACIÓN CORPORATIVA */}
+      <section aria-label="Testimonios y Valoraciones de Clientes Corporativos" className="py-12 border-b border-white/10 bg-slate-950/40">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="rounded-2xl bg-amber-500/5 border border-amber-500/20 p-6 sm:p-8">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+              <h3 className="text-xs text-amber-400 font-bold uppercase tracking-widest flex items-center gap-2">
+                <span>⭐⭐⭐⭐⭐</span>
+                <span>Valoraciones de Clientes Corporativos</span>
+              </h3>
+              <a
+                href="https://www.google.com/search?q=%C3%81ngel+Ruiz+Mago+e+Ilusionista+Madrid"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/5 border border-amber-400/30 text-amber-300 text-xs font-semibold hover:bg-amber-400/10 hover:border-amber-400/60 transition-colors w-fit"
+                aria-label="Ver 4.9 estrellas en Google Reviews (+50 opiniones reales) en Google Maps"
+              >
+                <span className="text-amber-400 font-bold">4.9 ★</span>
+                <span>en Google Reviews (+50 opiniones reales)</span>
+                <span className="text-slate-400 text-[10px]">↗</span>
+              </a>
+            </div>
+            <blockquote className="mb-6 border-b border-white/10 pb-6">
+              <p className="italic text-slate-200 mb-3 leading-relaxed">
+                "Contamos con Ángel para los eventos de Movistar Estudiantes y el resultado fue extraordinario: profesionalidad absoluta, cercanía y una magia que dejó a todo el mundo boquiabierto."
+              </p>
+              <footer className="text-xs text-amber-400/90 font-bold">— Movistar Estudiantes</footer>
+            </blockquote>
+            <blockquote>
+              <p className="italic text-slate-200 mb-3 leading-relaxed">
+                "Ángel Ruiz transformó nuestra cena anual de empresa. Su magia de cerca entre plato y plato es elegante, participativa e inteligente. Logró conectar a departamentos enteros que apenas se hablaban. Una experiencia corporativa impecable."
+              </p>
+              <footer className="text-xs text-amber-400/90 font-bold">— HR Manager, Multinacional Consultoría</footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-20 bg-slate-950/30">
         <div className="max-w-4xl mx-auto px-6">
@@ -273,7 +397,7 @@ export default function Page() {
       </section>
 
       {/* CALL TO ACTION */}
-      <section className="py-20 border-t border-white/10 relative overflow-hidden">
+      <section id="presupuesto-empresa" className="py-20 border-t border-white/10 relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
           <h2 className="text-3xl md:text-4xl font-[Cinzel] font-bold text-white uppercase tracking-wide mb-4">
             Diseñemos una Cena de Empresa <span className="text-amber-400">Inolvidable</span>

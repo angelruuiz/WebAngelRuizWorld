@@ -57,8 +57,7 @@ export const ContactFormModal = ({ isOpen, onClose }) => {
     const FORMSPREE_ENDPOINT = "https://formspree.io/f/xeoydngl"; 
 
     const handlePhoneInput = (e) => {
-        e.target.value = e.target.value.replace(/[^0-9]/g, '');
-        if (e.target.value.length > 9) e.target.value = e.target.value.slice(0, 9);
+        e.target.value = e.target.value.replace(/[^0-9+ ]/g, '').slice(0, 16);
     };
 
     const handleSubmit = async (e) => {
@@ -109,14 +108,14 @@ export const ContactFormModal = ({ isOpen, onClose }) => {
                             <label className="text-xs uppercase tracking-widest text-[#d4a853] ml-1">Nombre</label>
                             <div className="relative">
                                 <UserIcon className="absolute left-3 top-3.5 w-4 h-4 text-slate-600" />
-                                <input required name="name" type="text" placeholder="Tu nombre" aria-label="Nombre completo para la reserva" className="w-full bg-[rgba(0,0,0,0.4)] border border-[rgba(255,255,255,0.08)] rounded-xl py-3 pl-10 pr-4 text-slate-200 focus:outline-none focus:border-[#d4a853]/50" />
+                                <input required name="name" type="text" placeholder="Tu nombre" aria-label="Nombre completo para la reserva" className="w-full bg-[rgba(0,0,0,0.4)] border border-[rgba(255,255,255,0.08)] rounded-xl py-3 pl-10 pr-4 text-slate-200 text-base md:text-sm focus:outline-none focus:border-[#d4a853]/50" />
                             </div>
                         </div>
                         <div className="space-y-1">
                             <label className="text-xs uppercase tracking-widest text-[#d4a853] ml-1">Teléfono</label>
                             <div className="relative">
                                 <Phone className="absolute left-3 top-3.5 w-4 h-4 text-slate-600" />
-                                <input required name="phone" type="tel" placeholder="600123456" aria-label="Número de teléfono de contacto" onInput={handlePhoneInput} minLength="9" maxLength="9" className="w-full bg-[rgba(0,0,0,0.4)] border border-[rgba(255,255,255,0.08)] rounded-xl py-3 pl-10 pr-4 text-slate-200 focus:outline-none focus:border-[#d4a853]/50" />
+                                <input required name="phone" type="tel" placeholder="+34 600 12 34 56" aria-label="Número de teléfono de contacto" onInput={handlePhoneInput} minLength="9" maxLength="16" className="w-full bg-[rgba(0,0,0,0.4)] border border-[rgba(255,255,255,0.08)] rounded-xl py-3 pl-10 pr-4 text-slate-200 text-base md:text-sm focus:outline-none focus:border-[#d4a853]/50" />
                             </div>
                         </div>
                     </div>
@@ -124,14 +123,14 @@ export const ContactFormModal = ({ isOpen, onClose }) => {
                         <label className="text-xs uppercase tracking-widest text-[#d4a853] ml-1">Email</label>
                         <div className="relative">
                             <Mail className="absolute left-3 top-3.5 w-4 h-4 text-slate-600" />
-                            <input required name="email" type="email" placeholder="tu@email.com" aria-label="Correo electrónico de contacto" className="w-full bg-[rgba(0,0,0,0.4)] border border-[rgba(255,255,255,0.08)] rounded-xl py-3 pl-10 pr-4 text-slate-200 focus:outline-none focus:border-[#d4a853]/50" />
+                            <input required name="email" type="email" placeholder="tu@email.com" aria-label="Correo electrónico de contacto" className="w-full bg-[rgba(0,0,0,0.4)] border border-[rgba(255,255,255,0.08)] rounded-xl py-3 pl-10 pr-4 text-slate-200 text-base md:text-sm focus:outline-none focus:border-[#d4a853]/50" />
                         </div>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="space-y-1">
                             <label className="text-xs uppercase tracking-widest text-[#d4a853] ml-1">Tipo de Evento</label>
                             <div className="relative">
-                                <select name="eventType" aria-label="Selector del tipo de evento" className="w-full bg-[rgba(0,0,0,0.4)] border border-[rgba(255,255,255,0.08)] rounded-xl py-3 px-4 text-slate-200 focus:outline-none focus:border-[#d4a853]/50 appearance-none cursor-pointer text-sm">
+                                <select name="eventType" aria-label="Selector del tipo de evento" className="w-full bg-[rgba(0,0,0,0.4)] border border-[rgba(255,255,255,0.08)] rounded-xl py-3 px-4 text-slate-200 focus:outline-none focus:border-[#d4a853]/50 appearance-none cursor-pointer text-base md:text-sm">
                                     <option>Boda</option><option>Evento de Empresa</option><option>Fiesta Privada</option><option>Comunión</option><option>Otro</option>
                                 </select>
                                 <div className="absolute right-4 top-4 pointer-events-none border-l-[4px] border-l-transparent border-t-[5px] border-t-slate-500 border-r-[4px] border-r-transparent"></div>
@@ -141,7 +140,7 @@ export const ContactFormModal = ({ isOpen, onClose }) => {
                             <label className="text-xs uppercase tracking-widest text-[#d4a853] ml-1">Fecha Estimada</label>
                             <div className="relative">
                                 <Calendar className="absolute left-3 top-3.5 w-4 h-4 text-slate-600" />
-                                <input name="date" type="date" aria-label="Fecha estimada del evento" min={dateMin} className="w-full bg-[rgba(0,0,0,0.4)] border border-[rgba(255,255,255,0.08)] rounded-xl py-3 pl-10 pr-4 text-slate-200 focus:outline-none focus:border-[#d4a853]/50 [color-scheme:dark] text-sm" />
+                                <input name="date" type="date" aria-label="Fecha estimada del evento" min={dateMin} className="w-full bg-[rgba(0,0,0,0.4)] border border-[rgba(255,255,255,0.08)] rounded-xl py-3 pl-10 pr-4 text-slate-200 focus:outline-none focus:border-[#d4a853]/50 [color-scheme:dark] text-base md:text-sm" />
                             </div>
                         </div>
                     </div>
@@ -149,7 +148,7 @@ export const ContactFormModal = ({ isOpen, onClose }) => {
                         <label className="text-xs uppercase tracking-widest text-[#d4a853] ml-1">Mensaje</label>
                         <div className="relative">
                             <MessageSquare className="absolute left-3 top-3.5 w-4 h-4 text-slate-600" />
-                            <textarea required name="message" rows="4" aria-label="Detalles adicionales del evento que solicitas" placeholder="Cuéntame más detalles sobre lo que buscas..." className="w-full bg-[rgba(0,0,0,0.4)] border border-[rgba(255,255,255,0.08)] rounded-xl py-3 pl-10 pr-4 text-slate-200 focus:outline-none focus:border-[#d4a853]/50 resize-none text-sm"></textarea>
+                            <textarea required name="message" rows="4" aria-label="Detalles adicionales del evento que solicitas" placeholder="Cuéntame más detalles sobre lo que buscas..." className="w-full bg-[rgba(0,0,0,0.4)] border border-[rgba(255,255,255,0.08)] rounded-xl py-3 pl-10 pr-4 text-slate-200 focus:outline-none focus:border-[#d4a853]/50 resize-none text-base md:text-sm"></textarea>
                         </div>
                     </div>
 

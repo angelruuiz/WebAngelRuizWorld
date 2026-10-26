@@ -175,9 +175,9 @@ export default function DigitalCard() {
           {/* ACTION BUTTONS (4 TARGETS) */}
           <div className="space-y-2.5 my-2">
 
-            {/* 1. WHATSAPP DIRECTO (SIN MENSAJE PREDETERMINADO) */}
+            {/* 1. WHATSAPP DIRECTO */}
             <a
-              href="https://wa.me/34648055636"
+              href="https://wa.me/34648055636?text=Hola%20%C3%81ngel,%20te%20contacto%20desde%20tu%20tarjeta%20digital%20para%20consultar%20fechas."
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center justify-between p-3.5 rounded-2xl bg-white/[0.03] hover:bg-emerald-500/15 border border-white/[0.08] hover:border-emerald-500/40 transition-all duration-200 shadow-sm active:scale-[0.98]"

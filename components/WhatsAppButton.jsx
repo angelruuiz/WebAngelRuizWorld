@@ -48,7 +48,7 @@ export default function WhatsAppButton() {
     if (pathname.includes('/bodas') || pathname.includes('boda')) {
         waMessage = '¡Hola Ángel! Nos casamos y nos gustaría consultar disponibilidad y fechas para nuestra boda en Madrid';
     } else if (pathname.includes('/empresas') || pathname.includes('navidad') || pathname.includes('cenas') || pathname.includes('conferenciante')) {
-        waMessage = 'Hola Ángel, quisiera consultar disponibilidad y presupuesto para una cena de empresa / evento corporativo';
+        waMessage = 'Hola Ángel, quisiera consultar disponibilidad para nuestra cena de empresa o evento de Navidad en Madrid. ¿Qué fechas te quedan libres?';
     } else if (pathname.includes('/comuniones') || pathname.includes('comunion')) {
         waMessage = 'Hola Ángel, me gustaría consultar disponibilidad y presupuesto para una comunión familiar en Madrid';
     } else if (pathname.includes('/cumpleanos') || pathname.includes('cumple')) {

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import NewsletterForm from '@/components/NewsletterForm';
+import ChristmasUrgencyBanner from '@/components/ChristmasUrgencyBanner';
 import { getPostData, getSortedPostsData } from '@/lib/blog';
 import { ReadingProgress } from '@/components/VisualEffects';
 import { Sparkles, MessageSquare, WhatsApp } from '@/components/Icons';
@@ -63,6 +64,18 @@ export default async function BlogPost({ params }) {
   const sameCategoryPosts = allPosts.filter(p => p.slug !== params.slug && p.category === postData.category);
   const otherPosts = allPosts.filter(p => p.slug !== params.slug && p.category !== postData.category);
   const relatedPosts = [...sameCategoryPosts, ...otherPosts].slice(0, 3);
+
+  const isCorporateOrChristmas = postData.category === 'Empresas' || 
+    params.slug.includes('navidad') || 
+    params.slug.includes('cena') || 
+    params.slug.includes('empresa') ||
+    params.slug.includes('coctel') ||
+    params.slug.includes('networking');
+
+  const isWedding = !isCorporateOrChristmas && (
+    params.slug.includes('boda') || 
+    (postData.category === 'Particulares' && params.slug.includes('boda'))
+  );
 
   const plainText = (postData.contentHtml || '').replace(/<[^>]+>/g, ' ');
   const words = plainText.trim().split(/\s+/).filter(Boolean);
@@ -196,6 +209,19 @@ export default async function BlogPost({ params }) {
           </h1>
           <div className="h-[2px] w-20 bg-amber-500 mx-auto rounded-full" />
         </header>
+
+        {isCorporateOrChristmas && (
+          <ChristmasUrgencyBanner className="mb-12" />
+        )}
+
+        {isWedding && (
+          <ChristmasUrgencyBanner 
+            title="Temporada Bodas 2026-2027: Reserva de Fechas"
+            subtitle="Asegura el cóctel interactivo para tu boda en Madrid sin agencias ni comisiones de intermediarios. Consulta disponibilidad express."
+            waCustomMessage="¡Hola Ángel! Nos casamos y nos gustaría consultar disponibilidad y fechas para nuestra boda en Madrid."
+            className="mb-12"
+          />
+        )}
 
         <div 
           className="blog-content prose prose-invert prose-lg max-w-none 

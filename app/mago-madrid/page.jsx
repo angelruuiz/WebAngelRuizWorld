@@ -56,7 +56,12 @@ export default function MagoMadridPage() {
                 "@type": "Service",
                 "@id": "https://angelruiz.world/mago-madrid/#service",
                 "name": "Mago en Madrid",
-                "provider": { "@type": "Person", "name": "Ángel Ruiz" },
+                "provider": {
+                    "@type": "Person",
+                    "@id": "https://angelruiz.world/#person",
+                    "name": "Ángel Ruiz",
+                    "url": "https://angelruiz.world/sobre-mi"
+                },
                 "areaServed": "Madrid",
                 "description": "Servicio profesional de ilusionismo y magia de cerca para eventos en Madrid capital y Comunidad de Madrid.",
                 "serviceType": "Entertainment",

@@ -14,6 +14,10 @@ const AI_BOTS = [
   'cohere-ai',
   'YouBot',
   'DuckAssistBot',
+  'GoogleOther',
+  'Amazonbot',
+  'FacebookBot',
+  'Diffbot',
 ];
 
 const SEARCH_IMAGE_BOTS = [
@@ -29,18 +33,18 @@ export default function robots() {
       ...AI_BOTS.map((bot) => ({
         userAgent: bot,
         allow: '/',
-        disallow: ['/admin', '/api'],
+        disallow: ['/admin', '/api', '/panel'],
       })),
       // Bots de imágenes y búsqueda
       ...SEARCH_IMAGE_BOTS.map((bot) => ({
         userAgent: bot,
         allow: '/',
-        disallow: ['/admin', '/api'],
+        disallow: ['/admin', '/api', '/panel'],
       })),
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/admin', '/api'],
+        disallow: ['/admin', '/api', '/panel'],
       },
     ],
     sitemap: [

@@ -70,7 +70,12 @@ const schemaJson = {
     {
       "@type": "Service",
       "name": "Mago Conferenciante para Empresas en Madrid",
-      "provider": { "@type": "Person", "name": "Ángel Ruiz" },
+      "provider": {
+        "@type": "Person",
+        "@id": "https://angelruiz.world/#person",
+        "name": "Ángel Ruiz",
+        "url": "https://angelruiz.world/sobre-mi"
+      },
       "areaServed": "Comunidad de Madrid",
       "description": "Conferencias motivacionales y ponencias corporativas combinadas con ilusionismo para empresas y convenciones en Madrid.",
       "serviceType": "Corporate Keynote Speaker",

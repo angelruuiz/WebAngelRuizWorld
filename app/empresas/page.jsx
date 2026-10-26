@@ -5,6 +5,7 @@ import NavFooterClient from '@/components/NavFooterClient';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import FAQItem from '@/components/FAQItem';
 import CorporateLogosBar from '@/components/CorporateLogosBar';
+import ChristmasUrgencyBanner from '@/components/ChristmasUrgencyBanner';
 
 const ContactButtonClient = dynamic(() => import('@/components/ContactButtonClient'), { ssr: false });
 const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod => mod.MagicCursor), { ssr: false });
@@ -12,22 +13,22 @@ const ParticleBackground = dynamic(() => import('@/components/VisualEffects').th
 const CorporateInlineForm = dynamic(() => import('@/components/CorporateInlineForm'), { ssr: false });
 
 export const metadata = {
-    title: { absolute: 'Mago para Empresas en Madrid | Magia Corporativa y Cenas · Ángel Ruiz' },
-    description: 'Mago profesional para empresas en Madrid. Ilusionismo corporativo para cenas de empresa, team building y eventos de marca. ¡Presupuesto express en 2h!',
-    keywords: ['mago para empresas madrid', 'mago para empresas', 'mago empresas', 'mago eventos corporativos madrid', 'mago cenas empresa madrid', 'mago team building madrid', 'mago conferenciante madrid', 'contratar mago empresa madrid', 'ilusionista corporativo madrid', 'mejor mago empresas madrid', 'mago para eventos de empresa madrid', 'mago eventos empresariales', 'magia para empresas', 'mago corporativo premium madrid'],
+    title: { absolute: 'Mago para Empresas en Madrid | Eventos Corporativos y B2B' },
+    description: 'Mago para empresas en Madrid: convenciones, kick-offs, team building y ferias. Ilusionismo corporativo de alto impacto. ¡Presupuesto express en 2h!',
+    keywords: ['mago para empresas madrid', 'mago para empresas', 'mago empresas', 'mago eventos corporativos madrid', 'mago team building madrid', 'mago conferenciante madrid', 'contratar mago empresa madrid', 'ilusionista corporativo madrid', 'mejor mago empresas madrid', 'mago para eventos de empresa madrid', 'mago eventos empresariales', 'magia para empresas', 'mago corporativo premium madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/empresas',
     },
     openGraph: {
         url: 'https://angelruiz.world/empresas',
-        title: 'Mago para Empresas en Madrid | Magia Corporativa y Cenas · Ángel Ruiz',
-        description: 'Mago profesional para empresas en Madrid. Ilusionismo corporativo para cenas de empresa, team building y eventos de marca. ¡Presupuesto express en 2h!',
+        title: 'Mago para Empresas en Madrid | Eventos Corporativos y B2B',
+        description: 'Mago para empresas en Madrid: convenciones, kick-offs, team building y ferias. Ilusionismo corporativo de alto impacto. ¡Presupuesto express en 2h!',
         images: [{ url: '/images/evento-angel-ruiz-magia.webp', width: 1200, height: 630 }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago para Empresas en Madrid | Magia Corporativa y Cenas · Ángel Ruiz',
-        description: 'Especialista en magia corporativa para cenas y convenciones en Madrid. Presupuesto directo en 2h.',
+        title: 'Mago para Empresas en Madrid | Eventos Corporativos y B2B',
+        description: 'Especialista en magia corporativa para eventos, convenciones y ferias en Madrid. Presupuesto directo en 2h.',
         images: ['/images/evento-angel-ruiz-magia.webp'],
     },
 };
@@ -204,6 +205,9 @@ export default function EmpresasPage() {
                         {/* Social Proof Inmediato: Logos de Empresas Clave */}
                         <CorporateLogosBar className="mt-12 mb-4 rounded-3xl" />
 
+                        {/* Banner de Urgencia Campaña Navidad & Cenas Corporativas Q4 */}
+                        <ChristmasUrgencyBanner className="mt-8 mb-8" />
+
                         {/* Ficha Técnica GEO Extractable: Máxima Citabilidad Corporativa B2B */}
                         <section aria-labelledby="ficha-tecnica-empresas" className="mt-16 rounded-3xl bg-slate-950/70 border border-amber-500/25 backdrop-blur-xl p-8 md:p-10 shadow-[0_8px_32px_0_rgba(0,0,0,0.4)]">
                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/10 pb-6 mb-8">
@@ -259,7 +263,7 @@ export default function EmpresasPage() {
                                     <strong className="text-slate-200 font-normal">Cobertura B2B:</strong> Madrid Capital (Cuatro Torres, Azca, Barrio de Salamanca), IFEMA, La Moraleja y desplazamientos nacionales para convenciones de empresa.
                                 </p>
                                 <a 
-                                    href="https://wa.me/34680650993?text=Hola%20Ángel,%20solicitamos%20presupuesto%20para%20un%20evento%20de%20empresa" 
+                                    href="https://wa.me/34648055636?text=Hola%20Ángel,%20solicitamos%20presupuesto%20para%20un%20evento%20de%20empresa" 
                                     target="_blank" 
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center gap-2 text-amber-400 hover:text-white transition-colors font-medium whitespace-nowrap self-start sm:self-auto"
@@ -337,16 +341,33 @@ export default function EmpresasPage() {
                                 <div className="rounded-2xl bg-slate-950/50 p-6 border border-white/10 backdrop-blur-md">
                                     <p className="mb-2"><strong className="text-amber-400 uppercase tracking-widest text-xs">Versatilidad:</strong></p>
                                     <p>
-                                        Ideal como <Link href="/empresas/mago-para-restaurantes-madrid" className="text-amber-400 hover:underline">mago para cenas de empresa</Link>, <Link href="/empresas/mago-ferias-congresos-madrid" className="text-amber-400 hover:underline">dinamizador en IFEMA</Link> o facilitador de <Link href="/empresas/mago-team-building-madrid" className="text-amber-400 hover:underline">team building</Link>. El ilusionismo profesional garantiza una interacción fluida y networking natural, rompiendo el hielo entre directivos y empleados con impactos visuales inolvidables.
+                                        Ideal como <Link href="/empresas/mago-cenas-empresa-madrid" className="text-amber-400 hover:underline">mago para cenas de empresa</Link>, <Link href="/empresas/mago-ferias-congresos-madrid" className="text-amber-400 hover:underline">dinamizador en IFEMA</Link>, <Link href="/empresas/mago-para-restaurantes-madrid" className="text-amber-400 hover:underline">magia en restaurantes</Link> o facilitador de <Link href="/empresas/mago-team-building-madrid" className="text-amber-400 hover:underline">team building</Link>. El ilusionismo profesional garantiza una interacción fluida y networking natural, rompiendo el hielo entre directivos y empleados con impactos visuales inolvidables.
                                     </p>
                                 </div>
                             </div>
 
                             <div className="rounded-2xl bg-amber-500/5 border border-amber-500/20 p-8 my-8">
-                                <h3 className="text-xs text-amber-400 font-bold uppercase tracking-widest mb-6 flex items-center gap-2">
-                                    <span>⭐⭐⭐⭐⭐</span>
-                                    <span>Valoraciones de Clientes Corporativos</span>
-                                </h3>
+                                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+                                    <h3 className="text-xs text-amber-400 font-bold uppercase tracking-widest flex items-center gap-2">
+                                        <span>⭐⭐⭐⭐⭐</span>
+                                        <span>Valoraciones de Clientes Corporativos</span>
+                                    </h3>
+                                    <a
+                                        href="https://www.google.com/search?q=%C3%81ngel+Ruiz+Mago+e+Ilusionista+Madrid"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/5 border border-amber-400/30 text-amber-300 text-xs font-semibold hover:bg-amber-400/10 hover:border-amber-400/60 transition-colors w-fit"
+                                        aria-label="Ver 4.9 estrellas en Google Reviews (+50 opiniones reales) en Google Maps"
+                                    >
+                                        <span className="text-amber-400 font-bold">4.9 ★</span>
+                                        <span>en Google Reviews (+50 opiniones reales)</span>
+                                        <span className="text-slate-400 text-[10px]">↗</span>
+                                    </a>
+                                </div>
+                                <blockquote className="mb-6 border-b border-white/10 pb-6">
+                                    <p className="italic text-slate-200 mb-3 leading-relaxed">"Contamos con Ángel para los eventos de Movistar Estudiantes y el resultado fue extraordinario: profesionalidad absoluta, cercanía y una magia que dejó a todo el mundo boquiabierto."</p>
+                                    <footer className="text-xs text-amber-400/90 font-bold">— Movistar Estudiantes</footer>
+                                </blockquote>
                                 <blockquote className="mb-6 border-b border-white/10 pb-6">
                                     <p className="italic text-slate-200 mb-3 leading-relaxed">"La mejor inversión en entretenimiento para nuestro stand. El mago no solo captó la atención, sino que aumentó la retención de clientes en más de un 300%. Los leads se multiplicaron espectacularmente."</p>
                                     <footer className="text-xs text-amber-400/90 font-bold">— Director de Marketing, Empresa Tech Madrid</footer>

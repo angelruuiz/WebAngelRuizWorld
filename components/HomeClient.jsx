@@ -11,6 +11,12 @@ const VideoShowModal = dynamic(() => import('@/components/VideoShowModal'), { ss
 import LiquidGlassForm from '@/components/LiquidGlassForm';
 
 const HeroClient = ({ onOpenVideo, onOpenContact }) => {
+    const triggerBookingDrawer = (eventType = 'empresa') => {
+        if (typeof window !== 'undefined') {
+            window.dispatchEvent(new CustomEvent('open-booking-drawer', { detail: { eventType } }));
+        }
+    };
+
     return (
         <section className="relative min-h-[100dvh] flex flex-col justify-end lg:justify-center overflow-hidden z-10 pt-20 pb-20 sm:pb-28 lg:py-0">
             <div className="absolute inset-0 z-0 overflow-hidden">
@@ -67,7 +73,7 @@ const HeroClient = ({ onOpenVideo, onOpenContact }) => {
                             <div className="grid grid-cols-2 gap-2 mb-3.5">
                                 <button
                                     type="button"
-                                    onClick={onOpenContact}
+                                    onClick={() => triggerBookingDrawer('boda')}
                                     className="p-2.5 rounded-xl bg-white/[0.05] border border-white/10 hover:border-amber-400/50 flex items-center gap-2 text-left active:scale-95 transition-all"
                                 >
                                     <span className="text-base">💍</span>
@@ -78,7 +84,7 @@ const HeroClient = ({ onOpenVideo, onOpenContact }) => {
                                 </button>
                                 <button
                                     type="button"
-                                    onClick={onOpenContact}
+                                    onClick={() => triggerBookingDrawer('empresa')}
                                     className="p-2.5 rounded-xl bg-white/[0.05] border border-white/10 hover:border-amber-400/50 flex items-center gap-2 text-left active:scale-95 transition-all"
                                 >
                                     <span className="text-base">🏢</span>
@@ -92,7 +98,7 @@ const HeroClient = ({ onOpenVideo, onOpenContact }) => {
                             {/* Botón Primario Móvil */}
                             <button
                                 type="button"
-                                onClick={onOpenContact}
+                                onClick={() => triggerBookingDrawer('empresa')}
                                 className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#d4a853] via-[#f7e7c4] to-[#b8860b] text-[#030712] font-black text-xs uppercase tracking-widest shadow-[0_4px_20px_rgba(212,168,83,0.35)] flex items-center justify-center gap-2 active:scale-95 transition-transform cursor-pointer"
                             >
                                 <span>Verificar Disponibilidad</span>
@@ -104,9 +110,9 @@ const HeroClient = ({ onOpenVideo, onOpenContact }) => {
                     {/* Títulos y Marca Personal: columna derecha en Desktop (lg:order-2), arriba en móvil (order-1) */}
                     <div className="order-1 lg:order-2 lg:col-span-7 flex flex-col items-start text-left lg:pl-6">
                         {/* Seasonal urgency micro-badge */}
-                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#d4a853]/10 border border-[#d4a853]/30 text-[#d4a853] text-[11px] sm:text-xs font-semibold tracking-wider uppercase mb-3 sm:mb-5 backdrop-blur-md">
+                        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-300 text-[11px] sm:text-xs font-semibold tracking-wider uppercase mb-3 sm:mb-5 backdrop-blur-md">
                             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                            <span>Agenda 2026 Abierta · Reserva Anticipada</span>
+                            <span>Campaña Cenas de Empresa & Navidad · Últimas Fechas Q4</span>
                         </div>
 
                         {/* Semantic H1 for SEO + Instant LCP Paint */}

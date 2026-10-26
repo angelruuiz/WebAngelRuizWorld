@@ -96,6 +96,7 @@ const globalSchema = {
     {
       "@type": ["EntertainmentBusiness", "ProfessionalService"],
       "@id": "https://angelruiz.world/#organization",
+      "founder": { "@id": "https://angelruiz.world/#person" },
       "name": "Ángel Ruiz Mago e Ilusionista",
       "alternateName": [
         "Ángel Ruiz | Mago para Bodas y Empresas en Madrid",
@@ -163,18 +164,19 @@ const globalSchema = {
           "name": "Comunidad de Madrid",
           "sameAs": "https://www.wikidata.org/wiki/Q5756"
         },
-        { "@type": "City", "name": "Torrelodones" },
-        { "@type": "City", "name": "Las Rozas de Madrid" },
-        { "@type": "City", "name": "Majadahonda" },
-        { "@type": "City", "name": "Pozuelo de Alarcón" },
-        { "@type": "City", "name": "Boadilla del Monte" },
-        { "@type": "City", "name": "Alcobendas" },
-        { "@type": "City", "name": "Collado Villalba" },
-        { "@type": "City", "name": "Galapagar" },
-        { "@type": "City", "name": "San Lorenzo de El Escorial" },
-        { "@type": "City", "name": "Alcorcón" },
-        { "@type": "City", "name": "Leganés" },
-        { "@type": "City", "name": "Getafe" }
+        { "@type": "City", "name": "Torrelodones", "sameAs": "https://www.wikidata.org/wiki/Q132247" },
+        { "@type": "City", "name": "Las Rozas de Madrid", "sameAs": "https://www.wikidata.org/wiki/Q749449" },
+        { "@type": "City", "name": "Majadahonda", "sameAs": "https://www.wikidata.org/wiki/Q687353" },
+        { "@type": "City", "name": "Pozuelo de Alarcón", "sameAs": "https://www.wikidata.org/wiki/Q641743" },
+        { "@type": "City", "name": "Boadilla del Monte", "sameAs": "https://www.wikidata.org/wiki/Q834244" },
+        { "@type": "City", "name": "Alcobendas", "sameAs": "https://www.wikidata.org/wiki/Q487679" },
+        { "@type": "City", "name": "Collado Villalba", "sameAs": "https://www.wikidata.org/wiki/Q838384" },
+        { "@type": "City", "name": "Galapagar", "sameAs": "https://www.wikidata.org/wiki/Q1641527" },
+        { "@type": "City", "name": "San Lorenzo de El Escorial", "sameAs": "https://www.wikidata.org/wiki/Q371756" },
+        { "@type": "City", "name": "Alcorcón", "sameAs": "https://www.wikidata.org/wiki/Q10317" },
+        { "@type": "City", "name": "Leganés", "sameAs": "https://www.wikidata.org/wiki/Q492728" },
+        { "@type": "City", "name": "Getafe", "sameAs": "https://www.wikidata.org/wiki/Q8389" },
+        { "@type": "City", "name": "Móstoles", "sameAs": "https://www.wikidata.org/wiki/Q187826" }
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
@@ -232,7 +234,7 @@ const globalSchema = {
         ]
       },
       "sameAs": [
-        "https://www.google.com/search?sca_esv=8001b418ab72b965&sxsrf=APpeQnttxDfKRtR6fpA2h7bYkWycKzmRVQ:1792418000314&q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=APenkKmVGdgpMPDQZoEWS8RIAhsqXAKlNLP0B8DNkkiU9KPI0V2U8InyxO1tqoaWpGS1_Q7QhAgSRC07fbiiZx9SpnZjJDB5UXzd7BX6d41IdchYfOedo3rQx0et86krTkaw35SJ_yeQYQ3kpruL6sC1m1bAx0aXbA%3D%3D&sa=X&sqi=2&ved=2ahUKEwjJ6smxncaXAxWUXUEAHQovEbYQ_coHegQIKxAB&biw=1658&bih=797&dpr=1.16",
+        "https://www.google.com/search?q=%C3%81ngel+Ruiz+Mago+e+Ilusionista+Madrid",
         "https://www.instagram.com/angellruuiz",
         "https://www.tiktok.com/@angellruuiz",
         "https://www.youtube.com/@angellruuiz",
@@ -274,7 +276,7 @@ const globalSchema = {
         "Team building con magia"
       ],
       "sameAs": [
-        "https://www.google.com/search?sca_esv=8001b418ab72b965&sxsrf=APpeQnttxDfKRtR6fpA2h7bYkWycKzmRVQ:1792418000314&q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=APenkKmVGdgpMPDQZoEWS8RIAhsqXAKlNLP0B8DNkkiU9KPI0V2U8InyxO1tqoaWpGS1_Q7QhAgSRC07fbiiZx9SpnZjJDB5UXzd7BX6d41IdchYfOedo3rQx0et86krTkaw35SJ_yeQYQ3kpruL6sC1m1bAx0aXbA%3D%3D&sa=X&sqi=2&ved=2ahUKEwjJ6smxncaXAxWUXUEAHQovEbYQ_coHegQIKxAB&biw=1658&bih=797&dpr=1.16",
+        "https://www.google.com/search?q=%C3%81ngel+Ruiz+Mago+e+Ilusionista+Madrid",
         "https://www.instagram.com/angellruuiz",
         "https://www.tiktok.com/@angellruuiz",
         "https://www.youtube.com/@angellruuiz",

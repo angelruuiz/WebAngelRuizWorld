@@ -9,15 +9,15 @@ const ParticleBackground = dynamic(() => import('@/components/VisualEffects').th
 const CorporateInlineForm = dynamic(() => import('@/components/CorporateInlineForm'), { ssr: false });
 
 export const metadata = {
-  title: { absolute: 'Mago para Restaurantes en Madrid | Magia en Mesas · Ángel Ruiz' },
-  description: 'Mago profesional para restaurantes en Madrid. Magia de cerca en mesas (Table Hopping) que fideliza comensales y sube el ticket medio. ¡Demostración sin compromiso!',
+  title: { absolute: 'Mago para Restaurantes en Madrid | Magia en Mesas y Eventos · Ángel Ruiz' },
+  description: 'Ilusionismo profesional en mesas (Table Hopping) para restaurantes de Madrid. Dinamiza cenas de fin de semana, celebraciones y eventos. Demostración sin compromiso.',
   keywords: ['mago para restaurantes madrid', 'mago para restaurantes', 'magia en restaurantes madrid', 'magia en mesas', 'table hopping madrid', 'animacion restaurantes madrid', 'ilusionista restaurantes', 'mago eventos hosteleria'],
   alternates: {
     canonical: 'https://angelruiz.world/empresas/mago-para-restaurantes-madrid',
   },
   openGraph: {
     title: 'Mago para Restaurantes en Madrid | Magia en Mesas · Ángel Ruiz',
-    description: 'Mago profesional para restaurantes en Madrid. Magia de cerca en mesas (Table Hopping) que fideliza comensales y sube el ticket medio. ¡Demostración sin compromiso!',
+    description: 'Ilusionismo profesional en mesas (Table Hopping) para restaurantes de Madrid. Dinamiza cenas de fin de semana, celebraciones y eventos. Demostración sin compromiso.',
     url: 'https://angelruiz.world/empresas/mago-para-restaurantes-madrid',
     siteName: 'Ángel Ruiz | Mago e Ilusionista',
     images: [
@@ -69,7 +69,12 @@ const schemaJson = {
     {
       "@type": "Service",
       "name": "Mago para Restaurantes y Locales en Madrid",
-      "provider": { "@type": "Person", "name": "Ángel Ruiz" },
+      "provider": {
+        "@type": "Person",
+        "@id": "https://angelruiz.world/#person",
+        "name": "Ángel Ruiz",
+        "url": "https://angelruiz.world/sobre-mi"
+      },
       "areaServed": "Comunidad de Madrid",
       "description": "Magia de cerca itinerante de mesa en mesa (Table Hopping) para restaurantes, hoteles y locales de ocio en Madrid.",
       "serviceType": "Restaurant Entertainment Service",
