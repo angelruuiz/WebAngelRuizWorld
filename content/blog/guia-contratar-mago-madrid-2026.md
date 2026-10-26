@@ -33,7 +33,7 @@ Soy Ángel Ruiz, ilusionista profesional con más de 10 años de experiencia en 
 
 Antes de buscar presupuestos, necesitas saber qué tipo de actuación se adapta mejor a tu evento.
 
-### Magia de Cerca o Close-Up
+### [Magia de Cerca](/mago-close-up-madrid) o Close-Up
 
 Es la modalidad más demandada en Madrid. El mago actúa directamente entre los asistentes, realizando efectos imposibles a centímetros de sus ojos: cartas que desaparecen, monedas que atraviesan objetos sólidos, magia de cerca. No necesita escenario ni equipos técnicos. Es perfecta para:
 
@@ -60,7 +60,7 @@ Un formato pensado para que todo el grupo disfrute del espectáculo a la vez: ca
 
 ## Precios de Magos en Madrid (2026): La Guía Transparente
 
-Una de las preguntas más frecuentes al buscar un mago en Madrid es: **¿cuánto cuesta?** Los precios varían significativamente según varios factores:
+Una de las preguntas más frecuentes al buscar un [mago en Madrid](/mago-madrid) es: **¿cuánto cuesta?** Los precios varían significativamente según varios factores:
 
 ### Factores que determinan el precio
 

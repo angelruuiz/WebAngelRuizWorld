@@ -54,7 +54,7 @@ Si estás barajando opciones para sorprender a tus invitados en Madrid y no sabe
 
 ## Por qué la Magia de Cerca es la opción más versátil
 
-A diferencia de otros espectáculos que imponen condiciones técnicas estrictas (tomas de corriente de alta potencia, focos o zonas de silencio absoluto), la **magia de cerca (close-up)** presenta ventajas inigualables para eventos privados:
+A diferencia de otros espectáculos que imponen condiciones técnicas estrictas (tomas de corriente de alta potencia, focos o zonas de silencio absoluto), la **[magia de cerca (close-up)](/mago-close-up-madrid)** presenta ventajas inigualables para eventos privados:
 
 1. **Flexibilidad total de ubicación**: Se realiza tanto en un porche en Majadahonda o Pozuelo como en un ático en el centro de Madrid o en el comedor de un restaurante.
 2. **Cero invasión acústica**: No impide que el resto de invitados sigan charlando a unos metros de distancia si lo prefieren. La magia se acerca a quienes quieren disfrutarla de forma orgánica.

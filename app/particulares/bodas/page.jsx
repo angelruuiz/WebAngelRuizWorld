@@ -13,7 +13,7 @@ const FadeIn = ({ children, className = "" }) => (
 );
 
 export const metadata = {
-    title: { absolute: 'Mago para Bodas en Madrid | Magia de Cóctel Exclusiva · Ángel Ruiz' },
+    title: { absolute: 'Mago para Bodas en Madrid | Magia de Cóctel · Ángel Ruiz' },
     description: 'Mago para bodas en Madrid. Magia de cerca y cóctel interactivo de autor que fascina a los invitados. Reserva anticipada sin comisiones. ¡Consulta fechas!',
     keywords: ['mago para bodas', 'mago para bodas madrid', 'mago bodas madrid', 'contratar mago boda madrid', 'mago coctel boda madrid', 'ilusionista bodas madrid', 'mago para bodas precio madrid', 'mago boda noroeste madrid', 'entretenimiento bodas madrid', 'mago para mi boda madrid'],
     alternates: {
@@ -21,54 +21,52 @@ export const metadata = {
     },
     openGraph: {
         url: 'https://angelruiz.world/particulares/bodas',
-        title: 'Mago para Bodas | Magia de Cerca en Madrid · Ángel Ruiz',
+        title: 'Mago para Bodas en Madrid | Magia de Cóctel · Ángel Ruiz',
         description: '¿Imaginas a tus invitados alucinando en el cóctel? Magia de cerca exclusiva para bodas en Madrid. ¡Pide tu fecha hoy!',
         images: [{ url: '/images/boda-magia-madrid.webp', width: 1200, height: 630 }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago para Bodas | Magia de Cerca en Madrid · Ángel Ruiz',
+        title: 'Mago para Bodas en Madrid | Magia de Cóctel · Ángel Ruiz',
         description: 'Magia de cerca exclusiva para bodas en Madrid. Transforma el cóctel en el momento más recordado.',
         images: ['/images/boda-magia-madrid.webp'],
     },
 };
 
+const weddingFaqs = [
+    { name: "¿Cuál es el mejor momento para la magia en una boda?", acceptedAnswer: { text: "El cóctel de bienvenida es el momento estrella para la magia de cerca, ya que ayuda a romper el hielo entre los invitados. También es muy efectiva durante el banquete para amenizar las esperas entre platos." } },
+    { name: "¿Qué tipo de magia se realiza?", acceptedAnswer: { text: "Me especializo en magia de cerca (Close-up) y magia itinerante. Son efectos impactantes realizados con cartas, monedas y objetos de los invitados, a escasos centímetros de sus ojos." } },
+    { name: "¿Cuáles son las mejores fincas para bodas en Madrid donde actúas?", acceptedAnswer: { text: "Trabajo habitualmente en las fincas más exclusivas y bonitas de Madrid y la Sierra, adaptando mi magia de cerca a entornos al aire libre y cócteles elegantes. Si buscas las mejores fincas para bodas en Madrid, te recomiendo contactarme para asesorarte sobre espacios donde el ilusionismo encaja a la perfección." } },
+    { name: "¿Te desplazas fuera de Madrid?", acceptedAnswer: { text: "Sí, cubro eventos en toda España, aunque mi actividad principal se centra en la Comunidad de Madrid y la zona noroeste (Torrelodones, Las Rozas, Majadahonda)." } },
+    { name: "¿Con cuánta antelación debo contratar al mago para mi boda?", acceptedAnswer: { text: "Lo ideal es reservar con al menos 3 a 6 meses de antelación, especialmente si tu boda es en temporada alta (mayo a octubre). Las fechas más demandadas se reservan rápido, así que cuanto antes me contactes, más fácil será garantizar disponibilidad para tu día." } },
+    { name: "¿Cuánto tiempo dura la actuación en una boda?", acceptedAnswer: { text: "La duración habitual es de 1 hora y media a 2 horas, aunque se adapta al formato de tu boda. Si solo quieres magia durante el cóctel, con 1 hora suele ser suficiente. Si prefieres cubrir también parte del banquete, ampliamos a 2 horas para que todos los invitados disfruten de la experiencia." } },
+    { name: "¿Puedes coordinar con el wedding planner o el catering?", acceptedAnswer: { text: "Por supuesto, es algo que hago siempre. Me pongo en contacto con tu wedding planner, con el maître o con el responsable de la finca para coordinar los tiempos de mi actuación. Así me aseguro de no interrumpir momentos clave como el corte de tarta, los discursos o el primer baile." } },
+    { name: "¿Actúas en fincas fuera de Madrid?", acceptedAnswer: { text: "Sí, actúo en toda España. Mi zona principal de trabajo es la Comunidad de Madrid y la Sierra noroeste (Torrelodones, Las Rozas, El Escorial, Majadahonda), pero me desplazo sin problema a fincas en Toledo, Segovia, Ávila o cualquier otra provincia." } },
+    { name: "¿La magia es apta para todos los invitados, incluidos niños?", acceptedAnswer: { text: "Totalmente. Mi magia de cerca es visual, participativa y apta para todas las edades. Los niños disfrutan tanto como los adultos, y de hecho suelen ser los más expresivos cuando ven un efecto imposible. Es magia elegante, cercana y pensada para que todos se lleven un recuerdo especial de tu boda." } }
+];
+
 export default function BodasDetailPage() {
     const serviceSchema = {
-        "@context": "https://schema.org",
         "@type": "Service",
-        "name": "Magia de cerca para bodas",
+        "@id": "https://angelruiz.world/particulares/bodas/#service",
+        "name": "Mago para Bodas en Madrid",
         "provider": {
             "@type": "Person",
-            "name": "Ángel Ruiz"
+            "@id": "https://angelruiz.world/#person",
+            "name": "Ángel Ruiz",
+            "url": "https://angelruiz.world/sobre-mi"
         },
         "areaServed": "Comunidad de Madrid",
-        "description": "Servicio de ilusionismo y magia de cerca para bodas.",
+        "description": "Servicio profesional de ilusionismo y magia de cerca para cócteles y banquetes de bodas en Madrid.",
         "serviceType": "Wedding Entertainment",
         "url": "https://angelruiz.world/particulares/bodas"
     };
 
-    const faqSchema = {
-        "mainEntity": [
-            { "@type": "Question", "name": "¿Cuál es el mejor momento para la magia en una boda?", "acceptedAnswer": { "@type": "Answer", "text": "El cóctel de bienvenida es el momento estrella para la magia de cerca, ya que ayuda a romper el hielo entre los invitados. También es muy efectiva durante el banquete para amenizar las esperas entre platos." } },
-            { "@type": "Question", "name": "¿Qué tipo de magia se realiza?", "acceptedAnswer": { "@type": "Answer", "text": "Me especializo en magia de cerca (Close-up) y magia itinerante. Son efectos impactantes realizados con cartas, monedas y objetos de los invitados, a escasos centímetros de sus ojos." } },
-            { "@type": "Question", "name": "¿Cuáles son las mejores fincas para bodas en Madrid donde actúas?", "acceptedAnswer": { "@type": "Answer", "text": "Trabajo habitualmente en las fincas más exclusivas y bonitas de Madrid y la Sierra, adaptando mi magia de cerca a entornos al aire libre y cócteles elegantes. Si buscas las mejores fincas para bodas en Madrid, te recomiendo contactarme para asesorarte sobre espacios donde el ilusionismo encaja a la perfección." } },
-            { "@type": "Question", "name": "¿Te desplazas fuera de Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, cubro eventos en toda España, aunque mi actividad principal se centra en la Comunidad de Madrid y la zona noroeste (Torrelodones, Las Rozas, Majadahonda)." } },
-            { "@type": "Question", "name": "¿Con cuánta antelación debo contratar al mago para mi boda?", "acceptedAnswer": { "@type": "Answer", "text": "Lo ideal es reservar con al menos 3 a 6 meses de antelación, especialmente si tu boda es en temporada alta (mayo a octubre). Las fechas más demandadas se reservan rápido, así que cuanto antes me contactes, más fácil será garantizar disponibilidad para tu día." } },
-            { "@type": "Question", "name": "¿Cuánto tiempo dura la actuación en una boda?", "acceptedAnswer": { "@type": "Answer", "text": "La duración habitual es de 1 hora y media a 2 horas, aunque se adapta al formato de tu boda. Si solo quieres magia durante el cóctel, con 1 hora suele ser suficiente. Si prefieres cubrir también parte del banquete, ampliamos a 2 horas para que todos los invitados disfruten de la experiencia." } },
-            { "@type": "Question", "name": "¿Puedes coordinar con el wedding planner o el catering?", "acceptedAnswer": { "@type": "Answer", "text": "Por supuesto, es algo que hago siempre. Me pongo en contacto con tu wedding planner, con el maître o con el responsable de la finca para coordinar los tiempos de mi actuación. Así me aseguro de no interrumpir momentos clave como el corte de tarta, los discursos o el primer baile. La coordinación previa es parte esencial de mi servicio." } },
-            { "@type": "Question", "name": "¿Actúas en fincas fuera de Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, actúo en toda España. Mi zona principal de trabajo es la Comunidad de Madrid y la Sierra noroeste (Torrelodones, Las Rozas, El Escorial, Majadahonda), pero me desplazo sin problema a fincas en Toledo, Segovia, Ávila o cualquier otra provincia. El desplazamiento se gestiona de forma transparente para que no tengas que preocuparte por nada." } },
-            { "@type": "Question", "name": "¿La magia es apta para todos los invitados, incluidos niños?", "acceptedAnswer": { "@type": "Answer", "text": "Totalmente. Mi magia de cerca es visual, participativa y apta para todas las edades. Los niños disfrutan tanto como los adultos, y de hecho suelen ser los más expresivos cuando ven un efecto imposible. No utilizo nada que pueda resultar incómodo o inapropiado: es magia elegante, cercana y pensada para que todo el mundo se lleve un recuerdo especial de tu boda." } }
-        ]
-    };
-
     const breadcrumbSchema = {
-        "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
-            { "@type": "ListItem", "position": 2, "name": "Particulares", "item": "https://angelruiz.world/particulares" },
-            { "@type": "ListItem", "position": 3, "name": "Mago para Bodas en Madrid", "item": "https://angelruiz.world/particulares/bodas" }
+            { "@type": "ListItem", "position": 2, "name": "Mago para Bodas en Madrid", "item": "https://angelruiz.world/particulares/bodas" }
         ]
     };
 
@@ -113,10 +111,6 @@ export default function BodasDetailPage() {
                                 "highPrice": "650",
                                 "priceCurrency": "EUR"
                             }
-                        },
-                        {
-                            "@type": "FAQPage",
-                            "mainEntity": faqSchema.mainEntity
                         },
                         {
                             "@type": "BreadcrumbList",
@@ -343,7 +337,7 @@ export default function BodasDetailPage() {
                             <FadeIn>
                                 <h2 className="text-3xl font-[Cinzel] text-white mb-8">Preguntas Frecuentes</h2>
                                 <div className="space-y-4">
-                                    {faqSchema.mainEntity.map((faq, index) => (
+                                    {weddingFaqs.map((faq, index) => (
                                 <FAQItem key={index} faq={faq} />
                             ))}
                                 </div>

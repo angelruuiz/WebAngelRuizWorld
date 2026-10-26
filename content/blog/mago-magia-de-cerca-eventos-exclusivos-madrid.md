@@ -38,7 +38,7 @@ Como ilusionista formado bajo la rigurosa escuela de cartomagia psicológica de 
 
 En una reunión de alto nivel, los invitados valoran por encima de todo poder conversar libremente con una copa de vino o champán en la mano. Forzarles a sentarse en filas para presenciar un show estático a menudo corta el dinamismo social de la velada.
 
-La **magia de cerca itinerante (Close-Up Magic)** ofrece la solución idónea:
+La **[magia de cerca](/mago-close-up-madrid) itinerante (Close-Up Magic)** ofrece la solución idónea:
 
 * **Trato Individualizado:** El ilusionista se acerca con sutileza a grupos reducidos de 3 a 5 personas, adaptando el tono de la conversación al perfil de cada grupo.
 * **Sin Requisitos Técnicos Invasivos:** No se necesitan cables, focos cegadores ni megafonía estridente. Todo el espectáculo se lleva discretamente en los bolsillos de una chaqueta a medida.

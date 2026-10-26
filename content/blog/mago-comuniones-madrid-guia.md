@@ -35,7 +35,7 @@ Las **comuniones en Madrid** son mucho más que una ceremonia religiosa: son la 
 
 Aquí está la clave que muchos padres pasan por alto: en una comunión no hay solo niños. Hay abuelos, tíos, amigos de los padres y familias enteras. Un animador con globos entretiene a los niños, pero **aburre al 70% de los invitados**.
 
-La **magia de cerca** funciona diferente. Los efectos ocurren a centímetros de los ojos del espectador, con objetos cotidianos (cartas, monedas, el propio móvil del invitado). Es algo que fascina a un niño de 9 años y deja con la boca abierta a su abuelo de 75.
+La **[magia de cerca](/mago-close-up-madrid)** funciona diferente. Los efectos ocurren a centímetros de los ojos del espectador, con objetos cotidianos (cartas, monedas, el propio móvil del invitado). Es algo que fascina a un niño de 9 años y deja con la boca abierta a su abuelo de 75.
 
 ### La ventaja del formato itinerante
 
@@ -63,7 +63,7 @@ Para una comunión en la **Comunidad de Madrid**, el precio de un mago profesion
 
 ## ¿Por qué elegir a Ángel Ruiz para la comunión de tu hijo?
 
-Como **mago en Madrid** especializado en eventos familiares, entiendo que una comunión es un día irrepetible. Mi estilo es directo, divertido y muy visual, sin chistes fáciles ni trucos infantiles genéricos. La magia que hago sorprende de verdad, y eso es lo que convierte una celebración normal en algo extraordinario.
+Como **[mago en Madrid](/mago-madrid)** especializado en eventos familiares, entiendo que una comunión es un día irrepetible. Mi estilo es directo, divertido y muy visual, sin chistes fáciles ni trucos infantiles genéricos. La magia que hago sorprende de verdad, y eso es lo que convierte una celebración normal en algo extraordinario.
 
 Con **más de 10 años de experiencia** y formación directa con Dani DaOrtiz, ofrezco un nivel técnico que rara vez se ve fuera de un teatro. Pero lo entrego en la intimidad de tu celebración, a centímetros de las manos de tus invitados.
 

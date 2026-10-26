@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ArrowRight, Share2, WhatsApp } from './Icons';
 
@@ -53,14 +54,14 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                     <div className="space-y-6">
                         <h4 className="text-lg font-[Cinzel] text-white tracking-wider">Servicios & Eventos</h4>
                         <div className="flex flex-col gap-3 text-sm text-slate-400">
-                            <a href="/mago-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Mago en Madrid</a>
-                            <a href="/particulares/bodas" className="hover:text-[#d4a853] transition-colors w-fit">Mago para Bodas</a>
-                            <a href="/empresas" className="hover:text-[#d4a853] transition-colors w-fit">Mago para Empresas</a>
-                            <a href="/empresas/mago-cenas-empresa-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Cenas de Empresa & Navidad</a>
-                            <a href="/mago-close-up-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Magia de Cerca Close-Up</a>
-                            <a href="/particulares/fiestas-cumpleanos-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Fiestas y Cumpleaños</a>
-                            <a href="/particulares/comuniones" className="hover:text-[#d4a853] transition-colors w-fit">Comuniones</a>
-                            <a href="/contratar-mago-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Tarifas y Dossier</a>
+                            <Link href="/mago-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Mago en Madrid</Link>
+                            <Link href="/particulares/bodas" className="hover:text-[#d4a853] transition-colors w-fit">Mago para Bodas</Link>
+                            <Link href="/empresas" className="hover:text-[#d4a853] transition-colors w-fit">Mago para Empresas</Link>
+                            <Link href="/empresas/mago-cenas-empresa-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Cenas de Empresa & Navidad</Link>
+                            <Link href="/mago-close-up-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Magia de Cerca Close-Up</Link>
+                            <Link href="/particulares/fiestas-cumpleanos-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Fiestas y Cumpleaños</Link>
+                            <Link href="/particulares/comuniones" className="hover:text-[#d4a853] transition-colors w-fit">Comuniones</Link>
+                            <Link href="/contratar-mago-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Tarifas y Dossier</Link>
                         </div>
                     </div>
 
@@ -71,13 +72,13 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                             <div>
                                 <h5 className="text-[#d4a853] font-semibold mb-2">Sierra & Noroeste</h5>
                                 <div className="leading-relaxed">
-                                    <a href="/mago-torrelodones" className="hover:text-white transition-colors">Torrelodones</a>, <a href="/mago-las-rozas" className="hover:text-white transition-colors">Las Rozas</a>, <a href="/mago-majadahonda" className="hover:text-white transition-colors">Majadahonda</a>, <a href="/mago-pozuelo" className="hover:text-white transition-colors">Pozuelo</a>, <a href="/mago-boadilla" className="hover:text-white transition-colors">Boadilla</a>, <a href="/mago-villalba" className="hover:text-white transition-colors">Collado Villalba</a>, <a href="/mago-galapagar" className="hover:text-white transition-colors">Galapagar</a>, <a href="/mago-el-escorial" className="hover:text-white transition-colors">El Escorial</a>, <a href="/mago-las-matas" className="hover:text-white transition-colors">Las Matas</a>, <a href="/mago-sierra-madrid" className="hover:text-white transition-colors">Sierra de Madrid</a>.
+                                    <Link href="/mago-torrelodones" className="hover:text-white transition-colors">Torrelodones</Link>, <Link href="/mago-las-rozas" className="hover:text-white transition-colors">Las Rozas</Link>, <Link href="/mago-majadahonda" className="hover:text-white transition-colors">Majadahonda</Link>, <Link href="/mago-pozuelo" className="hover:text-white transition-colors">Pozuelo</Link>, <Link href="/mago-boadilla" className="hover:text-white transition-colors">Boadilla</Link>, <Link href="/mago-villalba" className="hover:text-white transition-colors">Collado Villalba</Link>, <Link href="/mago-galapagar" className="hover:text-white transition-colors">Galapagar</Link>, <Link href="/mago-el-escorial" className="hover:text-white transition-colors">El Escorial</Link>, <Link href="/mago-las-matas" className="hover:text-white transition-colors">Las Matas</Link>, <Link href="/mago-sierra-madrid" className="hover:text-white transition-colors">Sierra de Madrid</Link>.
                                 </div>
                             </div>
                             <div>
                                 <h5 className="text-[#d4a853] font-semibold mb-2 mt-4">Madrid Centro & Sur</h5>
                                 <div className="leading-relaxed">
-                                    <a href="/mago-alcorcon" className="hover:text-white transition-colors">Alcorcón</a>, <a href="/mago-leganes" className="hover:text-white transition-colors">Leganés</a>, <a href="/mago-mostoles" className="hover:text-white transition-colors">Móstoles</a>, <a href="/mago-getafe" className="hover:text-white transition-colors">Getafe</a>, <a href="/mago-alcobendas" className="hover:text-white transition-colors">Alcobendas</a>.
+                                    <Link href="/mago-alcorcon" className="hover:text-white transition-colors">Alcorcón</Link>, <Link href="/mago-leganes" className="hover:text-white transition-colors">Leganés</Link>, <Link href="/mago-mostoles" className="hover:text-white transition-colors">Móstoles</Link>, <Link href="/mago-getafe" className="hover:text-white transition-colors">Getafe</Link>, <Link href="/mago-alcobendas" className="hover:text-white transition-colors">Alcobendas</Link>.
                                 </div>
                             </div>
                         </div>
@@ -117,9 +118,9 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                 <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-400">
                     <p>© 2026 Ángel Ruiz | Marca Oficial Registrada. Todos los derechos reservados.</p>
                     <div className="flex flex-wrap gap-4 md:gap-6 items-center">
-                        <a href="/aviso-legal" className="hover:text-[#d4a853] transition-colors">Aviso Legal</a>
-                        <a href="/privacidad" className="hover:text-[#d4a853] transition-colors">Política de Privacidad</a>
-                        <a href="/cookies" className="hover:text-[#d4a853] transition-colors">Política de Cookies</a>
+                        <Link href="/aviso-legal" className="hover:text-[#d4a853] transition-colors">Aviso Legal</Link>
+                        <Link href="/privacidad" className="hover:text-[#d4a853] transition-colors">Política de Privacidad</Link>
+                        <Link href="/cookies" className="hover:text-[#d4a853] transition-colors">Política de Cookies</Link>
                         <a href="/llms.txt" className="hover:text-[#d4a853] transition-colors">llms.txt</a>
                     </div>
                 </div>

@@ -9,7 +9,7 @@ const ParticleBackground = dynamic(() => import('@/components/VisualEffects').th
 const BioCarousel = dynamic(() => import('@/components/BioCarousel'), { ssr: false });
 
 export const metadata = {
-    title: { absolute: 'Mago en Madrid | Mago Profesional para Bodas y Empresas · Ángel Ruiz' },
+    title: { absolute: 'Mago en Madrid Profesional | Bodas y Empresas · Ángel Ruiz' },
     description: '¿Buscas contratar un mago en Madrid? Ilusionismo de autor y magia de cerca a centímetros de tus ojos para bodas y empresas. Alumno de DaOrtiz. Presupuesto en 2h.',
     keywords: ['mago en madrid', 'mago profesional madrid', 'ilusionista madrid', 'mago para eventos madrid', 'contratar mago madrid', 'mago madrid bodas', 'mago madrid empresas', 'show magia madrid', 'mago profesional en madrid'],
     alternates: {
@@ -17,13 +17,13 @@ export const metadata = {
     },
     openGraph: {
         url: 'https://angelruiz.world/mago-madrid',
-        title: 'Mago en Madrid | Mago Profesional para Bodas y Empresas · Ángel Ruiz',
+        title: 'Mago en Madrid Profesional | Bodas y Empresas · Ángel Ruiz',
         description: '¿Buscas un espectáculo que rompa esquemas? Ilusionismo de autor y magia de cerca en Madrid. Trato directo sin intermediarios.',
         images: [{ url: '/images/foto-bio.webp', width: 1200, height: 630 }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago en Madrid | Mago Profesional para Bodas y Empresas · Ángel Ruiz',
+        title: 'Mago en Madrid Profesional | Bodas y Empresas · Ángel Ruiz',
         description: '¿Buscas un espectáculo que rompa esquemas? Ilusionismo de autor y magia de cerca a centímetros de tus ojos en Madrid. Alumno de DaOrtiz. Presupuesto en 2h.',
         images: ['/images/foto-bio.webp']
     }
@@ -72,15 +72,6 @@ export default function MagoMadridPage() {
                 "itemListElement": [
                     { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
                     { "@type": "ListItem", "position": 2, "name": "Mago Madrid", "item": "https://angelruiz.world/mago-madrid" }
-                ]
-            },
-            {
-                "@type": "FAQPage",
-                "mainEntity": [
-                    { "@type": "Question", "name": "¿Cuáles son las tarifas para contratar un show de magia en Madrid capital y provincia?", "acceptedAnswer": { "@type": "Answer", "text": "El precio de un mago profesional en Madrid depende del tipo de evento: eventos privados y fiestas particulares desde 300€, bodas entre 450€ y 650€, y eventos corporativos o cenas de empresa desde 500€ hasta 750€. Presupuesto directo a medida sin intermediarios." } },
-                    { "@type": "Question", "name": "¿Qué tipo de magia es mejor para un evento en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "La magia de cerca (close-up) es la más demandada en Madrid para cócteles, bodas y cenas de empresa. Se realiza a centímetros del espectador sin necesidad de escenario." } },
-                    { "@type": "Question", "name": "¿Te desplazas a cualquier zona de Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Cubro Madrid capital, la zona noroeste (Las Rozas, Pozuelo, Majadahonda), la Sierra de Madrid y los centros de convenciones como IFEMA." } },
-                    { "@type": "Question", "name": "¿Puedo personalizar el espectáculo?", "acceptedAnswer": { "@type": "Answer", "text": "Cada actuación es diseñada a medida. Puedo integrar mensajes corporativos, adaptar el tono al protocolo de tu empresa o crear momentos especiales para los novios en una boda." } }
                 ]
             }
         ]

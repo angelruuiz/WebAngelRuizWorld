@@ -48,7 +48,7 @@ El público corporativo actual es exigente. Directivos, programadores, ingeniero
 
 Dependiendo de la estructura de tu evento en Madrid, este formato se adapta con precisión:
 
-* **Cócteles de Networking y Ferias (IFEMA):** Durante el picoteo de bienvenida, la magia de cerca con móviles rompe el hielo al instante. Un grupo de personas que no se conocen terminan debatiendo cómo un dato confidencial ha podido viajar de una mente a la pantalla de un desconocido.
+* **Cócteles de Networking y Ferias (IFEMA):** Durante el picoteo de bienvenida, la [magia de cerca](/mago-close-up-madrid) con móviles rompe el hielo al instante. Un grupo de personas que no se conocen terminan debatiendo cómo un dato confidencial ha podido viajar de una mente a la pantalla de un desconocido.
 * **Presentaciones de Producto y Lanzamientos:** El clímax del truco desvela el nombre del nuevo software o el logotipo de la compañía directamente en los dispositivos de los asistentes.
 * **Cenas de Empresa y Convenciones:** Como transición entre platos o como espectáculo de sobremesa interactivo, manteniendo la atención constante de toda la sala.
 
@@ -64,4 +64,4 @@ Esto garantiza el cumplimiento de las normativas de seguridad corporativa y elim
 
 ## 4. Reserva y Consultoría para tu Evento en Madrid
 
-Si organizas una convención anual, un kick-off o una cena de empresa en Madrid y buscas una experiencia que una asombro de alto nivel e innovación digital, [solicita información directa sin agencias](/empresas) y diseñaremos una intervención a medida para tu equipo.
+Si organizas una convención anual, un kick-off o una [cena de empresa en Madrid](/empresas/mago-cenas-empresa-madrid) y buscas una experiencia que una asombro de alto nivel e innovación digital, [solicita información directa sin agencias](/empresas) y diseñaremos una intervención a medida para tu equipo.

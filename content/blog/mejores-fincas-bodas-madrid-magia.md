@@ -28,7 +28,7 @@ faq:
 
 La elección de la finca es uno de los primeros y mayores hitos en la planificación de un enlace matrimonial. La Comunidad de Madrid cuenta con un repertorio extraordinario de espacios rústicos, palacetes históricos y dehesas exclusivas. Sin embargo, los novios más detallistas saben bien que el entorno por sí solo no garantiza el éxito del evento: **lo que verdaderamente marca la diferencia es la experiencia emocional que viven los invitados dentro de ese espacio**.
 
-En las bodas de 2026 y 2027, las parejas huyen de banquetes estáticos y buscan bodas dinámicas, divertidas y llenas de chispa. En este contexto, la **magia de cerca (close-up) durante el cóctel de bienvenida** se ha convertido en el entretenimiento de alta gama más valorado en las fincas de la capital.
+En las bodas de 2026 y 2027, las parejas huyen de banquetes estáticos y buscan bodas dinámicas, divertidas y llenas de chispa. En este contexto, la **[magia de cerca (close-up)](/mago-close-up-madrid) durante el cóctel de bienvenida** se ha convertido en el entretenimiento de alta gama más valorado en las fincas de la capital.
 
 ---
 

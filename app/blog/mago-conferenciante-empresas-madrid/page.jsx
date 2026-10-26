@@ -4,7 +4,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import Link from 'next/link';
 
 export const metadata = {
-    title: { absolute: 'Mago Conferenciante en Madrid para Empresas | Keynotes de Impacto' },
+    title: { absolute: 'Mago Conferenciante en Madrid | Keynotes · Ángel Ruiz' },
     description: '¿Buscas un orador inolvidable? Conferencias y keynotes con magia corporativa en Madrid. Motiva a tu equipo y transmite valores de marca. Descarga el dossier.',
     alternates: {
         canonical: 'https://angelruiz.world/blog/mago-conferenciante-empresas-madrid',
@@ -25,11 +25,13 @@ export default function MagoConferencianteBlogPage() {
         "image": "https://angelruiz.world/images/evento-angel-ruiz-magia.webp",
         "author": {
             "@type": "Person",
+            "@id": "https://angelruiz.world/#person",
             "name": "Ángel Ruiz",
             "url": "https://angelruiz.world/sobre-mi"
         },
         "publisher": {
             "@type": "Organization",
+            "@id": "https://angelruiz.world/#organization",
             "name": "Ángel Ruiz | Mago e Ilusionista",
             "logo": {
                 "@type": "ImageObject",
@@ -122,7 +124,7 @@ export default function MagoConferencianteBlogPage() {
                             
                             <div className="my-10 bg-gradient-to-r from-amber-500/20 to-transparent p-8 rounded-xl border-l-4 border-amber-500">
                                 <h3 className="text-white font-[Cinzel] text-xl mb-3">Integra la Magia en tu Próxima Convención</h3>
-                                <p className="mb-6">Si estás buscando la manera de hacer que tu próximo evento corporativo sea inolvidable y que tu mensaje realmente cale en el equipo, hablemos sobre cómo diseñar una conferencia mágica a medida.</p>
+                                <p className="mb-6">Si estás buscando la manera de hacer que tu próximo evento corporativo sea inolvidable y que tu mensaje realmente cale en el equipo, consulta nuestro <Link href="/empresas/mago-conferenciante-madrid" className="text-amber-400 font-bold underline hover:text-amber-300">servicio de Mago Conferenciante en Madrid</Link> y hablemos sobre cómo diseñar una conferencia mágica a medida.</p>
                                 <ContactButtonClient label="Solicitar Propuesta Corporativa" />
                             </div>
 

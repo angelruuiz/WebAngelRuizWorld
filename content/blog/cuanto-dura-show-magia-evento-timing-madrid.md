@@ -60,7 +60,7 @@ A continuación te explicamos las duraciones óptimas según el formato y cómo 
 
 ## Ejemplo de Cronograma Perfecto para una Cena Corporativa o Fiesta Privada
 
-* **20:30 - 21:30 | Cóctel de Bienvenida y Magia de Cerca**: Rompehielos entre invitados mientras degustan aperitivos.
+* **20:30 - 21:30 | Cóctel de Bienvenida y [Magia de Cerca](/mago-close-up-madrid)**: Rompehielos entre invitados mientras degustan aperitivos.
 * **21:30 - 23:00 | Cena formal**: Degustación de platos en mesa sin interrupciones escénicas.
 * **23:00 - 23:15 | Servicio de café y postre**: Momento de pausa y relajación.
 * **23:15 - 00:05 | Show Central de Magia y Mentalismo**: Clímax de asombro y risas con toda la sala conectada.

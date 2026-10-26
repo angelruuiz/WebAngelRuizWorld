@@ -29,10 +29,7 @@ export const metadata = {
 };
 
 export default function ContratarMagoMadridPage() {
-    const faqSchema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
+    const faqs = [
             { 
                 "@type": "Question", 
                 "name": "¿Cuánto cuesta contratar un mago en Madrid?", 
@@ -97,8 +94,7 @@ export default function ContratarMagoMadridPage() {
                     "text": "Sí, se requiere una señal en concepto de reserva para bloquear la fecha (especialmente en temporada alta). En caso de lluvia, la magia de cerca es totalmente adaptable a interiores, por lo que el show nunca se cancela por este motivo."
                 }
             }
-        ]
-    };
+        ];
 
     const schema = {
         "@context": "https://schema.org",
@@ -178,7 +174,6 @@ export default function ContratarMagoMadridPage() {
                     ]
                 }
             },
-            faqSchema,
             {
                 "@type": "BreadcrumbList",
                 "itemListElement": [
@@ -189,7 +184,7 @@ export default function ContratarMagoMadridPage() {
         ]
     };
 
-    const faqs = faqSchema.mainEntity;
+    // faqs directly used in JSX
 
     return (
         <>

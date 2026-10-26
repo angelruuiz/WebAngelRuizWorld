@@ -35,7 +35,7 @@ En estos entornos al aire libre, la experiencia del cóctel de bienvenida cobra 
 
 ---
 
-## Por qué la Magia de Cerca Triunfa en Fincas de la Sierra
+## Por qué la [Magia de Cerca](/mago-close-up-madrid) Triunfa en Fincas de la Sierra
 
 1. **Perfecta integración con el entorno natural**: Sin cables, sin escenarios postizos que tapen las vistas a la montaña. El mago camina entre los invitados como un elemento más de la fiesta.
 2. **Elimina las esperas del cóctel**: Mientras los novios aprovechan la luz dorada de la sierra para su reportaje de fotos en los jardines, los invitados están entretenidos y fascinados en pequeños corrillos.

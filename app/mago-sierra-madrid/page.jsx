@@ -14,6 +14,26 @@ export const metadata = {
     alternates: {
         canonical: 'https://angelruiz.world/mago-sierra-madrid',
     },
+    openGraph: {
+        url: 'https://angelruiz.world/mago-sierra-madrid',
+        title: 'Mago en la Sierra de Madrid | Bodas y Eventos Noroeste',
+        description: 'Mago profesional en la sierra de Madrid y zona noroeste. Especialista en magia de cerca para bodas y eventos exclusivos.',
+        siteName: 'Ángel Ruiz | Mago e Ilusionista',
+        locale: 'es_ES',
+        type: 'website',
+        images: [{
+            url: 'https://angelruiz.world/images/foto-bio.webp',
+            width: 1200,
+            height: 630,
+            alt: 'Ángel Ruiz - Mago en la Sierra de Madrid'
+        }],
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Mago en la Sierra de Madrid | Bodas y Eventos Noroeste',
+        description: 'Mago profesional en la sierra de Madrid y zona noroeste.',
+        images: ['https://angelruiz.world/images/foto-bio.webp'],
+    },
 };
 
 export default function MagoSierraMadridHub() {
@@ -28,7 +48,8 @@ export default function MagoSierraMadridHub() {
         "name": "Mago en la Sierra de Madrid",
         "provider": {
             "@type": "Person",
-            "name": "Angel Ruiz"
+            "@id": "https://angelruiz.world/#person",
+            "name": "Ángel Ruiz"
         },
         "areaServed": allSierraLocations.map(l => ({ "@type": "City", "name": l.name })),
         "description": "Mago profesional en la sierra de Madrid y zona noroeste. Ilusionismo exclusivo para bodas y eventos.",
@@ -79,17 +100,6 @@ export default function MagoSierraMadridHub() {
                         {
                             ...serviceSchema,
                             "@id": "https://angelruiz.world/mago-sierra-madrid/#service"
-                        },
-                        {
-                            "@type": "FAQPage",
-                            "mainEntity": faqs.map(f => ({
-                                "@type": "Question",
-                                "name": f.q,
-                                "acceptedAnswer": {
-                                    "@type": "Answer",
-                                    "text": f.a
-                                }
-                            }))
                         },
                         {
                             "@type": "BreadcrumbList",

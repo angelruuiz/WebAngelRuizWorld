@@ -13,20 +13,20 @@ const FadeIn = ({ children, className = "" }) => (
 );
 
 export const metadata = {
-    title: { absolute: 'Mago para Cumpleaños en Madrid | Fiestas de Adultos Originales · Ángel Ruiz' },
-    description: '¿Buscas ideas de cumpleaños originales en Madrid? Magia de cerca y mentalismo en restaurantes o a domicilio para fiestas de adultos (40, 50 y 60 años). ¡Pide presupuesto express!',
+    title: { absolute: 'Mago para Cumpleaños en Madrid · Ángel Ruiz' },
+    description: 'Magia de cerca y mentalismo para cumpleaños de adultos en Madrid (40, 50 y 60 años). En restaurantes o a domicilio. Presupuesto express en 2h.',
     keywords: ['cumpleaños originales madrid', 'mago para cumpleaños madrid', 'magia cumpleaños adultos madrid', 'magia en restaurante madrid cumpleaños adultos', 'mago fiestas privadas madrid', 'cumpleaños 40 años madrid', 'cumpleaños 50 años madrid', 'animacion cumpleaños adultos'],
     alternates: {
         canonical: 'https://angelruiz.world/particulares/fiestas-cumpleanos-madrid',
     },
     openGraph: {
-        title: 'Mago para Cumpleaños en Madrid | Fiestas de Adultos Originales · Ángel Ruiz',
+        title: 'Mago para Cumpleaños en Madrid · Ángel Ruiz',
         description: '¿Buscas ideas de cumpleaños originales en Madrid? Magia de cerca y mentalismo en restaurantes o a domicilio para fiestas de adultos. ¡Pide tu fecha!',
         images: [{ url: '/images/fiesta-eventos-madrid.webp' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago para Cumpleaños en Madrid | Fiestas de Adultos Originales · Ángel Ruiz',
+        title: 'Mago para Cumpleaños en Madrid · Ángel Ruiz',
         description: 'Ilusionismo moderno y magia de cerca para cumpleaños de 40 y 50 años en Madrid.',
         images: ['/images/fiesta-eventos-madrid.webp'],
     },
@@ -50,8 +50,7 @@ export default function CumpleanosAdultosPage() {
         "url": "https://angelruiz.world/particulares/fiestas-cumpleanos-madrid"
     };
 
-    const faqSchema = {
-        "mainEntity": [
+    const faqs = [
             { "@type": "Question", "name": "¿El espectáculo es adecuado para un cumpleaños de adultos (40 o 50 años)?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutamente. Mi magia está diseñada para un público adulto y sofisticado. Mezclo impacto visual, psicología y un humor inteligente perfecto para hacer que el homenajeado se sienta especial." } },
             { "@type": "Question", "name": "¿Te desplazas a domicilio en Madrid o a restaurantes?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, realizo la mayor parte de estas actuaciones en chalets privados, salones de restaurantes y fincas en toda la Comunidad de Madrid, adaptándome al espacio disponible." } },
             { "@type": "Question", "name": "¿Es mejor magia de cerca o de salón para una fiesta privada?", "acceptedAnswer": { "@type": "Answer", "text": "Depende de la estructura de tu fiesta. Si es un formato cóctel de pie, la magia itinerante funciona genial. Si todos están sentados o queréis un momento central tras la cena, la magia de salón de 30-45 minutos es el broche de oro perfecto." } },
@@ -60,8 +59,7 @@ export default function CumpleanosAdultosPage() {
             { "@type": "Question", "name": "¿Pueden participar los niños si es una fiesta familiar?", "acceptedAnswer": { "@type": "Answer", "text": "Por supuesto. Aunque el tono del espectáculo esté pensado para los adultos que cumplen años, la magia tiene un lenguaje universal y los niños también se asombrarán y disfrutarán al máximo. Es magia familiar de calidad." } },
             { "@type": "Question", "name": "¿Hasta qué zonas te desplazas?", "acceptedAnswer": { "@type": "Answer", "text": "Me desplazo por toda la Comunidad de Madrid. Esto incluye Madrid centro, la zona noroeste (Las Rozas, Majadahonda, Torrelodones, Pozuelo), y también otras provincias limítrofes si el evento lo requiere." } },
             { "@type": "Question", "name": "¿Con cuánto tiempo de antelación debo avisar?", "acceptedAnswer": { "@type": "Answer", "text": "Para asegurar disponibilidad, recomiendo avisar con al menos 2-3 meses de antelación, especialmente si el cumpleaños se celebra en fin de semana durante los meses de primavera u otoño." } }
-        ]
-    };
+        ];
 
     const breadcrumbSchema = {
         "@context": "https://schema.org",
@@ -97,10 +95,6 @@ export default function CumpleanosAdultosPage() {
                         {
                             ...serviceSchema,
                             "@id": "https://angelruiz.world/particulares/fiestas-cumpleanos-madrid/#service"
-                        },
-                        {
-                            "@type": "FAQPage",
-                            "mainEntity": faqSchema.mainEntity
                         },
                         {
                             "@type": "BreadcrumbList",
@@ -287,7 +281,7 @@ export default function CumpleanosAdultosPage() {
                     <FadeIn y={30} className="py-24 border-t border-white/5">
                         <h2 className="text-3xl font-[Cinzel] text-white mb-12 text-center">Preguntas Frecuentes</h2>
                         <div className="max-w-4xl mx-auto space-y-4">
-                            {faqSchema.mainEntity.map((faq, index) => (
+                            {faqs.map((faq, index) => (
                                 <FAQItem key={index} faq={faq} />
                             ))}
                         </div>

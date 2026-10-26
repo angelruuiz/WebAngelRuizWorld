@@ -40,7 +40,7 @@ Hablemos claro: el cóctel es una zona de riesgo. Los invitados acaban de llegar
 - Tiempos muertos que se hacen eternos
 - La sensación de "¿cuándo nos sentamos?"
 
-La **magia de cerca** resuelve cada uno de estos problemas de manera natural. El mago se acerca a un grupo, realiza un efecto imposible, las reacciones atraen a más personas, y de repente hay conversación, risas y una energía completamente diferente.
+La **[magia de cerca](/mago-close-up-madrid)** resuelve cada uno de estos problemas de manera natural. El mago se acerca a un grupo, realiza un efecto imposible, las reacciones atraen a más personas, y de repente hay conversación, risas y una energía completamente diferente.
 
 ## Cómo Funciona la Magia en un Cóctel de Boda
 

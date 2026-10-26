@@ -52,7 +52,7 @@ Durante el cóctel de bienvenida o en las distintas áreas de la boutique, el il
 
 ### Espacios y Ubicaciones Habituales para Eventos VIP en Madrid
 
-Madrid cuenta con enclaves excepcionales donde la magia de cerca brilla con luz propia:
+Madrid cuenta con enclaves excepcionales donde la [magia de cerca](/mago-close-up-madrid) brilla con luz propia:
 
 * **Barrio de Salamanca y Milla de Oro:** Flagship stores, joyerías y boutiques de moda en Serrano, Ortega y Gasset y Jorge Juan.
 * **Palacetes y Hoteles de 5 Estrellas:** Espacios históricos en Paseo de la Castellana, Gran Vía y Chamberí.

@@ -53,7 +53,7 @@ Aquí es donde entra la necesidad imperiosa de incorporar un entretenimiento de 
 
 ## Cómo la magia de cerca transforma un aniversario corporativo 💡
 
-La **magia de cerca (close-up)** es, sin lugar a dudas, una de las artes escénicas más potentes para el entorno empresarial. A diferencia de un espectáculo de escenario convencional, donde el público es un mero espectador pasivo, la magia de cerca ocurre a escasos centímetros de los ojos de tus invitados, e incluso en sus propias manos.
+La **[magia de cerca (close-up)](/mago-close-up-madrid)** es, sin lugar a dudas, una de las artes escénicas más potentes para el entorno empresarial. A diferencia de un espectáculo de escenario convencional, donde el público es un mero espectador pasivo, la magia de cerca ocurre a escasos centímetros de los ojos de tus invitados, e incluso en sus propias manos.
 
 ¿Qué aporta un mago profesional a la celebración de tu empresa en Madrid?
 

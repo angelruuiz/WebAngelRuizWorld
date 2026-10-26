@@ -43,7 +43,7 @@ En cualquier fiesta de 30 años se produce un fenómeno sociológico habitual: l
 
 El riesgo de estas celebraciones es que la sala quede dividida en pequeños corrillos independientes que apenas interactúan entre sí.
 
-La **magia de cerca (Close-Up) y el mentalismo interactivo** actúan como el rompehielos social definitivo. Al realizarse a escasos centímetros de los ojos de los asistentes, genera una reacción de incredulidad colectiva inmediata: risas cómplices, miradas cruzadas y un tema de conversación compartido que disuelve cualquier timidez en cuestión de segundos.
+La **[magia de cerca (Close-Up)](/mago-close-up-madrid) y el mentalismo interactivo** actúan como el rompehielos social definitivo. Al realizarse a escasos centímetros de los ojos de los asistentes, genera una reacción de incredulidad colectiva inmediata: risas cómplices, miradas cruzadas y un tema de conversación compartido que disuelve cualquier timidez en cuestión de segundos.
 
 ---
 
@@ -73,7 +73,7 @@ Frente a la opacidad habitual del sector del espectáculo, Ángel Ruiz apuesta p
 * **Duración:** 60 minutos de asombro continuo e interactivo.
 * **Qué incluye:** Magia de cerca itinerante o show de salón participativo, adaptación al perfil de los invitados, efectos personalizados para el cumpleañero y desplazamiento por toda la Comunidad de Madrid.
 
-Para consultar la comparativa con otros servicios particulares o eventos corporativos, puedes visitar nuestra guía completa de [cuánto cuesta un mago en Madrid: precios reales](/blog/cuanto-cuesta-mago-madrid-precios).
+Para consultar la comparativa con otros servicios particulares o eventos corporativos, puedes visitar nuestra guía completa de [cuánto cuesta un [mago en Madrid](/mago-madrid): precios reales](/blog/cuanto-cuesta-mago-madrid-precios).
 
 ---
 

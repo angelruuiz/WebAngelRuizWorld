@@ -3,13 +3,13 @@ import { useState, useEffect, useRef } from 'react';
 
 export const MagicCursor = ({ isLight = false }) => {
     const cursorRef = useRef(null);
-    const [isHovering, setIsHovering] = useState(false);
 
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-            if (window.matchMedia('(pointer: coarse)').matches || window.innerWidth < 768) {
-                return;
-            }
+        if (typeof window === 'undefined') return;
+
+        // Skip on coarse pointers (touchscreens/mobiles)
+        if (window.matchMedia('(pointer: coarse)').matches || window.innerWidth < 768) {
+            return;
         }
 
         document.body.classList.add('has-magic-cursor');
@@ -20,47 +20,108 @@ export const MagicCursor = ({ isLight = false }) => {
         let mouseY = -100;
         let currentX = -100;
         let currentY = -100;
-        let rafId;
+        let isHovered = false;
+        let isVisible = false;
+        let isRunning = false;
+        let rafId = null;
+
+        // Ultra-snappy & buttery smooth lerp factor (eliminates trailing drag lag)
+        const LERP_FACTOR = 0.65;
+
+        const render = () => {
+            const dx = mouseX - currentX;
+            const dy = mouseY - currentY;
+
+            // When close enough, snap and idle the loop to save 100% CPU/GPU
+            if (Math.abs(dx) < 0.15 && Math.abs(dy) < 0.15) {
+                currentX = mouseX;
+                currentY = mouseY;
+                cursor.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
+                isRunning = false;
+                rafId = null;
+                return;
+            }
+
+            currentX += dx * LERP_FACTOR;
+            currentY += dy * LERP_FACTOR;
+            cursor.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
+
+            rafId = requestAnimationFrame(render);
+        };
+
+        const startLoop = () => {
+            if (!isRunning) {
+                isRunning = true;
+                rafId = requestAnimationFrame(render);
+            }
+        };
 
         const onMouseMove = (e) => {
             mouseX = e.clientX;
             mouseY = e.clientY;
+
+            if (!isVisible) {
+                // Snap directly on first move to prevent off-screen sliding glitch
+                currentX = mouseX;
+                currentY = mouseY;
+                cursor.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
+                cursor.style.opacity = '1';
+                isVisible = true;
+            }
+
+            startLoop();
         };
 
         const onMouseOver = (e) => {
-            const isClickable = e.target.closest('button, a, input, textarea, select, .cursor-pointer, [role="button"]') !== null;
-            setIsHovering(isClickable);
+            const target = e.target;
+            if (!target || !target.closest) return;
+            const isClickable = Boolean(target.closest('button, a, input, textarea, select, .cursor-pointer, [role="button"], label'));
+            if (isClickable !== isHovered) {
+                isHovered = isClickable;
+                cursor.dataset.hover = isClickable ? 'true' : 'false';
+            }
         };
 
-        const render = () => {
-            // Smooth lerp (linear interpolation) for ultra-luxury buttery feel with 0 React re-renders
-            currentX += (mouseX - currentX) * 0.35;
-            currentY += (mouseY - currentY) * 0.35;
-            cursor.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
-            rafId = requestAnimationFrame(render);
+        const onMouseLeave = () => {
+            cursor.style.opacity = '0';
+            isVisible = false;
+        };
+
+        const onMouseEnter = () => {
+            cursor.style.opacity = '1';
+            isVisible = true;
         };
 
         window.addEventListener('mousemove', onMouseMove, { passive: true });
         window.addEventListener('mouseover', onMouseOver, { passive: true });
-        rafId = requestAnimationFrame(render);
+        document.addEventListener('mouseleave', onMouseLeave, { passive: true });
+        document.addEventListener('mouseenter', onMouseEnter, { passive: true });
 
         return () => {
             document.body.classList.remove('has-magic-cursor');
             window.removeEventListener('mousemove', onMouseMove);
             window.removeEventListener('mouseover', onMouseOver);
-            cancelAnimationFrame(rafId);
+            document.removeEventListener('mouseleave', onMouseLeave);
+            document.removeEventListener('mouseenter', onMouseEnter);
+            if (rafId) cancelAnimationFrame(rafId);
         };
     }, []);
 
     return (
         <div 
             ref={cursorRef}
-            className="fixed top-0 left-0 pointer-events-none z-[9999999] hidden md:block will-change-transform"
-            style={{ transform: 'translate3d(-100px, -100px, 0)' }}
+            data-hover="false"
+            className="group fixed top-0 left-0 pointer-events-none z-[9999999] hidden md:block opacity-0 will-change-transform"
         >
-            <div className={`relative -translate-x-1/2 -translate-y-1/2 transition-transform duration-200 ${isHovering ? 'scale-150' : 'scale-100'}`}>
-                <div className={`rounded-full blur-md transition-all duration-300 ${isLight ? 'bg-slate-950/20' : 'bg-[#d4a853] opacity-35'} ${isHovering ? 'w-12 h-12' : 'w-6 h-6'}`} />
-                <div className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#d4a853] shadow-[0_0_15px_rgba(212,168,83,0.5)] transition-all duration-300 ${isHovering ? 'w-8 h-8 border-amber-300' : 'w-3 h-3'}`} />
+            <div className="relative -translate-x-1/2 -translate-y-1/2 transition-transform duration-150 ease-out group-data-[hover=true]:scale-150">
+                <div 
+                    className={`w-6 h-6 rounded-full blur-[3px] transition-transform duration-150 ease-out will-change-transform group-data-[hover=true]:scale-125 ${
+                        isLight ? 'bg-slate-950/20' : 'bg-[#d4a853] opacity-35'
+                    }`} 
+                />
+                <div 
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 rounded-full border border-[#d4a853] shadow-[0_0_10px_rgba(212,168,83,0.45)] transition-all duration-150 ease-out group-data-[hover=true]:scale-125 group-data-[hover=true]:border-amber-300" 
+                />
             </div>
         </div>
     );

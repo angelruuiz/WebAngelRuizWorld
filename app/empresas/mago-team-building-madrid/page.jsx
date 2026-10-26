@@ -81,10 +81,6 @@ const schemaJson = {
       "url": "https://angelruiz.world/empresas/mago-team-building-madrid"
     },
     {
-      "@type": "FAQPage",
-      "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.name, "acceptedAnswer": { "@type": "Answer", "text": f.acceptedAnswer.text } }))
-    },
-    {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },

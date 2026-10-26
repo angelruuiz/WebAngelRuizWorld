@@ -231,6 +231,24 @@ export default function sitemap() {
       priority: 0.9,
       images: ['https://angelruiz.world/images/fiesta-eventos-madrid.webp'],
     },
+    {
+      url: 'https://angelruiz.world/privacidad',
+      lastModified: lastMod,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+    {
+      url: 'https://angelruiz.world/cookies',
+      lastModified: lastMod,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+    {
+      url: 'https://angelruiz.world/aviso-legal',
+      lastModified: lastMod,
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
   ];
 
   // Avoid duplicates between locationUrls and staticUrls

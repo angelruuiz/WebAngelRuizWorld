@@ -69,7 +69,7 @@ El formato más popular. Un espectáculo interactivo de 45-60 minutos donde todo
 **Nº niños**: Desde 8 hasta 30  
 **Espacio**: Salón de casa, jardín, local de fiestas
 
-### Magia de Cerca para Grupos Pequeños (8+ años)
+### [Magia de Cerca](/mago-close-up-madrid) para Grupos Pequeños (8+ años)
 
 Para grupos más reducidos o niños algo mayores, la magia de cerca es devastadora. El mago se sienta con el grupo y realiza efectos imposibles con cartas, monedas y objetos cotidianos a centímetros de sus ojos. Las reacciones son explosivas.
 
@@ -133,7 +133,7 @@ Después de cientos de fiestas infantiles, estos son los detalles que marcan la 
 Si estás organizando una celebración familiar, estos artículos te interesan:
 
 - [Mago para Comuniones en Madrid: Guía Completa](/blog/mago-comuniones-madrid-guia)
-- [¿Cuánto Cuesta Contratar un Mago en Madrid? Precios Reales](/blog/cuanto-cuesta-mago-madrid-precios)
+- [¿Cuánto Cuesta Contratar un [Mago en Madrid](/mago-madrid)? Precios Reales](/blog/cuanto-cuesta-mago-madrid-precios)
 - [Guía Definitiva para Contratar un Mago en Madrid (2026)](/blog/guia-contratar-mago-madrid-2026)
 - [Mago para Despedidas de Soltera en Madrid](/blog/mago-despedidas-soltera-madrid)
 

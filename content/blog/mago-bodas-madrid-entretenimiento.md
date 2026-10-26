@@ -35,7 +35,7 @@ Un [mago para bodas en Madrid](/particulares/bodas) experto en magia *Close-Up* 
 
 ## Magia durante el Banquete
 
-Otra opción muy popular es la intervención durante los postres o los tiempos de espera entre platos. El **mago profesional en Madrid** recorre las mesas, asegurándose de que el ritmo de la celebración no decaiga en ningún momento y preparando el ambiente festivo antes del baile.
+Otra opción muy popular es la intervención durante los postres o los tiempos de espera entre platos. El **[mago profesional en Madrid](/mago-madrid)** recorre las mesas, asegurándose de que el ritmo de la celebración no decaiga en ningún momento y preparando el ambiente festivo antes del baile.
 
 ### Un Recuerdo Exclusivo para los Novios
 

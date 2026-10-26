@@ -34,7 +34,7 @@ Contratar un [mago para eventos privados en Madrid](/particulares/eventos) y cum
 
 ## ¿Por qué la Magia de Cerca triunfa en los Cumpleaños de Adultos?
 
-Cuando los adultos asisten a una celebración, el objetivo principal es conversar, compartir anécdotas y divertirse en un ambiente distendido. La **magia de cerca (close-up)** aporta el equilibrio perfecto:
+Cuando los adultos asisten a una celebración, el objetivo principal es conversar, compartir anécdotas y divertirse en un ambiente distendido. La **[magia de cerca (close-up)](/mago-close-up-madrid)** aporta el equilibrio perfecto:
 
 1. **Impacto a escasos centímetros**: Los efectos ocurren en las manos de los propios invitados con cartas, monedas, anillos y objetos cotidianos, desafiando toda explicación racional.
 2. **Humor inteligente y complicidad**: La actuación crea una atmósfera de risas y asombro sin caer nunca en bromas de mal gusto o situaciones incómodas.

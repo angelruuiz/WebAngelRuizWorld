@@ -50,7 +50,7 @@ Muchos organizadores dudan entre contratar un DJ, un monologuista o un mago. Ana
 
 ## Los 2 Formatos Clave para Cenas Navideñas de Empresa
 
-### 1. Magia de Cerca en el Cóctel de Bienvenida (Icebreaker)
+### 1. [Magia de Cerca](/mago-close-up-madrid) en el Cóctel de Bienvenida (Icebreaker)
 Durante los primeros 45-60 minutos, cuando los empleados llegan de la oficina y todavía existe cierta rigidez protocolaria, Ángel Ruiz se infiltra entre los corrillos de pie con una copa en la mano. 
 
 Realiza milagros imposibles a escasos centímetros: cartas firmadas que viajan a lugares imposibles, objetos de los directivos que levitan o lecturas de pensamiento sorprendentes. El hielo se rompe de inmediato y las risas compartidas unifican a departamentos que apenas interactúan en el día a día.

@@ -9,7 +9,7 @@ const ParticleBackground = dynamic(() => import('@/components/VisualEffects').th
 const CorporateInlineForm = dynamic(() => import('@/components/CorporateInlineForm'), { ssr: false });
 
 export const metadata = {
-  title: { absolute: 'Mago para Restaurantes en Madrid | Magia en Mesas y Eventos · Ángel Ruiz' },
+  title: { absolute: 'Mago para Restaurantes en Madrid · Ángel Ruiz' },
   description: 'Ilusionismo profesional en mesas (Table Hopping) para restaurantes de Madrid. Dinamiza cenas de fin de semana, celebraciones y eventos. Demostración sin compromiso.',
   keywords: ['mago para restaurantes madrid', 'mago para restaurantes', 'magia en restaurantes madrid', 'magia en mesas', 'table hopping madrid', 'animacion restaurantes madrid', 'ilusionista restaurantes', 'mago eventos hosteleria'],
   alternates: {
@@ -79,10 +79,6 @@ const schemaJson = {
       "description": "Magia de cerca itinerante de mesa en mesa (Table Hopping) para restaurantes, hoteles y locales de ocio en Madrid.",
       "serviceType": "Restaurant Entertainment Service",
       "url": "https://angelruiz.world/empresas/mago-para-restaurantes-madrid"
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": faqs.map(f => ({ "@type": "Question", "name": f.name, "acceptedAnswer": { "@type": "Answer", "text": f.acceptedAnswer.text } }))
     },
     {
       "@type": "BreadcrumbList",

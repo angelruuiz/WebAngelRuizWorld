@@ -8,7 +8,7 @@ const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod 
 const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
 
 export const metadata = {
-    title: { absolute: 'Mago para Eventos en Madrid | Celebraciones Privadas y Fiestas · Ángel Ruiz' },
+    title: { absolute: 'Mago para Eventos en Madrid | Fiestas Privadas · Ángel Ruiz' },
     description: 'Contrata un mago profesional para eventos privados en Madrid. Magia de cerca y animación de alto impacto para fiestas familiares y aniversarios. ¡Presupuesto en 2h!',
     keywords: ['mago para eventos madrid', 'mago eventos madrid', 'magia en eventos', 'mago fiestas privadas madrid', 'contratar mago eventos madrid', 'ilusionista eventos madrid', 'animacion eventos privados madrid'],
     alternates: {
@@ -42,8 +42,7 @@ export default function EventosDetailPage() {
         "url": "https://angelruiz.world/particulares/eventos"
     };
 
-    const faqSchema = {
-        "mainEntity": [
+    const faqs = [
             { "@type": "Question", "name": "¿La magia es adecuada para todas las edades?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, Angel adapta su repertorio según el público. Para eventos familiares, el show combina efectos visuales impactantes que fascinan tanto a niños como a adultos." } },
             { "@type": "Question", "name": "¿Qué espacio se necesita para la actuación?", "acceptedAnswer": { "@type": "Answer", "text": "La magia de cerca no requiere escenario. Se puede realizar de pie durante un cóctel o pasando por las mesas, adaptándose totalmente a la comodidad de tu salón o jardín." } },
             { "@type": "Question", "name": "¿Cuánto dura el espectáculo?", "acceptedAnswer": { "@type": "Answer", "text": "Normalmente la intervención dura entre 60 y 90 minutos, dependiendo del número de invitados y el tipo de evento, para asegurar que todos vivan la experiencia de cerca." } },
@@ -52,8 +51,7 @@ export default function EventosDetailPage() {
             { "@type": "Question", "name": "¿Qué se necesita por parte del anfitrión?", "acceptedAnswer": { "@type": "Answer", "text": "Prácticamente nada. Ángel lleva todo lo necesario en su maletín. No necesitas focos, sonido ni escenarios si se trata de magia itinerante." } },
             { "@type": "Question", "name": "¿Se pueden personalizar algunos trucos?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, en eventos privados a menudo podemos integrar elementos personales del homenajeado o mensajes específicos para hacer el momento aún más memorable." } },
             { "@type": "Question", "name": "¿Cómo se realiza el pago?", "acceptedAnswer": { "@type": "Answer", "text": "Generalmente se solicita una pequeña señal para reservar la fecha y el resto se abona el día del evento. Todo se realiza con la máxima transparencia y mediante factura profesional." } }
-        ]
-    };
+        ];
 
     const breadcrumbSchema = {
         "@context": "https://schema.org",
@@ -93,10 +91,6 @@ export default function EventosDetailPage() {
                             ...serviceSchema,
                             "@type": "Service",
                             "@id": "https://angelruiz.world/particulares/eventos/#service"
-                        },
-                        {
-                            "@type": "FAQPage",
-                            "mainEntity": faqSchema.mainEntity
                         },
                         {
                             "@type": "BreadcrumbList",
@@ -222,7 +216,7 @@ export default function EventosDetailPage() {
                     <section className="border-t border-white/5 pt-16 mt-16">
                         <h2 className="text-3xl font-[Cinzel] text-white mb-12 text-center uppercase tracking-widest">Preguntas Frecuentes</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                            {faqSchema.mainEntity.map((faq, index) => (
+                            {faqs.map((faq, index) => (
                                 <div key={index} className="bg-slate-900/40 p-8 rounded-xl border border-white/10 hover:border-amber-500/20 transition-colors">
                                     <h3 className="text-amber-400 font-bold mb-3 text-lg">{faq.name}</h3>
                                     <p className="text-slate-400 font-light text-sm leading-relaxed text-justify">{faq.acceptedAnswer.text}</p>

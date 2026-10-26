@@ -33,7 +33,7 @@ export async function generateMetadata({ params }) {
 
   return {
     title: { absolute: resolvedTitle },
-    description: postData.excerpt,
+    description: postData.meta_description || postData.excerpt,
     keywords: postData.tags,
     openGraph: {
       title: postData.title,
@@ -138,19 +138,6 @@ export default async function BlogPost({ params }) {
     }
   };
 
-  const faqSchema = postData.faq && postData.faq.length > 0 ? {
-    "@type": "FAQPage",
-    "@id": `https://angelruiz.world/blog/${params.slug}/#faq`,
-    "mainEntity": postData.faq.map(item => ({
-      "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.answer
-      }
-    }))
-  } : null;
-
   const breadcrumbSchema = {
     "@type": "BreadcrumbList",
     "@id": `https://angelruiz.world/blog/${params.slug}/#breadcrumb`,
@@ -187,8 +174,7 @@ export default async function BlogPost({ params }) {
               "priceRange": "€€€"
             },
             blogArticle,
-            breadcrumbSchema,
-            ...(faqSchema ? [faqSchema] : [])
+            breadcrumbSchema
           ]
         }) }} 
       />

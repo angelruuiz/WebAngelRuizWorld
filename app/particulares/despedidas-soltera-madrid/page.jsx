@@ -28,15 +28,13 @@ export const metadata = {
     },
 };
 
-const faqSchema = {
-    mainEntity: [
+const faqs = [
         { "@type": "Question", "name": "¿Qué tipo de magia funciona mejor en una despedida de soltera en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "La magia de cerca o close-up es perfecta para despedidas de soltera. Me muevo entre el grupo realizando efectos sorprendentes e interactivos que generan carcajadas, asombro y momentos que todas recordaréis. No necesito escenario ni montajes: solo vuestras ganas de pasarlo bien." } },
         { "@type": "Question", "name": "¿Puedes hacer un número especial para la novia?", "acceptedAnswer": { "@type": "Answer", "text": "¡Es lo más divertido! Diseño un efecto especial personalizado para la protagonista: algo que la sorprenda completamente y que el grupo disfrute a lo grande. Puede ser un momento íntimo y emocionante o un efecto cómico que haga reír a todas, según prefiera el grupo." } },
         { "@type": "Question", "name": "¿Cuánto cuesta contratar un mago para una despedida de soltera en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "Para despedidas de soltera el precio suele estar entre 200€ y 400€ dependiendo de la duración y el número de participantes. Para grupos de 10-20 personas, 1 hora suele ser suficiente. Solicita presupuesto sin compromiso." } },
         { "@type": "Question", "name": "¿Actúas en apartamentos, restaurantes o bares de Madrid para despedidas?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, me adapto a cualquier espacio: apartamentos alquilados para la ocasión, restaurantes en Madrid centro, barcos en el Manzanares o cualquier local de Madrid. La magia de cerca no necesita escenario." } },
         { "@type": "Question", "name": "¿Con cuánta antelación debo reservar el mago para la despedida?", "acceptedAnswer": { "@type": "Answer", "text": "Para despedidas de soltera en Madrid recomiendo reservar con 2-3 semanas de antelación como mínimo. Para fechas de temporada alta (primavera y otoño, cuando hay más bodas), intenta reservar con un mes o más." } }
-    ]
-};
+    ];
 
 export default function DespedidasSolteraMadridPage() {
     const schemaJson = {
@@ -67,10 +65,6 @@ export default function DespedidasSolteraMadridPage() {
                 "description": "Espectáculo de magia de cerca para despedidas de soltera y soltero en Madrid. Interactivo, sorprendente y personalizado para la protagonista.",
                 "serviceType": "Entertainment",
                 "url": "https://angelruiz.world/particulares/despedidas-soltera-madrid"
-            },
-            {
-                "@type": "FAQPage",
-                "mainEntity": faqSchema.mainEntity
             },
             {
                 "@type": "BreadcrumbList",
@@ -183,7 +177,7 @@ export default function DespedidasSolteraMadridPage() {
                         <div className="max-w-4xl mx-auto">
                             <h2 className="text-3xl font-[Cinzel] text-white mb-8">Preguntas Frecuentes</h2>
                             <div className="space-y-4">
-                                {faqSchema.mainEntity.map((faq, index) => (
+                                {faqs.map((faq, index) => (
                                     <FAQItem key={index} faq={faq} />
                                 ))}
                             </div>

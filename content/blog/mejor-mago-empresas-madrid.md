@@ -49,7 +49,7 @@ Uno de los errores más costosos de los organizadores de eventos es contratar a 
 
 ---
 
-## 2. Los 5 Factores Decisivos para Elegir al Mejor Mago en Madrid
+## 2. Los 5 Factores Decisivos para Elegir al Mejor [Mago en Madrid](/mago-madrid)
 
 Para asegurarte de que tu evento sea un éxito rotundo sin riesgos para la reputación de la empresa, comprueba siempre estos cinco elementos:
 

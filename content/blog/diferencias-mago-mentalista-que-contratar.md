@@ -123,4 +123,4 @@ Tanto si buscas las risas y el asombro dinámico de la **magia de cerca**, como 
 - [Magia de Cerca vs Escenario: ¿Qué Elegir?](/blog/magia-de-cerca-vs-escenario)
 - [Cómo Elegir Mago para tu Evento: Errores a Evitar](/blog/como-elegir-mago-evento-madrid-errores)
 - [Guía Definitiva para Contratar un Mago en Madrid](/blog/guia-contratar-mago-madrid-2026)
-- [¿Cuánto Cuesta un Mago en Madrid?](/blog/cuanto-cuesta-mago-madrid-precios)
+- [¿Cuánto Cuesta un [Mago en Madrid](/mago-madrid)?](/blog/cuanto-cuesta-mago-madrid-precios)

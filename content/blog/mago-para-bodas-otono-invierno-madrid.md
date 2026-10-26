@@ -32,7 +32,7 @@ En un salón cubierto o carpa climatizada, la acústica y el flujo de los invita
 
 ---
 
-## 1. Por Qué la Magia de Cerca Triunfa en Bodas de Temporada Fría
+## 1. Por Qué la [Magia de Cerca](/mago-close-up-madrid) Triunfa en Bodas de Temporada Fría
 
 ### A. Intimidad y Calidez Emocional
 En verano, los invitados se dispersan por amplias explanadas. En otoño e invierno, se reúnen en salones más recogidos. La magia a escasos centímetros (*Close-Up*) florece en este entorno, logrando que grupos reducidos compartan miradas de asombro y risas espontáneas alrededor de una copa de vino.

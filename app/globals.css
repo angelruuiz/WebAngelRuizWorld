@@ -60,8 +60,17 @@ body {
     line-height: 1.7;
 }
 
-body.has-magic-cursor {
-    cursor: none;
+body.has-magic-cursor,
+body.has-magic-cursor a,
+body.has-magic-cursor button,
+body.has-magic-cursor [role="button"],
+body.has-magic-cursor .cursor-pointer {
+    cursor: none !important;
+}
+
+body.has-magic-cursor input,
+body.has-magic-cursor textarea {
+    cursor: text !important;
 }
 
 h1, h2, h3, h4 {
@@ -84,7 +93,7 @@ p {
 .font-\[Inter\] { font-family: var(--font-body); }
 
 @media (max-width: 768px) {
-    body { cursor: auto; }
+    body, body.has-magic-cursor, body.has-magic-cursor * { cursor: auto !important; }
 }
 
 

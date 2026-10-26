@@ -3,7 +3,7 @@ import BlogListingClient from '@/components/BlogListingClient';
 
 export const metadata = {
   title: { absolute: 'Blog | Ángel Ruiz, Mago e Ilusionista' },
-  description: 'Explora nuestro blog de magia. ¿Tienes dudas sobre cómo contratar un mago? Descubre precios, consejos clave y todo lo que necesitas saber sobre el ilusionismo para eventos en Madrid. Resuelve tus preguntas sobre magia de cerca, magia de salón y espectáculos de escenario con Ángel Ruiz.',
+  description: 'Blog de magia y eventos en Madrid por Ángel Ruiz. Precios, ideas y consejos de ilusionismo para bodas, fiestas privadas y eventos de empresa.',
   alternates: {
     canonical: 'https://angelruiz.world/blog',
   },

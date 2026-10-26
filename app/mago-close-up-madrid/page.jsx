@@ -10,7 +10,7 @@ const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod 
 const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
 
 export const metadata = {
-    title: { absolute: 'Mago Close-Up en Madrid | Magia de Cerca de Autor · Ángel Ruiz' },
+    title: { absolute: 'Mago Close-Up en Madrid | Magia de Cerca · Ángel Ruiz' },
     description: 'Experto en magia de cerca (Close-Up) y cartomagia de autor en Madrid. Formado con Dani DaOrtiz. Ilusionismo puro a centímetros de tus ojos. ¡Pide tu fecha!',
     keywords: ['mago close up madrid', 'mago de cerca madrid', 'experto en magia en madrid', 'cartomagia madrid', 'ilusionismo de cerca madrid', 'mago close up bodas madrid', 'mago close up empresas madrid'],
     alternates: {
@@ -30,10 +30,7 @@ export const metadata = {
 };
 
 export default function MagoCloseUpMadridPage() {
-    const faqSchema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
+    const faqs = [
             {
                 "@type": "Question",
                 "name": "¿Qué es un mago close up o de magia de cerca?",
@@ -90,8 +87,7 @@ export default function MagoCloseUpMadridPage() {
                     "text": "Para eventos corporativos o cócteles, trabajo en formato itinerante realizando pases de 7 a 15 minutos por grupo. La duración total del servicio suele ser de 1.5 a 2 horas, asegurando que todos los invitados experimenten el ilusionismo de alta calidad."
                 }
             }
-        ]
-    };
+        ];
 
     const breadcrumbSchema = {
         "@context": "https://schema.org",
@@ -102,7 +98,7 @@ export default function MagoCloseUpMadridPage() {
         ]
     };
 
-    const faqs = faqSchema.mainEntity;
+    // faqs directly used in JSX
 
     const business = {
         "@type": ["EntertainmentBusiness", "ProfessionalService"],
@@ -192,12 +188,23 @@ export default function MagoCloseUpMadridPage() {
         ]
     };
 
+    const service = {
+        "@type": "Service",
+        "@id": "https://angelruiz.world/mago-close-up-madrid/#service",
+        "name": "Magia de Cerca Close-Up en Madrid",
+        "provider": { "@id": "https://angelruiz.world/#person" },
+        "serviceType": "Close-Up Magic Entertainment",
+        "areaServed": "Comunidad de Madrid",
+        "description": "Especialización en cartomagia de autor, micromagia y mentalismo a escasos centímetros para bodas y empresas en Madrid.",
+        "url": "https://angelruiz.world/mago-close-up-madrid"
+    };
+
     const combinedSchema = {
         "@context": "https://schema.org",
         "@graph": [
             business,
             person,
-            faqSchema,
+            service,
             breadcrumbSchema
         ]
     };

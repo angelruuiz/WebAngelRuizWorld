@@ -48,7 +48,7 @@ En esta guía analizamos cómo integrar el ilusionismo profesional y la animaci�
 
 Para que una gala corporativa en Madrid mantenga el interés de principio a fin, la estructura temporal y emocional debe estar perfectamente calculada:
 
-1. **La Bienvenida (El Cóctel)**: Es el momento en que los asistentes llegan, muchos de ellos sin conocerse o pertenecientes a distintas delegaciones. La **magia de cerca (close-up)** actúa como un catalizador inmediato de conversación y risas, relajando el ambiente antes de pasar al salón principal.
+1. **La Bienvenida (El Cóctel)**: Es el momento en que los asistentes llegan, muchos de ellos sin conocerse o pertenecientes a distintas delegaciones. La **[magia de cerca (close-up)](/mago-close-up-madrid)** actúa como un catalizador inmediato de conversación y risas, relajando el ambiente antes de pasar al salón principal.
 2. **La Cena**: Durante los platos principales, los invitados deben disfrutar de la gastronomía y la conversación tranquila. Las intervenciones artísticas en este bloque deben ser sutiles o espaciadas.
 3. **El Bloque de Premios o Reconocimientos**: El momento cumbre. Debe ser ágil, emotivo y con transiciones limpias.
 4. **El Clímax de Sobremesa**: Justo con el café y los postres, un espectáculo central de magia y mentalismo de 25 a 35 minutos proporciona el broche de oro antes de la apertura de la barra libre o fiesta final.

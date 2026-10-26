@@ -49,9 +49,9 @@ export default function BlogListingClient({ posts }) {
     return (
         <div className="min-h-screen text-slate-200 relative overflow-hidden">
             {/* Background Animated Blobs for Liquid Feel */}
-            <div className="absolute top-0 -left-4 w-72 h-72 bg-amber-600 bg-blob opacity-50" />
-            <div className="absolute top-0 -right-4 w-72 h-72 bg-purple-600 bg-blob animation-delay-2000 opacity-50" />
-            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-amber-400 bg-blob animation-delay-4000 opacity-50" />
+            <div className="absolute top-0 -left-4 w-72 h-72 bg-amber-600 bg-blob opacity-50 pointer-events-none will-change-transform" />
+            <div className="absolute top-0 -right-4 w-72 h-72 bg-purple-600 bg-blob animation-delay-2000 opacity-50 pointer-events-none will-change-transform" />
+            <div className="absolute -bottom-8 left-20 w-72 h-72 bg-amber-400 bg-blob animation-delay-4000 opacity-50 pointer-events-none will-change-transform" />
 
             <main className="max-w-[1440px] mx-auto px-6 pt-2 pb-16 relative z-10">
                 <header className="text-center mb-12">
@@ -135,9 +135,9 @@ export default function BlogListingClient({ posts }) {
                     >
                         <AnimatePresence mode="popLayout">
                             {filteredPosts.map((post) => (
-                                <motion.div key={post.slug} layout variants={item} initial="hidden" animate="show" exit="exit">
+                                <motion.div key={post.slug} variants={item} initial="hidden" animate="show" exit="exit" className="[content-visibility:auto] [contain-intrinsic-size:0_320px]">
                                     <Link href={`/blog/${post.slug}`} className="group block h-full">
-                                        <article className="bg-[#111111]/80 backdrop-blur-xl h-full p-5 flex flex-col justify-between transition-all duration-500 hover:bg-white/10 border border-white/5 group-hover:border-amber-500/30 rounded-[1.5rem] shadow-xl">
+                                        <article className="bg-[#111111]/90 backdrop-blur-sm h-full p-5 flex flex-col justify-between transition-colors duration-300 hover:bg-white/10 border border-white/5 group-hover:border-amber-500/30 rounded-[1.5rem] shadow-xl">
                                             <div className="relative z-10">
                                                 <div className="flex items-center gap-2 mb-3">
                                                     <span className="w-3 h-[1px] bg-amber-500/50" />

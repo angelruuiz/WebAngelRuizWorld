@@ -51,7 +51,7 @@ No todos los enlaces son iguales. Al solicitar un **presupuesto de mago para bod
 
 1.  **Duración de la Actuación**: Una intervención de 60 minutos durante el cóctel es perfecta para romper el hielo. Si se desea cubrir también los tiempos entre platos en el banquete, se contrata el pase de 1,5 a 2 horas.
 2.  **Número de Invitados**: Para bodas de más de 150-200 invitados, extender el tiempo de actuación asegura que todos los asistentes vivan la experiencia de cerca.
-3.  **Tipo de Magia**: La **magia de cerca (close-up)** es la más solicitada y elegante para bodas, ya que no requiere grandes montajes técnicos y se integra de forma natural con el cóctel.
+3.  **Tipo de Magia**: La **[magia de cerca (close-up)](/mago-close-up-madrid)** es la más solicitada y elegante para bodas, ya que no requiere grandes montajes técnicos y se integra de forma natural con el cóctel.
 4.  **Fecha del Evento**: Los sábados de temporada alta (mayo a octubre) suelen tener una demanda altísima en Madrid, por lo que se recomienda reservar con antelación.
 
 ### Tarifas de magos en Madrid: ¿Buscando lo barato?

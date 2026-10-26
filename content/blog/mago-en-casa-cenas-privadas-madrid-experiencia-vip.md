@@ -33,7 +33,7 @@ Para transformar esa cena en una experiencia verdaderamente inolvidable y única
 
 ---
 
-## La Experiencia de la Magia de Cerca en el Salón de tu Casa
+## La Experiencia de la [Magia de Cerca](/mago-close-up-madrid) en el Salón de tu Casa
 
 Lejos de los espectáculos convencionales en teatros lejanos, la magia en el salón de casa ofrece una intimidad inigualable:
 

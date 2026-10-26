@@ -5,7 +5,7 @@
  * 1. detectMetadataOpportunities: Title & description lengths, SERP truncation, redundant branding.
  * 2. detectSchemaOpportunities: Schema health, speakable specifications, price ranges, zero rating check.
  * 3. detectGeoLlmsOpportunities: Sync between sitemap routes/content and public/llms.txt AI search summaries.
- * 4. detectFaqOpportunities: High-intent FAQ gaps in blog posts to expand FAQPage schemas & on-page answers.
+ * 4. detectFaqOpportunities: High-intent FAQ gaps in blog posts to expand visible on-page HTML FAQ answers.
  * 5. detectMadridGeoOpportunities: Enriches local Madrid entity anchors (Pozuelo, Majadahonda, Las Rozas, IFEMA, fincas).
  * 6. detectInterlinkingOpportunities: Topic cluster internal linking back to core commercial pillars.
  */
@@ -308,7 +308,7 @@ function detectFaqOpportunities(projectRoot, options = {}) {
           type: 'faq',
           targetFile: toRel(projectRoot, fullPath),
           title: `Enriquecer FAQ de alta conversión comercial en ${file}`,
-          description: `El artículo cuenta con ${faqs.length} preguntas frecuentes. Incorporar una pregunta directa sobre antelación, adaptación o costes en Madrid amplía el marcado FAQPage en Google y resuelve la objeción clave del cliente antes de contactar.`,
+          description: `El artículo cuenta con ${faqs.length} preguntas frecuentes. Incorporar una pregunta directa sobre antelación, adaptación o costes en Madrid amplía las respuestas visibles para usuarios e IAs y resuelve la objeción clave del cliente antes de contactar.`,
           proposedChange: {
             kind: 'frontmatter',
             payload: {

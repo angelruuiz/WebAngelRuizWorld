@@ -30,7 +30,7 @@ faq:
 
 Contratar entretenimiento en vivo para una boda, una fiesta privada o una convención corporativa es una de las decisiones que determinan el éxito de un evento. Un buen artista convierte una reunión corriente en un recuerdo inolvidable; por el contrario, una elección desacertada puede generar momentos incómodos ante tus invitados o clientes.
 
-Si estás pensando en **contratar un ilusionista en Madrid**, esta guía práctica te proporciona las claves esenciales para acertar a la primera, conocer las tarifas reales del mercado y evitar los errores más comunes.
+Si estás pensando en **contratar un [ilusionista en Madrid](/mago-madrid)**, esta guía práctica te proporciona las claves esenciales para acertar a la primera, conocer las tarifas reales del mercado y evitar los errores más comunes.
 
 ---
 
@@ -38,7 +38,7 @@ Si estás pensando en **contratar un ilusionista en Madrid**, esta guía prácti
 
 No todos los espectáculos de magia son iguales. Existen dos grandes formatos:
 
-### A. Magia de Cerca (Close-Up Magic)
+### A. [Magia de Cerca](/mago-close-up-madrid) (Close-Up Magic)
 * **Cómo funciona:** El ilusionista se desplaza entre los grupos de pie o de mesa en mesa, realizando milagros visuales a escasos centímetros de los ojos de los asistentes.
 * **Ideal para:** Cócteles de bodas, cenas de networking, recepciones de empresa y restaurantes.
 * **Gran ventaja:** Rompe el hielo de inmediato y no requiere montaje técnico ni escenarios.

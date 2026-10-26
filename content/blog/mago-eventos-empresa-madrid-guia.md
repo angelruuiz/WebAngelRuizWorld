@@ -74,7 +74,7 @@ No todos los artistas están preparados para el protocolo empresarial. Al buscar
 
 - [Espectáculo para cenas de Navidad en Madrid: formatos y animación](/blog/espectaculo-animacion-cenas-navidad-empresas-madrid)
 - [Cenas de empresa pequeñas: animación para grupos de 10 a 30 personas](/blog/cenas-empresa-pequenas-madrid-animacion-magia)
-- [Restaurantes para cenas de empresa en Madrid con espectáculo](/blog/restaurantes-para-cenas-de-empresa-madrid-con-espectaculo)
+- [Restaurantes para [cenas de empresa en Madrid](/empresas/mago-cenas-empresa-madrid) con espectáculo](/blog/restaurantes-para-cenas-de-empresa-madrid-con-espectaculo)
 - [¿Cuánto cuesta un mago para una cena de empresa en Madrid?](/blog/presupuesto-mago-cena-de-empresa-madrid-cuanto-cuesta)
 
 Eleva el nivel de tu próximo evento de empresa o convención en Madrid. [Solicita aquí tu propuesta corporativa a medida](/contratar-mago-madrid) o contacta por WhatsApp para recibir respuesta en menos de 2 horas.

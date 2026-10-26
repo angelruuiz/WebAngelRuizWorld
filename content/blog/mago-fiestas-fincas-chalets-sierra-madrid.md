@@ -35,7 +35,7 @@ Sin embargo, en espacios amplios los invitados suelen dispersarse entre la pisci
 
 ### La Magia Itinerante: Perfecta para Exteriores y Jardines
 
-La magia de cerca no depende de luces artificiales complejas ni escenarios rígidos. Ocurre a plena luz del día o bajo la iluminación tenue de una pérgola:
+La [magia de cerca](/mago-close-up-madrid) no depende de luces artificiales complejas ni escenarios rígidos. Ocurre a plena luz del día o bajo la iluminación tenue de una pérgola:
 
 * **Libertad Total de Movimiento:** El ilusionista se acerca con naturalidad a los grupos sentados en el césped, junto a la piscina o en la barra de bebidas.
 * **Magia Visual y Orgánica:** Milagros realizados con objetos cotidianos, barajas, anillos y lectura de pensamiento que sorprenden tanto a jóvenes como a adultos.

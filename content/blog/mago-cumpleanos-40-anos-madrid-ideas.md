@@ -44,7 +44,7 @@ Contratar un **[mago para fiestas y cumpleaños de adultos en Madrid](/particula
 
 ---
 
-## 1. Por qué la Magia de Cerca Triunfa en los 40 Cumpleaños
+## 1. Por qué la [Magia de Cerca](/mago-close-up-madrid) Triunfa en los 40 Cumpleaños
 
 A los 40 años, la mayoría de tus invitados tienen un sentido crítico agudo: son profesionales consolidados, personas viajadas y habituadas a consumir ocio de nivel. La magia tradicional de escenario puede resultar distante, pero el **ilusionismo de cerca (close-up) y el mentalismo psicológico** ofrecen una experiencia electrizante:
 
@@ -77,7 +77,7 @@ En Ángel Ruiz no hay presupuestos inflados ni tarifas opacas:
 * **Duración:** 60 minutos de magia y mentalismo interactivo.
 * **Cobertura:** Desplazamiento incluido en toda la Comunidad de Madrid, material profesional de alta gama y atención directa con el artista.
 
-Para comparar con otros eventos familiares o corporativos, revisa [cuánto cuesta un mago en Madrid: guía de tarifas 2026-2027](/blog/cuanto-cuesta-mago-madrid-precios).
+Para comparar con otros eventos familiares o corporativos, revisa [cuánto cuesta un [mago en Madrid](/mago-madrid): guía de tarifas 2026-2027](/blog/cuanto-cuesta-mago-madrid-precios).
 
 ---
 

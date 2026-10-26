@@ -35,7 +35,7 @@ Sin embargo, casi todas las celebraciones siguen el mismo guion: entrantes, plat
 
 ## Por qué la magia en mesa (Table Hopping) triunfa en restaurantes
 
-A diferencia de otros tipos de espectáculos, la **magia de cerca** no necesita un escenario ni equipo de sonido. Sucede literalmente a 30 centímetros de los ojos de los comensales, utilizando objetos cotidianos (cartas, monedas, anillos prestados, billetes y teléfonos móviles).
+A diferencia de otros tipos de espectáculos, la **[magia de cerca](/mago-close-up-madrid)** no necesita un escenario ni equipo de sonido. Sucede literalmente a 30 centímetros de los ojos de los comensales, utilizando objetos cotidianos (cartas, monedas, anillos prestados, billetes y teléfonos móviles).
 
 ### 1. Cero molestias para el local
 Un ilusionista profesional sabe moverse con discreción militar en la sala de un restaurante. Se coordina con el jefe de sala para no coincidir con el momento en que se sirven los platos calientes y respeta escrupulosamente el espacio del resto de clientes.

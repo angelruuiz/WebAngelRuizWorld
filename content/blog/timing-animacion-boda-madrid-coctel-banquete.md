@@ -33,7 +33,7 @@ Planificar el cronograma o minutaje de una boda en Madrid es uno de los ejercici
 - Comensales sentados a la mesa durante 25 minutos entre el pescado y la carne mirando sus teléfonos móviles.
 - Familias de ambos cónyuges que no han cruzado palabra en toda la recepción.
 
-Para evitar que estos baches de energía enfríen la celebración, estructurar un **timing fluido con animación de magia de cerca** es la estrategia más eficaz.
+Para evitar que estos baches de energía enfríen la celebración, estructurar un **timing fluido con animación de [magia de cerca](/mago-close-up-madrid)** es la estrategia más eficaz.
 
 ---
 

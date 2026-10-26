@@ -38,7 +38,7 @@ Y en ese escenario, [contratar un mago para bodas en Madrid](/particulares/bodas
 ## Las 3 Tendencias en Animación de Bodas para la Temporada 2027
 
 ### 1. El Cóctel como protagonista absoluto de la celebración
-Antes, el cóctel era una mera antesala rápida del banquete. Hoy en día, los cócteles se alargan hasta las 2 horas con estaciones gastronómicas y zonas chill-out al aire libre. La magia de cerca de Ángel Ruiz encaja de forma milimétrica en este entorno: rompe los silencios incómodos entre invitados que no se conocen y entretiene a todos mientras vosotros hacéis el reportaje de fotos.
+Antes, el cóctel era una mera antesala rápida del banquete. Hoy en día, los cócteles se alargan hasta las 2 horas con estaciones gastronómicas y zonas chill-out al aire libre. La [magia de cerca](/mago-close-up-madrid) de Ángel Ruiz encaja de forma milimétrica en este entorno: rompe los silencios incómodos entre invitados que no se conocen y entretiene a todos mientras vosotros hacéis el reportaje de fotos.
 
 ### 2. Entretenimiento orgánico (sin interrupciones forzadas)
 Los novios de 2027 huyen de las animaciones invasivas con micrófonos que obligan a parar la fiesta. La magia close-up se produce en pequeños círculos espontáneos: quien quiere mirar se acerca cautivado, y quien prefiere seguir conversando puede hacerlo sin molestias.

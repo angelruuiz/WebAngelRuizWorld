@@ -73,7 +73,7 @@ Cuando los invitados llegan, se encuentran con un mago que les recibe con efecto
 
 **Ideal para**: Inauguraciones de locales, aperturas de tienda, presentaciones a prensa  
 **Duración**: 45-90 minutos  
-**Formato**: Magia de cerca itinerante entre los invitados
+**Formato**: [Magia de cerca](/mago-close-up-madrid) itinerante entre los invitados
 
 ### 2. Product Reveal Mágico
 

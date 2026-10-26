@@ -35,10 +35,10 @@ El sector hostelero en la capital es altamente competitivo. Por ello, la búsque
 Uno de los mayores retos en un restaurante con gran afluencia es la gestión de los tiempos de espera entre que el cliente pide y recibe su plato. La magia en mesas (*table hopping*) transforma esta espera (que normalmente genera fricción) en el momento más divertido de la noche.
 
 ## Impacto Directo en Google My Business
-Los comensales que experimentan magia de cerca en su mesa están un 70% más predispuestos a dejar una reseña positiva mencionando la originalidad de la velada. Esto impulsa tu posicionamiento local.
+Los comensales que experimentan [magia de cerca](/mago-close-up-madrid) en su mesa están un 70% más predispuestos a dejar una reseña positiva mencionando la originalidad de la velada. Esto impulsa tu posicionamiento local.
 
 ## Frecuencia de Retorno
-Implementar los "Jueves Mágicos" o "Cenas de Ilusión" crea un gancho de retención. Las familias y grupos de amigos eligen repetir en el local que les garantizó, además de buena comida, un **espectáculo de magia en Madrid** exclusivo a centímetros de sus ojos.
+Implementar los "Jueves Mágicos" o "Cenas de Ilusión" crea un gancho de retención. Las familias y grupos de amigos eligen repetir en el local que les garantizó, además de buena comida, un **espectáculo de [magia en Madrid](/mago-madrid)** exclusivo a centímetros de sus ojos.
 
 Si buscas diferenciar tu local del resto, contar con un ilusionista residente o para fechas especiales es una de las estrategias de marketing offline más rentables. Descubre más sobre nuestro servicio de [mago para restaurantes en Madrid](/empresas/mago-para-restaurantes-madrid) o solicita asesoramiento para tu local.
 

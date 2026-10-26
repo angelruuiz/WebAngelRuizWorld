@@ -60,11 +60,11 @@ En lugares como **IFEMA en Madrid** o la **Fira de Barcelona**, destacar es vita
 
 ### 3. Magia de Cerca con Smartphones
 
-Para cenas de empresa y cócteles VIP, la magia de cerca (close-up) también se ha digitalizado. Olvídate de los conejos y las chisteras; los mejores efectos de la actualidad ocurren con la calculadora del iPhone del CEO de la compañía, o interactuando con las redes sociales de los propios empleados en tiempo real. 
+Para cenas de empresa y cócteles VIP, la [magia de cerca (close-up)](/mago-close-up-madrid) también se ha digitalizado. Olvídate de los conejos y las chisteras; los mejores efectos de la actualidad ocurren con la calculadora del iPhone del CEO de la compañía, o interactuando con las redes sociales de los propios empleados en tiempo real. 
 
 ## Recomendaciones para elegir al mejor Ilusionista Tecnológico
 
-Si buscas un **experto en magia en Madrid** o cualquier punto de España para un evento tecnológico corporativo, ten en cuenta esto:
+Si buscas un **experto en [magia en Madrid](/mago-madrid)** o cualquier punto de España para un evento tecnológico corporativo, ten en cuenta esto:
 
 * **Pide personalización:** El mago debe ser capaz de programar o adaptar sus rutinas para incluir tu software, tu web corporativa o tu producto.
 * **Busca perfil corporativo:** No todos los buenos magos saben desenvolverse en un entorno B2B. Asegúrate de que el ilusionista entienda de marketing y sepa cómo modular el discurso.
@@ -89,7 +89,7 @@ Si te ha parecido interesante, quizás te interese seguir leyendo estos artícul
 - [¿Cuál es el Mejor Mago para Empresas en Madrid? Claves para Elegir](/blog/mejor-mago-empresas-madrid)
 - [Team Building en Madrid: Por qué la Magia es la Actividad Perfecta (2026)](/blog/team-building-madrid-actividades-empresas)
 - [Actividades de Team Building en Madrid: La Magia como Herramienta](/blog/team-building-madrid-actividades-empresas)
-- [Ideas Originales para Cenas de Empresa en Madrid: Rompe con la Rutina (2026)](/blog/ideas-cenas-empresa-madrid-originales)
+- [Ideas Originales para [Cenas de Empresa en Madrid](/empresas/mago-cenas-empresa-madrid): Rompe con la Rutina (2026)](/blog/ideas-cenas-empresa-madrid-originales)
 - [Ideas Originales para Cenas de Empresa en Madrid: Rompe con la Rutina (2026)](/blog/ideas-cenas-empresa-madrid-originales)
 
 

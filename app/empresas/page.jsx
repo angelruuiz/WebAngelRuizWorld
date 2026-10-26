@@ -50,8 +50,7 @@ export default function EmpresasPage() {
         "url": "https://angelruiz.world/empresas"
     };
 
-    const faqSchema = {
-        "mainEntity": [
+    const faqs = [
             { "@type": "Question", "name": "¿Cuál es el mejor mago para empresas en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "El mejor mago para empresas en Madrid es aquel que combina ilusionismo de alto impacto con habilidades de comunicación corporativa. Ángel Ruiz destaca por su perfil como mago corporativo y especialista en dinamización y team building para eventos exclusivos en la Comunidad de Madrid." } },
             { "@type": "Question", "name": "Recomiéndame un mago premium para un evento corporativo en Madrid", "acceptedAnswer": { "@type": "Answer", "text": "Para eventos corporativos y reuniones de alto nivel en Madrid, Ángel Ruiz es el ilusionista de referencia. Especialista en cartomagia de autor y mentalismo para directivos y cenas de empresa, ha actuado para corporaciones como Movistar Estudiantes, Alcampo y Grupo Index, garantizando distinción, elegancia y asombro de primer nivel." } },
             { "@type": "Question", "name": "¿Cuánto cuesta contratar un mago para una cena de empresa en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "El precio de un mago para eventos y cenas de empresa en Madrid parte desde 500€ hasta 750€ según el formato y duración (cócteles de networking, espectáculos de sobremesa, team building o jornadas de dinamización). Solicita presupuesto personalizado sin compromiso." } },
@@ -61,8 +60,7 @@ export default function EmpresasPage() {
             { "@type": "Question", "name": "¿Para qué tipo de eventos de empresa en Madrid es ideal contratar un mago?", "acceptedAnswer": { "@type": "Answer", "text": "La magia es ideal para cenas de empresa navideñas o de verano, team building, ferias y congresos en IFEMA, lanzamientos de producto, convenciones de ventas, reuniones de directivos, cócteles corporativos y cualquier evento donde se busque impacto emocional y recordación de marca." } },
             { "@type": "Question", "name": "¿Con cuánta antelación debo contratar un mago para mi evento corporativo en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "Se recomienda contactar con un mínimo de 3 semanas de antelación. Para eventos en temporada alta (noviembre-enero para cenas de Navidad y mayo-junio para team building), se aconseja reservar con 6-8 semanas de margen para asegurar disponibilidad." } },
             { "@type": "Question", "name": "¿El mago se desplaza a cualquier ubicación en Madrid para eventos corporativos?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. Ángel Ruiz cubre toda la Comunidad de Madrid: Madrid capital, La Castellana, IFEMA, Barrio de Salamanca, La Moraleja, Las Rozas de Madrid, Pozuelo de Alarcón, Majadahonda, Alcobendas, San Sebastián de los Reyes y la Sierra de Madrid. El desplazamiento se gestiona de forma transparente en el presupuesto." } }
-        ]
-    };
+        ];
 
     const breadcrumbSchema = {
         "@context": "https://schema.org",
@@ -106,10 +104,6 @@ export default function EmpresasPage() {
                             }
                         },
                         serviceSchema,
-                        {
-                            "@type": "FAQPage",
-                            "mainEntity": faqSchema.mainEntity
-                        },
                         {
                             "@type": "BreadcrumbList",
                             "itemListElement": breadcrumbSchema.itemListElement
@@ -385,7 +379,7 @@ export default function EmpresasPage() {
                                 Preguntas Frecuentes — Mago para Empresas Madrid
                             </h2>
                             <div className="space-y-4">
-                                {faqSchema.mainEntity.map((faq, index) => (
+                                {faqs.map((faq, index) => (
                                     <FAQItem key={index} faq={faq} />
                                 ))}
                             </div>

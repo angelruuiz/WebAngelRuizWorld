@@ -43,7 +43,7 @@ Contratar un [mago para celebraciones familiares y cumpleaños en Madrid](/parti
 
 ---
 
-## Dónde Celebrar un 60 Cumpleaños con Magia en Madrid
+## Dónde Celebrar un 60 Cumpleaños con [Magia en Madrid](/mago-madrid)
 
 - **En un reservado de restaurante**: Tras la comida, durante la sobremesa y los cafés, transformando el salón en un pequeño teatro íntimo.
 - **En el salón de casa o jardín**: Con la comodidad del hogar, creando una atmósfera cálida y distendida.

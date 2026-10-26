@@ -85,7 +85,7 @@ Tras el cóctel y antes de dar paso al baile o la sesión de DJ, un show central
 ## Cómo Integrar la Magia en el *Timing* de tu Evento de Verano
 
 * **19:30 - 20:00 | Llegada y bienvenida**: Música suave de ambiente y primera copa.
-* **20:00 - 21:30 | Cóctel gastronómico y Magia de Cerca**: El ilusionista recorre todos los corrillos, dinamizando la velada mientras el sol cae.
+* **20:00 - 21:30 | Cóctel gastronómico y [Magia de Cerca](/mago-close-up-madrid)**: El ilusionista recorre todos los corrillos, dinamizando la velada mientras el sol cae.
 * **21:30 - 21:50 | Palabras de Dirección + Efecto Mágico Central**: Breve discurso de agradecimiento vinculado a una ilusión corporativa memorable.
 * **22:00 en adelante | Barra libre, DJ y fiesta**: Continuación de la velada con el ambiente al máximo.
 

@@ -47,7 +47,7 @@ La respuesta es el **ilusionismo contemporáneo familiar de alto nivel**, un art
 
 Para que la jornada fluya con dinamismo y alta participación, estructuramos la intervención en tres pilares clave:
 
-### 1. Magia de Cerca Itinerante durante la Recepción o Comida
+### 1. [Magia de Cerca](/mago-close-up-madrid) Itinerante durante la Recepción o Comida
 Mientras las familias recorren los stands, disfrutan de *food trucks* o comen en mesas compartidas, el ilusionista realiza intervenciones cortas y personalizadas mesa por mesa o en corrillos. Esto fomenta que familias de distintos departamentos entablen conversación de manera natural.
 
 ### 2. Espectáculo Central Interactivo (Main Stage)

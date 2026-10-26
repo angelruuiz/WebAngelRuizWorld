@@ -123,20 +123,17 @@ export default function LocationPageTemplate({ location, allLocations }) {
         }
     };
 
-    const faqSchema = {
-        "mainEntity": location.faqs ? location.faqs.map(f => ({
-            "@type": "Question",
-            "name": f.question,
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": f.answer
-            }
-        })) : [
-            { "@type": "Question", "name": `¿Ofreces servicios de mago en ${location.name} a domicilio?`, "acceptedAnswer": { "@type": "Answer", "text": `Sí, como mago profesional en ${location.name}, me desplazo a domicilios particulares para cumpleaños, cenas privadas y celebraciones familiares en zonas como ${location.neighborhoods}.` } },
-            { "@type": "Question", "name": "¿En qué tipo de eventos trabajas?", "acceptedAnswer": { "@type": "Answer", "text": "Estoy especializado en magia de cerca para bodas, eventos corporativos y celebraciones exclusivas, adaptando mi repertorio a cada tipo de público y espacio." } },
-            { "@type": "Question", "name": "¿Con cuánta antelación debo reservar?", "acceptedAnswer": { "@type": "Answer", "text": `Para eventos en ${location.name} y la zona noroeste, recomiendo reservar con al menos 2-4 semanas de antelación para garantizar disponibilidad en la fecha deseada.` } }
-        ]
-    };
+    
+    const faqs = location.faqs ? location.faqs.map(f => ({
+        name: f.question,
+        acceptedAnswer: {
+            text: f.answer
+        }
+    })) : [
+        { name: `¿Ofreces servicios de mago en ${location.name} a domicilio?`, acceptedAnswer: { text: `Sí, como mago profesional en ${location.name}, me desplazo a domicilios particulares para cumpleaños, cenas privadas y celebraciones familiares en zonas como ${location.neighborhoods}.` } },
+        { name: "¿En qué tipo de eventos trabajas?", acceptedAnswer: { text: "Estoy especializado en magia de cerca para bodas, eventos corporativos y celebraciones exclusivas, adaptando mi repertorio a cada tipo de público y espacio." } },
+        { name: "¿Con cuánta antelación debo reservar?", acceptedAnswer: { text: `Para eventos en ${location.name} y la zona noroeste, recomiendo reservar con al menos 2-4 semanas de antelación para garantizar disponibilidad en la fecha deseada.` } }
+    ];
 
     const isSur = ['alcorcon', 'leganes', 'getafe', 'mostoles'].includes(location.slug);
     const parentName = isSur ? "Mago Madrid" : "Mago Sierra Madrid";
@@ -177,10 +174,6 @@ export default function LocationPageTemplate({ location, allLocations }) {
                             }
                         },
                         pageSchema,
-                        {
-                            "@type": "FAQPage",
-                            "mainEntity": faqSchema.mainEntity
-                        },
                         {
                             "@type": "BreadcrumbList",
                             "itemListElement": breadcrumbSchema.itemListElement
@@ -328,7 +321,7 @@ export default function LocationPageTemplate({ location, allLocations }) {
                     <section className="border-t border-white/5 pt-16 mb-16">
                         <h2 className="text-2xl font-[Cinzel] text-white mb-12 text-center uppercase tracking-widest">Preguntas Frecuentes ({location.name})</h2>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                            {faqSchema.mainEntity.map((faq, index) => (
+                            {faqs.map((faq, index) => (
                                 <div key={index} className="bg-white/5 p-6 rounded-xl border border-white/10">
                                     <h3 className="text-amber-400 font-bold mb-3 text-sm">{faq.name}</h3>
                                     <p className="text-slate-400 text-xs leading-relaxed text-justify">{faq.acceptedAnswer.text}</p>

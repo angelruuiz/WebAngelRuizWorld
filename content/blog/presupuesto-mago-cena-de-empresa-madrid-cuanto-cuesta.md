@@ -33,7 +33,7 @@ En el sector del entretenimiento corporativo abunda la opacidad: muchas agencias
 
 ---
 
-## Tarifas Oficiales 2026 para Cenas de Empresa en Madrid
+## Tarifas Oficiales 2026 para [Cenas de Empresa en Madrid](/empresas/mago-cenas-empresa-madrid)
 
 Para eventos corporativos en la Comunidad de Madrid, estas son nuestras tarifas de referencia:
 

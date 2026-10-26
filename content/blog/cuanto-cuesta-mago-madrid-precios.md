@@ -39,7 +39,7 @@ Para que planifiques tu evento con total certidumbre, aquí tienes el desglose e
 
 | Tipo de Evento | Formato / Duración | Qué Incluye | Tarifa Cerrada |
 |---|---|---|---|
-| **Eventos Privados / Cumpleaños** | 1h – 1,5h | Magia de cerca en mesa o de pie para fiestas particulares, aniversarios o cenas a domicilio. | **300€** |
+| **Eventos Privados / Cumpleaños** | 1h – 1,5h | [Magia de cerca](/mago-close-up-madrid) en mesa o de pie para fiestas particulares, aniversarios o cenas a domicilio. | **300€** |
 | **Bodas: Solo Cóctel** | 1h – 1,5h | Magia itinerante durante la recepción y fotos de novios para romper el hielo entre invitados. | **450€** |
 | **Bodas: Cóctel + Banquete** ⭐ | 1,5h – 2h | Cobertura del cóctel más pases de mesa entre platos durante el banquete. | **550€** |
 | **Bodas: Experiencia Completa** | 2h+ | Cóctel, mesas y efecto especial exclusivo e irrepetible para los recién casados. | **650€** |

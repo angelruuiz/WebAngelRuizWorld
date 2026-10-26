@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import HomeClient, { PerpetualCard } from '@/components/HomeClient';
 import QuickEventSelector from '@/components/QuickEventSelector';
 import CorporateLogosBar from '@/components/CorporateLogosBar';
@@ -131,9 +132,9 @@ const SEOContent = () => {
                             <p className="text-sm md:text-base leading-relaxed text-gold-50/80">
                                 La figura del ilusionista durante el cóctel transforma la espera en el momento más memorable de la celebración. Mi magia de cerca rompe el hielo de forma elegante, uniendo a familias y amigos bajo un mismo sentimiento de asombro y alegría.
                             </p>
-                            <a href="/particulares/bodas" className="mt-6 inline-flex items-center text-amber-500 text-xs font-bold uppercase tracking-widest hover:text-white transition-all duration-[160ms]">
+                            <Link href="/particulares/bodas" className="mt-6 inline-flex items-center text-amber-500 text-xs font-bold uppercase tracking-widest hover:text-white transition-all duration-[160ms]">
                                 Ver Mago para Bodas en Madrid →
-                            </a>
+                            </Link>
                         </PerpetualCard>
 
                         <PerpetualCard className="md:col-span-12 lg:col-span-4 flex flex-col justify-start">
@@ -141,15 +142,15 @@ const SEOContent = () => {
                             <p className="text-sm md:text-base leading-relaxed text-gold-50/80">
                                 Las marcas líderes buscan formas innovadoras de conectar. Como <strong className="text-amber-500">mago para empresas en Madrid</strong>, ofrezco desde presentaciones de producto mágicas hasta entretenimiento premium para convenciones y cenas de empresa de alto nivel.
                             </p>
-                            <a href="/empresas" className="mt-6 inline-flex items-center text-amber-500 text-xs font-bold uppercase tracking-widest hover:text-white transition-all duration-[160ms]">
+                            <Link href="/empresas" className="mt-6 inline-flex items-center text-amber-500 text-xs font-bold uppercase tracking-widest hover:text-white transition-all duration-[160ms]">
                                 Ver Mago para Empresas en Madrid →
-                            </a>
+                            </Link>
                         </PerpetualCard>
 
                         <PerpetualCard className="md:col-span-12 lg:col-span-4 flex flex-col justify-start">
                             <h3 className="text-white font-[Cinzel] text-xl uppercase tracking-tight mb-4 border-b border-white/10 pb-4">Experto en Magia en Madrid</h3>
                             <p className="text-sm md:text-base leading-relaxed text-gold-50/80">
-                                Reconocido como un <strong className="text-amber-500">experto en magia en Madrid</strong>, aporto años de experiencia y técnica refinada (Escuela DaOrtiz) en especialidades como <a href="/mago-close-up-madrid" className="text-amber-400 hover:text-white underline decoration-amber-500/30">magia de cerca</a> para garantizar el éxito de tu evento, con puntualidad y excelencia técnica en toda la Comunidad.
+                                Reconocido como un <strong className="text-amber-500">experto en magia en Madrid</strong>, aporto años de experiencia y técnica refinada (Escuela DaOrtiz) en especialidades como <Link href="/mago-close-up-madrid" className="text-amber-400 hover:text-white underline decoration-amber-500/30">magia de cerca</Link> para garantizar el éxito de tu evento, con puntualidad y excelencia técnica en toda la Comunidad.
                             </p>
                         </PerpetualCard>
 
@@ -161,7 +162,7 @@ const SEOContent = () => {
                                     En el sector de los eventos, la diferencia entre un entretenimiento genérico y una experiencia verdaderamente inolvidable radica en la profesionalidad del ilusionista. Mi trayectoria me permite no solo ejecutar ilusiones imposibles, sino leer al público, gestionar el ritmo del evento e interactuar con la máxima elegancia.
                                 </p>
                                 <p>
-                                    Ya sea en una <a href="/particulares/bodas" className="text-amber-500 hover:underline transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">boda donde conectar con familias diversas</a>, o en un <a href="/empresas" className="text-amber-500 hover:underline transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">evento corporativo que representa la imagen de tu marca</a>, la profesionalidad está garantizada. Más de 10 años de experiencia y +50 reseñas de 5 estrellas avalan mi compromiso con el asombro de calidad.
+                                    Ya sea en una <Link href="/particulares/bodas" className="text-amber-500 hover:underline transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">boda donde conectar con familias diversas</Link>, o en un <Link href="/empresas" className="text-amber-500 hover:underline transition-all duration-[160ms] ease-out active:scale-[0.97] active:blur-[1px] inline-block">evento corporativo que representa la imagen de tu marca</Link>, la profesionalidad está garantizada. Más de 10 años de experiencia y +50 reseñas de 5 estrellas avalan mi compromiso con el asombro de calidad.
                                 </p>
                             </div>
                         </PerpetualCard>
@@ -171,12 +172,12 @@ const SEOContent = () => {
                             <div>
                                 <h2 className="text-2xl font-[Cinzel] text-white mb-6 uppercase tracking-widest">¿Hablamos del asombro que merece tu próximo evento?</h2>
                                 <p className="text-sm md:text-base text-gold-50/90 leading-relaxed mb-8">
-                                    Cada actuación es personalizada. No busco simplemente "hacer trucos", busco entender la dinámica de tu celebración para aportar el máximo valor posible a través del <strong>ilusionismo profesional</strong>. <u>La magia es el lenguaje universal del asombro</u>, déjame hablarlo para tus invitados. Si quieres consultar tarifas, visita la sección para <a href="/contratar-mago-madrid" className="text-amber-500 hover:underline font-bold">contratar mago Madrid</a>.
+                                    Cada actuación es personalizada. No busco simplemente "hacer trucos", busco entender la dinámica de tu celebración para aportar el máximo valor posible a través del <strong>ilusionismo profesional</strong>. <u>La magia es el lenguaje universal del asombro</u>, déjame hablarlo para tus invitados. Si quieres consultar tarifas, visita la sección para <Link href="/contratar-mago-madrid" className="text-amber-500 hover:underline font-bold">contratar mago Madrid</Link>.
                                 </p>
                             </div>
-                            <a href="/mago-sierra-madrid" className="group inline-block bg-white text-surface-0 font-bold px-8 py-4 rounded-full hover:bg-amber-500 hover:scale-[1.02] active:scale-[0.97] transition-all duration-[160ms] ease-out uppercase tracking-[0.2em] text-xs">
+                            <Link href="/mago-sierra-madrid" className="group inline-block bg-white text-surface-0 font-bold px-8 py-4 rounded-full hover:bg-amber-500 hover:scale-[1.02] active:scale-[0.97] transition-all duration-[160ms] ease-out uppercase tracking-[0.2em] text-xs">
                                 <span className="block group-active:blur-[2px] transition-[filter] duration-200">Ver Cobertura Local →</span>
-                            </a>
+                            </Link>
                         </PerpetualCard>
                         
                         {/* Marquee Especialidades - Span 12 full width */}
@@ -272,36 +273,6 @@ export default function Home() {
                 "inLanguage": "es-ES",
                 "author": { "@id": "https://angelruiz.world/#person" },
                 "publisher": { "@id": "https://angelruiz.world/#organization" }
-            },
-            {
-                "@type": "FAQPage",
-                "@id": "https://angelruiz.world/#faq",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "¿Por qué contratar un mago profesional para tu evento?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Contratar un mago profesional con trayectoria no es solo añadir un número de entretenimiento; es transformar radicalmente la percepción de tus invitados sobre el evento. El ilusionismo moderno sirve para: Networking Natural, Eliminar tiempos muertos, y Refuerzo de Marca."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "¿Cuánto cuesta contratar un mago en Madrid?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "El precio varía según el tipo de evento, número de invitados y formato. Como referencia, las celebraciones privadas y aniversarios parten desde 300€, los cócteles y bodas van de 450€ a 650€, y los eventos corporativos y cenas de empresa parten desde 500€ hasta 750€. Contacta directamente para un presupuesto personalizado sin compromiso en menos de 2 horas."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "¿Qué zonas de Madrid cubre Ángel Ruiz?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Con base en Torrelodones, cubro toda la Comunidad de Madrid: zona noroeste (Las Rozas, Majadahonda, Pozuelo, Boadilla, Galapagar, Villalba, El Escorial), zona sur (Alcorcón, Leganés, Getafe, Móstoles), Alcobendas y Madrid capital. Sin sobrecostes de desplazamiento en la zona noroeste."
-                        }
-                    }
-                ]
             }
         ]
     };

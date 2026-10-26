@@ -32,7 +32,7 @@ Casarse en la Sierra de Madrid es una experiencia única: los atardeceres dorado
 
 Sin embargo, toda boda en finca comparte un reto crucial en su cronograma: **el cóctel de bienvenida**. Mientras los recién casados se ausentan para la sesión fotográfica oficial, los invitados se reúnen en el jardín y es fundamental evitar que aparezcan tiempos muertos o conversaciones forzadas entre personas que aún no se conocen.
 
-Aquí es donde la **magia de cerca itinerante** se convierte en el mejor aliado de los novios y de los wedding planners.
+Aquí es donde la **[magia de cerca](/mago-close-up-madrid) itinerante** se convierte en el mejor aliado de los novios y de los wedding planners.
 
 ---
 

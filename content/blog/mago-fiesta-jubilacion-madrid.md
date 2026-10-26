@@ -55,7 +55,7 @@ Al principio de la celebración, es muy habitual que ambos grupos permanezcan se
 - Los de la empresa hablando del sector o de viejas anécdotas de departamento.
 - La familia congregada alrededor de los más pequeños o los más mayores.
 
-Aquí es donde entra la **magia de cerca (close-up)**. Como mago itinerante, me muevo de forma discreta y elegante entre los invitados durante el cóctel. Al hacer que un efecto imposible ocurra en las manos de un compañero y de un familiar a la vez, la barrera inicial se desvanece de inmediato. Las risas, el asombro y los comentarios espontáneos conectan a todos los invitados, creando una atmósfera festiva fluida y sin tensiones.
+Aquí es donde entra la **[magia de cerca (close-up)](/mago-close-up-madrid)**. Como mago itinerante, me muevo de forma discreta y elegante entre los invitados durante el cóctel. Al hacer que un efecto imposible ocurra en las manos de un compañero y de un familiar a la vez, la barrera inicial se desvanece de inmediato. Las risas, el asombro y los comentarios espontáneos conectan a todos los invitados, creando una atmósfera festiva fluida y sin tensiones.
 
 ---
 

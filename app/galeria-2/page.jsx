@@ -8,6 +8,9 @@ export const metadata = {
     robots: {
         index: false,
         follow: false
+    },
+    alternates: {
+        canonical: 'https://angelruiz.world/galeria'
     }
 };
 

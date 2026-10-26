@@ -39,7 +39,7 @@ Aquí es donde entra en juego la partida de animación. Pero, **¿cuánto cuesta
 
 | Proveedor de Entretenimiento | Horquilla de Precio Madrid | Momento de la Boda | Tipo de Experiencia | Nivel de Recuerdo en Invitados |
 |---|---|---|---|---|
-| **Magia de Cerca (Ángel Ruiz)** ⭐ | **450€ – 650€** | Cóctel y Banquete | Interactiva 1:1 a centímetros | **Altísimo** (*"¿Cómo hizo eso?"*) |
+| **[Magia de Cerca](/mago-close-up-madrid) (Ángel Ruiz)** ⭐ | **450€ – 650€** | Cóctel y Banquete | Interactiva 1:1 a centímetros | **Altísimo** (*"¿Cómo hizo eso?"*) |
 | **Fotomatón / Videomatón 360** | **350€ – 600€** | Barra libre | Puntual / Atrezzo | **Medio** (Fotos de recuerdo) |
 | **Cuarteto de Cuerda / Acústico** | **600€ – 1.200€** | Ceremonia y Cóctel | Auditiva pasiva | **Medio-Alto** (Elegancia clásica) |
 | **Banda de Versiones en Vivo** | **1.200€ – 3.000€** | Barra libre | Concierto / Baile | **Alto** (Fiesta musical) |

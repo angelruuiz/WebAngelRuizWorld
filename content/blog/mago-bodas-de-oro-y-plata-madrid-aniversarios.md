@@ -43,7 +43,7 @@ La **magia de salón y el ilusionismo de cerca de alta calidad** ofrecen el equi
 
 ## Estructura Recomendada para un Aniversario de Bodas
 
-* **Recepción y Aperitivo (45 min)**: Magia de cerca itinerante mientras la familia llega y se saluda, sirviendo como rompehielos para los familiares que llevan tiempo sin coincidir.
+* **Recepción y Aperitivo (45 min)**: [Magia de cerca](/mago-close-up-madrid) itinerante mientras la familia llega y se saluda, sirviendo como rompehielos para los familiares que llevan tiempo sin coincidir.
 * **Almuerzo o Cena**: Disfrute tranquilo de la gastronomía familiar.
 * **Show Central de Salón tras el Postre (45 min)**: Actuación de salón para todos los presentes donde la pareja protagonista participa en números diseñados especialmente para ellos, culminando con un brindis mágico.
 

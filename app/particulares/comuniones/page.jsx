@@ -13,7 +13,7 @@ const FadeIn = ({ children, className = "" }) => (
 );
 
 export const metadata = {
-    title: { absolute: 'Mago para Comuniones en Madrid | Magia Familiar de Autor · Ángel Ruiz' },
+    title: { absolute: 'Mago para Comuniones en Madrid | Magia Familiar · Ángel Ruiz' },
     description: 'El mejor espectáculo de magia para comuniones en Madrid. Ilusionismo participativo donde el comulgante es el gran protagonista. ¡Consulta disponibilidad!',
     keywords: ['mago para comuniones madrid', 'mago comuniones madrid', 'magia comuniones madrid', 'contratar mago comunion madrid', 'mago para comunion precio madrid', 'animacion comuniones madrid'],
     alternates: {
@@ -32,6 +32,17 @@ export const metadata = {
     },
 };
 
+const comunionFaqs = [
+    { name: "¿Cuánto dura el espectáculo del mago para comuniones?", acceptedAnswer: { text: "La duración ideal de un espectáculo de magia para una primera comunión es de 50 a 60 minutos. Este tiempo es perfecto para mantener la atención de los niños y sorprender a los adultos sin que el ritmo decaiga." } },
+    { name: "¿El espectáculo de magia es solo para los niños?", acceptedAnswer: { text: "No. Mi enfoque como mago para comuniones en Madrid es crear un show 'familiar'. Los trucos son de alto nivel técnico (cartomagia y magia de salón adaptada) para que los adultos se asombren tanto o más que los pequeños." } },
+    { name: "¿Te desplazas a restaurantes y fincas en Madrid?", acceptedAnswer: { text: "Sí, me desplazo a cualquier restaurante, finca, hotel o domicilio privado en toda la Comunidad de Madrid. Ya sea en Madrid capital, en la Sierra de Madrid o en los municipios del noroeste." } },
+    { name: "¿El niño de la comunión participa en los trucos?", acceptedAnswer: { text: "Por supuesto. El diseño del espectáculo garantiza que el homenajeado sea el gran protagonista. Participa en los efectos más importantes y se lleva recuerdos mágicos imposibles de olvidar." } },
+    { name: "¿Qué incluye el espectáculo de magia familiar?", acceptedAnswer: { text: "El espectáculo incluye un equipo de sonido propio para asegurar la calidad en cualquier entorno, efectos visuales de gran formato, cartomagia, magia de salón adaptada y una gran dosis de humor inteligente y participativo." } },
+    { name: "¿Con cuánta antelación debo reservar el mago para una comunión en Madrid?", acceptedAnswer: { text: "Las fechas de comuniones (mayo y junio) se llenan muy rápido. Lo ideal es reservar con al menos 4-5 meses de antelación para asegurar disponibilidad en la fecha y hora de la celebración." } },
+    { name: "¿El mago necesita mucho espacio para actuar?", acceptedAnswer: { text: "Me adapto a casi cualquier espacio. Para el show de salón o magia de escena solo necesito un pequeño rincón donde todos puedan verme cómodamente. Si es al aire libre en un jardín o finca, también cuento con equipo preparado para exteriores." } },
+    { name: "¿Es posible hacer magia mesa por mesa durante la comida?", acceptedAnswer: { text: "Sí, la magia itinerante de cerca es una excelente opción si no queréis un show centralizado, aunque para comuniones siempre recomiendo el show de salón donde todos los invitados comparten la risa y la sorpresa simultáneamente con el homenajeado como estrella." } }
+];
+
 export default function MagoComunionesPage() {
     const schema = {
         "@context": "https://schema.org",
@@ -40,8 +51,13 @@ export default function MagoComunionesPage() {
                 "@type": "Service",
                 "@id": "https://angelruiz.world/particulares/comuniones/#service",
                 "name": "Mago para Comuniones en Madrid",
-                "provider": { "@type": "Person", "name": "Ángel Ruiz" },
-                "areaServed": "Madrid",
+                "provider": { 
+                    "@type": "Person", 
+                    "@id": "https://angelruiz.world/#person",
+                    "name": "Ángel Ruiz",
+                    "url": "https://angelruiz.world/sobre-mi"
+                },
+                "areaServed": "Comunidad de Madrid",
                 "description": "Espectáculo de magia profesional para primeras comuniones en Madrid. Entretenimiento premium para niños y adultos.",
                 "serviceType": "Entertainment",
                 "url": "https://angelruiz.world/particulares/comuniones"
@@ -50,21 +66,7 @@ export default function MagoComunionesPage() {
                 "@type": "BreadcrumbList",
                 "itemListElement": [
                     { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
-                    { "@type": "ListItem", "position": 2, "name": "Particulares", "item": "https://angelruiz.world/particulares" },
-                    { "@type": "ListItem", "position": 3, "name": "Comuniones", "item": "https://angelruiz.world/particulares/comuniones" }
-                ]
-            },
-            {
-                "@type": "FAQPage",
-                "mainEntity": [
-                    { "@type": "Question", "name": "¿Cuánto dura el espectáculo del mago para comuniones?", "acceptedAnswer": { "@type": "Answer", "text": "La duración ideal de un espectáculo de magia para una primera comunión es de 50 a 60 minutos. Este tiempo es perfecto para mantener la atención de los niños y sorprender a los adultos sin que el ritmo decaiga." } },
-                    { "@type": "Question", "name": "¿El espectáculo de magia es solo para los niños?", "acceptedAnswer": { "@type": "Answer", "text": "No. Mi enfoque como mago para comuniones en Madrid es crear un show 'familiar'. Los trucos son de alto nivel técnico (cartomagia y magia de salón adaptada) para que los adultos se asombren tanto o más que los pequeños." } },
-                    { "@type": "Question", "name": "¿Te desplazas a restaurantes y fincas en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, me desplazo a cualquier restaurante, finca, hotel o domicilio privado en toda la Comunidad de Madrid. Ya sea en Madrid capital, en la Sierra de Madrid o en los municipios del noroeste." } },
-                    { "@type": "Question", "name": "¿El niño de la comunión participa en los trucos?", "acceptedAnswer": { "@type": "Answer", "text": "Por supuesto. El diseño del espectáculo garantiza que el homenajeado sea el gran protagonista. Participa en los efectos más importantes y se lleva recuerdos mágicos imposibles de olvidar." } },
-                    { "@type": "Question", "name": "¿Qué incluye el espectáculo de magia familiar?", "acceptedAnswer": { "@type": "Answer", "text": "El espectáculo incluye un equipo de sonido propio para asegurar la calidad en cualquier entorno, efectos visuales de gran formato, cartomagia, magia de salón adaptada y una gran dosis de humor inteligente y participativo." } },
-                    { "@type": "Question", "name": "¿Con cuánta antelación debo reservar el mago para una comunión en Madrid?", "acceptedAnswer": { "@type": "Answer", "text": "Las fechas de comuniones (mayo y junio) se llenan muy rápido. Lo ideal es reservar con al menos 4-5 meses de antelación para asegurar disponibilidad en la fecha y hora de la celebración." } },
-                    { "@type": "Question", "name": "¿El mago necesita mucho espacio para actuar?", "acceptedAnswer": { "@type": "Answer", "text": "Me adapto a casi cualquier espacio. Para el show de salón o magia de escena solo necesito un pequeño rincón donde todos puedan verme cómodamente. Si es al aire libre en un jardín o finca, también cuento con equipo preparado para exteriores." } },
-                    { "@type": "Question", "name": "¿Es posible hacer magia mesa por mesa durante la comida?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, la magia itinerante de cerca es una excelente opción si no queréis un show centralizado, aunque para comuniones siempre recomiendo el show de salón donde todos los invitados comparten la risa y la sorpresa simultáneamente con el homenajeado como estrella." } }
+                    { "@type": "ListItem", "position": 2, "name": "Mago para Comuniones en Madrid", "item": "https://angelruiz.world/particulares/comuniones" }
                 ]
             }
         ]
@@ -239,7 +241,7 @@ export default function MagoComunionesPage() {
                             <FadeIn>
                                 <h2 className="text-3xl font-[Cinzel] text-white mb-8">Dudas Comunes</h2>
                                 <div className="space-y-4">
-                                    {schema["@graph"].find(g => g["@type"] === "FAQPage").mainEntity.map((faq, index) => (
+                                    {comunionFaqs.map((faq, index) => (
                                         <details key={index} className="group bg-[#111111] border border-white/5 rounded-2xl overflow-hidden cursor-pointer">
                                             <summary className="flex items-center justify-between p-6 text-white font-medium text-sm">
                                                 <span>{faq.name}</span>

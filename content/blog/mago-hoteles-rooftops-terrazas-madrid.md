@@ -33,7 +33,7 @@ Contratar un **[mago para eventos corporativos en Madrid](/empresas)** especiali
 
 ---
 
-### La Magia de Cerca como Catalizador Social en Terrazas
+### La [Magia de Cerca](/mago-close-up-madrid) como Catalizador Social en Terrazas
 
 En los eventos en azoteas y hoteles de 4 y 5 estrellas, los invitados no quieren permanecer sentados mirando un escenario lejano. Prefieren circular, disfrutar de la coctelería de autor y socializar con libertad.
 

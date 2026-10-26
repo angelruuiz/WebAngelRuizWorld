@@ -37,7 +37,7 @@ La unión entre el **ilusionismo de autor y la gastronomía de vanguardia** crea
 
 El secreto de una velada gastronómica exitosa es el ritmo. La magia no compite con la comida; la complementa y potencia:
 
-1. **Aperitivo de Bienvenida:** Magia de cerca itinerante mientras se degustan los primeros bocados y copas de vino espumoso o champagne.
+1. **Aperitivo de Bienvenida:** [Magia de cerca](/mago-close-up-madrid) itinerante mientras se degustan los primeros bocados y copas de vino espumoso o champagne.
 2. **Interludios Sensoriales entre Pases:** Efectos de mentalismo que estimulan los sentidos: adivinación de sabores a ciegas, coincidencias imposibles con cartas de menú y sugestión psicológica.
 3. **El Gran Postre Mágico (Sobremesa):** Una vez terminados los platos principales, el ilusionista toma el protagonismo para una sesión de 30 a 45 minutos de salón íntimo, elevando la sobremesa a cotas de asombro absoluto.
 

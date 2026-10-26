@@ -58,7 +58,7 @@ Si estás buscando **ideas originales para sorprender en tu fiesta** — ya sea 
 
 ## Las 10 Mejores Ideas para Sorprender en una Fiesta Privada en Madrid
 
-### 1. 🃏 Magia de Cerca Profesional (La Favorita)
+### 1. 🃏 [Magia de Cerca](/mago-close-up-madrid) Profesional (La Favorita)
 
 Un **mago profesional** que se mueve entre los invitados realizando efectos imposibles a centímetros de sus ojos. No necesita escenario, no interrumpe la conversación, no obliga a nadie. Simplemente aparece, asombra y las reacciones se contagian por toda la sala.
 
@@ -177,7 +177,7 @@ Después de más de 10 años actuando en fiestas privadas en Madrid, puedo afirm
 
 Si estás organizando una celebración, estos artículos te ayudarán:
 
-- [¿Cuánto Cuesta Contratar un Mago en Madrid? Precios Reales](/blog/cuanto-cuesta-mago-madrid-precios)
+- [¿Cuánto Cuesta Contratar un [Mago en Madrid](/mago-madrid)? Precios Reales](/blog/cuanto-cuesta-mago-madrid-precios)
 - [Guía Definitiva para Contratar un Mago en Madrid (2026)](/blog/guia-contratar-mago-madrid-2026)
 - [Mago para Despedidas de Soltera en Madrid](/blog/mago-despedidas-soltera-madrid)
 - [Mago para Fiestas Infantiles y Cumpleaños de Niños en Madrid](/blog/mago-fiestas-infantiles-cumpleanos-ninos-madrid)

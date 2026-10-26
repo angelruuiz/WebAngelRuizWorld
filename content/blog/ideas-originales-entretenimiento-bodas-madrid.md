@@ -34,9 +34,9 @@ faq:
 
 El éxito de una boda no solo se mide por el menú o el lugar; se mide por lo bien que se lo pasen tus invitados. En una ciudad con tanta oferta como **Madrid**, los novios buscan constantemente ese "algo más" que rompa con lo tradicional. Si estás cansado de las mismas opciones de siempre, aquí tienes **10 ideas originales para entretener a tus invitados en la boda** que funcionan de maravilla.
 
-### 1. Magia de Cerca (Close-up) Itinerante
+### 1. [Magia de Cerca (Close-up)](/mago-close-up-madrid) Itinerante
 
-Como **ilusionista profesional en Madrid**, he visto de primera mano cómo la magia transforma un cóctel frío en una fiesta vibrante. No se trata de un show estático, sino de un mago que se mueve entre los grupos, realizando milagros con objetos prestados. Es la **animación original para invitados** por excelencia porque es personalizable y altamente impactante.
+Como **[ilusionista profesional en Madrid](/mago-madrid)**, he visto de primera mano cómo la magia transforma un cóctel frío en una fiesta vibrante. No se trata de un show estático, sino de un mago que se mueve entre los grupos, realizando milagros con objetos prestados. Es la **animación original para invitados** por excelencia porque es personalizable y altamente impactante.
 
 ### 2. Caricaturistas en Vivo
 

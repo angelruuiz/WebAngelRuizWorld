@@ -69,7 +69,7 @@ El obstáculo más habitual al celebrar cenas en restaurantes o fincas es el lla
 
 Para convertir la distribución física del restaurante en un espacio de conexión natural, el recurso con mayor retorno demostrado es contar con un **[mago para cenas de empresa en Madrid](/empresas/mago-cenas-empresa-madrid)**. 
 
-A diferencia de grupos musicales ruidosos o monólogos que obligan a detener el servicio de camareros, la magia de cerca corporativa opera de manera flexible:
+A diferencia de grupos musicales ruidosos o monólogos que obligan a detener el servicio de camareros, la [magia de cerca](/mago-close-up-madrid) corporativa opera de manera flexible:
 1. **Durante el Cóctel de Bienvenida:** El ilusionista se desplaza entre los grupos de pie, rompiendo el hielo inicial con efectos visuales a escasos centímetros.
 2. **Entre Platos y en la Sobremesa:** Pases breves de micromagia y mentalismo en cada mesa que provocan risas colectivas y temas de conversación que unen a personas de distintas áreas.
 

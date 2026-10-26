@@ -39,7 +39,7 @@ Las despedidas de soltera en Madrid han evolucionado enormemente. Ya no se trata
 
 Piénsalo: el photobooth lo han visto en diez despedidas. Las bandas de músicos también. El karaoke, igual. Pero ¿cuántas despedidas conoces donde haya habido magia profesional de cerca? Probablemente ninguna. Y eso es exactamente lo que la convierte en la opción perfecta.
 
-La **magia de cerca** tiene una cualidad única: es completamente personal. No es un espectáculo que se mira desde lejos. Es algo que sucede en las manos de la protagonista, ante los ojos del grupo, a centímetros de distancia. Una carta que desaparece en la mano de la novia. Un efecto imposible que nadie puede explicar. La reacción espontánea que quieres capturar en foto.
+La **[magia de cerca](/mago-close-up-madrid)** tiene una cualidad única: es completamente personal. No es un espectáculo que se mira desde lejos. Es algo que sucede en las manos de la protagonista, ante los ojos del grupo, a centímetros de distancia. Una carta que desaparece en la mano de la novia. Un efecto imposible que nadie puede explicar. La reacción espontánea que quieres capturar en foto.
 
 El resultado son momentos genuinos de sorpresa y alegría que se contagian por todo el grupo y que quedará grabado en la memoria de todas las participantes para siempre.
 

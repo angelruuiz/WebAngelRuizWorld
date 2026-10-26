@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata = {
     title: { absolute: 'Ángel Ruiz | Mago Profesional en Madrid (+10 Años)' },
-    description: 'Descubre al mago profesional Ángel Ruiz en Madrid. Magia de cerca de alto impacto para eventos exclusivos. Alumno de DaOrtiz. ¡Contacta para asombrar a tus invitados!',
+    description: 'Conoce a Ángel Ruiz, mago profesional en Madrid formado con Dani DaOrtiz. Especialista en magia de cerca para bodas y empresas con +10 años de trayectoria.',
     alternates: {
         canonical: 'https://angelruiz.world/sobre-mi',
     },
@@ -42,7 +42,11 @@ export default function SobreMiPage() {
             "name": "Ángel Ruiz | Mago e Ilusionista"
         },
         "knowsAbout": ["Magia de Cerca", "Cartomagia", "Ilusionismo Corporativo", "Magia para Bodas"],
-        "alumniOf": "Escuela de Dani DaOrtiz",
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Escuela de Magia de Dani DaOrtiz",
+            "url": "https://gkaps.com"
+        },
         "areaServed": "Comunidad de Madrid"
     };
 

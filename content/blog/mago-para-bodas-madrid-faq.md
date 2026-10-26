@@ -53,7 +53,7 @@ Organizar una boda es un desafío lleno de detalles, emociones y decisiones crí
 
 ### El Impacto de un Ilusionista Profesional en tu Boda
 
-Una boda es, ante todo, una reunión social. Muchos de tus invitados no se habrán visto en años, o incluso habrá grupos que no se conocen entre sí. Aquí es donde entra en juego el papel del **ilusionista profesional**. La magia de cerca (o *close-up*) actúa como el lubricante social perfecto, eliminando la incomodidad inicial y sustituyéndola por una curiosidad compartida.
+Una boda es, ante todo, una reunión social. Muchos de tus invitados no se habrán visto en años, o incluso habrá grupos que no se conocen entre sí. Aquí es donde entra en juego el papel del **ilusionista profesional**. La [magia de cerca](/mago-close-up-madrid) (o *close-up*) actúa como el lubricante social perfecto, eliminando la incomodidad inicial y sustituyéndola por una curiosidad compartida.
 
 #### Magia durante el Cóctel: El Rompehielos Ideal
 
@@ -61,7 +61,7 @@ El cóctel de bienvenida es el momento más estratégico para la magia. Mientras
 
 Al realizar un milagro a escasos centímetros de sus ojos —como transformar una carta firmada o adivinar una palabra pensada—, se genera una conversación inmediata entre personas que antes no cruzaban palabra. La risa compartida y el asombro colectivo eliminan cualquier rastro de frialdad inicial. Es magia moderna, dinámica y, sobre todo, elegante, que respeta los tiempos del servicio y la comodidad del invitado. No hay interrupciones molestas, solo momentos de pura imposibilidad.
 
-### ¿Por qué elegir un Mago en Madrid especializado en Bodas?
+### ¿Por qué elegir un [Mago en Madrid](/mago-madrid) especializado en Bodas?
 
 Madrid cuenta con una oferta variada, pero la especialización es clave. No es lo mismo actuar en una fiesta infantil que en un enlace matrimonial de lujo en una finca de **Torrelodones** o en el centro de la capital. Un experto como **[mago para bodas en Madrid](/particulares/bodas)** entiende el protocolo, la etiqueta y, lo más importante, la psicología de la celebración. Sabe cuándo intervenir para potenciar el ambiente y cuándo retirarse para dejar que el evento respire.
 

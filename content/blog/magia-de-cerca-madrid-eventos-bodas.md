@@ -34,7 +34,7 @@ faq:
       reservar con al menos 1 o 2 meses de antelación.
 ---
 
-Imagina esto por un momento: estás en un cóctel al aire libre en una de las fincas exclusivas de la **Sierra de Madrid**, con una copa en la mano charlando con amigos. De repente, un ilusionista se acerca a tu grupo. Coge una baraja, te pide que firmes una carta y, ante tus propios ojos, a escasos centímetros de tu cara, esa carta firmada viaja al interior de una cartera cerrada que ha estado encima de la mesa todo el tiempo. No hay espejos, no hay distancias, no hay trampa ni cartón. Eso es la **magia de cerca en Madrid**.
+Imagina esto por un momento: estás en un cóctel al aire libre en una de las fincas exclusivas de la **Sierra de Madrid**, con una copa en la mano charlando con amigos. De repente, un ilusionista se acerca a tu grupo. Coge una baraja, te pide que firmes una carta y, ante tus propios ojos, a escasos centímetros de tu cara, esa carta firmada viaja al interior de una cartera cerrada que ha estado encima de la mesa todo el tiempo. No hay espejos, no hay distancias, no hay trampa ni cartón. Eso es la **[magia de cerca](/mago-close-up-madrid) en Madrid**.
 
 En un mercado saturado de opciones de entretenimiento genéricas, la magia de cerca (o *close-up*) se ha consolidado como el servicio premium más demandado para celebraciones que buscan marcar la diferencia. A continuación, te explico por qué este formato es la clave para que tu próximo evento o boda sea sencillamente memorable.
 
@@ -87,6 +87,6 @@ Tanto si buscas un ambiente sofisticado en el Barrio de Salamanca como un evento
 
 Si te ha parecido interesante, quizás te interese seguir leyendo estos artículos relacionados:
 
-- [¿Cuánto Cuesta un Mago en Madrid? [Tarifas y Precios 2026]](/blog/cuanto-cuesta-mago-madrid-precios)
+- [¿Cuánto Cuesta un [Mago en Madrid](/mago-madrid)? [Tarifas y Precios 2026]](/blog/cuanto-cuesta-mago-madrid-precios)
 - [Cómo Elegir Mago para tu Evento en Madrid (Y Errores a Evitar)](/blog/como-elegir-mago-evento-madrid-errores)
 - [Magia de Cerca vs Magia de Escenario: ¿Qué formato elegir para tu evento?](/blog/magia-de-cerca-vs-escenario)

@@ -54,7 +54,7 @@ Contratar un [mago para cenas de empresa en Madrid](/empresas/mago-cenas-empresa
 
 Las cenas navideñas de empresa tienen una dinámica muy concreta que no todos los entretenimientos saben aprovechar:
 
-- **Grupos mixtos**: Compañeros de distintos departamentos que apenas se conocen. La magia de cerca es el mejor rompehielos posible.
+- **Grupos mixtos**: Compañeros de distintos departamentos que apenas se conocen. La [magia de cerca](/mago-close-up-madrid) es el mejor rompehielos posible.
 - **Ambiente festivo pero contenido**: No es una discoteca ni un concierto. La magia se adapta al tono elegante de una cena sin sacrificar diversión.
 - **Momentos de espera**: El cóctel de bienvenida, los intervalos entre platos, la sobremesa. Son momentos que la magia llena de manera natural y brillante.
 
@@ -142,7 +142,7 @@ Si estás organizando tu evento navideño, estos artículos te ayudarán a tomar
 - [Mago para Eventos de Empresa en Madrid: Guía Corporativa 2026](/blog/mago-eventos-empresa-madrid-guia)
 - [¿Cuál es el Mejor Mago para Empresas en Madrid? Claves para Elegir](/blog/mejor-mago-empresas-madrid)
 - [Ideas Originales para Cenas de Empresa en Madrid](/blog/ideas-cenas-empresa-madrid-originales)
-- [¿Cuánto Cuesta Contratar un Mago en Madrid? Precios Reales](/blog/cuanto-cuesta-mago-madrid-precios)
+- [¿Cuánto Cuesta Contratar un [Mago en Madrid](/mago-madrid)? Precios Reales](/blog/cuanto-cuesta-mago-madrid-precios)
 - [Mago para Cenas de Empresa en Madrid (Página Oficial)](/empresas/mago-cenas-empresa-madrid)
 
 

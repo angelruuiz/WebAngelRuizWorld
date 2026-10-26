@@ -36,7 +36,7 @@ La **[magia de cerca (*close-up*) para bodas en Madrid](/particulares/bodas)** e
 
 ---
 
-## 1. Por qué la Magia de Cerca Triunfa en Bodas Íntimas
+## 1. Por qué la [Magia de Cerca](/mago-close-up-madrid) Triunfa en Bodas Íntimas
 
 1. **Atención al 100% de los invitados:** En bodas multitudinarias de 250 personas, el ilusionista debe seleccionar grupos con rapidez. En una boda íntima de 30 a 50 comensales, el artista comparte momentos reposados con todos y cada uno de los asistentes, garantizando que nadie se quede sin vivir el asombro en primera persona.
 2. **Atmósfera cálida y sin barreras:** Los efectos ocurren directamente en las manos de los invitados: cartas que cambian de identidad, anillos de boda que enlazan de forma imposible y lecturas mentales sutiles que generan complicidad inmediata.

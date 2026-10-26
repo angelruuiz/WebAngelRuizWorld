@@ -5,7 +5,7 @@ import { ArrowLeft } from 'lucide-react';
 
 export const metadata = {
   title: { absolute: 'Contacto · Tarjeta Digital | Ángel Ruiz · Ilusionista' },
-  description: 'Tarjeta digital de contacto de Ángel Ruiz, ilusionista profesional en Madrid. Acceso directo a WhatsApp, teléfono, correo y redes sociales para contratación de eventos.',
+  description: 'Contacta con Ángel Ruiz, ilusionista profesional en Madrid. WhatsApp directo, llamada y presupuesto en menos de 2h para bodas y empresas.',
   alternates: {
     canonical: 'https://angelruiz.world/contacto',
   },

@@ -35,7 +35,7 @@ Si estás buscando [ideas originales para fiestas privadas y cumpleaños en Madr
 
 ## 4 Ideas Originales para un Cumpleaños de Adultos Inolvidable en Madrid
 
-### 1. Cena Clandestina con Magia de Cerca en Sobremesa ⭐ (La opción más valorada)
+### 1. Cena Clandestina con [Magia de Cerca](/mago-close-up-madrid) en Sobremesa ⭐ (La opción más valorada)
 Reserva una mesa grande o un reservado en tu restaurante favorito de Chamberí, Salamanca o Pozuelo. Deja que la comida transcurra con normalidad y, justo cuando lleguen los cafés, presenta a Ángel Ruiz. Durante 60-75 minutos, toda la mesa vivirá una sesión de magia contemporánea de salón privado a 30 centímetros de sus ojos.
 
 ### 2. Fiesta en Chalet o Domicilio con Ilusionismo de Club Privado

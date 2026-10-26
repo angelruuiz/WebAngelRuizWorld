@@ -35,7 +35,7 @@ Cuando se habla de entretenimiento corporativo, la mayoría de vídeos y artícu
 
 Para estos equipos, contratar orquestas, monólogos o montajes técnicos no tiene ningún sentido: resultaría desproporcionado, frío y carísimo. 
 
-¿Cuál es la mejor solución para que una cena de empresa pequeña en Madrid sea un éxito rotundo? La **magia de cerca exclusiva de salón privado**.
+¿Cuál es la mejor solución para que una cena de empresa pequeña en Madrid sea un éxito rotundo? La **[magia de cerca](/mago-close-up-madrid) exclusiva de salón privado**.
 
 ---
 
@@ -49,7 +49,7 @@ En una gran convención de 200 personas, el mago tiene que repartir su tiempo y 
 
 ---
 
-## Los Mejores Espacios para Cenas Pequeñas con Magia en Madrid
+## Los Mejores Espacios para Cenas Pequeñas con [Magia en Madrid](/mago-madrid)
 
 Madrid ofrece una amplísima variedad de locales perfectos para este formato:
 

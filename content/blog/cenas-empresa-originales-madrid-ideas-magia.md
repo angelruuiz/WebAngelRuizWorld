@@ -37,7 +37,7 @@ Si ya tienes elegido el restaurante o espacio y buscas transformar la velada en 
 
 ---
 
-## 1. Magia de Cerca de Autor y Table Hopping entre Platos
+## 1. [Magia de Cerca](/mago-close-up-madrid) de Autor y Table Hopping entre Platos
 
 Contratar a un **[mago para cenas de empresa en Madrid](/empresas/mago-cenas-empresa-madrid)** es la propuesta con mayor índice de satisfacción en eventos corporativos. Un ilusionista profesional se mueve entre las mesas durante la sobremesa o durante el cóctel de bienvenida, realizando milagros visuales en las propias manos de los asistentes.
 
