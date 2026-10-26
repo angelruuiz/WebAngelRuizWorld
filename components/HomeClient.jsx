@@ -19,7 +19,7 @@ const HeroClient = ({ onOpenVideo, onOpenContact }) => {
     };
 
     return (
-        <section className="relative min-h-[100dvh] flex flex-col justify-end lg:justify-center overflow-hidden z-10 pt-20 pb-16 sm:pb-28 lg:py-0">
+        <section className="relative min-h-[100dvh] flex flex-col justify-end lg:justify-center overflow-hidden z-10 pt-20 pb-28 sm:pb-32 lg:py-0">
             <div className="absolute inset-0 z-0 overflow-hidden">
                 <picture>
                     <source media="(min-width: 768px)" srcSet="/images/hero-angel-ruiz-2026.webp" width={2560} height={1440} />
@@ -63,18 +63,26 @@ const HeroClient = ({ onOpenVideo, onOpenContact }) => {
                             <span className="text-white block">RUIZ</span>
                         </h1>
                         
-                        <div className="my-1 sm:my-2 md:my-4 max-w-lg">
+                        <div className="my-1 sm:my-2 md:my-3 max-w-lg">
                             <p className="text-xs sm:text-base md:text-lg lg:text-xl text-slate-200 tracking-[0.08em] sm:tracking-[0.15em] border-l-3 sm:border-l-4 border-[#d4a853]/60 py-1.5 sm:py-2.5 md:py-3 px-3 sm:px-4 md:px-6 inline-block backdrop-blur-md bg-white/5 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] text-left leading-relaxed font-accent rounded-r-xl">
                                 Ilusionista profesional con más de <span className="font-[Cinzel] font-bold text-[#d4a853] text-sm sm:text-lg md:text-xl lg:text-3xl">10</span> años de experiencia
                             </p>
+                        </div>
+
+                        {/* Micro-prueba social en Móvil: situado aquí arriba para que nunca lo tape la barra de navegación inferior */}
+                        <div className="lg:hidden flex items-center gap-2 my-2 text-[11px] text-slate-300">
+                            <span className="text-amber-400 font-bold tracking-wider">★★★★★</span>
+                            <span className="font-semibold text-white">Trato directo sin agencias</span>
+                            <span className="text-white/30">•</span>
+                            <span className="text-slate-300">Escuela DaOrtiz</span>
                         </div>
                         
                         <p className="hidden sm:block text-slate-400 text-xs sm:text-sm md:text-base font-light italic mt-2 md:mt-4 px-4 font-accent tracking-[0.08em] border-l border-white/20 pl-6">
                             "LA MAGIA QUE HACE QUE TU EVENTO SEA INOLVIDABLE."
                         </p>
 
-                        {/* Acciones directas en Móvil: 2 botones concisos sin saturar la pantalla */}
-                        <div className="lg:hidden flex items-center gap-2.5 w-full max-w-sm mt-3">
+                        {/* Acciones directas en Móvil: 2 botones concisos con margen generoso sobre la nav inferior */}
+                        <div className="lg:hidden flex items-center gap-2.5 w-full max-w-sm mt-2 sm:mt-4">
                             <button
                                 type="button"
                                 onClick={() => triggerBookingDrawer('empresa')}
@@ -92,14 +100,6 @@ const HeroClient = ({ onOpenVideo, onOpenContact }) => {
                                 <span>Ver Show</span>
                                 <span className="text-[10px] text-amber-300 opacity-80">(1 min)</span>
                             </button>
-                        </div>
-
-                        {/* Micro-prueba social en Móvil */}
-                        <div className="lg:hidden flex items-center gap-2 mt-2.5 text-[10px] text-slate-400">
-                            <span className="text-amber-400 font-bold">★★★★★</span>
-                            <span>Trato directo sin agencias</span>
-                            <span className="text-white/20">•</span>
-                            <span>Escuela DaOrtiz</span>
                         </div>
 
                         {/* Botón Desktop: Ver Show en Directo */}
