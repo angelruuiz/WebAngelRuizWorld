@@ -69,7 +69,7 @@ const HeroClient = ({ onOpenVideo, onOpenContact }) => {
                             </p>
                         </div>
 
-                        {/* Micro-prueba social en Móvil: situado aquí arriba para que nunca lo tape la barra de navegación inferior */}
+                        {/* Micro-prueba social en Móvil */}
                         <div className="lg:hidden flex items-center gap-2 my-2 text-[11px] text-slate-300">
                             <span className="text-amber-400 font-bold tracking-wider">★★★★★</span>
                             <span className="font-semibold text-white">Trato directo sin agencias</span>
@@ -81,24 +81,15 @@ const HeroClient = ({ onOpenVideo, onOpenContact }) => {
                             "LA MAGIA QUE HACE QUE TU EVENTO SEA INOLVIDABLE."
                         </p>
 
-                        {/* Acciones directas en Móvil: 2 botones concisos con margen generoso sobre la nav inferior */}
-                        <div className="lg:hidden flex items-center gap-2.5 w-full max-w-sm mt-2 sm:mt-4">
-                            <button
-                                type="button"
-                                onClick={() => triggerBookingDrawer('empresa')}
-                                className="flex-1 py-3 px-3 rounded-xl bg-gradient-to-r from-[#d4a853] via-[#f7e7c4] to-[#b8860b] text-[#030712] font-black text-xs uppercase tracking-wider shadow-[0_4px_20px_rgba(212,168,83,0.35)] flex items-center justify-center gap-1.5 active:scale-95 transition-transform cursor-pointer"
-                            >
-                                <span>Pedir Fecha</span>
-                                <Sparkles className="w-3.5 h-3.5 text-[#030712]" />
-                            </button>
-
+                        {/* Botón Ver Show en Móvil: Centrado y sin botón de pedir fecha (la reserva se realiza desde el dock inferior) */}
+                        <div className="lg:hidden w-full flex justify-center mt-3 sm:mt-4">
                             <button
                                 type="button"
                                 onClick={onOpenVideo}
-                                className="flex-1 py-3 px-3 rounded-xl bg-slate-950/75 border border-white/20 hover:border-amber-400/50 text-slate-200 font-bold text-xs uppercase tracking-wider backdrop-blur-md flex items-center justify-center gap-1.5 active:scale-95 transition-all cursor-pointer"
+                                className="w-full max-w-xs py-3 px-6 rounded-xl bg-slate-950/80 hover:bg-[#d4a853]/15 border border-amber-400/40 hover:border-amber-400 text-slate-100 font-bold text-xs uppercase tracking-wider backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.5),0_0_15px_rgba(212,168,83,0.15)] flex items-center justify-center gap-2 active:scale-95 transition-all cursor-pointer"
                             >
-                                <span>Ver Show</span>
-                                <span className="text-[10px] text-amber-300 opacity-80">(1 min)</span>
+                                <span>Ver Show en Directo</span>
+                                <span className="text-[11px] text-amber-300 opacity-90 font-medium">(1 min)</span>
                             </button>
                         </div>
 
