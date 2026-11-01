@@ -9,15 +9,15 @@ const ParticleBackground = dynamic(() => import('@/components/VisualEffects').th
 const CorporateInlineForm = dynamic(() => import('@/components/CorporateInlineForm'), { ssr: false });
 
 export const metadata = {
-  title: { absolute: 'Mago para Restaurantes en Madrid · Ángel Ruiz' },
-  description: 'Ilusionismo profesional en mesas (Table Hopping) para restaurantes de Madrid. Dinamiza cenas de fin de semana, celebraciones y eventos. Demostración sin compromiso.',
+  title: { absolute: 'Mago para Restaurantes en Madrid | Llena Mesas y Cenas (Demo 15 min)' },
+  description: 'Ilusionismo profesional en mesas (Table Hopping) para restaurantes de Madrid. Dinamiza cenas de fin de semana, sobremesas y eventos. Solicita una demo de 15 min en tu local sin compromiso.',
   keywords: ['mago para restaurantes madrid', 'mago para restaurantes', 'magia en restaurantes madrid', 'magia en mesas', 'table hopping madrid', 'animacion restaurantes madrid', 'ilusionista restaurantes', 'mago eventos hosteleria'],
   alternates: {
     canonical: 'https://angelruiz.world/empresas/mago-para-restaurantes-madrid',
   },
   openGraph: {
-    title: 'Mago para Restaurantes en Madrid | Magia en Mesas · Ángel Ruiz',
-    description: 'Ilusionismo profesional en mesas (Table Hopping) para restaurantes de Madrid. Dinamiza cenas de fin de semana, celebraciones y eventos. Demostración sin compromiso.',
+    title: 'Mago para Restaurantes en Madrid | Magia en Mesas (Demo 15 min Gratis)',
+    description: 'Ilusionismo profesional en mesas (Table Hopping) para restaurantes de Madrid. Dinamiza cenas de fin de semana, sobremesas y eventos. Solicita una demo de 15 min en tu local sin compromiso.',
     url: 'https://angelruiz.world/empresas/mago-para-restaurantes-madrid',
     siteName: 'Ángel Ruiz | Mago e Ilusionista',
     images: [
@@ -33,7 +33,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mago para Restaurantes en Madrid | Magia en Mesas · Ángel Ruiz',
+    title: 'Mago para Restaurantes en Madrid | Magia en Mesas (Demo 15 min Gratis)',
     description: 'Mago profesional para restaurantes en Madrid. Magia de cerca en mesas que fideliza comensales y sube el ticket medio.',
     images: ['https://angelruiz.world/images/evento-angel-ruiz-magia.webp'],
   },
@@ -56,9 +56,9 @@ const schemaJson = {
       "name": "Ángel Ruiz Mago e Ilusionista",
       "url": "https://angelruiz.world",
       "telephone": "+34648055636",
-      "hasMap": "https://www.google.com/search?sca_esv=8001b418ab72b965&sxsrf=APpeQnttxDfKRtR6fpA2h7bYkWycKzmRVQ:1792418000314&q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=APenkKmVGdgpMPDQZoEWS8RIAhsqXAKlNLP0B8DNkkiU9KPI0V2U8InyxO1tqoaWpGS1_Q7QhAgSRC07fbiiZx9SpnZjJDB5UXzd7BX6d41IdchYfOedo3rQx0et86krTkaw35SJ_yeQYQ3kpruL6sC1m1bAx0aXbA%3D%3D&sa=X&sqi=2&ved=2ahUKEwjJ6smxncaXAxWUXUEAHQovEbYQ_coHegQIKxAB&biw=1658&bih=797&dpr=1.16",
+      "hasMap": "https://www.google.com/search?q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=AE1YtOpq69kQPYJq7TIn_jext5SiMwQcb6Hqfr7QepP6tJJpjxxm8uN8Zj8gXbRThCA0dqOTKKnoP1rdWc4GqyqO2bKbWfqsHXjGeyQRTmrHnWHBn9wKhEzJxiJeiVnIQ6f7Qe-aM4TANzD10CaC73LbtE26xVuKIQ%3D%3D",
       "sameAs": [
-        "https://www.google.com/search?sca_esv=8001b418ab72b965&sxsrf=APpeQnttxDfKRtR6fpA2h7bYkWycKzmRVQ:1792418000314&q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=APenkKmVGdgpMPDQZoEWS8RIAhsqXAKlNLP0B8DNkkiU9KPI0V2U8InyxO1tqoaWpGS1_Q7QhAgSRC07fbiiZx9SpnZjJDB5UXzd7BX6d41IdchYfOedo3rQx0et86krTkaw35SJ_yeQYQ3kpruL6sC1m1bAx0aXbA%3D%3D&sa=X&sqi=2&ved=2ahUKEwjJ6smxncaXAxWUXUEAHQovEbYQ_coHegQIKxAB&biw=1658&bih=797&dpr=1.16",
+        "https://www.google.com/search?q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=AE1YtOpq69kQPYJq7TIn_jext5SiMwQcb6Hqfr7QepP6tJJpjxxm8uN8Zj8gXbRThCA0dqOTKKnoP1rdWc4GqyqO2bKbWfqsHXjGeyQRTmrHnWHBn9wKhEzJxiJeiVnIQ6f7Qe-aM4TANzD10CaC73LbtE26xVuKIQ%3D%3D",
         "https://www.instagram.com/angellruuiz",
         "https://www.tiktok.com/@angellruuiz",
         "https://www.youtube.com/@angellruuiz"
@@ -113,6 +113,25 @@ export default function Page() {
           <p className="text-lg md:text-xl text-slate-300 max-w-3xl font-light leading-relaxed">
             Eleva la experiencia gastronómica de tus comensales con <span className="text-amber-400 font-medium">magia de cerca íntima y elegante mesa a mesa</span>. Fidelización, reseñas positivas y diferenciación hostelera premium.
           </p>
+
+          {/* ACCIÓN DIRECTA ABOVE-THE-FOLD */}
+          <div className="mt-8 flex flex-wrap gap-4 items-center">
+            <a
+              href="#solicitar-propuesta"
+              className="inline-flex items-center justify-center px-8 py-4 bg-amber-500 text-slate-950 font-bold rounded-full uppercase tracking-wider text-xs hover:bg-amber-400 transition-all shadow-lg shadow-amber-500/20 hover:scale-105 active:scale-95"
+            >
+              Solicitar Demo de 15 min en tu Local
+            </a>
+            <a
+              href="https://wa.me/34648055636?text=Hola%20%C3%81ngel%2C%20tengo%20un%20restaurante%20en%20Madrid%20y%20me%20gustar%C3%ADa%20ver%20c%C3%B3mo%20funciona%20la%20magia%20en%20mesas%20para%20cenas"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-slate-900/90 text-white font-medium rounded-full text-xs border border-white/15 hover:border-amber-400/40 hover:bg-slate-800 transition-all"
+            >
+              <span>WhatsApp Directo</span>
+              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            </a>
+          </div>
         </div>
       </header>
 
@@ -255,7 +274,7 @@ export default function Page() {
       </section>
 
       {/* CALL TO ACTION */}
-      <section className="py-20 border-t border-white/10 relative overflow-hidden">
+      <section id="solicitar-propuesta" className="py-20 border-t border-white/10 relative overflow-hidden scroll-mt-10">
         <div className="max-w-4xl mx-auto px-6 relative z-10 text-center">
           <h2 className="text-3xl md:text-4xl font-[Cinzel] font-bold text-white uppercase tracking-wide mb-4">
             Transforma la Experiencia de tus <span className="text-amber-400">Comensales</span>

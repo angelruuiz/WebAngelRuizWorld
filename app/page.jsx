@@ -2,6 +2,7 @@ import Link from 'next/link';
 import HomeClient, { PerpetualCard } from '@/components/HomeClient';
 import QuickEventSelector from '@/components/QuickEventSelector';
 import CorporateLogosBar from '@/components/CorporateLogosBar';
+import ChristmasUrgencyBanner from '@/components/ChristmasUrgencyBanner';
 
 export const metadata = {
     title: { absolute: 'Mago en Madrid | Ángel Ruiz · Bodas y Empresas' },
@@ -45,6 +46,11 @@ const SEOContent = () => {
                     
                     {/* Selector Rápido de Eventos (Bodas / Empresas / Particulares) */}
                     <QuickEventSelector />
+
+                    {/* Campaña de Urgencia Q4: Cenas de Empresa y Navidad */}
+                    <div className="mb-8">
+                        <ChristmasUrgencyBanner />
+                    </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-5 sm:gap-6 relative">
                         {/* Intro Section - Span 7 */}
@@ -161,9 +167,14 @@ const SEOContent = () => {
                             <p className="text-xs sm:text-sm md:text-base leading-relaxed text-gold-50/80">
                                 Las marcas líderes buscan formas innovadoras de conectar. Como <strong className="text-amber-400">mago para empresas en Madrid</strong>, ofrezco desde presentaciones de producto mágicas hasta entretenimiento premium para convenciones y cenas de empresa de alto nivel.
                             </p>
-                            <Link href="/empresas" className="mt-5 inline-flex items-center text-amber-400 text-xs font-bold uppercase tracking-wider hover:text-white transition-colors">
-                                Ver Mago para Empresas en Madrid →
-                            </Link>
+                            <div className="mt-5 space-y-2 border-t border-white/5 pt-3">
+                                <Link href="/empresas" className="inline-flex items-center text-amber-400 text-xs font-bold uppercase tracking-wider hover:text-white transition-colors">
+                                    Ver Mago para Empresas en Madrid →
+                                </Link>
+                                <Link href="/empresas/mago-cenas-empresa-madrid" className="text-xs text-amber-300 font-semibold hover:text-white flex items-center gap-1.5 transition-colors">
+                                    <span>🎄 Cenas de Empresa & Navidad en Madrid (Reservar Fechas Q4) →</span>
+                                </Link>
+                            </div>
                         </PerpetualCard>
 
                         <PerpetualCard className="md:col-span-12 lg:col-span-4 flex flex-col justify-start">

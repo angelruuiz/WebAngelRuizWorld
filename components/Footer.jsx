@@ -47,6 +47,7 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                             <a href="https://youtube.com/@angellruuiz" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#d4a853] transition-colors text-sm">YouTube</a>
                             <a href="https://x.com/angellruuizz" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#d4a853] transition-colors text-sm">X</a>
                             <a href="https://facebook.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#d4a853] transition-colors text-sm">Facebook</a>
+                            <a href="https://www.google.com/search?q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=AE1YtOpq69kQPYJq7TIn_jext5SiMwQcb6Hqfr7QepP6tJJpjxxm8uN8Zj8gXbRThCA0dqOTKKnoP1rdWc4GqyqO2bKbWfqsHXjGeyQRTmrHnWHBn9wKhEzJxiJeiVnIQ6f7Qe-aM4TANzD10CaC73LbtE26xVuKIQ%3D%3D" target="_blank" rel="noopener noreferrer" className="text-amber-400/90 hover:text-amber-300 transition-colors text-sm font-semibold">Google Maps ★ 5.0</a>
                         </div>
                     </div>
 
@@ -97,6 +98,19 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                             <p className="flex items-start gap-2">
                                 Torrelodones · Comunidad de Madrid
                             </p>
+                            <div className="pt-2">
+                                <a 
+                                    href="https://www.google.com/search?q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=AE1YtOpq69kQPYJq7TIn_jext5SiMwQcb6Hqfr7QepP6tJJpjxxm8uN8Zj8gXbRThCA0dqOTKKnoP1rdWc4GqyqO2bKbWfqsHXjGeyQRTmrHnWHBn9wKhEzJxiJeiVnIQ6f7Qe-aM4TANzD10CaC73LbtE26xVuKIQ%3D%3D"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 hover:border-amber-400/40 text-xs text-amber-300 transition-all group"
+                                    aria-label="Ver ficha y opiniones de Ángel Ruiz en Google Maps"
+                                >
+                                    <span className="text-amber-400">★ 5.0</span>
+                                    <span className="text-slate-300">Google Business Profile</span>
+                                    <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" />
+                                </a>
+                            </div>
                             
                             <a 
                                 href={waUrl}

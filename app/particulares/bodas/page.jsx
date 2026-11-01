@@ -13,22 +13,22 @@ const FadeIn = ({ children, className = "" }) => (
 );
 
 export const metadata = {
-    title: { absolute: 'Mago para Bodas en Madrid | Magia de Cóctel · Ángel Ruiz' },
-    description: 'Mago para bodas en Madrid. Magia de cerca y cóctel interactivo de autor que fascina a los invitados. Reserva anticipada sin comisiones. ¡Consulta fechas!',
+    title: { absolute: 'Mago para Bodas en Madrid | Magia de Cóctel · Ángel Ruiz (Tarifas 2026)' },
+    description: 'Mago para bodas en Madrid. Magia de cerca y cóctel interactivo de autor que fascina a los invitados. Desde 450€ sin agencias ni comisiones. ¡Consulta fechas!',
     keywords: ['mago para bodas', 'mago para bodas madrid', 'mago bodas madrid', 'contratar mago boda madrid', 'mago coctel boda madrid', 'ilusionista bodas madrid', 'mago para bodas precio madrid', 'mago boda noroeste madrid', 'entretenimiento bodas madrid', 'mago para mi boda madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/particulares/bodas',
     },
     openGraph: {
         url: 'https://angelruiz.world/particulares/bodas',
-        title: 'Mago para Bodas en Madrid | Magia de Cóctel · Ángel Ruiz',
-        description: '¿Imaginas a tus invitados alucinando en el cóctel? Magia de cerca exclusiva para bodas en Madrid. ¡Pide tu fecha hoy!',
+        title: 'Mago para Bodas en Madrid | Magia de Cóctel · Ángel Ruiz (Tarifas 2026)',
+        description: '¿Imaginas a tus invitados alucinando en el cóctel? Magia de cerca exclusiva para bodas en Madrid. Desde 450€ sin agencias. ¡Pide tu fecha hoy!',
         images: [{ url: '/images/boda-magia-madrid.webp', width: 1200, height: 630 }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago para Bodas en Madrid | Magia de Cóctel · Ángel Ruiz',
-        description: 'Magia de cerca exclusiva para bodas en Madrid. Transforma el cóctel en el momento más recordado.',
+        title: 'Mago para Bodas en Madrid | Magia de Cóctel · Ángel Ruiz (Tarifas 2026)',
+        description: 'Magia de cerca exclusiva para bodas en Madrid. Transforma el cóctel en el momento más recordado. Tarifas claras y reserva directa.',
         images: ['/images/boda-magia-madrid.webp'],
     },
 };
@@ -84,9 +84,9 @@ export default function BodasDetailPage() {
                             "url": "https://angelruiz.world",
                             "image": "https://angelruiz.world/images/foto-bio.webp",
                             "telephone": "+34648055636",
-                            "hasMap": "https://www.google.com/search?sca_esv=8001b418ab72b965&sxsrf=APpeQnttxDfKRtR6fpA2h7bYkWycKzmRVQ:1792418000314&q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=APenkKmVGdgpMPDQZoEWS8RIAhsqXAKlNLP0B8DNkkiU9KPI0V2U8InyxO1tqoaWpGS1_Q7QhAgSRC07fbiiZx9SpnZjJDB5UXzd7BX6d41IdchYfOedo3rQx0et86krTkaw35SJ_yeQYQ3kpruL6sC1m1bAx0aXbA%3D%3D&sa=X&sqi=2&ved=2ahUKEwjJ6smxncaXAxWUXUEAHQovEbYQ_coHegQIKxAB&biw=1658&bih=797&dpr=1.16",
+                            "hasMap": "https://www.google.com/search?q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=AE1YtOpq69kQPYJq7TIn_jext5SiMwQcb6Hqfr7QepP6tJJpjxxm8uN8Zj8gXbRThCA0dqOTKKnoP1rdWc4GqyqO2bKbWfqsHXjGeyQRTmrHnWHBn9wKhEzJxiJeiVnIQ6f7Qe-aM4TANzD10CaC73LbtE26xVuKIQ%3D%3D",
                             "sameAs": [
-                                "https://www.google.com/search?sca_esv=8001b418ab72b965&sxsrf=APpeQnttxDfKRtR6fpA2h7bYkWycKzmRVQ:1792418000314&q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=APenkKmVGdgpMPDQZoEWS8RIAhsqXAKlNLP0B8DNkkiU9KPI0V2U8InyxO1tqoaWpGS1_Q7QhAgSRC07fbiiZx9SpnZjJDB5UXzd7BX6d41IdchYfOedo3rQx0et86krTkaw35SJ_yeQYQ3kpruL6sC1m1bAx0aXbA%3D%3D&sa=X&sqi=2&ved=2ahUKEwjJ6smxncaXAxWUXUEAHQovEbYQ_coHegQIKxAB&biw=1658&bih=797&dpr=1.16",
+                                "https://www.google.com/search?q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=AE1YtOpq69kQPYJq7TIn_jext5SiMwQcb6Hqfr7QepP6tJJpjxxm8uN8Zj8gXbRThCA0dqOTKKnoP1rdWc4GqyqO2bKbWfqsHXjGeyQRTmrHnWHBn9wKhEzJxiJeiVnIQ6f7Qe-aM4TANzD10CaC73LbtE26xVuKIQ%3D%3D",
                                 "https://www.instagram.com/angellruuiz",
                                 "https://www.tiktok.com/@angellruuiz",
                                 "https://www.youtube.com/@angellruuiz"
@@ -140,8 +140,17 @@ export default function BodasDetailPage() {
                             <p className="text-lg text-slate-300 leading-relaxed max-w-xl font-light">
                                 Recuerdos inolvidables construidos en el momento perfecto. La magia de Ángel Ruiz aporta esas emociones de asombro y elegancia que convierten un cóctel de boda en una experiencia legendaria para todos tus invitados. Un día inolvidable merece detalles a la altura.
                             </p>
-                            <div className="pt-4">
+                            <div className="pt-4 flex flex-wrap gap-4 items-center">
                                 <ContactButtonClient label="Solicitar Disponibilidad" />
+                                <a
+                                    href="https://wa.me/34648055636?text=%C2%A1Hola%20%C3%81ngel!%20Nos%20casamos%20y%20nos%20gustar%C3%ADa%20consultar%20disponibilidad%20y%20fechas%20para%20nuestra%20boda%20en%20Madrid"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="px-8 py-5 rounded-full border border-[#d4a853]/40 bg-[#d4a853]/10 text-white font-medium hover:bg-[#d4a853]/20 hover:border-[#d4a853] transition-all text-xs tracking-wider uppercase inline-flex items-center gap-2"
+                                >
+                                    <span>WhatsApp Directo</span>
+                                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                </a>
                             </div>
                         </FadeIn>
                         
