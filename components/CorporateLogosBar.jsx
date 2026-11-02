@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 const corporateLogos = [
+    { name: "Maisons du Monde", src: "/images/logos/cards-dark/logo-maisons-du-monde.webp", width: 367, height: 164, customClass: "max-h-7 sm:max-h-10 md:max-h-12 max-w-[85px] sm:max-w-[125px] md:max-w-[145px]" },
     { name: "Movistar Estudiantes", src: "/images/logos/cards-dark/logo-movistar.webp", width: 144, height: 161 },
     { name: "Alcampo", src: "/images/logos/cards-dark/logo-alcampo.webp", width: 121, height: 136 },
     { name: "Ahorramás", src: "/images/logos/cards-dark/logo-ahorramas.webp", width: 210, height: 52, customClass: "max-h-6 sm:max-h-9 md:max-h-11 max-w-[80px] sm:max-w-[120px] md:max-w-[140px]" },
@@ -74,7 +75,7 @@ export default function CorporateLogosBar({
                         )}
                     </div>
 
-                    <div className="grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 md:gap-8 items-center justify-items-center">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-6 md:gap-8 items-center justify-items-center">
                         {corporateLogos.map((logo, idx) => (
                             <div 
                                 key={`d-logo-${idx}`} 
