@@ -90,3 +90,5 @@ Madrid ofrece infraestructuras de primer orden para reuniones de empresa de todo
 Aunque los Kick-Offs tienen lugar en enero y febrero, las empresas con mejores resultados cierran sus reservas **entre octubre y diciembre**. Esperar a enero suele suponer quedarse sin las mejores salas y sin disponibilidad de ponentes de referencia.
 
 Si quieres que la convención de arranque de año de tu empresa sea un punto de inflexión cargado de entusiasmo y cohesión, [ponte en contacto directamente con Ángel Ruiz](/contratar-mago-madrid) para diseñar una intervención personalizada que impulse a tu equipo hacia sus mayores éxitos.
+
+> **Cenas y cierres de jornada:** Si tras las sesiones de trabajo celebráis una velada de distensión, conoce el show de [mago para cenas de empresa](/empresas/mago-cenas-empresa-madrid).

@@ -64,3 +64,5 @@ En un mercado gastronómico tan competitivo como el de Madrid, los clientes no s
 Contratar un [mago para restaurantes en Madrid](/empresas/mago-para-restaurantes-madrid) en días estratégicos (noches de jueves a sábado o comidas de domingo) es una inversión directa en fidelización y reputación de marca.
 
 ¿Tienes un restaurante en Madrid o la Sierra y quieres ofrecer una experiencia que tus clientes no olviden? [Solicita propuesta personalizada para restaurantes](/contratar-mago-madrid).
+
+> **Eventos privados y cenas de grupo:** Si organizas una reunión de equipo en un salón reservado, conoce cómo funciona la [magia para cenas de empresa en restaurantes](/empresas/mago-cenas-empresa-madrid).

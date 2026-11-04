@@ -274,6 +274,11 @@ export default function CumpleanosAdultosPage() {
                                     ¿Celebras en un restaurante? Lee nuestra guía para magia en mesa y reservados →
                                 </a>
                             </div>
+                            <div className="mt-4 text-center relative z-10">
+                                <a href="/particulares/despedidas-soltera-madrid" className="inline-flex items-center text-[#d4a853] hover:underline text-sm font-light gap-2">
+                                    ¿Organizas una celebración especial o fiesta de amigas? Conoce el show para despedidas de soltera en Madrid →
+                                </a>
+                            </div>
                         </div>
                     </FadeIn>
 

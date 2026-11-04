@@ -19,11 +19,20 @@ export const metadata = {
     siteName: 'Ángel Ruiz | Mago e Ilusionista',
     locale: 'es_ES',
     type: 'website',
+    images: [{
+      url: location.images && location.images[0] ? `https://angelruiz.world${location.images[0]}` : 'https://angelruiz.world/images/foto-bio.webp',
+      width: 1200,
+      height: 630,
+      alt: `${location.title} - Ángel Ruiz Mago e Ilusionista`,
+    }],
   },
   twitter: {
     card: 'summary_large_image',
     title: location.meta_title || location.title,
     description: location.description,
+    images: [
+      location.images && location.images[0] ? `https://angelruiz.world${location.images[0]}` : 'https://angelruiz.world/images/foto-bio.webp'
+    ],
   },
 };
 

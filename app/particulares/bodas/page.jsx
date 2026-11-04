@@ -188,7 +188,7 @@ export default function BodasDetailPage() {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                                 <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
-                                    <div className="text-xs text-slate-400 uppercase tracking-wider font-medium">Inversión Orientativa</div>
+                                    <div className="text-xs text-slate-300 uppercase tracking-wider font-medium">Inversión Orientativa</div>
                                     <div className="text-2xl font-[Cinzel] font-bold text-[#d4a853]">450 € – 650 €</div>
                                     <p className="text-xs text-slate-400 font-light leading-relaxed">
                                         Sin intermediarios ni comisiones de agencia. Tarifa cerrada y transparente.
@@ -196,7 +196,7 @@ export default function BodasDetailPage() {
                                 </div>
 
                                 <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
-                                    <div className="text-xs text-slate-400 uppercase tracking-wider font-medium">Momento Recomendado</div>
+                                    <div className="text-xs text-slate-300 uppercase tracking-wider font-medium">Momento Recomendado</div>
                                     <div className="text-2xl font-[Cinzel] font-bold text-white">Cóctel de Boda</div>
                                     <p className="text-xs text-slate-400 font-light leading-relaxed">
                                         Duración 1,5 a 2,5 horas. Dinamiza corrillos y elimina cualquier tiempo muerto.
@@ -204,7 +204,7 @@ export default function BodasDetailPage() {
                                 </div>
 
                                 <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
-                                    <div className="text-xs text-slate-400 uppercase tracking-wider font-medium">Cobertura Geográfica</div>
+                                    <div className="text-xs text-slate-300 uppercase tracking-wider font-medium">Cobertura Geográfica</div>
                                     <div className="text-2xl font-[Cinzel] font-bold text-white">Madrid y Sierra</div>
                                     <p className="text-xs text-slate-400 font-light leading-relaxed">
                                         Fincas de Madrid, El Escorial, Toledo, Guadalajara y toda la zona centro.
@@ -212,7 +212,7 @@ export default function BodasDetailPage() {
                                 </div>
 
                                 <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/5 space-y-2">
-                                    <div className="text-xs text-slate-400 uppercase tracking-wider font-medium">Antelación de Reserva</div>
+                                    <div className="text-xs text-slate-300 uppercase tracking-wider font-medium">Antelación de Reserva</div>
                                     <div className="text-2xl font-[Cinzel] font-bold text-[#d4a853]">3 a 6 Meses</div>
                                     <p className="text-xs text-slate-400 font-light leading-relaxed">
                                         Fechas de temporada alta (mayo a octubre) se bloquean con antelación previa.
@@ -332,7 +332,7 @@ export default function BodasDetailPage() {
                             ].map((item, idx) => (
                                 <FadeIn key={idx} delay={idx * 0.15} y={20}>
                                     <div className="h-full bg-transparent border border-white/5 p-8 rounded-3xl text-center hover:bg-white/[0.02] transition-colors">
-                                        <h4 className="text-white font-medium mb-3 text-xl">{item.title}</h4>
+                                        <h3 className="text-white font-medium mb-3 text-xl">{item.title}</h3>
                                         <p className="text-slate-400 text-sm font-light leading-relaxed">{item.desc}</p>
                                     </div>
                                 </FadeIn>
@@ -459,7 +459,7 @@ export default function BodasDetailPage() {
                                         <div className="flex items-center gap-3 pt-4 border-t border-white/5">
                                             <div>
                                                 <p className="text-white font-medium text-sm">María y Carlos</p>
-                                                <p className="text-slate-500 text-xs font-light">Boda en Finca El Campillo, 2025</p>
+                                                <p className="text-slate-300 text-xs font-light">Boda en Finca El Campillo, 2025</p>
                                             </div>
                                             <div className="ml-auto flex gap-0.5">
                                                 {[...Array(5)].map((_, i) => (<span key={i} className="text-[#d4a853] text-sm">★</span>))}
@@ -474,7 +474,7 @@ export default function BodasDetailPage() {
                                         <div className="flex items-center gap-3 pt-4 border-t border-white/5">
                                             <div>
                                                 <p className="text-white font-medium text-sm">Laura y Javier</p>
-                                                <p className="text-slate-500 text-xs font-light">Boda en Sierra de Madrid, 2026</p>
+                                                <p className="text-slate-300 text-xs font-light">Boda en Sierra de Madrid, 2026</p>
                                             </div>
                                             <div className="ml-auto flex gap-0.5">
                                                 {[...Array(5)].map((_, i) => (<span key={i} className="text-[#d4a853] text-sm">★</span>))}
@@ -547,7 +547,7 @@ export default function BodasDetailPage() {
                                         </tbody>
                                     </table>
                                 </div>
-                                <p className="text-slate-500 text-xs font-light italic">
+                                <p className="text-slate-300 text-xs font-light italic">
                                     Fuente: elaboración propia basada en +200 eventos realizados en la Comunidad de Madrid.
                                 </p>
                             </div>

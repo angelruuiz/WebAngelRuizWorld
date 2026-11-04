@@ -62,3 +62,5 @@ Al residir y operar directamente en la zona Noroeste de Madrid, ofrezco total di
 3. **El Clímax Nocturno:** Una sesión de mentalismo y lectura de mente para todos los invitados reunidos alrededor del fuego o la terraza.
 
 Haz que tu fiesta privada en la Sierra sea recordada durante años. [Contacta directamente por WhatsApp o formulario](/contratar-mago-madrid) para consultar fechas.
+
+> **Bodas en la Sierra:** Las fincas serranas son el escenario soñado tanto para reuniones campestres como para celebrar un enlace nupcial; descubre por qué soy el [mago para bodas en la Sierra de Madrid](/particulares/bodas) más recomendado.

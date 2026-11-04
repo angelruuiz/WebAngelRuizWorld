@@ -149,3 +149,25 @@ a, button, input, textarea, select {
 
 /* Deferred Styles - Unified in single CSS bundle */
 @import './deferred.css';
+
+/* Google Translate Discreet Integration */
+.goog-te-banner-frame {
+    display: none !important;
+}
+body {
+    top: 0px !important;
+}
+.skiptranslate:not(.allow-translate) {
+    display: none !important;
+}
+#google_translate_element {
+    display: none !important;
+}
+.goog-tooltip, .goog-tooltip:hover {
+    display: none !important;
+}
+.goog-text-highlight {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}

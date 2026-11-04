@@ -156,7 +156,7 @@ export default function BlogListingClient({ posts }) {
                                             <div className="relative z-10 flex items-center justify-between gap-3 text-[9px] font-bold text-slate-500 uppercase tracking-[0.1em] pt-4 border-t border-white/5">
                                                 <div className="flex items-center gap-2">
                                                     <div className="w-7 h-7 rounded-full overflow-hidden bg-white/5 flex-shrink-0">
-                                                        <Image src="/images/logo-pequeno.webp" alt="Ángel Ruiz mago ilusionista profesional Madrid - logo autor" width={28} height={28} className="w-full h-full object-cover" />
+                                                        <Image src="/images/logo-pequeno.webp" alt="Logotipo de Ángel Ruiz" width={28} height={28} className="w-full h-full object-cover" />
                                                     </div>
                                                     <div className="flex flex-col">
                                                         <span className="text-slate-400 mb-0.5">{formatDate(post.date)}</span>

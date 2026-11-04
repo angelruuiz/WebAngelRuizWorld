@@ -80,3 +80,5 @@ Si buscas una experiencia mágica única para tu próxima celebración privada, 
 
 
 ¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.
+
+> **Eventos de alta gama:** En los enclaves residenciales más distinguidos de la capital, el ilusionismo de autor es la opción predilecta; consulta las opciones de [mago de lujo para bodas en Madrid](/particulares/bodas).

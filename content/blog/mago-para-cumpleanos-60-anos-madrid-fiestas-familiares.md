@@ -58,3 +58,5 @@ Contratar un [mago para celebraciones familiares y cumpleaños en Madrid](/parti
 - **Cobertura**: Comunidad de Madrid sin sobrecostes ocultos.
 
 Haz que sus 60 años sean el cumpleaños más especial de su vida. [Solicita disponibilidad sin compromiso](/contratar-mago-madrid) o contáctanos por WhatsApp para preparar la sorpresa en menos de 2 horas.
+
+> **Magia intergeneracional:** Para celebraciones donde se busca emocionar a todas las edades, conoce mi propuesta como [ilusionista para bodas en Madrid y Sierra](/particulares/bodas).

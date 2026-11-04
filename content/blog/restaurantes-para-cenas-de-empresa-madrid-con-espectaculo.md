@@ -63,3 +63,5 @@ En [Ángel Ruiz World](/empresas) ofrecemos tarifas directas sin intermediarios 
 *Incluye factura oficial desgravable, coordinación previa con el metre del restaurante y seguro de responsabilidad civil.*
 
 Si ya tenéis fecha o estáis barajando restaurantes en Madrid, [solicita presupuesto sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para bloquear la fecha en menos de 2 horas.
+
+> **Organización de cenas corporativas:** Descubre cómo contratar directamente a un [ilusionista para cenas de empresa en Madrid](/empresas/mago-cenas-empresa-madrid) adaptado a cualquier restaurante o espacio reservado.

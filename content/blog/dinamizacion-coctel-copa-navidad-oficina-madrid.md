@@ -63,3 +63,5 @@ Sin embargo, en el entorno de trabajo existe un peligro real: que la gente siga 
 *Factura con IVA desglosado, seguro de RC y desplazamiento a cualquier polígono o parque empresarial de la Comunidad de Madrid.*
 
 ¿Planeas la copa de fin de año de tu empresa en vuestras oficinas? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o consúltanos por WhatsApp para asegurar vuestra fecha en diciembre.
+
+> **¿Buscando opciones para la cena corporativa?** Si en lugar de un cóctel en la oficina organizáis una velada en restaurante o finca, consulta mi propuesta de [mago para cenas de empresa y Navidad en Madrid](/empresas/mago-cenas-empresa-madrid).

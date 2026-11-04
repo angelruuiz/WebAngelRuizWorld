@@ -62,6 +62,7 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                             <Link href="/mago-close-up-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Magia de Cerca Close-Up</Link>
                             <Link href="/particulares/fiestas-cumpleanos-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Fiestas y Cumpleaños</Link>
                             <Link href="/particulares/comuniones" className="hover:text-[#d4a853] transition-colors w-fit">Comuniones</Link>
+                            <Link href="/particulares/despedidas-soltera-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Despedidas de Soltera</Link>
                             <Link href="/contratar-mago-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Tarifas y Dossier</Link>
                         </div>
                     </div>

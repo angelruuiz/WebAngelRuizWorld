@@ -61,3 +61,5 @@ Tras el banquete y el café, antes de dar paso a la música de fiesta, toda la a
 *Incluye desplazamiento, coordinación previa con los responsables de la finca y el catering, seguro de RC y factura oficial.*
 
 ¿Celebras tu fiesta corporativa en una finca en Madrid? [Solicita disponibilidad y presupuesto a medida](/contratar-mago-madrid) o contáctanos por WhatsApp para resolver dudas en menos de 2 horas.
+
+> **Cenas en fincas:** Para banquetes y reuniones corporativas en fincas privadas, consulta nuestra propuesta de [mago para cenas de empresa](/empresas/mago-cenas-empresa-madrid).

@@ -66,3 +66,5 @@ La magia para adultos no tiene nada que ver con trucos infantiles ni pañuelos d
 - **Cobertura**: Madrid capital y toda la Comunidad de Madrid (zona noroeste sin suplemento).
 
 Haz de tu próximo cumpleaños un día irrepetible. [Reserva tu fecha directamente](/contratar-mago-madrid) o envía un mensaje por WhatsApp para consultar disponibilidad ahora mismo.
+
+> **Magia para el gran día:** Si te atrae la idea de asombro de cercanía pero estás inmerso en los preparativos de tu enlace, conoce mi espectáculo de [magia de cóctel para bodas en Madrid](/particulares/bodas).

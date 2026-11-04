@@ -75,3 +75,5 @@ En el mundo B2B, el entretenimiento debe estar alineado con los valores de la co
 Ofrezco shows de mentalismo e ilusionismo en toda la Comunidad de Madrid: hoteles de cinco estrellas en el Paseo de la Castellana y Barrio de Salamanca, espacios exclusivos en La Finca y La Moraleja, fincas corporativas en Las Rozas, Majadahonda y Torrelodones, así como en convenciones en IFEMA.
 
 ¿Quieres comprobar la disponibilidad para tu fecha o recibir una propuesta a medida? Puedes consultar más información en la sección de [contratar mago en Madrid](/contratar-mago-madrid) o solicitar presupuesto sin compromiso.
+
+> **Mentalismo en sobremesas:** Descubre cómo el mentalismo y la lectura de pensamiento dinamizan las [cenas de empresa en Madrid](/empresas/mago-cenas-empresa-madrid).

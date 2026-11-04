@@ -233,6 +233,10 @@ export default function EventosDetailPage() {
                                 <p className="text-amber-500 text-[10px] uppercase font-bold tracking-tighter mb-2">Entretenimiento</p>
                                 <h3 className="text-white font-[Cinzel] text-lg group-hover:text-amber-400 transition-colors">Ideas de entretenimiento para fiestas privadas en Madrid</h3>
                             </a>
+                            <a href="/particulares/despedidas-soltera-madrid" className="group bg-slate-900/40 p-8 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
+                                <p className="text-amber-500 text-[10px] uppercase font-bold tracking-tighter mb-2">Despedidas</p>
+                                <h3 className="text-white font-[Cinzel] text-lg group-hover:text-amber-400 transition-colors">Magia para Despedidas de Soltera en Madrid</h3>
+                            </a>
                             <a href="/blog/mago-para-cumpleanos-adultos-50-anos-madrid" className="group bg-slate-900/40 p-8 rounded-xl border border-slate-800 hover:border-amber-500/30 transition-all">
                                 <p className="text-amber-500 text-[10px] uppercase font-bold tracking-tighter mb-2">Cumpleaños y Celebraciones</p>
                                 <h3 className="text-white font-[Cinzel] text-lg group-hover:text-amber-400 transition-colors">Mago para cumpleaños de adultos: 40, 50 y 60 años</h3>

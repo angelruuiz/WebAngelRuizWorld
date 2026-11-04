@@ -59,3 +59,5 @@ Lejos de los espectáculos convencionales en teatros lejanos, la magia en el sal
 - **Desplazamiento**: Incluido en Madrid capital y toda la Comunidad de Madrid.
 
 Convierte tu salón en el escenario del mejor ilusionismo de Madrid. [Pide disponibilidad sin compromiso](/contratar-mago-madrid) o contáctanos por WhatsApp para reservar tu fecha en menos de 2 horas.
+
+> **Eventos corporativos selectos:** Del mismo modo que en residencias privadas, este formato de cercanía triunfa en encuentros ejecutivos; conoce mi enfoque de [magia para cenas corporativas y comidas de empresa](/empresas/mago-cenas-empresa-madrid).

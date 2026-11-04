@@ -63,3 +63,5 @@ El proceso es muy sencillo y directo:
 * Coordinamos el mejor horario (cóctel de bienvenida o sobremesa tras la tarta) para que tú solo tengas que disfrutar de tu familia.
 
 [Solicita presupuesto express en menos de 2 horas](/contratar-mago-madrid) y garantiza el éxito de tu comida familiar.
+
+> **Grandes celebraciones de amor:** En celebraciones familiares de alto nivel, la elegancia de la magia crea momentos irrepetibles; echa un vistazo a los formatos de [espectáculos de magia para bodas en Madrid](/particulares/bodas).

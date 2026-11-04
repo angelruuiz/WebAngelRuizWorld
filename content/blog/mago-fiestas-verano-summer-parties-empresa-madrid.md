@@ -93,3 +93,5 @@ Si estás planificando el próximo evento estival de tu compañía y quieres ase
 
 
 ¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.
+
+> **Temporada de invierno y fin de año:** Cuando llegue el frío, traslada esta energía festiva a tus [cenas de Navidad y empresa en Madrid con magia](/empresas/mago-cenas-empresa-madrid).

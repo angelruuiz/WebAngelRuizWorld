@@ -81,3 +81,5 @@ Descubre todos los detalles en la sección de [eventos particulares](/particular
 Complementa tu evento con nuestras opciones de [mago en Madrid capital](/mago-madrid) o en la zona noroeste como [mago en Las Rozas](/mago-las-rozas) y [mago en Torrelodones](/mago-torrelodones).
 
 ¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.
+
+> **Eventos navideños de empresa:** Si buscas ideas similares para sorprender a tus compañeros de trabajo a final de año, descubre cómo dinamizamos las [cenas de Navidad de empresa en Madrid con magia](/empresas/mago-cenas-empresa-madrid).

@@ -9,7 +9,7 @@ export const metadata = {
     default: 'Mago en Madrid | Ángel Ruiz · Bodas y Empresas',
     template: '%s | Ángel Ruiz'
   },
-  description: '¿Buscas asombro inolvidable? Ilusionismo de autor para bodas, empresas y eventos exclusivos en Madrid. Trato directo sin agencias. Presupuesto express en 2h.',
+  description: '¿Buscas asombro inolvidable? Ilusionismo de autor para bodas, empresas y eventos exclusivos en Madrid. Trato directo sin agencias. Presupuesto express en menos de 1h.',
   keywords: ['mago madrid', 'mago en madrid', 'contratar mago madrid', 'mago profesional madrid', 'ilusionista madrid', 'magia de cerca madrid', 'mago cenas empresa madrid', 'mago comuniones madrid', 'mago team building madrid', 'mago close-up madrid', 'Ángel Ruiz mago'],
   authors: [{ name: 'Ángel Ruiz | Mago e Ilusionista' }],
   creator: 'Ángel Ruiz | Mago e Ilusionista',

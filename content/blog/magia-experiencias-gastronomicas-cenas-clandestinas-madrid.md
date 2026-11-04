@@ -62,3 +62,5 @@ Como ilusionista profesional formado con los grandes referentes de la magia espa
 * Efectos de magia únicos realizados con objetos nobles y conceptos personalizados.
 
 Si estás organizando una experiencia culinaria irrepetible en Madrid, [reserva fecha y solicita propuesta a medida](/contratar-mago-madrid).
+
+> **Experiencias para empresas:** Este mismo concepto de maridaje entre alta cocina e ilusión resulta extraordinario para eventos corporativos; conoce cómo adaptarlo en tus [cenas de empresa con magia de cerca](/empresas/mago-cenas-empresa-madrid).

@@ -96,3 +96,5 @@ Si estás organizando fiestas familiares para otras edades, consulta nuestras gu
 Cada cumpleaños es irrepetible. Cuéntame dónde lo celebras, cuántas personas seréis y qué ambiente te gustaría crear. En menos de 2 horas recibirás una propuesta a medida sin compromiso.
 
 **[Solicita presupuesto express para tu 40 cumpleaños (300€)](/contratar-mago-madrid)** y asegura tu fecha antes de que se agote la agenda de fin de semana.
+
+> **Entretenimiento para enlaces:** Si buscas la misma exclusividad y asombro para un enlace nupcial inolvidable, no te pierdas la guía de [magia y entretenimiento para bodas](/particulares/bodas).

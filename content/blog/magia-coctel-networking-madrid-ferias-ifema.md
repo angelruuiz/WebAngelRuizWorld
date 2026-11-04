@@ -82,3 +82,5 @@ Para consultar disponibilidad en el calendario de ferias de IFEMA o solicitar un
 Descubre más sobre cómo [captar clientes en stands de IFEMA con mentalismo](/blog/mentalismo-captar-leads-ferias-ifema-madrid) y las soluciones de [magia para empresas en Madrid](/empresas).
 
 ¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.
+
+> **Networking nocturno:** Tras la jornada ferial en IFEMA, lleva el asombro a vuestra velada con un [espectáculo de magia en cenas de empresa](/empresas/mago-cenas-empresa-madrid).

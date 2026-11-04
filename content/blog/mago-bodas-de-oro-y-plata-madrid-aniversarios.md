@@ -57,3 +57,5 @@ Frecuentamos los mejores enclaves gastronómicos y fincas familiares de la Comun
 * **Fincas y Casas de Campo**: Espacios con jardín en Boadilla del Monte, Majadahonda, Pozuelo de Alarcón, Torrelodones y San Lorenzo de El Escorial.
 
 Si deseas regalar una sorpresa inolvidable a tus padres o abuelos en sus Bodas de Plata u Oro en Madrid, consulta nuestras propuestas en [mago para eventos familiares y particulares](/particulares/eventos) o infórmate sobre nuestras [tarifas y contratación](/contratar-mago-madrid).
+
+> **Celebraciones nupciales:** Si además de aniversarios estás organizando un enlace matrimonial en una finca o jardín, explora todos los secretos de un [mago para bodas en Madrid](/particulares/bodas) y cómo dinamizar el cóctel nupcial.

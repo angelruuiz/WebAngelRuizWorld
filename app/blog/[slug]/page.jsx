@@ -276,7 +276,7 @@ export default async function BlogPost({ params }) {
              <div className="w-16 h-16 rounded-full overflow-hidden bg-amber-500/10 flex items-center justify-center border border-amber-500/20 shadow-[0_0_20px_rgba(245,158,11,0.1)] transition-transform hover:scale-110 duration-500">
                 <Image 
                     src="/images/logo-pequeno.webp" 
-                    alt="Ángel Ruiz mago ilusionista profesional Madrid - logo autor corporativo" 
+                    alt="Logotipo de Ángel Ruiz" 
                     width={64}
                     height={64}
                     className="w-full h-full object-cover"

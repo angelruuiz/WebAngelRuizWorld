@@ -139,3 +139,5 @@ Si estás organizando una celebración familiar, estos artículos te interesan:
 
 
 ¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.
+
+> **Entretenimiento para todos los públicos:** Si estás buscando un entretenimiento que cautive tanto a niños como a adultos en eventos grandes, descubre el espectáculo familiar de [magia para bodas en Madrid](/particulares/bodas).

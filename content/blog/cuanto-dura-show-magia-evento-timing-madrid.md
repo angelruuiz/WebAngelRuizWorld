@@ -67,3 +67,5 @@ A continuación te explicamos las duraciones óptimas según el formato y cómo 
 * **00:05 en adelante | Fiesta, DJ y copa de celebración**: Inicio del baile con la energía y el ánimo al 100%.
 
 Si estás planificando el horario de tu próximo evento en Madrid y quieres asesoramiento personalizado para encajar el entretenimiento a medida, consulta nuestra sección de [contratar mago en Madrid](/contratar-mago-madrid), explora el [show para empresas](/empresas) o conoce la trayectoria de [Ángel Ruiz García](/sobre-mi).
+
+> **Planificación de timings:** Si estás cuadrando la escaleta para una velada corporativa o un enlace, revisa las recomendaciones para [cenas de empresa con magia](/empresas/mago-cenas-empresa-madrid) y [tiempos en bodas](/particulares/bodas).

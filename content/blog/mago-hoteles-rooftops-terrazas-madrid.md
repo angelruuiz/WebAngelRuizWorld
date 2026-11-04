@@ -60,3 +60,5 @@ El formato close-up se adapta con éxito a los principales rooftops y hoteles de
 * **Residencias Mágicas:** Actuaciones semanales o mensuales en colaboración directa con el departamento de Food & Beverage o Marketing del hotel.
 
 ¿Quieres elevar el nivel de tu terraza o evento en hotel? [Contacta conmigo para consultar fechas y disponibilidad](/contratar-mago-madrid).
+
+> **Bodas en espacios singulares:** Los rooftops y hoteles boutique son perfectos para celebraciones nupciales íntimas; conoce la magia para [bodas en hoteles y fincas de Madrid](/particulares/bodas).

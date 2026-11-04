@@ -102,3 +102,5 @@ Si estás organizando un cumpleaños para otra edad o un evento familiar diferen
 Los fines de semana (viernes noche y sábados) son las fechas más cotizadas del año. Si quieres garantizar que tu fiesta de cambio de década sea un recuerdo inolvidable para ti y todos tus amigos:
 
 **[Solicita información y reserva tu fecha para 30 cumpleaños (300€)](/contratar-mago-madrid)** y hablemos de cómo hacer de tu fiesta algo verdaderamente único.
+
+> **Planes de boda:** Para aquellos que dan el siguiente paso y planean su enlace matrimonial, descubrid cómo transformar el cóctel de bienvenida con un [mago profesional de bodas en Madrid](/particulares/bodas).

@@ -100,3 +100,5 @@ La agenda para fines de semana en Madrid suele completarse con semanas de antela
 También te puede interesar descubrir nuestras opciones de [mago para eventos familiares](/particulares/eventos) y [mago para cumpleaños de adultos en Madrid](/blog/mago-para-cumpleanos-adultos-50-anos-madrid).
 
 ¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.
+
+> **Momentos inolvidables:** Al igual que en un homenaje de jubilación, un enlace requiere momentos mágicos cargados de significado; consulta cómo planificamos la [magia para bodas en Madrid](/particulares/bodas).

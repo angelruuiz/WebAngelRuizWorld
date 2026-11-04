@@ -186,3 +186,5 @@ Si estás organizando una celebración, estos artículos te ayudarán:
 
 
 ¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.
+
+> **El gran impacto nupcial:** Si buscas causar ese mismo impacto en el día de tu enlace, descubre cómo dejar sin palabras a tus invitados con el show de [mago para bodas en Madrid](/particulares/bodas).

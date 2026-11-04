@@ -67,3 +67,5 @@ Al contar con **asesoría integral previa**, el espectáculo se construye en tor
 ## 4. Presupuesto Transparente y Trato de Autor Directo
 
 Trabajamos directamente con agencias de eventos, departamentos de Recursos Humanos y comités de dirección en toda la Comunidad de Madrid. Consulta nuestra [sección corporativa para empresas](/empresas) y solicita tu presupuesto y dossier en menos de 2 horas.
+
+> **Asesoramiento para cenas:** Diseñamos la mejor experiencia interactiva para tu equipo; infórmate sobre nuestro servicio de [magia en cenas de empresa](/empresas/mago-cenas-empresa-madrid).

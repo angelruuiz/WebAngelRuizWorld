@@ -80,3 +80,5 @@ Para eventos privados y cumpleaños en restaurantes en Madrid, el servicio cuent
 - **Personalización**: Rutina final personalizada con regalo o recuerdo imposible para el cumpleañero.
 
 Si estás organizando una celebración y quieres consultar disponibilidad para este fin de semana o las próximas semanas, [solicita presupuesto sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para bloquear la fecha en menos de 2 horas.
+
+> **Asombro en banquetes nupciales:** El mismo dinamismo que triunfa entre mesas de restaurantes se traslada al banquete de bodas; descubre cómo sorprender a tus invitados con un [mago para bodas exclusivo](/particulares/bodas).

@@ -90,3 +90,5 @@ Si estás planificando tu presencia en IFEMA u otros centros de convenciones de 
 - [¿Cuál es el Mejor Mago para Empresas en Madrid?](/blog/mejor-mago-empresas-madrid)
 - [Team Building en Madrid: La Magia como Herramienta Corporativa](/blog/team-building-madrid-actividades-empresas)
 - [Página Oficial: Mago para Ferias y Congresos en Madrid](/empresas/mago-ferias-congresos-madrid)
+
+> **Eventos para clientes tras la feria:** Fideliza a tus contactos clave invitándoles a una velada única con [magia de cerca para cenas de empresa en Madrid](/empresas/mago-cenas-empresa-madrid).

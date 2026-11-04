@@ -14,7 +14,7 @@ const CorporateInlineForm = dynamic(() => import('@/components/CorporateInlineFo
 
 export const metadata = {
     title: { absolute: 'Mago para Empresas en Madrid | Eventos Corporativos y B2B' },
-    description: 'Mago para empresas en Madrid: convenciones, kick-offs, team building y ferias. Ilusionismo corporativo de alto impacto. ¡Presupuesto express en 2h!',
+    description: 'Mago para empresas en Madrid: convenciones, kick-offs, team building y ferias. Ilusionismo corporativo de alto impacto. ¡Presupuesto express en menos de 1h!',
     keywords: ['mago para empresas madrid', 'mago para empresas', 'mago empresas', 'mago eventos corporativos madrid', 'mago team building madrid', 'mago conferenciante madrid', 'contratar mago empresa madrid', 'ilusionista corporativo madrid', 'mejor mago empresas madrid', 'mago para eventos de empresa madrid', 'mago eventos empresariales', 'magia para empresas', 'mago corporativo premium madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/empresas',
@@ -22,13 +22,13 @@ export const metadata = {
     openGraph: {
         url: 'https://angelruiz.world/empresas',
         title: 'Mago para Empresas en Madrid | Eventos Corporativos y B2B',
-        description: 'Mago para empresas en Madrid: convenciones, kick-offs, team building y ferias. Ilusionismo corporativo de alto impacto. ¡Presupuesto express en 2h!',
+        description: 'Mago para empresas en Madrid: convenciones, kick-offs, team building y ferias. Ilusionismo corporativo de alto impacto. ¡Presupuesto express en menos de 1h!',
         images: [{ url: '/images/evento-angel-ruiz-magia.webp', width: 1200, height: 630 }],
     },
     twitter: {
         card: 'summary_large_image',
         title: 'Mago para Empresas en Madrid | Eventos Corporativos y B2B',
-        description: 'Especialista en magia corporativa para eventos, convenciones y ferias en Madrid. Presupuesto directo en 2h.',
+        description: 'Especialista en magia corporativa para eventos, convenciones y ferias en Madrid. Presupuesto express en menos de 1h.',
         images: ['/images/evento-angel-ruiz-magia.webp'],
     },
 };

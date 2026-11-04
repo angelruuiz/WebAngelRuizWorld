@@ -76,3 +76,5 @@ Si estás organizando el cumpleaños como un regalo sorpresa para tu pareja, pad
 - **Desplazamiento**: Incluido en Madrid capital y toda la Comunidad de Madrid (zona noroeste sin sobrecostes).
 
 Si deseas consultar disponibilidad y solicitar un presupuesto a tu medida para tu próxima fiesta, visita la sección de [mago para cumpleaños en Madrid](/particulares/fiestas-cumpleanos-madrid) o solicita [presupuesto directo sin compromiso](/contratar-mago-madrid). Contacta también por WhatsApp para resolver tus dudas al instante.
+
+> **Magia en cócteles de boda:** La cercanía y el humor inteligente que cautivan en los 50 cumpleaños son la fórmula perfecta para enamorar a los invitados en un [cóctel de boda en Madrid con magia](/particulares/bodas).

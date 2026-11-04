@@ -79,3 +79,5 @@ Si estás coordinando la producción de un congreso, simposio o convención dire
 
 
 ¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.
+
+> **Cenas de congreso:** El broche de oro tras un simposio es amenizar la velada con un [mago para cenas corporativas en Madrid](/empresas/mago-cenas-empresa-madrid).

@@ -70,3 +70,5 @@ Con formación directa en la escuela de grandes maestros del ilusionismo españo
 3. **Garantía de Impacto:** Los asistentes no solo presenciarán magia; vivirán una experiencia artística imposible que asociarán directamente con tu marca.
 
 Si estás organizando una presentación VIP o un cóctel exclusivo, [solicita presupuesto directo y disponibilidad](/contratar-mago-madrid) en menos de 2 horas.
+
+> **Bodas y galas exclusivas:** Si buscas ese mismo nivel de sofisticación y prestigio para un enlace nupcial, visita nuestra página de [mago para bodas de lujo en Madrid](/particulares/bodas).

@@ -10,11 +10,21 @@ export const metadata = {
         url: 'https://angelruiz.world/valoraciones',
         title: 'Opiniones Verificadas | Ángel Ruiz · Mago en Madrid',
         description: '¿Por qué novios y empresas dan 5 estrellas a Ángel Ruiz? Testimonios auténticos y reacciones reales en Madrid.',
+        siteName: 'Ángel Ruiz | Mago e Ilusionista',
+        locale: 'es_ES',
+        type: 'website',
+        images: [{
+            url: 'https://angelruiz.world/images/foto-bio.webp',
+            width: 1200,
+            height: 630,
+            alt: 'Opiniones Verificadas sobre Ángel Ruiz Mago en Madrid',
+        }],
     },
     twitter: {
-        card: 'summary',
+        card: 'summary_large_image',
         title: 'Opiniones Verificadas | Ángel Ruiz · Mago en Madrid',
         description: 'Descubre por qué novios y empresas dan 5 estrellas a Ángel Ruiz en Madrid.',
+        images: ['https://angelruiz.world/images/foto-bio.webp'],
     },
 };
 

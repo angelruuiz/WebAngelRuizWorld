@@ -8,6 +8,7 @@ import { useRouter } from 'next/navigation';
 import dynamic from 'next/dynamic';
 const MagicSpiral = dynamic(() => import('@/components/Transitions/MagicSpiral'), { ssr: false });
 const MobileBookingDrawer = dynamic(() => import('@/components/MobileBookingDrawer'), { ssr: false });
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 const Navbar = ({ onOpenContact, isLight = false }) => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -60,7 +61,8 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
             children: [
                 { name: 'Bodas', href: '/particulares/bodas' },
                 { name: 'Comuniones', href: '/particulares/comuniones' },
-                { name: 'Fiestas y Eventos', href: '/particulares/eventos' }
+                { name: 'Fiestas y Eventos', href: '/particulares/eventos' },
+                { name: 'Despedidas de Soltera', href: '/particulares/despedidas-soltera-madrid' }
             ]
         },
         { 
@@ -87,7 +89,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                     <Link href="/" aria-label="Ángel Ruiz - Inicio" className="flex items-center shrink-0 z-50 transition-transform hover:scale-105">
                         <img 
                             src="/images/logo-pequeno.webp" 
-                            alt="Ángel Ruiz mago ilusionista profesional Madrid - logo" 
+                            alt="Logotipo de Ángel Ruiz" 
                             width={38} 
                             height={38} 
                             className="w-9 h-9 sm:w-10 sm:h-10 object-contain rounded-full border border-white/10 shadow-[0_0_15px_rgba(212,168,83,0.15)]"
@@ -128,8 +130,10 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                         ))}
                     </div>
 
-                    {/* Desktop Contact Button */}
-                    <div className="hidden md:flex items-center shrink-0 relative group">
+                    {/* Desktop Contact Button & Language Switcher */}
+                    <div className="hidden md:flex items-center gap-3 shrink-0 relative">
+                        <LanguageSwitcher />
+                        <div className="relative group">
                         <div 
                             className="absolute inset-0 bg-amber-500/30 blur-[15px] rounded-full pointer-events-none group-hover:bg-amber-500/60 transition-all duration-500"
                         />
@@ -137,15 +141,16 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                         <button 
                             type="button"
                             onClick={onOpenContact} 
-                            aria-label="Abrir formulario de contacto"
+                            aria-label="Contacto - Abrir formulario"
                             className="relative px-3.5 lg:px-4 py-2 overflow-hidden rounded-full cursor-pointer border border-amber-300/50 shadow-[0_0_15px_rgba(245,158,11,0.3)] z-10 bg-[rgba(3,7,18,0.5)] hover:bg-[#d4a853] backdrop-blur-md text-[11px] lg:text-xs text-slate-100 hover:text-slate-950 font-bold tracking-[0.1em] uppercase transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5 lg:gap-2 group"
                         >
                             <span className="relative z-10">Contacto</span>
                             <Sparkles className="w-3 h-3 group-hover:rotate-180 transition-transform duration-300 relative z-10" />
                         </button>
+                        </div>
                     </div>
 
-                    {/* Mobile Quick Contact Button */}
+                    {/* Mobile Quick Contact Button & Language Switcher */}
                     <div className="md:hidden flex items-center gap-3">
                         <button 
                             type="button"
@@ -187,7 +192,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                     <div className="flex justify-center">
                         <button 
                             type="button"
-                            aria-label="Pedir presupuesto inmediato"
+                            aria-label="Reservar - Pedir presupuesto inmediato"
                             onClick={() => setIsBookingDrawerOpen(true)}
                             className="relative group active:scale-95 transition-transform w-full max-w-[125px]"
                         >
@@ -272,6 +277,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                             <Link href="/particulares/bodas" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Bodas</Link>
                             <Link href="/particulares/comuniones" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Comuniones</Link>
                             <Link href="/particulares/eventos" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Cumpleaños y Fiestas</Link>
+                            <Link href="/particulares/despedidas-soltera-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Despedidas de Soltera</Link>
                         </div>
                     </details>
 

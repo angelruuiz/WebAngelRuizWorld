@@ -69,3 +69,5 @@ Para facilitar la aprobación de presupuesto en departamentos y pymes, ofrecemos
 - **Facturación**: Factura oficial desgravable con IVA detallado para contabilidad corporativa.
 
 Si coordinas la cena de tu equipo o departamento para este otoño o Navidad, [consulta fechas disponibles directamente](/contratar-mago-madrid) o envía un mensaje por WhatsApp para resolver dudas en minutos.
+
+> **¿Planeando el evento de tu equipo?** Si estás diseñando la velada anual o el brindis navideño de tu negocio, descubre todos los detalles de mi propuesta como [mago para cenas de empresa en Madrid](/empresas/mago-cenas-empresa-madrid) con magia interactiva mesa a mesa.

@@ -102,3 +102,5 @@ Si te ha parecido interesante, quizás te interese seguir leyendo estos artícul
 
 
 ¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.
+
+> **Dinamización de grupos corporativos:** Si buscas romper el hielo entre compañeros de distintos departamentos, la magia close-up es el formato líder en [cenas corporativas y eventos de Navidad en Madrid](/empresas/mago-cenas-empresa-madrid).
