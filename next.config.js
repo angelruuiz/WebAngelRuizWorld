@@ -44,36 +44,6 @@ const nextConfig = {
                 permanent: true,
             },
             {
-                source: '/Empresas',
-                destination: '/empresas',
-                permanent: true,
-            },
-            {
-                source: '/Dossier',
-                destination: '/dossier',
-                permanent: true,
-            },
-            {
-                source: '/Sobre-Mi',
-                destination: '/sobre-mi',
-                permanent: true,
-            },
-            {
-                source: '/Contacto',
-                destination: '/contacto',
-                permanent: true,
-            },
-            {
-                source: '/Valoraciones',
-                destination: '/valoraciones',
-                permanent: true,
-            },
-            {
-                source: '/Particulares/Bodas',
-                destination: '/particulares/bodas',
-                permanent: true,
-            },
-            {
                 source: '/particulares/boda',
                 destination: '/particulares/bodas',
                 permanent: true,
