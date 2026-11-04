@@ -116,7 +116,7 @@ export default function ValoracionesClient({ reviewsData }) {
                             </div>
                         </div>
                         <h3 className="text-2xl md:text-3xl font-[Cinzel] text-white font-bold uppercase mb-4">Descubre qué dicen de nosotros en Google</h3>
-                        <p className="text-slate-400 mb-8 max-w-2xl">Lee las experiencias reales de clientes satisfechos que avalan mi trayectoria con +50 reseñas de 5 estrellas en sus bodas y eventos corporativos.</p>
+                        <p className="text-slate-400 mb-8 max-w-2xl">Lee las experiencias reales de clientes satisfechos que avalan mi trayectoria con +60 reseñas de 5 estrellas en sus bodas y eventos corporativos.</p>
                         <a 
                             href="https://www.google.com/search?sca_esv=8001b418ab72b965&sxsrf=APpeQnttxDfKRtR6fpA2h7bYkWycKzmRVQ:1792418000314&q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=APenkKmVGdgpMPDQZoEWS8RIAhsqXAKlNLP0B8DNkkiU9KPI0V2U8InyxO1tqoaWpGS1_Q7QhAgSRC07fbiiZx9SpnZjJDB5UXzd7BX6d41IdchYfOedo3rQx0et86krTkaw35SJ_yeQYQ3kpruL6sC1m1bAx0aXbA%3D%3D&sa=X&sqi=2&ved=2ahUKEwjJ6smxncaXAxWUXUEAHQovEbYQ_coHegQIKxAB&biw=1658&bih=797&dpr=1.16" 
                             target="_blank" 

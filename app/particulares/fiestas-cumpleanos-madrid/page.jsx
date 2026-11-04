@@ -13,8 +13,8 @@ const FadeIn = ({ children, className = "" }) => (
 );
 
 export const metadata = {
-    title: { absolute: 'Mago para Cumpleaños en Madrid · Ángel Ruiz' },
-    description: 'Magia de cerca y mentalismo para cumpleaños de adultos en Madrid (40, 50 y 60 años). En restaurantes o a domicilio. Presupuesto express en 2h.',
+    title: { absolute: 'Mago para Cumpleaños de Adultos en Madrid · Ángel Ruiz' },
+    description: 'Magia de cerca y mentalismo para cumpleaños de adultos en Madrid (40, 50 y 60 años). En restaurantes o a domicilio. Presupuesto en menos de 1h.',
     keywords: ['cumpleaños originales madrid', 'mago para cumpleaños madrid', 'magia cumpleaños adultos madrid', 'magia en restaurante madrid cumpleaños adultos', 'mago fiestas privadas madrid', 'cumpleaños 40 años madrid', 'cumpleaños 50 años madrid', 'animacion cumpleaños adultos'],
     alternates: {
         canonical: 'https://angelruiz.world/particulares/fiestas-cumpleanos-madrid',
@@ -118,8 +118,8 @@ export default function CumpleanosAdultosPage() {
                                     Eventos Exclusivos
                                 </span>
                             </div>
-                            <h1 className="text-5xl md:text-6xl font-[Cinzel] text-white font-bold leading-[1.1] tracking-tight">
-                                Sorprende en <br/>tu <span className="text-[#d4a853] italic font-light">Cumpleaños</span>
+                            <h1 className="text-4xl sm:text-5xl md:text-6xl font-[Cinzel] text-white font-bold leading-[1.1] tracking-tight">
+                                Mago para Cumpleaños de <br/><span className="text-[#d4a853] italic font-light">Adultos en Madrid</span>
                             </h1>
                             <p className="text-lg text-slate-300 leading-relaxed font-light">
                                 Hacerse mayor no significa perder la capacidad de asombro. Regala una experiencia y un día inolvidable con ilusionismo moderno y magia a domicilio en Madrid.

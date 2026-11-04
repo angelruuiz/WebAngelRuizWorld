@@ -65,7 +65,7 @@ Si has reservado una terraza, un reservado en un restaurante de moda o una azote
 Si has optado por una comida o cena formal con amigos íntimos, la magia puede desarrollarse entre plato y plato (magia entre mesas) y culminar con un **pase de salón exclusivo de 35-45 minutos** durante los postres o cafés. Todo el grupo participa a la vez, creando una energía colectiva vibrante. Conoce más en [magia en restaurantes para cumpleaños de adultos en Madrid](/blog/magia-restaurante-cumpleanos-adultos-madrid).
 
 ### Fiesta en Chalet o Finca Privada
-Si cuentas con jardín o chalet en municipios como **[Pozuelo](/mago-pozuelo)**, **[Boadilla del Monte](/mago-boadilla-del-monte)**, **[Majadahonda](/mago-majadahonda)** o **[Las Rozas](/mago-las-rozas)**, la experiencia privada se siente como un club secreto de ilusionismo. Puedes descubrir más opciones en nuestra guía de [mago en casa para cenas privadas y fiestas VIP](/blog/mago-en-casa-cenas-privadas-madrid-experiencia-vip).
+Si cuentas con jardín o chalet en municipios como **[Pozuelo](/mago-pozuelo)**, **[Boadilla del Monte](/mago-boadilla)**, **[Majadahonda](/mago-majadahonda)** o **[Las Rozas](/mago-las-rozas)**, la experiencia privada se siente como un club secreto de ilusionismo. Puedes descubrir más opciones en nuestra guía de [mago en casa para cenas privadas y fiestas VIP](/blog/mago-en-casa-cenas-privadas-madrid-experiencia-vip).
 
 ---
 

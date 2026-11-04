@@ -158,7 +158,7 @@ export default function MobileBookingDrawer({ isOpen, onClose }) {
                             <div>
                                 <span className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-[0.18em] text-[#d4a853]">
                                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                                    Presupuesto Express · 2h
+                                    Presupuesto Express · &lt;1h
                                 </span>
                                 <h3 className="font-[Cinzel] text-xl font-bold text-white tracking-wide">
                                     {step === 1 ? '¿Qué evento organizas?' : 'Datos de Contacto'}

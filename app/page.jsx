@@ -6,14 +6,14 @@ import ChristmasUrgencyBanner from '@/components/ChristmasUrgencyBanner';
 
 export const metadata = {
     title: { absolute: 'Mago en Madrid | Ángel Ruiz · Bodas y Empresas' },
-    description: '¿Quieres un evento del que todos sigan hablando? Ilusionismo de autor y magia de cerca en Madrid. Presupuesto express en 2h.',
+    description: '¿Quieres un evento del que todos sigan hablando? Ilusionismo de autor y magia de cerca en Madrid. Presupuesto express en menos de 1h.',
     alternates: {
         canonical: 'https://angelruiz.world',
     },
     openGraph: {
         url: 'https://angelruiz.world',
         title: 'Mago en Madrid | Ángel Ruiz · Bodas y Empresas',
-        description: '¿Quieres un evento del que todos sigan hablando? Ilusionismo de autor y magia de cerca en Madrid. Presupuesto express en 2h.',
+        description: '¿Quieres un evento del que todos sigan hablando? Ilusionismo de autor y magia de cerca en Madrid. Presupuesto express en menos de 1h.',
         siteName: 'Ángel Ruiz | Mago e Ilusionista',
         locale: 'es_ES',
         type: 'website',
@@ -27,7 +27,7 @@ export const metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Mago en Madrid | Ángel Ruiz · Bodas y Empresas',
-        description: '¿Quieres un evento del que todos sigan hablando? Ilusionismo de autor y magia de cerca en Madrid. Presupuesto express en 2h.',
+        description: '¿Quieres un evento del que todos sigan hablando? Ilusionismo de autor y magia de cerca en Madrid. Presupuesto express en menos de 1h.',
         images: ['/images/foto-bio.webp'],
         site: '@angellruuizz',
         creator: '@angellruuizz',
@@ -192,7 +192,7 @@ const SEOContent = () => {
                                     En el sector de los eventos, la diferencia entre un entretenimiento genérico y una experiencia verdaderamente inolvidable radica en la profesionalidad del ilusionista. Mi trayectoria me permite no solo ejecutar ilusiones imposibles, sino leer al público, gestionar el ritmo del evento e interactuar con la máxima elegancia.
                                 </p>
                                 <p>
-                                    Ya sea en una <Link href="/particulares/bodas" className="text-amber-400 hover:underline inline-block font-semibold">boda donde conectar con familias diversas</Link>, o en un <Link href="/empresas" className="text-amber-400 hover:underline inline-block font-semibold">evento corporativo que representa la imagen de tu marca</Link>, la profesionalidad está garantizada. Más de 10 años de experiencia y +50 reseñas de 5 estrellas avalan mi compromiso con el asombro de calidad.
+                                    Ya sea en una <Link href="/particulares/bodas" className="text-amber-400 hover:underline inline-block font-semibold">boda donde conectar con familias diversas</Link>, o en un <Link href="/empresas" className="text-amber-400 hover:underline inline-block font-semibold">evento corporativo que representa la imagen de tu marca</Link>, la profesionalidad está garantizada. Más de 10 años de experiencia y +60 reseñas de 5 estrellas avalan mi compromiso con el asombro de calidad.
                                 </p>
                             </div>
                         </PerpetualCard>
@@ -202,7 +202,7 @@ const SEOContent = () => {
                             <div>
                                 <h2 className="text-xl sm:text-2xl font-[Cinzel] text-white mb-4 uppercase tracking-wider">¿Hablamos del asombro que merece tu próximo evento?</h2>
                                 <p className="text-xs sm:text-sm md:text-base text-gold-50/90 leading-relaxed mb-6">
-                                    Cada actuación es personalizada. No busco simplemente "hacer trucos", busco entender la dinámica de tu celebración para aportar el máximo valor posible a través del <strong>ilusionismo profesional</strong>. <u>La magia es el lenguaje universal del asombro</u>, déjame hablarlo para tus invitados. Si quieres consultar tarifas, visita la sección para <Link href="/contratar-mago-madrid" className="text-amber-400 hover:underline font-bold">contratar mago Madrid</Link>.
+                                    Cada actuación es personalizada. No busco simplemente "hacer trucos", busco entender la dinámica de tu celebración para aportar el máximo valor posible a través del <strong>ilusionismo profesional</strong>. <u>La magia es el lenguaje universal del asombro</u>, déjame hablarlo para tus invitados como <Link href="/mago-madrid" className="text-amber-400 hover:underline font-bold">mago en Madrid</Link>. Si quieres consultar tarifas, visita la sección para <Link href="/contratar-mago-madrid" className="text-amber-400 hover:underline font-bold">contratar mago Madrid</Link>.
                                 </p>
                             </div>
                             <Link href="/mago-sierra-madrid" className="group inline-block bg-white text-surface-0 font-bold px-6 sm:px-8 py-3.5 sm:py-4 rounded-full hover:bg-amber-400 hover:scale-[1.02] active:scale-[0.97] transition-all uppercase tracking-wider text-xs">

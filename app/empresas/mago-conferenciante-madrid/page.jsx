@@ -267,7 +267,7 @@ export default function Page() {
           </h2>
           <p className="text-base text-slate-300 mb-8 max-w-xl mx-auto font-light">Solicita dossier de conferencias y disponibilidad de agenda para congresos y eventos corporativos en Madrid.</p>
           <div className="mb-10 text-left">
-            <CorporateInlineForm title="Solicitar Ponencia o Conferencia B2B" subtitle="Dossier técnico y cotización en menos de 24h" />
+            <CorporateInlineForm title="Solicitar Ponencia o Conferencia B2B" subtitle="Dossier técnico y cotización en menos de 1h" />
           </div>
         </div>
       </section>

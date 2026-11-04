@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Sparkles, CheckCircle2, UserIcon, Phone, Mail, Calendar, MessageSquare, WhatsApp } from './Icons';
 import { trackEvent } from '../lib/tracker';
 
-export default function CorporateInlineForm({ title = "Solicitar Propuesta para Empresas", subtitle = "Respuesta y presupuesto personalizado en menos de 24h" }) {
+export default function CorporateInlineForm({ title = "Solicitar Propuesta para Empresas", subtitle = "Respuesta y presupuesto personalizado en menos de 1h" }) {
     const [status, setStatus] = useState("idle");
     const [dateMin, setDateMin] = useState("");
 
@@ -63,7 +63,7 @@ export default function CorporateInlineForm({ title = "Solicitar Propuesta para 
                 </div>
                 <h3 className="text-2xl font-[Cinzel] font-bold text-white mb-2 tracking-wide">¡Solicitud de Empresa Recibida!</h3>
                 <p className="text-slate-300 text-sm max-w-md mx-auto leading-relaxed">
-                    Hemos recibido los datos de tu evento corporativo. En menos de 24 horas te enviaremos una propuesta técnica y económica adaptada a los objetivos de tu marca.
+                    Hemos recibido los datos de tu evento corporativo. En menos de 1 hora te enviaremos una propuesta técnica y económica adaptada a los objetivos de tu marca.
                 </p>
                 <button
                     onClick={() => setStatus("idle")}

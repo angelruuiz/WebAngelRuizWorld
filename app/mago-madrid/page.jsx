@@ -10,7 +10,7 @@ const BioCarousel = dynamic(() => import('@/components/BioCarousel'), { ssr: fal
 
 export const metadata = {
     title: { absolute: 'Mago en Madrid Profesional | Bodas y Empresas · Ángel Ruiz' },
-    description: '¿Buscas contratar un mago en Madrid? Ilusionismo de autor y magia de cerca a centímetros de tus ojos para bodas y empresas. Alumno de DaOrtiz. Presupuesto en 2h.',
+    description: '¿Buscas mago en Madrid? Ilusionismo de autor y magia de cerca para bodas y empresas. Formado con DaOrtiz. Presupuesto express en menos de 1h.',
     keywords: ['mago en madrid', 'mago profesional madrid', 'ilusionista madrid', 'mago para eventos madrid', 'contratar mago madrid', 'mago madrid bodas', 'mago madrid empresas', 'show magia madrid', 'mago profesional en madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/mago-madrid',
@@ -24,7 +24,7 @@ export const metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Mago en Madrid Profesional | Bodas y Empresas · Ángel Ruiz',
-        description: '¿Buscas un espectáculo que rompa esquemas? Ilusionismo de autor y magia de cerca a centímetros de tus ojos en Madrid. Alumno de DaOrtiz. Presupuesto en 2h.',
+        description: '¿Buscas mago en Madrid? Ilusionismo de autor y magia de cerca para bodas y empresas. Formado con DaOrtiz. Presupuesto express en menos de 1h.',
         images: ['/images/foto-bio.webp']
     }
 };
@@ -139,7 +139,7 @@ export default function MagoMadridPage() {
                                 </p>
 
                                 <p className="bg-white/5 p-4 rounded-lg italic text-slate-300">
-                                    "+50 reseñas de 5 estrellas en Google. Empresas como Movistar Estudiantes y colegios oficiales ya confían en mi magia para sus eventos corporativos."
+                                    "+60 reseñas de 5 estrellas en Google. Empresas como Movistar Estudiantes y colegios oficiales ya confían en mi magia para sus eventos corporativos."
                                 </p>
                             </div>
 

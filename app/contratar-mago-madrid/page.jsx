@@ -10,7 +10,7 @@ const ParticleBackground = dynamic(() => import('@/components/VisualEffects').th
 
 export const metadata = {
     title: { absolute: 'Contratar Mago en Madrid | Precios Directos y Tarifas 2026' },
-    description: '¿Buscas contratar un mago en Madrid? Tarifas reales desde 300€ sin agencias ni comisiones para bodas, empresas y eventos. Presupuesto express en 2h.',
+    description: '¿Buscas contratar un mago en Madrid? Tarifas reales desde 300€ sin agencias ni comisiones para bodas, empresas y eventos. Presupuesto express en menos de 1h.',
     keywords: ['contratar mago madrid', 'contratar mago madrid precio', 'precio mago madrid', 'cuanto cuesta un mago en madrid', 'mago profesional madrid', 'ilusionista madrid precios', 'mago para eventos madrid', 'mago para fiestas privadas madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/contratar-mago-madrid',
@@ -23,7 +23,7 @@ export const metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Contratar Mago en Madrid | Precios Directos y Tarifas 2026',
-        description: '¿Buscas contratar un mago en Madrid? Tarifas reales desde 300€ sin comisiones para bodas, empresas y eventos. Presupuesto express en 2h.',
+        description: '¿Buscas contratar un mago en Madrid? Tarifas reales desde 300€ sin comisiones para bodas, empresas y eventos. Presupuesto express en menos de 1h.',
         images: ['/images/foto-bio.webp']
     }
 };
@@ -340,7 +340,7 @@ export default function ContratarMagoMadridPage() {
                                         </tr>
                                         <tr className="border-t border-white/5 bg-white/[0.02]">
                                             <td className="px-5 py-3 text-white font-medium">Velocidad de respuesta</td>
-                                            <td className="px-5 py-3 text-emerald-400">Presupuesto en menos de 2h</td>
+                                            <td className="px-5 py-3 text-emerald-400">Presupuesto en menos de 1h</td>
                                             <td className="px-5 py-3">24-72h habitual</td>
                                         </tr>
                                         <tr className="border-t border-white/5">

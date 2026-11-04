@@ -44,3 +44,7 @@ angelruiz.world-Performance-on-Search-*/
 # typescript
 *.tsbuildinfo
 
+# editor
+.vscode/
+.cursor/
+

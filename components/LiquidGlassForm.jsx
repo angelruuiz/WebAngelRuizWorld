@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { UserIcon, Phone, Mail, Calendar, MessageSquare, Sparkles, CheckCircle2, WhatsApp } from './Icons';
 import { trackEvent } from '../lib/tracker';
 
-export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromiso", subtitle = "Respuesta inmediata en menos de 24h" }) {
+export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromiso", subtitle = "Respuesta inmediata en menos de 1h" }) {
     const [status, setStatus] = useState("idle");
     const [dateMin, setDateMin] = useState("");
 

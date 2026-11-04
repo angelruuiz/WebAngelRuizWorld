@@ -97,7 +97,7 @@ export default function WhatsAppButton() {
                 {/* Micro-píldora visible en desktop y hover */}
                 <span className="hidden md:flex items-center absolute right-[4.25rem] bg-slate-950/95 text-white text-xs font-semibold px-3.5 py-1.5 rounded-full whitespace-nowrap border border-emerald-500/30 shadow-2xl backdrop-blur-md transition-all duration-200 group-hover:border-emerald-400/60">
                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse mr-2 inline-block" />
-                    <span>WhatsApp Express <strong className="text-emerald-400 font-bold">(&lt;2h)</strong></span>
+                    <span>WhatsApp Express <strong className="text-emerald-400 font-bold">(&lt;1h)</strong></span>
                 </span>
             </a>
         </aside>

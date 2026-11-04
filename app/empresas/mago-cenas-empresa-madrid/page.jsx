@@ -11,8 +11,8 @@ const ParticleBackground = dynamic(() => import('@/components/VisualEffects').th
 const CorporateInlineForm = dynamic(() => import('@/components/CorporateInlineForm'), { ssr: false });
 
 export const metadata = {
-  title: { absolute: 'Mago para Cenas de Empresa en Madrid | Navidad y Eventos Corporativos (500€–750€)' },
-  description: 'Mago profesional para cenas de empresa y fiestas de Navidad en Madrid. Magia de cerca cóctel y sobremesa que rompe el hielo y une al equipo. Fechas Q4 limitadas. Presupuesto express en 2h.',
+  title: { absolute: 'Mago para Cenas de Empresa en Madrid | Navidad (500€–750€)' },
+  description: 'Mago para cenas de empresa y Navidad en Madrid. Magia de cerca en cóctel y sobremesa. Desde 500€ sin agencias. Presupuesto express en menos de 1h.',
   keywords: ['mago para cenas de empresa', 'mago para cenas de empresa en madrid', 'mago cenas empresa madrid', 'mago para cena empresa madrid', 'mago cena navidad empresa madrid', 'contratar mago cena empresa', 'entretenimiento cenas empresa madrid', 'mago corporativo madrid', 'animacion cenas empresa madrid', 'mago para eventos de empresa madrid', 'cenas de empresa originales madrid', 'cena de navidad empresa madrid', 'cenas de empresa divertidas madrid'],
   alternates: {
     canonical: 'https://angelruiz.world/empresas/mago-cenas-empresa-madrid',
@@ -20,13 +20,13 @@ export const metadata = {
   openGraph: {
     url: 'https://angelruiz.world/empresas/mago-cenas-empresa-madrid',
     title: 'Mago para Cenas de Empresa en Madrid | Navidad y Fin de Año (500€–750€)',
-    description: 'Transforma la cena de empresa o fiesta de Navidad en Madrid en un evento memorable con magia de cerca corporativa. Fechas Q4 limitadas. Pide presupuesto en 2h.',
+    description: 'Transforma la cena de empresa o fiesta de Navidad en Madrid con magia de cerca corporativa. Fechas limitadas. Presupuesto express en menos de 1h.',
     images: [{ url: '/images/evento-angel-ruiz-magia.webp', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Mago para Cenas de Empresa en Madrid | Navidad y Fin de Año (500€–750€)',
-    description: 'Magia de cerca personalizada para cenas de empresa y eventos de Navidad en Madrid. Presupuesto express en 2h.',
+    description: 'Magia de cerca personalizada para cenas de empresa y eventos de Navidad en Madrid. Presupuesto express en menos de 1h.',
     images: ['/images/evento-angel-ruiz-magia.webp'],
   },
 };
@@ -117,7 +117,7 @@ export default function Page() {
               className="px-6 py-3.5 rounded-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-emerald-500/25 active:scale-95 transition-all"
             >
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
-              <span>Consultar Disponibilidad WhatsApp (&lt;15 min)</span>
+              <span>Consultar Disponibilidad WhatsApp (&lt;1h)</span>
             </a>
             <a
               href="#presupuesto-empresa"
@@ -272,7 +272,7 @@ export default function Page() {
               <div><strong className="text-white">Formatos:</strong> Cóctel Networking, Pases por Mesa y Show de Sobremesa.</div>
               <div><strong className="text-white">Duración:</strong> 60 a 90 minutos adaptables al ritmo del banquete.</div>
               <div><strong className="text-white">Zona de Cobertura:</strong> Madrid Capital y municipios (Las Rozas, Pozuelo, Alcobendas).</div>
-              <div><strong className="text-white">Presupuesto Express:</strong> Respuesta formal por WhatsApp en &lt;15 min o email en &lt;2h.</div>
+              <div><strong className="text-white">Presupuesto Express:</strong> Respuesta formal por WhatsApp o email en menos de 1h.</div>
             </div>
 
             {/* Tabla Comparativa de Formatos para Cenas */}
@@ -331,10 +331,10 @@ export default function Page() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/5 border border-amber-400/30 text-amber-300 text-xs font-semibold hover:bg-amber-400/10 hover:border-amber-400/60 transition-colors w-fit"
-                aria-label="Ver 4.9 estrellas en Google Reviews (+50 opiniones reales) en Google Maps"
+                aria-label="Ver 4.9 estrellas en Google Reviews (+60 opiniones reales) en Google Maps"
               >
                 <span className="text-amber-400 font-bold">4.9 ★</span>
-                <span>en Google Reviews (+50 opiniones reales)</span>
+                <span>en Google Reviews (+60 opiniones reales)</span>
                 <span className="text-slate-400 text-[10px]">↗</span>
               </a>
             </div>
@@ -400,7 +400,7 @@ export default function Page() {
           </h2>
           <p className="text-base text-slate-300 mb-8 max-w-xl mx-auto font-light">Solicita propuesta personalizada y consulta disponibilidad de fechas para tu evento corporativo en Madrid.</p>
           <div className="mb-10 text-left">
-            <CorporateInlineForm title="Solicitar Propuesta para Cena de Empresa" subtitle="Presupuesto a medida y disponibilidad en menos de 24h" />
+            <CorporateInlineForm title="Solicitar Propuesta para Cena de Empresa" subtitle="Presupuesto a medida y disponibilidad en menos de 1h" />
           </div>
         </div>
       </section>

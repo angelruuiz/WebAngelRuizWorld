@@ -15,8 +15,14 @@ export const metadata = {
   creator: 'Ángel Ruiz | Mago e Ilusionista',
   publisher: 'Ángel Ruiz | Mago e Ilusionista',
   icons: {
-    icon: '/icon.webp',
-    apple: '/icon.webp',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.webp', type: 'image/webp', sizes: '192x192' }
+    ],
+    shortcut: '/favicon.ico',
+    apple: [
+      { url: '/icon.webp', sizes: '192x192', type: 'image/webp' }
+    ],
   },
   openGraph: {
     type: 'website',

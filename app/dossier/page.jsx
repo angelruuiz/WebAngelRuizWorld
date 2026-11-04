@@ -54,7 +54,7 @@ const slides = [
         title: 'Proceso de Contratación',
         steps: [
             { num: '01', title: 'Contacto', desc: 'Cuéntame tu evento sin compromiso' },
-            { num: '02', title: 'Propuesta', desc: 'Presupuesto cerrado en 24h' },
+            { num: '02', title: 'Propuesta', desc: 'Presupuesto cerrado en <1h' },
             { num: '03', title: 'Contrato', desc: 'Confirmación formal y señal' },
             { num: '04', title: 'Briefing', desc: 'Coordinación previa al evento' },
             { num: '05', title: 'El Show', desc: 'Solo queda disfrutar' }
@@ -87,7 +87,7 @@ const slides = [
         type: 'contact',
         label: '¿Hablamos?',
         title: 'Hagamos Algo Imposible',
-        subtitle: 'Respuesta en menos de 24 horas · Sin compromiso',
+        subtitle: 'Respuesta en menos de 1h · Sin compromiso',
         links: [
             { label: 'Teléfono', val: '+34 648 05 56 36', icon: Phone, href: 'tel:+34648055636' },
             { label: 'Email', val: 'info@angelruiz.world', icon: Mail, href: 'mailto:info@angelruiz.world' },

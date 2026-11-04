@@ -284,7 +284,7 @@ export default function LocationPageTemplate({ location, allLocations }) {
                                     Tarifas y Precios Oficiales 2026 sin Comisiones
                                 </h3>
                                 <p className="text-[11px] text-slate-400 leading-relaxed">
-                                    Guía de precios directos sin agencias intermediarias: presupuestos desde 300€ en 2h.
+                                    Guía de precios directos sin agencias intermediarias: presupuestos desde 300€ en menos de 1h.
                                 </p>
                             </Link>
                         </div>

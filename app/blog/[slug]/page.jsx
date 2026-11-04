@@ -332,7 +332,7 @@ export default async function BlogPost({ params }) {
               className="px-8 py-4 bg-[#25D366] hover:bg-[#20ba5a] text-white font-black uppercase tracking-wider text-xs md:text-sm hover:scale-105 transition-all rounded-full flex items-center gap-2 shadow-xl shadow-green-500/25"
             >
               <WhatsApp className="w-5 h-5" />
-              WhatsApp Directo (Respuesta &lt;2h)
+              WhatsApp Directo (Respuesta &lt;1h)
             </a>
             <Link 
               href="/contratar-mago-madrid" 

@@ -294,6 +294,9 @@ export default function MagoCloseUpMadridPage() {
                                 <p className="text-slate-400 leading-relaxed mb-8">
                                     El uso magistral de la misdirection, el timing y el forzaje psicológico crean la ilusión de libre albedrío. Tú tomas las decisiones, pero el mago ha escrito el final.
                                 </p>
+                                <p className="text-slate-300 text-sm leading-relaxed mb-6">
+                                    Conoce en detalle mi propuesta especializada de <Link href="/mago-cartomagia-madrid" className="text-amber-400 hover:underline font-semibold">cartomagia en Madrid</Link> para bodas y eventos privados.
+                                </p>
                                 
                                 <div className="active:scale-[0.97] transition-transform duration-200 origin-left inline-flex">
                                     <ContactButtonClient label="Reservar Exhibición" />
@@ -365,7 +368,7 @@ export default function MagoCloseUpMadridPage() {
                                     <p className="text-slate-400 text-sm">Años de perfeccionamiento en la disciplina del close-up.</p>
                                 </div>
                                 <div>
-                                    <p className="text-4xl md:text-5xl font-[Cinzel] text-white font-bold mb-2">+50</p>
+                                    <p className="text-4xl md:text-5xl font-[Cinzel] text-white font-bold mb-2">+60</p>
                                     <p className="text-slate-400 text-sm">Eventos corporativos y fiestas privadas en Madrid.</p>
                                 </div>
                             </div>

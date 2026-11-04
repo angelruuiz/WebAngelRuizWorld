@@ -48,7 +48,7 @@ export default function ChristmasUrgencyBanner({
               <Calendar className="w-3.5 h-3.5 text-amber-400" /> Formatos: Cóctel & Mesa en Mesa
             </span>
             <span className="hidden sm:inline text-amber-500/40">•</span>
-            <span>Respuesta en &lt;15 minutos</span>
+            <span>Respuesta en &lt;1h</span>
             <span className="hidden sm:inline text-amber-500/40">•</span>
             <span>Sin agencias ni intermediarios</span>
           </div>

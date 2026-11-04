@@ -351,10 +351,10 @@ export default function EmpresasPage() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/5 border border-amber-400/30 text-amber-300 text-xs font-semibold hover:bg-amber-400/10 hover:border-amber-400/60 transition-colors w-fit"
-                                        aria-label="Ver 4.9 estrellas en Google Reviews (+50 opiniones reales) en Google Maps"
+                                        aria-label="Ver 4.9 estrellas en Google Reviews (+60 opiniones reales) en Google Maps"
                                     >
                                         <span className="text-amber-400 font-bold">4.9 ★</span>
-                                        <span>en Google Reviews (+50 opiniones reales)</span>
+                                        <span>en Google Reviews (+60 opiniones reales)</span>
                                         <span className="text-slate-400 text-[10px]">↗</span>
                                     </a>
                                 </div>

@@ -51,6 +51,13 @@ export default function sitemap() {
       images: ['https://angelruiz.world/images/ilusionista-madrid-closeup.webp'],
     },
     {
+      url: 'https://angelruiz.world/mago-cartomagia-madrid',
+      lastModified: lastMod,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+      images: ['https://angelruiz.world/images/foto-bio.webp'],
+    },
+    {
       url: 'https://angelruiz.world/contratar-mago-madrid',
       lastModified: lastMod,
       changeFrequency: 'weekly',
