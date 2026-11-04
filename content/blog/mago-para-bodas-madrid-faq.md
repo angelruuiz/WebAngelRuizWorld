@@ -114,3 +114,6 @@ Si te ha parecido interesante, quizás te interese seguir leyendo estos artícul
 
 
 ¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.
+
+
+* **Homenajes familiares:** Si celebráis un aniversario de muchos años de amor, lee sobre [mago para bodas de oro y plata en Madrid](/blog/mago-bodas-de-oro-y-plata-madrid-aniversarios).

@@ -92,3 +92,6 @@ Aunque los Kick-Offs tienen lugar en enero y febrero, las empresas con mejores r
 Si quieres que la convención de arranque de año de tu empresa sea un punto de inflexión cargado de entusiasmo y cohesión, [ponte en contacto directamente con Ángel Ruiz](/contratar-mago-madrid) para diseñar una intervención personalizada que impulse a tu equipo hacia sus mayores éxitos.
 
 > **Cenas y cierres de jornada:** Si tras las sesiones de trabajo celebráis una velada de distensión, conoce el show de [mago para cenas de empresa](/empresas/mago-cenas-empresa-madrid).
+
+
+* **Eventos a gran escala:** Descubre también el impacto de la magia en [convenciones, congresos y simposios en Madrid](/blog/mago-convenciones-congresos-simposios-madrid).

@@ -65,3 +65,6 @@ Esto garantiza el cumplimiento de las normativas de seguridad corporativa y elim
 ## 4. Reserva y Consultoría para tu Evento en Madrid
 
 Si organizas una convención anual, un kick-off o una [cena de empresa en Madrid](/empresas/mago-cenas-empresa-madrid) y buscas una experiencia que una asombro de alto nivel e innovación digital, [solicita información directa sin agencias](/empresas) y diseñaremos una intervención a medida para tu equipo.
+
+
+* **Eventos de marca:** Combina la tecnología con la presentación de novedades en nuestra guía de [mago para inauguraciones y lanzamientos de producto](/blog/mago-inauguraciones-lanzamientos-producto-madrid).

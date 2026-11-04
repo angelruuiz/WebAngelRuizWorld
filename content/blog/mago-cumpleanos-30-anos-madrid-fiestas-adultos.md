@@ -104,3 +104,6 @@ Los fines de semana (viernes noche y sábados) son las fechas más cotizadas del
 **[Solicita información y reserva tu fecha para 30 cumpleaños (300€)](/contratar-mago-madrid)** y hablemos de cómo hacer de tu fiesta algo verdaderamente único.
 
 > **Planes de boda:** Para aquellos que dan el siguiente paso y planean su enlace matrimonial, descubrid cómo transformar el cóctel de bienvenida con un [mago profesional de bodas en Madrid](/particulares/bodas).
+
+
+* **Cambio de década:** Descubre cómo organizamos también la magia en [cumpleaños de 40 años para adultos](/blog/mago-cumpleanos-40-anos-madrid-ideas).

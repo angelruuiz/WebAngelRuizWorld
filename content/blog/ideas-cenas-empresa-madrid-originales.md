@@ -5,7 +5,7 @@ date: '2026-08-31'
 excerpt: >-
   Guía de los mejores restaurantes, fincas y espacios para cenas de empresa en Madrid 2026. Consejos de reserva y animación con magia corporativa de autor.
 author: Ángel Ruiz
-image: /images/mago-empresas-madrid-angel-ruiz.svg
+image: /images/mago-empresas-madrid-angel-ruiz.webp
 tags:
   - Restaurantes Madrid
   - Espacios Eventos
@@ -130,3 +130,9 @@ Sí, se emite factura oficial con IVA desglosado para deducción fiscal en la co
 * [Servicio Oficial de Mago para Cenas de Empresa en Madrid](/empresas/mago-cenas-empresa-madrid)
 
 ¿Tienes ya seleccionado el espacio o restaurante para tu evento? **[Solicita presupuesto directo para tu cena de empresa](/contratar-mago-madrid)** y asegura la fecha en el calendario antes de que se completen los días principales de la temporada.
+
+
+* **Formatos de animación:** Descubre alternativas novedosas en [cenas de empresa originales en Madrid con magia](/blog/cenas-empresa-originales-madrid-ideas-magia).
+
+
+* **Planes diferentes para tu empresa:** Inspírate con estas [cenas de empresa originales en Madrid con magia](/blog/cenas-empresa-originales-madrid-ideas-magia).

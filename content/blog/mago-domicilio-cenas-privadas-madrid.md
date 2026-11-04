@@ -89,3 +89,6 @@ Si quieres sorprender a tus invitados con una experiencia que recordarán durant
 Para cenas y veladas exclusivas en chalets, consulta nuestra cobertura de [mago en la Sierra de Madrid](/mago-sierra-madrid), [mago en Majadahonda](/mago-majadahonda), [mago en Boadilla del Monte](/mago-boadilla) y la [guía de precios oficial](/contratar-mago-madrid).
 
 > **Cenas ejecutivas y de negocios:** Para reuniones profesionales o encuentros con socios y directivos fuera de la oficina, consulta el servicio exclusivo de [ilusionismo para cenas de empresa y negocios en Madrid](/empresas/mago-cenas-empresa-madrid).
+
+
+* **Maridajes mágicos:** Conoce más sobre este formato en nuestro reportaje sobre [magia y experiencias gastronómicas clandestinas en Madrid](/blog/magia-experiencias-gastronomicas-cenas-clandestinas-madrid).

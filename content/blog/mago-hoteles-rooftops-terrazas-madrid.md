@@ -62,3 +62,6 @@ El formato close-up se adapta con éxito a los principales rooftops y hoteles de
 ¿Quieres elevar el nivel de tu terraza o evento en hotel? [Contacta conmigo para consultar fechas y disponibilidad](/contratar-mago-madrid).
 
 > **Bodas en espacios singulares:** Los rooftops y hoteles boutique son perfectos para celebraciones nupciales íntimas; conoce la magia para [bodas en hoteles y fincas de Madrid](/particulares/bodas).
+
+
+* **Detalles únicos:** Si quieres regalar un instante irrepetible a los anfitriones, consulta nuestra propuesta de [regalo original con experiencias de magia en Madrid](/blog/regalo-original-experiencia-magia-madrid).

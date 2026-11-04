@@ -124,3 +124,6 @@ Tanto si buscas las risas y el asombro dinámico de la **magia de cerca**, como 
 - [Cómo Elegir Mago para tu Evento: Errores a Evitar](/blog/como-elegir-mago-evento-madrid-errores)
 - [Guía Definitiva para Contratar un Mago en Madrid](/blog/guia-contratar-mago-madrid-2026)
 - [¿Cuánto Cuesta un [Mago en Madrid](/mago-madrid)?](/blog/cuanto-cuesta-mago-madrid-precios)
+
+
+* **Ilusionismo corporativo:** Explora las aplicaciones del mentalismo empresarial en nuestra guía de [mentalista en Madrid para eventos de empresa](/blog/mago-mentalista-madrid-eventos-corporativos).

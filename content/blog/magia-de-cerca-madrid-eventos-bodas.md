@@ -89,4 +89,5 @@ Si te ha parecido interesante, quizás te interese seguir leyendo estos artícul
 
 - [¿Cuánto Cuesta un [Mago en Madrid](/mago-madrid)? [Tarifas y Precios 2026]](/blog/cuanto-cuesta-mago-madrid-precios)
 - [Cómo Elegir Mago para tu Evento en Madrid (Y Errores a Evitar)](/blog/como-elegir-mago-evento-madrid-errores)
+- [Magia de Cerca para Eventos Exclusivos en Madrid: Cócteles VIP y Celebraciones](/blog/mago-magia-de-cerca-eventos-exclusivos-madrid)
 - [Magia de Cerca vs Magia de Escenario: ¿Qué formato elegir para tu evento?](/blog/magia-de-cerca-vs-escenario)

@@ -59,3 +59,6 @@ Frecuentamos los mejores enclaves gastronómicos y fincas familiares de la Comun
 Si deseas regalar una sorpresa inolvidable a tus padres o abuelos en sus Bodas de Plata u Oro en Madrid, consulta nuestras propuestas en [mago para eventos familiares y particulares](/particulares/eventos) o infórmate sobre nuestras [tarifas y contratación](/contratar-mago-madrid).
 
 > **Celebraciones nupciales:** Si además de aniversarios estás organizando un enlace matrimonial en una finca o jardín, explora todos los secretos de un [mago para bodas en Madrid](/particulares/bodas) y cómo dinamizar el cóctel nupcial.
+
+
+* **Temporada fría:** Si la celebración coincide con los meses de otoño o invierno, revisa los consejos de [magia para bodas de otoño e invierno en Madrid](/blog/mago-para-bodas-otono-invierno-madrid).

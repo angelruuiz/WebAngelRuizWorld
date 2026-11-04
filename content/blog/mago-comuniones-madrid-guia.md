@@ -85,3 +85,6 @@ Si te ha parecido interesante, quizás te interese seguir leyendo estos artícul
 ¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.
 
 > **Magia en bodas:** Muchos de los anfitriones que contratan magia para eventos familiares confían también en mi espectáculo como [mago de bodas en Madrid](/particulares/bodas) para sus celebraciones más distinguidas.
+
+
+* **Tendencias y tarifas:** Planifica la celebración familiar con nuestra [guía de precios para animación de comuniones en Madrid 2027](/blog/animacion-comuniones-madrid-2027-guia-precios).

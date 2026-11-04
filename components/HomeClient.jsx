@@ -103,7 +103,7 @@ const HeroClient = ({ onOpenVideo, onOpenContact }) => {
                                 onClick={onOpenVideo}
                                 className="inline-flex items-center px-5 py-2.5 rounded-full bg-slate-950/80 hover:bg-[#d4a853]/15 border border-[#d4a853]/40 hover:border-[#d4a853] text-[#d4a853] hover:text-white transition-all duration-300 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.5),0_0_15px_rgba(212,168,83,0.1)] active:scale-95 cursor-pointer text-xs sm:text-sm font-semibold tracking-wider uppercase"
                             >
-                                <span>Ver Show en Directo <span className="opacity-70 text-xs font-normal normal-case">(1 min)</span></span>
+                                <span>Ver Show en Directo <span className="text-amber-200/90 text-xs font-normal normal-case">(1 min)</span></span>
                             </button>
                         </div>
                     </div>

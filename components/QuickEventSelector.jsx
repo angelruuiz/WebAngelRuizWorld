@@ -77,7 +77,7 @@ export default function QuickEventSelector() {
             </div>
 
             {/* Micro-pista de deslizamiento táctil solo en móvil */}
-            <div className="sm:hidden flex items-center justify-center gap-1.5 text-[9px] text-slate-500 uppercase tracking-widest mt-1.5">
+            <div className="sm:hidden flex items-center justify-center gap-1.5 text-[9px] text-slate-400 uppercase tracking-widest mt-1.5">
                 <span>← Desliza para ver opciones →</span>
             </div>
         </div>

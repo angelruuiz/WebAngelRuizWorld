@@ -164,3 +164,9 @@ Si te casas próximamente en Madrid o en los alrededores y quieres asegurarte de
 - [Mago para Bodas en Madrid: La Guía Definitiva FAQ](/blog/mago-para-bodas-madrid-faq)
 - [¿Cuánto Cuesta un Mago para una Boda en Madrid?](/blog/cuanto-cuesta-mago-boda-madrid)
 - [Mejores Fincas para Bodas en Madrid donde Sorprender con Magia](/blog/mejores-fincas-bodas-madrid-magia)
+
+
+* **Magia en las mesas:** Además del aperitivo, descubre cómo amenizar los platos con [magia de sobremesa y banquete en bodas de Madrid](/blog/magia-banquete-sobremesa-boda-madrid).
+
+
+* **Ideas para el cóctel nupcial:** Descubre más propuestas en nuestra guía de [animación para cóctel de boda en Madrid](/blog/animacion-coctel-boda-madrid-ideas).

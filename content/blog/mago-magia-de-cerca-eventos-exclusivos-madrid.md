@@ -71,3 +71,6 @@ Mi base operativa en la zona noroeste me permite cubrir con total agilidad las p
 Para planificar la animación de tu próxima velada exclusiva en Madrid con trato directo y sin comisiones de agencia, [contacta a través de la web](/contacto) y recibirás una propuesta personalizada en menos de 2 horas.
 
 > **Magia de impacto para negocios:** En el ámbito corporativo, esta disciplina transforma las veladas de networking; descubre mi trabajo como [ilusionista en cenas de empresa de Madrid](/empresas/mago-cenas-empresa-madrid).
+
+
+* **Fiestas residenciales VIP:** Si buscas esta misma elegancia para tu chalet o urbanización, descubre los espectáculos de [magia en La Moraleja y Pozuelo](/blog/mago-fiestas-privadas-la-moraleja-pozuelo-madrid).

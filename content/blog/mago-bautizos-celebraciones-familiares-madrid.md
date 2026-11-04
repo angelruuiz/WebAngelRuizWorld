@@ -65,3 +65,6 @@ El proceso es muy sencillo y directo:
 [Solicita presupuesto express en menos de 2 horas](/contratar-mago-madrid) y garantiza el éxito de tu comida familiar.
 
 > **Grandes celebraciones de amor:** En celebraciones familiares de alto nivel, la elegancia de la magia crea momentos irrepetibles; echa un vistazo a los formatos de [espectáculos de magia para bodas en Madrid](/particulares/bodas).
+
+
+* **Homenajes y comuniones:** Consulta también nuestras guías de [magia para fiestas de jubilación](/blog/mago-fiesta-jubilacion-madrid) y [animación de comuniones en Madrid 2027](/blog/animacion-comuniones-madrid-2027-guia-precios).

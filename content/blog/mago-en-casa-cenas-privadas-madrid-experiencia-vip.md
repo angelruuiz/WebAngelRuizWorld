@@ -61,3 +61,6 @@ Lejos de los espectáculos convencionales en teatros lejanos, la magia en el sal
 Convierte tu salón en el escenario del mejor ilusionismo de Madrid. [Pide disponibilidad sin compromiso](/contratar-mago-madrid) o contáctanos por WhatsApp para reservar tu fecha en menos de 2 horas.
 
 > **Eventos corporativos selectos:** Del mismo modo que en residencias privadas, este formato de cercanía triunfa en encuentros ejecutivos; conoce mi enfoque de [magia para cenas corporativas y comidas de empresa](/empresas/mago-cenas-empresa-madrid).
+
+
+* **Cenas íntimas:** Consulta las características de nuestro formato de [mago a domicilio para cenas privadas](/blog/mago-domicilio-cenas-privadas-madrid).

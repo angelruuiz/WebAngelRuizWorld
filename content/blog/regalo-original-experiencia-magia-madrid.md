@@ -110,3 +110,6 @@ Si estás buscando esa alternativa perfecta a los regalos convencionales, si qui
 - [Mago para Fiestas Infantiles y Cumpleaños en Madrid](/blog/mago-fiestas-infantiles-cumpleanos-ninos-madrid)
 
 > **Celebraciones corporativas:** Una experiencia mágica también es el incentivo perfecto para celebrar los logros del equipo durante la [cena anual de empresa en Madrid](/empresas/mago-cenas-empresa-madrid).
+
+
+* **Ubicaciones con encanto:** Descubre cómo sorprender en terrazas y azoteas con nuestra guía de [mago en hoteles y rooftops de Madrid](/blog/mago-hoteles-rooftops-terrazas-madrid).

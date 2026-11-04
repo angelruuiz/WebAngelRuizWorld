@@ -89,3 +89,6 @@ Optimiza el presupuesto de tu próxima feria y destaca entre tus competidores re
 ¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.
 
 > **Cierre de acuerdos y cenas VIP:** Para cenas exclusivas con clientes potenciales, consulta la opción de [ilusionista para cenas de empresa](/empresas/mago-cenas-empresa-madrid).
+
+
+* **Cócteles feriales:** Dinamiza el ambiente tras las ponencias con [magia en cócteles de networking ferial](/blog/magia-coctel-networking-madrid-ferias-ifema).

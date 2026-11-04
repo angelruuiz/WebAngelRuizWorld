@@ -579,6 +579,18 @@ export default function BodasDetailPage() {
                                     <a href="/blog/ideas-originales-entretenimiento-bodas-madrid" className="inline-flex items-center text-[#d4a853] hover:underline text-sm font-light gap-2">
                                         Ideas de entretenimiento para bodas →
                                     </a>
+                                    <a href="/blog/como-sorprender-invitados-boda-coctel" className="inline-flex items-center text-[#d4a853] hover:underline text-sm font-light gap-2">
+                                        Cómo sorprender en el cóctel nupcial →
+                                    </a>
+                                    <a href="/blog/magia-banquete-sobremesa-boda-madrid" className="inline-flex items-center text-[#d4a853] hover:underline text-sm font-light gap-2">
+                                        Magia en banquete y sobremesa →
+                                    </a>
+                                    <a href="/blog/magia-bodas-sierra-madrid-fincas-coctel" className="inline-flex items-center text-[#d4a853] hover:underline text-sm font-light gap-2">
+                                        Bodas en fincas de la Sierra →
+                                    </a>
+                                    <a href="/blog/mago-para-bodas-otono-invierno-madrid" className="inline-flex items-center text-[#d4a853] hover:underline text-sm font-light gap-2">
+                                        Bodas en otoño e invierno →
+                                    </a>
                                     <a href="/valoraciones" className="inline-flex items-center text-[#d4a853] hover:underline text-sm font-light gap-2">
                                         Ver todas las valoraciones →
                                     </a>

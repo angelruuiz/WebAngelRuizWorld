@@ -75,3 +75,9 @@ Un presupuesto de 100€ suele esconder a aficionados sin experiencia que pueden
 ¿Quieres asegurar tu fecha con presupuesto cerrado hoy mismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contáctanos por WhatsApp para recibir respuesta en menos de 2 horas.
 
 > **Presupuestos para eventos destacados:** Si necesitas una estimación exacta de tarifas para la reunión anual de tu departamento o para tu gran día, consulta los formatos y tarifas de [mago para cenas de empresa](/empresas/mago-cenas-empresa-madrid) y [magia para bodas en Madrid](/particulares/bodas).
+
+
+* **Consejos y errores comunes:** Antes de tomar una decisión definitiva, lee nuestra [guía para contratar ilusionista en Madrid sin errores](/blog/guia-contratar-ilusionista-madrid-consejos-errores).
+
+
+* **Tiempos y duración:** Conoce cómo influye la duración en las tarifas leyendo [cuánto dura un show de magia en un evento](/blog/cuanto-dura-show-magia-evento-timing-madrid).

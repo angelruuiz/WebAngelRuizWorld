@@ -74,3 +74,6 @@ Para que puedas presupuestar con rigor, las tarifas estándar transparentes en l
 Para consultar disponibilidad de fechas y recibir un presupuesto formal en menos de 2 horas sin agencias intermediarias, [visita nuestra página de tarifas](/contratar-mago-madrid) o contáctanos por WhatsApp al **+34 648 055 636**.
 
 > **Guías especializadas por evento:** Para conocer en profundidad cómo organizar los tiempos durante el banquete o el cóctel, revisa nuestras páginas de [cenas de empresa con magia](/empresas/mago-cenas-empresa-madrid) y [entretenimiento para bodas en Madrid](/particulares/bodas).
+
+
+* **Espacio y logística:** Antes de firmar la contratación, revisa los [requisitos técnicos y de montaje para espectáculos de magia](/blog/requisitos-tecnicos-espacio-mago-boda-evento-madrid).

@@ -60,3 +60,6 @@ Contratar un [mago para celebraciones familiares y cumpleaños en Madrid](/parti
 Haz que sus 60 años sean el cumpleaños más especial de su vida. [Solicita disponibilidad sin compromiso](/contratar-mago-madrid) o contáctanos por WhatsApp para preparar la sorpresa en menos de 2 horas.
 
 > **Magia intergeneracional:** Para celebraciones donde se busca emocionar a todas las edades, conoce mi propuesta como [ilusionista para bodas en Madrid y Sierra](/particulares/bodas).
+
+
+* **Homenajes de despedida:** Si el homenajeado pasa a una nueva etapa vital, descubre la propuesta de [magia para fiestas de jubilación en Madrid](/blog/mago-fiesta-jubilacion-madrid).

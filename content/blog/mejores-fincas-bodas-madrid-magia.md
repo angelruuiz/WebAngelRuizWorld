@@ -94,3 +94,6 @@ Para exprimir al máximo el impacto del ilusionismo, el cronograma óptimo es el
 Las fincas de Madrid concentran sus bodas en los sábados de primavera, verano y otoño. Para mantener la máxima calidad artística, solo acepto una boda por día.
 
 **[Solicita presupuesto express para tu boda en finca (desde 450€)](/contratar-mago-madrid)** y comprueba si tu fecha aún está disponible en nuestro calendario.
+
+
+* **Fincas privadas en la Sierra:** Descubre las ventajas de organizar eventos con [magia en fincas y chalets de la Sierra de Madrid](/blog/mago-fiestas-fincas-chalets-sierra-madrid).

@@ -69,3 +69,6 @@ A continuación te explicamos las duraciones óptimas según el formato y cómo 
 Si estás planificando el horario de tu próximo evento en Madrid y quieres asesoramiento personalizado para encajar el entretenimiento a medida, consulta nuestra sección de [contratar mago en Madrid](/contratar-mago-madrid), explora el [show para empresas](/empresas) o conoce la trayectoria de [Ángel Ruiz García](/sobre-mi).
 
 > **Planificación de timings:** Si estás cuadrando la escaleta para una velada corporativa o un enlace, revisa las recomendaciones para [cenas de empresa con magia](/empresas/mago-cenas-empresa-madrid) y [tiempos en bodas](/particulares/bodas).
+
+
+* **Aspectos técnicos:** Para que todo encaje a la perfección el día del show, revisa los [requisitos técnicos y espacio para un espectáculo de magia](/blog/requisitos-tecnicos-espacio-mago-boda-evento-madrid).

@@ -92,3 +92,6 @@ Para comparar estos costes con la animación tradicional para bodas, lee nuestra
 Debido al cuidado artesanal y la exclusividad que requiere cada actuación, el número de fechas disponibles por temporada es limitado.
 
 **[Solicita disponibilidad y presupuesto para tu boda íntima (desde 450€)](/contratar-mago-madrid)** y asegura una experiencia que tus invitados agradecerán toda la vida.
+
+
+* **Fincas en la naturaleza:** Si celebras tu boda íntima en un entorno serrano, conoce más sobre [magia en bodas de la Sierra de Madrid](/blog/magia-bodas-sierra-madrid-fincas-coctel).

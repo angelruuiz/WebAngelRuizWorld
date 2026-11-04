@@ -98,3 +98,6 @@ Cada cumpleaños es irrepetible. Cuéntame dónde lo celebras, cuántas personas
 **[Solicita presupuesto express para tu 40 cumpleaños (300€)](/contratar-mago-madrid)** y asegura tu fecha antes de que se agote la agenda de fin de semana.
 
 > **Entretenimiento para enlaces:** Si buscas la misma exclusividad y asombro para un enlace nupcial inolvidable, no te pierdas la guía de [magia y entretenimiento para bodas](/particulares/bodas).
+
+
+* **Otras edades:** Si estás en la treintena o preparas una sorpresa para un amigo, echa un vistazo a [mago para fiestas de 30 años en Madrid](/blog/mago-cumpleanos-30-anos-madrid-fiestas-adultos).

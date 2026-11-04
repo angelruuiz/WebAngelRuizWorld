@@ -88,3 +88,6 @@ Una experiencia participativa donde los asistentes no solo presencian efectos im
 ## ¿Quieres Diseñar una Cena de Empresa Inolvidable en Madrid?
 
 Si quieres asegurar el éxito de tu celebración corporativa y garantizar que los empleados recuerden el evento como el más divertido de la historia de la compañía, descubre todos los formatos y disponibilidad del servicio de **[mago para cenas de empresa en Madrid](/empresas/mago-cenas-empresa-madrid)** y solicita tu presupuesto express sin compromiso.
+
+
+* **Más ideas para tu cena:** Consulta nuestro listado de [ideas originales para cenas de empresa en Madrid](/blog/ideas-cenas-empresa-madrid-originales).

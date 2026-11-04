@@ -83,3 +83,6 @@ Complementa tu evento con nuestras opciones de [mago en Madrid capital](/mago-ma
 ¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.
 
 > **Eventos navideños de empresa:** Si buscas ideas similares para sorprender a tus compañeros de trabajo a final de año, descubre cómo dinamizamos las [cenas de Navidad de empresa en Madrid con magia](/empresas/mago-cenas-empresa-madrid).
+
+
+* **Celebraciones de cumpleaños:** Explora cómo [celebrar un cumpleaños diferente para adultos en Madrid](/blog/celebrar-cumpleanos-diferente-madrid-adultos-ideas).

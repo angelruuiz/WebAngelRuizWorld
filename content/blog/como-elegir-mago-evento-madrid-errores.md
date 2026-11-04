@@ -90,3 +90,6 @@ Si te ha parecido interesante, quizás te interese seguir leyendo estos artícul
 - [¿Cuánto Cuesta un Mago en Madrid? [Tarifas y Precios 2026]](/blog/cuanto-cuesta-mago-madrid-precios)
 - [Magia de Cerca vs. Magia de Escenario: ¿Cuál es el formato ideal para tu evento?](/blog/magia-de-cerca-vs-escenario)
 - [Magia de Cerca en Madrid: El Secreto para un Evento o Boda Inolvidable (2026)](/blog/magia-de-cerca-madrid-eventos-bodas)
+
+
+* **Guía de contratación:** Evita fallos habituales siguiendo los consejos de nuestra [guía para contratar ilusionista en Madrid](/blog/guia-contratar-ilusionista-madrid-consejos-errores).

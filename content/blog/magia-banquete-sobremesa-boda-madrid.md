@@ -82,3 +82,6 @@ Para diseñar el plan de entretenimiento perfecto para vuestro gran día en cual
 
 
 ¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.
+
+
+* **Dinamización del aperitivo:** Conoce las claves para el cóctel nupcial en [cómo sorprender a los invitados de tu boda con magia](/blog/como-sorprender-invitados-boda-coctel).

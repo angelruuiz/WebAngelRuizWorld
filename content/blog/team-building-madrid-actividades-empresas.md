@@ -6,7 +6,7 @@ excerpt: >-
   ilusionismo estimula la creatividad y fomenta el trabajo en equipo en tu
   empresa madrileña.
 author: Ángel Ruiz
-image: /images/mago-empresas-madrid-angel-ruiz.svg
+image: /images/mago-empresas-madrid-angel-ruiz.webp
 tags:
   - Empresas
   - Madrid

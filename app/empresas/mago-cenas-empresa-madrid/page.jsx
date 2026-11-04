@@ -378,15 +378,25 @@ export default function Page() {
             Guías y Consejos para tu Cena de Empresa en Madrid
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/espectaculo-animacion-cenas-navidad-empresas-madrid" className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-400/50 transition-colors block">
-              <span className="text-amber-400 text-xs font-mono block mb-1">Especial 2026</span>
-              <strong className="text-white text-sm block">Espectáculo para Cenas de Navidad en Madrid</strong>
-              <span className="text-slate-400 text-xs">Comparativa de formatos y animación para empresas →</span>
+            <Link href="/blog/como-organizar-cena-navidad-empresa-madrid-guia" className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-400/50 transition-colors block">
+              <span className="text-amber-400 text-xs font-mono block mb-1">Guía Esencial 2026</span>
+              <strong className="text-white text-sm block">Cómo Organizar la Cena de Navidad de Empresa</strong>
+              <span className="text-slate-400 text-xs">Planificación, timings y selección de entretenimiento →</span>
             </Link>
-            <Link href="/blog/cenas-empresa-pequenas-madrid-animacion-magia" className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-400/50 transition-colors block">
-              <span className="text-amber-400 text-xs font-mono block mb-1">Equipos 10 a 30 pax</span>
-              <strong className="text-white text-sm block">Cenas de Empresa Pequeñas y Departamentos</strong>
-              <span className="text-slate-400 text-xs">Magia íntima en mesa sin montajes complejos →</span>
+            <Link href="/blog/coctel-fin-de-ano-empresa-madrid-ideas-animacion" className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-400/50 transition-colors block">
+              <span className="text-amber-400 text-xs font-mono block mb-1">Cóctel de Cierre</span>
+              <strong className="text-white text-sm block">Cóctel de Fin de Año Corporativo</strong>
+              <span className="text-slate-400 text-xs">Ideas dinámicas para celebrar el cierre de año con el equipo →</span>
+            </Link>
+            <Link href="/blog/mago-fiesta-fin-de-ano-nochevieja-madrid" className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-400/50 transition-colors block">
+              <span className="text-amber-400 text-xs font-mono block mb-1">Nochevieja & Gala</span>
+              <strong className="text-white text-sm block">Magia para Fiestas de Fin de Año y Nochevieja</strong>
+              <span className="text-slate-400 text-xs">Asombro exclusivo para galas y cotillones de empresa →</span>
+            </Link>
+            <Link href="/blog/tardevieja-madrid-ideas-celebraciones-navidad-privadas" className="p-4 rounded-xl bg-white/5 border border-white/10 hover:border-amber-400/50 transition-colors block">
+              <span className="text-amber-400 text-xs font-mono block mb-1">Tendencia de Día</span>
+              <strong className="text-white text-sm block">Tardevieja y Celebraciones Navideñas en Madrid</strong>
+              <span className="text-slate-400 text-xs">Tardeo exclusivo de fin de año con magia de cerca →</span>
             </Link>
           </div>
         </div>

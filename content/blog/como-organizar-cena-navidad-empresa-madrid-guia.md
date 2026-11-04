@@ -104,3 +104,12 @@ El mayor desafío de una cena de empresa es lograr que personas que no se tratan
 * [Servicio Oficial de Ángel Ruiz para Empresas](/empresas)
 
 ¿Quieres garantizar que la cena de Navidad de tu compañía sea un éxito absoluto y el tema de conversación más positivo en la oficina? **[Solicita tu presupuesto corporativo express (500€ - 750€)](/contratar-mago-madrid)** y asegura tu fecha antes del cierre de calendario.
+
+
+### Artículos recomendados para tu celebración navideña:
+- [Ideas y animación para el cóctel de fin de año de empresa](/blog/coctel-fin-de-ano-empresa-madrid-ideas-animacion)
+- [Magia para cotillones y fiestas de fin de año en Madrid](/blog/mago-fiesta-fin-de-ano-nochevieja-madrid)
+- [Tardevieja en Madrid: la alternativa de tardeo para celebrar con el equipo](/blog/tardevieja-madrid-ideas-celebraciones-navidad-privadas)
+
+
+* **Propuestas originales:** Si buscas salir de lo tradicional, descubre estas [cenas de empresa originales en Madrid con magia](/blog/cenas-empresa-originales-madrid-ideas-magia).

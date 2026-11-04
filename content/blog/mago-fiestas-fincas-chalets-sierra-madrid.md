@@ -64,3 +64,7 @@ Al residir y operar directamente en la zona Noroeste de Madrid, ofrezco total di
 Haz que tu fiesta privada en la Sierra sea recordada durante años. [Contacta directamente por WhatsApp o formulario](/contratar-mago-madrid) para consultar fechas.
 
 > **Bodas en la Sierra:** Las fincas serranas son el escenario soñado tanto para reuniones campestres como para celebrar un enlace nupcial; descubre por qué soy el [mago para bodas en la Sierra de Madrid](/particulares/bodas) más recomendado.
+
+
+* **Bodas en la Sierra:** Si tu evento es un enlace matrimonial, consulta nuestra guía específica sobre [magia para bodas en fincas de la Sierra de Madrid](/blog/magia-bodas-sierra-madrid-fincas-coctel).
+* **Fiestas privadas de alto nivel:** Para recepciones y eventos en urbanizaciones residenciales exclusivas, descubre la [magia para fiestas privadas en La Moraleja y Pozuelo de Alarcón](/blog/mago-fiestas-privadas-la-moraleja-pozuelo-madrid).

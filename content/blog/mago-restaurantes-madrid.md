@@ -66,3 +66,7 @@ Contratar un [mago para restaurantes en Madrid](/empresas/mago-para-restaurantes
 ¿Tienes un restaurante en Madrid o la Sierra y quieres ofrecer una experiencia que tus clientes no olviden? [Solicita propuesta personalizada para restaurantes](/contratar-mago-madrid).
 
 > **Eventos privados y cenas de grupo:** Si organizas una reunión de equipo en un salón reservado, conoce cómo funciona la [magia para cenas de empresa en restaurantes](/empresas/mago-cenas-empresa-madrid).
+
+
+* **Cumpleaños y reservados:** Descubre el show de mesa en mesa en [magia en restaurantes para cumpleaños de adultos en Madrid](/blog/magia-restaurante-cumpleanos-adultos-madrid).
+* **Cenas clandestinas y maridajes:** Conoce cómo integrar el ilusionismo en [experiencias gastronómicas y cenas clandestinas en Madrid](/blog/magia-experiencias-gastronomicas-cenas-clandestinas-madrid).

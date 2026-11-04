@@ -39,6 +39,16 @@ const nextConfig = {
     async redirects() {
         return [
             {
+                source: '/particulares',
+                destination: '/particulares/bodas',
+                permanent: true,
+            },
+            {
+                source: '/particulares/',
+                destination: '/particulares/bodas',
+                permanent: true,
+            },
+            {
                 source: '/mago-boadilla-del-monte',
                 destination: '/mago-boadilla',
                 permanent: true,

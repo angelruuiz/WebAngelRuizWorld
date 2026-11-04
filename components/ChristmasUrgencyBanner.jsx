@@ -52,6 +52,12 @@ export default function ChristmasUrgencyBanner({
             <span className="hidden sm:inline text-amber-500/40">•</span>
             <span>Sin agencias ni intermediarios</span>
           </div>
+          <div className="mt-3">
+            <Link href="/blog/como-organizar-cena-navidad-empresa-madrid-guia" className="text-amber-300 hover:text-amber-200 underline text-xs font-medium inline-flex items-center gap-1.5 transition-colors">
+              <span>Descubre la guía completa para organizar la cena de Navidad corporativa</span>
+              <span>→</span>
+            </Link>
+          </div>
         </div>
 
         <div className="flex flex-col sm:flex-row md:flex-col gap-3 w-full sm:w-auto shrink-0">

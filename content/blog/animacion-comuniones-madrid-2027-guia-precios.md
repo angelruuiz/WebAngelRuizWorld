@@ -64,3 +64,6 @@ El espectáculo de magia familiar de Ángel Ruiz ofrece una propuesta radicalmen
 Si ya conoces la fecha de la comunión de 2027 de tu hijo o hija, [consulta disponibilidad sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para congelar tu tarifa hoy mismo.
 
 > **Bodas y enlaces familiares:** Para familias que también celebran enlaces nupciales en fincas de la Sierra o la capital, consulta nuestra propuesta de [ilusionismo para bodas en Madrid](/particulares/bodas).
+
+
+* **Otras celebraciones familiares:** Revisa los formatos para los más allegados en nuestra guía de [mago para bautizos y celebraciones familiares en Madrid](/blog/mago-bautizos-celebraciones-familiares-madrid).

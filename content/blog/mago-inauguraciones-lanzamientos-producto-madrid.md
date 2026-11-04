@@ -147,3 +147,6 @@ Si estás organizando un evento de empresa, estos artículos te interesan:
 ¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.
 
 > **Continuación del evento:** Si tras la presentación comercial continuáis con un cóctel distendido o banquete de celebración, echa un vistazo al espectáculo de [magia para cenas de empresa en Madrid](/empresas/mago-cenas-empresa-madrid).
+
+
+* **Magia digital:** Añade un extra de modernidad con [magia con móviles y tecnología para eventos corporativos](/blog/magia-con-moviles-tecnologia-eventos-empresa-madrid).

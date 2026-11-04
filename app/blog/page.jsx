@@ -15,7 +15,7 @@ export const metadata = {
     locale: 'es_ES',
     type: 'website',
     images: [{
-      url: 'https://angelruiz.world/images/foto-bio.webp',
+      url: 'https://angelruiz.world/images/og-blog.webp',
       width: 1200,
       height: 630,
       alt: 'Blog de Magia y Eventos en Madrid | Ángel Ruiz',
@@ -25,7 +25,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Blog | Ángel Ruiz, Mago e Ilusionista',
     description: 'Descubre precios, consejos clave y todo lo que necesitas saber sobre el ilusionismo para eventos en Madrid.',
-    images: ['https://angelruiz.world/images/foto-bio.webp'],
+    images: ['https://angelruiz.world/images/og-blog.webp'],
   },
 };
 

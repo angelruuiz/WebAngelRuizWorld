@@ -84,3 +84,9 @@ Descubre más sobre cómo [captar clientes en stands de IFEMA con mentalismo](/b
 ¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.
 
 > **Networking nocturno:** Tras la jornada ferial en IFEMA, lleva el asombro a vuestra velada con un [espectáculo de magia en cenas de empresa](/empresas/mago-cenas-empresa-madrid).
+
+
+* **Atracción en recintos feriales:** Conoce cómo multiplicar tus visitas al espacio ferial con un [mago para stands en ferias de IFEMA](/blog/mago-para-stands-ferias-ifema-madrid).
+
+
+* **Atracción de clientes:** Conoce técnicas de impacto en [mentalismo para captar leads en ferias de IFEMA](/blog/mentalismo-captar-leads-ferias-ifema-madrid).

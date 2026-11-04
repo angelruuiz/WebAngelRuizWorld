@@ -80,3 +80,6 @@ Si quieres diseñar una jornada familiar a medida para tu plantilla en Madrid, d
 ¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.
 
 > **Otras celebraciones con el equipo:** Si además del Family Day estáis organizando la cena anual o copa de Navidad, descubre nuestro formato de [magia para cenas corporativas en Madrid](/empresas/mago-cenas-empresa-madrid).
+
+
+* **Eventos estivales:** Para celebraciones al aire libre durante los meses cálidos, consulta nuestras propuestas de [magia para fiestas de verano de empresa en Madrid](/blog/mago-fiestas-verano-summer-parties-empresa-madrid).

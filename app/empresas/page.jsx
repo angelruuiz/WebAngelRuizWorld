@@ -172,9 +172,9 @@ export default function EmpresasPage() {
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 className="text-sm font-[Cinzel] font-bold text-amber-400 uppercase tracking-wider mb-4 border-b border-white/10 pb-2">
+                                    <h2 className="text-sm font-[Cinzel] font-bold text-amber-400 uppercase tracking-wider mb-4 border-b border-white/10 pb-2">
                                         Formatos Corporativos Clave
-                                    </h3>
+                                    </h2>
                                     <ul className="space-y-3 text-xs text-slate-300">
                                         <li className="flex justify-between items-center border-b border-white/5 pb-2">
                                             <span>01. Cóctel & Networking</span>
@@ -397,28 +397,28 @@ export default function EmpresasPage() {
                             <div className="mb-12">
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div className="rounded-2xl bg-slate-950/50 p-6 border border-white/10 backdrop-blur-md">
-                                        <h4 className="text-base font-bold text-white mb-1">Magia de Cóctel <span className="text-amber-400 text-xs">(1-2h)</span></h4>
+                                        <h3 className="text-base font-bold text-white mb-1">Magia de Cóctel <span className="text-amber-400 text-xs">(1-2h)</span></h3>
                                         <p className="text-sm text-slate-300 leading-relaxed mb-3">
                                             Ideal para el networking previo a cenas. Me muevo entre los invitados creando momentos de asombro compartido que generan conversación natural.
                                         </p>
                                         <span className="text-amber-400 text-xs font-bold">Desde 500€</span>
                                     </div>
                                     <div className="rounded-2xl bg-slate-950/50 p-6 border border-white/10 backdrop-blur-md">
-                                        <h4 className="text-base font-bold text-white mb-1">Espectáculo de Sobremesa <span className="text-amber-400 text-xs">(30-45min)</span></h4>
+                                        <h3 className="text-base font-bold text-white mb-1">Espectáculo de Sobremesa <span className="text-amber-400 text-xs">(30-45min)</span></h3>
                                         <p className="text-sm text-slate-300 leading-relaxed mb-3">
                                             Show de mesa o parlour para grupos de 20-100 personas. Incluye participación de directivos y personalización con mensaje de marca.
                                         </p>
                                         <span className="text-amber-400 text-xs font-bold">Desde 600€</span>
                                     </div>
                                     <div className="rounded-2xl bg-slate-950/50 p-6 border border-white/10 backdrop-blur-md">
-                                        <h4 className="text-base font-bold text-white mb-1">Team Building Mágico <span className="text-amber-400 text-xs">(2-3h)</span></h4>
+                                        <h3 className="text-base font-bold text-white mb-1">Team Building Mágico <span className="text-amber-400 text-xs">(2-3h)</span></h3>
                                         <p className="text-sm text-slate-300 leading-relaxed mb-3">
                                             Taller donde los participantes aprenden trucos de magia como metáfora del trabajo en equipo, comunicación y creatividad.
                                         </p>
                                         <span className="text-amber-400 text-xs font-bold">Desde 650€</span>
                                     </div>
                                     <div className="rounded-2xl bg-slate-950/50 p-6 border border-white/10 backdrop-blur-md">
-                                        <h4 className="text-base font-bold text-white mb-1">Dinamización de Stand / Feria <span className="text-amber-400 text-xs">(jornada completa)</span></h4>
+                                        <h3 className="text-base font-bold text-white mb-1">Dinamización de Stand / Feria <span className="text-amber-400 text-xs">(jornada completa)</span></h3>
                                         <p className="text-sm text-slate-300 leading-relaxed mb-3">
                                             Captación de leads mediante magia visual en ferias como IFEMA. Aumento demostrado del tráfico al stand.
                                         </p>
@@ -516,7 +516,7 @@ export default function EmpresasPage() {
                                         </tbody>
                                     </table>
                                 </div>
-                                <p className="text-slate-500 text-xs font-light italic mt-3">
+                                <p className="text-slate-400 text-xs font-light italic mt-3">
                                     Basado en +200 eventos corporativos realizados en la Comunidad de Madrid.
                                 </p>
                             </div>
@@ -533,7 +533,7 @@ export default function EmpresasPage() {
                             </div>
 
                             <div className="rounded-2xl bg-slate-950/50 p-6 border border-white/10 backdrop-blur-md">
-                                <p className="text-xs text-amber-400 uppercase tracking-widest font-bold mb-4">Servicios Relacionados</p>
+                                <h3 className="text-xs text-amber-400 uppercase tracking-widest font-bold mb-4">Servicios y Guías Corporativas Relacionadas</h3>
                                 <div className="flex flex-wrap gap-3">
                                     <Link href="/empresas/mago-cenas-empresa-madrid" className="text-sm text-slate-300 hover:text-amber-400 transition-colors border border-white/10 hover:border-amber-400/50 rounded-xl px-4 py-2 bg-white/[0.02]">
                                         Mago Cenas de Empresa →
@@ -549,6 +549,39 @@ export default function EmpresasPage() {
                                     </Link>
                                     <Link href="/blog/mejor-mago-empresas-madrid" className="text-sm text-slate-300 hover:text-amber-400 transition-colors border border-white/10 hover:border-amber-400/50 rounded-xl px-4 py-2 bg-white/[0.02]">
                                         Blog: Mejor Mago Empresas Madrid →
+                                    </Link>
+                                    <Link href="/blog/como-organizar-cena-navidad-empresa-madrid-guia" className="text-sm text-slate-300 hover:text-amber-400 transition-colors border border-white/10 hover:border-amber-400/50 rounded-xl px-4 py-2 bg-white/[0.02]">
+                                        Guía: Cenas de Navidad de Empresa →
+                                    </Link>
+                                    <Link href="/blog/animacion-cena-gala-entrega-premios-madrid" className="text-sm text-slate-300 hover:text-amber-400 transition-colors border border-white/10 hover:border-amber-400/50 rounded-xl px-4 py-2 bg-white/[0.02]">
+                                        Animación Cenas de Gala & Premios →
+                                    </Link>
+                                    <Link href="/blog/mago-aniversario-empresa-madrid" className="text-sm text-slate-300 hover:text-amber-400 transition-colors border border-white/10 hover:border-amber-400/50 rounded-xl px-4 py-2 bg-white/[0.02]">
+                                        Magia para Aniversarios Corporativos →
+                                    </Link>
+                                    <Link href="/blog/kick-off-empresas-madrid-ideas-convenciones-inicio-ano" className="text-sm text-slate-300 hover:text-amber-400 transition-colors border border-white/10 hover:border-amber-400/50 rounded-xl px-4 py-2 bg-white/[0.02]">
+                                        Kick-Off & Inicio de Año →
+                                    </Link>
+                                    <Link href="/blog/family-day-empresas-madrid-magia-familiar" className="text-sm text-slate-300 hover:text-amber-400 transition-colors border border-white/10 hover:border-amber-400/50 rounded-xl px-4 py-2 bg-white/[0.02]">
+                                        Family Day Corporativo →
+                                    </Link>
+                                    <Link href="/blog/mago-para-stands-ferias-ifema-madrid" className="text-sm text-slate-300 hover:text-amber-400 transition-colors border border-white/10 hover:border-amber-400/50 rounded-xl px-4 py-2 bg-white/[0.02]">
+                                        Magia en Stands IFEMA →
+                                    </Link>
+                                    <Link href="/blog/mago-convenciones-congresos-simposios-madrid" className="text-sm text-slate-300 hover:text-amber-400 transition-colors border border-white/10 hover:border-amber-400/50 rounded-xl px-4 py-2 bg-white/[0.02]">
+                                        Convenciones & Congresos →
+                                    </Link>
+                                    <Link href="/blog/mago-eventos-empresariales-con-asesoria-madrid" className="text-sm text-slate-300 hover:text-amber-400 transition-colors border border-white/10 hover:border-amber-400/50 rounded-xl px-4 py-2 bg-white/[0.02]">
+                                        Eventos con Asesoría de Marca →
+                                    </Link>
+                                    <Link href="/blog/mago-eventos-lujo-marcas-vip-madrid" className="text-sm text-slate-300 hover:text-amber-400 transition-colors border border-white/10 hover:border-amber-400/50 rounded-xl px-4 py-2 bg-white/[0.02]">
+                                        Eventos de Lujo & Marcas VIP →
+                                    </Link>
+                                    <Link href="/blog/mago-inauguraciones-lanzamientos-producto-madrid" className="text-sm text-slate-300 hover:text-amber-400 transition-colors border border-white/10 hover:border-amber-400/50 rounded-xl px-4 py-2 bg-white/[0.02]">
+                                        Inauguraciones & Lanzamientos →
+                                    </Link>
+                                    <Link href="/blog/mago-mentalista-madrid-eventos-corporativos" className="text-sm text-slate-300 hover:text-amber-400 transition-colors border border-white/10 hover:border-amber-400/50 rounded-xl px-4 py-2 bg-white/[0.02]">
+                                        Mentalismo Corporativo →
                                     </Link>
                                 </div>
                         </div>

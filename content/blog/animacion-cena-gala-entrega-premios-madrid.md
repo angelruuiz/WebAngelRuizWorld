@@ -81,3 +81,6 @@ Puedes consultar todos los detalles en la página de [magia para empresas en Mad
 Explora también nuestras opciones de [mago para ferias y congresos en IFEMA](/empresas/mago-ferias-congresos-madrid) y [shows para cenas de empresa en Madrid](/empresas/mago-cenas-empresa-madrid).
 
 ¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.
+
+
+* **Celebraciones institucionales:** Si el evento conmemora una fecha especial de la compañía, descubre nuestras opciones de [magia para aniversarios de empresa](/blog/mago-aniversario-empresa-madrid).

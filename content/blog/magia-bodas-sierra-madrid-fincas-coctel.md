@@ -68,3 +68,9 @@ Al contratar de forma directa con Ángel Ruiz, cuentas con la tranquilidad de tr
 ## 4. Asegura la Fecha de tu Boda
 
 Las fechas de fin de semana en temporada alta (de mayo a octubre) se reservan con varios meses de antelación. [Consulta la disponibilidad para tu boda](/particulares/bodas) y recibe una propuesta detallada en menos de 2 horas.
+
+
+* **Celebraciones en la naturaleza:** Descubre cómo el entorno serrano potencia los espectáculos de [magia en fincas y chalets de la Sierra de Madrid](/blog/mago-fiestas-fincas-chalets-sierra-madrid).
+
+
+* **Bodas pequeñas:** Para bodas de menos de 60 invitados, consulta nuestros consejos de [magia para bodas íntimas en Madrid](/blog/mago-bodas-intimas-pequenas-madrid).

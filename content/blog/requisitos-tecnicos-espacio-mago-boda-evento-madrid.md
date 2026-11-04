@@ -70,3 +70,6 @@ Madrid cuenta con excelentes jornadas al aire libre durante primavera y verano, 
 3. Proporcionar el contacto del *wedding planner* o responsable de sala para la sincronización con los tiempos de salida de platos del catering.
 
 Para resolver cualquier consulta técnica sobre tu espacio en Madrid, contacta con nosotros a través de [contratar mago en Madrid](/contratar-mago-madrid) o revisa nuestros servicios para [bodas](/particulares/bodas) y [eventos corporativos](/empresas).
+
+
+* **Tiempos del show:** Consulta nuestra guía sobre [cuánto dura un espectáculo de magia y cómo calcular los tiempos](/blog/cuanto-dura-show-magia-evento-timing-madrid).

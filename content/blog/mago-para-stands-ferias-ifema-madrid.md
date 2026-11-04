@@ -92,3 +92,9 @@ Si estás planificando tu presencia en IFEMA u otros centros de convenciones de 
 - [Página Oficial: Mago para Ferias y Congresos en Madrid](/empresas/mago-ferias-congresos-madrid)
 
 > **Eventos para clientes tras la feria:** Fideliza a tus contactos clave invitándoles a una velada única con [magia de cerca para cenas de empresa en Madrid](/empresas/mago-cenas-empresa-madrid).
+
+
+* **Networking nocturno:** Extiende el asombro más allá de los pabellones con [magia para cócteles de networking ferial](/blog/magia-coctel-networking-madrid-ferias-ifema).
+
+
+* **Mentalismo en ferias:** Conoce las técnicas de [mentalismo para captar leads en ferias de IFEMA Madrid](/blog/mentalismo-captar-leads-ferias-ifema-madrid).

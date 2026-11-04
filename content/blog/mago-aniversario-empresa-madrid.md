@@ -121,3 +121,6 @@ Si estás organizando un evento corporativo y buscas inspiración, te recomiendo
 - [Ideas para Cenas de Empresa Originales en Madrid](/blog/ideas-cenas-empresa-madrid-originales)
 
 > **Cenas de gala:** Para aniversarios corporativos que culminan en un banquete especial, consulta el servicio de [ilusionismo para cenas de gala y empresa en Madrid](/empresas/mago-cenas-empresa-madrid).
+
+
+* **Formatos de gala:** Conoce cómo estructurar una noche inolvidable en nuestra guía de [animación para cenas de gala y entregas de premios en Madrid](/blog/animacion-cena-gala-entrega-premios-madrid).

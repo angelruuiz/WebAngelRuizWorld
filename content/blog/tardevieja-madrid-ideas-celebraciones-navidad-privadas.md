@@ -89,3 +89,6 @@ Las semanas de diciembre son las más cotizadas del año en Madrid, especialment
 Los espectáculos de autor tienen plazas muy limitadas por día. Si quieres asegurar que tu celebración cuente con el mejor entretenimiento de la capital, [solicita información y disponibilidad directa](/contratar-mago-madrid) antes de que se completen las fechas disponibles.
 
 > **Para eventos corporativos de fin de año:** Y si además de la reunión privada con amigos estás coordinando el brindis navideño de tu compañía, no te pierdas las alternativas de [magia para cenas de empresa y Navidad](/empresas/mago-cenas-empresa-madrid).
+
+
+* **Guía complementaria:** Si estás preparando la velada de tu empresa, descubre [cómo planificar la cena de Navidad corporativa perfecta](/blog/como-organizar-cena-navidad-empresa-madrid-guia).

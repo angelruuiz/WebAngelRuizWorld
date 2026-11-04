@@ -64,3 +64,6 @@ Como ilusionista profesional formado con los grandes referentes de la magia espa
 Si estás organizando una experiencia culinaria irrepetible en Madrid, [reserva fecha y solicita propuesta a medida](/contratar-mago-madrid).
 
 > **Experiencias para empresas:** Este mismo concepto de maridaje entre alta cocina e ilusión resulta extraordinario para eventos corporativos; conoce cómo adaptarlo en tus [cenas de empresa con magia de cerca](/empresas/mago-cenas-empresa-madrid).
+
+
+* **Cenas privadas a domicilio:** Si prefieres disfrutar de esta experiencia en tu propia casa, descubre el formato de [mago a domicilio para cenas privadas en Madrid](/blog/mago-domicilio-cenas-privadas-madrid).

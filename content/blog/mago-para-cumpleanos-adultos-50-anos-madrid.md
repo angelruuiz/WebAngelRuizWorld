@@ -78,3 +78,6 @@ Si estás organizando el cumpleaños como un regalo sorpresa para tu pareja, pad
 Si deseas consultar disponibilidad y solicitar un presupuesto a tu medida para tu próxima fiesta, visita la sección de [mago para cumpleaños en Madrid](/particulares/fiestas-cumpleanos-madrid) o solicita [presupuesto directo sin compromiso](/contratar-mago-madrid). Contacta también por WhatsApp para resolver tus dudas al instante.
 
 > **Magia en cócteles de boda:** La cercanía y el humor inteligente que cautivan en los 50 cumpleaños son la fórmula perfecta para enamorar a los invitados en un [cóctel de boda en Madrid con magia](/particulares/bodas).
+
+
+* **Otras celebraciones de cumpleaños:** Consulta también ideas para [fiestas de 30 años en Madrid](/blog/mago-cumpleanos-30-anos-madrid-fiestas-adultos) y [celebraciones de 40 cumpleaños con magia](/blog/mago-cumpleanos-40-anos-madrid-ideas).

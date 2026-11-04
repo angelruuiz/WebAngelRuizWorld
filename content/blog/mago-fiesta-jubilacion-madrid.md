@@ -102,3 +102,6 @@ También te puede interesar descubrir nuestras opciones de [mago para eventos fa
 ¿Quieres sorprender a tus invitados con una experiencia única de magia y mentalismo? [Pide presupuesto directo sin compromiso](/contratar-mago-madrid) o contacta por WhatsApp para resolver tus dudas al instante.
 
 > **Momentos inolvidables:** Al igual que en un homenaje de jubilación, un enlace requiere momentos mágicos cargados de significado; consulta cómo planificamos la [magia para bodas en Madrid](/particulares/bodas).
+
+
+* **Celebraciones familiares:** Descubre cómo adaptamos el espectáculo para todas las edades en [magia para bautizos y reuniones familiares en Madrid](/blog/mago-bautizos-celebraciones-familiares-madrid).

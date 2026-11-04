@@ -94,3 +94,6 @@ Si buscas una alternativa integral que además trabaje la cohesión de tus equip
 El éxito de un evento de fin de año no se mide por la cantidad de canapés, sino por **cómo se sienten las personas al regresar a casa**. Cuando ofreces a tu equipo una experiencia donde la sorpresa, la complicidad y la ilusión son las protagonistas, el retorno en motivación y sentimiento de pertenencia es incalculable.
 
 Las fechas clave de diciembre en Madrid tienen una altísima demanda. [Solicita presupuesto sin compromiso](/contratar-mago-madrid) para consultar la disponibilidad de tu cóctel corporativo y diseñar una propuesta a medida.
+
+
+* **Lectura recomendada:** Consulta también nuestra [guía paso a paso para organizar la cena de Navidad de empresa](/blog/como-organizar-cena-navidad-empresa-madrid-guia).

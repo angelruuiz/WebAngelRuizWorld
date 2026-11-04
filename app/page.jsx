@@ -115,7 +115,7 @@ const SEOContent = () => {
                                         <p>Si buscas un <strong>mago profesional en la sierra de Madrid</strong>, Angel Ruiz ofrece total disponibilidad y conocimiento de los espacios locales más exclusivos. Opero desde mi base en el noroeste, lo que garantiza una logística impecable.</p>
                                         <div className="pt-2">
                                             <p className="mb-2 text-[10px] text-amber-400 uppercase font-bold tracking-widest">Servicio Local en Municipios Clave:</p>
-                                            <div className="flex flex-wrap gap-x-4 gap-y-2.5 text-xs uppercase font-semibold text-gold-100/70">
+                                            <div className="flex flex-wrap gap-x-4 gap-y-2.5 text-xs uppercase font-semibold text-gold-100/90">
                                                 {[
                                                     { href: "/mago-torrelodones", name: "Torrelodones", primary: true },
                                                     { href: "/mago-sierra-madrid", name: "Sierra de Madrid" },
@@ -142,7 +142,7 @@ const SEOContent = () => {
                                                     </a>
                                                 ))}
                                             </div>
-                                            <p className="mt-4 text-xs opacity-70 leading-relaxed italic border-t border-white/10 pt-3">
+                                            <p className="mt-4 text-xs text-slate-300 leading-relaxed italic border-t border-white/10 pt-3">
                                                 Especialista en <strong>fincas para bodas</strong> y eventos residenciales VIP en urbanizaciones como La Finca, Somosaguas y Monterrozas.
                                             </p>
                                         </div>
