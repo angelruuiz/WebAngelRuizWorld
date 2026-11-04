@@ -131,6 +131,8 @@ export default function MagoCartomagiaMadridPage() {
 
     return (
         <>
+            <link rel="preload" as="image" href="/images/foto-bio.webp" type="image/webp" fetchPriority="high" />
+
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaGraph) }}

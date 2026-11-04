@@ -59,7 +59,7 @@ export default function MagoComunionesPage() {
                 },
                 "areaServed": "Comunidad de Madrid",
                 "description": "Espectáculo de magia profesional para primeras comuniones en Madrid. Entretenimiento premium para niños y adultos.",
-                "serviceType": "Entertainment",
+                "serviceType": "Magia para Primeras Comuniones",
                 "url": "https://angelruiz.world/particulares/comuniones"
             },
             {

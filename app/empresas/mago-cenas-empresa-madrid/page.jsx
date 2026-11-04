@@ -72,15 +72,15 @@ const schemaJson = {
       },
       "areaServed": "Comunidad de Madrid",
       "description": "Espectáculo de magia corporativa para cenas de empresa en Madrid. Personalizable con marca, logotipos y mensajes de empresa.",
-      "serviceType": "Corporate Entertainment",
+      "serviceType": "Magia para Cenas de Empresa",
       "url": "https://angelruiz.world/empresas/mago-cenas-empresa-madrid"
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
-        { "@type": "ListItem", "position": 2, "name": "Mago para Empresas", "item": "https://angelruiz.world/empresas" },
-        { "@type": "ListItem", "position": 3, "name": "Mago Cenas de Empresa Madrid", "item": "https://angelruiz.world/empresas/mago-cenas-empresa-madrid" }
+        { "@type": "ListItem", "position": 2, "name": "Empresas", "item": "https://angelruiz.world/empresas" },
+        { "@type": "ListItem", "position": 3, "name": "Cenas de Empresa", "item": "https://angelruiz.world/empresas/mago-cenas-empresa-madrid" }
       ]
     }
   ]

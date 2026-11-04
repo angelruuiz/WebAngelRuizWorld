@@ -135,6 +135,25 @@ export default function LocationPageTemplate({ location, allLocations }) {
         { name: "¿Con cuánta antelación debo reservar?", acceptedAnswer: { text: `Para eventos en ${location.name} y la zona noroeste, recomiendo reservar con al menos 2-4 semanas de antelación para garantizar disponibilidad en la fecha deseada.` } }
     ];
 
+        const serviceSchema = {
+        "@type": "Service",
+        "@id": `https://angelruiz.world/mago-${location.slug}/#service`,
+        "name": `Mago e Ilusionista en ${location.name}`,
+        "serviceType": "Ilusionismo y Magia de Cerca para Eventos",
+        "description": `Servicio profesional de magia de cerca y espectáculos de ilusionismo para bodas, empresas y celebraciones privadas en ${location.name}.`,
+        "provider": {
+            "@type": "Person",
+            "@id": "https://angelruiz.world/#person",
+            "name": "Ángel Ruiz",
+            "url": "https://angelruiz.world"
+        },
+        "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": `${location.name}, Comunidad de Madrid`
+        },
+        "url": `https://angelruiz.world/mago-${location.slug}`
+    };
+
     const isSur = ['alcorcon', 'leganes', 'getafe', 'mostoles'].includes(location.slug);
     const parentName = isSur ? "Mago Madrid" : "Mago Sierra Madrid";
     const parentSlug = isSur ? "mago-madrid" : "mago-sierra-madrid";
@@ -151,6 +170,7 @@ export default function LocationPageTemplate({ location, allLocations }) {
 
     return (
         <>
+            <link rel="preload" as="image" href="/images/foto-bio.webp" type="image/webp" fetchPriority="high" />
             <script 
                 type="application/ld+json" 
                 dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -174,6 +194,7 @@ export default function LocationPageTemplate({ location, allLocations }) {
                             }
                         },
                         pageSchema,
+                        serviceSchema,
                         {
                             "@type": "BreadcrumbList",
                             "itemListElement": breadcrumbSchema.itemListElement

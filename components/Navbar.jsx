@@ -142,7 +142,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                         <button 
                             type="button"
                             onClick={onOpenContact} 
-                            aria-label="Contacto - Abrir formulario"
+                            aria-label="Contacto"
                             className="relative px-3.5 lg:px-4 py-2 overflow-hidden rounded-full cursor-pointer border border-amber-300/50 shadow-[0_0_15px_rgba(245,158,11,0.3)] z-10 bg-[rgba(3,7,18,0.5)] hover:bg-[#d4a853] backdrop-blur-md text-[11px] lg:text-xs text-slate-100 hover:text-slate-950 font-bold tracking-[0.1em] uppercase transition-all duration-300 hover:scale-105 active:scale-95 flex items-center justify-center gap-1.5 lg:gap-2 group"
                         >
                             <span className="relative z-10">Contacto</span>
@@ -156,7 +156,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                         <button 
                             type="button"
                             onClick={onOpenContact}
-                            aria-label="Abrir formulario de contacto rápido"
+                            aria-label="Contacto"
                             className="px-3.5 py-1.5 rounded-full border border-amber-400/40 bg-amber-500/10 text-amber-400 text-xs font-bold uppercase tracking-wider flex items-center gap-1.5 hover:bg-amber-500/20 transition-colors"
                         >
                             <span>Contacto</span>
@@ -176,7 +176,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                     <div className="flex justify-center">
                         <button 
                             type="button" 
-                            aria-label="Abrir menú de navegación" 
+                            aria-label="Explorar" 
                             onClick={() => setIsMoreMenuOpen(true)} 
                             className={`tab-item w-full py-1.5 px-1 rounded-full transition-all text-slate-300 hover:text-white flex flex-col items-center justify-center ${isMoreMenuOpen ? 'text-amber-300 bg-white/[0.08]' : ''}`}
                         >
@@ -193,7 +193,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                     <div className="flex justify-center">
                         <button 
                             type="button"
-                            aria-label="Reservar - Pedir presupuesto inmediato"
+                            aria-label="Reservar"
                             onClick={() => setIsBookingDrawerOpen(true)}
                             className="relative group active:scale-95 transition-transform w-full max-w-[125px]"
                         >
@@ -214,7 +214,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                             href="https://wa.me/34648055636?text=Hola%20Ángel,%20quisiera%20consultar%20disponibilidad%20y%20tarifas%20para%20un%20evento%20en%20Madrid" 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            aria-label="Contactar por WhatsApp directamente con Ángel Ruiz" 
+                            aria-label="WhatsApp" 
                             className="tab-item w-full py-1.5 px-1 rounded-full transition-all text-emerald-400 hover:text-emerald-300 flex flex-col items-center justify-center"
                         >
                             <div className="relative w-8 h-8 rounded-full bg-emerald-500/15 border border-emerald-400/30 flex items-center justify-center shadow-[0_0_12px_rgba(16,185,129,0.2)]">

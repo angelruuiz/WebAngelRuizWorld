@@ -46,7 +46,7 @@ export default function EmpresasPage() {
         },
         "areaServed": "Comunidad de Madrid",
         "description": "Espectáculos de magia close-up para empresas en Madrid. Servicio profesional de ilusionismo corporativo para cenas de empresa, team building, ferias y congresos. Más de 10 años de experiencia y valoraciones 100% 5 estrellas.",
-        "serviceType": "Corporate Entertainment Service",
+        "serviceType": "Magia para Empresas y Eventos Corporativos",
         "url": "https://angelruiz.world/empresas"
     };
 
@@ -74,6 +74,7 @@ export default function EmpresasPage() {
 
     return (
         <>
+            <link rel="preload" as="image" href="/images/evento-angel-ruiz-magia.webp" type="image/webp" fetchPriority="high" />
             <script 
                 type="application/ld+json" 
                 dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -585,6 +586,9 @@ export default function EmpresasPage() {
                                     </Link>
                                     <Link href="/mago-cartomagia-madrid" className="text-sm text-slate-300 hover:text-amber-400 transition-colors border border-white/10 hover:border-amber-400/50 rounded-xl px-4 py-2 bg-white/[0.02]">
                                         Cartomagia de Autor & Magia de Cerca →
+                                    </Link>
+                                    <Link href="/blog/mago-conferenciante-empresas-madrid" className="text-sm text-slate-300 hover:text-amber-400 transition-colors border border-white/10 hover:border-amber-400/50 rounded-xl px-4 py-2 bg-white/[0.02]">
+                                        Artículo: Mago Conferenciante en Madrid →
                                     </Link>
                                 </div>
                         </div>

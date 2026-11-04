@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import NavFooterClient from '@/components/NavFooterClient';
 import FAQItem from '@/components/FAQItem';
@@ -265,7 +266,8 @@ export default function Page() {
           <h2 className="text-3xl md:text-4xl font-[Cinzel] font-bold text-white uppercase tracking-wide mb-4">
             Inspira a tu Empresa con una Ponencia <span className="text-amber-400">Única</span>
           </h2>
-          <p className="text-base text-slate-300 mb-8 max-w-xl mx-auto font-light">Solicita dossier de conferencias y disponibilidad de agenda para congresos y eventos corporativos en Madrid.</p>
+          <p className="text-base text-slate-300 mb-4 max-w-xl mx-auto font-light">Solicita dossier de conferencias y disponibilidad de agenda para congresos y eventos corporativos en Madrid.</p>
+          <div className="mb-6"><Link href="/blog/mago-conferenciante-empresas-madrid" className="text-sm text-amber-400 hover:underline inline-flex items-center gap-1 font-semibold"><span>✦ Leer artículo detallado: Por qué contratar un mago conferenciante en Madrid →</span></Link></div>
           <div className="mb-10 text-left">
             <CorporateInlineForm title="Solicitar Ponencia o Conferencia B2B" subtitle="Dossier técnico y cotización en menos de 1h" />
           </div>

@@ -58,7 +58,7 @@ export default function BodasDetailPage() {
         },
         "areaServed": "Comunidad de Madrid",
         "description": "Servicio profesional de ilusionismo y magia de cerca para cócteles y banquetes de bodas en Madrid.",
-        "serviceType": "Wedding Entertainment",
+        "serviceType": "Magia de Cerca para Bodas",
         "url": "https://angelruiz.world/particulares/bodas"
     };
 
@@ -72,6 +72,7 @@ export default function BodasDetailPage() {
 
     return (
         <>
+            <link rel="preload" as="image" href="/images/boda-magia-madrid.webp" type="image/webp" fetchPriority="high" />
             <script 
                 type="application/ld+json" 
                 dangerouslySetInnerHTML={{ __html: JSON.stringify({
