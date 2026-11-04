@@ -49,12 +49,15 @@ export default function Breadcrumbs() {
 
   return (
     <nav aria-label="Breadcrumb" className="mb-6">
-      <ol className="flex flex-wrap items-center gap-2 text-[10px] text-slate-500 uppercase tracking-widest font-bold">
+      <ol className="flex flex-wrap items-center gap-2 text-[10px] text-slate-400 uppercase tracking-widest font-bold">
         <li>
           <Link href="/" className="hover:text-amber-500 transition-colors">Inicio</Link>
         </li>
         {pathSegments.map((segment, index) => {
-          const href = `/${pathSegments.slice(0, index + 1).join('/')}`;
+          let href = `/${pathSegments.slice(0, index + 1).join('/')}`;
+          if (href === '/particulares') {
+            href = '/particulares/bodas';
+          }
           const isLast = index === pathSegments.length - 1;
           const label = labels[segment] || segment.replace(/-/g, ' ');
 

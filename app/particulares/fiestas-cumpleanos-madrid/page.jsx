@@ -66,7 +66,7 @@ export default function CumpleanosAdultosPage() {
         "@type": "BreadcrumbList",
         "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
-            { "@type": "ListItem", "position": 2, "name": "Particulares", "item": "https://angelruiz.world/particulares" },
+            { "@type": "ListItem", "position": 2, "name": "Particulares", "item": "https://angelruiz.world/particulares/bodas" },
             { "@type": "ListItem", "position": 3, "name": "Cumpleaños de Adultos y Fiestas", "item": "https://angelruiz.world/particulares/fiestas-cumpleanos-madrid" }
         ]
     };

@@ -70,7 +70,7 @@ export default function DespedidasSolteraMadridPage() {
                 "@type": "BreadcrumbList",
                 "itemListElement": [
                     { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
-                    { "@type": "ListItem", "position": 2, "name": "Particulares", "item": "https://angelruiz.world/particulares" },
+                    { "@type": "ListItem", "position": 2, "name": "Particulares", "item": "https://angelruiz.world/particulares/bodas" },
                     { "@type": "ListItem", "position": 3, "name": "Despedidas de Soltera", "item": "https://angelruiz.world/particulares/despedidas-soltera-madrid" }
                 ]
             }

@@ -59,6 +59,7 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                             <Link href="/particulares/bodas" className="hover:text-[#d4a853] transition-colors w-fit">Mago para Bodas</Link>
                             <Link href="/empresas" className="hover:text-[#d4a853] transition-colors w-fit">Mago para Empresas</Link>
                             <Link href="/empresas/mago-cenas-empresa-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Cenas de Empresa & Navidad</Link>
+                            <Link href="/mago-cartomagia-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Cartomagia de Autor</Link>
                             <Link href="/mago-close-up-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Magia de Cerca Close-Up</Link>
                             <Link href="/particulares/fiestas-cumpleanos-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Fiestas y Cumpleaños</Link>
                             <Link href="/particulares/comuniones" className="hover:text-[#d4a853] transition-colors w-fit">Comuniones</Link>

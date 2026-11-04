@@ -61,7 +61,7 @@ Aunque es cierto que la gran mayoría de las cenas de empresa suelen hacerse a m
 
 ## Los momentos ideales para que la magia brille en tu Nochevieja
 
-Una de las preguntas más frecuentes que me hacen mis clientes a la hora de organizar [fiestas para particulares](/particulares) es: "Ángel, ¿cuándo es exactamente el mejor momento de la noche para que actúes?". Todo depende, lógicamente, de cómo esté estructurada la velada y de los horarios de la comida, pero hay tres momentos clave que, por mi experiencia, siempre funcionan a las mil maravillas.
+Una de las preguntas más frecuentes que me hacen mis clientes a la hora de organizar [fiestas para particulares](/particulares/bodas) es: "Ángel, ¿cuándo es exactamente el mejor momento de la noche para que actúes?". Todo depende, lógicamente, de cómo esté estructurada la velada y de los horarios de la comida, pero hay tres momentos clave que, por mi experiencia, siempre funcionan a las mil maravillas.
 
 ### Durante los aperitivos y el cóctel de bienvenida
 

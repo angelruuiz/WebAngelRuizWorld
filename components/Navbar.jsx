@@ -51,6 +51,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
             name: 'Especialidades', 
             href: '#',
             children: [
+                { name: 'Cartomagia de Autor', href: '/mago-cartomagia-madrid' },
                 { name: 'Magia Close-Up', href: '/mago-close-up-madrid' },
                 { name: 'Contratar Mago', href: '/contratar-mago-madrid' }
             ]
@@ -263,6 +264,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                             <span className="text-sm opacity-50 group-open:rotate-180 transition-transform">▼</span>
                         </summary>
                         <div className="flex flex-col gap-4 pb-4 pl-4 border-l border-amber-500/20 ml-2 mt-2">
+                            <Link href="/mago-cartomagia-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Cartomagia de Autor</Link>
                             <Link href="/mago-close-up-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Magia Close-Up (De cerca)</Link>
                             <Link href="/contratar-mago-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-amber-500 font-bold hover:text-amber-400">Contratar Mago en Madrid</Link>
                         </div>

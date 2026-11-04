@@ -583,6 +583,9 @@ export default function EmpresasPage() {
                                     <Link href="/blog/mago-mentalista-madrid-eventos-corporativos" className="text-sm text-slate-300 hover:text-amber-400 transition-colors border border-white/10 hover:border-amber-400/50 rounded-xl px-4 py-2 bg-white/[0.02]">
                                         Mentalismo Corporativo →
                                     </Link>
+                                    <Link href="/mago-cartomagia-madrid" className="text-sm text-slate-300 hover:text-amber-400 transition-colors border border-white/10 hover:border-amber-400/50 rounded-xl px-4 py-2 bg-white/[0.02]">
+                                        Cartomagia de Autor & Magia de Cerca →
+                                    </Link>
                                 </div>
                         </div>
                     </section>

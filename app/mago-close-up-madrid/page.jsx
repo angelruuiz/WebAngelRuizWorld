@@ -154,7 +154,7 @@ export default function MagoCloseUpMadridPage() {
                 { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Magia para team building", "url": "https://angelruiz.world/empresas/mago-team-building-madrid" } },
                 { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mago para ferias y congresos (IFEMA)", "url": "https://angelruiz.world/empresas/mago-ferias-congresos-madrid" } },
                 { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Magia para restaurantes (table hopping)", "url": "https://angelruiz.world/empresas/mago-para-restaurantes-madrid" } },
-                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mago para comuniones, cumpleaños y fiestas privadas", "url": "https://angelruiz.world/particulares" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 300, "priceCurrency": "EUR" } }
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mago para comuniones, cumpleaños y fiestas privadas", "url": "https://angelruiz.world/particulares/bodas" }, "priceSpecification": { "@type": "PriceSpecification", "minPrice": 300, "priceCurrency": "EUR" } }
             ]
         },
         "sameAs": [

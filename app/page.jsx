@@ -67,9 +67,9 @@ const SEOContent = () => {
                                 <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 text-[11px] font-semibold">
                                     <span>🎓</span> Formación Escuela Dani DaOrtiz
                                 </span>
-                                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 text-[11px]">
+                                <Link href="/mago-cartomagia-madrid" className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 hover:text-amber-300 hover:border-amber-400/40 transition-colors text-[11px]">
                                     <span>♠️</span> Cartomagia de autor
-                                </span>
+                                </Link>
                                 <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 text-[11px]">
                                     <span>🤝</span> Trato directo sin comisiones
                                 </span>
@@ -80,10 +80,10 @@ const SEOContent = () => {
                                     Experiencia Certificada y Formación de Élite
                                 </p>
                                 <p className="text-xs sm:text-sm md:text-base leading-relaxed text-gold-50/90">
-                                    Ángel Ruiz se ha consolidado como uno de los <strong className="text-amber-400">ilusionistas de referencia en Madrid</strong>, formado en la prestigiosa <u>Escuela de Magia de Dani DaOrtiz</u>. Esta formación de élite se traduce en una especialización en cartomagia de autor y un estilo propio que lo distancia del ilusionismo convencional. Su enfoque se centra en la <u>magia de cerca (close-up) de alta calidad</u>, donde el milagro ocurre literalmente a escasos centímetros del espectador.
+                                    Ángel Ruiz se ha consolidado como uno de los <strong className="text-amber-400">ilusionistas de referencia en Madrid</strong>, formado en la prestigiosa <u>Escuela de Magia de Dani DaOrtiz</u>. Esta formación de élite se traduce en una especialización en <Link href="/mago-cartomagia-madrid" className="text-amber-400 hover:underline">cartomagia de autor</Link> y un estilo propio que lo distancia del ilusionismo convencional. Su enfoque se centra en la <u>magia de cerca (close-up) de alta calidad</u>, donde el milagro ocurre literalmente a escasos centímetros del espectador.
                                 </p>
                                 <p className="text-xs sm:text-sm md:text-base leading-relaxed text-gold-50/90">
-                                    En un mercado saturado de agencias, mi propuesta ofrece la distinción de un <strong>especialista</strong>. Mi magia no solo ejecuta trucos; se trata de <strong>diseñar atmósferas de asombro inteligente</strong>. Ya sea en un cóctel de bienvenida o en una cena de gala corporativa, mi trabajo bajo el sello de la cartomagia de autor asegura que tu celebración sea recordada por su sofisticación y verdadera imposibilidad.
+                                    En un mercado saturado de agencias, mi propuesta ofrece la distinción de un <strong>especialista</strong>. Mi magia no solo ejecuta trucos; se trata de <strong>diseñar atmósferas de asombro inteligente</strong>. Ya sea en un cóctel de bienvenida o en una cena de gala corporativa, mi trabajo bajo el sello de la <Link href="/mago-cartomagia-madrid" className="text-amber-400 hover:underline">cartomagia de autor</Link> asegura que tu celebración sea recordada por su sofisticación y verdadera imposibilidad.
                                 </p>
                             </div>
                         </PerpetualCard>

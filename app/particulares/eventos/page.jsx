@@ -58,7 +58,7 @@ export default function EventosDetailPage() {
         "@type": "BreadcrumbList",
         "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
-            { "@type": "ListItem", "position": 2, "name": "Particulares", "item": "https://angelruiz.world/particulares" },
+            { "@type": "ListItem", "position": 2, "name": "Particulares", "item": "https://angelruiz.world/particulares/bodas" },
             { "@type": "ListItem", "position": 3, "name": "Eventos", "item": "https://angelruiz.world/particulares/eventos" }
         ]
     };
