@@ -413,10 +413,11 @@ export default function MagoCartomagiaMadridPage() {
                                 </div>
 
                                 {/* FORMATO 02 */}
-                                <div className="group rounded-3xl overflow-hidden border border-amber-500/30 hover:border-amber-400 bg-slate-900/90 shadow-2xl transition-all duration-300 flex flex-col relative ring-1 ring-amber-500/20">
-                                    <div className="absolute -top-3 right-6 z-20 px-3 py-1 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-bold text-[10px] uppercase tracking-wider rounded-full shadow-lg">
+                                <div className="relative pt-3 flex flex-col">
+                                    <div className="absolute top-0 right-6 z-20 px-3.5 py-1 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-bold text-[10px] uppercase tracking-wider rounded-full shadow-lg shadow-amber-500/25">
                                         Experiencia Estrella
                                     </div>
+                                    <div className="group rounded-3xl overflow-hidden border border-amber-500/30 hover:border-amber-400 bg-slate-900/90 shadow-2xl transition-all duration-300 flex-1 flex flex-col justify-between ring-1 ring-amber-500/20">
                                     <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-950">
                                         <Image
                                             src="/images/sesion-cartomagia-teatro-angel-ruiz.webp"
@@ -447,8 +448,9 @@ export default function MagoCartomagiaMadridPage() {
                                         </div>
                                     </div>
                                 </div>
+                            </div>
 
-                                {/* FORMATO 03 */}
+                            {/* FORMATO 03 */}
                                 <div className="group rounded-3xl overflow-hidden border border-white/10 hover:border-amber-400/40 bg-slate-900/70 shadow-xl transition-all duration-300 flex flex-col">
                                     <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-950">
                                         <Image

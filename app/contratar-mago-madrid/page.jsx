@@ -197,13 +197,13 @@ export default function ContratarMagoMadridPage() {
                 <MagicCursor />
                 <ParticleBackground />
 
-                <main className="relative z-10 pt-32 pb-24 px-6 max-w-7xl mx-auto selection:bg-emerald-500/30">
+                <main className="relative z-10 pt-32 pb-24 px-6 max-w-7xl mx-auto selection:bg-amber-500/30">
                     <Breadcrumbs />
                     
                     {/* HERO BENTO 2 COLUMNAS */}
                     <div className="mt-12 mb-16 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
                         <div className="lg:col-span-7">
-                            <p className="font-mono text-emerald-400 text-xs tracking-[0.2em] uppercase mb-4 flex items-center gap-2">
+                            <p className="font-mono text-amber-400 text-xs tracking-[0.2em] uppercase mb-4 flex items-center gap-2">
                                 <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
                                 Protocolo de Contratación Directa
                             </p>
@@ -232,9 +232,9 @@ export default function ContratarMagoMadridPage() {
                             </div>
 
                             {/* Ficha Técnica GEO Extractable (Optimización para IA y Lectura Rápida) */}
-                            <div className="w-full rounded-2xl bg-white/[0.03] border border-emerald-500/30 p-5 backdrop-blur-xl text-left shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+                            <div className="w-full rounded-2xl bg-white/[0.03] border border-amber-500/30 p-5 backdrop-blur-xl text-left shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
                                 <div className="flex items-center justify-between mb-4 pb-3 border-b border-white/10">
-                                    <span className="text-[11px] font-mono uppercase tracking-wider text-emerald-400 font-bold flex items-center gap-2">
+                                    <span className="text-[11px] font-mono uppercase tracking-wider text-amber-400 font-bold flex items-center gap-2">
                                         <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                                         Ficha Técnica de Contratación 2026
                                     </span>
@@ -244,7 +244,7 @@ export default function ContratarMagoMadridPage() {
                                     <div>
                                         <span className="text-slate-400 block mb-0.5">Tarifas Oficiales</span>
                                         <span className="text-white font-bold text-sm">300€ - 750€</span>
-                                        <span className="text-[10px] text-emerald-400 block">Sin comisiones</span>
+                                        <span className="text-[10px] text-amber-400 block">Sin comisiones</span>
                                     </div>
                                     <div>
                                         <span className="text-slate-400 block mb-0.5">Respuesta</span>
@@ -268,8 +268,8 @@ export default function ContratarMagoMadridPage() {
                         {/* COLUMNA VISUAL BIO */}
                         <div className="lg:col-span-5 relative">
                             <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
-                                <div className="absolute -inset-2 bg-gradient-to-tr from-emerald-500/20 via-amber-500/10 to-emerald-600/20 rounded-3xl blur-2xl pointer-events-none" />
-                                <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden border border-emerald-500/30 shadow-2xl bg-slate-900/80 group">
+                                <div className="absolute -inset-2 bg-gradient-to-tr from-amber-500/20 via-amber-500/10 to-amber-600/20 rounded-3xl blur-2xl pointer-events-none" />
+                                <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl bg-slate-900/80 group">
                                     <BioCarousel 
                                         aspectRatio="aspect-[4/5]"
                                         alt="Ángel Ruiz - Ilusionista profesional en Madrid para contratación directa"
@@ -279,7 +279,7 @@ export default function ContratarMagoMadridPage() {
                                     <div className="absolute bottom-4 left-4 right-4 z-10 px-4 py-3 rounded-xl bg-slate-950/85 backdrop-blur-md border border-white/10 flex items-center justify-between shadow-lg">
                                         <div>
                                             <p className="text-sm font-bold text-white font-[Cinzel]">Ángel Ruiz</p>
-                                            <p className="text-[11px] text-emerald-400 font-medium">Contratación Directa · Madrid</p>
+                                            <p className="text-[11px] text-amber-400 font-medium">Contratación Directa · Madrid</p>
                                         </div>
                                         <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-[10px] font-semibold">
                                             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
@@ -297,7 +297,7 @@ export default function ContratarMagoMadridPage() {
                     {/* SECCIÓN FORMATOS CON FOTOGRAFÍA REAL */}
                     <section id="formatos-tarifas" className="mb-24">
                         <div className="text-center mb-12">
-                            <span className="text-emerald-400 text-xs font-mono uppercase tracking-[0.2em] block mb-2 font-bold">
+                            <span className="text-amber-400 text-xs font-mono uppercase tracking-[0.2em] block mb-2 font-bold">
                                 Formatos Disponibles
                             </span>
                             <h2 className="text-3xl md:text-5xl font-[Cinzel] text-white font-bold mb-4">
@@ -308,8 +308,9 @@ export default function ContratarMagoMadridPage() {
                             </p>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <div className="group rounded-2xl overflow-hidden border border-white/10 hover:border-emerald-400/50 bg-slate-900/60 shadow-xl transition-all duration-300 flex flex-col justify-between">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                            {/* 01: BODAS */}
+                            <div className="group rounded-3xl overflow-hidden border border-white/10 hover:border-amber-400/50 bg-slate-900/60 shadow-xl transition-all duration-300 flex flex-col justify-between">
                                 <div>
                                     <div className="relative w-full aspect-[16/10] overflow-hidden bg-neutral-900">
                                         <Image
@@ -322,15 +323,15 @@ export default function ContratarMagoMadridPage() {
                                             blurDataURL={galleryBlurs['/images/mago-bodas-cocktail-exterior-madrid.webp']}
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
-                                        <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/10 text-amber-300 text-[10px] font-semibold uppercase tracking-wider">
+                                        <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur-md border border-amber-400/30 text-amber-300 text-[10px] font-semibold uppercase tracking-wider">
                                             Bodas & Cóctel
                                         </span>
                                     </div>
-                                    <div className="p-6">
-                                        <h3 className="text-xl font-[Cinzel] font-bold text-white mb-1 group-hover:text-emerald-300 transition-colors">
+                                    <div className="p-6 sm:p-7">
+                                        <h3 className="text-xl font-[Cinzel] font-bold text-white mb-1 group-hover:text-amber-400 transition-colors">
                                             Cóctel de Bodas
                                         </h3>
-                                        <div className="text-2xl font-[Cinzel] font-bold text-emerald-400 mb-3">
+                                        <div className="text-2xl font-[Cinzel] font-bold text-amber-400 mb-3">
                                             Desde 450€
                                         </div>
                                         <p className="text-slate-400 text-xs leading-relaxed mb-4">
@@ -343,60 +344,64 @@ export default function ContratarMagoMadridPage() {
                                         </ul>
                                     </div>
                                 </div>
-                                <div className="px-6 pb-6">
-                                    <Link href="/particulares/bodas" className="text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1 group-hover:gap-2 transition-all">
+                                <div className="px-6 pb-6 sm:px-7 sm:pb-7">
+                                    <Link href="/particulares/bodas" className="text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1 group-hover:gap-2 transition-all">
                                         <span>Ver detalles para bodas</span>
                                         <span>→</span>
                                     </Link>
                                 </div>
                             </div>
 
-                            <div className="group rounded-2xl overflow-hidden border border-emerald-500/40 hover:border-emerald-400 bg-slate-900/80 shadow-2xl transition-all duration-300 flex flex-col justify-between relative">
-                                <div className="absolute -top-3 right-6 z-10 px-3 py-1 bg-emerald-500 text-slate-950 font-bold text-[10px] uppercase tracking-wider rounded-full shadow-md">
+                            {/* 02: EMPRESAS (REESTRUCTURADO SIN CORTE DE BADGE) */}
+                            <div className="relative pt-3 flex flex-col">
+                                <div className="absolute top-0 right-6 z-20 px-3.5 py-1 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-bold text-[10px] uppercase tracking-wider rounded-full shadow-lg shadow-amber-500/25">
                                     Más Solicitado B2B
                                 </div>
-                                <div>
-                                    <div className="relative w-full aspect-[16/10] overflow-hidden bg-neutral-900">
-                                        <Image
-                                            src="/images/mago-para-empresas-en-madrid.webp"
-                                            alt="Magia para eventos de empresa en Madrid"
-                                            fill
-                                            className="object-cover group-hover:scale-105 transition-transform duration-700"
-                                            sizes="(max-width: 768px) 100vw, 33vw"
-                                            placeholder="blur"
-                                            blurDataURL={galleryBlurs['/images/mago-para-empresas-en-madrid.webp']}
-                                        />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
-                                        <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/10 text-emerald-300 text-[10px] font-semibold uppercase tracking-wider">
-                                            Empresas & Cenas
-                                        </span>
-                                    </div>
-                                    <div className="p-6">
-                                        <h3 className="text-xl font-[Cinzel] font-bold text-white mb-1 group-hover:text-emerald-300 transition-colors">
-                                            Eventos Corporativos
-                                        </h3>
-                                        <div className="text-2xl font-[Cinzel] font-bold text-emerald-400 mb-3">
-                                            500€ – 750€
+                                <div className="group rounded-3xl overflow-hidden border border-amber-500/40 hover:border-amber-400 bg-slate-900/80 shadow-2xl transition-all duration-300 flex-1 flex flex-col justify-between">
+                                    <div>
+                                        <div className="relative w-full aspect-[16/10] overflow-hidden bg-neutral-900">
+                                            <Image
+                                                src="/images/mago-para-empresas-en-madrid.webp"
+                                                alt="Magia para eventos de empresa en Madrid"
+                                                fill
+                                                className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                                sizes="(max-width: 768px) 100vw, 33vw"
+                                                placeholder="blur"
+                                                blurDataURL={galleryBlurs['/images/mago-para-empresas-en-madrid.webp']}
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
+                                            <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur-md border border-amber-400/30 text-amber-300 text-[10px] font-semibold uppercase tracking-wider">
+                                                Empresas & Cenas
+                                            </span>
                                         </div>
-                                        <p className="text-slate-400 text-xs leading-relaxed mb-4">
-                                            Networking para cócteles de empresa, pases de mesa en cenas navideñas y dinamización en ferias y congresos.
-                                        </p>
-                                        <ul className="text-xs text-slate-300 space-y-1.5 mb-4">
-                                            <li>✦ Personalización con valores de marca</li>
-                                            <li>✦ Facturación oficial profesional</li>
-                                            <li>✦ Presentación en español o inglés</li>
-                                        </ul>
+                                        <div className="p-6 sm:p-7">
+                                            <h3 className="text-xl font-[Cinzel] font-bold text-white mb-1 group-hover:text-amber-400 transition-colors">
+                                                Eventos Corporativos
+                                            </h3>
+                                            <div className="text-2xl font-[Cinzel] font-bold text-amber-400 mb-3">
+                                                500€ – 750€
+                                            </div>
+                                            <p className="text-slate-400 text-xs leading-relaxed mb-4">
+                                                Networking para cócteles de empresa, pases de mesa en cenas navideñas y dinamización en ferias y congresos.
+                                            </p>
+                                            <ul className="text-xs text-slate-300 space-y-1.5 mb-4">
+                                                <li>✦ Personalización con valores de marca</li>
+                                                <li>✦ Facturación oficial profesional</li>
+                                                <li>✦ Presentación en español o inglés</li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="px-6 pb-6">
-                                    <Link href="/empresas" className="text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1 group-hover:gap-2 transition-all">
-                                        <span>Ver opciones corporativas</span>
-                                        <span>→</span>
-                                    </Link>
+                                    <div className="px-6 pb-6 sm:px-7 sm:pb-7">
+                                        <Link href="/empresas" className="text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1 group-hover:gap-2 transition-all">
+                                            <span>Ver opciones corporativas</span>
+                                            <span>→</span>
+                                        </Link>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div className="group rounded-2xl overflow-hidden border border-white/10 hover:border-emerald-400/50 bg-slate-900/60 shadow-xl transition-all duration-300 flex flex-col justify-between">
+                            {/* 03: CELEBRACIONES PRIVADAS */}
+                            <div className="group rounded-3xl overflow-hidden border border-white/10 hover:border-amber-400/50 bg-slate-900/60 shadow-xl transition-all duration-300 flex flex-col justify-between">
                                 <div>
                                     <div className="relative w-full aspect-[16/10] overflow-hidden bg-neutral-900">
                                         <Image
@@ -409,15 +414,15 @@ export default function ContratarMagoMadridPage() {
                                             blurDataURL={galleryBlurs['/images/risas-reacciones-magia-restaurante-madrid.webp']}
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
-                                        <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/10 text-amber-300 text-[10px] font-semibold uppercase tracking-wider">
+                                        <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur-md border border-amber-400/30 text-amber-300 text-[10px] font-semibold uppercase tracking-wider">
                                             Cumpleaños & Fiestas
                                         </span>
                                     </div>
-                                    <div className="p-6">
-                                        <h3 className="text-xl font-[Cinzel] font-bold text-white mb-1 group-hover:text-emerald-300 transition-colors">
+                                    <div className="p-6 sm:p-7">
+                                        <h3 className="text-xl font-[Cinzel] font-bold text-white mb-1 group-hover:text-amber-400 transition-colors">
                                             Celebraciones Privadas
                                         </h3>
-                                        <div className="text-2xl font-[Cinzel] font-bold text-emerald-400 mb-3">
+                                        <div className="text-2xl font-[Cinzel] font-bold text-amber-400 mb-3">
                                             Desde 300€
                                         </div>
                                         <p className="text-slate-400 text-xs leading-relaxed mb-4">
@@ -430,8 +435,8 @@ export default function ContratarMagoMadridPage() {
                                         </ul>
                                     </div>
                                 </div>
-                                <div className="px-6 pb-6">
-                                    <Link href="/particulares/fiestas-cumpleanos-madrid" className="text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1 group-hover:gap-2 transition-all">
+                                <div className="px-6 pb-6 sm:px-7 sm:pb-7">
+                                    <Link href="/particulares/fiestas-cumpleanos-madrid" className="text-xs font-bold text-amber-400 hover:text-amber-300 flex items-center gap-1 group-hover:gap-2 transition-all">
                                         <span>Ver fiestas y cumpleaños</span>
                                         <span>→</span>
                                     </Link>
@@ -453,7 +458,7 @@ export default function ContratarMagoMadridPage() {
                                 { step: '03', title: 'EJECUCIÓN', desc: 'Despliegue del ilusionista en el evento con precisión absoluta. Control de la atención y asombro a centímetros de distancia, logrando el máximo impacto emocional.' }
                             ].map((item) => (
                                 <div key={item.step} className="bg-zinc-900/40 backdrop-blur-2xl border border-white/5 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] p-8 rounded-[2rem] hover:-translate-y-2 hover:bg-zinc-800/50 transition-all duration-500 ease-out group">
-                                    <div className="text-emerald-500/20 font-mono text-5xl font-bold mb-4 group-hover:text-emerald-500/40 transition-colors">
+                                    <div className="text-amber-500/20 font-mono text-5xl font-bold mb-4 group-hover:text-amber-400/40 transition-colors">
                                         {item.step}
                                     </div>
                                     <h3 className="text-white font-[Cinzel] font-bold text-lg mb-2">{item.title}</h3>
@@ -465,7 +470,7 @@ export default function ContratarMagoMadridPage() {
 
                     {/* BENEFICIOS / TRUST BLOCKS */}
                     <section className="mb-24 bg-white/5 backdrop-blur-3xl border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] rounded-[3rem] p-8 md:p-16 overflow-hidden relative">
-                        <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none" />
+                        <div className="absolute top-0 right-0 w-[40rem] h-[40rem] bg-amber-500/5 blur-[120px] rounded-full pointer-events-none" />
                         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                             <div>
                                 <h2 className="text-3xl md:text-5xl font-[Cinzel] text-white font-bold mb-6">Por qué elegir a un especialista</h2>
@@ -479,7 +484,7 @@ export default function ContratarMagoMadridPage() {
                                         { title: 'Ilusionismo Interactivo', desc: 'La magia ocurre en sus propias manos.' }
                                     ].map((item, i) => (
                                         <li key={i} className="flex gap-4 items-start">
-                                            <span className="text-emerald-500 font-mono mt-1">{"//"}</span>
+                                            <span className="text-amber-400 font-mono mt-1">{"//"}</span>
                                             <div>
                                                 <strong className="text-white text-sm block">{item.title}</strong>
                                                 <span className="text-slate-500 text-sm">{item.desc}</span>
@@ -506,7 +511,7 @@ export default function ContratarMagoMadridPage() {
                                         "El control sobre el grupo y la técnica impecable transformaron por completo la dinámica de nuestro evento de empresa. Fue el tema de conversación durante semanas."
                                     </p>
                                     <div className="flex items-center gap-3">
-                                        <div className="w-9 h-9 bg-emerald-500/20 border border-emerald-500/40 rounded-full flex items-center justify-center text-emerald-400 font-bold text-xs">
+                                        <div className="w-9 h-9 bg-amber-500/20 border border-amber-500/40 rounded-full flex items-center justify-center text-amber-400 font-bold text-xs">
                                             HR
                                         </div>
                                         <div>
@@ -523,7 +528,7 @@ export default function ContratarMagoMadridPage() {
                     <section className="mb-24">
                         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
                             <div>
-                                <span className="text-emerald-400 text-xs font-mono uppercase tracking-[0.2em] block mb-2 font-bold">
+                                <span className="text-amber-400 text-xs font-mono uppercase tracking-[0.2em] block mb-2 font-bold">
                                     En Vivo y en Directo
                                 </span>
                                 <h2 className="text-3xl md:text-4xl font-[Cinzel] text-white font-bold">
@@ -535,7 +540,7 @@ export default function ContratarMagoMadridPage() {
                             </div>
                             <Link 
                                 href="/galeria"
-                                className="text-xs font-bold text-emerald-400 hover:text-emerald-300 uppercase tracking-widest flex items-center gap-2 group transition-all"
+                                className="text-xs font-bold text-amber-400 hover:text-amber-300 uppercase tracking-widest flex items-center gap-2 group transition-all"
                             >
                                 <span>Explorar Galería Completa</span>
                                 <span className="group-hover:translate-x-1 transition-transform">→</span>
@@ -549,7 +554,7 @@ export default function ContratarMagoMadridPage() {
                                 { src: '/images/cartomagia-de-cerca-angel-ruiz.webp', alt: 'Manipulación experta de cartas en magia de cerca', tag: 'Cartomagia' },
                                 { src: '/images/mago-rooftop-eventos-privados-madrid.webp', alt: 'Magia en evento privado exclusivo en rooftop de Madrid', tag: 'Rooftops & VIP' }
                             ].map((pic, idx) => (
-                                <div key={idx} className="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-neutral-900 border border-white/10 hover:border-emerald-400/50 shadow-xl transition-all">
+                                <div key={idx} className="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-neutral-900 border border-white/10 hover:border-amber-400/50 shadow-xl transition-all">
                                     <Image
                                         src={pic.src}
                                         alt={pic.alt}
@@ -560,7 +565,7 @@ export default function ContratarMagoMadridPage() {
                                         blurDataURL={galleryBlurs[pic.src]}
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
-                                    <span className="absolute bottom-3 left-3 px-2.5 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/10 text-emerald-300 text-[10px] font-semibold uppercase tracking-wider">
+                                    <span className="absolute bottom-3 left-3 px-2.5 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-amber-400/30 text-amber-300 text-[10px] font-semibold uppercase tracking-wider">
                                         {pic.tag}
                                     </span>
                                 </div>
@@ -589,22 +594,22 @@ export default function ContratarMagoMadridPage() {
                                     <tbody className="text-slate-300 font-light">
                                         <tr className="border-t border-white/5">
                                             <td className="px-5 py-3 text-white font-medium">Precio</td>
-                                            <td className="px-5 py-3 text-emerald-400">Sin comisiones (20-40% menos)</td>
+                                            <td className="px-5 py-3 text-amber-400 font-medium">Sin comisiones (20-40% menos)</td>
                                             <td className="px-5 py-3">Incluye margen de agencia</td>
                                         </tr>
                                         <tr className="border-t border-white/5 bg-white/[0.02]">
                                             <td className="px-5 py-3 text-white font-medium">Comunicación</td>
-                                            <td className="px-5 py-3 text-emerald-400">Directa con el artista</td>
+                                            <td className="px-5 py-3 text-amber-400 font-medium">Directa con el artista</td>
                                             <td className="px-5 py-3">Intermediario (posibles malentendidos)</td>
                                         </tr>
                                         <tr className="border-t border-white/5">
                                             <td className="px-5 py-3 text-white font-medium">Personalización</td>
-                                            <td className="px-5 py-3 text-emerald-400">Total (efectos a medida)</td>
+                                            <td className="px-5 py-3 text-amber-400 font-medium">Total (efectos a medida)</td>
                                             <td className="px-5 py-3">Limitada (paquetes estándar)</td>
                                         </tr>
                                         <tr className="border-t border-white/5 bg-white/[0.02]">
                                             <td className="px-5 py-3 text-white font-medium">Velocidad de respuesta</td>
-                                            <td className="px-5 py-3 text-emerald-400">Presupuesto en menos de 1h</td>
+                                            <td className="px-5 py-3 text-amber-400 font-medium">Presupuesto en menos de 1h</td>
                                             <td className="px-5 py-3">24-72h habitual</td>
                                         </tr>
                                         <tr className="border-t border-white/5">
@@ -670,7 +675,7 @@ export default function ContratarMagoMadridPage() {
                     </section>
 
                     {/* CONTACT BAR */}
-                    <div className="bg-gradient-to-r from-emerald-900/20 to-zinc-900/40 backdrop-blur-3xl border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] rounded-[2rem] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div className="bg-gradient-to-r from-amber-950/20 to-zinc-900/40 backdrop-blur-3xl border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] rounded-[2rem] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
                         <div>
                             <h2 className="text-2xl font-[Cinzel] text-white font-bold mb-2">Precios Mago Madrid: desde 300€</h2>
                             <p className="text-slate-400 text-sm max-w-lg mb-4">
@@ -682,7 +687,7 @@ export default function ContratarMagoMadridPage() {
                         </div>
                         <div className="flex flex-col gap-4 items-end active:scale-[0.97] transition-transform duration-200 shrink-0">
                             <ContactButtonClient label="INICIAR CONTACTO" />
-                            <a href="https://wa.me/34648055636?text=Hola%20%C3%81ngel,%20he%20visto%20las%20tarifas%20en%20la%20web%20y%20quiero%20consultar%20disponibilidad." target="_blank" rel="noopener noreferrer" className="text-sm text-emerald-400 hover:text-emerald-300 font-bold flex items-center gap-2 transition-colors">
+                            <a href="https://wa.me/34648055636?text=Hola%20%C3%81ngel,%20he%20visto%20las%20tarifas%20en%20la%20web%20y%20quiero%20consultar%20disponibilidad." target="_blank" rel="noopener noreferrer" className="text-sm text-amber-400 hover:text-amber-300 font-bold flex items-center gap-2 transition-colors">
                                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                                 Consultar disponibilidad ahora
                             </a>

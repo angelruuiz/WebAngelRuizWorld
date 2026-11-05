@@ -200,6 +200,9 @@ export default function MagoSierraMadridHub() {
                                             blurDataURL={galleryBlurs[item.src]}
                                         />
                                         <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80" />
+                                        <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur-md border border-amber-400/30 text-amber-300 text-[10px] font-semibold uppercase tracking-wider">
+                                            {item.title}
+                                        </span>
                                     </div>
                                     <div className="p-6">
                                         <h3 className="text-lg font-[Cinzel] font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">
