@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import galleryBlurs from '@/public/images/gallery-blurs.json';
 import NavFooterClient from '@/components/NavFooterClient';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import FAQItem from '@/components/FAQItem';
@@ -118,8 +119,18 @@ export default function DespedidasSolteraMadridPage() {
                                     alt="Ángel Ruiz mago para despedidas de soltera en Madrid"
                                     fill
                                     className="object-cover object-top hover:scale-105 transition-transform duration-[2s] ease-out"
+                                    placeholder={galleryBlurs['foto-bio.webp'] ? 'blur' : 'empty'}
+                                    blurDataURL={galleryBlurs['foto-bio.webp']}
                                     priority
                                 />
+                                <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-[#d4a853]/30 text-[#d4a853] text-xs font-semibold">
+                                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                    <span>Madrid & Destinos Exclusivos</span>
+                                </div>
+                                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-slate-950/85 backdrop-blur-md border border-white/10">
+                                    <p className="text-white font-[Cinzel] font-semibold text-sm">Ángel Ruiz · Despedidas & Fiestas</p>
+                                    <p className="text-xs text-slate-300 mt-0.5">La futura novia como protagonista absoluta de la velada</p>
+                                </div>
                                 <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/80 via-transparent to-transparent" />
                             </div>
                         </FadeIn>
@@ -148,6 +159,72 @@ export default function DespedidasSolteraMadridPage() {
                                         <p className="text-slate-400 text-sm font-light leading-relaxed">{item.desc}</p>
                                     </div>
                                 ))}
+                            </div>
+                        </div>
+                    </FadeIn>
+
+                    {/* Galería Visual Despedidas */}
+                    <FadeIn y={30} className="py-24 border-t border-white/5">
+                        <div className="max-w-6xl mx-auto">
+                            <div className="text-center mb-12">
+                                <span className="text-[#d4a853] text-xs font-semibold uppercase tracking-[0.2em]">En Directo</span>
+                                <h2 className="text-3xl md:text-5xl font-[Cinzel] text-white mt-2">Momentos que Recordaréis Siempre</h2>
+                                <p className="text-slate-400 text-sm max-w-2xl mx-auto mt-3 font-light">
+                                    Risas espontáneas, miradas de asombro y fotos increíbles para el recuerdo de una despedida inolvidable.
+                                </p>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div className="group relative rounded-2xl overflow-hidden border border-white/10 bg-slate-900/60 aspect-[4/3]">
+                                    <Image
+                                        src="/images/risas-reacciones-magia-restaurante-madrid.webp"
+                                        alt="Risas y complicidad en despedida de soltera en Madrid"
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                        placeholder={galleryBlurs['risas-reacciones-magia-restaurante-madrid.webp'] ? 'blur' : 'empty'}
+                                        blurDataURL={galleryBlurs['risas-reacciones-magia-restaurante-madrid.webp']}
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                                    <div className="absolute bottom-4 left-4 right-4">
+                                        <span className="text-[10px] font-semibold uppercase tracking-wider text-[#d4a853]">Complicidad Total</span>
+                                        <p className="text-sm text-white font-medium">Carcajadas compartidas en grupo</p>
+                                    </div>
+                                </div>
+
+                                <div className="group relative rounded-2xl overflow-hidden border border-white/10 bg-slate-900/60 aspect-[4/3]">
+                                    <Image
+                                        src="/images/mago-bodas-cocktail-exterior-madrid.webp"
+                                        alt="Magia de cóctel distendido en celebración privada"
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                        placeholder={galleryBlurs['mago-bodas-cocktail-exterior-madrid.webp'] ? 'blur' : 'empty'}
+                                        blurDataURL={galleryBlurs['mago-bodas-cocktail-exterior-madrid.webp']}
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                                    <div className="absolute bottom-4 left-4 right-4">
+                                        <span className="text-[10px] font-semibold uppercase tracking-wider text-[#d4a853]">Cóctel & Brindis</span>
+                                        <p className="text-sm text-white font-medium">Magia fluida copa en mano</p>
+                                    </div>
+                                </div>
+
+                                <div className="group relative rounded-2xl overflow-hidden border border-white/10 bg-slate-900/60 aspect-[4/3]">
+                                    <Image
+                                        src="/images/mago-rooftop-eventos-privados-madrid.webp"
+                                        alt="Fiesta privada en terraza o ático en Madrid con mago Ángel Ruiz"
+                                        fill
+                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                        placeholder={galleryBlurs['mago-rooftop-eventos-privados-madrid.webp'] ? 'blur' : 'empty'}
+                                        blurDataURL={galleryBlurs['mago-rooftop-eventos-privados-madrid.webp']}
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                                    <div className="absolute bottom-4 left-4 right-4">
+                                        <span className="text-[10px] font-semibold uppercase tracking-wider text-[#d4a853]">Espacios Exclusivos</span>
+                                        <p className="text-sm text-white font-medium">Áticos, reservados y casas rurales</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </FadeIn>

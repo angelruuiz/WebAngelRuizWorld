@@ -1,4 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
+import galleryBlurs from '@/public/images/gallery-blurs.json';
+import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import NavFooterClient from '@/components/NavFooterClient';
 import FAQItem from '@/components/FAQItem';
@@ -103,34 +106,66 @@ export default function Page() {
       <header className="relative pt-32 pb-20 border-b border-white/10 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/10 via-slate-950 to-slate-950"></div>
         <div className="max-w-6xl mx-auto px-6 relative z-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 mb-6 text-amber-400 text-xs uppercase tracking-widest font-semibold">
-            <span>✦</span>
-            <span>Magia de Mesa & Residencias en Madrid</span>
-          </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-[Cinzel] font-bold text-white tracking-wide mb-6 uppercase">
-            Mago para Restaurantes en Madrid
-          </h1>
-          <p className="text-lg md:text-xl text-slate-300 max-w-3xl font-light leading-relaxed">
-            Eleva la experiencia gastronómica de tus comensales con <span className="text-amber-400 font-medium">magia de cerca íntima y elegante mesa a mesa</span>. Fidelización, reseñas positivas y diferenciación hostelera premium.
-          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-7">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 mb-6 text-amber-400 text-xs uppercase tracking-widest font-semibold">
+                <span>✦</span>
+                <span>Magia de Mesa & Residencias en Madrid</span>
+              </div>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-[Cinzel] font-bold text-white tracking-wide mb-6 uppercase">
+                Mago para Restaurantes en Madrid
+              </h1>
+              <p className="text-lg md:text-xl text-slate-300 max-w-2xl font-light leading-relaxed">
+                Eleva la experiencia gastronómica de tus comensales con <span className="text-amber-400 font-medium">magia de cerca íntima y elegante mesa a mesa</span>. Fidelización, reseñas positivas y diferenciación hostelera premium.
+              </p>
 
-          {/* ACCIÓN DIRECTA ABOVE-THE-FOLD */}
-          <div className="mt-8 flex flex-wrap gap-4 items-center">
-            <a
-              href="#solicitar-propuesta"
-              className="inline-flex items-center justify-center px-8 py-4 bg-amber-500 text-slate-950 font-bold rounded-full uppercase tracking-wider text-xs hover:bg-amber-400 transition-all shadow-lg shadow-amber-500/20 hover:scale-105 active:scale-95"
-            >
-              Solicitar Demo de 15 min en tu Local
-            </a>
-            <a
-              href="https://wa.me/34648055636?text=Hola%20%C3%81ngel%2C%20tengo%20un%20restaurante%20en%20Madrid%20y%20me%20gustar%C3%ADa%20ver%20c%C3%B3mo%20funciona%20la%20magia%20en%20mesas%20para%20cenas"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-7 py-4 bg-slate-900/90 text-white font-medium rounded-full text-xs border border-white/15 hover:border-amber-400/40 hover:bg-slate-800 transition-all"
-            >
-              <span>WhatsApp Directo</span>
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            </a>
+              {/* ACCIÓN DIRECTA ABOVE-THE-FOLD */}
+              <div className="mt-8 flex flex-wrap gap-4 items-center">
+                <a
+                  href="#solicitar-propuesta"
+                  className="inline-flex items-center justify-center px-7 py-3.5 bg-amber-500 text-slate-950 font-bold rounded-full uppercase tracking-wider text-xs hover:bg-amber-400 transition-all shadow-lg shadow-amber-500/20 hover:scale-105 active:scale-95"
+                >
+                  Solicitar Demo en tu Local
+                </a>
+                <a
+                  href="https://wa.me/34648055636?text=Hola%20%C3%81ngel%2C%20tengo%20un%20restaurante%20en%20Madrid%20y%20me%20gustar%C3%ADa%20ver%20c%C3%B3mo%20funciona%20la%20magia%20en%20mesas%20para%20cenas"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-slate-900/90 text-white font-medium rounded-full text-xs border border-white/15 hover:border-amber-400/40 hover:bg-slate-800 transition-all"
+                >
+                  <span>WhatsApp Directo (&lt;1h)</span>
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                </a>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5">
+              <div className="relative group rounded-3xl overflow-hidden border border-amber-500/20 bg-slate-900/60 shadow-2xl shadow-black/80">
+                <div className="relative aspect-[4/5] sm:aspect-[4/3] lg:aspect-[4/5] w-full overflow-hidden">
+                  <Image
+                    src="/images/risas-reacciones-magia-restaurante-madrid.webp"
+                    alt="Ángel Ruiz realizando magia de cerca en restaurante de Madrid"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                    placeholder={galleryBlurs['risas-reacciones-magia-restaurante-madrid.webp'] ? 'blur' : 'empty'}
+                    blurDataURL={galleryBlurs['risas-reacciones-magia-restaurante-madrid.webp']}
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                  
+                  <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-amber-500/30 text-amber-300 text-xs font-semibold">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span>Table Hopping & Residencias Hosteleras</span>
+                  </div>
+
+                  <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-slate-950/85 backdrop-blur-md border border-white/10">
+                    <p className="text-white font-[Cinzel] font-semibold text-sm">Ángel Ruiz · Hostelería Selecta</p>
+                    <p className="text-xs text-slate-300 mt-0.5">Magia de cerca discreta y respetuosa con el servicio y comensales</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -166,6 +201,74 @@ export default function Page() {
               <div className="text-4xl md:text-5xl font-[Cinzel] font-bold text-white mb-2">100%</div>
               <div className="text-amber-400/90 text-sm font-medium">Integración con el Servicio</div>
               <p className="mt-3 text-xs text-slate-400 leading-relaxed font-light">Timing perfecto con cocina y camareros para entretener tiempos de espera entre platos con delicadeza.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* GALERÍA VISUAL: MAGIA EN RESTAURANTES */}
+      <section className="py-20 border-b border-white/10 bg-slate-950/30">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <span className="text-amber-400 text-xs font-semibold uppercase tracking-[0.2em]">En Sala</span>
+            <h2 className="text-3xl sm:text-4xl font-[Cinzel] font-bold text-white uppercase tracking-wide mt-2">
+              Magia Íntima de Mesa en Mesa
+            </h2>
+            <p className="text-slate-400 text-sm max-w-2xl mx-auto mt-3 font-light">
+              La sobremesa perfecta. Efectos visuales elegantes que no interrumpen y que convierten una comida ordinaria en una velada excepcional.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="group relative rounded-2xl overflow-hidden border border-white/10 bg-slate-900/60 aspect-[16/10]">
+              <Image
+                src="/images/risas-reacciones-magia-restaurante-madrid.webp"
+                alt="Comensales disfrutando de magia en restaurante en Madrid"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                placeholder={galleryBlurs['risas-reacciones-magia-restaurante-madrid.webp'] ? 'blur' : 'empty'}
+                blurDataURL={galleryBlurs['risas-reacciones-magia-restaurante-madrid.webp']}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-amber-400">Risas & Sorpresa</span>
+                <p className="text-sm text-white font-medium">Reacciones genuinas entre platos</p>
+              </div>
+            </div>
+
+            <div className="group relative rounded-2xl overflow-hidden border border-white/10 bg-slate-900/60 aspect-[16/10]">
+              <Image
+                src="/images/cartomagia-angel-ruiz.webp"
+                alt="Magia de cartas y manos limpias de mesa en mesa"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                placeholder={galleryBlurs['cartomagia-angel-ruiz.webp'] ? 'blur' : 'empty'}
+                blurDataURL={galleryBlurs['cartomagia-angel-ruiz.webp']}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-amber-400">Técnica Exquisita</span>
+                <p className="text-sm text-white font-medium">Cartomagia y mentalismo a corta distancia</p>
+              </div>
+            </div>
+
+            <div className="group relative rounded-2xl overflow-hidden border border-white/10 bg-slate-900/60 aspect-[16/10]">
+              <Image
+                src="/images/ilusionismo-coctel-elegante-madrid-angel-ruiz.webp"
+                alt="Elegancia en salas de hostelería y terrazas gastronómicas"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                placeholder={galleryBlurs['ilusionismo-coctel-elegante-madrid-angel-ruiz.webp'] ? 'blur' : 'empty'}
+                blurDataURL={galleryBlurs['ilusionismo-coctel-elegante-madrid-angel-ruiz.webp']}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-amber-400">Distinción Hostelería</span>
+                <p className="text-sm text-white font-medium">Presencia impecable y savoir-faire</p>
+              </div>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import galleryBlurs from '@/public/images/gallery-blurs.json';
 import NavFooterClient from '@/components/NavFooterClient';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
@@ -153,16 +154,26 @@ export default function EventosDetailPage() {
                             </div>
                         </div>
 
-                        <div className="relative md:sticky md:top-32 h-[350px] md:h-[450px] rounded-2xl overflow-hidden border border-slate-800 shadow-xl">
+                        <div className="relative md:sticky md:top-32 h-[350px] md:h-[450px] rounded-2xl overflow-hidden border border-amber-500/20 shadow-2xl group">
                             <Image
                                 src="/images/fiesta-eventos-madrid.webp"
                                 alt="Mago para eventos privados en Madrid Ángel Ruiz ilusionista especializado en cumpleaños y fiestas"
                                 fill
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 550px"
-                                className="object-cover object-top"
+                                className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                                placeholder={galleryBlurs['fiesta-eventos-madrid.webp'] ? 'blur' : 'empty'}
+                                blurDataURL={galleryBlurs['fiesta-eventos-madrid.webp']}
                                 priority
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/50 to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+                            <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-amber-500/30 text-amber-300 text-xs font-semibold">
+                                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                                <span>Eventos Privados & Fiestas Madrid</span>
+                            </div>
+                            <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-slate-950/85 backdrop-blur-md border border-white/10">
+                                <p className="text-white font-[Cinzel] font-semibold text-sm">Ángel Ruiz · Ilusionismo Privado</p>
+                                <p className="text-xs text-slate-300 mt-0.5">Magia de cerca personalizada para anfitriones exigentes</p>
+                            </div>
                         </div>
                     </div>
 
@@ -179,6 +190,72 @@ export default function EventosDetailPage() {
                             <p>
                                 Imagina poder relajarte en tu propia fiesta, con una copa en la mano, sabiendo que tus invitados están viviendo algo extraordinario y que el éxito del evento está completamente asegurado. Esa es la verdadera tranquilidad que aporta la magia profesional.
                             </p>
+                        </div>
+                    </section>
+
+                    {/* Galería Visual de Eventos Privados */}
+                    <section className="border-t border-white/5 pt-16 mt-16">
+                        <div className="text-center mb-12">
+                            <span className="text-amber-400 text-xs font-semibold uppercase tracking-[0.2em]">En Directo</span>
+                            <h2 className="text-3xl sm:text-4xl font-[Cinzel] text-white mt-2 uppercase tracking-wide">
+                                Celebraciones Exclusivas en Imágenes
+                            </h2>
+                            <p className="text-slate-400 text-sm max-w-2xl mx-auto mt-3 font-light">
+                                Desde áticos en el centro de Madrid hasta jardines y fincas privadas en la sierra. Ilusionismo adaptado al espacio de tu fiesta.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div className="group relative rounded-2xl overflow-hidden border border-white/10 bg-slate-900/60 aspect-[16/10]">
+                                <Image
+                                    src="/images/mago-rooftop-eventos-privados-madrid.webp"
+                                    alt="Fiestas privadas en áticos y terrazas de Madrid con mago Ángel Ruiz"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                    placeholder={galleryBlurs['mago-rooftop-eventos-privados-madrid.webp'] ? 'blur' : 'empty'}
+                                    blurDataURL={galleryBlurs['mago-rooftop-eventos-privados-madrid.webp']}
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                                <div className="absolute bottom-4 left-4 right-4">
+                                    <span className="text-[10px] font-semibold uppercase tracking-wider text-amber-400">Rooftops & Terrazas</span>
+                                    <p className="text-sm text-white font-medium">Fiestas exclusivas en áticos de Madrid</p>
+                                </div>
+                            </div>
+
+                            <div className="group relative rounded-2xl overflow-hidden border border-white/10 bg-slate-900/60 aspect-[16/10]">
+                                <Image
+                                    src="/images/angel-ruiz-evento.webp"
+                                    alt="Magia de cerca en salones y aniversarios privados"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                    placeholder={galleryBlurs['angel-ruiz-evento.webp'] ? 'blur' : 'empty'}
+                                    blurDataURL={galleryBlurs['angel-ruiz-evento.webp']}
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                                <div className="absolute bottom-4 left-4 right-4">
+                                    <span className="text-[10px] font-semibold uppercase tracking-wider text-amber-400">Salones Privados</span>
+                                    <p className="text-sm text-white font-medium">Aniversarios y 40/50 cumpleaños</p>
+                                </div>
+                            </div>
+
+                            <div className="group relative rounded-2xl overflow-hidden border border-white/10 bg-slate-900/60 aspect-[16/10]">
+                                <Image
+                                    src="/images/ilusionista-cocktail-jardin-madrid.webp"
+                                    alt="Magia en fincas, villas y jardines en Madrid"
+                                    fill
+                                    sizes="(max-width: 768px) 100vw, 33vw"
+                                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                                    placeholder={galleryBlurs['ilusionista-cocktail-jardin-madrid.webp'] ? 'blur' : 'empty'}
+                                    blurDataURL={galleryBlurs['ilusionista-cocktail-jardin-madrid.webp']}
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                                <div className="absolute bottom-4 left-4 right-4">
+                                    <span className="text-[10px] font-semibold uppercase tracking-wider text-amber-400">Jardines & Fincas</span>
+                                    <p className="text-sm text-white font-medium">Celebraciones al aire libre y cócteles</p>
+                                </div>
+                            </div>
                         </div>
                     </section>
 

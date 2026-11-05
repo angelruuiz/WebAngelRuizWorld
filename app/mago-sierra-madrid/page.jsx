@@ -1,4 +1,6 @@
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
+import galleryBlurs from '@/public/images/gallery-blurs.json';
 import { locations } from '@/lib/locations';
 import NavFooterClient from '@/components/NavFooterClient';
 import Link from 'next/link';
@@ -139,6 +141,76 @@ export default function MagoSierraMadridHub() {
                             
                             {/* Mapa de Google Maps con zona rodeada */}
                             <SierraMadridMap />
+                        </div>
+                    </section>
+
+                    {/* SECCIÓN VISUAL — FINCAS Y JARDINES DE LA SIERRA */}
+                    <section className="mb-24">
+                        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                            <div>
+                                <span className="text-amber-400 text-xs font-mono uppercase tracking-[0.2em] block mb-2 font-bold">
+                                    Escenarios Únicos en la Sierra
+                                </span>
+                                <h2 className="text-3xl md:text-4xl font-[Cinzel] text-white font-bold">
+                                    Magia en Fincas, Jardines y Villas Privadas
+                                </h2>
+                                <p className="text-slate-400 text-sm max-w-xl mt-1 font-light">
+                                    El entorno natural de la Sierra de Guadarrama es el escenario ideal para el ilusionismo de cerca al aire libre.
+                                </p>
+                            </div>
+                            <Link 
+                                href="/galeria"
+                                className="text-xs font-bold text-amber-400 hover:text-amber-300 uppercase tracking-widest flex items-center gap-2 group transition-all"
+                            >
+                                <span>Ver Más Fotos</span>
+                                <span className="group-hover:translate-x-1 transition-transform">→</span>
+                            </Link>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {[
+                                {
+                                    src: '/images/magia-al-aire-libre-eventos-madrid.webp',
+                                    alt: 'Espectáculo de magia al aire libre en finca de la sierra de Madrid',
+                                    title: 'Fincas & Exteriores',
+                                    caption: 'Cócteles y recepciones bajo los pinos y jardines de la sierra sin necesidad de escenario.'
+                                },
+                                {
+                                    src: '/images/ilusionista-cocktail-jardin-madrid.webp',
+                                    alt: 'Magia de cerca en cóctel de boda en la sierra de Madrid',
+                                    title: 'Bodas de Ensueño',
+                                    caption: 'Intervención dinámica de corrillo en corrillo durante la copa de bienvenida.'
+                                },
+                                {
+                                    src: '/images/mago-rooftop-eventos-privados-madrid.webp',
+                                    alt: 'Magia en celebración privada en chalet de la zona noroeste',
+                                    title: 'Villas & Aniversarios',
+                                    caption: 'Celebraciones familiares y cumpleaños de adultos en chalets privados del noroeste.'
+                                }
+                            ].map((item, idx) => (
+                                <div key={idx} className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-amber-400/50 bg-slate-900/60 shadow-xl transition-all flex flex-col justify-between">
+                                    <div className="relative w-full aspect-[16/11] overflow-hidden bg-neutral-900">
+                                        <Image
+                                            src={item.src}
+                                            alt={item.alt}
+                                            fill
+                                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                            sizes="(max-width: 768px) 100vw, 33vw"
+                                            placeholder="blur"
+                                            blurDataURL={galleryBlurs[item.src]}
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80" />
+                                    </div>
+                                    <div className="p-6">
+                                        <h3 className="text-lg font-[Cinzel] font-bold text-white mb-2 group-hover:text-amber-300 transition-colors">
+                                            {item.title}
+                                        </h3>
+                                        <p className="text-slate-400 text-xs leading-relaxed font-light">
+                                            {item.caption}
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </section>
 

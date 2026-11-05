@@ -1,4 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
+import galleryBlurs from '@/public/images/gallery-blurs.json';
+import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import NavFooterClient from '@/components/NavFooterClient';
 import FAQItem from '@/components/FAQItem';
@@ -104,16 +107,66 @@ export default function Page() {
       <header className="relative pt-32 pb-20 border-b border-white/10 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/10 via-slate-950 to-slate-950"></div>
         <div className="max-w-6xl mx-auto px-6 relative z-10">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 mb-6 text-amber-400 text-xs uppercase tracking-widest font-semibold">
-            <span>✦</span>
-            <span>Dinamización de Stands & Ferias en Madrid</span>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            <div className="lg:col-span-7">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 mb-6 text-amber-400 text-xs uppercase tracking-widest font-semibold">
+                <span>✦</span>
+                <span>Dinamización de Stands & Ferias en Madrid</span>
+              </div>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-[Cinzel] font-bold text-white tracking-wide mb-6 uppercase">
+                Mago para Ferias y Congresos en Madrid
+              </h1>
+              <p className="text-lg md:text-xl text-slate-300 max-w-2xl font-light leading-relaxed">
+                Convierte tu stand en el punto más concurrido de IFEMA. Atracción de público masiva, <span className="text-amber-400 font-medium">captación de leads cualificados y demostraciones de producto con magia visual</span>.
+              </p>
+              {/* Bloque CTA Above-the-fold */}
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <a 
+                  href="https://wa.me/34648055636?text=Hola%20Ángel,%20quisiera%20consultar%20disponibilidad%20para%20dinamizar%20nuestro%20stand%20en%20IFEMA%20Madrid"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3.5 rounded-full bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-emerald-500/25 active:scale-95 transition-all"
+                >
+                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.275.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824z"/></svg>
+                  <span>Consultar Fecha WhatsApp (&lt;1h)</span>
+                </a>
+                <a
+                  href="#presupuesto-empresa"
+                  className="px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/15 border border-amber-400/40 text-amber-300 font-bold text-xs uppercase tracking-wider transition-all"
+                >
+                  <span>Ver Tarifas y Presupuesto</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="lg:col-span-5">
+              <div className="relative group rounded-3xl overflow-hidden border border-amber-500/20 bg-slate-900/60 shadow-2xl shadow-black/80">
+                <div className="relative aspect-[4/5] sm:aspect-[4/3] lg:aspect-[4/5] w-full overflow-hidden">
+                  <Image
+                    src="/images/mago-para-empresas-en-madrid.webp"
+                    alt="Ángel Ruiz dinamizando stand en IFEMA Madrid"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                    placeholder={galleryBlurs['mago-para-empresas-en-madrid.webp'] ? 'blur' : 'empty'}
+                    blurDataURL={galleryBlurs['mago-para-empresas-en-madrid.webp']}
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                  
+                  <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-amber-500/30 text-amber-300 text-xs font-semibold">
+                    <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                    <span>IFEMA Madrid & Congresos B2B</span>
+                  </div>
+
+                  <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-slate-950/85 backdrop-blur-md border border-white/10">
+                    <p className="text-white font-[Cinzel] font-semibold text-sm">Ángel Ruiz · Trade Show Magic</p>
+                    <p className="text-xs text-slate-300 mt-0.5">Captación de visitantes, cualificación de leads y magia con tu producto</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-[Cinzel] font-bold text-white tracking-wide mb-6 uppercase">
-            Mago para Ferias y Congresos en Madrid
-          </h1>
-          <p className="text-lg md:text-xl text-slate-300 max-w-3xl font-light leading-relaxed">
-            Convierte tu stand en el punto más concurrido de IFEMA. Atracción de público masiva, <span className="text-amber-400 font-medium">captación de leads cualificados y demostraciones de producto con magia visual</span>.
-          </p>
         </div>
       </header>
 
@@ -148,6 +201,74 @@ export default function Page() {
               <div className="text-4xl md:text-5xl font-[Cinzel] font-bold text-white mb-2">100%</div>
               <div className="text-amber-400/90 text-sm font-medium">Personalización de Producto</div>
               <p className="mt-3 text-xs text-slate-400 leading-relaxed font-light">Apariciones y transformaciones personalizadas con el producto o mensaje de tu marca.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* GALERÍA VISUAL: FERIAS, STANDS Y CONGRESOS */}
+      <section className="py-20 border-b border-white/10 bg-slate-950/30">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <span className="text-amber-400 text-xs font-semibold uppercase tracking-[0.2em]">En Exposición</span>
+            <h2 className="text-3xl sm:text-4xl font-[Cinzel] font-bold text-white uppercase tracking-wide mt-2">
+              Dinamización y Captación en Directo
+            </h2>
+            <p className="text-slate-400 text-sm max-w-2xl mx-auto mt-3 font-light">
+              Transformamos el tráfico del pasillo en clientes potenciales interesados y reunidos en tu stand de IFEMA o recinto congresual.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="group relative rounded-2xl overflow-hidden border border-white/10 bg-slate-900/60 aspect-[16/10]">
+              <Image
+                src="/images/experiencia-magica-interactiva-publico.webp"
+                alt="Atracción masiva y dinámicas en stand de feria con Ángel Ruiz"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                placeholder={galleryBlurs['experiencia-magica-interactiva-publico.webp'] ? 'blur' : 'empty'}
+                blurDataURL={galleryBlurs['experiencia-magica-interactiva-publico.webp']}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-amber-400">Polo de Atracción</span>
+                <p className="text-sm text-white font-medium">Grupos concentrados frente al stand</p>
+              </div>
+            </div>
+
+            <div className="group relative rounded-2xl overflow-hidden border border-white/10 bg-slate-900/60 aspect-[16/10]">
+              <Image
+                src="/images/cartomagia-de-cerca-angel-ruiz.webp"
+                alt="Magia de cerca personalizada con productos de la marca en ferias"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                placeholder={galleryBlurs['cartomagia-de-cerca-angel-ruiz.webp'] ? 'blur' : 'empty'}
+                blurDataURL={galleryBlurs['cartomagia-de-cerca-angel-ruiz.webp']}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-amber-400">Integración de Marca</span>
+                <p className="text-sm text-white font-medium">Tu producto y mensaje en las manos del cliente</p>
+              </div>
+            </div>
+
+            <div className="group relative rounded-2xl overflow-hidden border border-white/10 bg-slate-900/60 aspect-[16/10]">
+              <Image
+                src="/images/mejor-mago-eventos-corporativos.webp"
+                alt="Ángel Ruiz en eventos corporativos y ferias de negocio"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                placeholder={galleryBlurs['mejor-mago-eventos-corporativos.webp'] ? 'blur' : 'empty'}
+                blurDataURL={galleryBlurs['mejor-mago-eventos-corporativos.webp']}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-amber-400">Traspaso Comercial Fluido</span>
+                <p className="text-sm text-white font-medium">De la emoción al contacto de negocio</p>
+              </div>
             </div>
           </div>
         </div>

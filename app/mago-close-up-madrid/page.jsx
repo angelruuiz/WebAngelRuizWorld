@@ -8,6 +8,8 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 const ContactButtonClient = dynamic(() => import('@/components/ContactButtonClient'), { ssr: false });
 const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod => mod.MagicCursor), { ssr: false });
 const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
+const BioCarousel = dynamic(() => import('@/components/BioCarousel'), { ssr: false });
+import galleryBlurs from '@/public/images/gallery-blurs.json';
 
 export const metadata = {
     title: { absolute: 'Mago Close-Up en Madrid | Magia de Cerca · Ángel Ruiz' },
@@ -242,16 +244,20 @@ export default function MagoCloseUpMadridPage() {
                             </div>
                         </div>
 
-                        <div className="md:col-span-4 relative rounded-[2rem] overflow-hidden border border-white/10 shadow-[inset_0_1px_0_rgba(255,255,255,0.1)] aspect-square md:aspect-auto group">
-                            <Image
-                                src="/images/foto-bio.webp"
-                                alt="Sleight of hand y micromagia en Madrid"
-                                fill
-                                sizes="(max-width: 768px) 100vw, 33vw"
-                                className="object-cover scale-105 group-hover:scale-100 transition-transform duration-1000 ease-[cubic-bezier(0.23,1,0.32,1)] mix-blend-luminosity group-hover:mix-blend-normal"
+                        <div className="md:col-span-4 relative rounded-[2rem] overflow-hidden border border-amber-500/30 shadow-2xl aspect-square md:aspect-auto group bg-slate-900/80">
+                            <BioCarousel 
+                                aspectRatio="aspect-auto"
+                                alt="Ángel Ruiz - Mago Close-Up y magia de cerca en Madrid"
+                                interval={2500}
                                 priority
                             />
-                            <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/90 via-transparent to-transparent" />
+                            <div className="absolute bottom-4 left-4 right-4 z-10 px-4 py-3 rounded-xl bg-slate-950/85 backdrop-blur-md border border-white/10 flex items-center justify-between shadow-lg">
+                                <div>
+                                    <p className="text-sm font-bold text-white font-[Cinzel]">Ángel Ruiz</p>
+                                    <p className="text-[11px] text-amber-400 font-medium">Magia de Cerca · Madrid</p>
+                                </div>
+                                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                            </div>
                         </div>
                     </div>
 
@@ -325,6 +331,82 @@ export default function MagoCloseUpMadridPage() {
                         </div>
                     </section>
 
+                    {/* GALERÍA CLOSE-UP: ASOMBRO A CENTÍMETROS */}
+                    <section className="mb-24">
+                        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                            <div>
+                                <span className="text-amber-400 text-xs font-mono uppercase tracking-[0.2em] block mb-2 font-bold">
+                                    En las Manos del Espectador
+                                </span>
+                                <h2 className="text-3xl md:text-5xl font-[Cinzel] text-white font-bold tracking-wide">
+                                    Magia de Cerca en Imágenes
+                                </h2>
+                                <p className="text-slate-400 text-sm md:text-base mt-2 max-w-2xl font-light">
+                                    Sin barreras ni escenarios. Pura destreza técnica, psicología y cartas firmadas en cócteles y eventos exclusivos en Madrid.
+                                </p>
+                            </div>
+                            <Link 
+                                href="/galeria"
+                                className="text-xs font-bold text-amber-400 hover:text-amber-300 uppercase tracking-widest flex items-center gap-2 group self-start md:self-end transition-all"
+                            >
+                                <span>Ver Galería Completa</span>
+                                <span className="group-hover:translate-x-1 transition-transform">→</span>
+                            </Link>
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                            {[
+                                {
+                                    src: '/images/cartomagia-de-cerca-angel-ruiz.webp',
+                                    alt: 'Manipulación y control milimétrico de cartas en magia close-up',
+                                    title: 'Sleight of Hand',
+                                    caption: 'Destreza digital y técnica invisible a escasos centímetros.'
+                                },
+                                {
+                                    src: '/images/ilusionista-cocktail-jardin-madrid.webp',
+                                    alt: 'Magia de cerca en cóctel en jardín exterior en Madrid',
+                                    title: 'Cóctel & Fincas',
+                                    caption: 'Interacción itinerante al aire libre rompiendo el hielo.'
+                                },
+                                {
+                                    src: '/images/mago-cartomagia-interactiva-publico-madrid.webp',
+                                    alt: 'Asistentes participando activamente en sesión de magia de cerca',
+                                    title: '100% Interactivo',
+                                    caption: 'Los espectadores mezclan, tocan y firman los naipes.'
+                                },
+                                {
+                                    src: '/images/risas-reacciones-magia-restaurante-madrid.webp',
+                                    alt: 'Reacciones espontáneas de comensales en restaurante de Madrid',
+                                    title: 'Reacciones Reales',
+                                    caption: 'Risas, asombro y recuerdos que duran toda la vida.'
+                                }
+                            ].map((item, idx) => (
+                                <div key={idx} className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-amber-400/50 bg-slate-900/60 shadow-xl transition-all flex flex-col justify-end">
+                                    <div className="relative w-full aspect-[4/5] overflow-hidden bg-neutral-900">
+                                        <Image
+                                            src={item.src}
+                                            alt={item.alt}
+                                            fill
+                                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                                            placeholder="blur"
+                                            blurDataURL={galleryBlurs[item.src]}
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
+                                        <div className="absolute bottom-0 inset-x-0 p-5 z-10">
+                                            <h3 className="text-white font-[Cinzel] font-bold text-base mb-1 group-hover:text-amber-300 transition-colors">
+                                                {item.title}
+                                            </h3>
+                                            <p className="text-slate-300 text-xs font-light leading-relaxed">
+                                                {item.caption}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
                     {/* 4. METODOLOGÍA DE TRABAJO */}
                     <section className="mb-24">
                         <div className="text-center mb-16">
@@ -392,3 +474,4 @@ export default function MagoCloseUpMadridPage() {
         </>
     );
 }
+

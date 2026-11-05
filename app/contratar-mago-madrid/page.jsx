@@ -1,12 +1,16 @@
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import FAQItem from '@/components/FAQItem';
 import Link from 'next/link';
 import NavFooterClient from '@/components/NavFooterClient';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import CorporateLogosBar from '@/components/CorporateLogosBar';
+import galleryBlurs from '@/public/images/gallery-blurs.json';
 
 const ContactButtonClient = dynamic(() => import('@/components/ContactButtonClient'), { ssr: false });
 const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod => mod.MagicCursor), { ssr: false });
 const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
+const BioCarousel = dynamic(() => import('@/components/BioCarousel'), { ssr: false });
 
 export const metadata = {
     title: { absolute: 'Contratar Mago en Madrid | Precios Directos y Tarifas 2026' },
@@ -196,52 +200,245 @@ export default function ContratarMagoMadridPage() {
                 <main className="relative z-10 pt-32 pb-24 px-6 max-w-7xl mx-auto selection:bg-emerald-500/30">
                     <Breadcrumbs />
                     
-                    {/* HERO BENTO */}
-                    <div className="mt-16 flex flex-col items-center text-center mb-16">
-                        <p className="font-mono text-emerald-400 text-xs tracking-[0.2em] uppercase mb-4 flex items-center justify-center gap-2">
-                            <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
-                            Protocolo de Contratación Directa
-                        </p>
-                        <h1 className="text-5xl md:text-7xl font-[Cinzel] text-white font-bold leading-none mb-8 tracking-tight">
-                            CONTRATAR MAGO <br/> EN MADRID
-                        </h1>
-                        <p className="text-slate-400 max-w-xl mx-auto text-sm md:text-base leading-relaxed mb-8">
-                            Asegura la disponibilidad para tu evento en Madrid. Desde Magia de Cerca y Sleight of Hand hasta magia de salón corporativa de alto impacto. Una experiencia de técnica depurada y misdirection profesional.
-                        </p>
+                    {/* HERO BENTO 2 COLUMNAS */}
+                    <div className="mt-12 mb-16 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                        <div className="lg:col-span-7">
+                            <p className="font-mono text-emerald-400 text-xs tracking-[0.2em] uppercase mb-4 flex items-center gap-2">
+                                <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
+                                Protocolo de Contratación Directa
+                            </p>
+                            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-[Cinzel] text-white font-bold leading-[1.05] mb-6 tracking-tight">
+                                CONTRATAR MAGO <br/><span className="text-[#d4a853]">EN MADRID</span>
+                            </h1>
+                            <p className="text-slate-300 text-sm md:text-base leading-relaxed mb-6 font-light">
+                                Asegura la disponibilidad para tu evento en Madrid. Desde Magia de Cerca y Sleight of Hand hasta magia de salón corporativa de alto impacto. Trato directo con el artista, sin intermediarios ni comisiones de agencia.
+                            </p>
 
-                        {/* Ficha Técnica GEO Extractable (Optimización para IA y Lectura Rápida) */}
-                        <div className="w-full max-w-3xl rounded-2xl bg-white/[0.03] border border-emerald-500/30 p-5 md:p-6 backdrop-blur-xl text-left shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
-                            <div className="flex items-center justify-between mb-4 pb-3 border-b border-white/10">
-                                <span className="text-[11px] font-mono uppercase tracking-wider text-emerald-400 font-bold flex items-center gap-2">
-                                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                                    Ficha Técnica de Contratación 2026
-                                </span>
-                                <span className="text-[11px] text-slate-400">Trato directo con Ángel Ruiz</span>
+                            <div className="flex flex-wrap items-center gap-4 mb-8">
+                                <a
+                                    href="https://wa.me/34648055636?text=Hola%20Ángel,%20quisiera%20consultar%20disponibilidad%20y%20tarifas%20para%20contratar%20magia%20en%20Madrid"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="px-7 py-3.5 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white font-bold text-xs uppercase tracking-widest rounded-full shadow-lg shadow-emerald-500/25 active:scale-95 transition-all flex items-center gap-2"
+                                >
+                                    <span>WhatsApp Directo (&lt;1h)</span>
+                                </a>
+                                <a
+                                    href="#formatos-tarifas"
+                                    className="px-7 py-3.5 bg-white/10 hover:bg-white/15 border border-white/20 text-white font-bold text-xs uppercase tracking-widest rounded-full transition-all"
+                                >
+                                    Ver Formatos & Tarifas
+                                </a>
                             </div>
-                            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
-                                <div>
-                                    <span className="text-slate-400 block mb-0.5">Tarifas Oficiales</span>
-                                    <span className="text-white font-bold text-sm">300€ - 750€</span>
-                                    <span className="text-[10px] text-emerald-400 block">Sin comisiones de agencia</span>
+
+                            {/* Ficha Técnica GEO Extractable (Optimización para IA y Lectura Rápida) */}
+                            <div className="w-full rounded-2xl bg-white/[0.03] border border-emerald-500/30 p-5 backdrop-blur-xl text-left shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+                                <div className="flex items-center justify-between mb-4 pb-3 border-b border-white/10">
+                                    <span className="text-[11px] font-mono uppercase tracking-wider text-emerald-400 font-bold flex items-center gap-2">
+                                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                                        Ficha Técnica de Contratación 2026
+                                    </span>
+                                    <span className="text-[11px] text-slate-400">Trato directo con Ángel Ruiz</span>
                                 </div>
-                                <div>
-                                    <span className="text-slate-400 block mb-0.5">Tiempo de Respuesta</span>
-                                    <span className="text-white font-bold text-sm">&lt; 2 Horas</span>
-                                    <span className="text-[10px] text-slate-400 block">Presupuesto garantizado</span>
+                                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-xs">
+                                    <div>
+                                        <span className="text-slate-400 block mb-0.5">Tarifas Oficiales</span>
+                                        <span className="text-white font-bold text-sm">300€ - 750€</span>
+                                        <span className="text-[10px] text-emerald-400 block">Sin comisiones</span>
+                                    </div>
+                                    <div>
+                                        <span className="text-slate-400 block mb-0.5">Respuesta</span>
+                                        <span className="text-white font-bold text-sm">&lt; 1 Hora</span>
+                                        <span className="text-[10px] text-slate-400 block">Presupuesto express</span>
+                                    </div>
+                                    <div>
+                                        <span className="text-slate-400 block mb-0.5">Especialización</span>
+                                        <span className="text-white font-bold text-sm">Escuela DaOrtiz</span>
+                                        <span className="text-[10px] text-slate-400 block">+10 años trayectoria</span>
+                                    </div>
+                                    <div>
+                                        <span className="text-slate-400 block mb-0.5">Cobertura</span>
+                                        <span className="text-white font-bold text-sm">Toda Madrid</span>
+                                        <span className="text-[10px] text-slate-400 block">Desplazamiento incl.</span>
+                                    </div>
                                 </div>
-                                <div>
-                                    <span className="text-slate-400 block mb-0.5">Especialización</span>
-                                    <span className="text-white font-bold text-sm">Escuela DaOrtiz</span>
-                                    <span className="text-[10px] text-slate-400 block">+10 años de experiencia</span>
-                                </div>
-                                <div>
-                                    <span className="text-slate-400 block mb-0.5">Cobertura</span>
-                                    <span className="text-white font-bold text-sm">Comunidad de Madrid</span>
-                                    <span className="text-[10px] text-slate-400 block">Desplazamiento incluido</span>
+                            </div>
+                        </div>
+
+                        {/* COLUMNA VISUAL BIO */}
+                        <div className="lg:col-span-5 relative">
+                            <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
+                                <div className="absolute -inset-2 bg-gradient-to-tr from-emerald-500/20 via-amber-500/10 to-emerald-600/20 rounded-3xl blur-2xl pointer-events-none" />
+                                <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden border border-emerald-500/30 shadow-2xl bg-slate-900/80 group">
+                                    <BioCarousel 
+                                        aspectRatio="aspect-[4/5]"
+                                        alt="Ángel Ruiz - Ilusionista profesional en Madrid para contratación directa"
+                                        interval={2500}
+                                        priority
+                                    />
+                                    <div className="absolute bottom-4 left-4 right-4 z-10 px-4 py-3 rounded-xl bg-slate-950/85 backdrop-blur-md border border-white/10 flex items-center justify-between shadow-lg">
+                                        <div>
+                                            <p className="text-sm font-bold text-white font-[Cinzel]">Ángel Ruiz</p>
+                                            <p className="text-[11px] text-emerald-400 font-medium">Contratación Directa · Madrid</p>
+                                        </div>
+                                        <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-[10px] font-semibold">
+                                            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                                            <span>Disponible</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    {/* SOCIAL PROOF CORPORATIVO */}
+                    <CorporateLogosBar className="mb-20 rounded-3xl" />
+
+                    {/* SECCIÓN FORMATOS CON FOTOGRAFÍA REAL */}
+                    <section id="formatos-tarifas" className="mb-24">
+                        <div className="text-center mb-12">
+                            <span className="text-emerald-400 text-xs font-mono uppercase tracking-[0.2em] block mb-2 font-bold">
+                                Formatos Disponibles
+                            </span>
+                            <h2 className="text-3xl md:text-5xl font-[Cinzel] text-white font-bold mb-4">
+                                Elige la Experiencia para Tu Celebración
+                            </h2>
+                            <p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base font-light">
+                                Precios directos sin margen de intermediación. Incluye seguro de responsabilidad civil, desplazamiento en Madrid y personalización.
+                            </p>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div className="group rounded-2xl overflow-hidden border border-white/10 hover:border-emerald-400/50 bg-slate-900/60 shadow-xl transition-all duration-300 flex flex-col justify-between">
+                                <div>
+                                    <div className="relative w-full aspect-[16/10] overflow-hidden bg-neutral-900">
+                                        <Image
+                                            src="/images/mago-bodas-cocktail-exterior-madrid.webp"
+                                            alt="Mago para cóctel de bodas en Madrid"
+                                            fill
+                                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                            sizes="(max-width: 768px) 100vw, 33vw"
+                                            placeholder="blur"
+                                            blurDataURL={galleryBlurs['/images/mago-bodas-cocktail-exterior-madrid.webp']}
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
+                                        <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/10 text-amber-300 text-[10px] font-semibold uppercase tracking-wider">
+                                            Bodas & Cóctel
+                                        </span>
+                                    </div>
+                                    <div className="p-6">
+                                        <h3 className="text-xl font-[Cinzel] font-bold text-white mb-1 group-hover:text-emerald-300 transition-colors">
+                                            Cóctel de Bodas
+                                        </h3>
+                                        <div className="text-2xl font-[Cinzel] font-bold text-emerald-400 mb-3">
+                                            Desde 450€
+                                        </div>
+                                        <p className="text-slate-400 text-xs leading-relaxed mb-4">
+                                            Magia de cerca itinerante entre los grupos durante la copa de recepción. Rompe el hielo y crea momentos inolvidables.
+                                        </p>
+                                        <ul className="text-xs text-slate-300 space-y-1.5 mb-4">
+                                            <li>✦ 60 - 90 min de magia interactiva</li>
+                                            <li>✦ Número exclusivo para los novios</li>
+                                            <li>✦ Coordinación con wedding planner</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div className="px-6 pb-6">
+                                    <Link href="/particulares/bodas" className="text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1 group-hover:gap-2 transition-all">
+                                        <span>Ver detalles para bodas</span>
+                                        <span>→</span>
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="group rounded-2xl overflow-hidden border border-emerald-500/40 hover:border-emerald-400 bg-slate-900/80 shadow-2xl transition-all duration-300 flex flex-col justify-between relative">
+                                <div className="absolute -top-3 right-6 z-10 px-3 py-1 bg-emerald-500 text-slate-950 font-bold text-[10px] uppercase tracking-wider rounded-full shadow-md">
+                                    Más Solicitado B2B
+                                </div>
+                                <div>
+                                    <div className="relative w-full aspect-[16/10] overflow-hidden bg-neutral-900">
+                                        <Image
+                                            src="/images/mago-para-empresas-en-madrid.webp"
+                                            alt="Magia para eventos de empresa en Madrid"
+                                            fill
+                                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                            sizes="(max-width: 768px) 100vw, 33vw"
+                                            placeholder="blur"
+                                            blurDataURL={galleryBlurs['/images/mago-para-empresas-en-madrid.webp']}
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
+                                        <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/10 text-emerald-300 text-[10px] font-semibold uppercase tracking-wider">
+                                            Empresas & Cenas
+                                        </span>
+                                    </div>
+                                    <div className="p-6">
+                                        <h3 className="text-xl font-[Cinzel] font-bold text-white mb-1 group-hover:text-emerald-300 transition-colors">
+                                            Eventos Corporativos
+                                        </h3>
+                                        <div className="text-2xl font-[Cinzel] font-bold text-emerald-400 mb-3">
+                                            500€ – 750€
+                                        </div>
+                                        <p className="text-slate-400 text-xs leading-relaxed mb-4">
+                                            Networking para cócteles de empresa, pases de mesa en cenas navideñas y dinamización en ferias y congresos.
+                                        </p>
+                                        <ul className="text-xs text-slate-300 space-y-1.5 mb-4">
+                                            <li>✦ Personalización con valores de marca</li>
+                                            <li>✦ Facturación oficial profesional</li>
+                                            <li>✦ Presentación en español o inglés</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div className="px-6 pb-6">
+                                    <Link href="/empresas" className="text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1 group-hover:gap-2 transition-all">
+                                        <span>Ver opciones corporativas</span>
+                                        <span>→</span>
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="group rounded-2xl overflow-hidden border border-white/10 hover:border-emerald-400/50 bg-slate-900/60 shadow-xl transition-all duration-300 flex flex-col justify-between">
+                                <div>
+                                    <div className="relative w-full aspect-[16/10] overflow-hidden bg-neutral-900">
+                                        <Image
+                                            src="/images/risas-reacciones-magia-restaurante-madrid.webp"
+                                            alt="Magia en celebraciones privadas y cumpleaños en Madrid"
+                                            fill
+                                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                            sizes="(max-width: 768px) 100vw, 33vw"
+                                            placeholder="blur"
+                                            blurDataURL={galleryBlurs['/images/risas-reacciones-magia-restaurante-madrid.webp']}
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent" />
+                                        <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/10 text-amber-300 text-[10px] font-semibold uppercase tracking-wider">
+                                            Cumpleaños & Fiestas
+                                        </span>
+                                    </div>
+                                    <div className="p-6">
+                                        <h3 className="text-xl font-[Cinzel] font-bold text-white mb-1 group-hover:text-emerald-300 transition-colors">
+                                            Celebraciones Privadas
+                                        </h3>
+                                        <div className="text-2xl font-[Cinzel] font-bold text-emerald-400 mb-3">
+                                            Desde 300€
+                                        </div>
+                                        <p className="text-slate-400 text-xs leading-relaxed mb-4">
+                                            Cumpleaños de adultos (40, 50, 60 años), comuniones y aniversarios en restaurantes o a domicilio en Madrid.
+                                        </p>
+                                        <ul className="text-xs text-slate-300 space-y-1.5 mb-4">
+                                            <li>✦ 50 - 75 min de asombro y risas</li>
+                                            <li>✦ El homenajeado como protagonista</li>
+                                            <li>✦ Desplazamiento incluido en Madrid</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div className="px-6 pb-6">
+                                    <Link href="/particulares/fiestas-cumpleanos-madrid" className="text-xs font-bold text-emerald-400 hover:text-emerald-300 flex items-center gap-1 group-hover:gap-2 transition-all">
+                                        <span>Ver fiestas y cumpleaños</span>
+                                        <span>→</span>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
                     {/* METODOLOGIA DE TRABAJO (PROCESS CARDS) */}
                     <section className="mb-24">
@@ -291,16 +488,83 @@ export default function ContratarMagoMadridPage() {
                                     ))}
                                 </ul>
                             </div>
-                            <div className="bg-zinc-950/50 p-8 rounded-[2rem] border border-white/5">
-                                <p className="text-lg text-slate-300 italic mb-6">"El control sobre el grupo y la técnica impecable transformaron por completo la dinámica de nuestro evento de empresa. Fue el tema de conversación durante semanas."</p>
-                                <div className="flex items-center gap-4">
-                                    <div className="w-10 h-10 bg-emerald-500/20 rounded-full flex items-center justify-center text-emerald-500 font-bold">HR</div>
-                                    <div>
-                                        <p className="text-white text-sm font-bold">Directora de RRHH</p>
-                                        <p className="text-slate-500 text-xs">Empresa Tecnológica en Madrid</p>
+                            <div className="relative rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl group bg-zinc-950">
+                                <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] overflow-hidden">
+                                    <Image
+                                        src="/images/reacciones-magia-empresas.webp"
+                                        alt="Reacciones reales del público en espectáculo de magia corporativa en Madrid"
+                                        fill
+                                        className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                        sizes="(max-width: 1024px) 100vw, 50vw"
+                                        placeholder="blur"
+                                        blurDataURL={galleryBlurs['/images/reacciones-magia-empresas.webp']}
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
+                                </div>
+                                <div className="p-8 relative z-10 -mt-16 bg-slate-950/90 backdrop-blur-md rounded-b-[2.5rem] border-t border-white/10">
+                                    <p className="text-sm md:text-base text-slate-200 italic mb-4 font-light">
+                                        "El control sobre el grupo y la técnica impecable transformaron por completo la dinámica de nuestro evento de empresa. Fue el tema de conversación durante semanas."
+                                    </p>
+                                    <div className="flex items-center gap-3">
+                                        <div className="w-9 h-9 bg-emerald-500/20 border border-emerald-500/40 rounded-full flex items-center justify-center text-emerald-400 font-bold text-xs">
+                                            HR
+                                        </div>
+                                        <div>
+                                            <p className="text-white text-xs font-bold font-[Cinzel]">Directora de Personas & Cultura</p>
+                                            <p className="text-slate-400 text-[10px]">Empresa Tecnológica en Madrid</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </section>
+
+                    {/* GALERÍA DE ACTUACIONES REALES */}
+                    <section className="mb-24">
+                        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                            <div>
+                                <span className="text-emerald-400 text-xs font-mono uppercase tracking-[0.2em] block mb-2 font-bold">
+                                    En Vivo y en Directo
+                                </span>
+                                <h2 className="text-3xl md:text-4xl font-[Cinzel] text-white font-bold">
+                                    Garantía de Asombro en Toda Madrid
+                                </h2>
+                                <p className="text-slate-400 text-sm max-w-xl mt-1 font-light">
+                                    Imágenes reales de actuaciones en bodas, galas corporativas y cócteles exclusivos.
+                                </p>
+                            </div>
+                            <Link 
+                                href="/galeria"
+                                className="text-xs font-bold text-emerald-400 hover:text-emerald-300 uppercase tracking-widest flex items-center gap-2 group transition-all"
+                            >
+                                <span>Explorar Galería Completa</span>
+                                <span className="group-hover:translate-x-1 transition-transform">→</span>
+                            </Link>
+                        </div>
+
+                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                            {[
+                                { src: '/images/evento-angel-ruiz-magia.webp', alt: 'Ángel Ruiz en evento corporativo de empresa en Madrid', tag: 'Corporativo' },
+                                { src: '/images/ilusionista-cocktail-jardin-madrid.webp', alt: 'Magia de cerca en cóctel en jardín exterior en Madrid', tag: 'Cóctel & Fincas' },
+                                { src: '/images/cartomagia-de-cerca-angel-ruiz.webp', alt: 'Manipulación experta de cartas en magia de cerca', tag: 'Cartomagia' },
+                                { src: '/images/mago-rooftop-eventos-privados-madrid.webp', alt: 'Magia en evento privado exclusivo en rooftop de Madrid', tag: 'Rooftops & VIP' }
+                            ].map((pic, idx) => (
+                                <div key={idx} className="group relative rounded-2xl overflow-hidden aspect-[4/5] bg-neutral-900 border border-white/10 hover:border-emerald-400/50 shadow-xl transition-all">
+                                    <Image
+                                        src={pic.src}
+                                        alt={pic.alt}
+                                        fill
+                                        className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                        sizes="(max-width: 640px) 50vw, 25vw"
+                                        placeholder="blur"
+                                        blurDataURL={galleryBlurs[pic.src]}
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
+                                    <span className="absolute bottom-3 left-3 px-2.5 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/10 text-emerald-300 text-[10px] font-semibold uppercase tracking-wider">
+                                        {pic.tag}
+                                    </span>
+                                </div>
+                            ))}
                         </div>
                     </section>
 

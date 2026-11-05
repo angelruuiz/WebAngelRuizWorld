@@ -8,6 +8,8 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 const ContactButtonClient = dynamic(() => import('@/components/ContactButtonClient'), { ssr: false });
 const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod => mod.MagicCursor), { ssr: false });
 const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
+const BioCarousel = dynamic(() => import('@/components/BioCarousel'), { ssr: false });
+import galleryBlurs from '@/public/images/gallery-blurs.json';
 
 export const metadata = {
     title: { absolute: 'Mago Cartomago en Madrid | Cartomagia · Ángel Ruiz' },
@@ -38,6 +40,63 @@ export const metadata = {
         images: ['/images/foto-bio.webp'],
     },
 };
+
+const cartomagiaGalleryImages = [
+    {
+        src: '/images/cartomagia-de-cerca-angel-ruiz.webp',
+        alt: 'Primer plano de cartomagia y manipulación experta de baraja por Ángel Ruiz',
+        title: 'Técnica Purista',
+        tag: 'Manipulación',
+        caption: 'Control milimétrico de la baraja a escasos centímetros de los ojos del espectador.',
+        aspect: 'aspect-[4/5]',
+        blurDataURL: galleryBlurs['/images/cartomagia-de-cerca-angel-ruiz.webp']
+    },
+    {
+        src: '/images/cartomagia-angel-ruiz.webp',
+        alt: 'Espectadora firmando la carta durante una experiencia de cartomagia de autor en Madrid',
+        title: 'Cartas Firmadas de Recuerdo',
+        tag: '100% Interactivo',
+        caption: 'Los asistentes firman el naipe elegido, que luego conservan como prueba de lo imposible.',
+        aspect: 'aspect-[4/5]',
+        blurDataURL: galleryBlurs['/images/cartomagia-angel-ruiz.webp']
+    },
+    {
+        src: '/images/sesion-cartomagia-teatro-angel-ruiz.webp',
+        alt: 'Ángel Ruiz en la mesa de magia de cerca teatral en directo con espectadores',
+        title: 'Sesión de Mesa Íntima',
+        tag: 'Club Privado',
+        caption: 'La atmósfera secreta y elegante de los reservados privados de magia de salón.',
+        aspect: 'aspect-[4/5]',
+        blurDataURL: galleryBlurs['/images/sesion-cartomagia-teatro-angel-ruiz.webp']
+    },
+    {
+        src: '/images/mago-cartomagia-interactiva-publico-madrid.webp',
+        alt: 'Ángel Ruiz extendiendo la baraja de cartas a los asistentes durante una sesión interactiva de magia de cerca en Madrid',
+        title: 'Pases Itinerantes en Cóctel',
+        tag: 'Walk-Around',
+        caption: 'De corrillo en corrillo en recepciones y cócteles, rompiendo el hielo al instante.',
+        aspect: 'aspect-[4/5]',
+        blurDataURL: galleryBlurs['/images/mago-cartomagia-interactiva-publico-madrid.webp']
+    },
+    {
+        src: '/images/ilusionista-profesional-madrid.webp',
+        alt: 'Detalle de carta elegida y firmada en tapete de magia de cerca en Madrid',
+        title: 'Detalle en Tapete Close-Up',
+        tag: 'Psicología',
+        caption: 'Sin aparatos comerciales ni trucos de cámara: 52 cartulinas y psicología pura.',
+        aspect: 'aspect-[4/5]',
+        blurDataURL: galleryBlurs['/images/ilusionista-profesional-madrid.webp']
+    },
+    {
+        src: '/images/mago-rooftop-eventos-privados-madrid.webp',
+        alt: 'Ángel Ruiz realizando magia de cerca con baraja de cartas para invitados en un evento exclusivo en rooftop con vistas en Madrid',
+        title: 'Eventos Exclusivos en Madrid',
+        tag: 'Bodas & Empresas',
+        caption: 'Ilusionismo de autor en las fincas, hoteles y rooftops más selectos de la capital.',
+        aspect: 'aspect-[4/5]',
+        blurDataURL: galleryBlurs['/images/mago-rooftop-eventos-privados-madrid.webp']
+    }
+];
 
 const cartomagiaFaqs = [
     {
@@ -153,7 +212,9 @@ export default function MagoCartomagiaMadridPage() {
                                 { label: 'Cartomagia Madrid' }
                             ]} />
 
-                            <div className="mt-8 max-w-3xl">
+                            <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                                {/* COLUMNA TEXTO */}
+                                <div className="lg:col-span-7">
                                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-400/30 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-6">
                                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                                     <span>Formación Escuela Dani DaOrtiz · Cartomagia de Autor</span>
@@ -193,6 +254,34 @@ export default function MagoCartomagiaMadridPage() {
                                     <span>Trato directo sin intermediarios</span>
                                     <span className="hidden sm:inline">•</span>
                                     <span className="hidden sm:inline">Presupuesto en menos de 1h</span>
+                                </div>
+                            </div>
+
+                            {/* COLUMNA FOTO BIO */}
+                            <div className="lg:col-span-5 relative">
+                                <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
+                                    <div className="absolute -inset-2 bg-gradient-to-tr from-amber-600/30 via-amber-500/10 to-purple-600/25 rounded-3xl blur-2xl pointer-events-none" />
+                                    
+                                    <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl bg-slate-900/80 group">
+                                        <BioCarousel 
+                                            aspectRatio="aspect-[4/5]"
+                                            alt="Ángel Ruiz - Mago especialista en cartomagia de autor en Madrid"
+                                            interval={2500}
+                                            priority
+                                        />
+                                        
+                                        <div className="absolute bottom-4 left-4 right-4 z-10 px-4 py-3 rounded-xl bg-slate-950/85 backdrop-blur-md border border-amber-400/20 flex items-center justify-between shadow-lg">
+                                            <div>
+                                                <p className="text-sm font-bold text-white font-[Cinzel] tracking-wide">Ángel Ruiz</p>
+                                                <p className="text-[11px] text-amber-400 font-medium">Cartomagia de Autor · Madrid</p>
+                                            </div>
+                                            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-[10px] font-semibold">
+                                                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                                                <span>Disponible</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 </div>
                             </div>
                         </div>
@@ -266,6 +355,90 @@ export default function MagoCartomagiaMadridPage() {
                                         </div>
                                     </li>
                                 </ul>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* SECCIÓN GALERÍA DE CARTOMAGIA EN VIVO */}
+                    <section className="py-20 border-t border-white/5 bg-gradient-to-b from-[#07090e] via-slate-950/80 to-[#07090e]">
+                        <div className="max-w-6xl mx-auto px-6">
+                            <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+                                <div>
+                                    <span className="text-amber-400 text-xs font-bold uppercase tracking-[0.2em] block mb-2">
+                                        En Directo y Sin Trucos de Cámara
+                                    </span>
+                                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-[Cinzel] font-bold text-white tracking-wide">
+                                        Cartomagia en Primer Plano
+                                    </h2>
+                                    <p className="text-slate-400 text-sm md:text-base mt-2 max-w-2xl font-light leading-relaxed">
+                                        Momentos reales capturados en bodas de lujo, recepciones corporativas y sesiones privadas en Madrid. 52 cartas y el asombro sucediendo directamente en las manos de tus invitados.
+                                    </p>
+                                </div>
+                                <Link
+                                    href="/galeria"
+                                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/5 hover:bg-amber-500/10 border border-white/10 hover:border-amber-400/40 text-amber-300 font-bold text-xs uppercase tracking-widest transition-all self-start md:self-end group"
+                                >
+                                    <span>Ver Galería Completa</span>
+                                    <span className="group-hover:translate-x-1 transition-transform">→</span>
+                                </Link>
+                            </div>
+
+                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {cartomagiaGalleryImages.map((img, idx) => (
+                                    <div
+                                        key={idx}
+                                        className="group relative rounded-2xl overflow-hidden border border-white/10 hover:border-amber-400/50 bg-slate-900/60 shadow-xl transition-all duration-500 flex flex-col justify-end"
+                                    >
+                                        <div className={`relative w-full ${img.aspect} overflow-hidden bg-neutral-900`}>
+                                            <Image
+                                                src={img.src}
+                                                alt={img.alt}
+                                                fill
+                                                className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                                placeholder={img.blurDataURL ? "blur" : "empty"}
+                                                blurDataURL={img.blurDataURL}
+                                                loading="lazy"
+                                            />
+                                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent opacity-85 group-hover:opacity-95 transition-opacity" />
+
+                                            <div className="absolute top-3 left-3 z-10">
+                                                <span className="px-3 py-1 rounded-full bg-slate-950/80 backdrop-blur-md border border-amber-400/30 text-amber-300 text-[10px] font-semibold uppercase tracking-wider">
+                                                    {img.tag}
+                                                </span>
+                                            </div>
+
+                                            <div className="absolute bottom-0 inset-x-0 p-5 z-10">
+                                                <h3 className="text-white font-[Cinzel] font-bold text-base mb-1 group-hover:text-amber-300 transition-colors">
+                                                    {img.title}
+                                                </h3>
+                                                <p className="text-slate-300 text-xs font-light leading-relaxed">
+                                                    {img.caption}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            {/* Banner inferior dentro de la sección de galería */}
+                            <div className="mt-12 p-8 rounded-2xl bg-amber-500/[0.04] border border-amber-500/20 flex flex-col md:flex-row items-center justify-between gap-6">
+                                <div className="space-y-1 text-center md:text-left">
+                                    <p className="text-white font-[Cinzel] text-lg font-bold">
+                                        ¿Quieres que tus invitados vivan esta misma experiencia de cerca?
+                                    </p>
+                                    <p className="text-slate-400 text-xs leading-relaxed">
+                                        Fechas limitadas por temporada de bodas y eventos corporativos en Madrid. Consulta disponibilidad sin compromiso.
+                                    </p>
+                                </div>
+                                <a
+                                    href="https://wa.me/34648055636?text=Hola%20Ángel,%20he%20visto%20las%20fotos%20de%20cartomagia%20y%20me%20gustaría%20consultar%20tu%20disponibilidad"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="px-6 py-3.5 bg-emerald-500 hover:bg-emerald-400 text-white font-bold text-xs uppercase tracking-widest rounded-full shadow-lg shadow-emerald-500/20 transition-all shrink-0 active:scale-95 flex items-center gap-2"
+                                >
+                                    <span>Consultar por WhatsApp (&lt;1h)</span>
+                                </a>
                             </div>
                         </div>
                     </section>
