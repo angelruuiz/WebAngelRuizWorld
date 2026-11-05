@@ -137,7 +137,8 @@ export default function MagoCartomagiaMadridPage() {
         "@type": "BreadcrumbList",
         "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://angelruiz.world" },
-            { "@type": "ListItem", "position": 2, "name": "Mago Cartomagia Madrid", "item": "https://angelruiz.world/mago-cartomagia-madrid" }
+            { "@type": "ListItem", "position": 2, "name": "Mago en Madrid", "item": "https://angelruiz.world/mago-madrid" },
+            { "@type": "ListItem", "position": 3, "name": "Cartomagia Madrid", "item": "https://angelruiz.world/mago-cartomagia-madrid" }
         ]
     };
 
@@ -215,152 +216,276 @@ export default function MagoCartomagiaMadridPage() {
                             <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
                                 {/* COLUMNA TEXTO */}
                                 <div className="lg:col-span-7">
-                                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-400/30 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-6">
-                                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                                    <span>Formación Escuela Dani DaOrtiz · Cartomagia de Autor</span>
+                                    <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-400/30 text-amber-300 text-xs font-semibold uppercase tracking-wider mb-6">
+                                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                                        <span>Formación Escuela Dani DaOrtiz · Cartomagia de Autor</span>
+                                    </div>
+
+                                    <h1 className="font-[Cinzel] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-wide leading-[1.1] mb-6">
+                                        Mago Cartomago en Madrid | <span className="text-[#d4a853] block sm:inline">Cartomagia de Autor</span>
+                                    </h1>
+
+                                    <p className="text-base sm:text-lg md:text-xl text-slate-300 font-light leading-relaxed mb-8">
+                                        52 cartas, tus propias manos y un asombro imposible a 30 centímetros de tus ojos. Especialista en <strong>cartomagia contemporánea para eventos exclusivos, bodas y cenas de empresa</strong> en toda la Comunidad de Madrid.
+                                    </p>
+
+                                    <div className="flex flex-wrap items-center gap-4">
+                                        <a
+                                            href="https://wa.me/34648055636?text=Hola%20Ángel,%20quisiera%20consultar%20disponibilidad%20y%20tarifas%20para%20cartomagia%20en%20Madrid"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white font-bold text-xs uppercase tracking-widest rounded-full shadow-lg shadow-emerald-500/25 active:scale-95 transition-all flex items-center gap-2"
+                                        >
+                                            <span>Consultar por WhatsApp (&lt;1h)</span>
+                                        </a>
+                                        <Link
+                                            href="/contratar-mago-madrid"
+                                            className="px-8 py-4 bg-white/10 hover:bg-white/15 border border-amber-400/30 text-amber-300 font-bold text-xs uppercase tracking-widest rounded-full transition-all"
+                                        >
+                                            Ver Tarifas Oficiales
+                                        </Link>
+                                    </div>
+
+                                    <div className="flex items-center gap-6 mt-8 text-xs text-slate-400">
+                                        <span className="flex items-center gap-1.5">
+                                            <span className="text-amber-400 font-bold">★★★★★</span>
+                                            <span>+60 opiniones reales en Google</span>
+                                        </span>
+                                        <span>•</span>
+                                        <span>Trato directo sin intermediarios</span>
+                                        <span className="hidden sm:inline">•</span>
+                                        <span className="hidden sm:inline">Presupuesto en menos de 1h</span>
+                                    </div>
                                 </div>
 
-                                <h1 className="font-[Cinzel] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-wide leading-[1.1] mb-6">
-                                    Mago Cartomago en Madrid | <span className="text-[#d4a853] block sm:inline">Cartomagia de Autor</span>
-                                </h1>
-
-                                <p className="text-base sm:text-lg md:text-xl text-slate-300 font-light leading-relaxed mb-8">
-                                    52 cartas, tus propias manos y un asombro imposible a 30 centímetros de tus ojos. Especialista en <strong>cartomagia contemporánea para eventos exclusivos, bodas y cenas de empresa</strong> en toda la Comunidad de Madrid.
-                                </p>
-
-                                <div className="flex flex-wrap items-center gap-4">
-                                    <a
-                                        href="https://wa.me/34648055636?text=Hola%20Ángel,%20quisiera%20consultar%20disponibilidad%20y%20tarifas%20para%20cartomagia%20en%20Madrid"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="px-8 py-4 bg-gradient-to-r from-emerald-500 to-green-600 hover:from-emerald-400 hover:to-green-500 text-white font-bold text-xs uppercase tracking-widest rounded-full shadow-lg shadow-emerald-500/25 active:scale-95 transition-all flex items-center gap-2"
-                                    >
-                                        <span>Consultar por WhatsApp (&lt;1h)</span>
-                                    </a>
-                                    <Link
-                                        href="/contratar-mago-madrid"
-                                        className="px-8 py-4 bg-white/10 hover:bg-white/15 border border-amber-400/30 text-amber-300 font-bold text-xs uppercase tracking-widest rounded-full transition-all"
-                                    >
-                                        Ver Tarifas Oficiales
-                                    </Link>
-                                </div>
-
-                                <div className="flex items-center gap-6 mt-8 text-xs text-slate-400">
-                                    <span className="flex items-center gap-1.5">
-                                        <span className="text-amber-400 font-bold">★★★★★</span>
-                                        <span>+60 opiniones reales en Google</span>
-                                    </span>
-                                    <span>•</span>
-                                    <span>Trato directo sin intermediarios</span>
-                                    <span className="hidden sm:inline">•</span>
-                                    <span className="hidden sm:inline">Presupuesto en menos de 1h</span>
-                                </div>
-                            </div>
-
-                            {/* COLUMNA FOTO BIO */}
-                            <div className="lg:col-span-5 relative">
-                                <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
-                                    <div className="absolute -inset-2 bg-gradient-to-tr from-amber-600/30 via-amber-500/10 to-purple-600/25 rounded-3xl blur-2xl pointer-events-none" />
-                                    
-                                    <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl bg-slate-900/80 group">
-                                        <BioCarousel 
-                                            aspectRatio="aspect-[4/5]"
-                                            alt="Ángel Ruiz - Mago especialista en cartomagia de autor en Madrid"
-                                            interval={2500}
-                                            priority
-                                        />
+                                {/* COLUMNA FOTO BIO */}
+                                <div className="lg:col-span-5 relative">
+                                    <div className="relative mx-auto w-full max-w-sm lg:max-w-none">
+                                        <div className="absolute -inset-2 bg-gradient-to-tr from-amber-600/30 via-amber-500/10 to-purple-600/25 rounded-3xl blur-2xl pointer-events-none" />
                                         
-                                        <div className="absolute bottom-4 left-4 right-4 z-10 px-4 py-3 rounded-xl bg-slate-950/85 backdrop-blur-md border border-amber-400/20 flex items-center justify-between shadow-lg">
-                                            <div>
-                                                <p className="text-sm font-bold text-white font-[Cinzel] tracking-wide">Ángel Ruiz</p>
-                                                <p className="text-[11px] text-amber-400 font-medium">Cartomagia de Autor · Madrid</p>
-                                            </div>
-                                            <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-[10px] font-semibold">
-                                                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                                                <span>Disponible</span>
+                                        <div className="relative aspect-[4/5] w-full rounded-2xl overflow-hidden border border-amber-500/30 shadow-2xl bg-slate-900/80 group">
+                                            <BioCarousel 
+                                                aspectRatio="aspect-[4/5]"
+                                                alt="Ángel Ruiz - Mago especialista en cartomagia de autor en Madrid"
+                                                interval={2500}
+                                                priority
+                                            />
+                                            
+                                            <div className="absolute bottom-4 left-4 right-4 z-10 px-4 py-3 rounded-xl bg-slate-950/85 backdrop-blur-md border border-amber-400/20 flex items-center justify-between shadow-lg">
+                                                <div>
+                                                    <p className="text-sm font-bold text-white font-[Cinzel] tracking-wide">Ángel Ruiz</p>
+                                                    <p className="text-[11px] text-amber-400 font-medium">Cartomagia de Autor · Madrid</p>
+                                                </div>
+                                                <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-[10px] font-semibold">
+                                                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                                                    <span>Disponible</span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                                 </div>
                             </div>
                         </div>
                     </header>
 
-                    {/* SECCIÓN: EL VALOR DE LA CARTOMAGIA DE AUTOR */}
-                    <section className="py-20 max-w-6xl mx-auto px-6">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                            <div className="space-y-6">
-                                <span className="text-amber-400 text-xs font-bold uppercase tracking-[0.2em] block">
-                                    Diferencial de Autor
+                    {/* SECCIÓN 1: EL VALOR DE LA CARTOMAGIA DE AUTOR (EDITORIAL + IMAGEN) */}
+                    <section className="py-20 md:py-28 max-w-6xl mx-auto px-6 relative">
+                        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
+                        
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative z-10">
+                            {/* TEXTO Y FILOSOFÍA */}
+                            <div className="lg:col-span-7 space-y-6">
+                                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold uppercase tracking-widest">
+                                    <span>✦</span>
+                                    <span>Filosofía de Autor · Escuela Dani DaOrtiz</span>
                                 </span>
-                                <h2 className="text-3xl md:text-4xl font-[Cinzel] font-bold text-white tracking-wide">
-                                    ¿Por qué la Cartomagia es el Formato más Impactante para tus Invitados?
+                                
+                                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[Cinzel] font-bold text-white tracking-wide leading-tight">
+                                    ¿Por qué la Cartomagia es el Formato más Impactante?
                                 </h2>
+                                
                                 <p className="text-slate-300 text-sm md:text-base leading-relaxed font-light">
-                                    Cualquier persona puede comprar un truco en una tienda de magia. Pero la verdadera <strong>cartomagia de autor</strong> se basa en una combinación milimétrica de psicología, lectura del comportamiento humano, desvío de la atención (*misdirection*) y una técnica invisible forjada durante más de una década.
+                                    Cualquier persona puede comprar un truco en una tienda. Pero la verdadera <strong>cartomagia de autor</strong> se basa en una combinación milimétrica de psicología, lectura del comportamiento humano, desvío de la atención (*misdirection*) y una técnica invisible forjada durante más de una década.
                                 </p>
+                                
                                 <p className="text-slate-300 text-sm md:text-base leading-relaxed font-light">
-                                    Bajo la tutela de la prestigiosa escuela de <strong>Dani DaOrtiz</strong>, mi estilo rechaza las rutinas mecánicas y las cajas trucadas. Todo sucede de manera orgánica, caótica y natural, haciendo que el espectador sienta que el milagro es irrepetible e imposible de descifrar.
+                                    Bajo la tutela directa de la escuela de <strong>Dani DaOrtiz</strong>, mi estilo rechaza las rutinas mecánicas y las cajas trucadas. Todo sucede de manera orgánica, caótica y natural: los invitados barajan libremente, firman sus cartas y el milagro ocurre en sus propias manos a escasos centímetros de sus ojos.
                                 </p>
-                                <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10">
-                                    <div className="p-4 rounded-xl bg-white/[0.03] border border-white/5">
-                                        <div className="text-2xl font-[Cinzel] font-bold text-[#d4a853] mb-1">100%</div>
-                                        <div className="text-xs text-slate-400">Participativo en manos de los asistentes</div>
+
+                                {/* 3 MÉTRICAS BENTO */}
+                                <div className="grid grid-cols-3 gap-4 pt-4 border-t border-white/10">
+                                    <div className="p-4 rounded-2xl bg-slate-900/60 border border-white/10 hover:border-amber-400/40 transition-colors">
+                                        <div className="text-2xl sm:text-3xl font-[Cinzel] font-bold text-[#d4a853]">100%</div>
+                                        <div className="text-[11px] text-slate-400 mt-1 leading-snug">En las manos del público</div>
                                     </div>
-                                    <div className="p-4 rounded-xl bg-white/[0.03] border border-white/5">
-                                        <div className="text-2xl font-[Cinzel] font-bold text-[#d4a853] mb-1">0</div>
-                                        <div className="text-xs text-slate-400">Trucos de cámara o pantallas intermedias</div>
+                                    <div className="p-4 rounded-2xl bg-slate-900/60 border border-white/10 hover:border-amber-400/40 transition-colors">
+                                        <div className="text-2xl sm:text-3xl font-[Cinzel] font-bold text-[#d4a853]">0</div>
+                                        <div className="text-[11px] text-slate-400 mt-1 leading-snug">Trucos de cámara ni pantallas</div>
+                                    </div>
+                                    <div className="p-4 rounded-2xl bg-slate-900/60 border border-white/10 hover:border-amber-400/40 transition-colors">
+                                        <div className="text-2xl sm:text-3xl font-[Cinzel] font-bold text-[#d4a853]">52</div>
+                                        <div className="text-[11px] text-slate-400 mt-1 leading-snug">Naipes sin trampa comercial</div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div className="relative rounded-2xl overflow-hidden border border-amber-500/20 bg-slate-900/60 p-8 shadow-2xl">
-                                <div className="absolute top-0 right-0 w-64 h-64 bg-amber-500/10 blur-3xl pointer-events-none" />
-                                <h3 className="text-xl font-[Cinzel] font-bold text-white mb-6 uppercase tracking-wider border-b border-white/10 pb-4">
-                                    Formatos de Cartomagia para Eventos
-                                </h3>
-                                <ul className="space-y-5">
-                                    <li className="flex items-start gap-4">
-                                        <span className="w-8 h-8 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-300 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
-                                            01
-                                        </span>
-                                        <div>
-                                            <h4 className="text-white font-semibold text-sm">Cartomagia de Cóctel (Walk-Around)</h4>
-                                            <p className="text-slate-400 text-xs mt-1 leading-relaxed">
-                                                Pases dinámicos de 5 a 10 minutos de corrillo en corrillo durante la copa de bienvenida en bodas y recepciones de empresa.
+                            {/* COMPOSICIÓN VISUAL: FOTO DE ACCIÓN CLOSE-UP */}
+                            <div className="lg:col-span-5">
+                                <div className="relative group rounded-3xl overflow-hidden border border-amber-500/25 bg-slate-900/80 shadow-2xl shadow-black/80">
+                                    <div className="relative aspect-[4/5] w-full overflow-hidden">
+                                        <Image
+                                            src="/images/cartomagia-de-cerca-angel-ruiz.webp"
+                                            alt="Ángel Ruiz realizando cartomagia de autor en Madrid"
+                                            fill
+                                            sizes="(max-width: 1024px) 100vw, 40vw"
+                                            className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                                            placeholder={galleryBlurs['/images/cartomagia-de-cerca-angel-ruiz.webp'] ? 'blur' : 'empty'}
+                                            blurDataURL={galleryBlurs['/images/cartomagia-de-cerca-angel-ruiz.webp']}
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/25 to-transparent" />
+                                        
+                                        <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur-md border border-amber-500/30 text-amber-300 text-xs font-semibold">
+                                            <span className="w-2 h-2 rounded-full bg-amber-400" />
+                                            <span>Magia de Cerca Pura</span>
+                                        </div>
+
+                                        <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-slate-950/90 backdrop-blur-md border border-white/10">
+                                            <p className="text-xs text-amber-300/90 font-serif italic leading-relaxed">
+                                                &ldquo;La magia no ocurre en mis manos, ocurre en la propia mente del espectador cuando toca la baraja.&rdquo;
+                                            </p>
+                                            <p className="text-white font-[Cinzel] font-bold text-xs mt-2 uppercase tracking-wider">
+                                                — Ángel Ruiz · Ilusionista
                                             </p>
                                         </div>
-                                    </li>
-                                    <li className="flex items-start gap-4">
-                                        <span className="w-8 h-8 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-300 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
-                                            02
-                                        </span>
-                                        <div>
-                                            <h4 className="text-white font-semibold text-sm">Sesión Íntima de Salón / Club Secreto</h4>
-                                            <p className="text-slate-400 text-xs mt-1 leading-relaxed">
-                                                Para grupos reducidos de 15 a 40 personas. Todos se sientan alrededor de una mesa o reservado privado viviendo una sesión completa de cartomagia de autor.
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li className="flex items-start gap-4">
-                                        <span className="w-8 h-8 rounded-full bg-amber-500/15 border border-amber-400/40 text-amber-300 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
-                                            03
-                                        </span>
-                                        <div>
-                                            <h4 className="text-white font-semibold text-sm">Magia de Cerca en Banquete (Mesa en Mesa)</h4>
-                                            <p className="text-slate-400 text-xs mt-1 leading-relaxed">
-                                                Intervención sutil entre platos o durante los cafés para dinamizar sobremesas en restaurantes y fincas de Madrid.
-                                            </p>
-                                        </div>
-                                    </li>
-                                </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </section>
 
-                    {/* SECCIÓN GALERÍA DE CARTOMAGIA EN VIVO */}
-                    <section className="py-20 border-t border-white/5 bg-gradient-to-b from-[#07090e] via-slate-950/80 to-[#07090e]">
+                    {/* SECCIÓN 2: FORMATOS DE CARTOMAGIA (3 BENTO CARDS CON FOTO REAL) */}
+                    <section className="py-20 md:py-28 border-t border-white/5 bg-slate-950/40 relative">
+                        <div className="max-w-6xl mx-auto px-6">
+                            <div className="text-center mb-16 max-w-3xl mx-auto">
+                                <span className="text-amber-400 text-xs font-bold uppercase tracking-[0.2em] block mb-3">
+                                    Experiencias a Medida
+                                </span>
+                                <h2 className="text-3xl sm:text-4xl md:text-5xl font-[Cinzel] font-bold text-white tracking-wide uppercase">
+                                    Formatos de Cartomagia para Eventos
+                                </h2>
+                                <p className="text-slate-400 text-sm md:text-base mt-3 font-light leading-relaxed">
+                                    Cada celebración tiene su propio pulso y dinámica. Diseñamos la intervención para que encaje a la perfección con el ritmo de tus invitados y el espacio.
+                                </p>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                                {/* FORMATO 01 */}
+                                <div className="group rounded-3xl overflow-hidden border border-white/10 hover:border-amber-400/40 bg-slate-900/70 shadow-xl transition-all duration-300 flex flex-col">
+                                    <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-950">
+                                        <Image
+                                            src="/images/ilusionismo-coctel-elegante-madrid-angel-ruiz.webp"
+                                            alt="Cartomagia de cóctel itinerante en Madrid con Ángel Ruiz"
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, 33vw"
+                                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                            placeholder={galleryBlurs['/images/ilusionismo-coctel-elegante-madrid-angel-ruiz.webp'] ? 'blur' : 'empty'}
+                                            blurDataURL={galleryBlurs['/images/ilusionismo-coctel-elegante-madrid-angel-ruiz.webp']}
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+                                        <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur-md border border-amber-500/30 text-amber-300 text-[10px] font-semibold uppercase tracking-wider">
+                                            01 · Walk-Around
+                                        </span>
+                                    </div>
+                                    <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+                                        <div>
+                                            <h3 className="text-xl font-[Cinzel] font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
+                                                Cóctel de Bienvenida
+                                            </h3>
+                                            <p className="text-slate-300 text-xs leading-relaxed font-light mb-4">
+                                                Pases dinámicos de 5 a 10 minutos de corrillo en corrillo de pie. Ideal durante el vino español en bodas y recepciones corporativas para romper el hielo de forma natural.
+                                            </p>
+                                        </div>
+                                        <div className="pt-4 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
+                                            <span className="text-amber-400/90 font-medium">De pie · Itinerante</span>
+                                            <span>60 – 90 min</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* FORMATO 02 */}
+                                <div className="group rounded-3xl overflow-hidden border border-amber-500/30 hover:border-amber-400 bg-slate-900/90 shadow-2xl transition-all duration-300 flex flex-col relative ring-1 ring-amber-500/20">
+                                    <div className="absolute -top-3 right-6 z-20 px-3 py-1 bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-bold text-[10px] uppercase tracking-wider rounded-full shadow-lg">
+                                        Experiencia Estrella
+                                    </div>
+                                    <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-950">
+                                        <Image
+                                            src="/images/sesion-cartomagia-teatro-angel-ruiz.webp"
+                                            alt="Sesión íntima de salón de cartomagia en Madrid"
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, 33vw"
+                                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                            placeholder={galleryBlurs['/images/sesion-cartomagia-teatro-angel-ruiz.webp'] ? 'blur' : 'empty'}
+                                            blurDataURL={galleryBlurs['/images/sesion-cartomagia-teatro-angel-ruiz.webp']}
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+                                        <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur-md border border-amber-500/30 text-amber-300 text-[10px] font-semibold uppercase tracking-wider">
+                                            02 · Club Secreto
+                                        </span>
+                                    </div>
+                                    <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+                                        <div>
+                                            <h3 className="text-xl font-[Cinzel] font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
+                                                Sesión Íntima de Salón
+                                            </h3>
+                                            <p className="text-slate-300 text-xs leading-relaxed font-light mb-4">
+                                                Para grupos reducidos de 15 a 40 personas sentadas alrededor de una mesa o reservado privado. Una velada completa con el clima de un club secreto de cartomagia.
+                                            </p>
+                                        </div>
+                                        <div className="pt-4 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
+                                            <span className="text-amber-400/90 font-medium">Sentados · Reservado</span>
+                                            <span>45 – 60 min</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* FORMATO 03 */}
+                                <div className="group rounded-3xl overflow-hidden border border-white/10 hover:border-amber-400/40 bg-slate-900/70 shadow-xl transition-all duration-300 flex flex-col">
+                                    <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-950">
+                                        <Image
+                                            src="/images/risas-reacciones-magia-restaurante-madrid.webp"
+                                            alt="Magia de cerca en sobremesa de restaurante en Madrid"
+                                            fill
+                                            sizes="(max-width: 768px) 100vw, 33vw"
+                                            className="object-cover group-hover:scale-105 transition-transform duration-700"
+                                            placeholder={galleryBlurs['/images/risas-reacciones-magia-restaurante-madrid.webp'] ? 'blur' : 'empty'}
+                                            blurDataURL={galleryBlurs['/images/risas-reacciones-magia-restaurante-madrid.webp']}
+                                        />
+                                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+                                        <span className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/85 backdrop-blur-md border border-amber-500/30 text-amber-300 text-[10px] font-semibold uppercase tracking-wider">
+                                            03 · Table Hopping
+                                        </span>
+                                    </div>
+                                    <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+                                        <div>
+                                            <h3 className="text-xl font-[Cinzel] font-bold text-white mb-2 group-hover:text-amber-400 transition-colors">
+                                                Sobremesas & Banquete
+                                            </h3>
+                                            <p className="text-slate-300 text-xs leading-relaxed font-light mb-4">
+                                                Intervenciones personalizadas mesa a mesa entre platos o durante los cafés. Asombro individual y cercano respetando escrupulosamente los tiempos de los camareros.
+                                            </p>
+                                        </div>
+                                        <div className="pt-4 border-t border-white/5 flex items-center justify-between text-[11px] text-slate-400">
+                                            <span className="text-amber-400/90 font-medium">Mesa en mesa · Sala</span>
+                                            <span>60 – 90 min</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* SECCIÓN 3: GALERÍA DE CARTOMAGIA EN VIVO */}
+                    <section className="py-20 md:py-28 border-t border-white/5 bg-gradient-to-b from-[#07090e] via-slate-950/80 to-[#07090e]">
                         <div className="max-w-6xl mx-auto px-6">
                             <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
                                 <div>
@@ -444,7 +569,7 @@ export default function MagoCartomagiaMadridPage() {
                     </section>
 
                     {/* SECCIÓN PRECIOS Y TARIFAS */}
-                    <section className="py-16 bg-slate-950/60 border-y border-white/5">
+                    <section className="py-16 md:py-24 bg-slate-950/60 border-y border-white/5">
                         <div className="max-w-6xl mx-auto px-6 text-center">
                             <span className="text-amber-400 text-xs font-bold uppercase tracking-[0.2em] block mb-2">
                                 Tarifas Claras y Directas
