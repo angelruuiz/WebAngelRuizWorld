@@ -20,9 +20,9 @@ export default function CorporateLogosBar({
         <section aria-label="Empresas que confían en Ángel Ruiz" className={`w-full relative z-20 ${className}`}>
             {/* Versión Móvil: Cinta fluida y minimalista que no abruma al usuario */}
             <div className="sm:hidden w-full py-5 px-4 overflow-hidden">
-                <p className="text-center text-[10px] uppercase font-bold tracking-[0.22em] text-[#d4a853]/90 mb-3">
+                <h2 className="text-center text-[10px] uppercase font-bold tracking-[0.22em] text-[#d4a853]/90 mb-3">
                     {title}
-                </p>
+                </h2>
                 <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_32px,_black_calc(100%-32px),transparent_100%)]">
                     <div className="flex shrink-0 items-center gap-7 animate-marquee py-1">
                         {corporateLogos.map((logo, idx) => (

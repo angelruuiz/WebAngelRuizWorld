@@ -101,14 +101,26 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                     <div className="hidden md:flex items-center justify-center gap-2 lg:gap-4 xl:gap-6 2xl:gap-7 text-[9px] lg:text-[10px] xl:text-[10.5px] font-bold uppercase tracking-[0.08em] lg:tracking-[0.16em] xl:tracking-[0.22em]">
                         {navLinks.map((link) => (
                             <div key={link.name} className="relative group py-2">
-                                <Link 
-                                    href={link.href}
-                                    onClick={(e) => link.href !== '#' && handleMagicTransition(e, link.href)}
-                                    className={`transition-colors relative inline-block text-slate-300 hover:text-[#d4a853] whitespace-nowrap ${pathname === link.href ? 'text-[#d4a853]' : ''}`}
-                                >
-                                    {link.name}
-                                    <span className={`absolute -bottom-1 left-1/2 -translate-x-1/2 h-[1px] bg-gradient-to-r from-[#d4a853] to-[#c9956b] transition-all duration-300 ${pathname === link.href ? 'w-full' : 'w-0 group-hover:w-full'}`} />
-                                </Link>
+                                {link.href === '#' || !link.href ? (
+                                    <button 
+                                        type="button" 
+                                        aria-expanded="false" 
+                                        aria-haspopup="true"
+                                        className={`transition-colors relative inline-block text-slate-300 hover:text-[#d4a853] whitespace-nowrap cursor-pointer uppercase ${pathname === link.href ? 'text-[#d4a853]' : ''}`}
+                                    >
+                                        {link.name}
+                                        <span className={`absolute -bottom-1 left-1/2 -translate-x-1/2 h-[1px] bg-gradient-to-r from-[#d4a853] to-[#c9956b] transition-all duration-300 ${pathname === link.href ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+                                    </button>
+                                ) : (
+                                    <Link 
+                                        href={link.href}
+                                        onClick={(e) => link.href !== '#' && handleMagicTransition(e, link.href)}
+                                        className={`transition-colors relative inline-block text-slate-300 hover:text-[#d4a853] whitespace-nowrap ${pathname === link.href ? 'text-[#d4a853]' : ''}`}
+                                    >
+                                        {link.name}
+                                        <span className={`absolute -bottom-1 left-1/2 -translate-x-1/2 h-[1px] bg-gradient-to-r from-[#d4a853] to-[#c9956b] transition-all duration-300 ${pathname === link.href ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+                                    </Link>
+                                )}
                                 
                                 {link.children && (
                                     <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 pointer-events-none group-hover:pointer-events-auto">

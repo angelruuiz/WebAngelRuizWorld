@@ -474,9 +474,20 @@ function renderSlide(slide) {
                     </div>
 
                     <div className="flex justify-center gap-10">
-                        {['Instagram', 'TikTok', 'YouTube', 'X / Twitter'].map((social, i) => (
-                            <a key={i} href="#" className="text-[10px] uppercase tracking-[0.2em] text-slate-500 hover:text-amber-500 transition-colors">
-                                {social}
+                        {[
+                            { name: 'Instagram', href: 'https://instagram.com/angellruuiz' },
+                            { name: 'TikTok', href: 'https://tiktok.com/@angellruuiz' },
+                            { name: 'YouTube', href: 'https://youtube.com/@angellruuiz' },
+                            { name: 'X / Twitter', href: 'https://x.com/angellruuizz' }
+                        ].map((social, i) => (
+                            <a 
+                                key={i} 
+                                href={social.href} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="text-[10px] uppercase tracking-[0.2em] text-slate-500 hover:text-amber-500 transition-colors"
+                            >
+                                {social.name}
                             </a>
                         ))}
                     </div>

@@ -58,7 +58,7 @@ export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromi
                 <div className="w-16 h-16 rounded-full bg-amber-500/20 flex items-center justify-center mb-5 border border-amber-500/50 shadow-[0_0_20px_rgba(245,158,11,0.25)]">
                     <CheckCircle2 className="w-8 h-8 text-amber-400" />
                 </div>
-                <h3 className="text-2xl font-[Cinzel] font-bold text-white mb-2 tracking-wide">¡Solicitud Recibida!</h3>
+                <p className="text-2xl font-[Cinzel] font-bold text-white mb-2 tracking-wide">¡Solicitud Recibida!</p>
                 <p className="text-slate-300 text-sm max-w-xs leading-relaxed">
                     Gracias por tu interés. Me pondré en contacto contigo a la mayor brevedad para diseñar una experiencia inolvidable.
                 </p>
@@ -87,9 +87,9 @@ export default function LiquidGlassForm({ title = "Pide Presupuesto Sin Compromi
                             Disponibilidad 2026
                         </span>
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-[Cinzel] font-bold text-white tracking-tight leading-snug">
+                    <p className="text-xl sm:text-2xl font-[Cinzel] font-bold text-white tracking-tight leading-snug">
                         {title}
-                    </h3>
+                    </p>
                     <p className="text-slate-400 text-xs font-light mt-0.5">
                         {subtitle}
                     </p>

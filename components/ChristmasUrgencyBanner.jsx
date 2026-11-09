@@ -37,9 +37,9 @@ export default function ChristmasUrgencyBanner({
             <span>{title}</span>
           </div>
 
-          <h3 className="text-xl sm:text-2xl font-[Cinzel] font-bold text-white tracking-wide mb-2">
+          <p className="text-xl sm:text-2xl font-[Cinzel] font-bold text-white tracking-wide mb-2">
             Asegura el entretenimiento de tu cena o evento antes de que se agote la agenda
-          </h3>
+          </p>
           <p className="text-sm sm:text-base text-slate-300 font-light leading-relaxed">
             {subtitle}
           </p>

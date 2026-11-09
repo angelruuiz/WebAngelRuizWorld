@@ -83,7 +83,7 @@ export const ContactFormModal = ({ isOpen, onClose }) => {
                     <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-[#d4a853]/20 flex items-center justify-center mb-6 border border-[#d4a853]/50">
                         <CheckCircle2 className="w-10 h-10 md:w-12 md:h-12 text-[#d4a853]" />
                     </motion.div>
-                    <h3 className="text-2xl md:text-3xl font-[Cinzel] text-white mb-2">¡Mensaje Enviado!</h3>
+                    <p className="text-2xl md:text-3xl font-[Cinzel] text-white mb-2 font-bold">¡Mensaje Enviado!</p>
                     <p className="text-slate-300">Gracias por contactar. La magia está en camino.</p>
                 </div>
             </MagicModal>
@@ -94,7 +94,7 @@ export const ContactFormModal = ({ isOpen, onClose }) => {
         <MagicModal isOpen={isOpen} onClose={onClose}>
             <div className="p-6 md:p-10 text-left">
                 <div className="text-center mb-6 md:mb-8">
-                    <h3 className="text-2xl md:text-3xl font-[Cinzel] text-white mb-2">Reserva tu Fecha</h3>
+                    <p className="text-2xl md:text-3xl font-[Cinzel] text-white mb-2 font-bold">Reserva tu Fecha</p>
                     <p className="text-slate-400 text-xs md:text-sm font-light">Cuéntame sobre tu evento y creemos algo inolvidable.</p>
                     <p className="text-emerald-400/90 text-[11px] md:text-xs mt-2 font-medium flex items-center justify-center gap-1.5">
                         <span>↓</span>

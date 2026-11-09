@@ -160,9 +160,9 @@ export default function MobileBookingDrawer({ isOpen, onClose }) {
                                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                                     Presupuesto Express · &lt;1h
                                 </span>
-                                <h3 className="font-[Cinzel] text-xl font-bold text-white tracking-wide">
+                                <p className="font-[Cinzel] text-xl font-bold text-white tracking-wide">
                                     {step === 1 ? '¿Qué evento organizas?' : 'Datos de Contacto'}
-                                </h3>
+                                </p>
                             </div>
                             <button
                                 type="button"
@@ -185,7 +185,7 @@ export default function MobileBookingDrawer({ isOpen, onClose }) {
                                     <div className="w-20 h-20 rounded-full bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center mb-5 shadow-[0_0_30px_rgba(16,185,129,0.3)]">
                                         <CheckCircle2 className="w-10 h-10 text-emerald-400" />
                                     </div>
-                                    <h4 className="font-[Cinzel] text-2xl font-bold text-white mb-2">¡Petición Recibida!</h4>
+                                    <p className="font-[Cinzel] text-2xl font-bold text-white mb-2">¡Petición Recibida!</p>
                                     <p className="text-sm text-slate-300 max-w-xs mb-6">
                                         Ángel Ruiz se pondrá en contacto contigo en menos de 2 horas con disponibilidad exacta y tarifas.
                                     </p>

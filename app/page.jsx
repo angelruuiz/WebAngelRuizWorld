@@ -55,9 +55,9 @@ const SEOContent = () => {
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-5 sm:gap-6 relative">
                         {/* Intro Section - Span 7 */}
                         <PerpetualCard className="md:col-span-7 flex flex-col justify-start">
-                            <h2 className="text-white font-[Cinzel] text-xl sm:text-2xl md:text-4xl uppercase tracking-wider text-left mb-2 sm:mb-4">
+                            <p className="text-white font-[Cinzel] text-xl sm:text-2xl md:text-4xl uppercase tracking-wider text-left mb-2 sm:mb-4 font-bold">
                                 Ángel Ruiz | Mago e Ilusionista en Madrid
-                            </h2>
+                            </p>
                             <p className="text-sm sm:text-base md:text-lg opacity-85 italic text-left text-gold-100 mb-4 sm:mb-6">
                                 Referente en magia para bodas y empresas con un estilo exclusivo.
                             </p>
@@ -163,7 +163,7 @@ const SEOContent = () => {
                         </PerpetualCard>
 
                         <PerpetualCard className="md:col-span-12 lg:col-span-4 flex flex-col justify-start">
-                            <h3 className="text-white font-[Cinzel] text-lg sm:text-xl uppercase tracking-tight mb-3 border-b border-white/10 pb-3">Ilusionismo para Empresas</h3>
+                            <h2 className="text-white font-[Cinzel] text-lg sm:text-xl uppercase tracking-tight mb-3 border-b border-white/10 pb-3">Ilusionismo para Empresas y Eventos Corporativos</h2>
                             <p className="text-xs sm:text-sm md:text-base leading-relaxed text-gold-50/80">
                                 Las marcas líderes buscan formas innovadoras de conectar. Como <strong className="text-amber-400">mago para empresas en Madrid</strong>, ofrezco desde presentaciones de producto mágicas hasta entretenimiento premium para convenciones y cenas de empresa de alto nivel.
                             </p>
@@ -178,7 +178,7 @@ const SEOContent = () => {
                         </PerpetualCard>
 
                         <PerpetualCard className="md:col-span-12 lg:col-span-4 flex flex-col justify-start">
-                            <h3 className="text-white font-[Cinzel] text-lg sm:text-xl uppercase tracking-tight mb-3 border-b border-white/10 pb-3">Experto en Magia en Madrid</h3>
+                            <p className="text-white font-[Cinzel] text-lg sm:text-xl uppercase tracking-tight mb-3 border-b border-white/10 pb-3 font-bold">Experto en Magia en Madrid</p>
                             <p className="text-xs sm:text-sm md:text-base leading-relaxed text-gold-50/80">
                                 Reconocido como un <strong className="text-amber-400">experto en magia en Madrid</strong>, aporto años de experiencia y técnica refinada (Escuela DaOrtiz) en especialidades como <Link href="/mago-close-up-madrid" className="text-amber-400 hover:text-white underline decoration-amber-500/30">magia de cerca</Link> para garantizar el éxito de tu evento, con puntualidad y excelencia técnica en toda la Comunidad.
                             </p>
@@ -200,7 +200,7 @@ const SEOContent = () => {
                         {/* CTA - Span 4 */}
                         <PerpetualCard className="md:col-span-12 lg:col-span-4 flex flex-col justify-between items-start text-left !bg-amber-500/10 border-amber-500/20 shadow-[inset_0_1px_0_rgba(255,191,0,0.1)]">
                             <div>
-                                <h2 className="text-xl sm:text-2xl font-[Cinzel] text-white mb-4 uppercase tracking-wider">¿Hablamos del asombro que merece tu próximo evento?</h2>
+                                <p className="text-xl sm:text-2xl font-[Cinzel] font-bold text-white mb-4 uppercase tracking-wider">¿Hablamos del asombro que merece tu próximo evento?</p>
                                 <p className="text-xs sm:text-sm md:text-base text-gold-50/90 leading-relaxed mb-6">
                                     Cada actuación es personalizada. No busco simplemente "hacer trucos", busco entender la dinámica de tu celebración para aportar el máximo valor posible a través del <strong>ilusionismo profesional</strong>. <u>La magia es el lenguaje universal del asombro</u>, déjame hablarlo para tus invitados como <Link href="/mago-madrid" className="text-amber-400 hover:underline font-bold">mago en Madrid</Link>. Si quieres consultar tarifas, visita la sección para <Link href="/contratar-mago-madrid" className="text-amber-400 hover:underline font-bold">contratar mago Madrid</Link>.
                                 </p>

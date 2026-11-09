@@ -59,8 +59,8 @@ const HeroClient = ({ onOpenVideo, onOpenContact }) => {
 
                         {/* Semantic H1 for SEO + Instant LCP Paint */}
                         <h1 className="font-[Cinzel] text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-2 sm:mb-4 md:mb-6 tracking-wider drop-shadow-lg leading-none flex flex-col items-start">
-                            <span className="text-[#d4a853] block mb-0.5 sm:mb-1">ANGEL</span>
-                            <span className="text-white block">RUIZ</span>
+                            <span className="text-[#d4a853] block mb-0.5 sm:mb-1">ÁNGEL </span>
+                            <span className="text-white block">RUIZ </span>
                             <span className="text-xs sm:text-sm md:text-base lg:text-lg font-normal tracking-[0.18em] uppercase text-amber-300/90 mt-2 sm:mt-3 font-sans">
                                 Mago en Madrid · Close-Up y Cartomagia
                             </span>

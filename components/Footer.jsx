@@ -31,9 +31,9 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                     
                     {/* Column 1: Marca */}
                     <div className="space-y-6">
-                        <h3 className={`text-2xl font-[Cinzel] text-transparent bg-clip-text bg-gradient-to-r from-[#d4a853] to-[#f3e5c8] font-bold`}>
+                        <p className={`text-2xl font-[Cinzel] text-transparent bg-clip-text bg-gradient-to-r from-[#d4a853] to-[#f3e5c8] font-bold`}>
                             Ángel Ruiz | Mago e Ilusionista
-                        </h3>
+                        </p>
                         <p className={`text-slate-400 text-sm leading-relaxed`}>
                             Ilusionista profesional para eventos corporativos exclusivos, celebraciones privadas y bodas en Madrid.
                         </p>
@@ -52,8 +52,8 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                     </div>
 
                     {/* Column 2: Servicios & Eventos */}
-                    <div className="space-y-6">
-                        <h4 className="text-lg font-[Cinzel] text-white tracking-wider">Servicios & Eventos</h4>
+                    <nav aria-label="Servicios & Eventos" className="space-y-6">
+                        <p className="text-lg font-[Cinzel] font-bold text-white tracking-wider">Servicios & Eventos</p>
                         <div className="flex flex-col gap-3 text-sm text-slate-400">
                             <Link href="/mago-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Mago en Madrid</Link>
                             <Link href="/particulares/bodas" className="hover:text-[#d4a853] transition-colors w-fit">Mago para Bodas</Link>
@@ -66,30 +66,30 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                             <Link href="/particulares/despedidas-soltera-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Despedidas de Soltera</Link>
                             <Link href="/contratar-mago-madrid" className="hover:text-[#d4a853] transition-colors w-fit">Tarifas y Dossier</Link>
                         </div>
-                    </div>
+                    </nav>
 
                     {/* Column 3: Zonas de Madrid */}
-                    <div className="space-y-6">
-                        <h4 className="text-lg font-[Cinzel] text-white tracking-wider">Zonas de Madrid</h4>
+                    <nav aria-label="Zonas de Madrid" className="space-y-6">
+                        <p className="text-lg font-[Cinzel] font-bold text-white tracking-wider">Zonas de Madrid</p>
                         <div className="space-y-4 text-sm text-slate-400">
                             <div>
-                                <h5 className="text-[#d4a853] font-semibold mb-2">Sierra & Noroeste</h5>
+                                <p className="text-[#d4a853] font-semibold mb-2">Sierra & Noroeste</p>
                                 <div className="leading-relaxed">
                                     <Link href="/mago-torrelodones" className="hover:text-white transition-colors">Torrelodones</Link>, <Link href="/mago-las-rozas" className="hover:text-white transition-colors">Las Rozas</Link>, <Link href="/mago-majadahonda" className="hover:text-white transition-colors">Majadahonda</Link>, <Link href="/mago-pozuelo" className="hover:text-white transition-colors">Pozuelo</Link>, <Link href="/mago-boadilla" className="hover:text-white transition-colors">Boadilla</Link>, <Link href="/mago-villalba" className="hover:text-white transition-colors">Collado Villalba</Link>, <Link href="/mago-galapagar" className="hover:text-white transition-colors">Galapagar</Link>, <Link href="/mago-el-escorial" className="hover:text-white transition-colors">El Escorial</Link>, <Link href="/mago-las-matas" className="hover:text-white transition-colors">Las Matas</Link>, <Link href="/mago-sierra-madrid" className="hover:text-white transition-colors">Sierra de Madrid</Link>.
                                 </div>
                             </div>
                             <div>
-                                <h5 className="text-[#d4a853] font-semibold mb-2 mt-4">Madrid Centro & Sur</h5>
+                                <p className="text-[#d4a853] font-semibold mb-2 mt-4">Madrid Centro & Sur</p>
                                 <div className="leading-relaxed">
                                     <Link href="/mago-alcorcon" className="hover:text-white transition-colors">Alcorcón</Link>, <Link href="/mago-leganes" className="hover:text-white transition-colors">Leganés</Link>, <Link href="/mago-mostoles" className="hover:text-white transition-colors">Móstoles</Link>, <Link href="/mago-getafe" className="hover:text-white transition-colors">Getafe</Link>, <Link href="/mago-alcobendas" className="hover:text-white transition-colors">Alcobendas</Link>.
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </nav>
 
                     {/* Column 4: Contacto Directo */}
                     <div className="space-y-6">
-                        <h4 className="text-lg font-[Cinzel] text-white tracking-wider">Contacto Directo</h4>
+                        <p className="text-lg font-[Cinzel] font-bold text-white tracking-wider">Contacto Directo</p>
                         <div className="flex flex-col gap-4 text-sm text-slate-400">
                             <a href="tel:+34648055636" className="hover:text-[#d4a853] transition-colors flex items-center gap-2 w-fit">
                                 +34 648 05 56 36
