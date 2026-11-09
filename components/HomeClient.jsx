@@ -72,13 +72,18 @@ const HeroClient = ({ onOpenVideo, onOpenContact }) => {
                             </p>
                         </div>
 
-                        {/* Micro-prueba social en Móvil */}
-                        <div className="lg:hidden flex items-center gap-2 my-2 text-[11px] text-slate-300">
-                            <span className="text-amber-400 font-bold tracking-wider">★★★★★</span>
-                            <span className="font-semibold text-white">Trato directo sin agencias</span>
-                            <span className="text-white/30">•</span>
-                            <span className="text-slate-300">Escuela DaOrtiz</span>
-                        </div>
+                        {/* Prueba social verificada con Google Reviews */}
+                        <a 
+                            href="https://www.google.com/search?q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=AE1YtOpq69kQPYJq7TIn_jext5SiMwQcb6Hqfr7QepP6tJJpjxxm8uN8Zj8gXbRThCA0dqOTKKnoP1rdWc4GqyqO2bKbWfqsHXjGeyQRTmrHnWHBn9wKhEzJxiJeiVnIQ6f7Qe-aM4TANzD10CaC73LbtE26xVuKIQ%3D%3D"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2.5 my-2.5 py-1.5 px-3.5 rounded-full bg-white/5 hover:bg-amber-500/10 border border-amber-400/30 hover:border-amber-400 transition-all text-[11px] sm:text-xs text-slate-200 group backdrop-blur-md cursor-pointer"
+                            aria-label="Ver reseñas 5 estrellas de Ángel Ruiz en Google Maps"
+                        >
+                            <span className="text-amber-400 font-bold tracking-widest">★★★★★ 5.0</span>
+                            <span className="text-slate-300 font-semibold">+60 Reseñas Reales en Google Maps</span>
+                            <span className="text-amber-400 text-xs group-hover:translate-x-0.5 transition-transform">↗</span>
+                        </a>
                         
                         <p className="hidden sm:block text-slate-400 text-xs sm:text-sm md:text-base font-light italic mt-2 md:mt-4 px-4 font-accent tracking-[0.08em] border-l border-white/20 pl-6">
                             "LA MAGIA QUE HACE QUE TU EVENTO SEA INOLVIDABLE."

@@ -209,6 +209,54 @@ const SEOContent = () => {
                                 <span>Ver Cobertura Local →</span>
                             </Link>
                         </PerpetualCard>
+
+                        {/* Preguntas Clave de Contratación & Precios (Booking & Pricing Gap) - Span 12 */}
+                        <PerpetualCard className="md:col-span-12 flex flex-col justify-start">
+                            <h2 className="text-xl sm:text-2xl md:text-3xl font-[Cinzel] text-white mb-6 uppercase tracking-wider text-left">
+                                Preguntas Frecuentes al Contratar un Mago en Madrid
+                            </h2>
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 text-xs sm:text-sm leading-relaxed">
+                                <details className="group p-4 sm:p-5 bg-surface-1 rounded-xl border border-white/5 hover:border-amber-400/20 transition-all cursor-pointer">
+                                    <summary className="list-none text-white font-bold flex justify-between items-center group-open:text-amber-400 transition-colors uppercase tracking-wider text-xs">
+                                        ¿Con cuánta antelación debo reservar la fecha?
+                                        <span className="text-amber-400 group-open:rotate-180 transition-transform duration-200 ml-2">↓</span>
+                                    </summary>
+                                    <p className="mt-3 text-gold-100/80 pt-3 border-t border-white/5">
+                                        Para <Link href="/particulares/bodas" className="text-amber-400 hover:underline">bodas</Link> (temporada de mayo a octubre) y <Link href="/empresas/mago-cenas-empresa-madrid" className="text-amber-400 hover:underline">cenas de empresa navideñas</Link> (noviembre y diciembre), las fechas más solicitadas se cierran con varios meses de margen. Para eventos privados con menor antelación, siempre puedes consultar disponibilidad de última hora para verificar agenda.
+                                    </p>
+                                </details>
+
+                                <details className="group p-4 sm:p-5 bg-surface-1 rounded-xl border border-white/5 hover:border-amber-400/20 transition-all cursor-pointer">
+                                    <summary className="list-none text-white font-bold flex justify-between items-center group-open:text-amber-400 transition-colors uppercase tracking-wider text-xs">
+                                        ¿Cómo se calcula el presupuesto y cuánto cuesta?
+                                        <span className="text-amber-400 group-open:rotate-180 transition-transform duration-200 ml-2">↓</span>
+                                    </summary>
+                                    <p className="mt-3 text-gold-100/80 pt-3 border-t border-white/5">
+                                        El caché depende de la fecha, la ubicación del evento y el formato seleccionado (<Link href="/mago-close-up-madrid" className="text-amber-400 hover:underline">magia de cerca en cóctel</Link> o dinamización mesa por mesa en banquete). Al contratar directamente con el artista sin intermediarios ni agencias, obtienes el mejor precio cerrado en menos de 1 hora.
+                                    </p>
+                                </details>
+
+                                <details className="group p-4 sm:p-5 bg-surface-1 rounded-xl border border-white/5 hover:border-amber-400/20 transition-all cursor-pointer">
+                                    <summary className="list-none text-white font-bold flex justify-between items-center group-open:text-amber-400 transition-colors uppercase tracking-wider text-xs">
+                                        ¿Qué requisitos técnicos o de espacio hacen falta?
+                                        <span className="text-amber-400 group-open:rotate-180 transition-transform duration-200 ml-2">↓</span>
+                                    </summary>
+                                    <p className="mt-3 text-gold-100/80 pt-3 border-t border-white/5">
+                                        Cero complicaciones. Todo el material viaja en los bolsillos del ilusionista. No necesitas escenario, altavoces, micrófonos ni iluminación especial; la magia sucede de forma completamente itinerante y autónoma en las manos de tus invitados en cualquier salón, jardín o restaurante.
+                                    </p>
+                                </details>
+
+                                <details className="group p-4 sm:p-5 bg-surface-1 rounded-xl border border-white/5 hover:border-amber-400/20 transition-all cursor-pointer">
+                                    <summary className="list-none text-white font-bold flex justify-between items-center group-open:text-amber-400 transition-colors uppercase tracking-wider text-xs">
+                                        ¿Cuánto tiempo suele durar la intervención?
+                                        <span className="text-amber-400 group-open:rotate-180 transition-transform duration-200 ml-2">↓</span>
+                                    </summary>
+                                    <p className="mt-3 text-gold-100/80 pt-3 border-t border-white/5">
+                                        En cócteles y recepciones de bienvenida suele oscilar entre 60 y 90 minutos de asombro continuo entre grupos de invitados. En banquetes o cenas corporativas sentadas, se dinamizan los tiempos entre plato y plato para asegurar que no existan tiempos muertos en la velada.
+                                    </p>
+                                </details>
+                            </div>
+                        </PerpetualCard>
                         
                         {/* Marquee Especialidades - Span 12 full width */}
                         <PerpetualCard className="md:col-span-12 !p-0 mt-4 sm:mt-8">
