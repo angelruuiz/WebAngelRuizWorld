@@ -105,10 +105,11 @@ const nextConfig = {
                         key: 'Permissions-Policy',
                         value: 'camera=(), microphone=(), geolocation=(), browsing-topics=()',
                     },
-                    {
+                    // Solo HSTS en producción para evitar que Chrome/Puppeteer fuerce HTTPS en localhost
+                    ...(process.env.NODE_ENV === 'production' ? [{
                         key: 'Strict-Transport-Security',
                         value: 'max-age=63072000; includeSubDomains; preload',
-                    },
+                    }] : []),
                     {
                         key: 'X-DNS-Prefetch-Control',
                         value: 'on',

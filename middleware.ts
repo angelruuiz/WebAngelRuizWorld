@@ -4,10 +4,10 @@ import type { NextRequest } from 'next/server';
 export function middleware(request: NextRequest) {
     const { pathname } = request.nextUrl;
 
-    // 1. Redirigir HTTP a HTTPS permanentemente (308)
+    // 1. Redirigir HTTP a HTTPS permanentemente (308) solo en producción (no en localhost)
     const proto = request.headers.get('x-forwarded-proto');
     const host = request.headers.get('host') || request.nextUrl.host;
-    if (proto === 'http') {
+    if (process.env.NODE_ENV === 'production' && proto === 'http' && !host.includes('localhost') && !host.includes('127.0.0.1')) {
         const httpsUrl = `https://${host}${request.nextUrl.pathname}${request.nextUrl.search}`;
         return NextResponse.redirect(httpsUrl, 308);
     }
