@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { MagicCursor, ParticleBackground } from '@/components/VisualEffects';
 import { Sparkles, WhatsApp } from '@/components/Icons';
 import Navbar from '@/components/Navbar';
@@ -11,7 +11,32 @@ const VideoShowModal = dynamic(() => import('@/components/VideoShowModal'), { ss
 
 import LiquidGlassForm from '@/components/LiquidGlassForm';
 
+const HERO_SLIDES = [
+    {
+        desktop: '/images/hero-angel-ruiz-2026.webp',
+        mobile: '/images/hero-angel-ruiz-mobile-2026.webp',
+        alt: 'Ángel Ruiz, mago e ilusionista profesional en Madrid realizando cartomagia',
+        objectPosition: 'object-[35%_top] md:object-[center_right] lg:object-right'
+    },
+    {
+        desktop: '/images/hero-badulaque-angel-ruiz-2026.webp',
+        mobile: '/images/hero-badulaque-angel-ruiz-mobile-2026.webp',
+        alt: 'Ángel Ruiz en espectáculo de ilusionismo y magia de cerca en vivo en Madrid',
+        objectPosition: 'object-[center_top] md:object-center lg:object-right'
+    }
+];
+
 const HeroClient = ({ onOpenVideo, onOpenContact }) => {
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    // Reinicia el contador de 8s cada vez que cambia la diapositiva (automática o manualmente)
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+        }, 8000);
+        return () => clearInterval(interval);
+    }, [currentSlide]);
+
     const handleOpenBooking = () => {
         if (typeof window !== 'undefined' && window.innerWidth < 1024) {
             window.dispatchEvent(new CustomEvent('open-booking-drawer', { detail: { eventType: 'boda' } }));
@@ -23,41 +48,55 @@ const HeroClient = ({ onOpenVideo, onOpenContact }) => {
     return (
         <section className="relative min-h-[100dvh] flex flex-col justify-end lg:justify-center overflow-hidden z-10 pt-20 pb-28 sm:pb-32 lg:py-0">
             <div className="absolute inset-0 z-0 overflow-hidden">
-                <picture>
-                    <source media="(min-width: 768px)" srcSet="/images/hero-angel-ruiz-2026.webp" width={2560} height={1440} />
-                    <img 
-                        src="/images/hero-angel-ruiz-mobile-2026.webp" 
-                        alt="Ángel Ruiz, mago e ilusionista profesional en Madrid" 
-                        className="w-full h-full object-cover object-[35%_top] md:object-[center_right] lg:object-right" 
-                        loading="eager"
-                        fetchPriority="high"
-                        decoding="sync"
-                        width={640}
-                        height={960}
-                    />
-                </picture>
+                {HERO_SLIDES.map((slide, index) => {
+                    const isActive = index === currentSlide;
+                    return (
+                        <div 
+                            key={slide.desktop}
+                            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
+                                isActive ? 'opacity-100 z-[1]' : 'opacity-0 z-0 pointer-events-none'
+                            }`}
+                            aria-hidden={!isActive}
+                        >
+                            <picture>
+                                <source media="(min-width: 768px)" srcSet={slide.desktop} width={2560} height={1440} />
+                                <img 
+                                    src={slide.mobile} 
+                                    alt={slide.alt} 
+                                    className={`w-full h-full object-cover ${slide.objectPosition}`} 
+                                    loading={index === 0 ? "eager" : "lazy"}
+                                    fetchPriority={index === 0 ? "high" : "low"}
+                                    decoding={index === 0 ? "sync" : "async"}
+                                    width={640}
+                                    height={960}
+                                />
+                            </picture>
+                        </div>
+                    );
+                })}
+
                 {/* Gradiente superior sutil para proteger la legibilidad del Navbar */}
-                <div className='absolute inset-0 bg-gradient-to-b from-[#030712]/75 via-transparent to-[#030712]' />
+                <div className='absolute inset-0 bg-gradient-to-b from-[#030712]/75 via-transparent to-[#030712] pointer-events-none z-10' />
                 {/* Gradiente lateral para Desktop: oscurece suavemente la izquierda para el texto y deja libre a Ángel a la derecha */}
-                <div className='hidden lg:block absolute inset-0 bg-gradient-to-r from-[#030712]/95 via-[#030712]/60 via-40% to-transparent' />
+                <div className='hidden lg:block absolute inset-0 bg-gradient-to-r from-[#030712]/95 via-[#030712]/60 via-40% to-transparent pointer-events-none z-10' />
                 {/* Gradiente inferior para Móvil */}
-                <div className='lg:hidden absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/80 via-55% to-transparent' />
+                <div className='lg:hidden absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/80 via-55% to-transparent pointer-events-none z-10' />
             </div>
             
             <div className="px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 relative z-10 w-full max-w-7xl mx-auto">
                 <div className="max-w-2xl lg:max-w-xl xl:max-w-2xl flex flex-col items-start text-left">
                     {/* Semantic H1 for SEO + Instant LCP Paint */}
-                    <h1 className="font-[Cinzel] text-4xl sm:text-6xl md:text-7xl xl:text-8xl font-bold mb-1.5 sm:mb-2 tracking-wider drop-shadow-[0_4px_24px_rgba(0,0,0,0.8)] leading-[0.95] flex flex-col items-start">
-                        <span className="text-[#d4a853] block">ÁNGEL </span>
-                        <span className="text-white block">RUIZ </span>
+                    <h1 className="font-biro text-5xl sm:text-7xl md:text-8xl xl:text-9xl font-normal mb-2 sm:mb-3 drop-shadow-[0_4px_24px_rgba(0,0,0,0.8)] leading-[1] tracking-tight flex flex-col items-start select-none">
+                        <span className="text-[#d4a853] block">Ángel</span>
+                        <span className="text-white block">Ruiz</span>
                     </h1>
                     <p className="text-xs sm:text-sm md:text-base font-normal tracking-[0.2em] uppercase text-amber-300/90 mb-3 sm:mb-4 font-sans">
-                        Mago en Madrid · Close-Up y Cartomagia
+                        Mago en Madrid · Magia de cerca y Cóctel
                     </p>
                     
                     {/* Propuesta de valor limpia y editorial */}
                     <p className="text-slate-300/90 text-xs sm:text-base md:text-lg leading-relaxed max-w-lg mb-3 sm:mb-4 font-light drop-shadow">
-                        Ilusionismo contemporáneo a escasos centímetros de tus invitados. Más de <strong className="text-amber-300 font-semibold">10 años de experiencia</strong> creando momentos inolvidables en bodas exclusivas y eventos corporativos de élite.
+                        Magia de cerca, cara a cara y con ese punto pícaro que rompe el hielo al instante. Llevo <strong className="text-amber-300 font-semibold">+12 años haciendo magia</strong> participativa que sucede directamente en las manos de tus invitados, con risas y complicidad total.
                     </p>
 
                     {/* Prueba social verificada con Google Reviews */}
@@ -113,6 +152,21 @@ const HeroClient = ({ onOpenVideo, onOpenContact }) => {
                 <div className='w-5 h-8 rounded-full border-2 border-white/20 flex items-start justify-center pt-1.5 animate-pulse'>
                     <div className='w-1 h-2 rounded-full bg-[#d4a853]/60' />
                 </div>
+            </div>
+
+            {/* Indicadores sutiles de diapositiva de fondo */}
+            <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-10 z-20 flex items-center gap-2" aria-label="Control de imágenes de fondo">
+                {HERO_SLIDES.map((_, idx) => (
+                    <button
+                        key={idx}
+                        type="button"
+                        onClick={() => setCurrentSlide(idx)}
+                        aria-label={`Ver foto de fondo ${idx + 1}`}
+                        className={`h-1 rounded-full transition-all duration-500 cursor-pointer ${
+                            idx === currentSlide ? 'w-6 bg-amber-400' : 'w-2 bg-white/30 hover:bg-white/60'
+                        }`}
+                    />
+                ))}
             </div>
         </section>
     );

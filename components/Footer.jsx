@@ -44,10 +44,7 @@ const Footer = ({ onOpenContact, isLight = false }) => {
                         <div className="flex flex-wrap gap-4 pt-2">
                             <a href="https://instagram.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#d4a853] transition-colors text-sm">Instagram</a>
                             <a href="https://tiktok.com/@angellruuiz" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#d4a853] transition-colors text-sm">TikTok</a>
-                            <a href="https://youtube.com/@angellruuiz" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#d4a853] transition-colors text-sm">YouTube</a>
                             <a href="https://x.com/angellruuizz" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#d4a853] transition-colors text-sm">X</a>
-                            <a href="https://facebook.com/angellruuiz" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-[#d4a853] transition-colors text-sm">Facebook</a>
-                            <a href="https://www.google.com/search?q=%C3%81ngel+Ruiz+Mago+e+Ilusionista&si=AE1YtOpq69kQPYJq7TIn_jext5SiMwQcb6Hqfr7QepP6tJJpjxxm8uN8Zj8gXbRThCA0dqOTKKnoP1rdWc4GqyqO2bKbWfqsHXjGeyQRTmrHnWHBn9wKhEzJxiJeiVnIQ6f7Qe-aM4TANzD10CaC73LbtE26xVuKIQ%3D%3D" target="_blank" rel="noopener noreferrer" className="text-amber-400/90 hover:text-amber-300 transition-colors text-sm font-semibold">Google Maps ★ 5.0</a>
                         </div>
                     </div>
 

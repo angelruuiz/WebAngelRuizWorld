@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import HomeClient, { PerpetualCard } from '@/components/HomeClient';
+import HomeClient from '@/components/HomeClient';
 import QuickEventSelector from '@/components/QuickEventSelector';
 import CorporateLogosBar from '@/components/CorporateLogosBar';
 import ChristmasUrgencyBanner from '@/components/ChristmasUrgencyBanner';
@@ -40,270 +40,266 @@ const SEOContent = () => {
             {/* Franja de Autoridad Inmediata tras el Hero */}
             <CorporateLogosBar />
 
-            <section className="pt-4 sm:pt-8 pb-28 sm:pb-32 px-4 md:px-8 bg-surface-0 text-gold-50 relative overflow-hidden">
-                <div className="absolute top-0 left-1/4 w-96 h-96 bg-amber-500/5 blur-[120px] rounded-full pointer-events-none" />
-                <div className="max-w-[1400px] mx-auto relative pt-4 sm:pt-8">
+            <div className="bg-surface-0 text-gold-50 relative overflow-hidden">
+                {/* Sutil halo ambiental superior */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-amber-500/[0.03] blur-[140px] rounded-full pointer-events-none" />
+
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-6 sm:pt-10 pb-20 sm:pb-28">
                     
-                    {/* Selector Rápido de Eventos (Bodas / Empresas / Particulares) */}
-                    <QuickEventSelector />
+                    {/* Selector Rápido de Formato */}
+                    <div className="mb-10 sm:mb-14">
+                        <QuickEventSelector />
+                    </div>
 
                     {/* Campaña de Urgencia Q4: Cenas de Empresa y Navidad */}
-                    <div className="mb-8">
+                    <div className="mb-14 sm:mb-20">
                         <ChristmasUrgencyBanner />
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-12 gap-5 sm:gap-6 relative">
-                        {/* Intro Section - Span 7 */}
-                        <PerpetualCard className="md:col-span-7 flex flex-col justify-start">
-                            <p className="text-white font-[Cinzel] text-xl sm:text-2xl md:text-4xl uppercase tracking-wider text-left mb-2 sm:mb-4 font-bold">
-                                Ángel Ruiz | Mago e Ilusionista en Madrid
-                            </p>
-                            <p className="text-sm sm:text-base md:text-lg opacity-85 italic text-left text-gold-100 mb-4 sm:mb-6">
-                                Referente en magia para bodas y empresas con un estilo exclusivo.
-                            </p>
+                    {/* ── SECCIÓN EDITORIAL: EL ARTE Y LA AUTORIDAD ── */}
+                    <section aria-labelledby="seccion-ilusionismo-autor" className="mb-20 sm:mb-28">
+                        <div className="relative rounded-3xl p-6 sm:p-10 lg:p-12 bg-gradient-to-b from-white/[0.03] via-white/[0.015] to-transparent border border-white/[0.08] backdrop-blur-sm">
+                            <div className="max-w-3xl mb-8 sm:mb-10">
+                                <p className="text-[11px] sm:text-xs uppercase tracking-[0.25em] font-bold text-amber-400 mb-3 flex items-center gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+                                    <span>Ilusionismo de Autor · Escuela Dani DaOrtiz</span>
+                                </p>
+                                <h2 id="seccion-ilusionismo-autor" className="text-2xl sm:text-3xl md:text-4xl font-[Cinzel] font-bold text-white tracking-wide leading-tight mb-4">
+                                    Asombro Inteligente para Celebraciones de Élite en Madrid
+                                </h2>
+                                <p className="text-sm sm:text-base md:text-lg text-slate-300/90 leading-relaxed font-light">
+                                    Especialista en magia de cerca (<em className="text-amber-300 not-italic font-normal">close-up</em>) y <Link href="/mago-cartomagia-madrid" className="text-amber-400 hover:underline">cartomagia de autor</Link>. Una experiencia de alta sofisticación diseñada para ocurrir a escasos centímetros de tus invitados, sin escenarios ni artificios.
+                                </p>
+                            </div>
 
-                            {/* Píldoras de credenciales */}
-                            <div className="flex flex-wrap gap-2 mb-6">
-                                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-amber-500/15 border border-amber-400/30 text-amber-300 text-[11px] font-semibold">
-                                    <span>🎓</span> Formación Escuela Dani DaOrtiz
+                            {/* Credenciales de Prestigio */}
+                            <div className="flex flex-wrap items-center gap-3 pb-8 mb-8 border-b border-white/[0.08]">
+                                <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-400/25 text-amber-300 text-xs font-medium">
+                                    <span className="text-amber-400 text-sm">✦</span> Formado con Dani DaOrtiz
                                 </span>
-                                <Link href="/mago-cartomagia-madrid" className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 hover:text-amber-300 hover:border-amber-400/40 transition-colors text-[11px]">
-                                    <span>♠️</span> Cartomagia de autor
+                                <Link href="/mago-close-up-madrid" className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.08] hover:border-amber-400/40 text-slate-300 hover:text-amber-300 transition-all text-xs font-medium">
+                                    <span className="text-slate-400 text-sm">♠</span> Magia de Cerca Close-Up
                                 </Link>
-                                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 text-[11px]">
-                                    <span>🤝</span> Trato directo sin comisiones
+                                <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.08] text-slate-300 text-xs font-medium">
+                                    <span className="text-emerald-400 text-xs">●</span> Trato Directo Sin Intermediarios
                                 </span>
                             </div>
-                            
-                            <div className="pt-5 sm:pt-6 border-t border-white/10 space-y-4 sm:space-y-5">
-                                <p className="text-xs uppercase tracking-[0.25em] font-bold text-amber-400 text-left">
-                                    Experiencia Certificada y Formación de Élite
-                                </p>
-                                <p className="text-xs sm:text-sm md:text-base leading-relaxed text-gold-50/90">
-                                    Ángel Ruiz se ha consolidado como uno de los <strong className="text-amber-400">ilusionistas de referencia en Madrid</strong>, formado en la prestigiosa <u>Escuela de Magia de Dani DaOrtiz</u>. Esta formación de élite se traduce en una especialización en <Link href="/mago-cartomagia-madrid" className="text-amber-400 hover:underline">cartomagia de autor</Link> y un estilo propio que lo distancia del ilusionismo convencional. Su enfoque se centra en la <u>magia de cerca (close-up) de alta calidad</u>, donde el milagro ocurre literalmente a escasos centímetros del espectador.
-                                </p>
-                                <p className="text-xs sm:text-sm md:text-base leading-relaxed text-gold-50/90">
-                                    En un mercado saturado de agencias, mi propuesta ofrece la distinción de un <strong>especialista</strong>. Mi magia no solo ejecuta trucos; se trata de <strong>diseñar atmósferas de asombro inteligente</strong>. Ya sea en un cóctel de bienvenida o en una cena de gala corporativa, mi trabajo bajo el sello de la <Link href="/mago-cartomagia-madrid" className="text-amber-400 hover:underline">cartomagia de autor</Link> asegura que tu celebración sea recordada por su sofisticación y verdadera imposibilidad.
-                                </p>
-                            </div>
-                        </PerpetualCard>
 
-                        {/* Accordions - Span 5 (Ambos cerrados por defecto en móvil para evitar saturar de texto) */}
-                        <PerpetualCard className="md:col-span-5 flex flex-col justify-start">
-                            <div className="space-y-4 text-xs md:text-sm">
-                                <details className="group border-b border-white/10 pb-4 cursor-pointer">
-                                    <summary className="list-none text-gold-50 font-bold flex justify-between items-center group-open:text-amber-400 transition-colors py-3 uppercase tracking-wider text-xs">
-                                        ¿Por qué contratar un mago profesional para tu evento?
-                                        <span className="text-amber-400 group-open:rotate-180 transition-transform duration-200">↓</span>
-                                    </summary>
-                                    <div className="mt-3 text-gold-100/80 leading-relaxed space-y-3 p-4 sm:p-5 bg-surface-1 rounded-xl border border-white/5">
-                                        <p><strong>Cuanto cuesta contratar un mago</strong> en Madrid puede variar, pero contar con un <strong>mago profesional</strong> con trayectoria no es solo añadir un número de entretenimiento; es transformar radicalmente la percepción de tus invitados sobre el evento. El ilusionismo moderno sirve para:</p>
-                                        <ul className="space-y-2 list-none">
-                                            <li><span className="text-amber-400 mr-2">✦</span> <strong>Networking Natural:</strong> Facilitamos que personas que no se conocen comiencen a interactuar tras vivir una imposibilidad compartida.</li>
-                                            <li><span className="text-amber-400 mr-2">✦</span> <strong>Eliminar tiempos muertos:</strong> La magia es ideal para cubrir transiciones en banquetes o recepciones.</li>
-                                            <li><span className="text-amber-400 mr-2">✦</span> <strong>Refuerzo de Marca:</strong> En eventos de empresa, podemos integrar tu mensaje corporativo dentro de los propios efectos mágicos.</li>
-                                        </ul>
+                            {/* Narrativa y Métricas */}
+                            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+                                <div className="lg:col-span-7 space-y-4 text-sm sm:text-base text-slate-300/90 leading-relaxed font-light">
+                                    <p>
+                                        En un mercado saturado de opciones genéricas, mi trabajo se aleja del entretenimiento convencional para centrarse en <strong className="text-white font-medium">diseñar atmósferas de imposibilidad compartida</strong>. La magia de cerca de autor actúa como un catalizador social natural: rompe el hielo entre invitados que no se conocen y convierte cócteles y sobremesas en momentos memorables.
+                                    </p>
+                                    <p>
+                                        Cada pase está adaptado al perfil de tu celebración, con un estilo cercano, pícaro y 100% participativo donde los invitados no miran desde lejos: son los verdaderos protagonistas de cada imposible.
+                                    </p>
+                                </div>
+
+                                <div className="lg:col-span-5 grid grid-cols-3 gap-3 p-4 sm:p-5 rounded-2xl bg-black/40 border border-white/[0.06] text-center">
+                                    <div className="space-y-1">
+                                        <p className="text-xl sm:text-2xl font-[Cinzel] font-bold text-amber-400">+12</p>
+                                        <p className="text-[11px] text-slate-400 uppercase tracking-wider">Años de Magia</p>
                                     </div>
-                                </details>
-
-                                <details className="group border-b border-transparent pb-3 cursor-pointer text-gold-100/80 mt-2">
-                                    <summary className="list-none text-gold-50 font-bold flex justify-between items-center group-open:text-amber-400 transition-colors py-3 uppercase tracking-wider text-xs">
-                                        Cobertura en Madrid y Zona Noroeste
-                                        <span className="text-amber-400 group-open:rotate-180 transition-transform duration-200">↓</span>
-                                    </summary>
-                                    <div className="mt-3 leading-relaxed space-y-3 p-4 sm:p-5 bg-surface-1 rounded-xl border border-white/5">
-                                        <p>Si buscas un <strong>mago profesional en la sierra de Madrid</strong>, Angel Ruiz ofrece total disponibilidad y conocimiento de los espacios locales más exclusivos. Opero desde mi base en el noroeste, lo que garantiza una logística impecable.</p>
-                                        <div className="pt-2">
-                                            <p className="mb-2 text-[10px] text-amber-400 uppercase font-bold tracking-widest">Servicio Local en Municipios Clave:</p>
-                                            <div className="flex flex-wrap gap-x-4 gap-y-2.5 text-xs uppercase font-semibold text-gold-100/90">
-                                                {[
-                                                    { href: "/mago-torrelodones", name: "Torrelodones", primary: true },
-                                                    { href: "/mago-sierra-madrid", name: "Sierra de Madrid" },
-                                                    { href: "/mago-las-rozas", name: "Las Rozas" },
-                                                    { href: "/mago-boadilla", name: "Boadilla del Monte" },
-                                                    { href: "/mago-villalba", name: "Collado Villalba" },
-                                                    { href: "/mago-galapagar", name: "Galapagar" },
-                                                    { href: "/mago-pozuelo", name: "Pozuelo de Alarcón" },
-                                                    { href: "/mago-majadahonda", name: "Majadahonda" },
-                                                    { href: "/mago-las-matas", name: "Las Matas" },
-                                                    { href: "/mago-el-escorial", name: "El Escorial" },
-                                                    { href: "/mago-alcorcon", name: "Alcorcón" },
-                                                    { href: "/mago-leganes", name: "Leganés" },
-                                                    { href: "/mago-mostoles", name: "Móstoles" },
-                                                    { href: "/mago-getafe", name: "Getafe" },
-                                                    { href: "/mago-alcobendas", name: "Alcobendas" },
-                                                ].map((city) => (
-                                                    <a 
-                                                        key={city.href}
-                                                        href={city.href} 
-                                                        className={`hover:text-amber-400 transition-colors inline-block ${city.primary ? 'text-amber-400 underline decoration-amber-500/30' : ''}`}
-                                                    >
-                                                        {city.name}
-                                                    </a>
-                                                ))}
-                                            </div>
-                                            <p className="mt-4 text-xs text-slate-300 leading-relaxed italic border-t border-white/10 pt-3">
-                                                Especialista en <strong>fincas para bodas</strong> y eventos residenciales VIP en urbanizaciones como La Finca, Somosaguas y Monterrozas.
-                                            </p>
-                                        </div>
+                                    <div className="space-y-1 border-x border-white/[0.08]">
+                                        <p className="text-xl sm:text-2xl font-[Cinzel] font-bold text-amber-400">5.0 ★</p>
+                                        <p className="text-[11px] text-slate-400 uppercase tracking-wider">+60 Reseñas Google</p>
                                     </div>
-                                </details>
-                            </div>
-                        </PerpetualCard>
-
-                        {/* Features block - Span 4 x3 */}
-                        <PerpetualCard className="md:col-span-12 lg:col-span-4 flex flex-col justify-start">
-                            <h2 className="text-white font-[Cinzel] text-lg sm:text-xl uppercase tracking-tight mb-3 border-b border-white/10 pb-3">Mago para Bodas en Madrid</h2>
-                            <p className="text-xs sm:text-sm md:text-base leading-relaxed text-gold-50/80">
-                                La figura del ilusionista durante el cóctel transforma la espera en el momento más memorable de la celebración. Mi magia de cerca rompe el hielo de forma elegante, uniendo a familias y amigos bajo un mismo sentimiento de asombro y alegría.
-                            </p>
-                            <Link href="/particulares/bodas" className="mt-5 inline-flex items-center text-amber-400 text-xs font-bold uppercase tracking-wider hover:text-white transition-colors">
-                                Ver Mago para Bodas en Madrid →
-                            </Link>
-                        </PerpetualCard>
-
-                        <PerpetualCard className="md:col-span-12 lg:col-span-4 flex flex-col justify-start">
-                            <h2 className="text-white font-[Cinzel] text-lg sm:text-xl uppercase tracking-tight mb-3 border-b border-white/10 pb-3">Ilusionismo para Empresas y Eventos Corporativos</h2>
-                            <p className="text-xs sm:text-sm md:text-base leading-relaxed text-gold-50/80">
-                                Las marcas líderes buscan formas innovadoras de conectar. Como <strong className="text-amber-400">mago para empresas en Madrid</strong>, ofrezco desde presentaciones de producto mágicas hasta entretenimiento premium para convenciones y cenas de empresa de alto nivel.
-                            </p>
-                            <div className="mt-5 space-y-2 border-t border-white/5 pt-3">
-                                <Link href="/empresas" className="inline-flex items-center text-amber-400 text-xs font-bold uppercase tracking-wider hover:text-white transition-colors">
-                                    Ver Mago para Empresas en Madrid →
-                                </Link>
-                                <Link href="/empresas/mago-cenas-empresa-madrid" className="text-xs text-amber-300 font-semibold hover:text-white flex items-center gap-1.5 transition-colors">
-                                    <span>🎄 Cenas de Empresa & Navidad en Madrid (Reservar Fechas Q4) →</span>
-                                </Link>
-                            </div>
-                        </PerpetualCard>
-
-                        <PerpetualCard className="md:col-span-12 lg:col-span-4 flex flex-col justify-start">
-                            <p className="text-white font-[Cinzel] text-lg sm:text-xl uppercase tracking-tight mb-3 border-b border-white/10 pb-3 font-bold">Experto en Magia en Madrid</p>
-                            <p className="text-xs sm:text-sm md:text-base leading-relaxed text-gold-50/80">
-                                Reconocido como un <strong className="text-amber-400">experto en magia en Madrid</strong>, aporto años de experiencia y técnica refinada (Escuela DaOrtiz) en especialidades como <Link href="/mago-close-up-madrid" className="text-amber-400 hover:text-white underline decoration-amber-500/30">magia de cerca</Link> para garantizar el éxito de tu evento, con puntualidad y excelencia técnica en toda la Comunidad.
-                            </p>
-                        </PerpetualCard>
-
-                        {/* SEO Why Trust - Span 8 */}
-                        <PerpetualCard className="md:col-span-12 lg:col-span-8 flex flex-col justify-center">
-                            <h2 className="text-xl sm:text-2xl md:text-3xl font-[Cinzel] text-white mb-6 uppercase tracking-wider text-left">Por qué confiar en un Experto en Magia</h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs sm:text-sm md:text-base text-gold-50/90 leading-relaxed text-justify">
-                                <p>
-                                    En el sector de los eventos, la diferencia entre un entretenimiento genérico y una experiencia verdaderamente inolvidable radica en la profesionalidad del ilusionista. Mi trayectoria me permite no solo ejecutar ilusiones imposibles, sino leer al público, gestionar el ritmo del evento e interactuar con la máxima elegancia.
-                                </p>
-                                <p>
-                                    Ya sea en una <Link href="/particulares/bodas" className="text-amber-400 hover:underline inline-block font-semibold">boda donde conectar con familias diversas</Link>, o en un <Link href="/empresas" className="text-amber-400 hover:underline inline-block font-semibold">evento corporativo que representa la imagen de tu marca</Link>, la profesionalidad está garantizada. Más de 10 años de experiencia y +60 reseñas de 5 estrellas avalan mi compromiso con el asombro de calidad.
-                                </p>
-                            </div>
-                        </PerpetualCard>
-
-                        {/* CTA - Span 4 */}
-                        <PerpetualCard className="md:col-span-12 lg:col-span-4 flex flex-col justify-between items-start text-left !bg-amber-500/10 border-amber-500/20 shadow-[inset_0_1px_0_rgba(255,191,0,0.1)]">
-                            <div>
-                                <p className="text-xl sm:text-2xl font-[Cinzel] font-bold text-white mb-4 uppercase tracking-wider">¿Hablamos del asombro que merece tu próximo evento?</p>
-                                <p className="text-xs sm:text-sm md:text-base text-gold-50/90 leading-relaxed mb-6">
-                                    Cada actuación es personalizada. No busco simplemente "hacer trucos", busco entender la dinámica de tu celebración para aportar el máximo valor posible a través del <strong>ilusionismo profesional</strong>. <u>La magia es el lenguaje universal del asombro</u>, déjame hablarlo para tus invitados como <Link href="/mago-madrid" className="text-amber-400 hover:underline font-bold">mago en Madrid</Link>. Si quieres consultar tarifas, visita la sección para <Link href="/contratar-mago-madrid" className="text-amber-400 hover:underline font-bold">contratar mago Madrid</Link>.
-                                </p>
-                            </div>
-                            <Link href="/mago-sierra-madrid" className="group inline-block bg-white text-surface-0 font-bold px-6 sm:px-8 py-3.5 sm:py-4 rounded-full hover:bg-amber-400 hover:scale-[1.02] active:scale-[0.97] transition-all uppercase tracking-wider text-xs">
-                                <span>Ver Cobertura Local →</span>
-                            </Link>
-                        </PerpetualCard>
-
-                        {/* Preguntas Clave de Contratación & Precios (Booking & Pricing Gap) - Span 12 */}
-                        <PerpetualCard className="md:col-span-12 flex flex-col justify-start">
-                            <h2 className="text-xl sm:text-2xl md:text-3xl font-[Cinzel] text-white mb-6 uppercase tracking-wider text-left">
-                                Preguntas Frecuentes al Contratar un Mago en Madrid
-                            </h2>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 text-xs sm:text-sm leading-relaxed">
-                                <details className="group p-4 sm:p-5 bg-surface-1 rounded-xl border border-white/5 hover:border-amber-400/20 transition-all cursor-pointer">
-                                    <summary className="list-none text-white font-bold flex justify-between items-center group-open:text-amber-400 transition-colors uppercase tracking-wider text-xs">
-                                        ¿Con cuánta antelación debo reservar la fecha?
-                                        <span className="text-amber-400 group-open:rotate-180 transition-transform duration-200 ml-2">↓</span>
-                                    </summary>
-                                    <p className="mt-3 text-gold-100/80 pt-3 border-t border-white/5">
-                                        Para <Link href="/particulares/bodas" className="text-amber-400 hover:underline">bodas</Link> (temporada de mayo a octubre) y <Link href="/empresas/mago-cenas-empresa-madrid" className="text-amber-400 hover:underline">cenas de empresa navideñas</Link> (noviembre y diciembre), las fechas más solicitadas se cierran con varios meses de margen. Para eventos privados con menor antelación, siempre puedes consultar disponibilidad de última hora para verificar agenda.
-                                    </p>
-                                </details>
-
-                                <details className="group p-4 sm:p-5 bg-surface-1 rounded-xl border border-white/5 hover:border-amber-400/20 transition-all cursor-pointer">
-                                    <summary className="list-none text-white font-bold flex justify-between items-center group-open:text-amber-400 transition-colors uppercase tracking-wider text-xs">
-                                        ¿Cómo se calcula el presupuesto y cuánto cuesta?
-                                        <span className="text-amber-400 group-open:rotate-180 transition-transform duration-200 ml-2">↓</span>
-                                    </summary>
-                                    <p className="mt-3 text-gold-100/80 pt-3 border-t border-white/5">
-                                        El caché depende de la fecha, la ubicación del evento y el formato seleccionado (<Link href="/mago-close-up-madrid" className="text-amber-400 hover:underline">magia de cerca en cóctel</Link> o dinamización mesa por mesa en banquete). Al contratar directamente con el artista sin intermediarios ni agencias, obtienes el mejor precio cerrado en menos de 1 hora.
-                                    </p>
-                                </details>
-
-                                <details className="group p-4 sm:p-5 bg-surface-1 rounded-xl border border-white/5 hover:border-amber-400/20 transition-all cursor-pointer">
-                                    <summary className="list-none text-white font-bold flex justify-between items-center group-open:text-amber-400 transition-colors uppercase tracking-wider text-xs">
-                                        ¿Qué requisitos técnicos o de espacio hacen falta?
-                                        <span className="text-amber-400 group-open:rotate-180 transition-transform duration-200 ml-2">↓</span>
-                                    </summary>
-                                    <p className="mt-3 text-gold-100/80 pt-3 border-t border-white/5">
-                                        Cero complicaciones. Todo el material viaja en los bolsillos del ilusionista. No necesitas escenario, altavoces, micrófonos ni iluminación especial; la magia sucede de forma completamente itinerante y autónoma en las manos de tus invitados en cualquier salón, jardín o restaurante.
-                                    </p>
-                                </details>
-
-                                <details className="group p-4 sm:p-5 bg-surface-1 rounded-xl border border-white/5 hover:border-amber-400/20 transition-all cursor-pointer">
-                                    <summary className="list-none text-white font-bold flex justify-between items-center group-open:text-amber-400 transition-colors uppercase tracking-wider text-xs">
-                                        ¿Cuánto tiempo suele durar la intervención?
-                                        <span className="text-amber-400 group-open:rotate-180 transition-transform duration-200 ml-2">↓</span>
-                                    </summary>
-                                    <p className="mt-3 text-gold-100/80 pt-3 border-t border-white/5">
-                                        En cócteles y recepciones de bienvenida suele oscilar entre 60 y 90 minutos de asombro continuo entre grupos de invitados. En banquetes o cenas corporativas sentadas, se dinamizan los tiempos entre plato y plato para asegurar que no existan tiempos muertos en la velada.
-                                    </p>
-                                </details>
-                            </div>
-                        </PerpetualCard>
-                        
-                        {/* Marquee Especialidades - Span 12 full width */}
-                        <PerpetualCard className="md:col-span-12 !p-0 mt-4 sm:mt-8">
-                            <div className="py-6 sm:py-8 overflow-hidden bg-surface-1/50">
-                                <h2 className="text-center font-bold text-amber-400 uppercase tracking-[0.35em] text-[10px] md:text-xs mb-6 sm:mb-8 animate-pulse">Especialidades de Ilusionismo Premium</h2>
-                                <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_48px,_black_calc(100%-48px),transparent_100%)]">
-                                    <div className="flex shrink-0 items-center justify-around gap-8 sm:gap-12 min-w-full animate-marquee py-1">
-                                        {[
-                                            'Ángel Ruiz Madrid',
-                                            'Mago para Bodas',
-                                            'Mago para Empresas',
-                                            'Ilusionismo de Gala',
-                                            'Magia para Cóctel',
-                                            'Espectáculos VIP Madrid',
-                                            'Team Building Mágico',
-                                            'Eventos Exclusivos'
-                                        ].map((spec, idx) => (
-                                            <span key={`spec-1-${idx}`} className="flex items-center gap-4 sm:gap-6 text-xs md:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em] font-bold text-amber-400 whitespace-nowrap">
-                                                <span>{spec}</span>
-                                                <span className="text-amber-500/40 text-[10px]">✦</span>
-                                            </span>
-                                        ))}
-                                    </div>
-                                    <div className="flex shrink-0 items-center justify-around gap-8 sm:gap-12 min-w-full animate-marquee py-1" aria-hidden="true">
-                                        {[
-                                            'Ángel Ruiz Madrid',
-                                            'Mago para Bodas',
-                                            'Mago para Empresas',
-                                            'Ilusionismo de Gala',
-                                            'Magia para Cóctel',
-                                            'Espectáculos VIP Madrid',
-                                            'Team Building Mágico',
-                                            'Eventos Exclusivos'
-                                        ].map((spec, idx) => (
-                                            <span key={`spec-2-${idx}`} className="flex items-center gap-4 sm:gap-6 text-xs md:text-sm uppercase tracking-[0.2em] sm:tracking-[0.3em] font-bold text-amber-400 whitespace-nowrap">
-                                                <span>{spec}</span>
-                                                <span className="text-amber-500/40 text-[10px]">✦</span>
-                                            </span>
-                                        ))}
+                                    <div className="space-y-1">
+                                        <p className="text-xl sm:text-2xl font-[Cinzel] font-bold text-amber-400">100%</p>
+                                        <p className="text-[11px] text-slate-400 uppercase tracking-wider">Sin Escenario</p>
                                     </div>
                                 </div>
                             </div>
-                        </PerpetualCard>
+                        </div>
+                    </section>
 
-                    </div>
+                    {/* ── SECCIÓN PILARES: BODAS & EMPRESAS ── */}
+                    <section aria-label="Especialidades principales de magia en Madrid" className="mb-20 sm:mb-28">
+                        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+                            <p className="text-[11px] uppercase tracking-[0.25em] text-amber-400 font-bold mb-2">Formatos de Actuación</p>
+                            <h2 className="text-2xl sm:text-3xl font-[Cinzel] font-bold text-white tracking-wide">
+                                Diseñado para Dos Momentos Inolvidables
+                            </h2>
+                        </div>
+
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+                            {/* Pilar 1: Bodas */}
+                            <div className="group relative rounded-3xl p-6 sm:p-8 bg-gradient-to-b from-white/[0.04] to-white/[0.01] hover:from-white/[0.06] hover:to-white/[0.02] border border-white/[0.08] hover:border-amber-400/40 transition-all duration-300 flex flex-col justify-between">
+                                <div className="space-y-4">
+                                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-300 text-[11px] uppercase tracking-wider font-semibold">
+                                        <span>💍</span> Bodas Exclusivas
+                                    </div>
+                                    <h3 className="text-xl sm:text-2xl font-[Cinzel] font-bold text-white group-hover:text-amber-300 transition-colors">
+                                        Magia para Bodas en Madrid
+                                    </h3>
+                                    <p className="text-sm sm:text-base text-slate-300/90 leading-relaxed font-light">
+                                        El cóctel de bienvenida es el instante perfecto para romper el hielo. Grupos reducidos de invitados experimentan milagros en sus propias manos, uniendo a familias y amigos en una risa y complicidad compartidas antes del banquete.
+                                    </p>
+                                </div>
+                                <div className="pt-6 mt-6 border-t border-white/[0.08]">
+                                    <Link href="/particulares/bodas" className="inline-flex items-center gap-2 text-amber-400 group-hover:text-amber-300 text-xs sm:text-sm font-semibold tracking-wider uppercase transition-colors">
+                                        <span>Descubrir Magia para Bodas</span>
+                                        <span className="group-hover:translate-x-1 transition-transform">→</span>
+                                    </Link>
+                                </div>
+                            </div>
+
+                            {/* Pilar 2: Empresas */}
+                            <div className="group relative rounded-3xl p-6 sm:p-8 bg-gradient-to-b from-white/[0.04] to-white/[0.01] hover:from-white/[0.06] hover:to-white/[0.02] border border-white/[0.08] hover:border-amber-400/40 transition-all duration-300 flex flex-col justify-between">
+                                <div className="space-y-4">
+                                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-400/20 text-amber-300 text-[11px] uppercase tracking-wider font-semibold">
+                                        <span>🏢</span> Corporativo & Galas
+                                    </div>
+                                    <h3 className="text-xl sm:text-2xl font-[Cinzel] font-bold text-white group-hover:text-amber-300 transition-colors">
+                                        Ilusionismo para Empresas y Eventos
+                                    </h3>
+                                    <p className="text-sm sm:text-base text-slate-300/90 leading-relaxed font-light">
+                                        Desde cenas de gala y celebraciones navideñas hasta convenciones y lanzamientos de producto. Entretenimiento de alto nivel con posibilidad de personalizar efectos con el mensaje de tu marca.
+                                    </p>
+                                </div>
+                                <div className="pt-6 mt-6 border-t border-white/[0.08] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                                    <Link href="/empresas" className="inline-flex items-center gap-2 text-amber-400 group-hover:text-amber-300 text-xs sm:text-sm font-semibold tracking-wider uppercase transition-colors">
+                                        <span>Ver Servicios para Empresas</span>
+                                        <span className="group-hover:translate-x-1 transition-transform">→</span>
+                                    </Link>
+                                    <Link href="/empresas/mago-cenas-empresa-madrid" className="text-[11px] text-slate-400 hover:text-amber-300 transition-colors">
+                                        Cenas de Navidad Q4 →
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* ── SECCIÓN COBERTURA: MADRID & FINCAS DE ÉLITE ── */}
+                    <section aria-labelledby="cobertura-madrid-titulo" className="mb-20 sm:mb-28">
+                        <div className="rounded-3xl p-6 sm:p-8 lg:p-10 bg-gradient-to-b from-white/[0.02] to-transparent border border-white/[0.06]">
+                            <div className="max-w-2xl mb-6">
+                                <p className="text-[11px] uppercase tracking-[0.25em] text-amber-400 font-bold mb-2">Disponibilidad Territorial</p>
+                                <h2 id="cobertura-madrid-titulo" className="text-xl sm:text-2xl md:text-3xl font-[Cinzel] font-bold text-white tracking-wide mb-3">
+                                    Cobertura en la Comunidad de Madrid y Fincas de Élite
+                                </h2>
+                                <p className="text-xs sm:text-sm text-slate-300/90 leading-relaxed font-light">
+                                    Con base logística en la zona noroeste, Ángel Ruiz se desplaza habitualmente a las principales fincas para bodas, hoteles y espacios singulares de toda la región:
+                                </p>
+                            </div>
+
+                            <div className="space-y-4 pt-2">
+                                <div>
+                                    <p className="text-[11px] uppercase font-bold tracking-wider text-amber-400/90 mb-2.5">
+                                        Sierra de Madrid & Zona Noroeste:
+                                    </p>
+                                    <div className="flex flex-wrap gap-2 text-xs text-slate-300">
+                                        {[
+                                            { href: "/mago-torrelodones", name: "Torrelodones", highlight: true },
+                                            { href: "/mago-sierra-madrid", name: "Sierra de Madrid", highlight: true },
+                                            { href: "/mago-las-rozas", name: "Las Rozas" },
+                                            { href: "/mago-majadahonda", name: "Majadahonda" },
+                                            { href: "/mago-pozuelo", name: "Pozuelo de Alarcón" },
+                                            { href: "/mago-boadilla", name: "Boadilla del Monte" },
+                                            { href: "/mago-villalba", name: "Collado Villalba" },
+                                            { href: "/mago-galapagar", name: "Galapagar" },
+                                            { href: "/mago-el-escorial", name: "El Escorial" },
+                                            { href: "/mago-las-matas", name: "Las Matas" },
+                                        ].map((city) => (
+                                            <Link 
+                                                key={city.href}
+                                                href={city.href} 
+                                                className={"px-3 py-1 rounded-full transition-all " + (city.highlight ? "bg-amber-500/15 text-amber-300 border border-amber-400/30 font-medium" : "bg-white/[0.03] hover:bg-white/[0.08] text-slate-300 hover:text-white border border-white/[0.06]")}
+                                            >
+                                                {city.name}
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <div className="pt-2">
+                                    <p className="text-[11px] uppercase font-bold tracking-wider text-amber-400/90 mb-2.5">
+                                        Madrid Capital & Área Metropolitana:
+                                    </p>
+                                    <div className="flex flex-wrap gap-2 text-xs text-slate-300">
+                                        {[
+                                            { href: "/mago-madrid", name: "Madrid Centro", highlight: true },
+                                            { href: "/mago-alcobendas", name: "Alcobendas" },
+                                            { href: "/mago-alcorcon", name: "Alcorcón" },
+                                            { href: "/mago-leganes", name: "Leganés" },
+                                            { href: "/mago-mostoles", name: "Móstoles" },
+                                            { href: "/mago-getafe", name: "Getafe" },
+                                        ].map((city) => (
+                                            <Link 
+                                                key={city.href}
+                                                href={city.href} 
+                                                className={"px-3 py-1 rounded-full transition-all " + (city.highlight ? "bg-amber-500/15 text-amber-300 border border-amber-400/30 font-medium" : "bg-white/[0.03] hover:bg-white/[0.08] text-slate-300 hover:text-white border border-white/[0.06]")}
+                                            >
+                                                {city.name}
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </div>
+
+                                <p className="text-xs text-slate-400/80 italic pt-3 border-t border-white/[0.06]">
+                                    Especialista en celebraciones privadas en urbanizaciones residenciales VIP (La Finca, Somosaguas, Montepríncipe, Monterrozas) y fincas de eventos en la sierra noroeste.
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    {/* ── SECCIÓN PREGUNTAS FRECUENTES (SEMÁNTICA LIMPIA) ── */}
+                    <section aria-labelledby="faq-madrid-titulo" className="mb-16 sm:mb-20">
+                        <div className="max-w-3xl mx-auto">
+                            <div className="text-center mb-10">
+                                <p className="text-[11px] uppercase tracking-[0.25em] text-amber-400 font-bold mb-2">Transparencia y Proceso</p>
+                                <h2 id="faq-madrid-titulo" className="text-2xl sm:text-3xl font-[Cinzel] font-bold text-white tracking-wide">
+                                    Preguntas Frecuentes al Contratar
+                                </h2>
+                            </div>
+
+                            <div className="space-y-4">
+                                <details className="group rounded-2xl p-5 sm:p-6 bg-white/[0.02] hover:bg-white/[0.04] border border-white/[0.08] transition-all cursor-pointer">
+                                    <summary className="list-none text-white font-semibold flex justify-between items-center group-open:text-amber-400 transition-colors text-sm sm:text-base">
+                                        <span>¿Con cuánta antelación debo reservar la fecha?</span>
+                                        <span className="text-amber-400 group-open:rotate-180 transition-transform duration-200 text-sm ml-4">↓</span>
+                                    </summary>
+                                    <p className="mt-4 text-xs sm:text-sm text-slate-300 leading-relaxed pt-3 border-t border-white/[0.06] font-light">
+                                        Para <Link href="/particulares/bodas" className="text-amber-400 hover:underline font-normal">bodas</Link> (temporada de mayo a octubre) y <Link href="/empresas/mago-cenas-empresa-madrid" className="text-amber-400 hover:underline font-normal">cenas de empresa navideñas</Link> (noviembre y diciembre), las fechas más cotizadas se cierran con varios meses de margen. Para eventos privados con menor antelación, consulta disponibilidad inmediata para comprobar agenda.
+                                    </p>
+                                </details>
+
+                                <details className="group rounded-2xl p-5 sm:p-6 bg-white/[0.02] hover:bg-white/[0.04] border border-white/[0.08] transition-all cursor-pointer">
+                                    <summary className="list-none text-white font-semibold flex justify-between items-center group-open:text-amber-400 transition-colors text-sm sm:text-base">
+                                        <span>¿Cómo se calcula el presupuesto y cuánto cuesta?</span>
+                                        <span className="text-amber-400 group-open:rotate-180 transition-transform duration-200 text-sm ml-4">↓</span>
+                                    </summary>
+                                    <p className="mt-4 text-xs sm:text-sm text-slate-300 leading-relaxed pt-3 border-t border-white/[0.06] font-light">
+                                        El presupuesto depende de la fecha, la ubicación exacta y el formato seleccionado (<Link href="/mago-close-up-madrid" className="text-amber-400 hover:underline font-normal">magia de cerca en cóctel</Link> o dinamización entre platos en banquete). Al contratar directamente con el artista sin comisiones de agencia, obtienes una tarifa cerrada y transparente en menos de 1 hora.
+                                    </p>
+                                </details>
+
+                                <details className="group rounded-2xl p-5 sm:p-6 bg-white/[0.02] hover:bg-white/[0.04] border border-white/[0.08] transition-all cursor-pointer">
+                                    <summary className="list-none text-white font-semibold flex justify-between items-center group-open:text-amber-400 transition-colors text-sm sm:text-base">
+                                        <span>¿Qué requisitos técnicos o de espacio hacen falta?</span>
+                                        <span className="text-amber-400 group-open:rotate-180 transition-transform duration-200 text-sm ml-4">↓</span>
+                                    </summary>
+                                    <p className="mt-4 text-xs sm:text-sm text-slate-300 leading-relaxed pt-3 border-t border-white/[0.06] font-light">
+                                        Cero complicaciones logísticas. El ilusionismo de cerca viaja en los bolsillos del artista. No necesitas tarima, altavoces ni iluminación especial; los efectos suceden de manera itinerante y autónoma en las manos de tus invitados en jardines, salones o restaurantes.
+                                    </p>
+                                </details>
+
+                                <details className="group rounded-2xl p-5 sm:p-6 bg-white/[0.02] hover:bg-white/[0.04] border border-white/[0.08] transition-all cursor-pointer">
+                                    <summary className="list-none text-white font-semibold flex justify-between items-center group-open:text-amber-400 transition-colors text-sm sm:text-base">
+                                        <span>¿Cuánto suele durar la intervención en cóctel o cena?</span>
+                                        <span className="text-amber-400 group-open:rotate-180 transition-transform duration-200 text-sm ml-4">↓</span>
+                                    </summary>
+                                    <p className="mt-4 text-xs sm:text-sm text-slate-300 leading-relaxed pt-3 border-t border-white/[0.06] font-light">
+                                        En recepciones de cóctel suele oscilar entre 60 y 90 minutos de magia continua entre pequeños grupos. En banquetes o cenas sentadas, se dinamizan los tiempos de espera entre platos para mantener la energía del evento en todo momento.
+                                    </p>
+                                </details>
+                            </div>
+                        </div>
+                    </section>
+
                 </div>
-            </section>
+            </div>
         </>
     );
 };

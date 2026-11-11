@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        biro: ['var(--font-biro)', 'Biro Script Plus', 'cursive'],
+      },
       colors: {
         surface: {
           0: 'var(--surface-0)',

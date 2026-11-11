@@ -73,6 +73,7 @@ import NewsletterForm from '@/components/NewsletterForm';
 import WhatsAppButton from '@/components/WhatsAppButton';
 
 import { Cinzel, Cormorant_Garamond, Outfit } from 'next/font/google';
+import localFont from 'next/font/local';
 
 const cinzel = Cinzel({ 
   subsets: ['latin'],
@@ -93,6 +94,12 @@ const outfit = Outfit({
   subsets: ['latin'],
   weight: ['400', '600'],
   variable: '--font-outfit',
+  display: 'swap',
+});
+
+const biroScript = localFont({
+  src: '../public/fonts/biro-script-plus.woff2',
+  variable: '--font-biro-script',
   display: 'swap',
 });
 
@@ -343,7 +350,7 @@ const globalSchema = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="es" className={`${cinzel.variable} ${cormorant.variable} ${outfit.variable}`}>
+    <html lang="es" className={`${cinzel.variable} ${cormorant.variable} ${outfit.variable} ${biroScript.variable}`}>
       <head>
         <link rel="preconnect" href="https://va.vercel-scripts.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />

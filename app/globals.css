@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Biro Script Plus';
+    src: url('/fonts/biro-script-plus.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -41,6 +49,7 @@
     --font-body: var(--font-outfit), 'Outfit', system-ui, sans-serif;
     --font-heading: var(--font-cinzel), 'Cinzel', serif;
     --font-accent: var(--font-cormorant), 'Cormorant Garamond', serif;
+    --font-biro: var(--font-biro-script), 'Biro Script Plus', cursive;
 }
 
 
@@ -85,6 +94,10 @@ p {
 /* Accent serif for quotes, subtitles, taglines */
 .font-accent, blockquote, .tagline {
     font-family: var(--font-accent);
+}
+
+.font-biro {
+    font-family: var(--font-biro);
 }
 
 /* Legacy class support */

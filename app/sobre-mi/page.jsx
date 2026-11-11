@@ -2,8 +2,8 @@ import SobreMiClient from '@/components/SobreMiClient';
 import Link from 'next/link';
 
 export const metadata = {
-    title: { absolute: 'Ángel Ruiz | Mago Profesional en Madrid (+10 Años)' },
-    description: 'Conoce a Ángel Ruiz, mago profesional en Madrid formado con Dani DaOrtiz. Especialista en magia de cerca para bodas y empresas con +10 años de trayectoria.',
+    title: { absolute: 'Ángel Ruiz | Mago Profesional en Madrid (+12 Años)' },
+    description: 'Conoce a Ángel Ruiz, mago profesional en Madrid formado con Dani DaOrtiz. Especialista en magia de cerca para bodas y empresas con +10 años de trayectoria (+12 años).',
     alternates: {
         canonical: 'https://angelruiz.world/sobre-mi',
     },
@@ -55,7 +55,7 @@ export default function SobreMiPage() {
         "@id": "https://angelruiz.world/sobre-mi/#aboutpage",
         "url": "https://angelruiz.world/sobre-mi",
         "name": "Sobre Ángel Ruiz | Mago Profesional en Madrid",
-        "description": "Biografía oficial, formación en la Escuela DaOrtiz y trayectoria de +10 años de Ángel Ruiz como ilusionista en Madrid.",
+        "description": "Biografía oficial, formación en la Escuela DaOrtiz y trayectoria de +12 años de Ángel Ruiz como ilusionista en Madrid.",
         "inLanguage": "es-ES",
         "mainEntity": {
             "@id": "https://angelruiz.world/#person"
@@ -86,35 +86,85 @@ export default function SobreMiPage() {
             }) }} 
         />
         <SobreMiClient>
-            <div className="space-y-8 text-white font-medium leading-relaxed text-sm md:text-base">
-                <p className="text-xl md:text-2xl text-amber-400 font-[Cinzel] font-bold italic mb-8 drop-shadow-sm text-left leading-tight border-l-4 border-amber-500 pl-6 py-2 bg-white/5 rounded-r-lg">
-                    "La magia no es solo lo que viste, sino el recuerdo imborrable que te llevas contigo al cerrar los ojos."
-                </p>
-                
-                <div className="space-y-6">
-                    <p className="text-justify first-letter:text-5xl first-letter:font-bold first-letter:text-amber-500 first-letter:mr-3 first-letter:float-left">
-                        Como <Link href="/mago-madrid" className="text-amber-400 font-bold italic font-serif underline decoration-amber-500/30">experto en magia en Madrid</Link>, tengo muy claro que mi trabajo es mucho más que hacer trucos: se trata de crear emociones reales. Me dedico por completo a hacer posible lo imposible, ofreciendo <Link href="/particulares/bodas" className="text-amber-400 font-bold hover:underline">magia premium para bodas</Link> y eventos de empresa exclusivos que buscan destacar.
+            <div className="space-y-7 text-slate-200 text-sm sm:text-base leading-relaxed">
+                {/* Manifiesto / Cita personal */}
+                <div className="relative p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-transparent border-l-4 border-amber-400 border border-white/5 shadow-lg backdrop-blur-sm">
+                    <p className="text-base sm:text-lg md:text-xl text-amber-300 font-[Cinzel] font-bold italic leading-snug">
+                        "La magia de cerca no va de engañar a nadie: va de mirarnos a los ojos, romper el hielo con picardía y convertir a un grupo de desconocidos en cómplices."
                     </p>
-                    
-                    <p className="text-justify">
-                        Mi pasión por la magia empezó cuando tenía solo 8 años. Mientras otros niños jugaban, yo aprendía los grandes secretos de la mano de <strong className="text-amber-400 font-bold italic">Paco G</strong>, quien me contagió la curiosidad y las ganas de mejorar cada día. Esos primeros años me enseñaron no solo a practicar, sino a entender cómo piensa el espectador y a valorar el misterio.
+                    <p className="text-xs uppercase tracking-widest text-slate-400 mt-3 font-medium">
+                        — Ángel Ruiz · Mago e Ilusionista en Madrid
+                    </p>
+                </div>
+
+                {/* Síntesis biográfica con SEO estratégico */}
+                <div className="space-y-4 text-slate-300 font-light">
+                    <p className="text-base sm:text-lg leading-relaxed text-slate-200">
+                        Llevo <strong className="text-amber-300 font-semibold">+12 años haciendo magia</strong> como <Link href="/mago-madrid" className="text-amber-400 hover:underline font-medium">mago en Madrid</Link>. Mi estilo huye de los clichés de chistera y escenario: mi territorio natural es la <Link href="/mago-close-up-madrid" className="text-amber-400 hover:underline font-medium">magia de cerca (close-up)</Link> y cóctel, donde el asombro sucede a escasos centímetros de tus ojos y directamente en las manos de tus invitados.
                     </p>
 
-                    <p className="text-justify bg-amber-500/5 p-6 rounded-2xl border border-amber-500/10 shadow-inner">
-                        Un gran paso en mi carrera fue formarme en la <strong className="text-amber-400 font-bold">Escuela de Dani DaOrtiz</strong>, reconocido como uno de los mejores magos con cartas del mundo. Con él no solo mejoré mi técnica, sino que aprendí a ver la magia como algo muy libre y sorprendente. Por eso mi estilo actual es directo y moderno, alejándome del clásico "mago con chistera" para conectar de verdad y de cerca con el público de hoy.
+                    <p className="leading-relaxed">
+                        Me formé en la <strong>Escuela de Magia de Dani DaOrtiz</strong>, referente mundial indiscutible del ilusionismo con cartas. De esa formación absorbí un estilo directo, psicológico y desenfadado: <Link href="/mago-cartomagia-madrid" className="text-amber-400 hover:underline font-medium">cartomagia de autor</Link> con ritmo ágil, risas y ese toque pícaro que desarma la frialdad en cualquier celebración.
                     </p>
-                    
-                    <p className="text-justify">
-                        Mi gran especialidad es la <strong className="text-amber-400 font-bold">Magia con Cartas</strong> de alto nivel. Para mí, una baraja ofrece un mundo de posibilidades increíbles a escasos centímetros de tus ojos. En mis sesiones de <strong className="text-amber-400 font-bold italic">Magia de Cerca (Close-up)</strong>, los milagros suceden en tus propias manos. Es algo tan cercano y visual que resulta imposible no sorprenderse.
-                    </p>
-                    
-                    <p className="text-justify">
-                        Como <strong className="text-amber-400">mago en Torrelodones</strong>, trabajo desde la <u>Sierra de Madrid</u>, lo que me permite desplazarme fácilmente por toda la zona noroeste y la capital. Mi objetivo es sencillo: ofrecer un <strong>entretenimiento VIP</strong> que llene de buena energía cualquier fiesta o evento. No quiero que solo aplaudas un truco, quiero que te olvides de todo por un rato y disfrutes de una experiencia única.
-                    </p>
+                </div>
 
-                    <p className="text-justify text-slate-400 italic border-t border-white/5 pt-6">
-                        A lo largo de mi carrera como <Link href="/empresas" className="text-amber-400 hover:underline">mago para empresas en Madrid</Link> y eventos privados, he aprendido que el éxito está en cuidar los detalles y en ofrecer un trato elegante y cercano. <u>La magia es la ilusión más bonita</u> que existe, y mi compromiso es compartir ese momento contigo con el mayor nivel de profesionalidad.
-                    </p>
+                {/* 4 Señas de Identidad / Credenciales en Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                    <div className="p-4 rounded-xl bg-white/[0.03] border border-white/[0.07] hover:border-amber-400/30 transition-colors">
+                        <span className="text-amber-400 text-xs font-bold uppercase tracking-wider block mb-1">
+                            ✦ Participativo y Pícaro
+                        </span>
+                        <p className="text-xs text-slate-300/90 leading-relaxed font-light">
+                            Humor fino, complicidad e interacción continua. Rompo el hielo en cualquier cóctel haciendo partícipes a todos los invitados.
+                        </p>
+                    </div>
+
+                    <div className="p-4 rounded-xl bg-white/[0.03] border border-white/[0.07] hover:border-amber-400/30 transition-colors">
+                        <span className="text-amber-400 text-xs font-bold uppercase tracking-wider block mb-1">
+                            ✦ Bodas y Empresas
+                        </span>
+                        <p className="text-xs text-slate-300/90 leading-relaxed font-light">
+                            Especializado en <Link href="/particulares/bodas" className="text-amber-400 hover:underline font-normal">magia para bodas</Link> y <Link href="/empresas" className="text-amber-400 hover:underline font-normal">eventos corporativos</Link> exclusivos que buscan una experiencia memorable.
+                        </p>
+                    </div>
+
+                    <div className="p-4 rounded-xl bg-white/[0.03] border border-white/[0.07] hover:border-amber-400/30 transition-colors">
+                        <span className="text-amber-400 text-xs font-bold uppercase tracking-wider block mb-1">
+                            ✦ Escuela DaOrtiz
+                        </span>
+                        <p className="text-xs text-slate-300/90 leading-relaxed font-light">
+                            Técnica depurada en cartomagia de autor. Sin grandes aparatos ni humo: solo una baraja, psicología y máxima imposibilidad.
+                        </p>
+                    </div>
+
+                    <div className="p-4 rounded-xl bg-white/[0.03] border border-white/[0.07] hover:border-amber-400/30 transition-colors">
+                        <span className="text-amber-400 text-xs font-bold uppercase tracking-wider block mb-1">
+                            ✦ Madrid & Sierra Noroeste
+                        </span>
+                        <p className="text-xs text-slate-300/90 leading-relaxed font-light">
+                            Con base en <Link href="/mago-torrelodones" className="text-amber-400 hover:underline font-normal">Torrelodones</Link>, me desplazo habitualmente a fincas, hoteles y salones de toda la Comunidad de Madrid.
+                        </p>
+                    </div>
+                </div>
+
+                {/* Métricas / Social Proof */}
+                <div className="pt-4 border-t border-white/[0.08] flex flex-wrap items-center justify-between gap-4">
+                    <div className="flex items-center gap-6 text-xs text-slate-300">
+                        <div>
+                            <span className="text-amber-400 font-bold text-lg block font-[Cinzel]">+12 Años</span>
+                            <span className="text-slate-400 text-[11px] uppercase tracking-wider">Haciendo Magia</span>
+                        </div>
+                        <div className="w-[1px] h-8 bg-white/10" />
+                        <div>
+                            <span className="text-amber-400 font-bold text-lg block font-[Cinzel]">5.0 ★★★★★</span>
+                            <span className="text-slate-400 text-[11px] uppercase tracking-wider">+60 Reseñas Google</span>
+                        </div>
+                        <div className="w-[1px] h-8 bg-white/10" />
+                        <div>
+                            <span className="text-amber-400 font-bold text-lg block font-[Cinzel]">0% Intermediarios</span>
+                            <span className="text-slate-400 text-[11px] uppercase tracking-wider">Trato Directo</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </SobreMiClient>
