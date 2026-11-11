@@ -47,7 +47,7 @@ const SYLLABUS_STEPS = [
     {
         num: "03",
         title: "Psicología del Engaño & Misdirection",
-        subtitle: "La escuela de Dani DaOrtiz: controlar la atención",
+        subtitle: "Control de la atención, timing y naturalidad psicológica",
         tag: "Psicología & Timing",
         badgeColor: "text-purple-300 bg-purple-500/10 border-purple-400/20",
         description: "La técnica sin psicología no es magia, es malabarismo. Te enseñaré a dirigir la mirada y la mente del público para que el secreto ocurra a plena vista sin que sospechen.",
@@ -76,7 +76,80 @@ const SYLLABUS_STEPS = [
     }
 ];
 
+const PRICING_PACKS = [
+    {
+        id: "esencial",
+        name: "Pack Esencial",
+        hoursPerWeek: "1 hora / semana",
+        hoursTotal: "4 horas al mes",
+        price: "120€",
+        period: "/ mes",
+        equivalent: "Equivale a 30€ / hora",
+        badge: null,
+        description: "Ideal para arrancar desde cero, consolidar una base sólida de agarre y técnica sin sobrecargar tu rutina semanal.",
+        features: [
+            "1 sesión individual de 60 min/semana en directo (HD)",
+            "Cámara cenital con perspectiva de primera persona",
+            "Corrección de vicios y técnica al segundo",
+            "Resolución de dudas técnicas por WhatsApp entre semana",
+            "Guía de práctica semanal para casa",
+            "Sin compromiso de permanencia (renovación mensual)"
+        ],
+        ctaText: "Elegir 1h / Semana",
+        whatsappUrl: "https://wa.me/34648055636?text=Hola%20%C3%81ngel,%20quiero%20apuntarme%20al%20Pack%20Esencial%20(1h/semana%20-%20120%E2%82%AC/mes)%20de%20clases%20online",
+        highlighted: false,
+    },
+    {
+        id: "intensivo",
+        name: "Pack Intensivo",
+        hoursPerWeek: "2 horas / semana",
+        hoursTotal: "8 horas al mes",
+        price: "210€",
+        period: "/ mes",
+        equivalent: "Equivale a ~26€ / hora · Ahorras 30€",
+        badge: "Recomendado · Más Elegido",
+        description: "El formato más equilibrado y demandado. Ideal para experimentar avances notorios, dominar cartomagia intermedia y ganar soltura real.",
+        features: [
+            "2 horas individuales a la semana (1 o 2 sesiones)",
+            "Todo lo incluido en el Pack Esencial",
+            "Revisión y corrección de vídeos propios que me envíes",
+            "Psicología del engaño, tiempos muertos y desvío de atención",
+            "Controles invisibles, forzajes y doble volteo profesional",
+            "Soporte prioritario y cercano por WhatsApp"
+        ],
+        ctaText: "Elegir 2h / Semana",
+        whatsappUrl: "https://wa.me/34648055636?text=Hola%20%C3%81ngel,%20quiero%20apuntarme%20al%20Pack%20Intensivo%20(2h/semana%20-%20210%E2%82%AC/mes)%20de%20clases%20online",
+        highlighted: true,
+    },
+    {
+        id: "maestria",
+        name: "Pack Maestría & Escenario",
+        hoursPerWeek: "3 horas / semana",
+        hoursTotal: "12 horas al mes",
+        price: "295€",
+        period: "/ mes",
+        equivalent: "Equivale a ~24€ / hora · Máximo Ahorro",
+        badge: "Nivel Pro",
+        description: "Para quien busca el máximo nivel. Construcción de tu propio espectáculo de 15 a 30 minutos, oratoria y seguridad total ante el público.",
+        features: [
+            "3 horas individuales a la semana de mentoría intensiva",
+            "Todo lo incluido en el Pack Intensivo",
+            "Diseño y montaje completo de tu propio show o rutina",
+            "Coaching de oratoria, lenguaje corporal y presencia escénica",
+            "Gestión de público escéptico y control de imprevistos",
+            "Asesoría completa en repertorio, barajas y puesta en escena"
+        ],
+        ctaText: "Elegir 3h / Semana",
+        whatsappUrl: "https://wa.me/34648055636?text=Hola%20%C3%81ngel,%20quiero%20apuntarme%20al%20Pack%20Maestr%C3%ADa%20(3h/semana%20-%20295%E2%82%AC/mes)%20de%20clases%20online",
+        highlighted: false,
+    }
+];
+
 const FAQS_CLASES = [
+    {
+        q: "¿Cuáles son las tarifas y cómo funcionan los packs por horas semanales?",
+        a: "Ofrecemos tres opciones claras según las horas semanales que desees: Pack Esencial (1h/sem - 120€/mes, equivalente a 30€/h), Pack Intensivo (2h/sem - 210€/mes, equivalente a ~26€/h) y Pack Maestría (3h/sem - 295€/mes, equivalente a ~24€/h). Si prefieres hacer una sesión de prueba suelta de 1 hora para probar el método, son 35€ (que se descuentan si luego contratas un pack mensual)."
+    },
     {
         q: "¿Necesito saber de magia o tener experiencia previa?",
         a: "Para nada. Las clases son 100% personalizadas e individuales. Si nunca has tocado una baraja, empezamos desde cómo sujetarla de forma natural. Y si ya tienes nivel o llevas años practicando, iremos directos a pulir detalles técnicos avanzados, psicología o puesta en escena."
@@ -143,10 +216,10 @@ export default function ClasesClient() {
                         </a>
 
                         <a 
-                            href="#temario"
+                            href="#precios"
                             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-amber-400/40 text-slate-200 hover:text-white text-sm font-semibold tracking-wider uppercase backdrop-blur-md transition-all active:scale-95"
                         >
-                            <span>Ver el Temario ↓</span>
+                            <span>Ver Tarifas & Temario ↓</span>
                         </a>
                     </div>
 
@@ -159,7 +232,7 @@ export default function ClasesClient() {
                             <span className="text-amber-400">✓</span> Cámara Cenital HD en Directo
                         </span>
                         <span className="flex items-center gap-2">
-                            <span className="text-amber-400">✓</span> Escuela DaOrtiz (+12 Años)
+                            <span className="text-amber-400">✓</span> +12 Años de Experiencia Real
                         </span>
                         <span className="flex items-center gap-2">
                             <span className="text-amber-400">✓</span> Horarios Flexibles
@@ -292,6 +365,123 @@ export default function ClasesClient() {
                     </div>
                 </section>
 
+                {/* ── SECCIÓN PACKS DE PRECIOS POR HORAS SEMANALES ── */}
+                <section id="precios" className="mb-24 sm:mb-32 relative">
+                    <div className="text-center max-w-3xl mx-auto mb-14">
+                        <p className="text-[11px] uppercase tracking-[0.25em] text-amber-400 font-bold mb-2">Planes & Tarifas Transparentes</p>
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-[Cinzel] font-bold text-white tracking-wide mb-4">
+                            Packs por Horas Semanales
+                        </h2>
+                        <p className="text-sm sm:text-base text-slate-300 font-light max-w-2xl mx-auto">
+                            Precios accesibles y justos para una formación particular 1 a 1 de primer nivel. Tú decides el compromiso semanal; sin permanencias ni cuotas sorpresa.
+                        </p>
+                    </div>
+
+                    {/* Grid de 3 Packs */}
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto items-stretch">
+                        {PRICING_PACKS.map((pack) => {
+                            const isPopular = pack.highlighted;
+                            return (
+                                <div
+                                    key={pack.id}
+                                    className={`relative rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 backdrop-blur-md ${
+                                        isPopular
+                                            ? 'bg-gradient-to-b from-amber-500/15 via-white/[0.04] to-black/60 border-2 border-amber-400 shadow-[0_0_40px_rgba(245,158,11,0.25)] lg:-translate-y-2'
+                                            : 'bg-white/[0.025] hover:bg-white/[0.05] border border-white/[0.08] hover:border-amber-400/40 shadow-xl'
+                                    }`}
+                                >
+                                    {/* Badge flotante para el pack popular */}
+                                    {pack.badge && (
+                                        <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-amber-500 to-amber-400 text-slate-950 font-bold text-[10px] sm:text-xs uppercase tracking-widest shadow-lg">
+                                            {pack.badge}
+                                        </div>
+                                    )}
+
+                                    <div>
+                                        <div className="flex items-center justify-between gap-2 mb-2">
+                                            <h3 className="text-xl sm:text-2xl font-[Cinzel] font-bold text-white">
+                                                {pack.name}
+                                            </h3>
+                                            <span className="text-xs px-2.5 py-1 rounded-full bg-white/[0.06] border border-white/10 text-slate-300 font-medium">
+                                                {pack.hoursTotal}
+                                            </span>
+                                        </div>
+
+                                        <p className="text-xs font-semibold text-amber-300 mb-4 tracking-wide uppercase">
+                                            ⏱ {pack.hoursPerWeek}
+                                        </p>
+
+                                        {/* Precio principal */}
+                                        <div className="mb-4 pb-4 border-b border-white/[0.08]">
+                                            <div className="flex items-baseline gap-1">
+                                                <span className="text-4xl sm:text-5xl font-bold font-[Cinzel] text-white">
+                                                    {pack.price}
+                                                </span>
+                                                <span className="text-sm text-slate-400 font-light">
+                                                    {pack.period}
+                                                </span>
+                                            </div>
+                                            <p className="text-xs text-amber-200/90 font-mono mt-1">
+                                                {pack.equivalent}
+                                            </p>
+                                        </div>
+
+                                        <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-light mb-6">
+                                            {pack.description}
+                                        </p>
+
+                                        {/* Lista de características */}
+                                        <ul className="space-y-2.5 text-xs text-slate-300 mb-8">
+                                            {pack.features.map((feat, fIdx) => (
+                                                <li key={fIdx} className="flex items-start gap-2.5">
+                                                    <span className="text-amber-400 font-bold shrink-0 mt-0.5">✓</span>
+                                                    <span className="leading-relaxed font-light">{feat}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+
+                                    {/* Botón de acción */}
+                                    <a
+                                        href={pack.whatsappUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className={`w-full inline-flex items-center justify-center gap-2 py-3.5 px-5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all cursor-pointer shadow-lg active:scale-95 ${
+                                            isPopular
+                                                ? 'bg-gradient-to-r from-amber-400 via-amber-300 to-amber-500 text-slate-950 hover:shadow-[0_0_30px_rgba(245,158,11,0.5)] hover:scale-[1.02]'
+                                                : 'bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 hover:border-amber-400/40 text-white'
+                                        }`}
+                                    >
+                                        <WhatsApp className="w-4 h-4" />
+                                        <span>{pack.ctaText}</span>
+                                    </a>
+                                </div>
+                            );
+                        })}
+                    </div>
+
+                    {/* Banner complementario: Sesión suelta de prueba */}
+                    <div className="max-w-4xl mx-auto mt-8 p-5 sm:p-6 rounded-2xl bg-white/[0.02] border border-white/[0.07] backdrop-blur-md flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+                        <div>
+                            <p className="text-sm font-semibold text-white mb-0.5">
+                                ¿Quieres tener una primera clase de toma de contacto antes de elegir un pack?
+                            </p>
+                            <p className="text-xs text-slate-400 font-light">
+                                Clase individual suelta de 1 hora por <span className="text-amber-300 font-bold font-mono">35€</span>. Si luego decides continuar con un pack mensual, se te descuenta íntegramente.
+                            </p>
+                        </div>
+                        <a
+                            href="https://wa.me/34648055636?text=Hola%20%C3%81ngel,%20me%20gustar%C3%ADa%20reservar%20una%20clase%20suelta%20de%20prueba%20de%201h%20(35%E2%82%AC)"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-400/40 text-emerald-300 text-xs font-semibold uppercase tracking-wider transition-all"
+                        >
+                            <WhatsApp className="w-4 h-4" />
+                            <span>Probar 1h Suelta</span>
+                        </a>
+                    </div>
+                </section>
+
                 {/* ── SECCIÓN EL MENTOR: ÁNGEL RUIZ ── */}
                 <section className="mb-24 sm:mb-32">
                     <div className="rounded-3xl p-6 sm:p-10 lg:p-12 bg-gradient-to-r from-amber-500/10 via-white/[0.02] to-transparent border border-white/[0.08] backdrop-blur-md relative overflow-hidden shadow-2xl">
@@ -299,10 +489,10 @@ export default function ClasesClient() {
                             <div className="lg:col-span-8 space-y-4">
                                 <p className="text-[11px] uppercase tracking-[0.25em] text-amber-400 font-bold">Tu Profesor & Mentor</p>
                                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-[Cinzel] font-bold text-white">
-                                    Aprende con Ángel Ruiz · Escuela Dani DaOrtiz
+                                    Aprende con Ángel Ruiz · Mago Profesional
                                 </h2>
                                 <p className="text-xs sm:text-base text-slate-300 leading-relaxed font-light">
-                                    Llevo más de 12 años dedicado profesionalmente al ilusionismo y la magia de cerca en Madrid. Me formé en la prestigiosa <strong>Escuela de Magia de Dani DaOrtiz</strong>, donde aprendí que la verdadera magia ocurre en la psicología, en la respiración y en cómo tratas al público.
+                                    Llevo más de 12 años dedicado profesionalmente al ilusionismo y la magia de cerca en Madrid. A lo largo de mi trayectoria he perfeccionado un estilo cercano, pícaro y participativo, donde la verdadera magia ocurre en la psicología, en la respiración y en cómo tratas y sorprendes al público.
                                 </p>
                                 <p className="text-xs sm:text-sm text-slate-300/90 leading-relaxed font-light">
                                     En mis clases no te soltaré un manual rígido ni te obligaré a memorizar movimientos sin sentido: <strong>te enseñaré los atajos reales, cómo evitar vicios técnicos y los secretos de cómo se comporta la gente cuando estás delante</strong>.
