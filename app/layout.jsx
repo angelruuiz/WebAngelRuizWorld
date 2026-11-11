@@ -71,6 +71,7 @@ export const viewport = {
 
 import NewsletterForm from '@/components/NewsletterForm';
 import WhatsAppButton from '@/components/WhatsAppButton';
+import ScrollToTop from '@/components/ScrollToTop';
 
 import { Cinzel, Cormorant_Garamond, Outfit } from 'next/font/google';
 import localFont from 'next/font/local';
@@ -370,6 +371,7 @@ export default function RootLayout({ children }) {
         <WhatsAppButton />
         <Analytics />
         <PageViewTracker />
+        <ScrollToTop />
       </body>
     </html>
   );

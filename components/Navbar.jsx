@@ -18,9 +18,16 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
     const pathname = usePathname();
     const router = useRouter();
 
-    const handleMagicTransition = (e, href) => {
+    const handleLinkClick = (e, href) => {
+        if (href === '/') {
+            if (pathname === '/') {
+                window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+            } else {
+                window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+            }
+        }
         if (href === '/blog' && pathname !== '/blog') {
-            e.preventDefault();
+            if (e) e.preventDefault();
             setIsTransitioning(true);
             setTimeout(() => {
                 router.push(href);
@@ -78,7 +85,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
             <nav aria-label="Navegación principal" className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 py-3 lg:py-2.5 px-4 sm:px-6 lg:px-8 ${isScrolled ? 'bg-[rgba(3,7,18,0.85)] backdrop-blur-2xl border-b border-white/[0.06] shadow-[0_4px_30px_rgba(0,0,0,0.5)]' : 'bg-transparent backdrop-blur-none'}`}>
                 <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
                     {/* Logo */}
-                    <Link href="/" aria-label="Ángel Ruiz - Inicio" className="flex items-center shrink-0 z-50 transition-transform hover:scale-105">
+                    <Link href="/" scroll={true} onClick={(e) => handleLinkClick(e, '/')} aria-label="Ángel Ruiz - Inicio" className="flex items-center shrink-0 z-50 transition-transform hover:scale-105">
                         <img 
                             src="/images/logo-pequeno.webp" 
                             alt="Logotipo de Ángel Ruiz" 
@@ -105,7 +112,8 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                                 ) : (
                                     <Link 
                                         href={link.href}
-                                        onClick={(e) => link.href !== '#' && handleMagicTransition(e, link.href)}
+                                        scroll={true}
+                                        onClick={(e) => link.href !== '#' && handleLinkClick(e, link.href)}
                                         className={`transition-colors relative inline-block text-slate-300 hover:text-[#d4a853] whitespace-nowrap ${pathname === link.href ? 'text-[#d4a853]' : ''}`}
                                     >
                                         {link.name}
@@ -261,6 +269,10 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                     <X className="w-5 h-5" />
                 </button>
                 <div className="flex flex-col px-6 mt-6 mb-8">
+                    <Link href="/" scroll={true} onClick={() => { setIsMoreMenuOpen(false); handleLinkClick(null, '/'); }} className="py-4 border-b border-white/5 text-lg font-[Cinzel] font-bold text-slate-200 flex justify-between items-center">
+                        Inicio
+                        <span className="text-amber-500/50">→</span>
+                    </Link>
                     <details className="group border-b border-white/5">
                         <summary className="py-4 text-lg font-[Cinzel] font-bold text-amber-400 cursor-pointer list-none flex justify-between items-center outline-none">
                             Especialidades y Contratación
