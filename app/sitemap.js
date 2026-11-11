@@ -7,6 +7,7 @@ const pageLastModifiedDates = {
   'https://angelruiz.world/mago-close-up-madrid': new Date('2026-11-04T22:15:48+01:00'),
   'https://angelruiz.world/mago-cartomagia-madrid': new Date('2026-11-04T22:15:48+01:00'),
   'https://angelruiz.world/contratar-mago-madrid': new Date('2026-11-04T22:15:48+01:00'),
+  'https://angelruiz.world/clases': new Date('2026-11-11T23:30:00+01:00'),
   'https://angelruiz.world/contacto': new Date('2026-11-04T22:15:48+01:00'),
   'https://angelruiz.world/dossier': new Date('2026-11-04T22:15:48+01:00'),
   'https://angelruiz.world/blog/mago-conferenciante-empresas-madrid': new Date('2026-10-26T14:23:51+01:00'),
@@ -101,6 +102,13 @@ export default function sitemap() {
       changeFrequency: 'weekly',
       priority: 1.0,
       images: ['https://angelruiz.world/images/og-blog.webp'],
+    },
+    {
+      url: 'https://angelruiz.world/clases',
+      lastModified: pageLastModifiedDates['https://angelruiz.world/clases'],
+      changeFrequency: 'weekly',
+      priority: 0.95,
+      images: ['https://angelruiz.world/images/cartomagia-close-up-reina-corazones-angel-ruiz.webp'],
     },
     {
       url: 'https://angelruiz.world/contacto',

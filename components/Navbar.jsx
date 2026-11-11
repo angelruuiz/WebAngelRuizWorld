@@ -73,6 +73,7 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                 { name: 'Restaurantes', href: '/empresas/mago-para-restaurantes-madrid' }
             ]
         },
+        { name: 'Clases', href: '/clases' },
         { name: 'Sobre Mí', href: '/sobre-mi' },
         { name: 'Galería', href: '/galeria' },
         { name: 'Valoraciones', href: '/valoraciones' },
@@ -310,6 +311,14 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
                             <Link href="/empresas/mago-para-restaurantes-madrid" onClick={() => setIsMoreMenuOpen(false)} className="text-sm text-slate-300 hover:text-white">Restaurantes</Link>
                         </div>
                     </details>
+
+                    <Link href="/clases" scroll={true} onClick={() => setIsMoreMenuOpen(false)} className="py-4 border-b border-white/5 text-lg font-[Cinzel] font-bold text-amber-300 flex justify-between items-center group">
+                        <span className="flex items-center gap-2">
+                            <span>Clases de Magia 1 a 1</span>
+                            <span className="text-[10px] uppercase tracking-wider text-amber-400 font-sans px-2 py-0.5 rounded-full bg-amber-500/15 border border-amber-400/30 font-bold">Online</span>
+                        </span>
+                        <span className="text-amber-400 group-hover:translate-x-1 transition-transform">→</span>
+                    </Link>
 
                     <Link href="/sobre-mi" onClick={() => setIsMoreMenuOpen(false)} className="py-4 border-b border-white/5 text-lg font-[Cinzel] font-bold text-slate-200 flex justify-between items-center">
                         Sobre Mí

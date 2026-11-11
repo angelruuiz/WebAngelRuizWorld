@@ -18,6 +18,7 @@ export async function GET(request) {
       `https://${HOST}/contratar-mago-madrid`,
       `https://${HOST}/particulares/bodas`,
       `https://${HOST}/empresas`,
+      `https://${HOST}/clases`,
       `https://${HOST}/mago-close-up-madrid`,
       `https://${HOST}/dossier`,
       `https://${HOST}/blog`,
