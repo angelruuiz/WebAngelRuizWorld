@@ -48,15 +48,6 @@ const Navbar = ({ onOpenContact, isLight = false }) => {
     const navLinks = [
         { name: 'Inicio', href: '/' },
         { 
-            name: 'Especialidades', 
-            href: '#',
-            children: [
-                { name: 'Cartomagia de Autor', href: '/mago-cartomagia-madrid' },
-                { name: 'Magia Close-Up', href: '/mago-close-up-madrid' },
-                { name: 'Contratar Mago', href: '/contratar-mago-madrid' }
-            ]
-        },
-        { 
             name: 'Particulares', 
             href: '#',
             children: [
