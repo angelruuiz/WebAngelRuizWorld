@@ -13,22 +13,22 @@ const FadeIn = ({ children, className = "" }) => (
 );
 
 export const metadata = {
-    title: { absolute: 'Mago para Bodas en Madrid | Magia de Cóctel · Ángel Ruiz' },
-    description: 'Mago para bodas en Madrid. Magia de cerca en el cóctel de autor. Desde 450€ sin agencias. Presupuesto express en menos de 1h.',
+    title: { absolute: 'Mago para Bodas en Madrid: Cero Clichés, Asombro en el Cóctel' },
+    description: '¿Fotos eternas? Tus invitados no mirarán el reloj. Magia de cerca elegante a 20 cm que rompe el hielo y une a todos en tu boda en Madrid. Mira los vídeos.',
     keywords: ['mago para bodas', 'mago para bodas madrid', 'mago bodas madrid', 'contratar mago boda madrid', 'mago coctel boda madrid', 'ilusionista bodas madrid', 'mago para bodas precio madrid', 'mago boda noroeste madrid', 'entretenimiento bodas madrid', 'mago para mi boda madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/particulares/bodas',
     },
     openGraph: {
         url: 'https://angelruiz.world/particulares/bodas',
-        title: 'Mago para Bodas en Madrid | Magia de Cóctel · Ángel Ruiz',
-        description: '¿Imaginas a tus invitados alucinando en el cóctel? Magia de cerca exclusiva para bodas en Madrid. Desde 450€. Presupuesto express en menos de 1h.',
+        title: 'Mago para Bodas en Madrid: Cero Clichés, Asombro en el Cóctel',
+        description: '¿Fotos eternas? Tus invitados no mirarán el reloj. Magia de cerca elegante a 20 cm que rompe el hielo y une a todos en tu boda en Madrid. Mira los vídeos.',
         images: [{ url: '/images/boda-magia-madrid.webp', width: 1200, height: 630 }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago para Bodas en Madrid | Magia de Cóctel · Ángel Ruiz',
-        description: 'Magia de cerca exclusiva para bodas en Madrid. Transforma el cóctel en el momento más recordado. Tarifas claras y presupuesto en menos de 1h.',
+        title: 'Mago para Bodas en Madrid: Cero Clichés, Asombro en el Cóctel',
+        description: '¿Fotos eternas? Tus invitados no mirarán el reloj. Magia de cerca elegante a 20 cm que rompe el hielo y une a todos en tu boda en Madrid. Mira los vídeos.',
         images: ['/images/boda-magia-madrid.webp'],
     },
 };

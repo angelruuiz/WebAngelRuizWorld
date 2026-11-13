@@ -13,22 +13,22 @@ const ParticleBackground = dynamic(() => import('@/components/VisualEffects').th
 const CorporateInlineForm = dynamic(() => import('@/components/CorporateInlineForm'), { ssr: false });
 
 export const metadata = {
-  title: { absolute: 'Mago para Cenas de Empresa en Madrid | Navidad (500€–750€)' },
-  description: 'Mago para cenas de empresa y Navidad en Madrid. Magia de cerca en cóctel y sobremesa. Desde 500€ sin agencias. Presupuesto express en menos de 1h.',
+  title: { absolute: 'Mago para Cenas de Empresa en Madrid: Menos Silencios, Más Risas' },
+  description: 'Despídete de la cena de empresa sosa donde todos miran el móvil. Magia de cerca inteligente y humor fino que conecta a todo el equipo. Fechas Navidad 2026.',
   keywords: ['mago para cenas de empresa', 'mago para cenas de empresa en madrid', 'mago cenas empresa madrid', 'mago para cena empresa madrid', 'mago cena navidad empresa madrid', 'contratar mago cena empresa', 'entretenimiento cenas empresa madrid', 'mago corporativo madrid', 'animacion cenas empresa madrid', 'mago para eventos de empresa madrid', 'cenas de empresa originales madrid', 'cena de navidad empresa madrid', 'cenas de empresa divertidas madrid'],
   alternates: {
     canonical: 'https://angelruiz.world/empresas/mago-cenas-empresa-madrid',
   },
   openGraph: {
     url: 'https://angelruiz.world/empresas/mago-cenas-empresa-madrid',
-    title: 'Mago para Cenas de Empresa en Madrid | Navidad y Fin de Año (500€–750€)',
-    description: 'Transforma la cena de empresa o fiesta de Navidad en Madrid con magia de cerca corporativa. Fechas limitadas. Presupuesto express en menos de 1h.',
+    title: 'Mago para Cenas de Empresa en Madrid: Menos Silencios, Más Risas',
+    description: 'Despídete de la cena de empresa sosa donde todos miran el móvil. Magia de cerca inteligente y humor fino que conecta a todo el equipo. Fechas Navidad 2026.',
     images: [{ url: '/images/evento-angel-ruiz-magia.webp', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mago para Cenas de Empresa en Madrid | Navidad y Fin de Año (500€–750€)',
-    description: 'Magia de cerca personalizada para cenas de empresa y eventos de Navidad en Madrid. Presupuesto express en menos de 1h.',
+    title: 'Mago para Cenas de Empresa en Madrid: Menos Silencios, Más Risas',
+    description: 'Despídete de la cena de empresa sosa donde todos miran el móvil. Magia de cerca inteligente y humor fino que conecta a todo el equipo. Fechas Navidad 2026.',
     images: ['/images/evento-angel-ruiz-magia.webp'],
   },
 };

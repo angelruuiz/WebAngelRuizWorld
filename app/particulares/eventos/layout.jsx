@@ -1,6 +1,6 @@
 export const metadata = {
-  title: { absolute: 'Mago para Fiestas y Cumpleaños en Madrid | Ángel Ruiz' },
-  description: '¿Quieres una fiesta de la que todos sigan hablando? Magia de cerca y asombro a centímetros en Madrid. Presupuesto express en 2h.',
+  title: { absolute: 'Mago para Eventos en Madrid: Fiestas que se Vuelven Virales' },
+  description: 'Cumpleaños de adultos, aniversarios y fiestas privadas donde el asombro ocurre en las manos de tus invitados. Magia de cerca de autor. Pide presupuesto.',
   keywords: ['mago para eventos privados madrid', 'mago fiestas privadas madrid', 'mago cumpleaños madrid', 'magia para celebraciones familiares'],
 };
 

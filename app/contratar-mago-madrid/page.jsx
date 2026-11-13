@@ -13,21 +13,21 @@ const ParticleBackground = dynamic(() => import('@/components/VisualEffects').th
 const BioCarousel = dynamic(() => import('@/components/BioCarousel'), { ssr: false });
 
 export const metadata = {
-    title: { absolute: 'Contratar Mago en Madrid | Precios Directos y Tarifas 2026' },
-    description: '¿Buscas contratar un mago en Madrid? Tarifas reales desde 300€ sin agencias ni comisiones para bodas, empresas y eventos. Presupuesto express en menos de 1h.',
+    title: { absolute: 'Contratar Mago en Madrid: Trato Directo (Sin Agencias 2026)' },
+    description: '¿Buscas magia de cerca de alto impacto para tu boda o evento en Madrid? Trato directo de autor, sin comisiones de agencias ni sorpresas. Consulta tu fecha.',
     keywords: ['contratar mago madrid', 'contratar mago madrid precio', 'precio mago madrid', 'cuanto cuesta un mago en madrid', 'mago profesional madrid', 'ilusionista madrid precios', 'mago para eventos madrid', 'mago para fiestas privadas madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/contratar-mago-madrid',
     },
     openGraph: {
-        title: 'Contratar Mago en Madrid | Precios Directos y Tarifas 2026',
-        description: 'Todo lo que necesitas saber para contratar un ilusionista en Madrid para bodas o empresas. Precios directos sin comisiones.',
+        title: 'Contratar Mago en Madrid: Trato Directo (Sin Agencias 2026)',
+        description: '¿Buscas magia de cerca de alto impacto para tu boda o evento en Madrid? Trato directo de autor, sin comisiones de agencias ni sorpresas. Consulta tu fecha.',
         images: [{ url: '/images/foto-bio.webp' }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Contratar Mago en Madrid | Precios Directos y Tarifas 2026',
-        description: '¿Buscas contratar un mago en Madrid? Tarifas reales desde 300€ sin comisiones para bodas, empresas y eventos. Presupuesto express en menos de 1h.',
+        title: 'Contratar Mago en Madrid: Trato Directo (Sin Agencias 2026)',
+        description: '¿Buscas magia de cerca de alto impacto para tu boda o evento en Madrid? Trato directo de autor, sin comisiones de agencias ni sorpresas. Consulta tu fecha.',
         images: ['/images/foto-bio.webp']
     }
 };

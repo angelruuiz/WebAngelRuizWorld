@@ -6,10 +6,10 @@ import PageViewTracker from '../components/PageViewTracker';
 export const metadata = {
   metadataBase: new URL('https://angelruiz.world'),
   title: {
-    default: 'Mago en Madrid | Ángel Ruiz · Bodas y Empresas',
+    default: 'Mago en Madrid: Magia de Cerca para Bodas y Empresas · Ángel Ruiz',
     template: '%s | Ángel Ruiz'
   },
-  description: '¿Buscas asombro inolvidable? Ilusionismo de autor para bodas, empresas y eventos exclusivos en Madrid. Trato directo sin agencias. Presupuesto express en menos de 1h.',
+  description: 'No es magia para niños: es asombro real a 20 cm de tus ojos para bodas exclusivas y eventos de empresa en Madrid. Trato directo sin agencias. Conoce a Ángel.',
   keywords: ['mago madrid', 'mago en madrid', 'contratar mago madrid', 'mago profesional madrid', 'ilusionista madrid', 'magia de cerca madrid', 'mago cenas empresa madrid', 'mago comuniones madrid', 'mago team building madrid', 'mago close-up madrid', 'Ángel Ruiz mago'],
   authors: [{ name: 'Ángel Ruiz | Mago e Ilusionista' }],
   creator: 'Ángel Ruiz | Mago e Ilusionista',
@@ -27,8 +27,8 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'es_ES',
-    title: 'Mago en Madrid | Ángel Ruiz | Ilusionista para Bodas y Empresas',
-    description: '¿Buscas asombro inolvidable? Magia de cerca y mentalismo de impacto para bodas, empresas y eventos en Madrid. Solicita presupuesto directo.',
+    title: 'Mago en Madrid: Magia de Cerca para Bodas y Empresas · Ángel Ruiz',
+    description: 'No es magia para niños: es asombro real a 20 cm de tus ojos para bodas exclusivas y eventos de empresa en Madrid. Trato directo sin agencias.',
     siteName: 'Ángel Ruiz | Mago e Ilusionista',
     images: [{
       url: 'https://angelruiz.world/images/foto-bio.webp',
@@ -39,8 +39,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Mago en Madrid | Ángel Ruiz | Ilusionista para Bodas y Empresas',
-    description: '¿Buscas asombro inolvidable? Magia de cerca y mentalismo de impacto para bodas, empresas y eventos en Madrid.',
+    title: 'Mago en Madrid: Magia de Cerca para Bodas y Empresas · Ángel Ruiz',
+    description: 'No es magia para niños: es asombro real a 20 cm de tus ojos para bodas exclusivas y eventos de empresa en Madrid. Trato directo sin agencias.',
     images: ['https://angelruiz.world/images/foto-bio.webp'],
     site: '@angellruuizz',
     creator: '@angellruuizz',

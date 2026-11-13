@@ -5,15 +5,15 @@ import CorporateLogosBar from '@/components/CorporateLogosBar';
 import ChristmasUrgencyBanner from '@/components/ChristmasUrgencyBanner';
 
 export const metadata = {
-    title: { absolute: 'Mago en Madrid | Ángel Ruiz · Bodas y Empresas' },
-    description: '¿Quieres un evento del que todos sigan hablando? Ilusionismo de autor y magia de cerca en Madrid. Presupuesto express en menos de 1h.',
+    title: { absolute: 'Mago en Madrid: Magia de Cerca para Bodas y Empresas · Ángel Ruiz' },
+    description: 'No es magia para niños: es asombro real a 20 cm de tus ojos para bodas exclusivas y eventos de empresa en Madrid. Trato directo sin agencias. Conoce a Ángel.',
     alternates: {
         canonical: 'https://angelruiz.world',
     },
     openGraph: {
         url: 'https://angelruiz.world',
-        title: 'Mago en Madrid | Ángel Ruiz · Bodas y Empresas',
-        description: '¿Quieres un evento del que todos sigan hablando? Ilusionismo de autor y magia de cerca en Madrid. Presupuesto express en menos de 1h.',
+        title: 'Mago en Madrid: Magia de Cerca para Bodas y Empresas · Ángel Ruiz',
+        description: 'No es magia para niños: es asombro real a 20 cm de tus ojos para bodas exclusivas y eventos de empresa en Madrid. Trato directo sin agencias. Conoce a Ángel.',
         siteName: 'Ángel Ruiz | Mago e Ilusionista',
         locale: 'es_ES',
         type: 'website',
@@ -26,8 +26,8 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago en Madrid | Ángel Ruiz · Bodas y Empresas',
-        description: '¿Quieres un evento del que todos sigan hablando? Ilusionismo de autor y magia de cerca en Madrid. Presupuesto express en menos de 1h.',
+        title: 'Mago en Madrid: Magia de Cerca para Bodas y Empresas · Ángel Ruiz',
+        description: 'No es magia para niños: es asombro real a 20 cm de tus ojos para bodas exclusivas y eventos de empresa en Madrid. Trato directo sin agencias. Conoce a Ángel.',
         images: ['/images/foto-bio.webp'],
         site: '@angellruuizz',
         creator: '@angellruuizz',

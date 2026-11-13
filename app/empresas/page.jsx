@@ -13,22 +13,22 @@ const ParticleBackground = dynamic(() => import('@/components/VisualEffects').th
 const CorporateInlineForm = dynamic(() => import('@/components/CorporateInlineForm'), { ssr: false });
 
 export const metadata = {
-    title: { absolute: 'Mago para Empresas en Madrid | Eventos Corporativos y B2B' },
-    description: 'Mago para empresas en Madrid: convenciones, kick-offs, team building y ferias. Ilusionismo corporativo de alto impacto. ¡Presupuesto express en menos de 1h!',
+    title: { absolute: 'Mago para Empresas en Madrid: Magia de Autor sin Clichés' },
+    description: 'Eventos corporativos, kick-offs y convenciones donde nadie mira el reloj. Ilusionismo sofisticado y humor inteligente sin vergüenza ajena. Pide propuesta.',
     keywords: ['mago para empresas madrid', 'mago para empresas', 'mago empresas', 'mago eventos corporativos madrid', 'mago team building madrid', 'mago conferenciante madrid', 'contratar mago empresa madrid', 'ilusionista corporativo madrid', 'mejor mago empresas madrid', 'mago para eventos de empresa madrid', 'mago eventos empresariales', 'magia para empresas', 'mago corporativo premium madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/empresas',
     },
     openGraph: {
         url: 'https://angelruiz.world/empresas',
-        title: 'Mago para Empresas en Madrid | Eventos Corporativos y B2B',
-        description: 'Mago para empresas en Madrid: convenciones, kick-offs, team building y ferias. Ilusionismo corporativo de alto impacto. ¡Presupuesto express en menos de 1h!',
+        title: 'Mago para Empresas en Madrid: Magia de Autor sin Clichés',
+        description: 'Eventos corporativos, kick-offs y convenciones donde nadie mira el reloj. Ilusionismo sofisticado y humor inteligente sin vergüenza ajena. Pide propuesta.',
         images: [{ url: '/images/evento-angel-ruiz-magia.webp', width: 1200, height: 630 }],
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Mago para Empresas en Madrid | Eventos Corporativos y B2B',
-        description: 'Especialista en magia corporativa para eventos, convenciones y ferias en Madrid. Presupuesto express en menos de 1h.',
+        title: 'Mago para Empresas en Madrid: Magia de Autor sin Clichés',
+        description: 'Eventos corporativos, kick-offs y convenciones donde nadie mira el reloj. Ilusionismo sofisticado y humor inteligente sin vergüenza ajena. Pide propuesta.',
         images: ['/images/evento-angel-ruiz-magia.webp'],
     },
 };

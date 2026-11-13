@@ -9,8 +9,8 @@ const MagicCursor = dynamic(() => import('@/components/VisualEffects').then(mod 
 const ParticleBackground = dynamic(() => import('@/components/VisualEffects').then(mod => mod.ParticleBackground), { ssr: false });
 
 export const metadata = {
-    title: { absolute: 'Mago para Eventos en Madrid | Fiestas Privadas · Ángel Ruiz' },
-    description: 'Contrata un mago profesional para eventos privados en Madrid. Magia de cerca y animación de alto impacto para fiestas familiares y aniversarios. ¡Presupuesto en 2h!',
+    title: { absolute: 'Mago para Eventos en Madrid: Fiestas que se Vuelven Virales' },
+    description: 'Cumpleaños de adultos, aniversarios y fiestas privadas donde el asombro ocurre en las manos de tus invitados. Magia de cerca de autor. Pide presupuesto.',
     keywords: ['mago para eventos madrid', 'mago eventos madrid', 'magia en eventos', 'mago fiestas privadas madrid', 'contratar mago eventos madrid', 'ilusionista eventos madrid', 'animacion eventos privados madrid'],
     alternates: {
         canonical: 'https://angelruiz.world/particulares/eventos',
